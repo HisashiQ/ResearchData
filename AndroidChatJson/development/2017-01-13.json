@@ -1,0 +1,3361 @@
+[
+  {
+    "user": "U3QB1FS3B",
+    "text": "hi everyone, anywork worked on Firebase JobDispatcher yet?",
+    "ts": "1484300798.000960",
+    "id": "13de60252",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3QB1FS3B",
+    "text": "How I can make my jobservice run on connection changes?",
+    "ts": "1484300824.000961",
+    "id": "13de60253",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "why cant we communicate from fragment to activity with this -&gt;  \n`MyActivity myact = (MyActivity) getActivity(); `\n` myact.doSomthing();`\n\nhere we can ask activity to do something without making any interface ?",
+    "ts": "1484313300.000962",
+    "id": "13de60254",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "It is not as flexible as interfaces.",
+    "ts": "1484313575.000963",
+    "id": "13de60255",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "you can, but it’s ugly",
+    "ts": "1484313579.000964",
+    "id": "13de60256",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "if you want to use your fragment elsewhere",
+    "ts": "1484313719.000965",
+    "id": "13de60257",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "it gets messy",
+    "ts": "1484313724.000966",
+    "id": "13de60258",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "interfaces you can use on multiple activities, and you can enforce their use if required",
+    "ts": "1484313726.000967",
+    "id": "13de60259",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "then how to make calls from activity to fragment ?\n`MyFragment frag = (MyFragment) fragmentsList.get(1)`",
+    "ts": "1484313756.000968",
+    "id": "13de60260",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "find fragment by tag, or id, or send local broadcast",
+    "ts": "1484313804.000969",
+    "id": "13de60261",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3J6W9P0W",
+    "text": "or use eventbus\ni heard, this was normal way to communicate between fragments and activities\nnow my colleague tries to implement rxjava way",
+    "ts": "1484313918.000970",
+    "id": "13de60262",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I prefer rxjava as a bus vs eventbus as it doesn't require random methods all over your code base that look unused until you compile",
+    "ts": "1484314030.000971",
+    "id": "13de60263",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3J6W9P0W",
+    "text": "<@U055GGAHS> nice argument",
+    "ts": "1484314090.000972",
+    "id": "13de60264",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37BP6E73",
+    "text": "I'm using local broadcast receiver to communicate between fragments and activities",
+    "ts": "1484314120.000973",
+    "id": "13de60265",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "That works too",
+    "ts": "1484314126.000974",
+    "id": "13de60266",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3J6W9P0W",
+    "text": "u can combine it with RxBroadcast\nmay be… this is best solution",
+    "attachments": [
+      {
+        "fallback": "[January 13th, 2017 4:28 PM] arviio: I'm using local broadcast receiver to communicate between fragments and activities",
+        "ts": "1484314120.000973",
+        "author_subname": "arviio",
+        "channel_id": "C04NZAN54",
+        "channel_name": "development",
+        "is_msg_unfurl": true,
+        "text": "I'm using local broadcast receiver to communicate between fragments and activities",
+        "author_name": "Arvi A",
+        "author_link": "https://androidchat.slack.com/team/arviio",
+        "author_icon": "https://avatars.slack-edge.com/2016-11-29/110192231253_12d0feccebe960a052dd_48.jpg",
+        "mrkdwn_in": [
+          "text"
+        ],
+        "color": "D0D0D0",
+        "from_url": "https://androidchat.slack.com/archives/development/p1484314120000973",
+        "is_share": true,
+        "footer": "Posted in #development"
+      }
+    ],
+    "ts": "1484314164.000975",
+    "id": "13de60267",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37BP6E73",
+    "text": "I realized if I use rxjava I'd have to recode my entire project... I think RxJava is fine if you start MVP pattern... but for a beginner like me... this is just overwhelming",
+    "ts": "1484314194.000976",
+    "id": "13de60268",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37BP6E73",
+    "text": ":smile: hope that helps",
+    "ts": "1484314202.000977",
+    "id": "13de60269",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3J6W9P0W",
+    "text": "@arvil i’am beginner too and i have had no rx experience some time ago. \nswitching to rx was smooth and easy, but brings lot of redesigns =(",
+    "ts": "1484314333.000978",
+    "id": "13de60270",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3J6W9P0W",
+    "text": "but now i understand that it was nice solution",
+    "ts": "1484314368.000979",
+    "id": "13de60271",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "rxjava has a steep learning curve",
+    "ts": "1484314384.000980",
+    "id": "13de60272",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "if you’re just starting out, it’s not essential",
+    "ts": "1484314394.000981",
+    "id": "13de60273",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "you can do mvp/clean code without it",
+    "ts": "1484314404.000982",
+    "id": "13de60274",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37BP6E73",
+    "text": "<@U04U5KS3Z> indeed... i'll try rxjava on personal projects <@U3J6W9P0W> what's your networking with Rx? Retrofit?",
+    "ts": "1484314633.000983",
+    "id": "13de60275",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37BP6E73",
+    "text": "I remember watching this one hour android rxjava on youtube and it didn't sink in... then I study local broadcast manager... and baam it was simple :sweat_smile:",
+    "ts": "1484314728.000984",
+    "id": "13de60276",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3QSQQP9C",
+    "text": "Please I've heard enough of the Rx sturvs, can anyone gimme a pointer as to how it really work on Android, I've heard rumors its about  the observer design pattern ",
+    "ts": "1484314940.000985",
+    "id": "13de60277",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37BP6E73",
+    "text": "<@U3QSQQP9C> this is what I've watched... maybe it'll help you <https://www.youtube.com/watch?v=k3D0cWyNno4>",
+    "attachments": [
+      {
+        "service_name": "YouTube",
+        "service_url": "https://www.youtube.com/",
+        "title": "Learning RxJava (for Android) by example",
+        "title_link": "https://www.youtube.com/watch?v=k3D0cWyNno4",
+        "author_name": "NewCircle Training",
+        "author_link": "https://www.youtube.com/user/MarakanaTechTV",
+        "thumb_url": "https://i.ytimg.com/vi/k3D0cWyNno4/hqdefault.jpg",
+        "thumb_width": 480,
+        "thumb_height": 360,
+        "fallback": "YouTube Video: Learning RxJava (for Android) by example",
+        "video_html": "<iframe width=\"400\" height=\"225\" src=\"https://www.youtube.com/embed/k3D0cWyNno4?feature=oembed&autoplay=1&iv_load_policy=3\" frameborder=\"0\" allowfullscreen></iframe>",
+        "video_html_width": 400,
+        "video_html_height": 225,
+        "from_url": "https://www.youtube.com/watch?v=k3D0cWyNno4",
+        "service_icon": "https://a.slack-edge.com/2089/img/unfurl_icons/youtube.png",
+        "id": 1
+      }
+    ],
+    "ts": "1484315692.000986",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U3QSQQP9C"
+        ],
+        "count": 2
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "13de60278",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3J6W9P0W",
+    "text": "<@U37BP6E73> no, it is too easy\ni have project, where i should to communicate with server over all-time opened socket connection, so i can’t send request and receive response, i should send request and then decide, which of this responses is mine and route it to observer from UI\n\nso… it was hard to decide, how to add rx in this task, but i found solution on one russian site (i’am from russia) <http://habrahabr.ru|habrahabr.ru> \nthere was article about rx subjects. but some time later i switched to processors from rxjava 2, cos subjects gave me errors.\n\nhere is article: <https://habrahabr.ru/post/270023/>\n\nthen i opened RxBroadcasts and now i combine rxbroadcast and processors",
+    "edited": {
+      "user": "U3J6W9P0W",
+      "ts": "1484316255.000000"
+    },
+    "ts": "1484315880.000988",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "13de60279",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "<@U0548MM6B> hey I was not intending to directly copy an existing app. I don't know exactly what you are working on, but I am just working on a side project to build up my portfolio. I don't really have an intent on launching the app. It will probably remain an open source app.",
+    "ts": "1484315906.000991",
+    "id": "13de60280",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "hahaha no problem man, we’ve got a similar movie grid in our testing phase right now :smile:",
+    "ts": "1484315943.000992",
+    "id": "13de60281",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "not many ways one can do it",
+    "ts": "1484315951.000993",
+    "id": "13de60282",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "looks cool tho",
+    "ts": "1484315961.000994",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U0A1BE7KQ"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "13de60283",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "btw if you’re implementing rx you don’t have to redo all your code",
+    "ts": "1484315982.000995",
+    "id": "13de60284",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3J6W9P0W",
+    "text": "pew, it was hard to write and structure logically, cos i have a lot of “fire-at-the-hole” working on this task",
+    "attachments": [
+      {
+        "fallback": "[January 13th, 2017 4:58 PM] kartoshka_d: <@U37BP6E73> no, it is too easy\ni have project, where i should to communicate with server over all-time opened socket connection? so i can’t send request and receive response, i should send request and then decide, which of this responses is mine and route it to observer from UI\n\nso… it was hard to decide, how to add rx in this task, but i found solution on one russian site (i’am from russia) <http://habrahabr.ru|habrahabr.ru> \nthere was article about rx subjects. but some time later i switched to processors from rxjava 2, cos subjects gave me errors.\n\nhere is article: <https://habrahabr.ru/post/270023/>\n\nthen i opened RxBroadcasts and now i combine rxbroadcast and processors",
+        "ts": "1484315880.000988",
+        "author_subname": "kartoshka_d",
+        "channel_id": "C04NZAN54",
+        "channel_name": "development",
+        "is_msg_unfurl": true,
+        "text": "<@U37BP6E73> no, it is too easy\ni have project, where i should to communicate with server over all-time opened socket connection? so i can’t send request and receive response, i should send request and then decide, which of this responses is mine and route it to observer from UI\n\nso… it was hard to decide, how to add rx in this task, but i found solution on one russian site (i’am from russia) <http://habrahabr.ru|habrahabr.ru> \nthere was article about rx subjects. but some time later i switched to processors from rxjava 2, cos subjects gave me errors.\n\nhere is article: <https://habrahabr.ru/post/270023/>\n\nthen i opened RxBroadcasts and now i combine rxbroadcast and processors",
+        "author_name": "Aleksey Dolgiy",
+        "author_link": "https://androidchat.slack.com/team/kartoshka_d",
+        "author_icon": "https://avatars.slack-edge.com/2017-01-13/127200639650_10489916170842f91be2_48.png",
+        "mrkdwn_in": [
+          "text"
+        ],
+        "color": "D0D0D0",
+        "from_url": "https://androidchat.slack.com/archives/development/p1484315880000988",
+        "is_share": true,
+        "footer": "Posted in #development"
+      }
+    ],
+    "ts": "1484315999.000996",
+    "id": "13de60285",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Same as anything, implement it for what you need now, then redo the rest of your code later when you have the time and more understanding",
+    "ts": "1484316007.000997",
+    "id": "13de60286",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Doing an eventbus with Rx though isn’t too hard and if that’s all you require it for then you can just do it where you need it",
+    "ts": "1484316038.000998",
+    "id": "13de60287",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "I’ve got a couple of event buses used for forwarding `onActivityResult` to certain views which are generated programatically (bit of a hack, but it works)",
+    "ts": "1484316073.000999",
+    "id": "13de60288",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37BP6E73",
+    "text": "<@U1LJG0Y03> I see, maybe because the example I saw was using Retrofit, and I'm already using Volley... :smile_cat: I'll give rxjava another try <@U3J6W9P0W> thanks",
+    "ts": "1484316435.001001",
+    "id": "13de60289",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "Does anyone know of a MVVM project that does not use databinding?",
+    "ts": "1484318186.001002",
+    "id": "13de60290",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R15SC4F",
+    "text": "<@U05473HHT> you can easily MVVM with RxJava",
+    "ts": "1484321813.001003",
+    "id": "13de60291",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R15SC4F",
+    "text": "<https://kickstarter.engineering/open-sourcing-our-android-and-ios-apps-6891be909fcd#.171373kv9>",
+    "attachments": [
+      {
+        "service_name": "Kickstarter Engineering",
+        "title": "Open sourcing our Android and iOS apps!",
+        "title_link": "https://kickstarter.engineering/open-sourcing-our-android-and-ios-apps-6891be909fcd#.171373kv9",
+        "text": "Today the Kickstarter engineering team is open sourcing our Android and iOS apps, and we’re excited about a future of working in the open.",
+        "fallback": "Kickstarter Engineering: Open sourcing our Android and iOS apps!",
+        "image_url": "https://cdn-images-1.medium.com/max/1200/1*0g4swq4QZgtuNgS1XTqw0w.jpeg",
+        "fields": [
+          {
+            "title": "Reading time",
+            "value": "6 min read",
+            "short": true
+          }
+        ],
+        "ts": 1481732251,
+        "from_url": "https://kickstarter.engineering/open-sourcing-our-android-and-ios-apps-6891be909fcd#.171373kv9",
+        "image_width": 323,
+        "image_height": 250,
+        "image_bytes": 292460,
+        "service_icon": "https://cdn-images-1.medium.com/fit/c/152/152/1*XwUsQSivWnWUVsYECubkgw.jpeg",
+        "id": 1
+      }
+    ],
+    "ts": "1484321838.001004",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "13de60292",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "Oh right, forgot about KickStarter app. Thanks!",
+    "ts": "1484321882.001006",
+    "id": "13de60293",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U3C4RMQ9W|b_odisho> uploaded a file: <https://androidchat.slack.com/files/b_odisho/F3RABRYDQ/Untitled.java|Untitled> and commented: When using MVP architecture are there times when a presenter is unnecessary? In the example above I don't see how having a presenter is necessary?",
+    "file": {
+      "id": "F3RABRYDQ",
+      "created": 1484328573,
+      "timestamp": 1484328573,
+      "name": "Untitled.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U3C4RMQ9W",
+      "editable": true,
+      "size": 1112,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F3RABRYDQ/Untitled.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F3RABRYDQ/download/Untitled.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/b_odisho/F3RABRYDQ/Untitled.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F3RABRYDQ-ed9756d1e1",
+      "edit_link": "https://androidchat.slack.com/files/b_odisho/F3RABRYDQ/Untitled.java/edit",
+      "preview": "public class InstructionsFragment extends Fragment {\r\n\r\npublic static final String INSTRUCTIONS = \"INSTRUCTIONS\";\r\n\r\n\tpublic InstructionsFragment() {\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-keyword\">public</span> <span class=\"cm-keyword\">class</span> <span class=\"cm-def\">InstructionsFragment</span> <span class=\"cm-keyword\">extends</span> <span class=\"cm-variable\">Fragment</span> {</pre></div>\n<div><pre>&#8203;</pre></div>\n<div><pre><span class=\"cm-keyword\">public</span> <span class=\"cm-keyword\">static</span> <span class=\"cm-keyword\">final</span> <span class=\"cm-variable-3\">String</span> <span class=\"cm-variable\">INSTRUCTIONS</span> <span class=\"cm-operator\">=</span> <span class=\"cm-string\">&quot;INSTRUCTIONS&quot;</span>;</pre></div>\n<div><pre>&#8203;</pre></div>\n<div><pre>\t<span class=\"cm-keyword\">public</span> <span class=\"cm-variable\">InstructionsFragment</span>() {</pre></div>\n</div>\n</div>\n",
+      "lines": 32,
+      "lines_more": 27,
+      "preview_is_truncated": true,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 1,
+      "initial_comment": {
+        "id": "Fc3RCLPSUU",
+        "created": 1484328573,
+        "timestamp": 1484328573,
+        "user": "U3C4RMQ9W",
+        "is_intro": true,
+        "comment": "When using MVP architecture are there times when a presenter is unnecessary? In the example above I don't see how having a presenter is necessary?",
+        "channel": ""
+      }
+    },
+    "user": "U3C4RMQ9W",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U3C4RMQ9W|b_odisho>",
+    "bot_id": null,
+    "ts": "1484328573.001007",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "13de60294",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3R8HHDKM",
+    "text": "<@U3R8HHDKM|lumb> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1484329210.001009",
+    "id": "13de60295",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "Is it possible to do a `Observable.combineLatest()` call inside a `Observable.flatMap()`?  So i have an `EditText` that i am monitoring the changes with `RxTextView.textChanges()` to turn it into an `Observable`.  Then i added a `debounce()` operator with a 400 ms timeout.  And then in my Rx chain i would like to spawn three separate API calls and use the `combineLatest()` operator.   But I’m not sure how to compose this Rx chain.  Any ideas?",
+    "ts": "1484330483.001010",
+    "id": "13de60296",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "<@U0A1BE7KQ> you can just flatMap into a Func that returns the combineLatest observable can't you?",
+    "ts": "1484336211.001011",
+    "id": "13de60297",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "`textChanges().debounce().flatMap(text -&gt; combineLatest(apiCall1(text), apiCall2(text), apiCall3(text), Func3&lt;blah blah&gt;()))`",
+    "ts": "1484336350.001012",
+    "id": "13de60298",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3R7UUSSJ",
+    "text": "is there a way to access the failed observable inside of a flatMap later on?",
+    "ts": "1484337062.001013",
+    "id": "13de60299",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3R7UUSSJ",
+    "text": "so you could retry for instance?",
+    "ts": "1484337068.001014",
+    "id": "13de60300",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "the Android file systems is stupid",
+    "ts": "1484338568.001015",
+    "id": "13de60301",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "been battling it all day",
+    "ts": "1484338598.001016",
+    "id": "13de60302",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "finally won",
+    "ts": "1484338603.001017",
+    "id": "13de60303",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "All I wanted to do was grab an image from the system and upload it",
+    "ts": "1484338773.001018",
+    "id": "13de60304",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "but you have to make 3 or 4 different solutions depending on the SDK level",
+    "ts": "1484338800.001019",
+    "id": "13de60305",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "and then ofc I needed a custom convertor to convert the response",
+    "ts": "1484338833.001020",
+    "id": "13de60306",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "and then custom converter to upload .....and the list goes on",
+    "ts": "1484338849.001021",
+    "id": "13de60307",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3R7UUSSJ",
+    "text": "what's wrong with the unix filesystem?",
+    "ts": "1484338913.001022",
+    "id": "13de60308",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "its not unix",
+    "ts": "1484338919.001023",
+    "id": "13de60309",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "its Android",
+    "ts": "1484338924.001024",
+    "id": "13de60310",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Depending on the Android version you have to do differnt things to get file path",
+    "ts": "1484338948.001025",
+    "id": "13de60311",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "and then you need permissions",
+    "ts": "1484338957.001026",
+    "id": "13de60312",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3R7UUSSJ",
+    "text": "the filesytem != android sdk",
+    "ts": "1484338963.001027",
+    "id": "13de60313",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "^",
+    "ts": "1484338966.001028",
+    "id": "13de60314",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I know that OFc",
+    "ts": "1484338976.001029",
+    "id": "13de60315",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "lol",
+    "ts": "1484338977.001030",
+    "id": "13de60316",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "yeah im not sure what you are talking about, the security model on android blocks you from a lot of things without root",
+    "ts": "1484338983.001031",
+    "id": "13de60317",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "at the end of the day though almost every phone is running ext4",
+    "ts": "1484338992.001032",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U3R7UUSSJ"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "13de60318",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3R7UUSSJ",
+    "text": "the permissions are the only thing standing in the way of anyone whose app you have installed messing with your life/files",
+    "ts": "1484339020.001033",
+    "id": "13de60319",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I have an image picker you choose an image from the gallery and then you use a content provider to grab the path",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1484339027.000000"
+    },
+    "ts": "1484339021.001034",
+    "id": "13de60320",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "yes",
+    "ts": "1484339044.001036",
+    "id": "13de60321",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "but depending on the Android version you need a different solution",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1484339062.000000"
+    },
+    "ts": "1484339050.001037",
+    "id": "13de60322",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "to get path",
+    "ts": "1484339053.001038",
+    "id": "13de60323",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "oh you mean things not always being in the same place",
+    "ts": "1484339055.001039",
+    "id": "13de60324",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "why are you messing with file paths for that",
+    "ts": "1484339079.001041",
+    "id": "13de60325",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "ye and the sdk cahnges",
+    "ts": "1484339079.001042",
+    "id": "13de60326",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I need to make a file for multipart upload",
+    "ts": "1484339094.001043",
+    "id": "13de60327",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "with retofit",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1484339104.000000"
+    },
+    "ts": "1484339098.001044",
+    "id": "13de60328",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "its done now anyway",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1484339121.000000"
+    },
+    "ts": "1484339117.001046",
+    "id": "13de60329",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "right so you should copy the image locally through the content provider instead of trying to get the file on disk",
+    "ts": "1484339122.001048",
+    "id": "13de60330",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "it’s going to bug out on you on random devices just fyi",
+    "ts": "1484339132.001049",
+    "id": "13de60331",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I have it as a bitmap",
+    "ts": "1484339141.001050",
+    "id": "13de60332",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I should convert the bitmap to a file and pas it around my code?",
+    "ts": "1484339161.001051",
+    "id": "13de60333",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3R7UUSSJ",
+    "text": "you could use the `Environment` class which is supposed to give you the correct paths backwards compatible",
+    "ts": "1484339195.001052",
+    "id": "13de60334",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "sure but I still need the path to the file",
+    "ts": "1484339238.001053",
+    "id": "13de60335",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "not knowing anything about your app and having done a lot of stuff like that I can tell you that if you are trying to use file paths and handle sdk levels and such, you’ll find devices and apps that bend the rules it will blow up on you (assuming you are browsing images you dont control like on the sdcard or generated by other apps)",
+    "ts": "1484339247.001054",
+    "id": "13de60336",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "ye I have no doubt",
+    "ts": "1484339263.001055",
+    "id": "13de60337",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "how can I do it properly then?",
+    "ts": "1484339269.001056",
+    "id": "13de60338",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "convert it?",
+    "ts": "1484339283.001057",
+    "id": "13de60339",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "copy to your apps local storage",
+    "ts": "1484339285.001058",
+    "id": "13de60340",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "that’s the only safe way to deal with files",
+    "ts": "1484339293.001059",
+    "id": "13de60341",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "i see",
+    "ts": "1484339296.001060",
+    "id": "13de60342",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "makes sense",
+    "ts": "1484339305.001061",
+    "id": "13de60343",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3R7UUSSJ",
+    "text": "<https://developer.android.com/reference/android/os/Environment.html#getExternalStorageDirectory()>",
+    "ts": "1484339415.001062",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "13de60344",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "yes I am using this",
+    "ts": "1484339566.001063",
+    "id": "13de60345",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "already",
+    "ts": "1484339568.001064",
+    "id": "13de60346",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3R7UUSSJ",
+    "text": "&gt; sure but I still need the path to the file\nthe file name is something you define usually",
+    "ts": "1484339569.001065",
+    "id": "13de60347",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "no I allow the user to choose a profile picture",
+    "ts": "1484339583.001066",
+    "id": "13de60348",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "and i get the path of the picture",
+    "ts": "1484339595.001067",
+    "id": "13de60349",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "in the system",
+    "ts": "1484339600.001068",
+    "id": "13de60350",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3R7UUSSJ",
+    "text": "even easier",
+    "ts": "1484339606.001069",
+    "id": "13de60351",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "but its not easy",
+    "ts": "1484339614.001070",
+    "id": "13de60352",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "lol",
+    "ts": "1484339616.001071",
+    "id": "13de60353",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3R7UUSSJ",
+    "text": "how does the user pick the picture?",
+    "ts": "1484339628.001072",
+    "id": "13de60354",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "you have to make 4 different solutions for different Api level",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1484339642.000000"
+    },
+    "ts": "1484339636.001073",
+    "id": "13de60355",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "from any external content",
+    "ts": "1484339655.001075",
+    "id": "13de60356",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3R7UUSSJ",
+    "text": "depending on your picker you have the absolute path already",
+    "ts": "1484339655.001076",
+    "id": "13de60357",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "nope",
+    "ts": "1484339663.001077",
+    "id": "13de60358",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "i tried gallery",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1484339682.000000"
+    },
+    "ts": "1484339667.001078",
+    "id": "13de60359",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "you almost never get an absolute path",
+    "ts": "1484339675.001079",
+    "id": "13de60360",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I get a URI",
+    "ts": "1484339685.001081",
+    "id": "13de60361",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "in many cases the image may not even be on the device",
+    "ts": "1484339688.001082",
+    "id": "13de60362",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3R7UUSSJ",
+    "text": "i was assuming we were talking about picking an image from external storage",
+    "ts": "1484339724.001083",
+    "id": "13de60363",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "what I am doing is picking an image from the image gallery getting the path sending meta data to backend, recieve a presigned url and then upload the image as a file to aws s3",
+    "ts": "1484339772.001084",
+    "id": "13de60364",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "that way my backend does not have to handle images",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1484339911.000000"
+    },
+    "ts": "1484339829.001085",
+    "id": "13de60365",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "The problem arises in many steps of that",
+    "ts": "1484339921.001087",
+    "id": "13de60366",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "1) many solutions to get absolute path depending on api level (I can copy the file to app local storage to resolve this)",
+    "ts": "1484339960.001088",
+    "id": "13de60367",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "2)ensuring the presigned data is properly parsed with retrofit",
+    "ts": "1484340024.001089",
+    "id": "13de60368",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "3)uploading the data ensuring its properly parsed",
+    "ts": "1484340043.001090",
+    "id": "13de60369",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3R7UUSSJ",
+    "text": "you could have a look at how the following libraries handled it:\n<https://github.com/jkwiecien/EasyImage>\n<https://github.com/jrvansuita/PickImage>\n<https://github.com/brunodles/PicPicker>",
+    "edited": {
+      "user": "U3R7UUSSJ",
+      "ts": "1484340091.000000"
+    },
+    "ts": "1484340063.001091",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "13de60370",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "no",
+    "ts": "1484340082.001096",
+    "id": "13de60371",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Its done in anycase my only issue was the path",
+    "ts": "1484340102.001098",
+    "id": "13de60372",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "they are just for picking the images",
+    "ts": "1484340205.001099",
+    "id": "13de60373",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "which is trivial",
+    "ts": "1484340211.001100",
+    "id": "13de60374",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3R7UUSSJ",
+    "text": "do you retrieve an `Uri`?",
+    "ts": "1484340269.001101",
+    "id": "13de60375",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3R7UUSSJ",
+    "text": "there is `FileProvider#getUriForFile` in the v4 support lib if that helps",
+    "ts": "1484340309.001102",
+    "id": "13de60376",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U3E2EEX38|name_gone> uploaded a file: <https://androidchat.slack.com/files/name_gone/F3S4CENH5/Untitled.java|Untitled>",
+    "file": {
+      "id": "F3S4CENH5",
+      "created": 1484340341,
+      "timestamp": 1484340341,
+      "name": "Untitled.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U3E2EEX38",
+      "editable": true,
+      "size": 678,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F3S4CENH5/Untitled.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F3S4CENH5/download/Untitled.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/name_gone/F3S4CENH5/Untitled.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F3S4CENH5-19e739048b",
+      "edit_link": "https://androidchat.slack.com/files/name_gone/F3S4CENH5/Untitled.java/edit",
+      "preview": "     public static String getRealPathFromURI(Context context, Uri contentUri) {\r\n        Cursor cursor = null;\r\n        try {\r\n            String[] proj = {MediaStore.Images.Media.DATA};\r\n            cursor = context.getContentResolver().query(contentUri, proj, null, null, null);\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>     <span class=\"cm-keyword\">public</span> <span class=\"cm-keyword\">static</span> <span class=\"cm-variable-3\">String</span> <span class=\"cm-def\">getRealPathFromURI</span>(<span class=\"cm-variable\">Context</span> <span class=\"cm-variable\">context</span>, <span class=\"cm-variable\">Uri</span> <span class=\"cm-variable\">contentUri</span>) {</pre></div>\n<div><pre>        <span class=\"cm-variable\">Cursor</span> <span class=\"cm-variable\">cursor</span> <span class=\"cm-operator\">=</span> <span class=\"cm-atom\">null</span>;</pre></div>\n<div><pre>        <span class=\"cm-keyword\">try</span> {</pre></div>\n<div><pre>            <span class=\"cm-variable-3\">String</span>[] <span class=\"cm-variable\">proj</span> <span class=\"cm-operator\">=</span> {<span class=\"cm-variable\">MediaStore</span>.<span class=\"cm-variable\">Images</span>.<span class=\"cm-variable\">Media</span>.<span class=\"cm-variable\">DATA</span>};</pre></div>\n<div><pre>            <span class=\"cm-variable\">cursor</span> <span class=\"cm-operator\">=</span> <span class=\"cm-variable\">context</span>.<span class=\"cm-variable\">getContentResolver</span>().<span class=\"cm-variable\">query</span>(<span class=\"cm-variable\">contentUri</span>, <span class=\"cm-variable\">proj</span>, <span class=\"cm-atom\">null</span>, <span class=\"cm-atom\">null</span>, <span class=\"cm-atom\">null</span>);</pre></div>\n</div>\n</div>\n",
+      "lines": 16,
+      "lines_more": 11,
+      "preview_is_truncated": false,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U3E2EEX38",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U3E2EEX38|name_gone>",
+    "bot_id": null,
+    "ts": "1484340341.001103",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "13de60377",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "one of thoselib has this",
+    "ts": "1484340355.001105",
+    "id": "13de60378",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "this wont work",
+    "ts": "1484340360.001106",
+    "id": "13de60379",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "lol",
+    "ts": "1484340361.001107",
+    "id": "13de60380",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "it will fail on many api level",
+    "ts": "1484340375.001108",
+    "id": "13de60381",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "`FileProvider#getUriForFile` you still need the path to the file",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1484340448.000000"
+    },
+    "ts": "1484340441.001109",
+    "id": "13de60382",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U3E2EEX38|name_gone> uploaded a file: <https://androidchat.slack.com/files/name_gone/F3S4DGNLX/-.java|Untitled>",
+    "file": {
+      "id": "F3S4DGNLX",
+      "created": 1484340478,
+      "timestamp": 1484340478,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U3E2EEX38",
+      "editable": true,
+      "size": 202,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F3S4DGNLX/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F3S4DGNLX/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/name_gone/F3S4DGNLX/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F3S4DGNLX-148c15a730",
+      "edit_link": "https://androidchat.slack.com/files/name_gone/F3S4DGNLX/-.java/edit",
+      "preview": "File imagePath = new File(Context.getFilesDir(), \"images\");\r\nFile newFile = new File(imagePath, \"default_image.jpg\");\r\nUri contentUri = getUriForFile(getContext(), \"com.mydomain.fileprovider\", newFile);",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-variable\">File</span> <span class=\"cm-variable\">imagePath</span> <span class=\"cm-operator\">=</span> <span class=\"cm-keyword\">new</span> <span class=\"cm-variable\">File</span>(<span class=\"cm-variable\">Context</span>.<span class=\"cm-variable\">getFilesDir</span>(), <span class=\"cm-string\">&quot;images&quot;</span>);</pre></div>\n<div><pre><span class=\"cm-variable\">File</span> <span class=\"cm-variable\">newFile</span> <span class=\"cm-operator\">=</span> <span class=\"cm-keyword\">new</span> <span class=\"cm-variable\">File</span>(<span class=\"cm-variable\">imagePath</span>, <span class=\"cm-string\">&quot;default_image.jpg&quot;</span>);</pre></div>\n<div><pre><span class=\"cm-variable\">Uri</span> <span class=\"cm-variable\">contentUri</span> <span class=\"cm-operator\">=</span> <span class=\"cm-variable\">getUriForFile</span>(<span class=\"cm-variable\">getContext</span>(), <span class=\"cm-string\">&quot;com.mydomain.fileprovider&quot;</span>, <span class=\"cm-variable\">newFile</span>);</pre></div>\n</div>\n</div>\n",
+      "lines": 3,
+      "lines_more": 0,
+      "preview_is_truncated": false,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U3E2EEX38",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U3E2EEX38|name_gone>",
+    "bot_id": null,
+    "ts": "1484340479.001111",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "13de60383",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3R7UUSSJ",
+    "text": "there is Context#getContentResolver#openInputStream(uri)",
+    "ts": "1484340489.001112",
+    "id": "13de60384",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "yes",
+    "ts": "1484340493.001113",
+    "id": "13de60385",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "that is what I am using",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1484340573.000000"
+    },
+    "ts": "1484340497.001114",
+    "id": "13de60386",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "look at the snippet",
+    "ts": "1484340502.001115",
+    "id": "13de60387",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "above",
+    "ts": "1484340504.001116",
+    "id": "13de60388",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I am telling you that this doesnt work on all api level",
+    "ts": "1484340515.001117",
+    "id": "13de60389",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "there are multiple things to take into consideration",
+    "ts": "1484340526.001118",
+    "id": "13de60390",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Thanks for the help anyway, I appreciate it",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1484340688.000000"
+    },
+    "ts": "1484340638.001120",
+    "id": "13de60391",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3R7UUSSJ",
+    "text": "i know sometimes it can be frustrating, especially paths in general",
+    "ts": "1484340705.001122",
+    "id": "13de60392",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3R7UUSSJ",
+    "text": "good luck to you",
+    "ts": "1484340717.001123",
+    "id": "13de60393",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "<@U0546QERR>  so i am not using any lambdas and i was wondering where the subscribe call needs to be made.  Here is what i came up with\n<https://gist.github.com/lawloretienne/6e76d879c9aa888a043ea252ffe0c4e2>\nBut i think it can be cleaned up a bit",
+    "ts": "1484346962.001124",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "13de60394",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0546QERR|damien5314> uploaded a file: <https://androidchat.slack.com/files/damien5314/F3S614VKR/-.java|Untitled>",
+    "file": {
+      "id": "F3S614VKR",
+      "created": 1484348178,
+      "timestamp": 1484348178,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U0546QERR",
+      "editable": true,
+      "size": 827,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F3S614VKR/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F3S614VKR/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/damien5314/F3S614VKR/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F3S614VKR-f4ab3f302f",
+      "edit_link": "https://androidchat.slack.com/files/damien5314/F3S614VKR/-.java/edit",
+      "preview": "\r\nFunc1<CharSequence, Observable<Object>> combined = new Func1<CharSequence, Observable<Object>>() {\r\n    @Override\r\n    public Observable<Object> call(CharSequence text) {\r\n        return Observable.combineLatest(\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>&#8203;</pre></div>\n<div><pre><span class=\"cm-variable\">Func1</span><span class=\"cm-operator\">&lt;</span><span class=\"cm-variable\">CharSequence</span>, <span class=\"cm-variable\">Observable</span><span class=\"cm-operator\">&lt;</span><span class=\"cm-variable-3\">Object</span><span class=\"cm-operator\">&gt;&gt;</span> <span class=\"cm-variable\">combined</span> <span class=\"cm-operator\">=</span> <span class=\"cm-keyword\">new</span> <span class=\"cm-variable\">Func1</span><span class=\"cm-operator\">&lt;</span><span class=\"cm-variable\">CharSequence</span>, <span class=\"cm-variable\">Observable</span><span class=\"cm-operator\">&lt;</span><span class=\"cm-variable-3\">Object</span><span class=\"cm-operator\">&gt;&gt;</span>() {</pre></div>\n<div><pre>    <span class=\"cm-meta\">@Override</span></pre></div>\n<div><pre>    <span class=\"cm-keyword\">public</span> <span class=\"cm-variable\">Observable</span><span class=\"cm-operator\">&lt;</span><span class=\"cm-variable-3\">Object</span><span class=\"cm-operator\">&gt;</span> <span class=\"cm-variable\">call</span>(<span class=\"cm-variable\">CharSequence</span> <span class=\"cm-variable\">text</span>) {</pre></div>\n<div><pre>        <span class=\"cm-keyword\">return</span> <span class=\"cm-variable\">Observable</span>.<span class=\"cm-variable\">combineLatest</span>(</pre></div>\n</div>\n</div>\n",
+      "lines": 22,
+      "lines_more": 17,
+      "preview_is_truncated": false,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0,
+      "reactions": [
+        {
+          "name": "+1",
+          "users": [
+            "U0A1BE7KQ"
+          ],
+          "count": 1
+        }
+      ]
+    },
+    "user": "U0546QERR",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0546QERR|damien5314>",
+    "bot_id": null,
+    "ts": "1484348179.001125",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "13de60395",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "<@U0A1BE7KQ> i was thinking something like that",
+    "ts": "1484348190.001126",
+    "id": "13de60396",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "okay, ya i wasnt sure if you could apply flatmap to this",
+    "ts": "1484353041.001127",
+    "id": "13de60397",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3PG8K6R5",
+    "text": "What do you prefer navigation view or recycler view?",
+    "ts": "1484361241.001128",
+    "id": "13de60398",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3PG8K6R5",
+    "text": "I want some input",
+    "ts": "1484361245.001129",
+    "id": "13de60399",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3PG8K6R5",
+    "text": "cant decide",
+    "ts": "1484361247.001130",
+    "id": "13de60400",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Anyone know how to have custom type annotations like intdef and stringdef",
+    "ts": "1484368230.001131",
+    "id": "13de60401",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "I basically want to create a @bytedef",
+    "ts": "1484368310.001132",
+    "id": "13de60402",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3S7TP1F1",
+    "text": "<@U3S7TP1F1|goel> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1484369550.001133",
+    "id": "13de60403",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3S7TP1F1",
+    "text": "hello someone can help me?",
+    "ts": "1484369663.001134",
+    "id": "13de60404",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "<@U08GFT5V5> I guess the annotation processor for intdef and stringdef is built in into Android Studio",
+    "ts": "1484371177.001135",
+    "id": "13de60405",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "You'll need to build your own plugin for that",
+    "ts": "1484371193.001136",
+    "id": "13de60406",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "or you can have your own annotation processor but that will only fail on compile time after the processor ran",
+    "ts": "1484371268.001137",
+    "id": "13de60407",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3RH3C9RQ",
+    "text": "<@U3RH3C9RQ|g> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1484374257.001138",
+    "id": "13de60408",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3S836WBZ",
+    "text": "<@U3S836WBZ|jakerhoads> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1484377315.001139",
+    "id": "13de60409",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

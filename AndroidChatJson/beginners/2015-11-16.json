@@ -1,0 +1,771 @@
+[
+  {
+    "user": "U0DQJQZ6D",
+    "text": "I have an activity call `GameActivity` and an adapter `GameAdapter` to load list of games. In the list, when users click on to list item, it will show the game detail. So in this case, do I need a fragment or just an activity is enough?",
+    "ts": "1447663547.000104",
+    "id": "16be1444",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "It depends entirely on you. I'd choose GameActivity -&gt; DetailsActivity unless there is a good reason to use a fragment there.",
+    "ts": "1447663996.000105",
+    "id": "16be1445",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DQJQZ6D",
+    "text": "thanks a ton, it is no more layout in this view, so I also thought it that it didn't need a fragment. I just confused what exactly when we use fragment.",
+    "ts": "1447664272.000106",
+    "id": "16be1446",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8P42SC",
+    "text": "theres imho only one reason to use fragments: if you want to build tablet-optimized views as described here <http://developer.android.com/intl/ko/training/basics/fragments/fragment-ui.html>",
+    "attachments": [
+      {
+        "text": "When designing your application to support a wide range of screen sizes, you can reuse your fragments in different layout configurations to optimize the user experience based on the available screen space. For example, on a handset device it might be …",
+        "fallback": "When designing your application to support a wide range of screen sizes, you can reuse your fragments in different layout configurations to optimize the user experience based on the available screen space. For example, on a handset device it might be …",
+        "from_url": "http://developer.android.com/intl/ko/training/basics/fragments/fragment-ui.html",
+        "id": 1
+      }
+    ],
+    "ts": "1447664402.000107",
+    "id": "16be1447",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8P42SC",
+    "text": "or if you build your whole app with one activity and switch fragments back and forth, that's a whole other design approach",
+    "ts": "1447664571.000109",
+    "id": "16be1448",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "&gt; or if you build your whole app with one activity and switch fragments back and forth, that's a whole other design approach\nThat's how we do it. But mainly we need this to keep connection to socket while changing app screens. Also we have totally different layout for tablet, while using the same MainActivity class",
+    "edited": {
+      "user": "U0830HE7P",
+      "ts": "1447664898.000000"
+    },
+    "ts": "1447664868.000110",
+    "id": "16be1449",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DQJQZ6D",
+    "text": "clear explanation, thanks all",
+    "ts": "1447665175.000112",
+    "id": "16be1450",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DTGSP8E",
+    "text": "Hi all, I created navigation drawer with header using new  android support design library. Now I want to add Image buttons in Navigation drawer's Header. and fire a click events in my activity. any idea how can I achieve it?",
+    "ts": "1447673646.000113",
+    "id": "16be1451",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DFZ48DB",
+    "subtype": "channel_join",
+    "text": "<@U0DFZ48DB|johnny> has joined the channel",
+    "ts": "1447674787.000114",
+    "id": "16be1452",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "<@U0DTGSP8E>: you supply the layout for the header so you just place whatever widget you want there and handle the onClick event in the place that holds the drawer, like your activity or fragment",
+    "ts": "1447674848.000115",
+    "id": "16be1453",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "it’s a view like any other",
+    "ts": "1447674860.000116",
+    "id": "16be1454",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DTGSP8E",
+    "text": "<@U04TK850N>: yes, I have header.xml layout for header -&gt; placed 3 buttons in header.xml, \nHow Do I access those buttons in my Activity? DO I have to inflate that view in my activity?",
+    "ts": "1447675370.000117",
+    "id": "16be1455",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "After you inflated the activity with the navigationview, you can iirc use `getHeaderView()` on it",
+    "ts": "1447675433.000118",
+    "id": "16be1456",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "yeah, that method was added in the latest version",
+    "ts": "1447675552.000119",
+    "id": "16be1457",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0DTGSP8E|nilesh> uploaded a file: <https://androidchat.slack.com/files/nilesh/F0EK10C3Y/-.java|Untitled> and commented: something like this? its what I was trying.",
+    "file": {
+      "id": "F0EK10C3Y",
+      "created": 1447675723,
+      "timestamp": 1447675723,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U0DTGSP8E",
+      "editable": true,
+      "size": 438,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0EK10C3Y/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0EK10C3Y/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/nilesh/F0EK10C3Y/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0EK10C3Y-38736c1537",
+      "edit_link": "https://androidchat.slack.com/files/nilesh/F0EK10C3Y/-.java/edit",
+      "preview": "\r\n// Initializing Toolbar and setting it as the actionbar\r\n        toolbar = (Toolbar) findViewById(R.id.toolbar);\r\n        setSupportActionBar(toolbar);\r\n        \r\n        Button headerButton = (Button) LayoutInflater.from(this).inflate(R.layout.header, null);\r\n\r\n\r\n        //Initializing NavigationView\r\n        navigationView = (NavigationView) findViewById(R.id.navigation_view);\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>&#8203;</pre></div>\n<div><pre><span class=\"cm-comment\">// Initializing Toolbar and setting it as the actionbar</span></pre></div>\n<div><pre>        <span class=\"cm-variable\">toolbar</span> <span class=\"cm-operator\">=</span> (<span class=\"cm-variable\">Toolbar</span>) <span class=\"cm-variable\">findViewById</span>(<span class=\"cm-variable\">R</span>.<span class=\"cm-variable\">id</span>.<span class=\"cm-variable\">toolbar</span>);</pre></div>\n<div><pre>        <span class=\"cm-variable\">setSupportActionBar</span>(<span class=\"cm-variable\">toolbar</span>);</pre></div>\n<div><pre>        </pre></div>\n<div><pre>        <span class=\"cm-variable\">Button</span> <span class=\"cm-variable\">headerButton</span> <span class=\"cm-operator\">=</span> (<span class=\"cm-variable\">Button</span>) <span class=\"cm-variable\">LayoutInflater</span>.<span class=\"cm-variable\">from</span>(<span class=\"cm-keyword\">this</span>).<span class=\"cm-variable\">inflate</span>(<span class=\"cm-variable\">R</span>.<span class=\"cm-variable\">layout</span>.<span class=\"cm-variable\">header</span>, <span class=\"cm-atom\">null</span>);</pre></div>\n<div><pre>&#8203;</pre></div>\n<div><pre>&#8203;</pre></div>\n<div><pre>        <span class=\"cm-comment\">//Initializing NavigationView</span></pre></div>\n<div><pre>        <span class=\"cm-variable\">navigationView</span> <span class=\"cm-operator\">=</span> (<span class=\"cm-variable\">NavigationView</span>) <span class=\"cm-variable\">findViewById</span>(<span class=\"cm-variable\">R</span>.<span class=\"cm-variable\">id</span>.<span class=\"cm-variable\">navigation_view</span>);</pre></div>\n</div>\n</div>\n",
+      "lines": 12,
+      "lines_more": 2,
+      "preview_is_truncated": null,
+      "channels": [
+        "C055MSDCM"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 2,
+      "initial_comment": {
+        "id": "Fc0EJX363F",
+        "created": 1447675723,
+        "timestamp": 1447675723,
+        "user": "U0DTGSP8E",
+        "is_intro": true,
+        "comment": "something like this? its what I was trying.",
+        "channel": ""
+      }
+    },
+    "user": "U0DTGSP8E",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0DTGSP8E|nilesh>",
+    "bot_id": null,
+    "ts": "1447675723.000123",
+    "id": "16be1458",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_comment",
+    "text": "<@U0DTGSP8E|nilesh> commented on <@U0DTGSP8E|nilesh>’s file <https://androidchat.slack.com/files/nilesh/F0EK10C3Y/-.java|Untitled>: ofcourse line number 6 is wrong, because R.id.header is the ID of my header.xml layout",
+    "file": {
+      "id": "F0EK10C3Y",
+      "created": 1447675723,
+      "timestamp": 1447675723,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U0DTGSP8E",
+      "editable": true,
+      "size": 438,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0EK10C3Y/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0EK10C3Y/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/nilesh/F0EK10C3Y/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0EK10C3Y-38736c1537",
+      "edit_link": "https://androidchat.slack.com/files/nilesh/F0EK10C3Y/-.java/edit",
+      "preview": "\r\n// Initializing Toolbar and setting it as the actionbar\r\n        toolbar = (Toolbar) findViewById(R.id.toolbar);\r\n        setSupportActionBar(toolbar);\r\n        \r\n        Button headerButton = (Button) LayoutInflater.from(this).inflate(R.layout.header, null);\r\n\r\n\r\n        //Initializing NavigationView\r\n        navigationView = (NavigationView) findViewById(R.id.navigation_view);\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>&#8203;</pre></div>\n<div><pre><span class=\"cm-comment\">// Initializing Toolbar and setting it as the actionbar</span></pre></div>\n<div><pre>        <span class=\"cm-variable\">toolbar</span> <span class=\"cm-operator\">=</span> (<span class=\"cm-variable\">Toolbar</span>) <span class=\"cm-variable\">findViewById</span>(<span class=\"cm-variable\">R</span>.<span class=\"cm-variable\">id</span>.<span class=\"cm-variable\">toolbar</span>);</pre></div>\n<div><pre>        <span class=\"cm-variable\">setSupportActionBar</span>(<span class=\"cm-variable\">toolbar</span>);</pre></div>\n<div><pre>        </pre></div>\n<div><pre>        <span class=\"cm-variable\">Button</span> <span class=\"cm-variable\">headerButton</span> <span class=\"cm-operator\">=</span> (<span class=\"cm-variable\">Button</span>) <span class=\"cm-variable\">LayoutInflater</span>.<span class=\"cm-variable\">from</span>(<span class=\"cm-keyword\">this</span>).<span class=\"cm-variable\">inflate</span>(<span class=\"cm-variable\">R</span>.<span class=\"cm-variable\">layout</span>.<span class=\"cm-variable\">header</span>, <span class=\"cm-atom\">null</span>);</pre></div>\n<div><pre>&#8203;</pre></div>\n<div><pre>&#8203;</pre></div>\n<div><pre>        <span class=\"cm-comment\">//Initializing NavigationView</span></pre></div>\n<div><pre>        <span class=\"cm-variable\">navigationView</span> <span class=\"cm-operator\">=</span> (<span class=\"cm-variable\">NavigationView</span>) <span class=\"cm-variable\">findViewById</span>(<span class=\"cm-variable\">R</span>.<span class=\"cm-variable\">id</span>.<span class=\"cm-variable\">navigation_view</span>);</pre></div>\n</div>\n</div>\n",
+      "lines": 12,
+      "lines_more": 2,
+      "preview_is_truncated": null,
+      "channels": [
+        "C055MSDCM"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 2,
+      "initial_comment": {
+        "id": "Fc0EJX363F",
+        "created": 1447675723,
+        "timestamp": 1447675723,
+        "user": "U0DTGSP8E",
+        "is_intro": true,
+        "comment": "something like this? its what I was trying.",
+        "channel": ""
+      }
+    },
+    "comment": {
+      "id": "Fc0EK16WEB",
+      "created": 1447675795,
+      "timestamp": 1447675795,
+      "user": "U0DTGSP8E",
+      "is_intro": false,
+      "comment": "ofcourse line number 6 is wrong, because R.id.header is the ID of my header.xml layout",
+      "channel": ""
+    },
+    "is_intro": false,
+    "ts": "1447675795.000124",
+    "id": "16be1459",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I don’t have my code here where I used it, but you normally set the headerLayout in the XML of the drawer. Then you should be able to retrieve that view with getHeaderView() on the NavigationView",
+    "ts": "1447675828.000125",
+    "id": "16be1460",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0EK69LRY",
+    "subtype": "channel_join",
+    "text": "<@U0EK69LRY|altero> has joined the channel",
+    "ts": "1447680761.000126",
+    "id": "16be1461",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0EK712UQ",
+    "subtype": "channel_join",
+    "text": "<@U0EK712UQ|will_martin> has joined the channel",
+    "ts": "1447681385.000127",
+    "id": "16be1462",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CHUGUDN",
+    "text": "what’s the best way to add string resources inside Enums? I used to have a global ApplicationContext, but now I’m thinking about making all the getString, getName methods take in a context. How do you guys deal with this?",
+    "ts": "1447686446.000128",
+    "id": "16be1463",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B9TKCRL",
+    "text": "store R.string.some_string in enums, and get actual string when you need",
+    "ts": "1447686599.000129",
+    "id": "16be1464",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B9TKCRL",
+    "text": "imo context should be passed from view/activity/whatever class which enums are used",
+    "ts": "1447686751.000130",
+    "id": "16be1465",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CHUGUDN",
+    "text": "<@U0B9TKCRL>: im still confused. Do you have an example?",
+    "ts": "1447688370.000131",
+    "id": "16be1466",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CHUGUDN",
+    "text": "you’re saying pass context into the enums. IE have a function like getTitle(Context context){ …} ?",
+    "ts": "1447688452.000132",
+    "id": "16be1467",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B9TKCRL",
+    "text": "```\npublic enum Type {\n  FOO(R.string.label_foo),\n  BAR(R.string.label_bar);\n  \n  public String label;\n  \n  private Type(int stringRes) {\n    label = stringRes;\n  }\n}\n\n// getContext().getString(Type.FOO.label);\n```",
+    "ts": "1447688736.000133",
+    "id": "16be1468",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B9TKCRL",
+    "text": "like this",
+    "ts": "1447688761.000134",
+    "id": "16be1469",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B9TKCRL",
+    "text": "or, having method like you said ",
+    "ts": "1447689423.000135",
+    "id": "16be1470",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CHUGUDN",
+    "text": "Thanks! one more question, how does getContext().getString(Type.FOO.label); work? Where is getContext() getting it’s context?",
+    "ts": "1447689791.000136",
+    "id": "16be1471",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B9TKCRL",
+    "text": "it's up to you. view.getContext(), activity.getContext() or your own implementation in your own class",
+    "ts": "1447690374.000137",
+    "id": "16be1472",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CHUGUDN",
+    "text": "oh I get it, thanks",
+    "ts": "1447691308.000138",
+    "id": "16be1473",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DL4GSS3",
+    "subtype": "channel_join",
+    "text": "<@U0DL4GSS3|mrcktz> has joined the channel",
+    "ts": "1447709165.000139",
+    "id": "16be1474",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UBTWEE",
+    "text": "<@U0B9TKCRL>: don’t we have to be careful which `Context` though?",
+    "ts": "1447712949.000140",
+    "id": "16be1475",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "any context will give you access to the app's string resources",
+    "ts": "1447714482.000141",
+    "id": "16be1476",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "you just have to be careful not to hold references to an activity or view context past the lifetime of said view/activity",
+    "ts": "1447714524.000142",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U0B9TKCRL"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "16be1477",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ELCL9DZ",
+    "subtype": "channel_join",
+    "text": "<@U0ELCL9DZ|rafaeltoledo> has joined the channel",
+    "ts": "1447715458.000143",
+    "id": "16be1478",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

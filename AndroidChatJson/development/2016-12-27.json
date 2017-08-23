@@ -1,0 +1,1571 @@
+[
+  {
+    "user": "U0A1BE7KQ",
+    "text": "the items are coming from an API",
+    "ts": "1482826790.007201",
+    "id": "27de57991",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "not a DB",
+    "ts": "1482826796.007202",
+    "id": "27de57992",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RRH206T",
+    "text": "Has anyone used Firebase ? I can't seem to find how to search . All I have is a child \"registered_users\"  with sub-children as key value pairs of \"random_ID\" -&gt; \"<mailto:email@address.com|email@address.com>\" and I just have to find if a given email address \"x\" exists in the \"registered_users\" or not, and I found nothing on the internet that could do that",
+    "ts": "1482827613.007203",
+    "id": "27de57993",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3C0PTBB2",
+    "text": "I used firebase database and authentication for that",
+    "ts": "1482827809.007204",
+    "id": "27de57994",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3C0PTBB2",
+    "text": "But when do you need it?",
+    "ts": "1482827832.007205",
+    "id": "27de57995",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3C0PTBB2",
+    "text": "If it is when they register. Just handle the error message correctly",
+    "ts": "1482827852.007206",
+    "id": "27de57996",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3C0PTBB2",
+    "text": "otherwise i changed the email to base64 text that i compare with",
+    "ts": "1482827876.007207",
+    "id": "27de57997",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3C0PTBB2",
+    "text": "in the database",
+    "ts": "1482827878.007208",
+    "id": "27de57998",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RRH206T",
+    "text": "No, I use authentication as well, but for my app, I want to give a signup screen, asking for other details ( which can't be received from Authentication) . So a user must only see the signup screen the first time he is registering and never again. To achieve that I needed this <@U3C0PTBB2>",
+    "ts": "1482828106.007209",
+    "id": "27de57999",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RRH206T",
+    "text": "So I want my code to look if the user exists in \"registered_users\" (the users who have also added the additional details once) as soon as the authentication is complete. Which I can't seem to find a way to do, as I cannot check if \"X\" email id exists there in \"registered_users\"",
+    "ts": "1482828311.007210",
+    "id": "27de58000",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3C0PTBB2",
+    "text": "When you register a new user. Just add a new node that corresponds for that user? Either with AuthID or email(as base64)",
+    "ts": "1482829491.007211",
+    "id": "27de58001",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3C0PTBB2",
+    "text": "Then you can check that without handling a error message",
+    "ts": "1482829516.007212",
+    "id": "27de58002",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053Q66UQ",
+    "text": "Hey everyone!\n\nDo any of you have a good setup for sharing Keystores and signing configs between developers and clients?\nBasically, I want to make a setup where every developer has one user/password/token-whatever that has access to a given list of keystores/signingconfigs. I want to set it up, so that release builds are automatically signed, when the given developer has access to the keystore/signingconfig.\nI have been looking at doing it with 1Password, but it doesn't seem like they have an API that will allow me to do this - So does anyone have any alternatives?\nAlso, I would really love for this to work with our CI setup as well, so optimally it should run without any UI prompt for passwords or similar.",
+    "ts": "1482831071.007213",
+    "id": "27de58003",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1ZJKCJBU",
+    "text": "Any UX suggestion, I am using a web app inside a keypad app (so the restrained area",
+    "ts": "1482837969.007214",
+    "id": "27de58004",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1ZJKCJBU",
+    "text": "So my problem is on top there are too many buttons",
+    "ts": "1482837981.007215",
+    "id": "27de58005",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1ZJKCJBU",
+    "text": "And it looks very compressed",
+    "ts": "1482837989.007216",
+    "id": "27de58006",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1ZJKCJBU",
+    "text": "For the web app.",
+    "ts": "1482837993.007217",
+    "id": "27de58007",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1ZJKCJBU",
+    "text": "How to handle that scenario?",
+    "ts": "1482838005.007218",
+    "id": "27de58008",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1K6PG03U",
+    "text": "Hello there. I'm looking for a framework that can solve for me a problem. I need to build web applications that looks like native app. I need build same application with different designs for iOS and Android. What you can recommend me?",
+    "ts": "1482838167.007219",
+    "id": "27de58009",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "React Native",
+    "ts": "1482840060.007220",
+    "id": "27de58010",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Please don't cross post. Also this is a development slack and not a Tasker support channel :wink: Gonna remove your post from here <@U0CSMK687>",
+    "edited": {
+      "user": "U04TK850N",
+      "ts": "1482844059.000000"
+    },
+    "ts": "1482844010.007222",
+    "id": "27de58011",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CSMK687",
+    "text": "technically I just wanted to use tasker to test firing off the intent, but understood about the crosspost",
+    "ts": "1482846725.007225",
+    "id": "27de58012",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3K57GG92",
+    "text": "<@U3K57GG92|wowiwayne> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1482852928.007226",
+    "id": "27de58013",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3JKKHQ5B",
+    "text": "anyone can tell me how to implement the login from my android app over a webapi ? should I just check it against my local database or against authorization server and sign in with a token or what is the best way to go ? I have an erp system with employees database , what is the ideal way to go ?",
+    "ts": "1482853036.007227",
+    "id": "27de58014",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3JKKHQ5B",
+    "text": "Thanks and I know it maybe a naive question but I am new to this and I cant find any tutorial to make a custom individual authorization in the .net webapi2 with owin",
+    "ts": "1482853179.007228",
+    "id": "27de58015",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3JKKHQ5B",
+    "text": "sorry if my English is not that good",
+    "ts": "1482853198.007229",
+    "id": "27de58016",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "Try writing server on a language you familiar with. Use standard databases, standard protocols (HTTP, OAuth2, etc).",
+    "ts": "1482853274.007230",
+    "id": "27de58017",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "For JVM I can suggest Vert.x (no experience, just people say it’s good), Spring (I like it, but servlet is 40 MB).",
+    "ts": "1482853342.007231",
+    "id": "27de58018",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U32U5QR7B",
+    "text": "Does anyone have any recommendations on how to visually show the user that the app is alpha or beta?",
+    "ts": "1482853538.007232",
+    "id": "27de58019",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U32U5QR7B",
+    "text": "from the app launcher screen it just looks like the normal icon for production",
+    "ts": "1482853552.007233",
+    "id": "27de58020",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U32U5QR7B",
+    "text": "outside of a separate build with a totally different icon, at least something i could test for in-app to visually display something differently?",
+    "ts": "1482853581.007234",
+    "id": "27de58021",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U32U5QR7B",
+    "text": "trying to avoid having to make a separate \"alpha\" build so I can promote alpha -&gt; beta -&gt; production etc.",
+    "ts": "1482853610.007235",
+    "id": "27de58022",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "<http://i1.wp.com/apkbeast.com/wp-content/uploads/2015/02/org.mozilla.firefox_beta.png?fit=512%2C512>",
+    "attachments": [
+      {
+        "fallback": "512x512px image",
+        "image_url": "http://i1.wp.com/apkbeast.com/wp-content/uploads/2015/02/org.mozilla.firefox_beta.png?fit=512%2C512",
+        "image_width": 512,
+        "image_height": 512,
+        "image_bytes": 38649,
+        "from_url": "http://i1.wp.com/apkbeast.com/wp-content/uploads/2015/02/org.mozilla.firefox_beta.png?fit=512%2C512",
+        "id": 1
+      }
+    ],
+    "ts": "1482854608.007236",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50",
+          "U32U5QR7B"
+        ],
+        "count": 2
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "27de58023",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QHEEGBX",
+    "text": "Or you can just use JDBC and write your own token validation",
+    "ts": "1482854646.007238",
+    "id": "27de58024",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QHEEGBX",
+    "text": "For learning purposes :smile:",
+    "ts": "1482854661.007239",
+    "id": "27de58025",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E5TKFU2",
+    "text": "Is the backend under someone elses control or yours? If yours, then look into JWT tokens. The flow is something like this: Ask for login creds &gt; if successful return a JWT token to the user &gt; Any and all endpoints requiring auth must be given that token (Usually in the Authorization HTTP header)",
+    "ts": "1482855907.007240",
+    "id": "27de58026",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U32U5QR7B",
+    "text": "<@U1N2P48K1> how would I do that without a separate build for alpha/beta/prod?",
+    "ts": "1482856268.007241",
+    "id": "27de58027",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1FECKXA9",
+    "text": "Can some please help me fix this issue: ```IllegalStateException: attempt to re-open an already-closed object: SQLiteQuery: SELECT _id, productQuantity, productName FROM product WHERE productName= ?\n      at android.database.sqlite.SQLiteClosable.acquireReference(SQLiteClosable.java:55)\n      at android.database.sqlite.SQLiteQuery.fillWindow(SQLiteQuery.java:58)\n      at android.database.sqlite.SQLiteCursor.fillWindow(SQLiteCursor.java:151)\n      at android.database.sqlite.SQLiteCursor.onMove(SQLiteCursor.java:123)\n      at android.database.AbstractCursor.moveToPosition(AbstractCursor.java:236)\n      at android.database.AbstractCursor.moveToFirst(AbstractCursor.java:258)\n      at android.database.CursorWrapper.moveToFirst(CursorWrapper.java:71)\n      at com.sdvd.www.sstore.CartActivity$1.onQueryComplete(CartActivity.java:134)\n      at android.content.AsyncQueryHandler.handleMessage(AsyncQueryHandler.java:344)\n      at android.os.Handler.dispatchMessage(Handler.java:102)\n      at android.os.Looper.loop(Looper.java:148)\n      at android.app.ActivityThread.main(ActivityThread.java:5417)\n      at java.lang.reflect.Method.invoke(Native Method)\n      at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:726)\n      at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:616)```",
+    "ts": "1482860013.007242",
+    "id": "27de58028",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1FECKXA9",
+    "text": "here is my StackOverflow link: <http://stackoverflow.com/questions/41348216/asyncqueryhandler-illegalstateexception-attempt-to-re-open-an-already-closed>",
+    "attachments": [
+      {
+        "title": "AsyncQueryHandler - IllegalStateException: attempt to re-open an already-closed object - Android",
+        "title_link": "http://stackoverflow.com/questions/41348216/asyncqueryhandler-illegalstateexception-attempt-to-re-open-an-already-closed",
+        "text": "I don't understand why I'm getting this error: IllegalStateException: attempt to re-open an already-closed object: I'm trying to query my product table using <http://AsyncQueryHandler.In|AsyncQueryHandler.In> the stacktra...",
+        "fallback": "AsyncQueryHandler - IllegalStateException: attempt to re-open an already-closed object - Android",
+        "thumb_url": "https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded",
+        "from_url": "http://stackoverflow.com/questions/41348216/asyncqueryhandler-illegalstateexception-attempt-to-re-open-an-already-closed",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "service_icon": "https://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d",
+        "service_name": "stackoverflow.com",
+        "id": 1
+      }
+    ],
+    "ts": "1482860036.007243",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "27de58029",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "you are trying to use a closed cursor",
+    "edited": {
+      "user": "U2M0WUZ7A",
+      "ts": "1482860062.000000"
+    },
+    "ts": "1482860056.007245",
+    "id": "27de58030",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1FECKXA9",
+    "text": "thanks <@U2M0WUZ7A>, i thought im trying to query my product table using AsyncTaskQueryHandler. ```   if ((cursor != null) &amp;&amp; cursor.moveToFirst()) {\n                    // get the quantity?\n                    int productQtyColumnIndex = cursor.getColumnIndex(ProductContract.ProductEntry.COLUMN_PRODUCT_QUANTITY);\n                    currentStockQuantity = cursor.getString(productQtyColumnIndex);\n                    cartProductQtyTxtView.setText(currentStockQuantity);\n                    //return;\n                }```",
+    "ts": "1482860397.007247",
+    "id": "27de58031",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3KQG8PUP",
+    "text": "<@U3KQG8PUP|austinaryain> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1482860912.007248",
+    "id": "27de58032",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25796AT0",
+    "text": "Can anybody help me on RecyclerView?",
+    "ts": "1482864807.007249",
+    "id": "27de58033",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U25796AT0> don't ask to ask",
+    "ts": "1482864833.007250",
+    "id": "27de58034",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25796AT0",
+    "text": "Ha Ha",
+    "ts": "1482864841.007251",
+    "id": "27de58035",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25796AT0",
+    "text": "My item XML has only one LinearLayout. And I am inflating it inside onCreateViewHolder.\n\nBut the content inside LinerLayout should be added dynamically. E.g. if the model is having an ArrayList of size 3, then I want to inflate one view 3 times and add it to LinearLayout dynamically. Now I am confused where to inflate those sub items.",
+    "ts": "1482865022.007252",
+    "id": "27de58036",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25796AT0",
+    "text": "Hope m clear with my question",
+    "ts": "1482865034.007253",
+    "id": "27de58037",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25796AT0",
+    "text": "In onCreateViewHolder, I don't have model, so no idea wheather to inflate the sub item layout 3 times or 4 times.",
+    "ts": "1482865185.007254",
+    "id": "27de58038",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25796AT0",
+    "text": "In onBindViewHolder, I have the model object, where I can just have a for loop and inflate the sub item layout, but its not a good practice to create new view in onBindViewHolder",
+    "ts": "1482865245.007255",
+    "id": "27de58039",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25796AT0",
+    "text": "<@U061HDV96> Am I clear with my question?",
+    "ts": "1482865286.007256",
+    "id": "27de58040",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "If you want content to me dynamically added",
+    "ts": "1482865329.007257",
+    "id": "27de58041",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Use a RecyclerView or something",
+    "ts": "1482865335.007258",
+    "id": "27de58042",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Perhaps nested",
+    "ts": "1482865340.007259",
+    "id": "27de58043",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Best to include screenshots",
+    "ts": "1482865345.007260",
+    "id": "27de58044",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "But I'm in a call right now and can't reply",
+    "ts": "1482865354.007261",
+    "id": "27de58045",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25796AT0",
+    "text": "Nested RecyclerView is not preferable, as the sub items size is limited. May be 1 to 6 or 7",
+    "ts": "1482865407.007262",
+    "id": "27de58046",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U25796AT0|chansek> uploaded a file: <https://androidchat.slack.com/files/chansek/F3K4VK258/screenshot_20161228-003351.png|Screenshot> and commented: Here I need to add the sub items like score, moves, etc dynamically to the LinearLayout",
+    "file": {
+      "id": "F3K4VK258",
+      "created": 1482865503,
+      "timestamp": 1482865503,
+      "name": "Screenshot_20161228-003351.png",
+      "title": "Screenshot",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U25796AT0",
+      "editable": false,
+      "size": 84305,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F3K4VK258/screenshot_20161228-003351.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F3K4VK258/download/screenshot_20161228-003351.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F3K4VK258-54fb799b3f/screenshot_20161228-003351_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F3K4VK258-54fb799b3f/screenshot_20161228-003351_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F3K4VK258-54fb799b3f/screenshot_20161228-003351_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 203,
+      "thumb_360_h": 360,
+      "thumb_480": "https://files.slack.com/files-tmb/T04PLNDMP-F3K4VK258-54fb799b3f/screenshot_20161228-003351_480.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_480_w": 270,
+      "thumb_480_h": 480,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F3K4VK258-54fb799b3f/screenshot_20161228-003351_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720": "https://files.slack.com/files-tmb/T04PLNDMP-F3K4VK258-54fb799b3f/screenshot_20161228-003351_720.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720_w": 405,
+      "thumb_720_h": 720,
+      "thumb_960": "https://files.slack.com/files-tmb/T04PLNDMP-F3K4VK258-54fb799b3f/screenshot_20161228-003351_960.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_960_w": 540,
+      "thumb_960_h": 960,
+      "thumb_1024": "https://files.slack.com/files-tmb/T04PLNDMP-F3K4VK258-54fb799b3f/screenshot_20161228-003351_1024.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_1024_w": 576,
+      "thumb_1024_h": 1024,
+      "image_exif_rotation": 1,
+      "original_w": 720,
+      "original_h": 1280,
+      "permalink": "https://androidchat.slack.com/files/chansek/F3K4VK258/screenshot_20161228-003351.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F3K4VK258-93039091e1",
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 1,
+      "initial_comment": {
+        "id": "Fc3KQUEKEJ",
+        "created": 1482865503,
+        "timestamp": 1482865503,
+        "user": "U25796AT0",
+        "is_intro": true,
+        "comment": "Here I need to add the sub items like score, moves, etc dynamically to the LinearLayout",
+        "channel": ""
+      }
+    },
+    "user": "U25796AT0",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U25796AT0|chansek>",
+    "bot_id": null,
+    "ts": "1482865507.007263",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "27de58047",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25796AT0",
+    "text": "In the screenshot, there are 4 sub items, but it may vary from 1 to 6 or 7",
+    "ts": "1482865605.007264",
+    "id": "27de58048",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25796AT0",
+    "text": "Ane help?",
+    "ts": "1482865924.007265",
+    "id": "27de58049",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "well just add all 7 lines, and if any of them is empty, set them to `setVisibility(View.GONE)` otherwise `setVisibility(View.VISIBLE)`",
+    "ts": "1482866492.007266",
+    "id": "27de58050",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U25796AT0> if you know the max is 7, then it is that simple",
+    "edited": {
+      "user": "U39P7U6EP",
+      "ts": "1482866507.000000"
+    },
+    "ts": "1482866500.007267",
+    "id": "27de58051",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "and these items you're showing ought to be in a recycler view",
+    "ts": "1482866522.007269",
+    "id": "27de58052",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25796AT0",
+    "text": "<@U39P7U6EP>  will it not make my RecyclerView render slow. Bcz even though I have only one View to show, I am inflating 6 unnecessary views and making their Visibility GONE",
+    "ts": "1482867384.007270",
+    "id": "27de58053",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U25796AT0> no, it is very fast, try it",
+    "ts": "1482867414.007271",
+    "id": "27de58054",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "much faster than dynamically adding views and removing them",
+    "ts": "1482867462.007272",
+    "id": "27de58055",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25796AT0",
+    "text": "Any suggestions to tackle, if I dont know the max count? I know that it will be a fixed one, but sure the max one.",
+    "ts": "1482867462.007273",
+    "id": "27de58056",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "well if you do not know a max count, then your best bet is dynamically removing and adding rows as needed for a given viewholder you're binding by position.",
+    "edited": {
+      "user": "U39P7U6EP",
+      "ts": "1482867509.000000"
+    },
+    "ts": "1482867499.007274",
+    "id": "27de58057",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25796AT0",
+    "text": "And where should I do that? During binding or Creating?",
+    "ts": "1482867542.007276",
+    "id": "27de58058",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25796AT0",
+    "text": "As best practices always says that we should not inflate anything during binding ",
+    "ts": "1482867605.007277",
+    "id": "27de58059",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "binding, when else? you have a variable row count depending on position",
+    "ts": "1482867829.007278",
+    "id": "27de58060",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "this is why if you do know the maximum possible rows shown, then just add all 7 and set whatever you don't need to `GONE`",
+    "ts": "1482867856.007279",
+    "id": "27de58061",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "i've done that and it is very fast",
+    "ts": "1482867862.007280",
+    "id": "27de58062",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25796AT0",
+    "text": "Oh great, then I will definitely try your approach. And will let you kniw the result.",
+    "ts": "1482868031.007281",
+    "id": "27de58063",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25796AT0",
+    "text": "Thanks <@U39P7U6EP> ",
+    "ts": "1482868049.007282",
+    "id": "27de58064",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3JHLMAN5",
+    "text": "<@U3JHLMAN5|dushyantss> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1482900819.007283",
+    "id": "27de58065",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3K87GL8J",
+    "text": "<@U3K87GL8J|sheerazam> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1482901572.007284",
+    "id": "27de58066",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3JHH968G",
+    "text": "<@U3JHH968G|arun.kawika> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1482911600.007285",
+    "id": "27de58067",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3JHH968G",
+    "text": "hi how to find a scrollview reach bottom",
+    "ts": "1482911694.007286",
+    "id": "27de58068",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

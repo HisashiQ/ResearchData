@@ -1,0 +1,846 @@
+[
+  {
+    "user": "U1QHSF30X",
+    "text": "<@U1QHSF30X|thiagosbraga> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1468246511.000235",
+    "id": "11te1653",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1P7PBWH3",
+    "text": "<@U1P7PBWH3|asuso> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1468247690.000236",
+    "id": "11te1654",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1JER4BDK",
+    "text": "Hi guys, I'm trying out android espresso and I want to test a button that leads to a google maps URL. When I run it, it pops up 'open with' dialogue that allows users to open via e.g. maps or chrome. During my testing, it fails the matcher and says it doesn't match the intent because of the handling packages:`handling packages:[[com.google.android.apps.maps, com.android.chrome]]` Has anyone tried the same feature before?",
+    "ts": "1468254041.000237",
+    "id": "11te1655",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETA9WHH",
+    "text": "<@U1JER4BDK>: for catching intents like that you should be using IntentsTestRule <https://developer.android.com/reference/android/support/test/espresso/intent/rule/IntentsTestRule.html>",
+    "attachments": [
+      {
+        "title": "    IntentsTestRule | Android Developers  ",
+        "title_link": "https://developer.android.com/reference/android/support/test/espresso/intent/rule/IntentsTestRule.html",
+        "text": "None",
+        "fallback": "    IntentsTestRule | Android Developers  ",
+        "from_url": "https://developer.android.com/reference/android/support/test/espresso/intent/rule/IntentsTestRule.html",
+        "service_icon": "https://developer.android.com/favicon.ico",
+        "service_name": "developer.android.com",
+        "id": 1
+      }
+    ],
+    "ts": "1468254450.000238",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11te1656",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1JER4BDK",
+    "text": "This is the gist of my attempt:",
+    "ts": "1468254624.000240",
+    "id": "11te1657",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1JER4BDK",
+    "text": "<https://gist.github.com/arvikachristy/91c880051812d549e219f49e875e9d29>",
+    "ts": "1468254626.000241",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11te1658",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETA9WHH",
+    "text": "ah, instead of the ActivityTestRule, use IntentsTestRule",
+    "ts": "1468254709.000242",
+    "id": "11te1659",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETA9WHH",
+    "text": "it extends ActivityTestRule",
+    "ts": "1468254817.000243",
+    "id": "11te1660",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1JER4BDK",
+    "text": "<@U0ETA9WHH>: I tried to changed it to IntentsTestRule, but still the same error :confused: is it possible the problem is in the matcher since it can't match the packages? I feel like I'm missing something to match this",
+    "ts": "1468255744.000244",
+    "id": "11te1661",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETA9WHH",
+    "text": "so if you use IntentsTestRule, you don’t need to call `Intents.init()` and `Intents.release()`. that’s handled in the test rule",
+    "ts": "1468255928.000245",
+    "id": "11te1662",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETA9WHH",
+    "text": "also, with your `intending()` line. i do this instead `intending(not(isInternal())).respondWith(new Instrumentation.ActivityResult(Activity.RESULT_OK, null));`",
+    "ts": "1468255956.000246",
+    "id": "11te1663",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U1JER4BDK|arvikachristy> uploaded a file: <https://androidchat.slack.com/files/arvikachristy/F1QKML1R6/-.java|Untitled> and commented: still not working for me with the same error :confused: this is what I have",
+    "file": {
+      "id": "F1QKML1R6",
+      "created": 1468256344,
+      "timestamp": 1468256344,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U1JER4BDK",
+      "editable": true,
+      "size": 1562,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F1QKML1R6/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F1QKML1R6/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/arvikachristy/F1QKML1R6/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F1QKML1R6-2c552ee423",
+      "edit_link": "https://androidchat.slack.com/files/arvikachristy/F1QKML1R6/-.java/edit",
+      "preview": "import android.app.Activity;\r\nimport android.app.Instrumentation;\r\nimport android.content.Intent;\r\nimport android.support.test.espresso.intent.rule.IntentsTestRule;\r\nimport android.support.test.filters.LargeTest;\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-keyword\">import</span> <span class=\"cm-variable\">android</span>.<span class=\"cm-variable\">app</span>.<span class=\"cm-variable\">Activity</span>;</pre></div>\n<div><pre><span class=\"cm-keyword\">import</span> <span class=\"cm-variable\">android</span>.<span class=\"cm-variable\">app</span>.<span class=\"cm-variable\">Instrumentation</span>;</pre></div>\n<div><pre><span class=\"cm-keyword\">import</span> <span class=\"cm-variable\">android</span>.<span class=\"cm-variable\">content</span>.<span class=\"cm-variable\">Intent</span>;</pre></div>\n<div><pre><span class=\"cm-keyword\">import</span> <span class=\"cm-variable\">android</span>.<span class=\"cm-variable\">support</span>.<span class=\"cm-variable\">test</span>.<span class=\"cm-variable\">espresso</span>.<span class=\"cm-variable\">intent</span>.<span class=\"cm-variable\">rule</span>.<span class=\"cm-variable\">IntentsTestRule</span>;</pre></div>\n<div><pre><span class=\"cm-keyword\">import</span> <span class=\"cm-variable\">android</span>.<span class=\"cm-variable\">support</span>.<span class=\"cm-variable\">test</span>.<span class=\"cm-variable\">filters</span>.<span class=\"cm-variable\">LargeTest</span>;</pre></div>\n</div>\n</div>\n",
+      "lines": 42,
+      "lines_more": 37,
+      "preview_is_truncated": null,
+      "channels": [
+        "C0D6DUW8L"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 1,
+      "initial_comment": {
+        "id": "Fc1QKSK3MK",
+        "created": 1468256344,
+        "timestamp": 1468256344,
+        "user": "U1JER4BDK",
+        "is_intro": true,
+        "comment": "still not working for me with the same error :confused: this is what I have",
+        "channel": ""
+      }
+    },
+    "user": "U1JER4BDK",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U1JER4BDK|arvikachristy>",
+    "bot_id": null,
+    "ts": "1468256344.000247",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11te1664",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETA9WHH",
+    "text": "ah so you’re just matching incorrectly on the intent now. try removing the allOf() matcher and just do `hasAction(Intent.ACTION_VIEW)`",
+    "ts": "1468256615.000248",
+    "id": "11te1665",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETA9WHH",
+    "text": "that should pass",
+    "ts": "1468256621.000249",
+    "id": "11te1666",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETA9WHH",
+    "text": "it looks like you’re matching on `hasData(\"<https://maps.google.com/maps?f=d&amp;amp;daddr=london”>)`, but it’s actually `dat=<https://maps.google.com/maps?f=d&amp;daddr=gower> street london`",
+    "ts": "1468256661.000250",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11te1667",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1JER4BDK",
+    "text": "I'm a bit confused, shouldn't I using hasData?",
+    "ts": "1468256935.000251",
+    "id": "11te1668",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETA9WHH",
+    "text": "right now you’re matching `allOf(hasAction(), hasData(), toPackage())`. i’m saying for debugging purposes, simplify it to just a single matcher. make sure it works and then expand that matcher",
+    "ts": "1468256997.000252",
+    "id": "11te1669",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETA9WHH",
+    "text": "limit it to just `hasAction()` so you can see it pass, then you can work on getting the rest of the assert matching correctly",
+    "ts": "1468257026.000253",
+    "id": "11te1670",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1JER4BDK",
+    "text": "thanks a lot that works! :dancer:",
+    "ts": "1468257493.000254",
+    "id": "11te1671",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1JER4BDK",
+    "text": "how do I go about extending this to test the URL?",
+    "ts": "1468257493.000255",
+    "id": "11te1672",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETA9WHH",
+    "text": "so now you can use `allOf(hasAction(), hasData())`. now notice in the error you were getting before the top line was `Recorded intents:\n-Intent { act=android.intent.action.VIEW dat=<https://maps.google.com/maps?f=d&amp;daddr=gower> street london } handling packages:[[com.google.android.apps.maps, com.android.chrome]])` and you were passing `hasData(\"<https://maps.google.com/maps?f=d&amp;amp;daddr=london”>)`. those strings don’t match",
+    "ts": "1468257565.000256",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11te1673",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U1JER4BDK|arvikachristy> uploaded a file: <https://androidchat.slack.com/files/arvikachristy/F1QKVK9EJ/-.java|Untitled> and commented: I might have mixed up the logs, but here's the most recent log.",
+    "file": {
+      "id": "F1QKVK9EJ",
+      "created": 1468258091,
+      "timestamp": 1468258091,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U1JER4BDK",
+      "editable": true,
+      "size": 4977,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F1QKVK9EJ/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F1QKVK9EJ/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/arvikachristy/F1QKVK9EJ/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F1QKVK9EJ-7eea1535b5",
+      "edit_link": "https://androidchat.slack.com/files/arvikachristy/F1QKVK9EJ/-.java/edit",
+      "preview": "\r\nandroid.support.test.espresso.base.DefaultFailureHandler$AssertionFailedWithCauseError: Wanted to match 1 intents. Actually matched 0 intents.\r\n\r\nIntentMatcher: (has action: is \"android.intent.action.VIEW\" and has data: is <https://maps.google.com/maps?f=d&amp;daddr=EC2R8AE>)\r\n\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>&#8203;</pre></div>\n<div><pre><span class=\"cm-variable\">android</span>.<span class=\"cm-variable\">support</span>.<span class=\"cm-variable\">test</span>.<span class=\"cm-variable\">espresso</span>.<span class=\"cm-variable\">base</span>.<span class=\"cm-variable\">DefaultFailureHandler$AssertionFailedWithCauseError</span>: <span class=\"cm-variable\">Wanted</span> <span class=\"cm-variable\">to</span> <span class=\"cm-variable\">match</span> <span class=\"cm-number\">1</span> <span class=\"cm-variable\">intents</span>. <span class=\"cm-variable\">Actually</span> <span class=\"cm-variable\">matched</span> <span class=\"cm-number\">0</span> <span class=\"cm-variable\">intents</span>.</pre></div>\n<div><pre>&#8203;</pre></div>\n<div><pre><span class=\"cm-variable\">IntentMatcher</span>: (<span class=\"cm-variable\">has</span> <span class=\"cm-variable\">action</span>: <span class=\"cm-variable\">is</span> <span class=\"cm-string\">&quot;android.intent.action.VIEW&quot;</span> <span class=\"cm-variable\">and</span> <span class=\"cm-variable\">has</span> <span class=\"cm-variable\">data</span>: <span class=\"cm-variable\">is</span> <span class=\"cm-operator\">&lt;</span><span class=\"cm-variable\">https</span>:<span class=\"cm-comment\">//maps.google.com/maps?f=d&amp;amp;daddr=EC2R8AE&gt;)</span></pre></div>\n<div><pre>&#8203;</pre></div>\n</div>\n</div>\n",
+      "lines": 76,
+      "lines_more": 71,
+      "preview_is_truncated": null,
+      "channels": [
+        "C0D6DUW8L"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 1,
+      "initial_comment": {
+        "id": "Fc1QLA7DFB",
+        "created": 1468258091,
+        "timestamp": 1468258091,
+        "user": "U1JER4BDK",
+        "is_intro": true,
+        "comment": "I might have mixed up the logs, but here's the most recent log.",
+        "channel": ""
+      }
+    },
+    "user": "U1JER4BDK",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U1JER4BDK|arvikachristy>",
+    "bot_id": null,
+    "ts": "1468258091.000257",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11te1674",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U1JER4BDK|arvikachristy> uploaded a file: <https://androidchat.slack.com/files/arvikachristy/F1QKTJHKN/-.java|Untitled> and commented: Here's the test snippet",
+    "file": {
+      "id": "F1QKTJHKN",
+      "created": 1468258104,
+      "timestamp": 1468258104,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U1JER4BDK",
+      "editable": true,
+      "size": 319,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F1QKTJHKN/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F1QKTJHKN/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/arvikachristy/F1QKTJHKN/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F1QKTJHKN-d055024459",
+      "edit_link": "https://androidchat.slack.com/files/arvikachristy/F1QKTJHKN/-.java/edit",
+      "preview": " intending(not(isInternal())).respondWith(new Instrumentation.ActivityResult(Activity.RESULT_OK, null));\r\n\r\n\r\n        onView(withId(R.id.layout0)).perform(click());\r\n        intended(allOf(\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre> <span class=\"cm-variable\">intending</span>(<span class=\"cm-variable\">not</span>(<span class=\"cm-variable\">isInternal</span>())).<span class=\"cm-variable\">respondWith</span>(<span class=\"cm-keyword\">new</span> <span class=\"cm-variable\">Instrumentation</span>.<span class=\"cm-variable\">ActivityResult</span>(<span class=\"cm-variable\">Activity</span>.<span class=\"cm-variable\">RESULT_OK</span>, <span class=\"cm-atom\">null</span>));</pre></div>\n<div><pre>&#8203;</pre></div>\n<div><pre>&#8203;</pre></div>\n<div><pre>        <span class=\"cm-variable\">onView</span>(<span class=\"cm-variable\">withId</span>(<span class=\"cm-variable\">R</span>.<span class=\"cm-variable\">id</span>.<span class=\"cm-variable\">layout0</span>)).<span class=\"cm-variable\">perform</span>(<span class=\"cm-variable\">click</span>());</pre></div>\n<div><pre>        <span class=\"cm-variable\">intended</span>(<span class=\"cm-variable\">allOf</span>(</pre></div>\n</div>\n</div>\n",
+      "lines": 7,
+      "lines_more": 2,
+      "preview_is_truncated": null,
+      "channels": [
+        "C0D6DUW8L"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 1,
+      "initial_comment": {
+        "id": "Fc1QKVN1GE",
+        "created": 1468258104,
+        "timestamp": 1468258104,
+        "user": "U1JER4BDK",
+        "is_intro": true,
+        "comment": "Here's the test snippet",
+        "channel": ""
+      }
+    },
+    "user": "U1JER4BDK",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U1JER4BDK|arvikachristy>",
+    "bot_id": null,
+    "ts": "1468258104.000258",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11te1675",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "<@U0F2AP42X|fayi> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1468258264.000259",
+    "id": "11te1676",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETA9WHH",
+    "text": "those strings still aren’t matching `<https://maps.google.com/maps?f=d&amp;amp;daddr=EC2R8AE>` vs `<https://maps.google.com/maps?f=d&amp;daddr=EC2R8AE>`",
+    "ts": "1468258545.000260",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U0MQ05BM4"
+        ],
+        "count": 2
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "grinning",
+        "users": [
+          "U1JER4BDK"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11te1677",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1JER4BDK",
+    "text": "THANKS! I missed the fact that the &amp; was getting escaped! :slightly_smiling_face:",
+    "ts": "1468258855.000261",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U0ETA9WHH"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11te1678",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETA9WHH",
+    "text": "<https://www.youtube.com/watch?v=_pCwcdNtxog>",
+    "attachments": [
+      {
+        "service_name": "YouTube",
+        "service_url": "https://www.youtube.com/",
+        "title": "Effective Unit Testing with Test Doubles by Matt Logan",
+        "title_link": "https://www.youtube.com/watch?v=_pCwcdNtxog",
+        "author_name": "GDG Boulder",
+        "author_link": "https://www.youtube.com/channel/UCz7uXZR_b8AdHVIyoCgljrQ",
+        "thumb_url": "https://i.ytimg.com/vi/_pCwcdNtxog/hqdefault.jpg",
+        "thumb_width": 480,
+        "thumb_height": 360,
+        "fallback": "YouTube Video: Effective Unit Testing with Test Doubles by Matt Logan",
+        "video_html": "<iframe width=\"400\" height=\"225\" src=\"https://www.youtube.com/embed/_pCwcdNtxog?feature=oembed&autoplay=1&iv_load_policy=3\" frameborder=\"0\" allowfullscreen></iframe>",
+        "video_html_width": 400,
+        "video_html_height": 225,
+        "from_url": "https://www.youtube.com/watch?v=_pCwcdNtxog",
+        "service_icon": "https://a.slack-edge.com/2089/img/unfurl_icons/youtube.png",
+        "id": 1
+      }
+    ],
+    "ts": "1468269100.000262",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11te1679",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

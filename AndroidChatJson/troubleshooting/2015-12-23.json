@@ -1,0 +1,1038 @@
+[
+  {
+    "user": "U055GGAHS",
+    "text": "Halp!\n<http://stackoverflow.com/questions/34440854/using-aes-with-androidkeystore>",
+    "attachments": [
+      {
+        "title": "Using AES with AndroidKeyStore",
+        "title_link": "http://stackoverflow.com/questions/34440854/using-aes-with-androidkeystore",
+        "text": "Android M provides AES support via the AndroidKeyStore however I can not find any combination of generating a key that provides a method of full encryption and decryption without a user password/de...",
+        "fallback": "Using AES with AndroidKeyStore",
+        "thumb_url": "http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/questions/34440854/using-aes-with-androidkeystore",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "id": 1
+      }
+    ],
+    "ts": "1450891810.000369",
+    "id": "23tr3325",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "maybe ive been drinking too much eggnog the past two days.. just kidding no such thing.. but I can not figure out how you can use the AndroidKeyStore backed secret key",
+    "ts": "1450891868.000371",
+    "id": "23tr3326",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I really like the official guide for this question.. <http://developer.android.com/training/articles/keystore.html#GeneratingANewSecretKey>",
+    "attachments": [
+      {
+        "text": "The Android Keystore system lets you store cryptographic keys in a container to make it more difficult to extract from the device. Once keys are in the keystore, they can be used for cryptographic operations with the key material remaining non-exportable…",
+        "fallback": "The Android Keystore system lets you store cryptographic keys in a container to make it more difficult to extract from the device. Once keys are in the keystore, they can be used for cryptographic operations with the key material remaining non-exportable…",
+        "from_url": "http://developer.android.com/training/articles/keystore.html#GeneratingANewSecretKey",
+        "id": 1
+      }
+    ],
+    "ts": "1450891913.000372",
+    "id": "23tr3327",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "thanks google, that really clarifies things..",
+    "ts": "1450891939.000374",
+    "id": "23tr3328",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "might as well just put\n\n```// FIXME Actually write something here```",
+    "edited": {
+      "user": "U055GGAHS",
+      "ts": "1450891965.000000"
+    },
+    "ts": "1450891954.000375",
+    "id": "23tr3329",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Maybe ask <@U0A0S0WG0> ",
+    "ts": "1450892224.000377",
+    "id": "23tr3330",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "<@U055GGAHS>: hey dude. whats the issue you are having?",
+    "ts": "1450892561.000378",
+    "id": "23tr3331",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "basically when you have an AES secret key you can’t simply call `cipher.init(Cipher.DECRYPT_MODE, secretKey)` as you are required to provide the IV",
+    "ts": "1450892615.000379",
+    "id": "23tr3332",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "ive tried changing to ECB and GCM and those fail for other reasons and my other various attempts to providing the data result in various failures such as failing to init or my favorite, only half my string is decrypted",
+    "ts": "1450892661.000380",
+    "id": "23tr3333",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "well, less than half really",
+    "edited": {
+      "user": "U055GGAHS",
+      "ts": "1450892670.000000"
+    },
+    "ts": "1450892668.000381",
+    "id": "23tr3334",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "sorry, my vocab isn’t great for this sometimes",
+    "ts": "1450892689.000383",
+    "id": "23tr3335",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "whats the IV?",
+    "ts": "1450892691.000384",
+    "id": "23tr3336",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "initialization vector",
+    "ts": "1450892711.000385",
+    "id": "23tr3337",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "since I do not provide one, the android key store clearly does and if you try to provide you own you can see that it actually knows it has one as it defines that you can’t arbitrarily set one but you can set it if it is the original iv so its a pretty annoying error that it knows its not the right IV but it knows what the right IV is but still wants you to provide it",
+    "ts": "1450892769.000386",
+    "id": "23tr3338",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "i’ve actually had some pretty serious issues with the AndroidKeyStore in M, so i feel your pain",
+    "ts": "1450892801.000387",
+    "id": "23tr3339",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "now, as to solving this",
+    "ts": "1450892807.000388",
+    "id": "23tr3340",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "hmm",
+    "ts": "1450892808.000389",
+    "id": "23tr3341",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "so basically im where I ‘could’ simply create my own IV and provide it for the key spec and that would work but I have to save it to disk",
+    "ts": "1450892811.000390",
+    "id": "23tr3342",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "which means I also need an RSA key to securely save the IV which I was trying to avoid using my RSA implementation except on the rare case im using a pre m device (my primary use case is m devices)",
+    "ts": "1450892847.000391",
+    "id": "23tr3343",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "hmmm",
+    "ts": "1450892942.000392",
+    "id": "23tr3344",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "does that make sense",
+    "ts": "1450892961.000393",
+    "id": "23tr3345",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "yeah kind of",
+    "ts": "1450893028.000394",
+    "id": "23tr3346",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "I’ve only really worked with RSA, so I’m not as familiar with AES nonsense",
+    "ts": "1450893038.000395",
+    "id": "23tr3347",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "but I understand the issue you are having",
+    "ts": "1450893048.000396",
+    "id": "23tr3348",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "so ive exhausted my research options as I cant find any examples of anyone even trying to use the key store for AES outside the examples included in the SDK which don’t actually go as far as decrypting anything",
+    "ts": "1450893117.000397",
+    "id": "23tr3349",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "yeah",
+    "ts": "1450893166.000398",
+    "id": "23tr3350",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I figured they would have written unit tests similar to what I wrote.. I quickly found out I was an idiot for thinking google would do such a sensible thing",
+    "ts": "1450893228.000399",
+    "id": "23tr3351",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "out of curiosity",
+    "ts": "1450893290.000400",
+    "id": "23tr3352",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "why are you initializing the cipher in Encrypt mode before you grab the IV?",
+    "ts": "1450893301.000401",
+    "id": "23tr3353",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "because the IV doesn’t exist before then",
+    "ts": "1450893319.000402",
+    "id": "23tr3354",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "gotcha",
+    "ts": "1450893374.000403",
+    "id": "23tr3355",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "cipher uses delayed initialization so data isn’t available for everything until after init and in AES case you need to know the IV beforehand or let androidkeystore load it",
+    "ts": "1450893376.000404",
+    "id": "23tr3356",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "which is why i’m starting to believe, but just want confirmation, that I basically have to store the IV myself or make it static which is obviously a bad idea",
+    "ts": "1450893401.000405",
+    "id": "23tr3357",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "well im over thinking about this. time for a lunch and a beer",
+    "ts": "1450893487.000406",
+    "id": "23tr3358",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "haha okay",
+    "ts": "1450893518.000407",
+    "id": "23tr3359",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "sorry i couldn’t be more helpful atm",
+    "ts": "1450893526.000408",
+    "id": "23tr3360",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "It's fine, it seems that not many people are using the key store yet other than for the RSA features",
+    "ts": "1450894369.000409",
+    "id": "23tr3361",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "In the mean time I'm just going to fall back to my pre m support implementation",
+    "ts": "1450894402.000410",
+    "id": "23tr3362",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I just don't use it cause it's 18+",
+    "ts": "1450896218.000411",
+    "id": "23tr3363",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "well unlike all you poor bastards I pretty much only have to worry about supporting M :smile:",
+    "ts": "1450896301.000412",
+    "id": "23tr3364",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "and whenever N comes out.. that’s pretty much all I have to worry about supporting",
+    "ts": "1450896316.000413",
+    "id": "23tr3365",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": " /voteban <@U055GGAHS> ",
+    "ts": "1450896657.000414",
+    "id": "23tr3366",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": ":troll:",
+    "ts": "1450896667.000415",
+    "id": "23tr3367",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Share our suffering or go develop for iOS ",
+    "ts": "1450896677.000416",
+    "id": "23tr3368",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "i write code for as backwards as possible.. but when it comes to like hey we could support sdk ‘x’ but it’ll cost this much time, we just go ‘nope'",
+    "ts": "1450896727.000417",
+    "id": "23tr3369",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "our software generally ships installed on the phone so we have full control and dont have to worry about junk bo bo samsung garbage or other android devices",
+    "ts": "1450896761.000418",
+    "id": "23tr3370",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "We have 7% of users on 2.3. I don't see us advancing our minSdk anytime soon :/ ",
+    "edited": {
+      "user": "U04TK850N",
+      "ts": "1450896846.000000"
+    },
+    "ts": "1450896832.000419",
+    "id": "23tr3371",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "cutting edge of 1999",
+    "ts": "1450896857.000421",
+    "id": "23tr3372",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "We upped from 7 to 9 this summer ;) ",
+    "ts": "1450896884.000422",
+    "id": "23tr3373",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "7.. wtf… masochists..",
+    "ts": "1450896899.000423",
+    "id": "23tr3374",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Wasn't that much of a difference ",
+    "ts": "1450896911.000424",
+    "id": "23tr3375",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "i dunno.. 7 and 8 had crazy manufacturer specific bugs of stupidity",
+    "ts": "1450896936.000425",
+    "id": "23tr3376",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "looking at you samsung.. still am",
+    "ts": "1450896951.000426",
+    "id": "23tr3377",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "¯\\_(ツ)_/¯",
+    "ts": "1450896970.000427",
+    "id": "23tr3378",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "back on topic.. halp!!! <http://stackoverflow.com/questions/34440854/using-aes-with-androidkeystore>",
+    "attachments": [
+      {
+        "title": "Using AES with AndroidKeyStore",
+        "title_link": "http://stackoverflow.com/questions/34440854/using-aes-with-androidkeystore",
+        "text": "Android M provides AES support via the AndroidKeyStore however I can not find any combination of generating a key that provides a method of full encryption and decryption without a user password/de...",
+        "fallback": "Using AES with AndroidKeyStore",
+        "thumb_url": "http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/questions/34440854/using-aes-with-androidkeystore",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "id": 1
+      }
+    ],
+    "ts": "1450897201.000428",
+    "id": "23tr3379",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

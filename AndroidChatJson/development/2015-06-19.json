@@ -1,0 +1,405 @@
+[
+  {
+    "user": "U04UEGMR4",
+    "text": "anyone here have experience of using ion ?",
+    "ts": "1434699795.002182",
+    "id": "19de2464",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UEGMR4",
+    "text": "<@U055GGAHS>:  Can i create ion object like ion.build or something ..",
+    "ts": "1434699880.002183",
+    "id": "19de2465",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "<https://github.com/koush/ion>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "koush/ion",
+        "title_link": "https://github.com/koush/ion",
+        "text": "ion - Android Asynchronous Networking and Image Loading",
+        "fallback": "GitHub: koush/ion",
+        "thumb_url": "https://avatars1.githubusercontent.com/u/73924?v=3&s=400",
+        "from_url": "https://github.com/koush/ion",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1434699924.002184",
+    "id": "19de2466",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UEGMR4",
+    "text": "How can i add multiple headers ?",
+    "edited": {
+      "user": "U04UEGMR4",
+      "ts": "1434699952.000000"
+    },
+    "ts": "1434699941.002186",
+    "id": "19de2467",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "<https://github.com/koush/ion/blob/master/README.md#setting-headers>",
+    "ts": "1434699958.002188",
+    "id": "19de2468",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UEGMR4",
+    "text": "<@U051G3BC3>: headers are condition based ,  like for some request  i have to add authorization header and for rest i dont have to ..",
+    "ts": "1434700054.002189",
+    "id": "19de2469",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "`if(condition) {builder.setHeader(…);}`",
+    "edited": {
+      "user": "U04TK850N",
+      "ts": "1434700275.000000"
+    },
+    "ts": "1434700268.002190",
+    "id": "19de2470",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": ":smile:",
+    "ts": "1434700277.002193",
+    "id": "19de2471",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UEGMR4",
+    "text": "Future ionObj;\nionObj = Ion.with(task.getContext())\n                .load(task.getUrl())\n                .setHeader(\"Content-type\",\"application/json; charset=utf-8\")\n                .setJsonObjectBody(task.getRequestParams())\n                .group(task.getTagName())\n                .asJsonObject()\n                .setCallback(fCallback);",
+    "ts": "1434700404.002194",
+    "id": "19de2472",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UEGMR4",
+    "text": "<@U04TK850N>: I am doing this way .. can you suggest something better",
+    "ts": "1434700421.002195",
+    "id": "19de2473",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "you can have a method returning your list of headers based on your conditions and then call `addHeaders(Map&lt;String, List&lt;String&gt;&gt; params);`",
+    "ts": "1434700539.002196",
+    "id": "19de2474",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "generate the params based on your conditions in some other method",
+    "ts": "1434700554.002197",
+    "id": "19de2475",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UEGMR4",
+    "text": "Thanks :simple_smile:",
+    "ts": "1434700576.002198",
+    "id": "19de2476",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UEGMR4",
+    "text": "Let me try that out",
+    "ts": "1434700581.002199",
+    "id": "19de2477",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UEGMR4",
+    "text": "<@U04TK850N>:  What would be the key here in maps , i am assuming List of all the headers like [\"client_id: xyz, client_secret:shdjksadk\"]",
+    "ts": "1434708889.002200",
+    "id": "19de2478",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U050NGM50",
+    "subtype": "channel_join",
+    "text": "<@U050NGM50|rania> has joined the channel",
+    "ts": "1434709178.002201",
+    "id": "19de2479",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "<@U04UEGMR4>: I haven’t used the method myself yet, from looking at the code it seems to be header_name-&gt;list_of_header_values",
+    "ts": "1434709748.002202",
+    "id": "19de2480",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "maybe you can use the `setHeader` call which takes NameValuePair varargs, but keep in mind NameValuePait has been deprecated in API 22",
+    "ts": "1434709784.002203",
+    "id": "19de2481",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "<https://sites.google.com/a/android.com/tools/recent/androidstudio13betaavailable|Android Studio 1.3 Beta Available>\nAndroid Studio 1.3 Beta is now available in the beta channel! Sorry, this build does not yet contain the C/C++ support; we are still ironing out a couple of critical issues, but we hope to be ready in the next week or two. Similarly, the vector rasterization support is also still not enabled due to various <http://bugs.In|bugs.In> the meantime, we've fixed the blocker issues in previous 1.3 Preview builds such that we can now promote the 1.3 build to a wider audience in the beta channel. As mentioned in the...",
+    "username": "Posts of Recent Changes",
+    "icons": {
+      "image_48": "https://slack.global.ssl.fastly.net/7bf4/img/services/rss_48.png"
+    },
+    "bot_id": "B062SSUPJ",
+    "attachments": [
+      {
+        "title": "Android Studio 1.3 Beta Available - Android Tools Project Site",
+        "title_link": "https://sites.google.com/a/android.com/tools/recent/androidstudio13betaavailable",
+        "text": "Android tools project information site",
+        "fallback": "Android Studio 1.3 Beta Available - Android Tools Project Site",
+        "image_url": "https://sites.google.com/a/android.com/tools/_/rsrc/1434739056014/recent/androidstudio13betaavailable/13beta.png",
+        "from_url": "https://sites.google.com/a/android.com/tools/recent/androidstudio13betaavailable",
+        "image_width": 657,
+        "image_height": 237,
+        "image_bytes": 34274,
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1434751381.002204",
+    "id": "19de2482",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U06JWHDBN",
+    "subtype": "channel_join",
+    "text": "<@U06JWHDBN|sharj> has joined the channel",
+    "ts": "1434751590.002206",
+    "id": "19de2483",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

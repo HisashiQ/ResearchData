@@ -1,0 +1,920 @@
+[
+  {
+    "user": "U0EEW4CP9",
+    "text": "Hey Guys,\n\nMaybe someone is able to help me out. I'm trying to make an SQLite android binding. \nI created an NDK enabled project\nadded the JNI dir with the source files\ndid NDK build\n\nand then in my application code i use System.loadLibrary(\"sqliteX\"); and import org.sqlite.database.sqlite.SQLiteDatabase\n\nStill I get an  UnsatisfiedLinkError couldn't find \"libsqliteX.so.",
+    "ts": "1447926508.000007",
+    "id": "19nd168",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0EEW4CP9",
+    "text": "maybe some android studio setting that i have to reference the native lib correctly?",
+    "ts": "1447926543.000008",
+    "id": "19nd169",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054D4E0Z",
+    "text": "maybe try <https://github.com/KeepSafe/ReLinker>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "KeepSafe/ReLinker",
+        "title_link": "https://github.com/KeepSafe/ReLinker",
+        "text": "ReLinker - A robust native library loader for Android.",
+        "fallback": "GitHub: KeepSafe/ReLinker",
+        "thumb_url": "https://avatars1.githubusercontent.com/u/1377248?v=3&s=400",
+        "from_url": "https://github.com/KeepSafe/ReLinker",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1447927548.000009",
+    "id": "19nd170",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0EEW4CP9",
+    "text": "thanks for the tip. implemented relinker, but still no luck",
+    "ts": "1447930441.000011",
+    "id": "19nd171",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0EEW4CP9",
+    "text": "my gradle looks like this",
+    "ts": "1447930524.000012",
+    "id": "19nd172",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0EEW4CP9",
+    "text": "<http://pastebin.com/mS8ZBqDK>",
+    "attachments": [
+      {
+        "text": "Different Android handsets use different CPUs, which in turn support different instruction sets. Each combination of CPU and instruction sets has its own Application Binary Interface, or ABI . The ABI defines, with great precision, how an application&amp;…",
+        "fallback": "Different Android handsets use different CPUs, which in turn support different instruction sets. Each combination of CPU and instruction sets has its own Application Binary Interface, or ABI . The ABI defines, with great precision, how an application&amp;…",
+        "from_url": "https://developer.android.com/ndk/guides/abis.html#sa",
+        "id": 1
+      }
+    ],
+    "edited": {
+      "user": "U0EEW4CP9",
+      "ts": "1447930573.000000"
+    },
+    "ts": "1447930527.000013",
+    "id": "19nd173",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C5E9X2N",
+    "text": "Have you checked to match the correct ABIs between the binary and your device arch?",
+    "ts": "1447932754.000017",
+    "id": "19nd174",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0EEW4CP9",
+    "text": "just armeabi",
+    "ts": "1447933836.000018",
+    "id": "19nd175",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0EEW4CP9",
+    "text": "building to a moto G test phone (and armeabi emulator)",
+    "ts": "1447933861.000019",
+    "id": "19nd176",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0EEW4CP9",
+    "text": "but maybe incompatible with v7a",
+    "ts": "1447933873.000020",
+    "id": "19nd177",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0EEW4CP9",
+    "text": "do you think my gradle config is correct? tried both armeabi and armeabi-v7 (but the lib has only armabi subdir)",
+    "ts": "1447934000.000021",
+    "id": "19nd178",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0EEW4CP9",
+    "text": "i guess something is wrong there. the ndk-build only generated the libs/armeabi dir, nothing for v7a or v8a",
+    "ts": "1447934276.000022",
+    "id": "19nd179",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C5E9X2N",
+    "text": "i don’t think you need to care about v8-a until you solve this problem first",
+    "ts": "1447935341.000023",
+    "id": "19nd180",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C5E9X2N",
+    "text": "nor the emulator neither moto G has v8-a arch",
+    "ts": "1447935373.000024",
+    "id": "19nd181",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C5E9X2N",
+    "text": "can you give us a snippet of yout gradle ?",
+    "ts": "1447935409.000025",
+    "id": "19nd182",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0EEW4CP9",
+    "text": "pasted it here; <http://pastebin.com/mS8ZBqDK>",
+    "attachments": [
+      {
+        "service_name": "Pastebin",
+        "title": "apply plugin: 'com.android.model.application'  model {      android {          c - Pastebin.com",
+        "title_link": "http://pastebin.com/mS8ZBqDK",
+        "fallback": "Pastebin: apply plugin: 'com.android.model.application'  model {      android {          c - Pastebin.com",
+        "image_url": "http://pastebin.com/i/fb2.jpg",
+        "from_url": "http://pastebin.com/mS8ZBqDK",
+        "image_width": 200,
+        "image_height": 200,
+        "image_bytes": 7901,
+        "id": 1
+      }
+    ],
+    "ts": "1447935660.000026",
+    "id": "19nd183",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0EEW4CP9",
+    "text": "moto G has v7a? and that one is not compatible with armabi?",
+    "ts": "1447935690.000028",
+    "id": "19nd184",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "armeabi is just armv6. and armv7 and armv8 can both run armv6 code",
+    "edited": {
+      "user": "U04TK850N",
+      "ts": "1447936060.000000"
+    },
+    "ts": "1447936047.000029",
+    "id": "19nd185",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "check in your APK, if the .so file actually got packaged into the right directory",
+    "ts": "1447936097.000031",
+    "id": "19nd186",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0EEW4CP9",
+    "text": "by converting the classes.dex to a jar?",
+    "ts": "1447936800.000032",
+    "id": "19nd187",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "no, it will be right in the APK file",
+    "ts": "1447936814.000033",
+    "id": "19nd188",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I think libs/armeabi/file.so",
+    "ts": "1447936824.000034",
+    "id": "19nd189",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054D4E0Z",
+    "text": "open the apk in 7zip/winrar whatever",
+    "ts": "1447936829.000035",
+    "id": "19nd190",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054D4E0Z",
+    "text": "and there should be a folder with the .so file in it",
+    "ts": "1447936842.000036",
+    "id": "19nd191",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054D4E0Z",
+    "text": "OR install native monitor",
+    "ts": "1447936847.000037",
+    "id": "19nd192",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054D4E0Z",
+    "text": "v",
+    "ts": "1447936864.000038",
+    "id": "19nd193",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054D4E0Z",
+    "text": "<https://play.google.com/store/apps/details?id=com.xh.nativelibsmonitor.app&amp;hl=en>",
+    "ts": "1447936866.000039",
+    "id": "19nd194",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054D4E0Z",
+    "text": "and check if the app finds the library",
+    "ts": "1447936880.000040",
+    "id": "19nd195",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054D4E0Z",
+    "text": "must be in \"Native Libraries installed\"",
+    "ts": "1447936901.000041",
+    "id": "19nd196",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054D4E0Z",
+    "text": "sometimes as just fucks up to bundle it right",
+    "ts": "1447937004.000042",
+    "id": "19nd197",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054D4E0Z",
+    "text": "then clean project and compile again",
+    "ts": "1447937017.000043",
+    "id": "19nd198",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054D4E0Z",
+    "text": "happens to me once or twice a week while compiling :S never edited anything in the native libs but it just doesn't bundle it right",
+    "ts": "1447937055.000044",
+    "id": "19nd199",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0EEW4CP9",
+    "text": "unfortunately its not packed. i guess i miss some sort of step in my gradle?",
+    "ts": "1447938626.000045",
+    "id": "19nd200",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0EEW4CP9",
+    "text": "tried multiple clean builds",
+    "ts": "1447939017.000046",
+    "id": "19nd201",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "the official NDK plugin is suboptimal",
+    "ts": "1447947073.000047",
+    "id": "19nd202",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "to put it nicely",
+    "ts": "1447947077.000048",
+    "id": "19nd203",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "our last NDK thingy not 6 months ago was still using shortcircuits around it to fall back to ndk-build",
+    "edited": {
+      "user": "U0B8R3VV4",
+      "ts": "1447947204.000000"
+    },
+    "ts": "1447947093.000049",
+    "id": "19nd204",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "<https://github.com/thomsonreuters/TRCharts/blob/master/Charts/TRChartsJava/build.gradle#L35>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "thomsonreuters/TRCharts",
+        "title_link": "https://github.com/thomsonreuters/TRCharts/blob/master/Charts/TRChartsJava/build.gradle#L35",
+        "text": "Contribute to TRCharts development by creating an account on GitHub.",
+        "fallback": "GitHub: thomsonreuters/TRCharts",
+        "thumb_url": "https://avatars2.githubusercontent.com/u/686958?v=3&s=400",
+        "from_url": "https://github.com/thomsonreuters/TRCharts/blob/master/Charts/TRChartsJava/build.gradle#L35",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1447947149.000050",
+    "id": "19nd205",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "and thn a jni folder <https://github.com/thomsonreuters/TRCharts/tree/master/Charts/TRChartsJava/jni>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "thomsonreuters/TRCharts",
+        "title_link": "https://github.com/thomsonreuters/TRCharts/tree/master/Charts/TRChartsJava/jni",
+        "text": "Contribute to TRCharts development by creating an account on GitHub.",
+        "fallback": "GitHub: thomsonreuters/TRCharts",
+        "thumb_url": "https://avatars2.githubusercontent.com/u/686958?v=3&s=400",
+        "from_url": "https://github.com/thomsonreuters/TRCharts/tree/master/Charts/TRChartsJava/jni",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1447947171.000052",
+    "id": "19nd206",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "and to split for every platform",
+    "ts": "1447947259.000055",
+    "id": "19nd207",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "<https://github.com/thomsonreuters/TRCharts/blob/master/Charts/TRChartsAndroidSandbox/app/build.gradle#L22>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "thomsonreuters/TRCharts",
+        "title_link": "https://github.com/thomsonreuters/TRCharts/blob/master/Charts/TRChartsAndroidSandbox/app/build.gradle#L22",
+        "text": "Contribute to TRCharts development by creating an account on GitHub.",
+        "fallback": "GitHub: thomsonreuters/TRCharts",
+        "thumb_url": "https://avatars2.githubusercontent.com/u/686958?v=3&s=400",
+        "from_url": "https://github.com/thomsonreuters/TRCharts/blob/master/Charts/TRChartsAndroidSandbox/app/build.gradle#L22",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1447947259.000056",
+    "id": "19nd208",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "maybe it’s changed, I’m reading some stuff on your build that wasn’t there before :simple_smile:",
+    "ts": "1447947307.000058",
+    "id": "19nd209",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0EEW4CP9",
+    "text": "hmm\n``     task buildNative(type: Exec, description: 'Compile JNI sources with NDK') {\n        def ndkDir = project.plugins.findPlugin('com.android.library').sdkHandler.getNdkFolder();\n        commandLine \"$ndkDir/ndk-build\"\n    } ``",
+    "ts": "1447949314.000059",
+    "id": "19nd210",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0EEW4CP9",
+    "text": "seems to be not supported in the expiremental gradle which google ndk documentation prefers",
+    "ts": "1447949335.000060",
+    "id": "19nd211",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "the getNdkfolder is somehere else",
+    "ts": "1447950752.000061",
+    "id": "19nd212",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "but yeah, don’t mix and match",
+    "ts": "1447950757.000062",
+    "id": "19nd213",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

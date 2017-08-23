@@ -1,0 +1,631 @@
+[
+  {
+    "user": "U16GF1B0F",
+    "text": "its currently looking like SRML parsing is a bit slower than `Html.fromHtml` :confused: looking into it",
+    "ts": "1478867293.000016",
+    "id": "11co6137",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "ah, sanitizing/desanitizing params wasn’t very well optimized",
+    "ts": "1478869852.000017",
+    "id": "11co6138",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "100000 iterations: ```I/PerformanceTest( 4532): SRML.getString averaged 0.11ms\nI/PerformanceTest( 4532): Html.fromHtml averaged 0.18ms```",
+    "ts": "1478870453.000018",
+    "id": "11co6139",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": ":slightly_smiling_face:",
+    "ts": "1478870459.000019",
+    "id": "11co6140",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "SRML is now jitpackified.. still need to add a ton more tags before it’s worth making a release though",
+    "ts": "1478876904.000020",
+    "id": "11co6141",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "Color tags are new though: `{{color value=#FFFF00}}my text{{/color}}` will work.",
+    "ts": "1478876940.000021",
+    "id": "11co6142",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "it’d be cool to also support something like `{{color res=R.color.some_color_resource}}` but I haven’t thought through how to access the client app’s resources using reflection.",
+    "ts": "1478879963.000022",
+    "id": "11co6143",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "You don't need reflection for that ",
+    "ts": "1478880603.000023",
+    "id": "11co6144",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "But it will be kinda expensive to resolve regardless ",
+    "ts": "1478880636.000024",
+    "id": "11co6145",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "I’m thinking that _maybe_ there could be a way to resolve the fields when SRML is initialized in an AsyncTask.. that way getting their values later on is fast_er_",
+    "ts": "1478881441.000025",
+    "id": "11co6146",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U30UP3UHE",
+    "text": "<@U30UP3UHE|rf> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1478898775.000026",
+    "id": "11co6147",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U30UP3UHE",
+    "text": "Heyy Guys",
+    "ts": "1478898873.000027",
+    "id": "11co6148",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U30UP3UHE",
+    "text": "Do you know if it's possible to create a developer account exclusively for a single app?",
+    "ts": "1478898920.000028",
+    "id": "11co6149",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "In play?",
+    "ts": "1478899000.000029",
+    "id": "11co6150",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U30UP3UHE",
+    "text": "This is because I'm considering using subscription inside the app, this means that in the future if I want to transfer the app to someone else, I would be stuck because google does'nt transfer apps with subscription of in app purchases",
+    "ts": "1478899004.000030",
+    "id": "11co6151",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "Sure just create a new gmail account ",
+    "ts": "1478899016.000031",
+    "id": "11co6152",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "Oh I'm not csure about subscriptons",
+    "ts": "1478899049.000032",
+    "id": "11co6153",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U30UP3UHE",
+    "text": "So the only solution to me is like launch the app with its own dev account and hand that if I'm to pass  over , does you think that's the most reasonable option?",
+    "edited": {
+      "user": "U30UP3UHE",
+      "ts": "1478899215.000000"
+    },
+    "ts": "1478899082.000033",
+    "id": "11co6154",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U30UP3UHE",
+    "text": "Yea <@U053PPGDC> I've checked Play policies",
+    "ts": "1478899104.000034",
+    "id": "11co6155",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U30UP3UHE",
+    "text": "It's crazy but they say they dont transfer apps with in-app purchases or subscriptions",
+    "ts": "1478899127.000035",
+    "id": "11co6156",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "Transfer between whom?",
+    "ts": "1478899146.000036",
+    "id": "11co6157",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "Users or accounts?",
+    "ts": "1478899167.000037",
+    "id": "11co6158",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "If it's an account that owns it you could just hand over the credentials ",
+    "ts": "1478899213.000039",
+    "id": "11co6159",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U30UP3UHE",
+    "text": "accounts",
+    "ts": "1478899226.000041",
+    "id": "11co6160",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I've never sold an app that way though, but I presume that's the easy way to do it",
+    "ts": "1478899255.000042",
+    "id": "11co6161",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U30UP3UHE",
+    "text": "You know I was just wondering if there would be another strategy other than this one I'm proposing",
+    "edited": {
+      "user": "U30UP3UHE",
+      "ts": "1478899280.000000"
+    },
+    "ts": "1478899259.000043",
+    "id": "11co6162",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U30UP3UHE",
+    "text": "You ever sold an app with in-app or sucriptions <@U053PPGDC>",
+    "ts": "1478899315.000045",
+    "id": "11co6163",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U30UP3UHE",
+    "text": "?",
+    "ts": "1478899317.000046",
+    "id": "11co6164",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "No, never done that",
+    "ts": "1478899331.000047",
+    "id": "11co6165",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "Once transferred a free app and that was that",
+    "ts": "1478899350.000048",
+    "id": "11co6166",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "Back in Gingerbread days",
+    "ts": "1478899363.000049",
+    "id": "11co6167",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U30UP3UHE",
+    "text": "I guess few really think about this before launch...",
+    "edited": {
+      "user": "U30UP3UHE",
+      "ts": "1478899479.000000"
+    },
+    "ts": "1478899425.000050",
+    "id": "11co6168",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U30UP3UHE",
+    "text": "haha",
+    "ts": "1478899427.000051",
+    "id": "11co6169",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U30UP3UHE",
+    "text": "Not much info online about that",
+    "edited": {
+      "user": "U30UP3UHE",
+      "ts": "1478899466.000000"
+    },
+    "ts": "1478899453.000052",
+    "id": "11co6170",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

@@ -1,0 +1,938 @@
+[
+  {
+    "user": "U2MA1JV3P",
+    "text": "<@U2MA1JV3P|willardshikami> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476085239.001589",
+    "id": "10be9325",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U22E97HR9",
+    "text": "Hello guys ! I got a viewPager of 3 Fragments. There is always 2 fragment instanciate when i slide. Why i cannot have 3 fragment instanciate only one time ?",
+    "ts": "1476090049.001590",
+    "id": "10be9326",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "`viewPager.setOffScreenPageLimit(adapter.getCount() - 1);`",
+    "edited": {
+      "user": "U1LJG0Y03",
+      "ts": "1476090628.000000"
+    },
+    "ts": "1476090620.001591",
+    "id": "10be9327",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "It’s not advised though, last resort",
+    "ts": "1476090638.001593",
+    "id": "10be9328",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U22E97HR9",
+    "text": "ty this is why i wanted",
+    "ts": "1476090676.001594",
+    "id": "10be9329",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Are you using `FragmentStatePagerAdapter`?",
+    "ts": "1476090692.001595",
+    "id": "10be9330",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U22E97HR9",
+    "text": "i think not",
+    "ts": "1476090717.001596",
+    "id": "10be9331",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U22E97HR9",
+    "text": "```public class CustomViewPager extends android.support.v4.view.ViewPager {```",
+    "ts": "1476090732.001597",
+    "id": "10be9332",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "The adapter",
+    "ts": "1476090780.001598",
+    "id": "10be9333",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Not the ViewPager",
+    "ts": "1476090784.001599",
+    "id": "10be9334",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U22E97HR9",
+    "text": "ok sorry ^^ ! ```public class MyPagerAdapter extends FragmentStatePagerAdapter {```",
+    "ts": "1476090926.001600",
+    "id": "10be9335",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Then you shouldn’t need to instantiate all at once, you should be saving the state of the fragment instead and reinitialising to that state",
+    "ts": "1476091092.001601",
+    "id": "10be9336",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U22E97HR9",
+    "text": "how can i do this ? :confused:",
+    "ts": "1476091121.001602",
+    "id": "10be9337",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "It’s handled by the system, there’s rare cases where you’d need to override this and do it yourself",
+    "ts": "1476091189.001603",
+    "id": "10be9338",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U22E97HR9",
+    "text": "ok",
+    "ts": "1476091257.001604",
+    "id": "10be9339",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U22E97HR9",
+    "text": "thanks",
+    "ts": "1476091263.001605",
+    "id": "10be9340",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0921GB",
+    "text": "Any beginner who want to test his coding skills",
+    "ts": "1476093243.001606",
+    "id": "10be9341",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U2M0921GB> If you want help with your work ask in <#C08SR981Y|collab>",
+    "ts": "1476093406.001607",
+    "id": "10be9342",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2MAUNN1H",
+    "text": "<@U2MAUNN1H|kirstenz> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476101163.001608",
+    "id": "10be9343",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2MCYSWHX",
+    "text": "<@U2MCYSWHX|markus_s> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476103181.001609",
+    "id": "10be9344",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2MDPNX1T",
+    "text": "<@U2MDPNX1T|joaobeno> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476107686.001610",
+    "id": "10be9345",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2ME921U4",
+    "text": "<@U2ME921U4|shicholas> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476111247.001611",
+    "id": "10be9346",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2MF9J8HY",
+    "text": "<@U2MF9J8HY|ivan_4rec> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476112843.001612",
+    "id": "10be9347",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2MFJSHC2",
+    "text": "<@U2MFJSHC2|mburlando> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476113924.001613",
+    "id": "10be9348",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2MG9FV3Q",
+    "text": "<@U2MG9FV3Q|iqandjoke> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476118896.001614",
+    "id": "10be9349",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2MJ4NN3C",
+    "text": "<@U2MJ4NN3C|syed> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476124937.001615",
+    "id": "10be9350",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U24GU0RSS",
+    "text": "Привет ",
+    "ts": "1476128541.001616",
+    "id": "10be9351",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "Внезапно)",
+    "ts": "1476129194.001617",
+    "id": "10be9352",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U24GU0RSS",
+    "text": "Ахахах ",
+    "ts": "1476129648.001618",
+    "id": "10be9353",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U24GU0RSS",
+    "text": "Миш,давно пишешь?",
+    "ts": "1476129663.001619",
+    "id": "10be9354",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U24GU0RSS",
+    "text": "По андроид",
+    "ts": "1476129669.001620",
+    "id": "10be9355",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "Год.",
+    "ts": "1476129682.001621",
+    "id": "10be9356",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U24GU0RSS",
+    "text": "Работаешь?",
+    "ts": "1476129693.001622",
+    "id": "10be9357",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "Да.",
+    "ts": "1476129698.001623",
+    "id": "10be9358",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U24GU0RSS",
+    "text": "Джун?",
+    "ts": "1476129707.001624",
+    "id": "10be9359",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "¯\\_(ツ)_/¯",
+    "ts": "1476129710.001625",
+    "id": "10be9360",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "Мид.",
+    "ts": "1476129714.001626",
+    "id": "10be9361",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U24GU0RSS",
+    "text": "За год?",
+    "ts": "1476129720.001627",
+    "id": "10be9362",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "¯\\_(ツ)_/¯",
+    "ts": "1476129747.001628",
+    "id": "10be9363",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U24GU0RSS",
+    "text": "Слушай, я мвп вкурить не могу, можешь просветить?",
+    "ts": "1476129774.001629",
+    "id": "10be9364",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "Давай попробую)",
+    "ts": "1476129788.001630",
+    "id": "10be9365",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U24GU0RSS",
+    "text": "Ты в вк есть?",
+    "ts": "1476129801.001631",
+    "id": "10be9366",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "¯\\_(ツ)_/¯",
+    "ts": "1476130574.001632",
+    "id": "10be9367",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "¯\\_(ツ)_/¯",
+    "ts": "1476131068.001633",
+    "id": "10be9368",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2MK1DHPA",
+    "text": "<@U2MK1DHPA|dlightman> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476132191.001634",
+    "id": "10be9369",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2CJ7PGSF",
+    "text": "English in 2016 ¯\\_(ツ)_/¯",
+    "ts": "1476133213.001635",
+    "id": "10be9370",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "English is great :slightly_smiling_face:",
+    "ts": "1476134854.001636",
+    "id": "10be9371",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2MLDV823",
+    "text": "<@U2MLDV823|zahidrasheed> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476138004.001637",
+    "id": "10be9372",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2MML4HFG",
+    "text": "<@U2MML4HFG|ahcbsa> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476150208.001638",
+    "id": "10be9373",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2MMXGKAL",
+    "text": "<@U2MMXGKAL|forcelain> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476153674.001639",
+    "id": "10be9374",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2MP04WBB",
+    "text": "<@U2MP04WBB|peterjmello> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476162123.001640",
+    "id": "10be9375",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

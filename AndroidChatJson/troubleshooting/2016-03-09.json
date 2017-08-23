@@ -1,0 +1,128 @@
+[
+  {
+    "user": "U0NQ6CY8G",
+    "text": "I’m using a tab layout with fragments for tabs, one of the fragment would be for settings (it extends Fragment). How can I view my preference.xml in this fragment?",
+    "ts": "1457585582.000232",
+    "id": "09tr4097",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "extend PreferenceFragment instead of Fragment?",
+    "ts": "1457585931.000233",
+    "id": "09tr4098",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0NQ6CY8G",
+    "text": "<@U054A24ET>: When I extend PreferenceFragment, the ViewPager adapter used for the tab layout fails.",
+    "ts": "1457586350.000234",
+    "id": "09tr4099",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "just a wild shot, try PreferenceFragmentCompat",
+    "ts": "1457587071.000235",
+    "id": "09tr4100",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "i haven't done this before personally though",
+    "ts": "1457587095.000236",
+    "id": "09tr4101",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "you'll need the v7 Preference Support Library",
+    "ts": "1457587099.000237",
+    "id": "09tr4102",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "i guess the viewpager fails because it wants a v4 support Fragment, but PreferenceFragment extends Fragment",
+    "ts": "1457587143.000238",
+    "id": "09tr4103",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

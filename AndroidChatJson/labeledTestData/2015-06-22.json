@@ -1,0 +1,2671 @@
+[
+  {
+    "user": "U06LA7E13",
+    "subtype": "channel_join",
+    "text": "<@U06LA7E13|mwermuth> has joined the channel",
+    "ts": "1434964599.000449",
+    "id": "22tr417",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Why would elements in a Fragment not use the styles I set on them?",
+    "ts": "1434966156.000450",
+    "id": "22tr418",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Or, asking differently: Why would the elemts only then be styled if I specifically set the styles per item?",
+    "ts": "1434966227.000451",
+    "id": "22tr419",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Well, not even that is true, as it apparently works on some, but not all views",
+    "ts": "1434966272.000452",
+    "id": "22tr420",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": ":confused:",
+    "ts": "1434966273.000453",
+    "id": "22tr421",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Might be because you need to use the Activity and not the Activity's context",
+    "ts": "1434970165.000454",
+    "id": "22tr422",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Hm, weird. I set all the styles manually on the Views and it works",
+    "ts": "1434971268.000455",
+    "id": "22tr423",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Tried this too, no change:",
+    "ts": "1434971330.000456",
+    "id": "22tr424",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "```        Context ctx = new ContextThemeWrapper(getActivity(), R.style.VisualDesign);\n        mRootView = (RelativeLayout) inflater.cloneInContext(ctx).inflate(R.layout.fragment_search, null);```",
+    "ts": "1434971334.000457",
+    "id": "22tr425",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "That's a weird way of inflating something",
+    "ts": "1434971934.000458",
+    "id": "22tr426",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "not seen that before",
+    "ts": "1434973375.000459",
+    "id": "22tr427",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "¯\\_(ツ)_/¯",
+    "ts": "1434973640.000460",
+    "id": "22tr428",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Do I need to make an AlertDialog stating people to accept the terms and conditions and privacy policy or do they agree to that once they download the app (I entered the link to the T&amp;A in the Play Store listing)?",
+    "edited": {
+      "user": "U061HDV96",
+      "ts": "1435001252.000000"
+    },
+    "ts": "1435001245.000461",
+    "id": "22tr429",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Before I uploaded it, I already implemented that, but then saw that in the Play Store options. I'd like to remove it if I can of course.",
+    "ts": "1435001296.000463",
+    "id": "22tr430",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I don't think you need that as long as the terms and condictions are easily accessible in the app",
+    "ts": "1435001644.000464",
+    "id": "22tr431",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Well it also contains the privacy policy and from the start we ask for their phone number.",
+    "ts": "1435002190.000465",
+    "id": "22tr432",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Wait... <@U04TK850N> what are you doing cloneInContext for?",
+    "ts": "1435003249.000466",
+    "id": "22tr433",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Uh, I found that in a reply from Diane Hackborn to a similar issue. It was supposed to take the activity context with the theme to apply it to the fragment",
+    "ts": "1435003317.000467",
+    "id": "22tr434",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Not actually sure, I didn't keep it",
+    "ts": "1435003325.000468",
+    "id": "22tr435",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Thats... not what that does... lol... good you didn't use it",
+    "ts": "1435003479.000469",
+    "id": "22tr436",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Actually, it might be close, but I think there is a better way to do it. The documentation sucks on it",
+    "ts": "1435003519.000470",
+    "id": "22tr437",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "&gt; The documentation sucks on it\nYou mean Android, right?",
+    "ts": "1435003625.000471",
+    "id": "22tr438",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Lol... Yeah, basically anything google is a part of",
+    "ts": "1435004312.000472",
+    "id": "22tr439",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Ahh... I need to find this rant from earleir.",
+    "ts": "1435004320.000473",
+    "id": "22tr440",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "```This is pretty incomprehensible. Why doesn't someone from twitter or the documentation please just explain what the callback URL is? What's supposed to be at the other end of that URL? Do I just make something up, and it magically works? If so, what's the point?\n\nI've been a developer for 20 years, so this is not a \"clueless new dev\" situation. This is a \"your documentation is so lacking as to be utterly worthless\" situation.\n\nIt obviously has something to do with the oAuth process, but just as obviously there's no documentation as to what it's supposed to be and whether or not it's required for non-web situations (connecting for Twitter login via <http://Parse.com|Parse.com> for a client's app, in my case).\n\nIf you want people to use your framework for login (and you clearly do) then why the heck don't you provide ACTUAL INSTRUCTIONS for making use of it??!\n\nFrustrating as hell.\n\nHate twitter just a little more today than I did yesterday.\n\nSpectacular job on the developer relations front, team.```",
+    "ts": "1435004370.000474",
+    "id": "22tr441",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "That cracked me up",
+    "ts": "1435004373.000475",
+    "id": "22tr442",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "Yes, Google has a lot of instance of poor documentation",
+    "ts": "1435004442.000476",
+    "id": "22tr443",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "or when they have documentation, they ignore explaining the obvious use cases",
+    "ts": "1435004477.000477",
+    "id": "22tr444",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "gradle for instance.. they have bad documentation and they dont help you at all with you know that crazy new thing people are doing like using a build system and needing a sensible fucking version number",
+    "ts": "1435004507.000478",
+    "id": "22tr445",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "‘you’ll figure it out'",
+    "ts": "1435004511.000479",
+    "id": "22tr446",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "wishes Google was hiring documentation writers.",
+    "subtype": "me_message",
+    "user": "U061HDV96",
+    "ts": "1435004516.000480",
+    "id": "22tr447",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "most infuriating is this is stuff that was dead simple in ANT but Gradle is so much better you have to read endless documentation to do anything",
+    "ts": "1435004542.000481",
+    "id": "22tr448",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "measurement of success I guess",
+    "ts": "1435004548.000482",
+    "id": "22tr449",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I'm just fighting gradle :confused:",
+    "ts": "1435004763.000483",
+    "id": "22tr450",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "It can't find a dependency in my local m2 repo, but it's right there :confused:",
+    "ts": "1435004778.000484",
+    "id": "22tr451",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "It does some retarded bullshit with the paths",
+    "ts": "1435004812.000485",
+    "id": "22tr452",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "_points at package_ \"That one, Gradle.\" _Gradle looks right at package_ *_waits_* _points to the one next to it_ \"That one, <@U04TK850N>?\"",
+    "edited": {
+      "user": "U061HDV96",
+      "ts": "1435004969.000000"
+    },
+    "ts": "1435004862.000486",
+    "id": "22tr453",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I hate the way Slack handles markdown.",
+    "ts": "1435004930.000489",
+    "id": "22tr454",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "`.../0.12-SNAPSHOT//0.12-SNAPSHOT-.pom`",
+    "ts": "1435004948.000490",
+    "id": "22tr455",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "whyyyy",
+    "ts": "1435004952.000491",
+    "id": "22tr456",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "it's like right there with the correct name. why does gradle use that cut off thing and double slashes?",
+    "ts": "1435004977.000493",
+    "id": "22tr457",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "interesting",
+    "ts": "1435005664.000494",
+    "id": "22tr458",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "windows?",
+    "ts": "1435005677.000495",
+    "id": "22tr459",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "yeah, fixed it",
+    "ts": "1435005753.000496",
+    "id": "22tr460",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "there was a `.` instead of a `:`",
+    "ts": "1435005788.000497",
+    "id": "22tr461",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "while that is a dumb issue on my side, the error message was not helpful at all",
+    "ts": "1435005805.000498",
+    "id": "22tr462",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "brb",
+    "ts": "1435005809.000499",
+    "id": "22tr463",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "What's the best way to check if you're in debug mode? I read some unstable behaviour regarding BuildConfig.DEBUG",
+    "ts": "1435014454.000500",
+    "id": "22tr464",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "And if this check fails, the whole app is gonna be misused",
+    "ts": "1435014490.000501",
+    "id": "22tr465",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Or someone tell me a way I can make a string value different based on the build. Store the options somewhere, idk.",
+    "ts": "1435014540.000502",
+    "id": "22tr466",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I feel like I'm googling the wrong stuff",
+    "ts": "1435014554.000503",
+    "id": "22tr467",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "i guess you could make two flavours with a boolean resource toggled",
+    "ts": "1435014675.000504",
+    "id": "22tr468",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U04U5KS3Z>: no better way? I would have to edit both flavours every version bump.",
+    "ts": "1435014833.000505",
+    "id": "22tr469",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "that or you make a custom varible in gradle",
+    "ts": "1435015160.000506",
+    "id": "22tr470",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "<http://stackoverflow.com/a/29266076/2879847>",
+    "ts": "1435015161.000507",
+    "id": "22tr471",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "something like this",
+    "ts": "1435015165.000508",
+    "id": "22tr472",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "I always wondered if we can trust BuildConfig.DEBUG, that SO link sounds way more robust",
+    "ts": "1435015552.000509",
+    "id": "22tr473",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "will have to do that when I get home",
+    "ts": "1435015560.000510",
+    "id": "22tr474",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "ive been using this approach pretty successfully so far",
+    "ts": "1435015594.000511",
+    "id": "22tr475",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U04U5KS3Z>: wow, thanks. I guess cleaning is not needed since signing an APK does everything from scratch?",
+    "ts": "1435015694.000512",
+    "id": "22tr476",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "so i tend to make a separate build type for signed releases",
+    "ts": "1435015784.000513",
+    "id": "22tr477",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "that will produce a different binary",
+    "ts": "1435015790.000514",
+    "id": "22tr478",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Seems to generate it nicely: ` public static final Boolean DEBUG_MODE = true;`",
+    "edited": {
+      "user": "U061HDV96",
+      "ts": "1435015836.000000"
+    },
+    "ts": "1435015790.000515",
+    "id": "22tr479",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U04U5KS3Z>: something other than the 2 default ones?",
+    "ts": "1435015846.000517",
+    "id": "22tr480",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "as in debug/release?",
+    "edited": {
+      "user": "U04U5KS3Z",
+      "ts": "1435015932.000000"
+    },
+    "ts": "1435015874.000518",
+    "id": "22tr481",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "you can add your own",
+    "ts": "1435015878.000519",
+    "id": "22tr482",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "it just becomes an additional build type",
+    "ts": "1435015900.000520",
+    "id": "22tr483",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Yes, but why use something other than debug/release?",
+    "ts": "1435015937.000523",
+    "id": "22tr484",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "might be for say debugVersion2",
+    "ts": "1435015987.000524",
+    "id": "22tr485",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "or something",
+    "ts": "1435015988.000525",
+    "id": "22tr486",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "if you need to maintain multiple versions",
+    "ts": "1435015999.000526",
+    "id": "22tr487",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "or different builds for different testing",
+    "ts": "1435016011.000527",
+    "id": "22tr488",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "it’s kind of up to you how you configure it",
+    "ts": "1435016027.000528",
+    "id": "22tr489",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Oh okay, cool",
+    "ts": "1435016044.000529",
+    "id": "22tr490",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "I haven't had a problem using that. ",
+    "ts": "1435017289.000530",
+    "id": "22tr491",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "the method in the SO answer is exactly how the standard BuildConfig.DEBUG field is generated...",
+    "ts": "1435017840.000531",
+    "id": "22tr492",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U053LEHJN>: are you sure? I've heard people say it's unstable and I don't want to be the one experiencing it",
+    "ts": "1435017993.000532",
+    "id": "22tr493",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U061HDV96>: never had an issue using it",
+    "ts": "1435018006.000533",
+    "id": "22tr494",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "don't understand what could be unstable about it",
+    "ts": "1435018012.000534",
+    "id": "22tr495",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "do people assume it's a quantum boolean or something?",
+    "ts": "1435018029.000535",
+    "id": "22tr496",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I guess I'll remove it and use BuildConfig.DEBUG",
+    "ts": "1435018112.000536",
+    "id": "22tr497",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "it’s nice to know how to make custom build variables though, I think I might use that to define API keys so I don’t have to make sure I’m adding checks for BuildConfig.DEBUG in code",
+    "ts": "1435019864.000537",
+    "id": "22tr498",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "I figured there was a way to do it but never looked it up",
+    "ts": "1435019883.000538",
+    "id": "22tr499",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Wouldn't use that for API keys though",
+    "ts": "1435020485.000539",
+    "id": "22tr500",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "why’s that?",
+    "ts": "1435020607.000540",
+    "id": "22tr501",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "I guess I could accidentally use the wrong ones without a Build &gt; Clean but i’d hopefully notice during testing",
+    "ts": "1435020635.000541",
+    "id": "22tr502",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Because you shouldn't put API keys up for grabs",
+    "ts": "1435020665.000542",
+    "id": "22tr503",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "if they’re up for grabs by doing a build config variable, they’re up for grabs with the way i’ve been doing them &gt;_&gt;",
+    "ts": "1435020711.000543",
+    "id": "22tr504",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "how do you secure them?",
+    "ts": "1435020722.000544",
+    "id": "22tr505",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "/noob",
+    "ts": "1435020729.000545",
+    "id": "22tr506",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Well the best thing is to not keep them at all",
+    "ts": "1435020776.000546",
+    "id": "22tr507",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "how can i use something i don’t have :disappointed: lol",
+    "ts": "1435020824.000547",
+    "id": "22tr508",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "at the end of the day my app needs the value",
+    "ts": "1435020850.000548",
+    "id": "22tr509",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "If you maintain the backend, you can",
+    "ts": "1435020932.000549",
+    "id": "22tr510",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Or create some kind of  backend in between",
+    "ts": "1435020956.000550",
+    "id": "22tr511",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "You don't want your Twitter secret in your app for example",
+    "ts": "1435020971.000551",
+    "id": "22tr512",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "There are ways to store them encrypted, but I haven't looked into that yet",
+    "ts": "1435021006.000552",
+    "id": "22tr513",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "if I store the key on an external server I’m going to have to retrieve it before I make an API calls, and after that it’s in memory anyway",
+    "ts": "1435021047.000553",
+    "id": "22tr514",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "You don't retrieve it",
+    "ts": "1435021061.000554",
+    "id": "22tr515",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "not sure how hackers can get that if the app isn’t debuggable, maybe they can’t? i’m not one :disappointed:",
+    "ts": "1435021064.000555",
+    "id": "22tr516",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "You make API calls through that",
+    "ts": "1435021067.000556",
+    "id": "22tr517",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "oh",
+    "ts": "1435021070.000557",
+    "id": "22tr518",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "that’s going to slow them down considerably :disappointed:",
+    "ts": "1435021094.000558",
+    "id": "22tr519",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "but i see the benefit",
+    "ts": "1435021099.000559",
+    "id": "22tr520",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "but you mentioned storing them encrypted which could be better",
+    "ts": "1435021116.000560",
+    "id": "22tr521",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Some 'secrets' can be stored",
+    "ts": "1435021138.000561",
+    "id": "22tr522",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I store Crashlytics stuff on there because what can they do with that? Nothing",
+    "ts": "1435021154.000562",
+    "id": "22tr523",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "it was on my checklist to see if API keys are still in plaintext after obfuscation, I assume they are",
+    "ts": "1435021212.000563",
+    "id": "22tr524",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "if so then yeah I was going to have to figure something out",
+    "ts": "1435021233.000564",
+    "id": "22tr525",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "guess I should start thinking about it now",
+    "ts": "1435021238.000565",
+    "id": "22tr526",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Google around, there are solutions and I think some built-in solutions too",
+    "ts": "1435021254.000566",
+    "id": "22tr527",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I have this very weird problem",
+    "ts": "1435021363.000567",
+    "id": "22tr528",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I pass a ParcelableArrayList around",
+    "ts": "1435021379.000568",
+    "id": "22tr529",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "So that object holds another Parcelable and that holds another list of parcelables.",
+    "ts": "1435021431.000569",
+    "id": "22tr530",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "For some odd reason when I pass the object itself it goes fine, but when I pass the Parcelablearraylist, the list of parcelables of the parcelable of the objects in the parcelablearraylist are gone.",
+    "ts": "1435021507.000570",
+    "id": "22tr531",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I can't find the point at where it's lost with breakpoints.",
+    "ts": "1435021594.000571",
+    "id": "22tr532",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "seems like if there’s a secret you 100% cannot have leaked, you should probably grab it from a private server, otherwise storing it encrypted with DexGuard or something will make it a lot harder to get the secret, but not impossible. will have to keep that in mind",
+    "ts": "1435021772.000572",
+    "id": "22tr533",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "not sure about your parcelable problem though, haven’t worked with that in a while and i got a little confused how your object is composed lol",
+    "ts": "1435021837.000573",
+    "id": "22tr534",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i would just audit your parcel/unparcel code to make sure everything’s in the right order and present",
+    "ts": "1435021897.000574",
+    "id": "22tr535",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "That's pretty easy to get, I can use a proxy to get that",
+    "ts": "1435021915.000575",
+    "id": "22tr536",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "to get what?",
+    "ts": "1435021939.000576",
+    "id": "22tr537",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I'm pinning ssl connections to make stuff like that harder",
+    "ts": "1435021940.000577",
+    "id": "22tr538",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "If you just download the key from a server, I  can make that request from anywhere or just check the traffic on my phone to see the key",
+    "ts": "1435021984.000578",
+    "id": "22tr539",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "yeah would definitely do it through SSL",
+    "ts": "1435022026.000579",
+    "id": "22tr540",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "making every API call through my little portfolio site would not be an option though :stuck_out_tongue:",
+    "ts": "1435022084.000580",
+    "id": "22tr541",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U0546QERR>: won't solve it either. I can make that request from anywhere, I can decompile your app to get the url",
+    "ts": "1435022193.000581",
+    "id": "22tr542",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "I guess I’ll just manually approve all API calls then, screw it XD",
+    "ts": "1435022409.000582",
+    "id": "22tr543",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "nothing is safe",
+    "ts": "1435022421.000583",
+    "id": "22tr544",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Just add some security, encrypt them. Better than nothing, it'll keep the script kiddies away",
+    "ts": "1435022877.000584",
+    "id": "22tr545",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "What API key is it btw?",
+    "ts": "1435022893.000585",
+    "id": "22tr546",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "WHAT THE FUCK",
+    "ts": "1435023248.000586",
+    "id": "22tr547",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I can't find it and I'm looking everywhere",
+    "ts": "1435023262.000587",
+    "id": "22tr548",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U06MGKFAP",
+    "subtype": "channel_join",
+    "text": "<@U06MGKFAP|danosipov> has joined the channel",
+    "ts": "1435024062.000588",
+    "id": "22tr549",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "<@U061HDV96>: flurry and mopub, so yeah i'll definitely want some security but i probably won't go so far as to doing private/public key stuff on an external server",
+    "ts": "1435027093.000589",
+    "id": "22tr550",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "none of my current released apps have API secrets btw, in case anyone was getting ideas",
+    "ts": "1435027237.000590",
+    "id": "22tr551",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "You can hide the api key as much as you want. As long as it's in the app I can grab it. I can always just patch in a Log.d() shortly before your request is made ;) ",
+    "ts": "1435033612.000591",
+    "id": "22tr552",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Even if it's encrypted, it has to be decrypted for the request to be made ",
+    "ts": "1435033659.000592",
+    "id": "22tr553",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "is it possible to control code when debugging was disabled during build (as most developers do)?",
+    "ts": "1435034197.000593",
+    "id": "22tr554",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "not sure how you can just patch something in like that",
+    "ts": "1435034229.000594",
+    "id": "22tr555",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "sorry i’ll stop asking noob questions and just read lol",
+    "ts": "1435034609.000595",
+    "id": "22tr556",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "it’s just kinda scary how hard it is to keep your stuff private",
+    "ts": "1435034651.000596",
+    "id": "22tr557",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Debuggable is just some flag, it doesn't change your code or the generated bytecode. I can decompile your app, add the debuggable flag to your manifest and recompile it :D",
+    "ts": "1435034973.000597",
+    "id": "22tr558",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Also, Some roms just force the flag to be true for all apps ",
+    "ts": "1435035006.000598",
+    "id": "22tr559",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "But what I really care for would be easy to spot http calls and that",
+    "ts": "1435035029.000599",
+    "id": "22tr560",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Especially if you use something like Ion, those builder patterns are easy to spot, even in obfuscated bytecode ",
+    "ts": "1435035076.000600",
+    "id": "22tr561",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "(Been doing that stuff for fun, was decompiling and patching many apps and system frameworks on my old phone to patch in new features. This is partly my work: <http://repo.xposed.info/module/com.sensetoolbox.six)>",
+    "edited": {
+      "user": "U04TK850N",
+      "ts": "1435035295.000000"
+    },
+    "ts": "1435035282.000601",
+    "id": "22tr562",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "this makes me want to start unzipping some .apks and exploring just to learn",
+    "ts": "1435036263.000603",
+    "id": "22tr563",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

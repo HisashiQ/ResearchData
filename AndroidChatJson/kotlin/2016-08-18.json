@@ -1,0 +1,745 @@
+[
+  {
+    "user": "U0K1ALDQE",
+    "text": "I have another issue with Anko. And haven’t figured out how to fix it. Correct me if I’m wrong. But Anko + fragment &amp; transitions don’t play nice together?\nIs there any solution? The `onCreateView` will only be called after the fragment is fully shown (after transition). And thus the transition seems hacky and weird. Any way to counter this?",
+    "ts": "1471507863.000211",
+    "id": "18ko2268",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Beside that. I’m not sure what massive libs you guys have in your libraries but I’ve ran into problems with the 65k limit. I was able to ditch a lot of libs switching to Kotlin. Guava, Retrolambda (which adds a method for each lambda as well)",
+    "ts": "1471507955.000212",
+    "id": "18ko2269",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0H67LJUA",
+    "text": "<@U0H67LJUA|versa> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1471517662.000213",
+    "id": "18ko2270",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "Anko doesn't have anything to do with fragment transitions. You might want to look into `postponeEnterTransition` and `startPostponedEnterTransition`",
+    "ts": "1471520974.000214",
+    "id": "18ko2271",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "I'd never recommend anyone use Guava in an Android project. It's so huge, it's self defeating. ",
+    "ts": "1471521051.000215",
+    "id": "18ko2272",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "But then again, enabling proguard might help cut those numbers down a bit ",
+    "ts": "1471521179.000216",
+    "id": "18ko2273",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "<@U0K1ALDQE>: ^",
+    "ts": "1471521225.000217",
+    "id": "18ko2274",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "It's not that Anko messes with the transition. It's that the view build occurs differently. ",
+    "ts": "1471522216.000218",
+    "id": "18ko2275",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "For example when showing a fragment with a toolbar with shadow you can see the toolbar being draw and then the shadow. Instead of everything showing at once in xml ",
+    "ts": "1471522278.000219",
+    "id": "18ko2276",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I'd never recommend using guava either. And I'd never ran into dex limits myself unless working on a project where a ton of unused / unnecessary libs were imported. ",
+    "ts": "1471522346.000220",
+    "id": "18ko2277",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "So I find it strange that every1 keeps using it as a con for kotlin ",
+    "ts": "1471522369.000221",
+    "id": "18ko2278",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "&gt; For example when showing a fragment with a toolbar with shadow you can see the toolbar being draw and then the shadow. Instead of everything showing at once in xml\nI think this might have something to do with the fact that `AppBarLayout` now uses a state list animator, unraised by default. The animator kicks in after the view is loaded and takes its time to run the elevation transition.",
+    "edited": {
+      "user": "U1HM4MPLJ",
+      "ts": "1471522922.000000"
+    },
+    "ts": "1471522787.000222",
+    "id": "18ko2279",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<https://github.com/gradle/gradle/releases/tag/v3.0.0>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "gradle/gradle",
+        "title_link": "https://github.com/gradle/gradle/releases/tag/v3.0.0",
+        "text": "gradle - A powerful build system for the JVM",
+        "fallback": "GitHub: gradle/gradle",
+        "thumb_url": "https://avatars3.githubusercontent.com/u/124156?v=3&s=400",
+        "from_url": "https://github.com/gradle/gradle/releases/tag/v3.0.0",
+        "thumb_width": 200,
+        "thumb_height": 200,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1471526804.000224",
+    "id": "18ko2280",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Support for Kotlin",
+    "ts": "1471526810.000226",
+    "id": "18ko2281",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "#old",
+    "ts": "1471526819.000227",
+    "id": "18ko2282",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": ":slowpoke:",
+    "ts": "1471526826.000228",
+    "id": "18ko2283",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U0548MM6B> well it wasn't posted here",
+    "ts": "1471526867.000229",
+    "id": "18ko2284",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "/gif suck it",
+    "ts": "1471526872.000230",
+    "id": "18ko2285",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "",
+    "bot_id": "B0GH4RVHU",
+    "attachments": [
+      {
+        "fallback": "<https://media.giphy.com/media/TbSPeUWjSY2ys/giphy.gif>",
+        "image_url": "https://media.giphy.com/media/TbSPeUWjSY2ys/giphy.gif",
+        "image_width": 500,
+        "image_height": 278,
+        "image_bytes": 504145,
+        "is_animated": true,
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1471526872.000231",
+    "id": "18ko2286",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "i believe it was posted here a looong time ago, before 3.0 release was out",
+    "ts": "1471526959.000232",
+    "id": "18ko2287",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": ":disappointed:",
+    "ts": "1471527087.000233",
+    "id": "18ko2288",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "it’s good tho",
+    "ts": "1471527578.000234",
+    "id": "18ko2289",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "only a matter of months till android plugin supports it",
+    "ts": "1471527597.000235",
+    "reactions": [
+      {
+        "name": "the_horns",
+        "users": [
+          "U0K1ALDQE"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "18ko2290",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "is anyone else having issues with the latest version?",
+    "ts": "1471533552.000236",
+    "id": "18ko2291",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "the classloader isn’t able to find multiple classes on creation :fearful:",
+    "ts": "1471533570.000237",
+    "id": "18ko2292",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "hmmmm",
+    "ts": "1471533575.000238",
+    "id": "18ko2293",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "oh kotlin - haven’t tried that much",
+    "ts": "1471533591.000239",
+    "id": "18ko2294",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "yeah haha",
+    "ts": "1471533605.000240",
+    "id": "18ko2295",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "oh yeah",
+    "ts": "1471533651.000241",
+    "id": "18ko2296",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "incremental building",
+    "ts": "1471533655.000242",
+    "id": "18ko2297",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "can’t wait till I’m done with kraftology backend so I can rebuild the app in kotlin",
+    "ts": "1471533660.000243",
+    "id": "18ko2298",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "get your gradle to 2.10 or below",
+    "ts": "1471533673.000244",
+    "id": "18ko2299",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "the incremental building is broken over 2.10 (or 2.14?) and it’s causing issues for seemingly everyone using it :thinking_face:",
+    "ts": "1471533722.000245",
+    "id": "18ko2300",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "Gradle 2.14.1 is working fine for me",
+    "ts": "1471534211.000246",
+    "id": "18ko2301",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "which droid gradle plugin version you on?",
+    "ts": "1471534348.000247",
+    "id": "18ko2302",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "2.1.3",
+    "ts": "1471534446.000248",
+    "id": "18ko2303",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "+ AS 2.1.3",
+    "ts": "1471534455.000249",
+    "id": "18ko2304",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "try having a kotlin class on the activity oncreate",
+    "ts": "1471541356.000250",
+    "id": "18ko2305",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "I fiex it reverting 2.1.2 and gradle 2.13",
+    "ts": "1471541370.000251",
+    "id": "18ko2306",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

@@ -1,0 +1,860 @@
+[
+  {
+    "user": "U09T8SFG8",
+    "text": "Do you guys pass every action to your presenters? For example I have a `onClick` listener which when triggered all it does is `startActivity(PlayerActivity.newIntent(this));`. Do you still have a `presenter.onButtonClick()` and then in that method call `view.startPlayerActivity()` or do you just start the activity inside the `onClick` listener directly?",
+    "ts": "1444295619.000790",
+    "id": "08de12532",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0BRWKGNL",
+    "text": "You should pass all to the presenter",
+    "ts": "1444296161.000791",
+    "id": "08de12533",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "So I can test everything I guess? For example to do `verify(view, once()).startPlayerActivity()`",
+    "ts": "1444297143.000792",
+    "id": "08de12534",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0BRWKGNL",
+    "text": "Yeah, that is one of the main reason, consistency may be another good reason to pass all the events to the presenter",
+    "ts": "1444297372.000793",
+    "id": "08de12535",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "agree",
+    "ts": "1444298066.000794",
+    "id": "08de12536",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "apart from field validation. I tend to do simple stuff like that on the view, testing it with espresso",
+    "ts": "1444298089.000795",
+    "id": "08de12537",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0BV29RLL",
+    "text": "So you are saying that, your presenter have direct access to context ( to start the activity)?",
+    "ts": "1444301268.000796",
+    "id": "08de12538",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "no, they tell the view  “startPlayer” and then the implementation of that view (the activity) calls startActivity",
+    "ts": "1444301328.000797",
+    "id": "08de12539",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0BV29RLL",
+    "text": "Ahh, OK, now I understood the above \"view\"... For a moment I thought it was a view widget",
+    "ts": "1444301472.000798",
+    "id": "08de12540",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0BV29RLL",
+    "text": "Thanks",
+    "ts": "1444301484.000799",
+    "id": "08de12541",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0BV29RLL",
+    "text": "I try to create presenters that don't know a thing about Android stuff, so I can test it in pure Java",
+    "ts": "1444301595.000800",
+    "id": "08de12542",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I do the same, everything in my presenters is just Java and no Android.",
+    "ts": "1444304070.000801",
+    "id": "08de12543",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "Is it normal for a view to return data to the presenter? For example I have a formatter String in `R.string` and I need to retrieve it in the presenter so I can create a formatted String like `String.format(formatter, args)`. Does my view just do `view.getFormatter()` and return the formatter to the presenter (so I can mock it) or does the view take care of `String.format(formatter, args)`?",
+    "edited": {
+      "user": "U09T8SFG8",
+      "ts": "1444325488.000000"
+    },
+    "ts": "1444325451.000802",
+    "id": "08de12544",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i give my presenter the application context to look up resources. but you’re not going to like that :stuck_out_tongue:",
+    "ts": "1444326070.000804",
+    "id": "08de12545",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "(if you want 100% pure java)",
+    "ts": "1444326092.000805",
+    "id": "08de12546",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "Well in my view I have `view.getContext()` but that stops me from being able to easily mock it and test it",
+    "ts": "1444326121.000806",
+    "id": "08de12547",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "why not view.getString()?",
+    "ts": "1444326177.000807",
+    "id": "08de12548",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "String.format(view.getString(s), args)",
+    "ts": "1444326188.000808",
+    "id": "08de12549",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "Hmmm maybe that could be good",
+    "ts": "1444326223.000809",
+    "id": "08de12550",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I can even put it in my parent `View` interface",
+    "ts": "1444326236.000810",
+    "id": "08de12551",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "mhmm",
+    "ts": "1444326242.000811",
+    "id": "08de12552",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "Actually that doesn't work because in my test I can't retrieve the formatter in order to mock it unless I hardcode it :stuck_out_tongue:",
+    "ts": "1444326921.000812",
+    "id": "08de12553",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "wait i think i suggested the same thing you said",
+    "ts": "1444327071.000813",
+    "id": "08de12554",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "just replaced formatter with string",
+    "ts": "1444327077.000814",
+    "id": "08de12555",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "lol",
+    "ts": "1444327078.000815",
+    "id": "08de12556",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "was just confused by that term",
+    "ts": "1444327099.000816",
+    "id": "08de12557",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "you can’t get android resources in a java test anyway though, you would have to hardcode it either way right?",
+    "edited": {
+      "user": "U0546QERR",
+      "ts": "1444327130.000000"
+    },
+    "ts": "1444327118.000817",
+    "id": "08de12558",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "that is actually true",
+    "ts": "1444327136.000819",
+    "id": "08de12559",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "so I guess hardcoding it is the only way to test that method of my presenter",
+    "ts": "1444327152.000820",
+    "id": "08de12560",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I feel a bit silly now :stuck_out_tongue:",
+    "ts": "1444327170.000821",
+    "id": "08de12561",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "at least you actually test :ok_hand:",
+    "ts": "1444327204.000822",
+    "id": "08de12562",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "unlike moi",
+    "ts": "1444327222.000823",
+    "id": "08de12563",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "tbh I started 2-3  weeks ago due to the fact that I got assigned with refactoring a horribly written app. So I said to myself to find an efficient way to fix that piece of poo and I saw that with testing was the best way for me",
+    "ts": "1444327296.000824",
+    "id": "08de12564",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C4H4B44",
+    "subtype": "channel_join",
+    "text": "<@U0C4H4B44|yougin> has joined the channel",
+    "ts": "1444327988.000825",
+    "id": "08de12565",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "is there a way to force update from an observable to run on the main thread without using `runOnUiThread`?",
+    "ts": "1444336755.000826",
+    "id": "08de12566",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": ".subscribeOn?",
+    "ts": "1444336781.000827",
+    "id": "08de12567",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "or observeOn",
+    "ts": "1444336791.000828",
+    "id": "08de12568",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i get them confused",
+    "ts": "1444336796.000829",
+    "id": "08de12569",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "wait you’re not using rx",
+    "ts": "1444336807.000830",
+    "id": "08de12570",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "haha yeah, not yet :disappointed:",
+    "ts": "1444336836.000831",
+    "id": "08de12571",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A4WAMNF",
+    "text": "do you guys know what is the character limit (best practice) for notifications? content title",
+    "ts": "1444348160.000832",
+    "id": "08de12572",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A4WAMNF",
+    "text": "?",
+    "ts": "1444348161.000833",
+    "id": "08de12573",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A4WAMNF",
+    "text": "on NotificationCompat.Build they have a field `MAX_CHARSEQUENCE_LENGTH = 5 * 1024;`",
+    "ts": "1444348372.000834",
+    "id": "08de12574",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A4WAMNF",
+    "text": "this seams little bit to much",
+    "ts": "1444348384.000835",
+    "id": "08de12575",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C59A3F0",
+    "subtype": "channel_join",
+    "text": "<@U0C59A3F0|amine> has joined the channel",
+    "ts": "1444351049.000836",
+    "id": "08de12576",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C5DFLMP",
+    "subtype": "channel_join",
+    "text": "<@U0C5DFLMP|evans> has joined the channel",
+    "ts": "1444351250.000837",
+    "id": "08de12577",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C5E9X2N",
+    "subtype": "channel_join",
+    "text": "<@U0C5E9X2N|guilhermebazilio> has joined the channel",
+    "ts": "1444352648.000838",
+    "id": "08de12578",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

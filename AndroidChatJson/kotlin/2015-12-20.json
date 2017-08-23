@@ -1,0 +1,164 @@
+[
+  {
+    "subtype": "file_share",
+    "text": "<@U0ES9RCRW|pandanomic> uploaded a file: <https://androidchat.slack.com/files/pandanomic/F0H2U2SS0/wat.kt|wat> and commented: Anyone know why \"return null\" is considered unreachable code?",
+    "file": {
+      "id": "F0H2U2SS0",
+      "created": 1450655945,
+      "timestamp": 1450655945,
+      "name": "wat.kt",
+      "title": "wat",
+      "mimetype": "text/plain",
+      "filetype": "kotlin",
+      "pretty_type": "Kotlin",
+      "user": "U0ES9RCRW",
+      "editable": true,
+      "size": 403,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0H2U2SS0/wat.kt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0H2U2SS0/download/wat.kt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/pandanomic/F0H2U2SS0/wat.kt",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0H2U2SS0-4dbce498c7",
+      "edit_link": "https://androidchat.slack.com/files/pandanomic/F0H2U2SS0/wat.kt/edit",
+      "preview": "fun getMostPopulousSwatch(palette: Palette?): Palette.Swatch? {\r\n    palette?.primarySwatches().let { primarySwatches ->\r\n        return MathObservable.from(Observable.from(primarySwatches)\r\n                .filter { it != null })\r\n                .max { thisSwatch, thatSwatch -> thisSwatch.population.compareTo(thatSwatch.population) }\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-keyword\">fun</span> <span class=\"cm-def\">getMostPopulousSwatch</span>(<span class=\"cm-variable\">palette</span>: <span class=\"cm-variable\">Palette</span><span class=\"cm-operator\">?</span>): <span class=\"cm-variable\">Palette</span>.<span class=\"cm-variable\">Swatch</span><span class=\"cm-operator\">?</span> {</pre></div>\n<div><pre>    <span class=\"cm-variable\">palette</span><span class=\"cm-operator\">?</span>.<span class=\"cm-variable\">primarySwatches</span>().<span class=\"cm-variable\">let</span> { <span class=\"cm-variable\">primarySwatches</span> <span class=\"cm-operator\">-&gt;</span></pre></div>\n<div><pre>        <span class=\"cm-keyword\">return</span> <span class=\"cm-variable\">MathObservable</span>.<span class=\"cm-variable\">from</span>(<span class=\"cm-variable\">Observable</span>.<span class=\"cm-variable\">from</span>(<span class=\"cm-variable\">primarySwatches</span>)</pre></div>\n<div><pre>                .<span class=\"cm-variable\">filter</span> { <span class=\"cm-variable\">it</span> <span class=\"cm-operator\">!=</span> <span class=\"cm-atom\">null</span> })</pre></div>\n<div><pre>                .<span class=\"cm-variable\">max</span> { <span class=\"cm-variable\">thisSwatch</span>, <span class=\"cm-variable\">thatSwatch</span> <span class=\"cm-operator\">-&gt;</span> <span class=\"cm-variable\">thisSwatch</span>.<span class=\"cm-variable\">population</span>.<span class=\"cm-variable\">compareTo</span>(<span class=\"cm-variable\">thatSwatch</span>.<span class=\"cm-variable\">population</span>) }</pre></div>\n</div>\n</div>\n",
+      "lines": 9,
+      "lines_more": 4,
+      "preview_is_truncated": null,
+      "channels": [
+        "C0BQU1TDF"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 1,
+      "initial_comment": {
+        "id": "Fc0H2Z8FLJ",
+        "created": 1450655945,
+        "timestamp": 1450655945,
+        "user": "U0ES9RCRW",
+        "is_intro": true,
+        "comment": "Anyone know why \"return null\" is considered unreachable code?",
+        "channel": ""
+      }
+    },
+    "user": "U0ES9RCRW",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0ES9RCRW|pandanomic>",
+    "bot_id": null,
+    "ts": "1450655945.000276",
+    "id": "20ko504",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U0ES9RCRW>: Fun fact, this is legal:\n```\nfun doThing() {\n    null.let { it -&gt;\n        println(\"This prints to the console\")\n    }\n}\n```",
+    "ts": "1450665232.000277",
+    "id": "20ko505",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "`it` in this case has a type of `Nothing?`",
+    "ts": "1450665251.000278",
+    "id": "20ko506",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "so your lambda is still being evaluated, just with a null parameter",
+    "ts": "1450665263.000279",
+    "id": "20ko507",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "that's my guess, anyway",
+    "ts": "1450665270.000280",
+    "id": "20ko508",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ES9RCRW",
+    "text": "yeah realized that earlier",
+    "ts": "1450665285.000281",
+    "id": "20ko509",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

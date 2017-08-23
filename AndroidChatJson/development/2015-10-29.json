@@ -1,0 +1,1242 @@
+[
+  {
+    "user": "U0CT7JDN3",
+    "text": "Does Volley keep connection alive by default ?",
+    "ts": "1446102035.003206",
+    "id": "29de14763",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CT7JDN3",
+    "text": "If yes how do I verify it ?",
+    "ts": "1446102042.003207",
+    "id": "29de14764",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CT7JDN3",
+    "text": "Or what do I need to do to keep connection alive ?",
+    "ts": "1446102064.003208",
+    "id": "29de14765",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CT7JDN3",
+    "text": "From googling I have found out that Android add keep-alive header by default, I am not sure how true it is. Does this mean I have to absolutely nothing to keep connections alive and that they will be kept alive by default ?",
+    "ts": "1446102164.003209",
+    "id": "29de14766",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DDT7AGZ",
+    "subtype": "channel_join",
+    "text": "<@U0DDT7AGZ|seroperson> has joined the channel",
+    "ts": "1446110329.003210",
+    "id": "29de14767",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "Volley is not good for long operations",
+    "ts": "1446119292.003211",
+    "id": "29de14768",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CT7JDN3",
+    "text": "I  want to send heartbeats for a minute or so",
+    "ts": "1446122169.003212",
+    "id": "29de14769",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CT7JDN3",
+    "text": "So I was wondering if this can be done",
+    "ts": "1446122184.003213",
+    "id": "29de14770",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CT7JDN3",
+    "text": "Anyways I have found out that Android adds Keep-alive header by default",
+    "ts": "1446122203.003214",
+    "id": "29de14771",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CT7JDN3",
+    "text": "and verified this using Wireshark",
+    "ts": "1446122214.003215",
+    "id": "29de14772",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CT7JDN3",
+    "text": "SYN signal was sent only once",
+    "ts": "1446122246.003216",
+    "id": "29de14773",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "keep-alive is something a client *can* send indicating it supports keep-alive connections. This is just a broadcast of feature support and not an indication that a long living tcp connection has been established.",
+    "ts": "1446124154.003217",
+    "reactions": [
+      {
+        "name": "simple_smile",
+        "users": [
+          "U0CT7JDN3"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "29de14774",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "The http server would need to respond back with keep-alive and support the functionality. Afaik, almost all servers support this feature but you may need to enable it.",
+    "ts": "1446124191.003218",
+    "id": "29de14775",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U085CP84F",
+    "text": "hi guys. Im using picasso to load some images from a web server. Seems picasso is missing the exif (rotation) information.",
+    "ts": "1446129609.003219",
+    "id": "29de14776",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U085CP84F",
+    "text": "does anyone knows how to fix this? maybe using another library",
+    "ts": "1446129641.003220",
+    "id": "29de14777",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U085CP84F",
+    "text": "should I try Glide?",
+    "ts": "1446129726.003221",
+    "id": "29de14778",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "Glide supports it",
+    "ts": "1446129899.003222",
+    "id": "29de14779",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "^",
+    "ts": "1446129917.003223",
+    "id": "29de14780",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "use fresco :troll:",
+    "ts": "1446129969.003224",
+    "id": "29de14781",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U085CP84F",
+    "text": "great, i will try",
+    "ts": "1446130127.003225",
+    "id": "29de14782",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U085CP84F",
+    "text": "thanks",
+    "ts": "1446130130.003226",
+    "id": "29de14783",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U2MSL6",
+    "text": "Hey folks. Does anyone have thoughts on using an ORM library with Retrofit?",
+    "edited": {
+      "user": "U04U2MSL6",
+      "ts": "1446130679.000000"
+    },
+    "ts": "1446130643.003227",
+    "id": "29de14784",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U2MSL6",
+    "text": "I'm starting a new project and want to keep my data later TIGHT",
+    "edited": {
+      "user": "U04U2MSL6",
+      "ts": "1446130666.000000"
+    },
+    "ts": "1446130659.003228",
+    "id": "29de14785",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "not sure what you’re asking",
+    "ts": "1446130806.003231",
+    "id": "29de14786",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "ORM has nothing to do with retrofit",
+    "ts": "1446130811.003232",
+    "id": "29de14787",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "^",
+    "ts": "1446131524.003233",
+    "id": "29de14788",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "^^",
+    "ts": "1446131592.003234",
+    "id": "29de14789",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "^^^",
+    "ts": "1446131869.003235",
+    "id": "29de14790",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A8QLJFJ",
+    "text": "^^^^",
+    "ts": "1446132044.003236",
+    "id": "29de14791",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "^^^^^",
+    "ts": "1446132066.003237",
+    "id": "29de14792",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "^^^^^^",
+    "ts": "1446132169.003238",
+    "id": "29de14793",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "agree",
+    "ts": "1446132266.003239",
+    "id": "29de14794",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "though, I’d love to see a “all-in-one” shit",
+    "ts": "1446132275.003240",
+    "id": "29de14795",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DEHN9M0",
+    "subtype": "channel_join",
+    "text": "<@U0DEHN9M0|alexdao> has joined the channel",
+    "ts": "1446132278.003241",
+    "id": "29de14796",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "you ruined it, <@U051G3BC3>  :rage:",
+    "ts": "1446132294.003242",
+    "id": "29de14797",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "that’s who I am",
+    "ts": "1446132301.003243",
+    "id": "29de14798",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "¯\\_(ツ)_/¯",
+    "ts": "1446132303.003244",
+    "id": "29de14799",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "you're lucky to have a bithday today, so we forgive you",
+    "ts": "1446132336.003245",
+    "id": "29de14800",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DEDLHA7",
+    "subtype": "channel_join",
+    "text": "<@U0DEDLHA7|kape> has joined the channel",
+    "ts": "1446132399.003246",
+    "id": "29de14801",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DEL368Y",
+    "subtype": "channel_join",
+    "text": "<@U0DEL368Y|derekentringer> has joined the channel",
+    "ts": "1446133775.003247",
+    "id": "29de14802",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DELUE7R",
+    "subtype": "channel_join",
+    "text": "<@U0DELUE7R|chemouna> has joined the channel",
+    "ts": "1446135057.003248",
+    "id": "29de14803",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "has anyone used Chrome Custom Tabs?",
+    "ts": "1446135285.003249",
+    "id": "29de14804",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DEJRCN7",
+    "subtype": "channel_join",
+    "text": "<@U0DEJRCN7|pula> has joined the channel",
+    "ts": "1446135743.003250",
+    "id": "29de14805",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0BH6212B",
+    "subtype": "channel_join",
+    "text": "<@U0BH6212B|sirchip> has joined the channel",
+    "ts": "1446136247.003251",
+    "id": "29de14806",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09TX4S5R",
+    "text": "Is anyone here familiar with brightcove's player and/or freewheel?",
+    "ts": "1446142000.003252",
+    "id": "29de14807",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DEY1RL0",
+    "subtype": "channel_join",
+    "text": "<@U0DEY1RL0|kai> has joined the channel",
+    "ts": "1446145294.003253",
+    "id": "29de14808",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF58EJD",
+    "subtype": "channel_join",
+    "text": "<@U0DF58EJD|cosic> has joined the channel",
+    "ts": "1446147549.003254",
+    "id": "29de14809",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U2MSL6",
+    "text": "<@U0548MM6B> I was talking specifically about marshalling json acquired using retrofit/gson and caching it using an orm without duping code",
+    "ts": "1446149509.003255",
+    "id": "29de14810",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "subtype": "channel_join",
+    "text": "<@U0DF913KL|the_rabbit> has joined the channel",
+    "ts": "1446149986.003256",
+    "id": "29de14811",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "use rx?",
+    "ts": "1446150987.003257",
+    "id": "29de14812",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DEL368Y",
+    "text": "<@U04U2MSL6>: <https://realm.io>",
+    "attachments": [
+      {
+        "title": "Realm is a mobile database: a replacement for SQLite &amp; Core Data",
+        "title_link": "https://realm.io",
+        "text": "Realm is a mobile database: a replacement for SQLite &amp; Core Data. It can save you thousands of lines of code &amp; weeks of work, and lets you craft amazing new user experiences.",
+        "fallback": "Realm is a mobile database: a replacement for SQLite &amp; Core Data",
+        "image_url": "https://realm.io/assets/realmDark.jpg",
+        "from_url": "https://realm.io",
+        "image_width": 426,
+        "image_height": 250,
+        "image_bytes": 3904,
+        "id": 1
+      }
+    ],
+    "ts": "1446152330.003258",
+    "id": "29de14813",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DFE339V",
+    "subtype": "channel_join",
+    "text": "<@U0DFE339V|drew> has joined the channel",
+    "ts": "1446154301.003260",
+    "id": "29de14814",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "is there an easy way of utilizing the Android.webkit cookiemanager with OKHttp?",
+    "ts": "1446161814.003261",
+    "id": "29de14815",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07MUKUBW",
+    "text": "<@U0A0S0WG0>: okhttp should handle the cookies automatically",
+    "ts": "1446163712.003262",
+    "id": "29de14816",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "i found a solution",
+    "ts": "1446163721.003263",
+    "id": "29de14817",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "im aware that it handles cookies",
+    "ts": "1446163726.003264",
+    "id": "29de14818",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "but the cookiemanager needs a java.net.CookieHandler",
+    "ts": "1446163736.003265",
+    "id": "29de14819",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "not android.webkit.CookieHandler",
+    "ts": "1446163742.003266",
+    "id": "29de14820",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "and so i need to get the cookie from <http://java.net|java.net> &gt; the webview",
+    "ts": "1446163751.003267",
+    "id": "29de14821",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07MUKUBW",
+    "text": "ah okie",
+    "ts": "1446163751.003268",
+    "id": "29de14822",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8059NC",
+    "text": "hi guys btw anyone experienced on <http://c9.io|c9.io>?",
+    "ts": "1446182289.003269",
+    "id": "29de14823",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "looks cool for pair programming or something, haven't used though",
+    "ts": "1446182387.003270",
+    "id": "29de14824",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8059NC",
+    "text": "yes, i have been running now :simple_smile: but confusing to configure ssh, maybe someone can help me",
+    "ts": "1446182537.003271",
+    "id": "29de14825",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "maybe when everyone wakes up from their droidcon hangovers :wink:",
+    "ts": "1446182757.003272",
+    "reactions": [
+      {
+        "name": "laughing",
+        "users": [
+          "U0DC95VCP"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "29de14826",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8059NC",
+    "text": "hahhah,",
+    "ts": "1446182800.003273",
+    "id": "29de14827",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DCPQFCH",
+    "subtype": "channel_join",
+    "text": "<@U0DCPQFCH|adrianlungu> has joined the channel",
+    "ts": "1446188301.003274",
+    "id": "29de14828",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

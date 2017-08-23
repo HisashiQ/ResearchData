@@ -1,0 +1,448 @@
+[
+  {
+    "user": "U04TCBB76",
+    "text": "Is there an elegant way of implementing the ​_ViewHolder_​ pattern for `RecyclerView.Adapter`? Does one use ​_synthetics_​ via Android Extensions?\n\ni.e\n```public static class ViewHolder extends RecyclerView.ViewHolder {\n        TextView title;\n\n        public ViewHolder(View v) {\n            super(v);\n            title = (TextView) v.findViewById(R.id.card_title);\n        }\n    }\n```\n\nmy `onBindViewHolder(holder: ViewHolder?, position: Int)` ends up looking like this\n```\n((holder?.itemView as CardView).findViewById(R.id.card_title) as TextView).text = titles[position]\n```",
+    "ts": "1447615737.000020",
+    "id": "15ko290",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "<@U04TCBB76>: you definitely don't want to be doing findViewById on the itemView in your onBindViewHolder because that's negating the benefits of the viewholder pattern",
+    "ts": "1447616068.000022",
+    "id": "15ko291",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i think your RecyclerView.Adapter takes a type parameter for your ViewHolder implementation right?",
+    "ts": "1447616100.000023",
+    "id": "15ko292",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "like RecyclerView.Adapter&lt;CustomViewHolder&gt;",
+    "ts": "1447616113.000024",
+    "id": "15ko293",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "(in your case you just called it ViewHolder but I wanted to distinguish)",
+    "ts": "1447616130.000025",
+    "id": "15ko294",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TCBB76",
+    "text": "no doubt. Yeah...I'm thinking it's something like this\n```\nclass ViewHolder(itemView: CardView) : RecyclerView.ViewHolder(itemView) {\n        init {\n            val cardTitle = itemView.findViewById(R.id.card_title) as TextView\n        }\n    }\n```",
+    "ts": "1447616134.000026",
+    "id": "15ko295",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "yeah you want cardTitle to be a member field for the viewholder and then you can access that in onBindViewHolder",
+    "ts": "1447616204.000028",
+    "id": "15ko296",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "so maybe it would look like `(holder as ViewHolder).cardTitle.text = titles[position]`",
+    "ts": "1447616268.000029",
+    "id": "15ko297",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "<@U04TCBB76>: Feel free to see my Kotlin MVP project on  <https://github.com/michaldrabik/KotlinMVP>  you can check out an example of adapter and viewholder. It should help",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "michaldrabik/KotlinMVP",
+        "title_link": "https://github.com/michaldrabik/KotlinMVP",
+        "text": "KotlinMVP - Simple Android app created using Kotlin and MVP pattern. Tested with JUnit, Robolectric and Mockito.",
+        "fallback": "GitHub: michaldrabik/KotlinMVP",
+        "thumb_url": "https://avatars0.githubusercontent.com/u/11537045?v=3&s=400",
+        "from_url": "https://github.com/michaldrabik/KotlinMVP",
+        "thumb_width": 160,
+        "thumb_height": 160,
+        "id": 1
+      }
+    ],
+    "ts": "1447616461.000030",
+    "id": "15ko298",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TCBB76",
+    "text": "Thanks <@U0E72HWTX>",
+    "ts": "1447616496.000032",
+    "id": "15ko299",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TCBB76",
+    "text": "Looks like this will work...but is it acceptable?\n```\ninner class ViewHolder(itemView: CardView, var cardTitle: TextView? = null) : RecyclerView.ViewHolder(itemView) {\n        init {\n            cardTitle = itemView.findViewById(R.id.card_title) as TextView\n        }\n    }\n```",
+    "ts": "1447616867.000033",
+    "id": "15ko300",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "that's basically what you want yeah",
+    "ts": "1447617044.000034",
+    "id": "15ko301",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i'd say the CardView parameter could just be a View since you're only using its View.findViewById method",
+    "ts": "1447617085.000035",
+    "id": "15ko302",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TCBB76",
+    "text": ":ok_hand::skin-tone-2:",
+    "ts": "1447617104.000036",
+    "id": "15ko303",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "and cardTitle might not need to be nullable since you're inflating a specific layout and can be reasonably sure that findViewById will return a non-null value",
+    "ts": "1447617141.000037",
+    "id": "15ko304",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "but I actually haven't done this in kotlin so don't quote me haha",
+    "ts": "1447617156.000038",
+    "id": "15ko305",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TCBB76",
+    "text": "Ooo...here's an even more condensed implementation:\n```\nimport kotlinx.android.synthetic.simple_cardview.view.card_title\n...\ninner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {\n        public val cardTitle: TextView = itemView.card_title\n    }\n```",
+    "ts": "1447617394.000039",
+    "id": "15ko306",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "ah nice, yeah kotlin extensions lets you import the view like that, but personally i'm not a fan of that feature",
+    "ts": "1447620620.000040",
+    "id": "15ko307",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "naming scheme for view IDs uses an underscore whereas in java/kotlin you don't use underscores and it really bugs me",
+    "ts": "1447620656.000041",
+    "id": "15ko308",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "<@U0546QERR>: I have the same problem. oh well :simple_smile:",
+    "ts": "1447620875.000042",
+    "id": "15ko309",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TCBB76",
+    "text": ":ok_hand::skin-tone-3: You guys advocate _camelBack_ case?",
+    "ts": "1447620920.000043",
+    "id": "15ko310",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "Thats the problem. In code that's the choice of course. But then I go into layout and my head is full of \"this is wrong\"",
+    "ts": "1447621003.000044",
+    "id": "15ko311",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "but camelCase in code &gt; underscores in code all day",
+    "ts": "1447621139.000045",
+    "id": "15ko312",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TCBB76",
+    "text": ":thumbsup::skin-tone-3:",
+    "ts": "1447621242.000046",
+    "id": "15ko313",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

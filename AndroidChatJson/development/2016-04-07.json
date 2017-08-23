@@ -1,0 +1,4769 @@
+[
+  {
+    "user": "U0YM7S9JB",
+    "subtype": "channel_join",
+    "text": "<@U0YM7S9JB|kuwako> has joined the channel",
+    "ts": "1460013962.003194",
+    "id": "07de30621",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0MUS1A00",
+    "text": "Hey, I’m starting with RxJava, and I would like to create an observable that can save the last state… In RxSwift, that would be Variable (<https://github.com/ReactiveX/RxSwift/blob/master/Documentation/GettingStarted.md#variables>), but I can’t found an equivalente in RxJava… Can you help me please?",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "ReactiveX/RxSwift",
+        "title_link": "https://github.com/ReactiveX/RxSwift/blob/master/Documentation/GettingStarted.md#variables",
+        "text": "RxSwift - Reactive Programming in Swift",
+        "fallback": "GitHub: ReactiveX/RxSwift",
+        "thumb_url": "https://avatars3.githubusercontent.com/u/6407041?v=3&s=400",
+        "from_url": "https://github.com/ReactiveX/RxSwift/blob/master/Documentation/GettingStarted.md#variables",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1460016138.003195",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "07de30622",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0MUS1A00",
+    "text": "I found a work around but it’s a lot of boiler plate code \n\n```\n    private boolean isGettingCompanies = false;\n\n    public boolean isGettingCompanies() {\n        return isGettingCompanies;\n    }\n\n    private void setIsGettingCompanies(boolean isGettingCompanies) {\n        this.isGettingCompanies = isGettingCompanies;\n        isGettingCompaniesPublishSubject.onNext(isGettingCompanies);\n    }\n\n    private final PublishSubject&lt;Boolean&gt; isGettingCompaniesPublishSubject = PublishSubject.create();\n\n    public Observable&lt;Boolean&gt; isGettingCompaniesPublishSubject() {\n        return isGettingCompaniesPublishSubject.asObservable();\n    }\n```",
+    "ts": "1460016243.003197",
+    "id": "07de30623",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0MUS1A00",
+    "text": "the RxSwift equivalent is this",
+    "ts": "1460016296.003198",
+    "id": "07de30624",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0MUS1A00",
+    "text": "```\nprivate(set) var isGettingCompanies: Variable = Variable(false)\n```",
+    "ts": "1460016305.003199",
+    "id": "07de30625",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0MHZ10FN",
+    "text": "If I have an instance of the `GoogleApiClient` and want to call `disconnect()` do I need to check before if I am connected using `isConnected()`? And what about `isConnecting()`?",
+    "ts": "1460017494.003200",
+    "id": "07de30626",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "Anyone knows of any good software development Slacks? (Not Android specific)",
+    "ts": "1460019043.003201",
+    "id": "07de30627",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<https://www.hamsterpad.com/> has a huge collection",
+    "attachments": [
+      {
+        "service_name": "Find Slack Chats | Hamster Pad",
+        "title": "Hamster Pad",
+        "title_link": "https://www.hamsterpad.com/",
+        "text": "Discover and join the best Slack Communities and Slack Chats.",
+        "fallback": "Find Slack Chats | Hamster Pad: Hamster Pad",
+        "image_url": "https://d159a3urao882p.cloudfront.net/assets/hamsterpadimage2.png",
+        "from_url": "https://www.hamsterpad.com/",
+        "image_width": 400,
+        "image_height": 250,
+        "image_bytes": 115557,
+        "id": 1
+      }
+    ],
+    "ts": "1460019077.003202",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U09T8SFG8",
+          "U0548MM6B",
+          "U0R3QC1UH"
+        ],
+        "count": 4
+      }
+    ],
+    "id": "07de30628",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "Nice, thanks for that",
+    "ts": "1460019109.003204",
+    "id": "07de30629",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U0548MM6B>: :taco:",
+    "ts": "1460019122.003205",
+    "id": "07de30630",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": ":raised_hands:",
+    "ts": "1460019140.003206",
+    "id": "07de30631",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "hey <@U0N7D6F50> why can't we downvote?",
+    "ts": "1460019153.003207",
+    "id": "07de30632",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "hey <@U08GFT5V5> why can’t we downvote? :stuck_out_tongue:",
+    "ts": "1460019167.003208",
+    "id": "07de30633",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "Not that I want to downvote, but...",
+    "ts": "1460019168.003209",
+    "id": "07de30634",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "who broke the build?",
+    "ts": "1460019170.003210",
+    "id": "07de30635",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<http://linkbait.nishtahir.com/>",
+    "ts": "1460019179.003211",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "07de30636",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "aaah there it is",
+    "ts": "1460019185.003212",
+    "id": "07de30637",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "someone has taken my name at hampsterpad, shit is going down",
+    "ts": "1460019264.003213",
+    "id": "07de30638",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "/gif hit em up",
+    "ts": "1460019518.003214",
+    "id": "07de30639",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "",
+    "bot_id": "B0GH4RVHU",
+    "attachments": [
+      {
+        "fallback": "<http://25.media.tumblr.com/tumblr_m0k3hmBzfI1qzmh83o1_500.gif>",
+        "image_url": "http://25.media.tumblr.com/tumblr_m0k3hmBzfI1qzmh83o1_500.gif",
+        "image_width": 500,
+        "image_height": 281,
+        "image_bytes": 664386,
+        "is_animated": true,
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1460019518.003215",
+    "id": "07de30640",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "hah",
+    "ts": "1460019529.003216",
+    "id": "07de30641",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "got my name",
+    "ts": "1460019534.003217",
+    "id": "07de30642",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": ":stuck_out_tongue:",
+    "ts": "1460019537.003218",
+    "id": "07de30643",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I'm not even receiving the confirmation email",
+    "ts": "1460019863.003219",
+    "id": "07de30644",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "alright looks like my forwarding is broken",
+    "ts": "1460019908.003220",
+    "id": "07de30645",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U0548MM6B>: do you need to have two separate slack accounts to have the chat in my \"dashboard\"?",
+    "ts": "1460020200.003221",
+    "id": "07de30646",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I managed to accidentally reinvite me to this slack",
+    "ts": "1460020231.003222",
+    "id": "07de30647",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "tbh idk, I only use it as a directory",
+    "ts": "1460020245.003223",
+    "id": "07de30648",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "but I believe so",
+    "ts": "1460020249.003224",
+    "id": "07de30649",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "because Slack requests separate account for each chat",
+    "ts": "1460020257.003225",
+    "id": "07de30650",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "Yeah I'll use it as a directory as well, it looks like it creates a completely separate account",
+    "ts": "1460020279.003226",
+    "id": "07de30651",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "<@U0548MM6B>:  now that you mentioned about hamsterpad I was going through some community where most of them are private or need invite from other members, any idea on that how can we get in, Also some of the community is paid, you think its worth paying for some community?",
+    "edited": {
+      "user": "U0XCFE6AH",
+      "ts": "1460020489.000000"
+    },
+    "ts": "1460020475.003227",
+    "id": "07de30652",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U0548MM6B>: It means that there was an issue parsing the metadata",
+    "ts": "1460020557.003229",
+    "id": "07de30653",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<@U0XCFE6AH>:  paid communities? don’t have a clue about those, but I wouldn’t say they are.",
+    "ts": "1460020559.003230",
+    "id": "07de30654",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "I’ll open a ticket for that",
+    "ts": "1460020566.003231",
+    "id": "07de30655",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "<@U0548MM6B>:  yes like some of the startup community are paid they charge 29$ one time fee.. and I just paid for one of it..",
+    "ts": "1460020638.003232",
+    "id": "07de30656",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "let us know if it was worth it!",
+    "ts": "1460020694.003233",
+    "id": "07de30657",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "there’s a couple of paid ones",
+    "ts": "1460020971.003234",
+    "id": "07de30658",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0SNJDQDC",
+    "text": "Hey guys",
+    "ts": "1460024559.003235",
+    "id": "07de30659",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0SNJDQDC",
+    "text": "So I want to use Rx into my app. Since this is my first time diving in to Reactive, where do I start if I want to observe any changes that's happening in a SharedPreference?",
+    "ts": "1460024740.003236",
+    "id": "07de30660",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U0SNJDQDC>: pretty simple, make a SharedPreferencesListener class, \"bind\" it to your SharedPreferences, wrap it all in an observable roughly speaking. If you are just starting with Rx, it's best to read up on the documentation and try setting up an app which uses some kind of REST api for displaying data",
+    "ts": "1460025162.003237",
+    "id": "07de30661",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Here is a free ebook that I found very good",
+    "ts": "1460025341.003238",
+    "id": "07de30662",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "<http://www.oreilly.com/programming/free/rxjava-for-android-app-development.csp>",
+    "attachments": [
+      {
+        "title": "RxJava for Android App Development - O'Reilly Media",
+        "title_link": "http://www.oreilly.com/programming/free/rxjava-for-android-app-development.csp",
+        "text": "RxJava is hot property among experienced Android developers these days, but this powerful library for handling asynchronous data in Android apps can be difficult to learn. In this O’Reilly report, mobile software engineer Matt Dupree introduces you...",
+        "fallback": "RxJava for Android App Development - O'Reilly Media",
+        "thumb_url": "http://cdn.oreillystatic.com/oreilly/images/oreilly-social-icon-120.png",
+        "from_url": "http://www.oreilly.com/programming/free/rxjava-for-android-app-development.csp",
+        "thumb_width": 120,
+        "thumb_height": 120,
+        "id": 1
+      }
+    ],
+    "ts": "1460025342.003239",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "07de30663",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "A lot of people find this a good point to start",
+    "ts": "1460025377.003241",
+    "id": "07de30664",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "<http://blog.danlew.net/2014/09/15/grokking-rxjava-part-1/>",
+    "attachments": [
+      {
+        "service_name": "Dan Lew Codes",
+        "title": "Grokking RxJava, Part 1: The Basics",
+        "title_link": "http://blog.danlew.net/2014/09/15/grokking-rxjava-part-1/",
+        "text": "RxJava is the new hotness amongst Android developers these days. The only problem is that it can be difficult to approach initially. Functional Reactive Programming is hard when you come from an imperative world, but once you understand it, it's so awesome! I'm here to try to give you a",
+        "fallback": "Dan Lew Codes: Grokking RxJava, Part 1: The Basics",
+        "ts": 1410790283,
+        "from_url": "http://blog.danlew.net/2014/09/15/grokking-rxjava-part-1/",
+        "id": 1
+      }
+    ],
+    "ts": "1460025377.003242",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "07de30665",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I’d start with reading up and doing something similar as in the ebook",
+    "ts": "1460025395.003244",
+    "id": "07de30666",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Rx + Retrofit is a easy way to start",
+    "ts": "1460025404.003245",
+    "id": "07de30667",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0SNJDQDC",
+    "text": "Nice. Thanks for the link",
+    "ts": "1460025608.003246",
+    "id": "07de30668",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0SNJDQDC",
+    "text": "One more thing though, I've been playing around with the ContentObserver API. Is the concept the same as in Rx observable/subscriber?",
+    "ts": "1460025773.003247",
+    "id": "07de30669",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0SNJDQDC",
+    "text": "Eh, I guess the concept of stream is what differs much in this case",
+    "ts": "1460025848.003248",
+    "id": "07de30670",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0YNTS2R4",
+    "subtype": "channel_join",
+    "text": "<@U0YNTS2R4|learner> has joined the channel",
+    "ts": "1460030149.003249",
+    "id": "07de30671",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "any body know why the camera quality is bad when we capture from the app using the camera API",
+    "ts": "1460031151.003250",
+    "id": "07de30672",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "I am thinking to use camera2 api at this point now",
+    "ts": "1460031166.003251",
+    "id": "07de30673",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0QR1SM32|kristo> uploaded a file: <https://androidchat.slack.com/files/kristo/F0YP6TKEZ/fun_times_with_samsung.sh|fun times with Samsung>",
+    "file": {
+      "id": "F0YP6TKEZ",
+      "created": 1460031655,
+      "timestamp": 1460031655,
+      "name": "fun_times_with_Samsung.sh",
+      "title": "fun times with Samsung",
+      "mimetype": "text/plain",
+      "filetype": "shell",
+      "pretty_type": "Shell",
+      "user": "U0QR1SM32",
+      "editable": true,
+      "size": 852,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0YP6TKEZ/fun_times_with_samsung.sh?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0YP6TKEZ/download/fun_times_with_samsung.sh?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/kristo/F0YP6TKEZ/fun_times_with_samsung.sh",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0YP6TKEZ-013aa027c6",
+      "edit_link": "https://androidchat.slack.com/files/kristo/F0YP6TKEZ/fun_times_with_samsung.sh/edit",
+      "preview": "java.lang.IllegalArgumentException: pointerIndex out of range\r\n                                                                      at android.view.MotionEvent.nativeGetAxisValue(Native Method)\r\n                                                                      at android.view.MotionEvent.getX(MotionEvent.java:1995)\r\n                                                                      at com.almeros.android.multitouch.TwoFingerGestureDetector.updateStateByEvent(TwoFingerGestureDetector.java:77)\r\n                                                                      at com.almeros.android.multitouch.RotateGestureDetector.handleInProgressEvent(RotateGestureDetector.java:136)\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>java.lang.IllegalArgumentException: pointerIndex out of range</pre></div>\n<div><pre>                                                                      at android.view.MotionEvent.nativeGetAxisValue(Native Method)</pre></div>\n<div><pre>                                                                      at android.view.MotionEvent.getX(MotionEvent.java:1995)</pre></div>\n<div><pre>                                                                      at com.almeros.android.multitouch.TwoFingerGestureDetector.updateStateByEvent(TwoFingerGestureDetector.java:77)</pre></div>\n<div><pre>                                                                      at com.almeros.android.multitouch.RotateGestureDetector.handleInProgressEvent(RotateGestureDetector.java:136)</pre></div>\n</div>\n</div>\n",
+      "lines": 6,
+      "lines_more": 1,
+      "preview_is_truncated": null,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U0QR1SM32",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0QR1SM32|kristo>",
+    "bot_id": null,
+    "ts": "1460031655.003252",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "07de30674",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0QR1SM32",
+    "text": "Old shit tablet making my life hell..",
+    "ts": "1460031711.003253",
+    "id": "07de30675",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "re camera query - if you can get away with minsdk 21 def go with Camera2",
+    "ts": "1460032454.003254",
+    "id": "07de30676",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C7F00AH",
+    "text": "<@U0XCFE6AH>: which method you called?",
+    "ts": "1460033775.003255",
+    "id": "07de30677",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "<@U0C7F00AH>:  using the takePicture()",
+    "ts": "1460034069.003256",
+    "id": "07de30678",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "also notice that each time I call this method it hault the UI for 2-3 sec before we can the response",
+    "edited": {
+      "user": "U0XCFE6AH",
+      "ts": "1460034120.000000"
+    },
+    "ts": "1460034097.003257",
+    "id": "07de30679",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UEQSNMC",
+    "text": "<@U0QR1SM32>: in S6 gesture detector simply doesnt work.",
+    "ts": "1460034127.003259",
+    "id": "07de30680",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UEQSNMC",
+    "text": "I wish the general public just knew how shitty samsung phones actually are",
+    "ts": "1460034165.003260",
+    "id": "07de30681",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "<@U0UEQSNMC>:  very true even inside samsung each version behave differently like some stuff dont work in Note 4 or 5 while works on s5 and s6",
+    "ts": "1460034232.003261",
+    "id": "07de30682",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C7F00AH",
+    "text": "May be you should try call `public void setPictureSize (int width, int height)` to change default picture size.",
+    "ts": "1460034278.003262",
+    "id": "07de30683",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "<@U0C7F00AH>:  yes I have tried that its just sometimes on some device its make the photo squeeze and the qaulity is never same like the camera app",
+    "ts": "1460034386.003263",
+    "id": "07de30684",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "I think i might use 3rd party lib for this.",
+    "ts": "1460034399.003264",
+    "id": "07de30685",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C7F00AH",
+    "text": "If you don’t call setPictureSize, system well use default size to take picture.",
+    "ts": "1460034912.003265",
+    "id": "07de30686",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "that will be picture size based on what camera hardware support right?",
+    "ts": "1460035107.003266",
+    "id": "07de30687",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "and not the mobile height and width",
+    "ts": "1460035118.003267",
+    "id": "07de30688",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C7F00AH",
+    "text": "yes, you can see this method declare:\n\n```java\npublic List&lt;Camera.Size&gt; getSupportedPictureSizes ()\n\nGets the supported picture sizes.\n\nReturns\na list of supported picture sizes. This method will always return a list with at least one element.\n```",
+    "ts": "1460035281.003268",
+    "id": "07de30689",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "cool thanks",
+    "ts": "1460036737.003269",
+    "id": "07de30690",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "and this dont need camera 2 api right",
+    "ts": "1460036746.003270",
+    "id": "07de30691",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C7F00AH",
+    "text": "you are welcome.",
+    "ts": "1460037314.003271",
+    "id": "07de30692",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XNRE25S",
+    "text": "Can startActivityForResult not be called outside of an activity class",
+    "ts": "1460038231.003272",
+    "id": "07de30693",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XNRE25S",
+    "text": "?*",
+    "ts": "1460038234.003273",
+    "id": "07de30694",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "can, fragment",
+    "ts": "1460038269.003274",
+    "id": "07de30695",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "Anyone has any good resources on caching paginated results? I have made an implementation on a side project that I'm working on but I have a feeling that I over-engineered",
+    "ts": "1460039804.003275",
+    "id": "07de30696",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "can you just use standard http cache?",
+    "ts": "1460040170.003276",
+    "id": "07de30697",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "just out of curiousity",
+    "ts": "1460040634.003277",
+    "id": "07de30698",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "haven’t actually tried it yet",
+    "ts": "1460040641.003278",
+    "id": "07de30699",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "Nope. To be honest I'm doing this more of a practice, I'm playing around with the TwitterSdk, fetching tweets based on filters, caching them, using the paginated api with network or the paginated cache without network etc.",
+    "edited": {
+      "user": "U09T8SFG8",
+      "ts": "1460040728.000000"
+    },
+    "ts": "1460040720.003279",
+    "id": "07de30700",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "right",
+    "ts": "1460040794.003281",
+    "id": "07de30701",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0QR1SM32",
+    "text": "<@U09T8SFG8> LruCache ? Page number as the key and list of tweets as value.",
+    "ts": "1460041214.003282",
+    "id": "07de30702",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0QR1SM32",
+    "text": "Or did you mean persistent? :simple_smile:",
+    "ts": "1460041272.003283",
+    "id": "07de30703",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U0QR1SM32>: I made an in-memory cache for another part of my project that I needed (simpler than LRU because it was all I needed). Now I'm trying to do a persistent one. Basically I retrieve some tweets from the network which are paginated (with minimum and maximum tweet id because that's how Twitter's REST API likes it) and every time I'm fetching them I persist them to the storage (the db). Now if the user tries to access without a network connection, I simply want to start serving him with paginated disk results (from the db) until he gets back on the network.",
+    "ts": "1460041763.003284",
+    "id": "07de30704",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I am more interested in the software design patterns used with it, I am heavily using the repository pattern along with proxy, strategy and decorator but things are getting a bit crazy and I believe I can do things simpler",
+    "ts": "1460041859.003285",
+    "id": "07de30705",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "Why don't you just serialize the adapter every time you Assign another and next time load it back from dB or raw file ",
+    "ts": "1460042330.003286",
+    "id": "07de30706",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "If network not available",
+    "ts": "1460042412.003287",
+    "id": "07de30707",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I would do that but I want to mix network with disk if necessary. For example: fetchFromNetwork(0, 50) -&gt; fetchFromDb(50, 100) -&gt; fetchFromNetwork(100, 150)",
+    "ts": "1460042496.003288",
+    "id": "07de30708",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "I think you may need to use loader manager then",
+    "ts": "1460042629.003289",
+    "id": "07de30709",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "means the loader which first load data from DB but also in back ground load from the network if there is difference it refresh the adapter",
+    "ts": "1460042655.003290",
+    "id": "07de30710",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "I think google+ does that way",
+    "ts": "1460042727.003291",
+    "id": "07de30711",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "Hmmm I see, I'll look up on that, thanks!",
+    "ts": "1460042796.003292",
+    "id": "07de30712",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "anybody trying to do what MSQRD app does?",
+    "ts": "1460042867.003293",
+    "id": "07de30713",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C7F00AH",
+    "text": "I know something about it, what do you want to know?",
+    "ts": "1460043297.003294",
+    "id": "07de30714",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "can I DM you",
+    "ts": "1460043348.003295",
+    "id": "07de30715",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C7F00AH",
+    "text": "yes",
+    "ts": "1460043381.003296",
+    "id": "07de30716",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XNRE25S",
+    "text": "Does RxCamera help support different devices? I.E. if I use it instead of the native camera API, will it support the differences in phone hardware? Don’t want any upside down images.",
+    "ts": "1460045576.003297",
+    "id": "07de30717",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XNRE25S",
+    "text": "Or is it just a nifty way to use the camera api",
+    "ts": "1460045590.003298",
+    "id": "07de30718",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Internally it uses the normal camera api ",
+    "ts": "1460046984.003299",
+    "id": "07de30719",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XNRE25S",
+    "text": "So I am not getting any added benefit like cwac-camera2?",
+    "ts": "1460047211.003300",
+    "id": "07de30720",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "Support libs 23.3.0 incoming",
+    "ts": "1460047927.003301",
+    "id": "07de30721",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "build tools 23.0.3 is in my list",
+    "ts": "1460047943.003302",
+    "id": "07de30722",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "when did it come out",
+    "ts": "1460047948.003303",
+    "id": "07de30723",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "does it build things better? now with more wow?",
+    "ts": "1460047962.003304",
+    "id": "07de30724",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "&gt;Fix issues in the RenderScript Support Library on arm64 devices.\n&gt;Fix issues in the RenderScript Support Library on certain Jelly Bean devices.\n&gt;Support renderscriptTargetAPI 21+ when using Android Plugin for Gradle, Revision 2.1.0 and above .",
+    "ts": "1460047994.003305",
+    "id": "07de30725",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "well that was boring",
+    "ts": "1460048006.003306",
+    "id": "07de30726",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "tools 25.1.1 are stable now",
+    "ts": "1460048027.003307",
+    "id": "07de30727",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "lambdas are so close",
+    "ts": "1460048033.003308",
+    "id": "07de30728",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "I can feel it coming in the air tonight",
+    "ts": "1460048051.003309",
+    "id": "07de30729",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETA9WHH",
+    "text": "oh lord",
+    "edited": {
+      "user": "U0ETA9WHH",
+      "ts": "1460048092.000000"
+    },
+    "ts": "1460048066.003310",
+    "id": "07de30730",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0YRXMYTH",
+    "subtype": "channel_join",
+    "text": "<@U0YRXMYTH|icechen1> has joined the channel",
+    "ts": "1460048096.003312",
+    "id": "07de30731",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "yo Transitions-Everywhere is the tits, thanks <@U053LEHJN> or whomever recommended them",
+    "ts": "1460048194.003313",
+    "id": "07de30732",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "sure thing",
+    "ts": "1460048206.003314",
+    "id": "07de30733",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U055GGAHS>: build tools 23.0.3 was out a few days ago I think",
+    "ts": "1460048238.003315",
+    "id": "07de30734",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "¯\\_(ツ)_/¯",
+    "ts": "1460048248.003316",
+    "id": "07de30735",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0YRXMYTH",
+    "text": "How do you guys enforce code style on your project? Wondering if there’s a better way to do it",
+    "ts": "1460048305.003317",
+    "id": "07de30736",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "checkstyle",
+    "ts": "1460048313.003318",
+    "id": "07de30737",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<http://developer.android.com/tools/support-library/index.html>",
+    "attachments": [
+      {
+        "title": "Support Library | Android Developers",
+        "title_link": "http://developer.android.com/tools/support-library/index.html",
+        "text": "The Android Support Library package is a set of code libraries that provide backward-compatible versions of Android framework APIs as well as features that are only available through the library APIs. Each Support Library is backward-compatible to a specific…",
+        "fallback": "Support Library | Android Developers",
+        "from_url": "http://developer.android.com/tools/support-library/index.html",
+        "id": 1
+      }
+    ],
+    "ts": "1460049076.003319",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U0YRXMYTH"
+        ],
+        "count": 2
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "07de30738",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "23.3.0 changelog is up",
+    "ts": "1460049081.003321",
+    "id": "07de30739",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<https://twitter.com/androidstudio/status/718123378716987394>",
+    "attachments": [
+      {
+        "fallback": "<https://twitter.com/androidstudio|@androidstudio>: Android Studio 2.0: Now available as a *stable* release. Instant Run, faster builds, new emulator, and much more!\n<http://android-developers.blogspot.com/2016/04/android-studio-2-0.html>",
+        "ts": 1460048930,
+        "author_name": "Android Studio",
+        "author_link": "https://twitter.com/androidstudio/status/718123378716987394",
+        "author_icon": "https://pbs.twimg.com/profile_images/712720345220907010/0BitGe6r_normal.jpg",
+        "author_subname": "@androidstudio",
+        "text": "Android Studio 2.0: Now available as a *stable* release. Instant Run, faster builds, new emulator, and much more!\n<http://android-developers.blogspot.com/2016/04/android-studio-2-0.html>",
+        "service_name": "twitter",
+        "service_url": "https://twitter.com/",
+        "from_url": "https://twitter.com/androidstudio/status/718123378716987394",
+        "id": 1,
+        "footer": "Twitter",
+        "footer_icon": "https://a.slack-edge.com/6e067/img/services/twitter_pixel_snapped_32.png"
+      }
+    ],
+    "ts": "1460049110.003322",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U0YRXMYTH"
+        ],
+        "count": 2
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "07de30740",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "new AndroidStudio Twitter account",
+    "ts": "1460049116.003324",
+    "id": "07de30741",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "good news is this means 2.0 features will get merged into IntelliJ proper",
+    "ts": "1460049134.003325",
+    "id": "07de30742",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KK98UU",
+    "text": "the latest 2.1 canary build breaks my androidTest folder :confused:",
+    "ts": "1460049168.003326",
+    "id": "07de30743",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KK98UU",
+    "text": "no longer recognizes junit for some reason",
+    "ts": "1460049180.003327",
+    "id": "07de30744",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KK98UU",
+    "text": "just a warning to others",
+    "ts": "1460049196.003328",
+    "id": "07de30745",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "&gt; Added AppLaunchChecker to help track how your app has been launched by the user in the past. hasStartedFromLauncher() lets you know if the user has launched your app from the home screen before, or if it has only been started by other means (for example, to view specific web URLs).",
+    "ts": "1460049316.003329",
+    "id": "07de30746",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "that’s pretty much the only feature addition to 23.3.0, the rest are a ton of bugfixes (which are just as welcome, of course)",
+    "ts": "1460049332.003330",
+    "id": "07de30747",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KK98UU",
+    "text": "thanks, I actually might make use of that",
+    "ts": "1460049401.003331",
+    "id": "07de30748",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "wat",
+    "ts": "1460049437.003332",
+    "id": "07de30749",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "its stable?",
+    "ts": "1460049439.003333",
+    "id": "07de30750",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "i dont see it in the stable channel  - <https://sites.google.com/a/android.com/tools/download/studio/stable>",
+    "attachments": [
+      {
+        "title": "Android Studio Stable Channel - Android Tools Project Site",
+        "title_link": "https://sites.google.com/a/android.com/tools/download/studio/stable",
+        "text": "Android tools project information site",
+        "fallback": "Android Studio Stable Channel - Android Tools Project Site",
+        "from_url": "https://sites.google.com/a/android.com/tools/download/studio/stable",
+        "thumb_url": "https://www.google.com/a/cpanel/android.com/images/logo.gif?service=google_default",
+        "thumb_width": 143,
+        "thumb_height": 59,
+        "id": 1
+      }
+    ],
+    "ts": "1460049495.003334",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "07de30751",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "you have to check the **stable** channel",
+    "ts": "1460049507.003336",
+    "id": "07de30752",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "oh..the secret stable channel :wink:",
+    "ts": "1460049663.003337",
+    "id": "07de30753",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "nah its actually just a synonym for canary",
+    "ts": "1460049697.003338",
+    "id": "07de30754",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": ":baby_chick:",
+    "ts": "1460049789.003339",
+    "id": "07de30755",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0YQTNAHZ",
+    "subtype": "channel_join",
+    "text": "<@U0YQTNAHZ|mcondle> has joined the channel",
+    "ts": "1460049966.003340",
+    "id": "07de30756",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "<@U053LEHJN>: did you do a diff?",
+    "ts": "1460050193.003341",
+    "id": "07de30757",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U060Q7J2Y>: nah",
+    "ts": "1460050210.003342",
+    "id": "07de30758",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "something interesting?",
+    "ts": "1460050214.003343",
+    "id": "07de30759",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "where is that from?",
+    "ts": "1460050216.003344",
+    "id": "07de30760",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "the developer site?",
+    "ts": "1460050222.003345",
+    "id": "07de30761",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<http://developer.android.com/tools/support-library/index.html#rev23-3-0>",
+    "attachments": [
+      {
+        "title": "Support Library | Android Developers",
+        "title_link": "http://developer.android.com/tools/support-library/index.html#rev23-3-0",
+        "text": "The Android Support Library package is a set of code libraries that provide backward-compatible versions of Android framework APIs as well as features that are only available through the library APIs. Each Support Library is backward-compatible to a specific…",
+        "fallback": "Support Library | Android Developers",
+        "from_url": "http://developer.android.com/tools/support-library/index.html#rev23-3-0",
+        "id": 1
+      }
+    ],
+    "ts": "1460050238.003346",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "07de30762",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "yeah just saw it",
+    "ts": "1460050262.003348",
+    "id": "07de30763",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "they dont always update it right away",
+    "ts": "1460050266.003349",
+    "id": "07de30764",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "so i forget to check",
+    "ts": "1460050268.003350",
+    "id": "07de30765",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "now to check if the google-services plugin fix i wanted landed in 2.0 too",
+    "ts": "1460050284.003351",
+    "id": "07de30766",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "<https://sites.google.com/a/android.com/tools/recent/androidstudio20andemulator2511areavailableinthestablebetaanddevchannels|Android Studio 2.0 and Emulator 25.1.1 are Available in the Stable, Beta, and Dev Channels>\nWe've released Android Studio 2.0 and Emulator 25.1.1 to the dev, beta, and stable release channels.This release is focused on development productivity by introducing instant run and a much faster emulator. Please see our <http://android-developers.blogspot.com/2016/04/android-studio-2-0.html|blog post> for more details.If you want to test out &lt;a href=\"<http://developer.android.com/preview/setup-sdk.html>\"...",
+    "username": "Posts of Recent Changes",
+    "icons": {
+      "image_36": "https://a.slack-edge.com/66f9/img/services/rss_36.png",
+      "image_48": "https://a.slack-edge.com/66f9/img/services/rss_48.png",
+      "image_72": "https://a.slack-edge.com/205a/img/services/rss_72.png"
+    },
+    "bot_id": "B062SSUPJ",
+    "attachments": [
+      {
+        "title": "Android Studio 2.0 and Emulator 25.1.1 are Available in the Stable, Beta, and Dev Channels - Android Tools Project Site",
+        "title_link": "https://sites.google.com/a/android.com/tools/recent/androidstudio20andemulator2511areavailableinthestablebetaanddevchannels",
+        "text": "Android tools project information site",
+        "fallback": "Android Studio 2.0 and Emulator 25.1.1 are Available in the Stable, Beta, and Dev Channels - Android Tools Project Site",
+        "from_url": "https://sites.google.com/a/android.com/tools/recent/androidstudio20andemulator2511areavailableinthestablebetaanddevchannels",
+        "thumb_url": "https://www.google.com/a/cpanel/android.com/images/logo.gif?service=google_default",
+        "thumb_width": 143,
+        "thumb_height": 59,
+        "id": 1
+      },
+      {
+        "title": "Android Studio 2.0 | Android Developers Blog",
+        "title_link": "http://android-developers.blogspot.com/2016/04/android-studio-2-0.html",
+        "fallback": "Android Studio 2.0 | Android Developers Blog",
+        "image_url": "https://1.bp.blogspot.com/-vxXg6Inv_WA/VwaJ0uzSf_I/AAAAAAAACr4/xzszbcRzWRgSaHXpOpYroG7u6bgsFJjqw/w1200-h630-p-nu/image03.png",
+        "from_url": "http://android-developers.blogspot.com/2016/04/android-studio-2-0.html",
+        "image_width": 476,
+        "image_height": 250,
+        "image_bytes": 65638,
+        "id": 2
+      },
+      {
+        "title": "Set Up the Preview | Android Developers",
+        "title_link": "http://developer.android.com/preview/setup-sdk.html",
+        "text": "To develop apps for the Android N Preview, you need to make some updates to your developer environment, as described on this page. To simply test your app's compatibility on the Android N system image, follow the guide to Test on an Android N Device…",
+        "fallback": "Set Up the Preview | Android Developers",
+        "from_url": "http://developer.android.com/preview/setup-sdk.html",
+        "id": 3
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1460051166.003352",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "07de30767",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KK98UU",
+    "text": "<@U060Q7J2Y>: I thought AutoValue was clunky because your classes need to be abstract, don’t like the static `create()` method, don’t like having to reference a generated class from the `create()` method.  adds more complexity to your app when it’s not hard to use intellij’s built-in generators.",
+    "ts": "1460052095.003354",
+    "id": "07de30768",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KK98UU",
+    "text": "I also don’t trust plugins like AutoParcel to write efficient parceling code",
+    "ts": "1460052108.003355",
+    "id": "07de30769",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "no, its not hard to use the generators. but you need to remember to update them every time you change a field. which is error prone",
+    "ts": "1460052140.003356",
+    "id": "07de30770",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KK98UU",
+    "text": "easier to remember that than all of the AutoValue conventions",
+    "ts": "1460052264.003357",
+    "id": "07de30771",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "I don’t like the idea of depending on an IDE I could replace at any moment",
+    "ts": "1460052266.003358",
+    "id": "07de30772",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KK98UU",
+    "text": "if someone was so careless to make an error like that I’m not sure I’d want to work with them lol.  also, code reviews.",
+    "ts": "1460052304.003359",
+    "id": "07de30773",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KK98UU",
+    "text": "value types are nice though, hopefully they come to Android in the future :confused:",
+    "ts": "1460052389.003360",
+    "id": "07de30774",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "easier to remember to regenerate a whole bunch of stuff manually, than not doing anything at all?",
+    "ts": "1460052633.003361",
+    "id": "07de30775",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "humans are very error prone during repetitive tasks",
+    "ts": "1460052644.003362",
+    "id": "07de30776",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KK98UU",
+    "text": "true, but it’s not really a repetitive task. how often do your value types change?  I’ll write them once and maybe update them every couple months.",
+    "ts": "1460053259.003363",
+    "id": "07de30777",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KK98UU",
+    "text": "and then it’s just like performing normal, responsible refactoring",
+    "ts": "1460053297.003364",
+    "id": "07de30778",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "even more likely to forget if you don’t do it often!",
+    "ts": "1460053406.003365",
+    "id": "07de30779",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "parcel code is especially brittle too. order matters, etc.",
+    "ts": "1460053432.003366",
+    "id": "07de30780",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KK98UU",
+    "text": "well parceling code should have tests supporting it",
+    "ts": "1460053452.003367",
+    "id": "07de30781",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "or just, you know, let the machine do it",
+    "ts": "1460053466.003368",
+    "id": "07de30782",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Q5FEWTH",
+    "text": "just had a weird issue with Dagger 2, wondering if anyone else knows about this.",
+    "ts": "1460053612.003369",
+    "id": "07de30783",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Q5FEWTH",
+    "text": "I changed a component interface and re-made the dagger 2 generated classes.",
+    "ts": "1460053632.003370",
+    "id": "07de30784",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Q5FEWTH",
+    "text": "but i had to uninstall the app before the changes were there. before then i just kept getting an error that the new build method i was looking for wasn’t in the dex path",
+    "ts": "1460053663.003371",
+    "id": "07de30785",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Q5FEWTH",
+    "text": "on dagger 2.2",
+    "ts": "1460053676.003372",
+    "id": "07de30786",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Q5FEWTH",
+    "text": "(if that matters)",
+    "ts": "1460053684.003373",
+    "id": "07de30787",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0YSYGRUM",
+    "subtype": "channel_join",
+    "text": "<@U0YSYGRUM|dankan83> has joined the channel",
+    "ts": "1460053776.003374",
+    "id": "07de30788",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0YRJEDHR",
+    "subtype": "channel_join",
+    "text": "<@U0YRJEDHR|cparker15> has joined the channel",
+    "ts": "1460054122.003375",
+    "id": "07de30789",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0YT1GNRK",
+    "subtype": "channel_join",
+    "text": "<@U0YT1GNRK|borjabravo10> has joined the channel",
+    "ts": "1460054292.003376",
+    "id": "07de30790",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XNRE25S",
+    "text": "Anyone having issues with the insta-run feature on 2.0? Specifically: \n&gt;Error installing cold swap patches: com.android.tools.fd.client.InstantRunPushFailedException: Error creating folder with: run-as com.hellobot31 mkdir -p /data/data/com.hellobot31/files/instant-run/dex\nError while Installing restart patches",
+    "ts": "1460064547.003377",
+    "id": "07de30791",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0YUQGM9B",
+    "subtype": "channel_join",
+    "text": "<@U0YUQGM9B|kishore> has joined the channel",
+    "ts": "1460065094.003378",
+    "id": "07de30792",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0QPPQ8GG",
+    "text": "<@U0XNRE25S>: if my app crashes i get that on the next run pretty consistently",
+    "ts": "1460065821.003379",
+    "id": "07de30793",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XNRE25S",
+    "text": "Thanks :simple_smile:",
+    "ts": "1460066620.003380",
+    "id": "07de30794",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "<http://thenextweb.com/dd/2016/04/07/google-facebook-uber-swift/>",
+    "attachments": [
+      {
+        "service_name": "The Next Web",
+        "title": "Google may be considering Swift for use on Android",
+        "title_link": "http://thenextweb.com/dd/2016/04/07/google-facebook-uber-swift/",
+        "text": "Sources tell The Next Web that Google is considering making Swift a “first class” language for Android, while Facebook and Uber mull their options",
+        "fallback": "The Next Web: Google may be considering Swift for use on Android",
+        "image_url": "http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2015/09/SwiftTNW2.jpg",
+        "image_width": 490,
+        "image_height": 250,
+        "fields": [
+          {
+            "title": "Author",
+            "value": "Nate Swanner",
+            "short": true
+          }
+        ],
+        "ts": 1460046298,
+        "from_url": "http://thenextweb.com/dd/2016/04/07/google-facebook-uber-swift/",
+        "image_bytes": 512352,
+        "id": 1
+      }
+    ],
+    "ts": "1460066715.003381",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U061HDV96",
+          "U04UCB0RU",
+          "U08GFT5V5"
+        ],
+        "count": 4
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50",
+          "U0548MM6B"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "07de30795",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "yeaaaah they just spent tons of work on OpenJDK and AS to suddenly migrate to swift and move all the APIs over",
+    "ts": "1460066815.003383",
+    "id": "07de30796",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "probably wouldn't happen for years anyway",
+    "ts": "1460066838.003384",
+    "id": "07de30797",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "even if they went for it",
+    "ts": "1460066843.003385",
+    "id": "07de30798",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "maybe someone saw kotlin and thought it was swift",
+    "ts": "1460066854.003386",
+    "id": "07de30799",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "NDK support for Swift is another question though",
+    "ts": "1460066914.003387",
+    "id": "07de30800",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "that’s very possible",
+    "ts": "1460066918.003388",
+    "id": "07de30801",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "and doesn’t even need to be considered “first class”; if it works with LLVM it should be good to go with the NDK",
+    "ts": "1460066942.003389",
+    "id": "07de30802",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "That would be awesome",
+    "ts": "1460073602.003390",
+    "id": "07de30803",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "But unfortunately, I highly doubt it",
+    "ts": "1460073611.003391",
+    "id": "07de30804",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "It also is TNW, take it with a grain of sailt",
+    "ts": "1460073628.003392",
+    "id": "07de30805",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Last time we wanted to reply to one of their shitty articles",
+    "ts": "1460073649.003393",
+    "id": "07de30806",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R3QC1UH",
+    "text": "Have anyone tried stable AS 2.0, is it really there? I just wonder, it's april tho :grimacing: ",
+    "ts": "1460077751.003394",
+    "id": "07de30807",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UCB0RU",
+    "text": "Me, too. Just wonder.",
+    "ts": "1460078552.003395",
+    "id": "07de30808",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0TFHLMJR",
+    "text": "anyone can tell me, How can display badge count inside icon on launcher. Like this : <https://github.com/leolin310148/ShortcutBadger>.\nBut I want to support more than this library. I know android doesn't support it but please tell me any solution.",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "leolin310148/ShortcutBadger",
+        "title_link": "https://github.com/leolin310148/ShortcutBadger",
+        "text": "ShortcutBadger - An Android library supports badge notification like iOS in Samsung, LG, Sony and HTC launchers.",
+        "fallback": "GitHub: leolin310148/ShortcutBadger",
+        "thumb_url": "https://avatars0.githubusercontent.com/u/5039811?v=3&s=400",
+        "from_url": "https://github.com/leolin310148/ShortcutBadger",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1460080099.003396",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "07de30809",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0SNJDQDC",
+    "text": "<@U0R3QC1UH>: its there already. and ive updated mine. so far so good",
+    "ts": "1460083773.003398",
+    "id": "07de30810",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R3QC1UH",
+    "text": "<@U0SNJDQDC> cool, i already in 2.1 preview 5 tho :grimacing:",
+    "ts": "1460085260.003399",
+    "id": "07de30811",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0SNJDQDC",
+    "text": "lol so fast",
+    "ts": "1460085278.003400",
+    "id": "07de30812",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0SNJDQDC",
+    "text": "i'd only go for stable release lol",
+    "ts": "1460085308.003401",
+    "id": "07de30813",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R3QC1UH",
+    "text": "actually main dev branch is in 2.1 now, bugfix and stability then backport to 2.0, CMIIW",
+    "ts": "1460085750.003402",
+    "id": "07de30814",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0SNJDQDC",
+    "text": "enjoying the fast build so far :smile:",
+    "ts": "1460087651.003403",
+    "id": "07de30815",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Z1AJPHP",
+    "subtype": "channel_join",
+    "text": "<@U0Z1AJPHP|asamofalov> has joined the channel",
+    "ts": "1460088112.003404",
+    "id": "07de30816",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "I wondered most of the things they already released before Google IO what will be there to launch in Google IO now just the mobile? Hope some good news on the way in IO as there is no real innovation in last couple of years in terms of mobile technology",
+    "ts": "1460092750.003405",
+    "id": "07de30817",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I’m looking for a replacement of Mosby MVP (<https://github.com/sockeqwe/mosby>)",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "sockeqwe/mosby",
+        "title_link": "https://github.com/sockeqwe/mosby",
+        "text": "mosby - A Model-View-Presenter library for modern Android apps",
+        "fallback": "GitHub: sockeqwe/mosby",
+        "thumb_url": "https://avatars3.githubusercontent.com/u/583598?v=3&s=400",
+        "from_url": "https://github.com/sockeqwe/mosby",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1460095351.003406",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "07de30818",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Or a example / blogpost of how other people implement (perhaps in kotlin, that’s where I have problems with it)",
+    "ts": "1460095599.003408",
+    "id": "07de30819",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Z1CAW5U",
+    "subtype": "channel_join",
+    "text": "<@U0Z1CAW5U|barrowkada> has joined the channel",
+    "ts": "1460095830.003409",
+    "id": "07de30820",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "What kind of problems are you having with it?",
+    "ts": "1460097408.003410",
+    "id": "07de30821",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "<@U053PPGDC>:",
+    "ts": "1460097787.003411",
+    "id": "07de30822",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_mention",
+    "text": "<@U0K1ALDQE|simon.vergauwen> mentioned a file: <https://androidchat.slack.com/files/simon.vergauwen/F0YQENEHW/screen_shot_2016-04-07_at_16.43.30.png|Screen Shot 2016-04-07 at 16.43.30.png>.",
+    "file": {
+      "id": "F0YQENEHW",
+      "created": 1460040241,
+      "timestamp": 1460040241,
+      "name": "Screen Shot 2016-04-07 at 16.43.30.png",
+      "title": "Screen Shot 2016-04-07 at 16.43.30.png",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U0K1ALDQE",
+      "editable": false,
+      "size": 95451,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0YQENEHW/screen_shot_2016-04-07_at_16.43.30.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0YQENEHW/download/screen_shot_2016-04-07_at_16.43.30.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F0YQENEHW-1690fdf2fc/screen_shot_2016-04-07_at_16.43.30_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F0YQENEHW-1690fdf2fc/screen_shot_2016-04-07_at_16.43.30_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F0YQENEHW-1690fdf2fc/screen_shot_2016-04-07_at_16.43.30_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 360,
+      "thumb_360_h": 49,
+      "thumb_480": "https://files.slack.com/files-tmb/T04PLNDMP-F0YQENEHW-1690fdf2fc/screen_shot_2016-04-07_at_16.43.30_480.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_480_w": 480,
+      "thumb_480_h": 65,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F0YQENEHW-1690fdf2fc/screen_shot_2016-04-07_at_16.43.30_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720": "https://files.slack.com/files-tmb/T04PLNDMP-F0YQENEHW-1690fdf2fc/screen_shot_2016-04-07_at_16.43.30_720.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720_w": 720,
+      "thumb_720_h": 98,
+      "thumb_960": "https://files.slack.com/files-tmb/T04PLNDMP-F0YQENEHW-1690fdf2fc/screen_shot_2016-04-07_at_16.43.30_960.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_960_w": 960,
+      "thumb_960_h": 130,
+      "thumb_1024": "https://files.slack.com/files-tmb/T04PLNDMP-F0YQENEHW-1690fdf2fc/screen_shot_2016-04-07_at_16.43.30_1024.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_1024_w": 1024,
+      "thumb_1024_h": 139,
+      "image_exif_rotation": 1,
+      "original_w": 2198,
+      "original_h": 298,
+      "permalink": "https://androidchat.slack.com/files/simon.vergauwen/F0YQENEHW/screen_shot_2016-04-07_at_16.43.30.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0YQENEHW-64cfdd8c80",
+      "channels": [
+        "C0BQU1TDF"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U0K1ALDQE",
+    "ts": "1460097788.003413",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "07de30823",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "`interface MainComponent : MvpComponent&lt;MainPresenter&gt; `",
+    "edited": {
+      "user": "U0K1ALDQE",
+      "ts": "1460097921.000000"
+    },
+    "ts": "1460097804.003415",
+    "id": "07de30824",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "`interface MainPresenter : MvpPresenter&lt;MainView&gt; `",
+    "ts": "1460097843.003416",
+    "id": "07de30825",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "`interface MainView : MvpView`",
+    "ts": "1460097861.003417",
+    "id": "07de30826",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Everything checks out, but yet it doens’t work",
+    "ts": "1460097940.003421",
+    "id": "07de30827",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Or am I missing something?",
+    "ts": "1460097948.003422",
+    "id": "07de30828",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "that’s a lot of generics :simple_smile:",
+    "ts": "1460098120.003423",
+    "id": "07de30829",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Yeah, but it’s a great setup when using java",
+    "ts": "1460098160.003424",
+    "id": "07de30830",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Keeps all mvp stuff out of my activities, and only java/kotlin in my presenters.",
+    "ts": "1460098194.003425",
+    "id": "07de30831",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "All setup is done by the base classes (BaseActivity &amp; BasePresenter) + DI",
+    "ts": "1460098222.003426",
+    "id": "07de30832",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "yep I agree, I like generics",
+    "ts": "1460098305.003427",
+    "id": "07de30833",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "here’s one I found on github",
+    "ts": "1460098314.003428",
+    "id": "07de30834",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "<https://github.com/mrz/MosbyTestKotlin>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "mrz/MosbyTestKotlin",
+        "title_link": "https://github.com/mrz/MosbyTestKotlin",
+        "text": "Contribute to MosbyTestKotlin development by creating an account on GitHub.",
+        "fallback": "GitHub: mrz/MosbyTestKotlin",
+        "thumb_url": "https://avatars0.githubusercontent.com/u/45771?v=3&s=400",
+        "from_url": "https://github.com/mrz/MosbyTestKotlin",
+        "thumb_width": 420,
+        "thumb_height": 420,
+        "id": 1
+      }
+    ],
+    "ts": "1460098315.003429",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "07de30835",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "maybe it’ll help you",
+    "ts": "1460098321.003431",
+    "id": "07de30836",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I haven’t used mosby extensively though",
+    "ts": "1460098333.003432",
+    "id": "07de30837",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "again, worst case scenario, you implement what you can’t in kotlin in java and can still reuse these classes from kotlin :simple_smile:",
+    "ts": "1460098360.003433",
+    "id": "07de30838",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "it used to be the case for all custom views for a long time",
+    "ts": "1460098377.003434",
+    "id": "07de30839",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "back when kotlin didn’t support multiple constructors :simple_smile:",
+    "ts": "1460098391.003435",
+    "id": "07de30840",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I’m afraid that’s going to have to be the case",
+    "ts": "1460098408.003436",
+    "id": "07de30841",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I’ll give it a try",
+    "ts": "1460098423.003437",
+    "id": "07de30842",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "but if the generics aren’t working in the baseactivity class, they won’t work in my activity either",
+    "ts": "1460098446.003438",
+    "id": "07de30843",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "so then I’m back to writing everything in java &gt;&lt;",
+    "ts": "1460098463.003439",
+    "id": "07de30844",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "It seems to really just be a triple generics deep problem tho",
+    "ts": "1460098543.003440",
+    "id": "07de30845",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I htink you shouldn’t have nested generics in normal classes??",
+    "ts": "1460098573.003441",
+    "id": "07de30846",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "it’s just the base classes that are problematic",
+    "ts": "1460098583.003442",
+    "id": "07de30847",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "or I’m missing something",
+    "ts": "1460098586.003443",
+    "id": "07de30848",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "`abstract class BaseActivity&lt;V : MvpView, P : MvpPresenter&lt;V&gt;, C : MvpComponent&lt;P&gt;&gt; : MvpActivity&lt;V, P&gt;(), MvpView `",
+    "ts": "1460098621.003444",
+    "id": "07de30849",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "`class MainActivity : BaseActivity&lt;MainView,MainPresenter,MainComponent&gt;() , MainView`",
+    "ts": "1460098630.003445",
+    "id": "07de30850",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "right?",
+    "ts": "1460098632.003446",
+    "id": "07de30851",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

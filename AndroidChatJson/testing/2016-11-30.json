@@ -1,0 +1,1141 @@
+[
+  {
+    "user": "U1LJG0Y03",
+    "text": "Anyone have any idea how I can test NFC adapter state changes for a device pre API 18, when I don’t have a pre-18 device?",
+    "ts": "1480504391.000179",
+    "id": "30te2697",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "NFC adapter state changes?",
+    "ts": "1480505524.000180",
+    "id": "30te2698",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "can you go more in detail you mean",
+    "ts": "1480505536.000181",
+    "id": "30te2699",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "is NFC enable or not you mean?",
+    "ts": "1480505555.000182",
+    "id": "30te2700",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Yeah, so basically I have a message which appears if NFC is disabled",
+    "ts": "1480505615.000183",
+    "id": "30te2701",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "And I set it’s visibility to `GONE` if the user enables NFC (and the reverse)",
+    "ts": "1480505639.000184",
+    "id": "30te2702",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "But on some devices the user can do this from the quick settings, so I can’t catch in onResume etc, so instead I have an IntentFilter which listens for NFC adapter state changes",
+    "ts": "1480505681.000185",
+    "id": "30te2703",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "But that was introduced in API 18+, and we support 16+",
+    "ts": "1480505702.000186",
+    "id": "30te2704",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "i support 14 as min sdk",
+    "ts": "1480505835.000187",
+    "id": "30te2705",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "NfcAdapter mAdapter = NfcAdapter.getDefaultAdapter(this);\n            if (mAdapter != null) {\n                if (!mAdapter.isEnabled()) {",
+    "ts": "1480505860.000188",
+    "id": "30te2706",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "this what i used",
+    "ts": "1480505864.000189",
+    "id": "30te2707",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Ok, so what if someone disables while the app is running?",
+    "ts": "1480506130.000190",
+    "id": "30te2708",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Without onPause/onDestroy/onResume being called?",
+    "ts": "1480506150.000191",
+    "id": "30te2709",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "not sure how it possible without onResume or onPause been called",
+    "ts": "1480507973.000192",
+    "id": "30te2710",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "anyway when the app resume you can still verify it",
+    "ts": "1480507986.000193",
+    "id": "30te2711",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "there is no notification based way like wifi enable or disable, bluetooth enable/disable",
+    "ts": "1480508107.000194",
+    "id": "30te2712",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "<@U0XCFE6AH> via quick settings you can disable/enable nfc",
+    "ts": "1480513427.000195",
+    "id": "30te2713",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "The app is still running",
+    "ts": "1480513435.000196",
+    "id": "30te2714",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "but when you drop down quick setting on pause get called in the app",
+    "ts": "1480513632.000197",
+    "id": "30te2715",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "please log and check the lifecycle",
+    "ts": "1480513642.000198",
+    "id": "30te2716",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Hmm",
+    "ts": "1480513665.000199",
+    "id": "30te2717",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Sec",
+    "ts": "1480513665.000200",
+    "id": "30te2718",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Nope",
+    "ts": "1480513751.000201",
+    "id": "30te2719",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "onPause doesn’t happen here",
+    "ts": "1480513759.000202",
+    "id": "30te2720",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "onWindowFocusChanged",
+    "ts": "1480514049.000203",
+    "id": "30te2721",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "check this one then",
+    "ts": "1480514052.000204",
+    "id": "30te2722",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "In a fragment ;/",
+    "ts": "1480514275.000205",
+    "id": "30te2723",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": ":confused:",
+    "ts": "1480514276.000206",
+    "id": "30te2724",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "isnt fragment loaded on some activity.",
+    "edited": {
+      "user": "U0XCFE6AH",
+      "ts": "1480514677.000000"
+    },
+    "ts": "1480514663.000207",
+    "id": "30te2725",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "you can always send the response from activity to fragment.",
+    "ts": "1480514690.000209",
+    "id": "30te2726",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "I guess yeah",
+    "ts": "1480514697.000210",
+    "id": "30te2727",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "I’ll have a think",
+    "ts": "1480514705.000211",
+    "id": "30te2728",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "I might just change the message to “NFC may be disabled...” instead of “NFC is disabled…” and leave it there :stuck_out_tongue:",
+    "ts": "1480514735.000212",
+    "id": "30te2729",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Works on API18+ at the moment, don’t really want to spend more time on edge cases when there’s bigger problems :confused:",
+    "ts": "1480514766.000213",
+    "id": "30te2730",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "there are some easy way to do it but its not performance efficient",
+    "ts": "1480514767.000214",
+    "id": "30te2731",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "and i would not advice those unless there is no better way",
+    "ts": "1480514779.000215",
+    "id": "30te2732",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Yeah I’d rather not start having the Activity know about the fragment which is currently active in order to pass things to it",
+    "ts": "1480514814.000216",
+    "id": "30te2733",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "I can get around that with Rx and creating some sort of event bus",
+    "ts": "1480514831.000217",
+    "id": "30te2734",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "But still",
+    "ts": "1480514832.000218",
+    "id": "30te2735",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "yup",
+    "ts": "1480514838.000219",
+    "id": "30te2736",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "I’ll have a think and come back to it",
+    "ts": "1480514887.000220",
+    "id": "30te2737",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Thanks :slightly_smiling_face:",
+    "ts": "1480514890.000221",
+    "id": "30te2738",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "also part of reason you dont have onpause called on fragment",
+    "ts": "1480514922.000222",
+    "id": "30te2739",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "may be it calling activity onpause",
+    "ts": "1480514931.000223",
+    "id": "30te2740",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "That should filter to Fragment though?",
+    "ts": "1480514939.000224",
+    "id": "30te2741",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "yes",
+    "ts": "1480514957.000225",
+    "id": "30te2742",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "i have similar thing done as i have massive use of NFC in my app",
+    "ts": "1480514981.000226",
+    "id": "30te2743",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Hmm",
+    "ts": "1480514994.000227",
+    "id": "30te2744",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "and i have achieved it so you will too",
+    "ts": "1480514998.000228",
+    "id": "30te2745",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "I don’t think that the status bar expanding interacts with the app’s lifecycle though",
+    "ts": "1480515015.000229",
+    "id": "30te2746",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "1 sec while I look this up",
+    "ts": "1480515023.000230",
+    "id": "30te2747",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "well the app i have needs to be in the foreground all the time and notification can be hinder if the app by mistake lost focus to other app",
+    "ts": "1480515079.000231",
+    "id": "30te2748",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "as overlay notification like facebook etc can easily clicked",
+    "ts": "1480515097.000232",
+    "id": "30te2749",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "the app i have work all the time while user have mobile in his pocket",
+    "ts": "1480515112.000233",
+    "id": "30te2750",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Yeah looks like only get a notification in `onWindowFocusChanged`",
+    "ts": "1480515113.000234",
+    "id": "30te2751",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "right",
+    "ts": "1480515121.000235",
+    "id": "30te2752",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Which would account for facebook messenger too etc",
+    "ts": "1480515137.000236",
+    "id": "30te2753",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "i have written code to even forcely close that notification",
+    "ts": "1480515149.000237",
+    "id": "30te2754",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Yeah gonna come back to it later and just write an event bus",
+    "ts": "1480515253.000238",
+    "id": "30te2755",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Keep it simple haha",
+    "ts": "1480515258.000239",
+    "id": "30te2756",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Suppose it makes it a bit harder to test, but that’s fine",
+    "ts": "1480515272.000240",
+    "id": "30te2757",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "<@U054A24ET|squeeish> has left the channel",
+    "subtype": "channel_leave",
+    "ts": "1480526953.000241",
+    "id": "30te2758",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U224YEN12",
+    "text": "how to test for Service?",
+    "ts": "1480528777.000242",
+    "id": "30te2759",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

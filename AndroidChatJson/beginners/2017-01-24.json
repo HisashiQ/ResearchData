@@ -1,0 +1,450 @@
+[
+  {
+    "user": "U3VJ6256W",
+    "text": "<@U3VJ6256W|149442> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1485253800.002201",
+    "id": "24be13393",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3KCNQA9K",
+    "text": "hey guys, kinda of weird question: what happens if i finish activity without getSupportFragmentManager().popBackStackImmediate() ? imagine a scenario where the user presses onBackPressed, the sdk does that popBackStackImmediate and then calls finish, what happens if I just call finish instead?",
+    "ts": "1485260224.002202",
+    "id": "24be13394",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "Activity just finishes.",
+    "ts": "1485260446.002203",
+    "id": "24be13395",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3KCNQA9K",
+    "text": "but is it wrong? will it get on \"bad\" state or something? sry for english",
+    "ts": "1485260532.002204",
+    "id": "24be13396",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "It’s okay, I think all fragments just will be destroyed.",
+    "edited": {
+      "user": "U2M0WUZ7A",
+      "ts": "1485260567.000000"
+    },
+    "ts": "1485260561.002205",
+    "id": "24be13397",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3KCNQA9K",
+    "text": "im asking this because im getting a store report that looks like this:\njava.lang.IllegalStateException: Can not perform this action after onSaveInstanceState\n\tat android.support.v4.app.FragmentManagerImpl.checkStateLoss(FragmentManager.java:1527)\n\tat android.support.v4.app.FragmentManagerImpl.popBackStackImmediate(FragmentManager.java:599)\n\tat android.support.v4.app.FragmentActivity.onBackPressed(FragmentActivity.java:178)\n\tat com.packagename.activity.base.CustomBaseActivity.onKeyDown(CustomBaseActivity.java:106)",
+    "edited": {
+      "user": "U3KCNQA9K",
+      "ts": "1485260840.000000"
+    },
+    "ts": "1485260701.002207",
+    "id": "24be13398",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "it’s an attempt to pop backstack after finishing",
+    "ts": "1485260736.002208",
+    "id": "24be13399",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3KCNQA9K",
+    "text": "which doesnt make much sense, if the user pressed on back, why is android calling these methods",
+    "ts": "1485260745.002209",
+    "id": "24be13400",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3KCNQA9K",
+    "text": "yeah, so I thought i would make a boolean field to check if the instance state is saved and if so, i call just call finish instead of super.onBackPressed",
+    "ts": "1485260814.002210",
+    "id": "24be13401",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3KCNQA9K",
+    "text": "would this be an ok solution?",
+    "ts": "1485260823.002211",
+    "id": "24be13402",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3KCNQA9K",
+    "text": "or maybe not call anything at all, since it seems like the activity is already \"finishing\"",
+    "ts": "1485260968.002213",
+    "id": "24be13403",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "try `isFinishing()`",
+    "ts": "1485261933.002214",
+    "id": "24be13404",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3KCNQA9K",
+    "text": "i check that actually, it seems its only set in onStop, and onSaveInstanceState is called right before that, so not sure if that would be enough.. but maybe it is",
+    "ts": "1485262092.002215",
+    "id": "24be13405",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3KCNQA9K",
+    "text": "nvm that, its only set in finish() method",
+    "ts": "1485262189.002216",
+    "id": "24be13406",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3KCNQA9K",
+    "text": "not on onStop() so im not sure.. either way if I check directly if the instance state is saved, should be good.. just not sure what to do in case the instance was saved.. but I guess not doing anything should be fine..",
+    "ts": "1485262262.002217",
+    "id": "24be13407",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3V4RP0KB",
+    "text": "<@U3V4RP0KB|ccook14> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1485279893.002218",
+    "id": "24be13408",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3VP1HNF5",
+    "text": "<@U3VP1HNF5|suellenac> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1485280963.002219",
+    "id": "24be13409",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3VT91ZNE",
+    "text": "<@U3VT91ZNE|nwithan8> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1485288247.002220",
+    "id": "24be13410",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3VSDM01Z",
+    "text": "<@U3VSDM01Z|impwalker> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1485292411.002221",
+    "id": "24be13411",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3V7R690Q",
+    "text": "<@U3V7R690Q|stackingcoder> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1485292805.002222",
+    "id": "24be13412",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "one more crossposter :disappointed:",
+    "ts": "1485293167.002227",
+    "id": "24be13413",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3V7R690Q",
+    "text": "sorry",
+    "ts": "1485293199.002228",
+    "id": "24be13414",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3VUA2FCK",
+    "text": "<@U3VUA2FCK|jereld> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1485300229.002233",
+    "id": "24be13415",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3WP09V8E",
+    "text": "<@U3WP09V8E|nits007ak> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1485314548.002234",
+    "id": "24be13416",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

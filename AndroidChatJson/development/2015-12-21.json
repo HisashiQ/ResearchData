@@ -1,0 +1,2277 @@
+[
+  {
+    "user": "U08KKN48P",
+    "text": "hi guys. i am using rxjava to handle retrofit callbacks. now i faced a problem. i am getting two callbacks and i want to handle this to callbacks synchron… e.g. first i get a `resetScreen` callback with the initial values and after a certain time i get an `updateScreen`. my problem is that the updateScreen is handled faster than the resetScreen. i want something like a queue where i put both observables and they should be executed synchron according to fifo. is there any way of doing this in rxjava?",
+    "ts": "1450693041.002945",
+    "id": "21de18525",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054C9PUK",
+    "text": "Are you looking for something like `merge`? <http://reactivex.io/documentation/operators/merge.html#collapseRxJava>",
+    "ts": "1450695843.002946",
+    "id": "21de18526",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KKN48P",
+    "text": "hi <@U054C9PUK>. no sorry this is not what i am looking for. i really don´t know when this callbacks happen. so i think i need something like an ObservableQueue where i can add all my observables and there were be executed first in first out. is there already a function or class for this available?",
+    "ts": "1450696089.002947",
+    "id": "21de18527",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054C9PUK",
+    "text": "merge would take 2 streams and put them through the same subscriber in the order they’re received",
+    "ts": "1450696139.002948",
+    "id": "21de18528",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055JANKU",
+    "text": "It takes two streams and puts the _results_ to the subscriber in the order they’re emitted in.",
+    "ts": "1450696218.002949",
+    "id": "21de18529",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055JANKU",
+    "text": "<@U08KKN48P> You can’t just filter the results from `updateScreen` till `resetScreen` has been executed at least once?",
+    "edited": {
+      "user": "U055JANKU",
+      "ts": "1450696305.000000"
+    },
+    "ts": "1450696278.002950",
+    "id": "21de18530",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055JANKU",
+    "text": "Then you could just do `concat` though I guess. If the `resetScreen` observable ends before `updateScreen` results are needed.",
+    "ts": "1450696396.002952",
+    "id": "21de18531",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "<@U08KKN48P> Maybe you just need flatMap() ? <http://joluet.github.io/blog/2014/07/07/rxjava-retrofit/>",
+    "attachments": [
+      {
+        "text": "Neatly Composing REST Calls Using Retrofit and RxJava This article shows how to use Retrofit together with RxJava and emphasizes the possiblity to …",
+        "fallback": "Neatly Composing REST Calls Using Retrofit and RxJava This article shows how to use Retrofit together with RxJava and emphasizes the possiblity to …",
+        "from_url": "http://joluet.github.io/blog/2014/07/07/rxjava-retrofit/",
+        "id": 1
+      }
+    ],
+    "ts": "1450696546.002953",
+    "id": "21de18532",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "or `amb()` ?",
+    "ts": "1450696555.002955",
+    "id": "21de18533",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KKN48P",
+    "text": "the problem is that i get the `resetScreen` callback and directly subsribe to the observable, because i don´t know when `updateScreen` happens.  so i am subscribing two times with `compositesubscription.add()`. but with this approach there is the posibility that the updateScreen observable´s onNext is called before the resetScreen and that should not happen",
+    "ts": "1450701714.002956",
+    "id": "21de18534",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8059NC",
+    "text": "hi can i make android slider image on navigation drawer, does it isn't make crash when slide image slider in navigation drawer on a same time?",
+    "ts": "1450706344.002957",
+    "id": "21de18535",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055JANKU",
+    "text": "<@U08KKN48P>: but you do need resetScreen first?",
+    "ts": "1450707542.002958",
+    "id": "21de18536",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KKN48P",
+    "text": "yeah if i open the activity resetScreen is always called first",
+    "ts": "1450707580.002959",
+    "id": "21de18537",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "Anyone knows if it’s possible to use Debounce on AutocompleteTextView?",
+    "ts": "1450712944.002960",
+    "id": "21de18538",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055JANKU",
+    "text": "<@U08KKN48P> post your code on so and post link to the question here? Or pastebin whatever.",
+    "edited": {
+      "user": "U055JANKU",
+      "ts": "1450715398.000000"
+    },
+    "ts": "1450715389.002961",
+    "id": "21de18539",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0EG5RUBY",
+    "text": "This might be a really stupid question, but I'm super confused. Is there a standard way of saving the state of a fragment _and its views_ to an arbitrary bundle and then restore it from said bundle in another instance of this fragment? The activity I want to save (with a viewpager with fragments) is sometimes created from another activity - so can't rely on the normal lifecycle things.",
+    "ts": "1450718270.002963",
+    "id": "21de18540",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0EG5RUBY",
+    "text": "Or is the only way to emulate lifecycle and manually go through the view hierarchy, saving every view's state?",
+    "ts": "1450718351.002964",
+    "id": "21de18541",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8059NC",
+    "text": "so the meaning is no way if me use standart navigation drawer...",
+    "ts": "1450718465.002965",
+    "id": "21de18542",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<@U0EG5RUBY>: does the user really expect to see their previous state when launching some other activity?",
+    "ts": "1450718534.002966",
+    "id": "21de18543",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "if so it doesnt sound much like a life cycle state and instead you need state of the user which should be handle dynamically",
+    "ts": "1450718561.002967",
+    "id": "21de18544",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0EG5RUBY",
+    "text": "Yeah, I believe that the user does as it's basically a ToC-like thing",
+    "ts": "1450718589.002968",
+    "id": "21de18545",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0EG5RUBY",
+    "text": "It lists many kinds of user-generated content in a book (which is the core activity) so if they browse their content they'd probably want to not skim through all of it in the ToC activity if they've just been there; at least that's the assumption we're operating under",
+    "ts": "1450718790.002969",
+    "id": "21de18546",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0EG5RUBY",
+    "text": "I know that goes against the standard behavior so just wanted to know if there's a trick to do it more or less effortlessly",
+    "ts": "1450718950.002970",
+    "id": "21de18547",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "well the answer to your question is essentially yes, you can inject data",
+    "ts": "1450719105.002971",
+    "id": "21de18548",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "you would likely want to have a keyed bundle so that when the activity starts you can just grab your shared bundle and add it to the state",
+    "ts": "1450719140.002972",
+    "id": "21de18549",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "sub fragments do something like this",
+    "ts": "1450719168.002973",
+    "id": "21de18550",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0H4N3A22",
+    "subtype": "channel_join",
+    "text": "<@U0H4N3A22|2ku0cf> has joined the channel",
+    "ts": "1450723784.002974",
+    "id": "21de18551",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8059NC",
+    "text": "oot guys,\nanyone can tell me, how to get simple way to make my mac window always on top? i have been tried afloat but no effect, window float menu not available,\n\n~ el capitan",
+    "ts": "1450746750.002975",
+    "id": "21de18552",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "I tried importing a project in Android Studio 2.0 Preview 4 but am getting several errors that I haven’t seen before\n\n<https://gist.github.com/lawloretienne/0bcec9da091331591ec5>",
+    "ts": "1450764276.002976",
+    "id": "21de18553",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "it looks like a couple of the dependencies in my project could not be recognized",
+    "ts": "1450764313.002977",
+    "id": "21de18554",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "What causes this?  I have run this project on another machine and didnt have an issue.",
+    "ts": "1450764427.002978",
+    "id": "21de18555",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "i tried cleaning the project and also tried cloning the project again",
+    "ts": "1450764469.002979",
+    "id": "21de18556",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "but no luck",
+    "ts": "1450764472.002980",
+    "id": "21de18557",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "Do you have shop-savy-android as a dependency in your gradle file?",
+    "ts": "1450764486.002981",
+    "id": "21de18558",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "sorry shopsavy-android",
+    "ts": "1450764497.002982",
+    "id": "21de18559",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "there is a module named ShopSavvy",
+    "ts": "1450764527.002983",
+    "id": "21de18560",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "and my `settings.gradle`",
+    "edited": {
+      "user": "U0A1BE7KQ",
+      "ts": "1450764583.000000"
+    },
+    "ts": "1450764550.002984",
+    "id": "21de18561",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "has the line \n`include ':ShopSavvy'`",
+    "ts": "1450764566.002985",
+    "id": "21de18562",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "check to see if there is an error in the ShopSavvy module.",
+    "ts": "1450764609.002987",
+    "id": "21de18563",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "like a simple syntax error",
+    "ts": "1450764622.002988",
+    "id": "21de18564",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "yep nothing stands out",
+    "ts": "1450764639.002989",
+    "id": "21de18565",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "I'm assuming of course you've imported the ShopSavvy module into your project",
+    "ts": "1450764641.002990",
+    "id": "21de18566",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "and in Android Studio",
+    "ts": "1450764645.002991",
+    "id": "21de18567",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "if there was an issue",
+    "ts": "1450764650.002992",
+    "id": "21de18568",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "it marks the package",
+    "ts": "1450764656.002993",
+    "id": "21de18569",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "with some red symbol",
+    "ts": "1450764661.002994",
+    "id": "21de18570",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "on the problematic package",
+    "ts": "1450764667.002995",
+    "id": "21de18571",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "and i dont see that",
+    "ts": "1450764670.002996",
+    "id": "21de18572",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "i think it might be a red asterisk",
+    "ts": "1450764682.002997",
+    "id": "21de18573",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "that would show if there was a problem",
+    "ts": "1450764694.002998",
+    "id": "21de18574",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "sometimes, but not all the time. I find that the linter can sometimes be shallow when scanning files",
+    "ts": "1450764706.002999",
+    "id": "21de18575",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "but that's just from my personal experience",
+    "ts": "1450764717.003000",
+    "id": "21de18576",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "so that is the only module in my project",
+    "ts": "1450764720.003001",
+    "id": "21de18577",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "wait ok so....",
+    "ts": "1450764755.003002",
+    "id": "21de18578",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "open the gradle file for the Shopsavvy module",
+    "ts": "1450764768.003003",
+    "id": "21de18579",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "check to see if the dependencies are correct",
+    "ts": "1450764776.003004",
+    "id": "21de18580",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "realm, recyclerview, mopub, and volley isn't resolving it seems",
+    "ts": "1450764799.003005",
+    "id": "21de18581",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "within the ShopSavvy projet",
+    "ts": "1450764811.003006",
+    "id": "21de18582",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "so im looking at the build.gradle file",
+    "ts": "1450764812.003007",
+    "id": "21de18583",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "and if there was an issue with a dependency",
+    "ts": "1450764822.003008",
+    "id": "21de18584",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "...",
+    "ts": "1450764892.003009",
+    "id": "21de18585",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "okay so maybe i need to try downgrading some of these dependencies",
+    "ts": "1450764903.003010",
+    "id": "21de18586",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "not sure why they are suddenly broken",
+    "ts": "1450764912.003011",
+    "id": "21de18587",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "try upgrading them instead",
+    "ts": "1450764935.003012",
+    "id": "21de18588",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "one sec",
+    "ts": "1450764938.003013",
+    "id": "21de18589",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "realm is at 0.87.0",
+    "ts": "1450764948.003014",
+    "id": "21de18590",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "recyclerview animators is at 2.1",
+    "ts": "1450764969.003015",
+    "id": "21de18591",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "Mopub is at 4.2",
+    "ts": "1450764990.003016",
+    "id": "21de18592",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "they are already broken so you might as well bring them to the latest version",
+    "ts": "1450765012.003017",
+    "id": "21de18593",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "I hope that helps.",
+    "ts": "1450765016.003018",
+    "id": "21de18594",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "so i updated the realm dependency to ...",
+    "ts": "1450765033.003019",
+    "id": "21de18595",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "`compile 'io.realm:realm-android:0.87.0'`",
+    "ts": "1450765052.003020",
+    "id": "21de18596",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "did you write the module by any chance?",
+    "ts": "1450765057.003021",
+    "id": "21de18597",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "but it still gives me that error",
+    "ts": "1450765062.003022",
+    "id": "21de18598",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "yes its not an external module",
+    "ts": "1450765075.003023",
+    "id": "21de18599",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "ok, one sec",
+    "ts": "1450765112.003024",
+    "id": "21de18600",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "check your buildscript declaration in build.gradle",
+    "ts": "1450765214.003025",
+    "id": "21de18601",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "under repos",
+    "ts": "1450765219.003026",
+    "id": "21de18602",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "do you have jcenter?",
+    "ts": "1450765224.003027",
+    "id": "21de18603",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "it's written like",
+    "ts": "1450765240.003028",
+    "id": "21de18604",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "buildscript{",
+    "ts": "1450765243.003029",
+    "id": "21de18605",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "repositories {",
+    "ts": "1450765253.003030",
+    "id": "21de18606",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "jcenter",
+    "ts": "1450765255.003031",
+    "id": "21de18607",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "jcenter()",
+    "ts": "1450765258.003032",
+    "id": "21de18608",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "mavenCentral",
+    "ts": "1450765263.003033",
+    "id": "21de18609",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "do i need to update to jCenter ?",
+    "ts": "1450765275.003034",
+    "id": "21de18610",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "no",
+    "ts": "1450765282.003035",
+    "id": "21de18611",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "just right under mavenCenter(), write jcenter()",
+    "ts": "1450765294.003036",
+    "id": "21de18612",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "carriage return, jcenter()",
+    "ts": "1450765317.003037",
+    "id": "21de18613",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "basically",
+    "ts": "1450765318.003038",
+    "id": "21de18614",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "I think :stuck_out_tongue:",
+    "ts": "1450765329.003039",
+    "id": "21de18615",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "wow i think that might have done the trick",
+    "ts": "1450765416.003040",
+    "id": "21de18616",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "so is jcenter a superset of mavenCentral ?",
+    "ts": "1450765434.003041",
+    "id": "21de18617",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "no, jcenter is just separate from maven",
+    "ts": "1450765453.003042",
+    "id": "21de18618",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "you basically pulling from two sources now",
+    "ts": "1450765465.003043",
+    "id": "21de18619",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "instead of the one",
+    "ts": "1450765467.003044",
+    "id": "21de18620",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "i replaced mavenCentral with jcenter",
+    "ts": "1450765486.003045",
+    "id": "21de18621",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "hehe, no you don't have to",
+    "ts": "1450765498.003046",
+    "id": "21de18622",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "in this old project i have",
+    "ts": "1450765512.003047",
+    "id": "21de18623",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "i wrote this",
+    "ts": "1450765513.003048",
+    "id": "21de18624",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "buildscript {\n    repositories {\n        jcenter()\n        mavenCentral()\n    }\n    dependencies {\n        classpath 'com.android.tools.build:gradle:1.2.3'\n\n        // NOTE: Do not place your application dependencies here; they belong\n        // in the individual module build.gradle files\n    }\n}buildscript {\n    repositories {\n        jcenter()\n        mavenCentral()\n    }\n    dependencies {\n        classpath 'com.android.tools.build:gradle:1.2.3'\n\n        // NOTE: Do not place your application dependencies here; they belong\n        // in the individual module build.gradle files\n    }\n}",
+    "ts": "1450765515.003049",
+    "id": "21de18625",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "pasted it twice sorry",
+    "ts": "1450765524.003050",
+    "id": "21de18626",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "you can put both. it works",
+    "ts": "1450765533.003051",
+    "id": "21de18627",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "looks like i need both",
+    "ts": "1450765536.003052",
+    "id": "21de18628",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "not just jcenter",
+    "ts": "1450765545.003053",
+    "id": "21de18629",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "yea, i share the same opinion. it works and you never have to think about it against",
+    "ts": "1450765563.003054",
+    "id": "21de18630",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "*again",
+    "ts": "1450765567.003055",
+    "id": "21de18631",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "and I don't think you take some sort of performance hit",
+    "ts": "1450765576.003056",
+    "id": "21de18632",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "at least I hope not.",
+    "ts": "1450765581.003057",
+    "id": "21de18633",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "you don't. trust me. :stuck_out_tongue:",
+    "ts": "1450765619.003058",
+    "id": "21de18634",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "thanks for your help.",
+    "ts": "1450765660.003059",
+    "id": "21de18635",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "im curious",
+    "ts": "1450765663.003060",
+    "id": "21de18636",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "what do you think triggered this issue",
+    "edited": {
+      "user": "U0A1BE7KQ",
+      "ts": "1450765670.000000"
+    },
+    "ts": "1450765668.003061",
+    "id": "21de18637",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "since it was working for so long",
+    "ts": "1450765677.003063",
+    "id": "21de18638",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "with jcenter",
+    "ts": "1450765687.003064",
+    "id": "21de18639",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "one of two things. Either the place you moved the project from had both repos and it was a mistake of forgetfulness to readd it",
+    "ts": "1450765719.003065",
+    "id": "21de18640",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "or whomever was hosting the library at mavenCentral pulled it",
+    "ts": "1450765748.003066",
+    "id": "21de18641",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "but that's just my best guess.",
+    "ts": "1450765753.003067",
+    "id": "21de18642",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "with no basis in facts whatsoever.",
+    "ts": "1450765762.003068",
+    "id": "21de18643",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "gotcha",
+    "ts": "1450765767.003069",
+    "id": "21de18644",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "thanks again",
+    "ts": "1450765773.003070",
+    "id": "21de18645",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "np",
+    "ts": "1450765775.003071",
+    "id": "21de18646",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "this wouldve taken me forever to track down",
+    "ts": "1450765780.003072",
+    "id": "21de18647",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "yea, problems with simple solutions have that track record.",
+    "ts": "1450765805.003073",
+    "id": "21de18648",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DF913KL",
+    "text": "your stacktrace was very reliable that time so it helped a lot",
+    "ts": "1450765854.003074",
+    "id": "21de18649",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

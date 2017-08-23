@@ -1,0 +1,228 @@
+[
+  {
+    "user": "U1S1VBQ1M",
+    "text": "<@U1S1VBQ1M|datle> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1468569431.000488",
+    "id": "15ko2061",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1RVDHB35",
+    "text": "<@U1RVDHB35|namvo> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1468571246.000489",
+    "id": "15ko2062",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Any knows how I can change this so it will accept lambdas?",
+    "ts": "1468575086.000490",
+    "id": "15ko2063",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "```\n    protected inner class RxSubscription&lt;T&gt; {\n        fun add(observable: Observable&lt;T&gt;, subscriber: Subscriber&lt;T&gt;): RxSubscription&lt;T&gt; {\n            this@MVPRxPresenter.compositeSubscription?.add(observable.subscribe(subscriber))\n            return this\n        }\n    }\n```",
+    "ts": "1468575093.000491",
+    "id": "15ko2064",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Context I keep subscriptions here that I don’t care about that get destroyed when the Presenter is lost. Otherwise I use something like a Data repo",
+    "ts": "1468575157.000492",
+    "id": "15ko2065",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U0K1ALDQE>: you want to easily add multiple subscriptions to one compositesubscription basically?",
+    "ts": "1468602848.000493",
+    "id": "15ko2066",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "what I did (mainly to reduce boilerplate for handling observing on the UI thread) was wrote a DSL that basically worked like:\n```\nbind {\n  observable.stream().orSomething()\n} subscribe &lt;subscriber or something that returns a subscriber&gt;\n```",
+    "edited": {
+      "user": "U053LEHJN",
+      "ts": "1468602959.000000"
+    },
+    "ts": "1468602914.000494",
+    "id": "15ko2067",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Yeah, that's what is like to do. ",
+    "ts": "1468602964.000497",
+    "id": "15ko2068",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Hmm. I'll need to check that out. Not familiar with bind ",
+    "ts": "1468602995.000498",
+    "id": "15ko2069",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U0K1ALDQE>: it's something I wrote for that project, it's not in a library or anything",
+    "ts": "1468603013.000499",
+    "id": "15ko2070",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "basically just `&lt;T&gt; fun bind(fn: () -&gt; Observable&lt;T&gt;): Observable&lt;T&gt;`, heh",
+    "ts": "1468603063.000500",
+    "id": "15ko2071",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "though now in that case I'd just write an extension and use `compose`",
+    "edited": {
+      "user": "U053LEHJN",
+      "ts": "1468603078.000000"
+    },
+    "ts": "1468603074.000501",
+    "id": "15ko2072",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

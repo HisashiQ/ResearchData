@@ -1,0 +1,1816 @@
+[
+  {
+    "user": "U0A2E940J",
+    "subtype": "channel_join",
+    "text": "<@U0A2E940J|debora> has joined the channel",
+    "ts": "1455796601.000041",
+    "id": "18be2704",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0MUJ1S13",
+    "subtype": "channel_join",
+    "text": "<@U0MUJ1S13|jordiie09> has joined the channel",
+    "ts": "1455801459.000042",
+    "id": "18be2705",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0MUS1A00",
+    "subtype": "channel_join",
+    "text": "<@U0MUS1A00|4brunu> has joined the channel",
+    "ts": "1455803209.000043",
+    "id": "18be2706",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "Hello folks! Got a question to ask. I am facing an issue where my data expected is not presented on listview until it is scrolled. I already did `notifyDataSetChanged()` in the `runOnUiThread method`. Any idea ?",
+    "edited": {
+      "user": "U0LETFK18",
+      "ts": "1455805496.000000"
+    },
+    "ts": "1455805489.000044",
+    "id": "18be2707",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "If it helps below is my code:\n```        JSONArray responseArray = new JSONArray(jsonResponse);\n\n        for (int i = 0; i &lt; 30; i++) {\n\n            String articleId = responseArray.getString(i);\n            Articles article = populateHackerArticles(articleId);\n            mArticlesArrayList.add(article);\n\n            Log.i(\"mArticlesArrayList\", article.getTitle() + \" \" + article.getURL());\n        }\n\n        runOnUiThread(new Runnable() {\n            @Override\n            public void run() {\n                Log.i(\"runOnUiThread\", \"notifyDataSetChanged\");\n                articlesArrayAdapter.notifyDataSetChanged();\n            }\n        });```",
+    "ts": "1455805524.000046",
+    "id": "18be2708",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "subtype": "channel_join",
+    "text": "<@U055GGAHS|ian.shaun.thomas> has joined the channel",
+    "ts": "1455806368.000047",
+    "id": "18be2709",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "and when do you call this methods that populates data?",
+    "ts": "1455807387.000048",
+    "id": "18be2710",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "why are you using runOnUiThread?",
+    "ts": "1455808452.000049",
+    "id": "18be2711",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "I think because of <http://stackoverflow.com/questions/8665676/how-to-use-notifydatasetchanged-in-thread>",
+    "attachments": [
+      {
+        "title": "How to use notifyDataSetChanged() in thread",
+        "title_link": "http://stackoverflow.com/questions/8665676/how-to-use-notifydatasetchanged-in-thread",
+        "text": "I create a thread to update my data and try to do notifyDataSetChanged at my ListView. private class ReceiverThread extends Thread { @Override public void run() { //up-to-date",
+        "fallback": "How to use notifyDataSetChanged() in thread",
+        "thumb_url": "http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/questions/8665676/how-to-use-notifydatasetchanged-in-thread",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "id": 1
+      }
+    ],
+    "ts": "1455808541.000050",
+    "id": "18be2712",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0MV63YE7",
+    "subtype": "channel_join",
+    "text": "<@U0MV63YE7|nickabeast> has joined the channel",
+    "ts": "1455808714.000052",
+    "id": "18be2713",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "<@U0C1FB3PF>: Basically, I need to get a set of ids of articles, so that is the first call. Getting that, I store it in an Arraylist. I loop through the arraylist and make the the second call which is the code above.",
+    "ts": "1455808746.000053",
+    "id": "18be2714",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "<@U060Q7J2Y>: I am running in asynchronously in background. I am using OkHttp enqueue",
+    "ts": "1455808777.000054",
+    "id": "18be2715",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "When do you trigger this code to fetch ids and articles?",
+    "edited": {
+      "user": "U0C1FB3PF",
+      "ts": "1455808820.000000"
+    },
+    "ts": "1455808809.000055",
+    "id": "18be2716",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "on activity create?",
+    "ts": "1455808827.000057",
+    "id": "18be2717",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "refresh",
+    "ts": "1455808831.000058",
+    "id": "18be2718",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "<@U0C1FB3PF>: Here’s my code to fetch ids",
+    "ts": "1455808841.000059",
+    "id": "18be2719",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "```    private void retrieveHackerNewsId() {\n\n        if (isNetworkAvailable()) {\n\n            OkHttpClient okHttpClient = new OkHttpClient();\n\n            Request request = new Request.Builder()\n                    .url(\"<https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty>\")\n                    .build();\n\n            Call call = okHttpClient.newCall(request);\n            call.enqueue(new Callback() {\n                @Override\n                public void onFailure(Call call, IOException e) {\n                    Log.i(\"onFailure\", e.getLocalizedMessage());\n                }\n\n                @Override\n                public void onResponse(Call call, Response response) throws IOException {\n\n                    try {\n                        if (response.isSuccessful()) {\n\n                            String articlesIds = response.body().string();\n                            retrieveHackerArticles(articlesIds);\n\n                        } else {\n\n                            alertUserAboutError();\n                        }\n                    } catch (IOException e) {\n\n                        e.printStackTrace();\n\n                    } catch (JSONException e) {\n\n                        e.printStackTrace();\n                    }\n\n                }\n            });\n        } else {\n\n            alertUserRegardingNetworkError();\n\n        }\n    }```",
+    "ts": "1455808843.000060",
+    "id": "18be2720",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "i fetch the ids onCreate",
+    "ts": "1455808859.000061",
+    "id": "18be2721",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "Are you sure that it is not just delay while your articles are loaded?",
+    "edited": {
+      "user": "U0C1FB3PF",
+      "ts": "1455808936.000000"
+    },
+    "ts": "1455808930.000062",
+    "id": "18be2722",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "Do you have any complicated code to show/inflation list/recycler view in case of no values?",
+    "edited": {
+      "user": "U0C1FB3PF",
+      "ts": "1455808972.000000"
+    },
+    "ts": "1455808957.000064",
+    "id": "18be2723",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "no i don’t think so",
+    "ts": "1455809139.000066",
+    "id": "18be2724",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "The thing is, some of the articles titles are already loaded at the bottom of screen (off the screen, say, if 10 articles fit the screen, 11-20 is loaded, because when scroll up they show straight away, and then when scroll down, the articles NOW appears)",
+    "ts": "1455809201.000067",
+    "id": "18be2725",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "This is my second code to return the custom Articles object. This method converts JSON object to custom object Article, and return it. Code as below:\n```    private Articles populateHackerArticles(String articleId) {\n\n        final Articles article = new Articles();\n\n        if (isNetworkAvailable()) {\n\n            OkHttpClient client = new OkHttpClient();\n\n            Request request = new Request.Builder()\n                                         .url(\"<https://hacker-news.firebaseio.com/v0/item/>\" + articleId + \".json?print=pretty\")\n                                         .build();\n\n            Call call = client.newCall(request);\n            call.enqueue(new Callback() {\n                @Override\n                public void onFailure(Call call, IOException e) {\n\n                }\n\n                @Override\n                public void onResponse(Call call, Response response) throws IOException {\n\n                    if (response.isSuccessful()) {\n                        try {\n\n                            JSONObject articleResponse = new JSONObject(response.body().string());\n\n                            article.setTitle(articleResponse.getString(\"title\"));\n                            article.setURL(articleResponse.getString(\"url\"));\n\n                        } catch (IOException e) {\n                            e.printStackTrace();\n                        } catch (JSONException e) {\n                            e.printStackTrace();\n                        }\n\n                    } else {\n\n                        alertUserAboutError();\n                    }\n                }\n            });\n        } else {\n            alertUserRegardingNetworkError();\n        }\n\n        return article;\n    }\n```",
+    "ts": "1455809292.000068",
+    "id": "18be2726",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "First of all i’m not sure on which thread callback from retrofit happens, but as Mike mentioned probably on UI",
+    "ts": "1455809472.000069",
+    "id": "18be2727",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "secondly it is quite clear now",
+    "ts": "1455809484.000070",
+    "id": "18be2728",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "you’re scheduling async operation to load articles, but don’t wait until  it finished",
+    "ts": "1455809522.000071",
+    "id": "18be2729",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "so you notify you adapter earlier than you get response about first article",
+    "ts": "1455809542.000072",
+    "id": "18be2730",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "so there is nothing to show on UI",
+    "ts": "1455809556.000073",
+    "id": "18be2731",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "and also why to create two okhttp clients",
+    "ts": "1455809576.000074",
+    "id": "18be2732",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "why to mix ui and server logic",
+    "ts": "1455809584.000075",
+    "id": "18be2733",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "why to deserialise json by hands when retorfit can do it for you",
+    "ts": "1455809619.000076",
+    "id": "18be2734",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "why to set url to article, does it mean that you show webview which fetch article from internet?",
+    "ts": "1455809680.000077",
+    "id": "18be2735",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "<@U0C1FB3PF>: \nMy thought process is:\n1. Get the ids of the articles -&gt; first network call \n2. Parse the ids of the articles to retrieve the articles -&gt; second network call -&gt; Store the Articles in Arraylist\n3. Notify the arrayAdapter that articles is present\n\n`why mix ui and server logic?`\nNot too sure, how would you suggest separating it? \n\n`why to deserialise json by hands when retorfit can do it for you?`\nSorry, I don’t know about retrofit. It’s in built in OkHttp? How would it deserialise the JSON?\n\n`why to set url to article, does it mean that you show webview which fetch article from internet?`\nYes, tapping on the item in ListView displays the article in a WebView\n\nSorry for the many questions",
+    "edited": {
+      "user": "U0LETFK18",
+      "ts": "1455810098.000000"
+    },
+    "ts": "1455810039.000078",
+    "id": "18be2736",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "no problem",
+    "ts": "1455810139.000081",
+    "id": "18be2737",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "another apologise that I didn’t noticed you’re not using retrofit but just plain okhttp",
+    "ts": "1455810161.000082",
+    "id": "18be2738",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "take a look to retrofit that will make your code smaller",
+    "ts": "1455810179.000083",
+    "id": "18be2739",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "but still questions about callback thread is open",
+    "ts": "1455810189.000084",
+    "id": "18be2740",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "again calls are async",
+    "ts": "1455810202.000085",
+    "id": "18be2741",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "you’re notifying adapter before you probably got even first response from getting details",
+    "ts": "1455810230.000086",
+    "id": "18be2742",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "okhttp has also sync way of calling",
+    "ts": "1455810245.000087",
+    "id": "18be2743",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "you can also take this:\nHandler handler = new Handler(Looper.getMainLooper());\n<http://handler.post|handler.post>(task);\nand use it in your okhttp callbacks",
+    "ts": "1455810351.000088",
+    "id": "18be2744",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "task is a Runnable",
+    "ts": "1455810361.000089",
+    "id": "18be2745",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "<@U0C1FB3PF>: \nWill check out about retrofit. That’s another Gradle library?\n\nIn cases like this, is it better to do in sync instead of async? My understanding is that by doing async, the main UI won’t be block, hence, user interaction can still continue, while things are still on going on the background (fetch articles)",
+    "ts": "1455810382.000090",
+    "id": "18be2746",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "<@U0830HE7P>: \nBy using Handler, how is that different in terms of functionality compared to runOnUIThread?",
+    "ts": "1455810450.000091",
+    "id": "18be2747",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "<@U0LETFK18>: in cases you can't have easy access to Context",
+    "ts": "1455810584.000092",
+    "id": "18be2748",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "<@U0830HE7P>: ahh i see. But for this particular case, would it be necessary? My thought process is when custom objects Article are added to ArrayList, notify adapter, and display in listview. Hence, runOnUI is called",
+    "ts": "1455810698.000093",
+    "id": "18be2749",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "<@U0C1FB3PF>: <@U0830HE7P> \n\nNot sure if i did is a good way, but what I did was to move the `runOnUIThread` method in the try block of my `populateHackerArticles(String articleId)`, and in the adding of Articles objects is also done in the `runOnUIThread`, before calling `arrayAdapter.notifyDataSetChanged()`. Code is below:\n\n```   private void populateHackerArticles(String articleId) {\n\n        final Articles article = new Articles();\n\n        if (isNetworkAvailable()) {\n\n            Request request = new Request.Builder()\n                                         .url(\"<https://hacker-news.firebaseio.com/v0/item/>\" + articleId + \".json?print=pretty\")\n                                         .build();\n\n            Call call = okHttpClient.newCall(request);\n            call.enqueue(new Callback() {\n                @Override\n                public void onFailure(Call call, IOException e) {\n\n                }\n\n                @Override\n                public void onResponse(Call call, Response response) throws IOException {\n\n                    if (response.isSuccessful()) {\n\n                        try {\n\n                            JSONObject articleResponse = new JSONObject(response.body().string());\n                            article.setTitle(articleResponse.getString(\"title\"));\n                            article.setURL(articleResponse.getString(\"url\"));\n\n                            runOnUiThread(new Runnable() {\n                                @Override\n                                public void run() {\n\n                                    mArticlesArrayList.add(article);\n                                    articlesArrayAdapter.notifyDataSetChanged();\n                                }\n                            });\n\n                        } catch (IOException e) {\n                            e.printStackTrace();\n                        } catch (JSONException e) {\n                            e.printStackTrace();\n                        }\n\n                    } else {\n\n                        alertUserAboutError();\n                    }\n                }\n            });\n        } else {\n            alertUserRegardingNetworkError();\n        }\n    }```",
+    "ts": "1455812783.000094",
+    "id": "18be2750",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "This solved the issue of articles not displaying before scrolling in ListView",
+    "ts": "1455812814.000095",
+    "id": "18be2751",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "I had to add the article to mArticlesArrayList to prevent crash that says ListView did not receive notification about change when adapter did.",
+    "ts": "1455812874.000096",
+    "id": "18be2752",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "Feel free to advice on what I can improve my code on. Sorry if it’s kinda noob question. :stuck_out_tongue:",
+    "ts": "1455812940.000097",
+    "id": "18be2753",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "everyone started at some point",
+    "ts": "1455814508.000098",
+    "id": "18be2754",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "you’re code is quite complex and it is just simple app with two network request",
+    "ts": "1455814536.000099",
+    "id": "18be2755",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "read more about clean code",
+    "ts": "1455814543.000100",
+    "id": "18be2756",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "one possible issue that user clicks article before you get details answer",
+    "edited": {
+      "user": "U0C1FB3PF",
+      "ts": "1455814589.000000"
+    },
+    "ts": "1455814585.000101",
+    "id": "18be2757",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N0HJY0H",
+    "subtype": "channel_join",
+    "text": "<@U0N0HJY0H|ukpa> has joined the channel",
+    "ts": "1455814604.000103",
+    "id": "18be2758",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CT7JDN3",
+    "text": "<@U0C1FB3PF>: How would you break this method into smaller method ? I too have a method very similar to this. And was about to refactor it.",
+    "ts": "1455814724.000104",
+    "id": "18be2759",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CT7JDN3",
+    "text": "I have volley request object instead of okhttp",
+    "ts": "1455814755.000105",
+    "id": "18be2760",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CT7JDN3",
+    "text": "But, yeah, almost everything else is similar. onResponse, onError, onParseNetwork. Should I do away with anonymous class ?",
+    "ts": "1455814810.000106",
+    "id": "18be2761",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "I will probably introduce several classes like article fetcher and networker",
+    "ts": "1455814819.000107",
+    "id": "18be2762",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "and will use RxJava to orchestrate calls in asyn or sync way",
+    "ts": "1455814848.000108",
+    "id": "18be2763",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "and if you don’t know Rx than just use Promises or Listeners",
+    "ts": "1455814869.000109",
+    "id": "18be2764",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "Callbacks",
+    "edited": {
+      "user": "U0C1FB3PF",
+      "ts": "1455814879.000000"
+    },
+    "ts": "1455814876.000110",
+    "id": "18be2765",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CT7JDN3",
+    "text": "Hmm",
+    "ts": "1455814876.000111",
+    "id": "18be2766",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "but don’t forget to remove them when activity dies",
+    "ts": "1455814890.000113",
+    "id": "18be2767",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CT7JDN3",
+    "text": "This weekend goal to learn RxJava. Have started reading about it.",
+    "ts": "1455814925.000114",
+    "id": "18be2768",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CT7JDN3",
+    "text": "Hmm",
+    "ts": "1455814927.000115",
+    "id": "18be2769",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "I think weekend is too little to do it",
+    "ts": "1455814989.000116",
+    "id": "18be2770",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "but you should start for sure",
+    "ts": "1455815013.000117",
+    "id": "18be2771",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "<@U0C1FB3PF>: Thanks! Appreciate it. Any sources to point out? Like any articles on separation of codes and etc?",
+    "ts": "1455815566.000118",
+    "id": "18be2772",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "hard to say but a lot",
+    "ts": "1455815613.000119",
+    "id": "18be2773",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "read clean code book",
+    "ts": "1455815617.000120",
+    "id": "18be2774",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "watch clean code videos",
+    "ts": "1455815623.000121",
+    "id": "18be2775",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "read pragmatic developer",
+    "ts": "1455815630.000122",
+    "id": "18be2776",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "subtype": "channel_leave",
+    "text": "<@U055GGAHS|ian.shaun.thomas> has left the channel",
+    "ts": "1455815635.000123",
+    "id": "18be2777",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "people are leaving",
+    "ts": "1455815649.000124",
+    "id": "18be2778",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "let s move to direct messages",
+    "ts": "1455815655.000125",
+    "id": "18be2779",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N12RP8D",
+    "subtype": "channel_join",
+    "text": "<@U0N12RP8D|enigma34> has joined the channel",
+    "ts": "1455820554.000126",
+    "id": "18be2780",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N1DAUAK",
+    "subtype": "channel_join",
+    "text": "<@U0N1DAUAK|gabriela> has joined the channel",
+    "ts": "1455822529.000127",
+    "id": "18be2781",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N1XA71C",
+    "subtype": "channel_join",
+    "text": "<@U0N1XA71C|wmoralesy> has joined the channel",
+    "ts": "1455827374.000128",
+    "id": "18be2782",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N2671RR",
+    "subtype": "channel_join",
+    "text": "<@U0N2671RR|matteopierro> has joined the channel",
+    "ts": "1455831074.000129",
+    "id": "18be2783",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N2DT0CC",
+    "subtype": "channel_join",
+    "text": "<@U0N2DT0CC|denseflea> has joined the channel",
+    "ts": "1455834308.000130",
+    "id": "18be2784",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N2LG8PL",
+    "subtype": "channel_join",
+    "text": "<@U0N2LG8PL|lecdmx> has joined the channel",
+    "ts": "1455834522.000131",
+    "id": "18be2785",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N2M0E5C",
+    "subtype": "channel_join",
+    "text": "<@U0N2M0E5C|igbt> has joined the channel",
+    "ts": "1455834535.000132",
+    "id": "18be2786",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N2N6GG1",
+    "subtype": "channel_join",
+    "text": "<@U0N2N6GG1|amqo> has joined the channel",
+    "ts": "1455835219.000133",
+    "id": "18be2787",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N2SLX39",
+    "subtype": "channel_join",
+    "text": "<@U0N2SLX39|rockadillo> has joined the channel",
+    "ts": "1455836712.000134",
+    "id": "18be2788",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N2XKERX",
+    "subtype": "channel_join",
+    "text": "<@U0N2XKERX|calren> has joined the channel",
+    "ts": "1455838836.000135",
+    "id": "18be2789",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N2WUXE0",
+    "subtype": "channel_join",
+    "text": "<@U0N2WUXE0|pedrojimenezp> has joined the channel",
+    "ts": "1455841065.000136",
+    "id": "18be2790",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N30QA75",
+    "subtype": "channel_join",
+    "text": "<@U0N30QA75|conorswanson> has joined the channel",
+    "ts": "1455841568.000137",
+    "id": "18be2791",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N3DGV4Y",
+    "subtype": "channel_join",
+    "text": "<@U0N3DGV4Y|thebradfo> has joined the channel",
+    "ts": "1455846321.000138",
+    "id": "18be2792",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N3D5P17",
+    "subtype": "channel_join",
+    "text": "<@U0N3D5P17|rezzo> has joined the channel",
+    "ts": "1455846476.000139",
+    "id": "18be2793",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N3HURT3",
+    "subtype": "channel_join",
+    "text": "<@U0N3HURT3|avatar1488> has joined the channel",
+    "ts": "1455849160.000140",
+    "id": "18be2794",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N3V8YDD",
+    "subtype": "channel_join",
+    "text": "<@U0N3V8YDD|nehemuel> has joined the channel",
+    "ts": "1455857152.000141",
+    "id": "18be2795",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N3VM0EQ",
+    "subtype": "channel_join",
+    "text": "<@U0N3VM0EQ|dadotres> has joined the channel",
+    "ts": "1455862604.000142",
+    "id": "18be2796",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N465KPZ",
+    "subtype": "channel_join",
+    "text": "<@U0N465KPZ|hik4ru> has joined the channel",
+    "ts": "1455866547.000143",
+    "id": "18be2797",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N465KPZ",
+    "text": "Haaai",
+    "ts": "1455866579.000144",
+    "id": "18be2798",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N4886RF",
+    "subtype": "channel_join",
+    "text": "<@U0N4886RF|savarito69> has joined the channel",
+    "ts": "1455868245.000145",
+    "id": "18be2799",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N48BM25",
+    "subtype": "channel_join",
+    "text": "<@U0N48BM25|nuxnur> has joined the channel",
+    "ts": "1455868327.000146",
+    "id": "18be2800",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

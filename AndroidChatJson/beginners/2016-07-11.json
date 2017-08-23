@@ -1,0 +1,860 @@
+[
+  {
+    "user": "U1LJG0Y03",
+    "text": "Is there a way of adding a list into a fragment, where the list is of size x and is bound by the external container's scroll instead of it's own?",
+    "ts": "1468224411.001055",
+    "id": "11be6397",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "So far we've done a recyclerview with a hasFixedHeight(true) and wrap_content, which has some issues, and a linearlayout where we dynamically add the views to it, which has other issues",
+    "ts": "1468224466.001056",
+    "id": "11be6398",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "You want to add a list to a fragment, that is the size of the fragment?",
+    "ts": "1468224551.001057",
+    "id": "11be6399",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Sorry, explained badly",
+    "ts": "1468224562.001058",
+    "id": "11be6400",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "I have a linearlayout with various child elements, one of which is a list of items",
+    "ts": "1468224600.001059",
+    "id": "11be6401",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "The list doesn't handle it's own scroll (it should wrap_content)",
+    "ts": "1468224624.001060",
+    "id": "11be6402",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "So you want the linear layout to scroll? not the list?",
+    "ts": "1468224650.001061",
+    "id": "11be6403",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Yeah",
+    "ts": "1468224655.001062",
+    "id": "11be6404",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Not happening",
+    "ts": "1468224660.001063",
+    "id": "11be6405",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "What you should do is package your other items",
+    "ts": "1468224676.001064",
+    "id": "11be6406",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "and set it as the list header",
+    "ts": "1468224683.001065",
+    "id": "11be6407",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "or footer",
+    "ts": "1468224694.001066",
+    "id": "11be6408",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Hmm",
+    "ts": "1468224713.001067",
+    "id": "11be6409",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "And what if there's multiple lists on the page?",
+    "ts": "1468224836.001068",
+    "id": "11be6410",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "I know this sounds weird but you’ll have to fit them all in the same box",
+    "ts": "1468224976.001069",
+    "id": "11be6411",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Making a heterogenous list is not a difficult thing if you know what you are doing",
+    "ts": "1468225005.001070",
+    "id": "11be6412",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<https://guides.codepath.com/android/Implementing-a-Heterogenous-ListView>",
+    "ts": "1468225040.001071",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11be6413",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<http://www.androidhive.info/2013/07/android-expandable-list-view-tutorial/>",
+    "attachments": [
+      {
+        "service_name": "androidhive",
+        "title": "Android Expandable List View Tutorial",
+        "title_link": "http://www.androidhive.info/2013/07/android-expandable-list-view-tutorial/",
+        "text": "Android tutorial about implemented expandable list view in your application.",
+        "fallback": "androidhive: Android Expandable List View Tutorial",
+        "thumb_url": "http://www.androidhive.info/wp-content/uploads/2013/07/android-expandable-list-view-tutorial.jpg",
+        "ts": 1374957162,
+        "from_url": "http://www.androidhive.info/2013/07/android-expandable-list-view-tutorial/",
+        "thumb_width": 718,
+        "thumb_height": 253,
+        "id": 1
+      }
+    ],
+    "ts": "1468225093.001072",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11be6414",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Another example",
+    "ts": "1468225097.001074",
+    "id": "11be6415",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Ah that second one seems more like what I'm after :slightly_smiling_face:",
+    "ts": "1468225153.001075",
+    "id": "11be6416",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1QFDUASV",
+    "text": "<@U1QFDUASV|tushea> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1468226738.001076",
+    "id": "11be6417",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1QFDUASV",
+    "text": "hello, anyone know how to make a dictionary application? Something similar to <http://dicionary.com|dicionary.com>",
+    "ts": "1468227015.001077",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11be6418",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Depending on your requirements",
+    "ts": "1468227250.001078",
+    "id": "11be6419",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Not so difficult",
+    "ts": "1468227256.001079",
+    "id": "11be6420",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1QFDUASV",
+    "text": "oh ok. Are there any tutorials available ?",
+    "ts": "1468227379.001080",
+    "id": "11be6421",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "<https://github.com/itkach/aard2-android>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "itkach/aard2-android",
+        "title_link": "https://github.com/itkach/aard2-android",
+        "text": "aard2-android - Aard2 for Android, a simple dictionary app",
+        "fallback": "GitHub: itkach/aard2-android",
+        "thumb_url": "https://avatars3.githubusercontent.com/u/180849?v=3&s=400",
+        "from_url": "https://github.com/itkach/aard2-android",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1468228532.001081",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11be6422",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1QFDUASV",
+    "text": "thank you. I'll take a look",
+    "ts": "1468229209.001083",
+    "id": "11be6423",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1QH06HA6",
+    "text": "<@U1QH06HA6|jagimenes> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1468239604.001084",
+    "id": "11be6424",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1L1P3M16",
+    "text": "How can I start navigation on google map using `geo:0,0?q=` URI scheme.! I am able to do it with `google.navigation:q=`!",
+    "ts": "1468241299.001085",
+    "id": "11be6425",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1QHSF30X",
+    "text": "<@U1QHSF30X|thiagosbraga> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1468246454.001086",
+    "id": "11be6426",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1QKK7VTQ",
+    "text": "<@U1QKK7VTQ|dee-m-dobrev> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1468256484.001087",
+    "id": "11be6427",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1QM93153",
+    "text": "<@U1QM93153|iryanpena> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1468264107.001088",
+    "id": "11be6428",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1QNG3L7Q",
+    "text": "<@U1QNG3L7Q|hugoti> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1468272515.001089",
+    "id": "11be6429",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1QP52UCF",
+    "text": "<@U1QP52UCF|spiras> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1468275568.001090",
+    "id": "11be6430",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1QP2TW7N",
+    "text": "<@U1QP2TW7N|unsettlingtrend> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1468277751.001091",
+    "id": "11be6431",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G47NBQV",
+    "text": "hello i need help with my recyclerView",
+    "ts": "1468295462.001092",
+    "id": "11be6432",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G47NBQV",
+    "text": "it does not show anything even though the implementation of adapter is right",
+    "ts": "1468295483.001093",
+    "id": "11be6433",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G47NBQV",
+    "text": "here’s the link btw: <http://stackoverflow.com/questions/38319807/my-recyclerview-does-not-show-anything>",
+    "attachments": [
+      {
+        "title": "my RecyclerView does not show anything",
+        "title_link": "http://stackoverflow.com/questions/38319807/my-recyclerview-does-not-show-anything",
+        "text": "Help. I don't know why my RecyclerView does not show anything. My implementation of the adapter is right. I don't know where have I gone wrong. Here's the Fragment class: package net.payswitch.",
+        "fallback": "my RecyclerView does not show anything",
+        "thumb_url": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/questions/38319807/my-recyclerview-does-not-show-anything",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "service_icon": "http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d",
+        "service_name": "stackoverflow.com",
+        "id": 1
+      }
+    ],
+    "ts": "1468296196.001094",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11be6434",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "<@U0G47NBQV>: try setting the layout manager before you set the adapter",
+    "edited": {
+      "user": "U054A24ET",
+      "ts": "1468302662.000000"
+    },
+    "ts": "1468302622.001096",
+    "id": "11be6435",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1QRFK2EB",
+    "text": "<@U1QRFK2EB|vdchernikov> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1468304307.001098",
+    "id": "11be6436",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

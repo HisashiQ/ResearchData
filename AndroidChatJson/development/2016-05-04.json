@@ -1,0 +1,2376 @@
+[
+  {
+    "user": "U0548MM6B",
+    "text": "<@U09T8SFG8>: \nfirst part of this talk has some nice tibids on Dagger 2",
+    "ts": "1462345256.002660",
+    "id": "04de34448",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "not that much, but check it out",
+    "ts": "1462345271.002661",
+    "id": "04de34449",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<https://speakerdeck.com/chemouna/building-modular-and-reactive-android-applications>",
+    "attachments": [
+      {
+        "service_name": "Speaker Deck",
+        "title": "Building Modular and Reactive Android Applications",
+        "title_link": "https://speakerdeck.com/chemouna/building-modular-and-reactive-android-applications",
+        "fallback": "Speaker Deck: Building Modular and Reactive Android Applications",
+        "image_url": "https://speakerd.s3.amazonaws.com/presentations/dc4a713cafe54c9c83ffd50c8259e069/slide_0.jpg",
+        "from_url": "https://speakerdeck.com/chemouna/building-modular-and-reactive-android-applications",
+        "image_width": 444,
+        "image_height": 250,
+        "image_bytes": 106934,
+        "id": 1
+      }
+    ],
+    "ts": "1462345272.002662",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U09T8SFG8",
+          "U0DRFMA87",
+          "U053PPGDC",
+          "U0K1ALDQE"
+        ],
+        "count": 5
+      },
+      {
+        "name": "+1",
+        "users": [
+          "U0K1ALDQE"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "04de34450",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "thanks!",
+    "ts": "1462345310.002664",
+    "id": "04de34451",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "that’s purrdy cool",
+    "ts": "1462346842.002665",
+    "id": "04de34452",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "So one small issue I have is how to manage the lifecycle of a custom scope-component combo. Right now I have 3 scopes (from larger to smaller): ApplicationScope -&gt; UserScope -&gt; ScreenScope. \n\nThe ApplicationComponent for the ApplicationScope is easy to manage, I just keep it in the App class and it's annotated as Singleton.\n\nScreenScope (this is per screen) is again easy, I don't need to keep it anywhere I just create it and inject straight away in the Activity/Fragment/Custom View. \n\nMy issue is with the UserScope, the UserComponent is a subcomponent of the ApplicationComponent and some screens are subcomponents of the ApplicationComponent while some others are of the UserComponent. My issue is where would it be a good practice to keep the UserComponent (since it must stay around while a user is logged in, and destroyed when the user logs out or if there was an authentication problem). \nI have a SessionManager class with which I can logout the current user and I was thinking to keep that UserComponent in there as well as manage it's lifecycle there (when logOut is called, null the component) to release all the caches and such.\n\nAnyone has any thoughts on this?",
+    "edited": {
+      "user": "U09T8SFG8",
+      "ts": "1462347789.000000"
+    },
+    "ts": "1462347768.002666",
+    "id": "04de34453",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "&gt;I have a SessionManager class with which I can logout the current user and I was thinking to keep that UserComponent in there as well as manage it's lifecycle there (when logOut is called, null the component) to release all the caches and such.\n\nThis sounds good to me the way you described it",
+    "ts": "1462350665.002668",
+    "id": "04de34454",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I guess I'll keep it like that then",
+    "ts": "1462352742.002669",
+    "id": "04de34455",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "any way to filter the crashes based on the device in crashlytics?",
+    "edited": {
+      "user": "U0XCFE6AH",
+      "ts": "1462357317.000000"
+    },
+    "ts": "1462357299.002670",
+    "id": "04de34456",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "not that I know of",
+    "ts": "1462357376.002672",
+    "id": "04de34457",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "but you can request a feature :simple_smile:",
+    "ts": "1462357381.002673",
+    "id": "04de34458",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "Regarding advanced scoping that I was talking about before, this was a very good read <http://stackoverflow.com/questions/28411352/what-determines-the-lifecycle-of-a-component-object-graph-in-dagger-2>",
+    "attachments": [
+      {
+        "title": "What determines the lifecycle of a component (object graph) in Dagger 2?",
+        "title_link": "http://stackoverflow.com/questions/28411352/what-determines-the-lifecycle-of-a-component-object-graph-in-dagger-2",
+        "text": "I'm trying to wrap my head around scopes in Dagger 2, specifically the lifecycle of scoped graphs. How do you create a component that will be cleaned up when you leave the <http://scope.In|scope.In> the case of an",
+        "fallback": "What determines the lifecycle of a component (object graph) in Dagger 2?",
+        "thumb_url": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/questions/28411352/what-determines-the-lifecycle-of-a-component-object-graph-in-dagger-2",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "id": 1
+      }
+    ],
+    "ts": "1462358451.002674",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "04de34459",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Any1 ever witnessed something like onPause getting skipped?",
+    "ts": "1462363555.002676",
+    "id": "04de34460",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "(Seeing this on Samsung s5 with 6.0.1 official update)",
+    "ts": "1462363568.002677",
+    "id": "04de34461",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "is it happening often?",
+    "ts": "1462364530.002678",
+    "id": "04de34462",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "are you sure it’s really happening? that is a huge fuckup",
+    "ts": "1462364564.002679",
+    "id": "04de34463",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "<@U053PPGDC>: It’s not happening all the time",
+    "ts": "1462364829.002680",
+    "id": "04de34464",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "<@U0548MM6B>: that’s what the logs read",
+    "ts": "1462364836.002681",
+    "id": "04de34465",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "onCreate -&gt; onStart -&gt; onResume  ….    onBackPressed()     …  onStop -&gt; onDestroy -&gt; onPause -&gt; onStop -&gt; onDestroy",
+    "ts": "1462364872.002682",
+    "id": "04de34466",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "But for some reason Samsung doesn’t want to release the camera when I call `camera.release()`",
+    "ts": "1462364909.002683",
+    "id": "04de34467",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "And everything is fucked up. I am regretting making a camera app for a big marketing thing.",
+    "ts": "1462364929.002684",
+    "id": "04de34468",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "If some1 asks you to make a camera app just say no. No matter what the pay is &gt;&lt;",
+    "ts": "1462364947.002685",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U0N4RS70W"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "04de34469",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "And it wasn’t even good… the pay",
+    "ts": "1462364958.002686",
+    "id": "04de34470",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "hahaha... camera API is having lots of different behaviour on different device",
+    "ts": "1462365233.002687",
+    "id": "04de34471",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "I can’t believe this shit… like, tweet at samsung now",
+    "ts": "1462365632.002688",
+    "id": "04de34472",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "email them",
+    "ts": "1462365636.002689",
+    "id": "04de34473",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "try on other samsung devices",
+    "ts": "1462365641.002690",
+    "id": "04de34474",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "you sure it’s not by any slightest chance spinning up 2 instances of the same activity",
+    "ts": "1462365787.002691",
+    "id": "04de34475",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "make sure to compare the hashcodes of each activity",
+    "ts": "1462365813.002692",
+    "id": "04de34476",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "or… it’s samsung’s fault",
+    "ts": "1462365828.002693",
+    "id": "04de34477",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "^",
+    "ts": "1462365888.002694",
+    "id": "04de34478",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "was wondering the same thing",
+    "ts": "1462365896.002695",
+    "id": "04de34479",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "it would also explain your camera issue possibly",
+    "ts": "1462365932.002696",
+    "reactions": [
+      {
+        "name": "camera",
+        "users": [
+          "U055GGAHS",
+          "U053PPGDC"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "04de34480",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "but one instance wouldn’t even be able to use the camera in that case until the other releases it, so .release() would work on whichever is holding it hostage",
+    "ts": "1462365997.002697",
+    "id": "04de34481",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "lets see, last night before I left I made a build and it worked. Opening my ppppowerbook this morning it wont build. :thumbsup: I r developer",
+    "ts": "1462366015.002698",
+    "id": "04de34482",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "smh non repeatable builds, do you even joel test",
+    "ts": "1462366057.002699",
+    "id": "04de34483",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I met joel once in a bar",
+    "ts": "1462366080.002700",
+    "reactions": [
+      {
+        "name": "beers",
+        "users": [
+          "U055GGAHS",
+          "U053PPGDC",
+          "U0548MM6B"
+        ],
+        "count": 3
+      }
+    ],
+    "id": "04de34484",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "does that count?",
+    "ts": "1462366082.002701",
+    "reactions": [
+      {
+        "name": "1234",
+        "users": [
+          "U055GGAHS",
+          "U053PPGDC"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "04de34485",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "if you both drank 12 beers, it’s okay, go on",
+    "ts": "1462366118.002702",
+    "reactions": [
+      {
+        "name": "100",
+        "users": [
+          "U053PPGDC"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "04de34486",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "12?",
+    "ts": "1462366141.002703",
+    "id": "04de34487",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I only drink in primes bro",
+    "ts": "1462366146.002704",
+    "id": "04de34488",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "drinking 12 beers, you :dog:",
+    "ts": "1462366173.002705",
+    "reactions": [
+      {
+        "name": "hotdog",
+        "users": [
+          "U055GGAHS"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "04de34489",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "well you could finish with beers[12]",
+    "ts": "1462366207.002706",
+    "reactions": [
+      {
+        "name": "superfastparrot",
+        "users": [
+          "U055GGAHS",
+          "U0DRFMA87",
+          "U0K1ALDQE"
+        ],
+        "count": 3
+      }
+    ],
+    "id": "04de34490",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "so… 37?",
+    "ts": "1462366235.002707",
+    "id": "04de34491",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "damn boi",
+    "ts": "1462366248.002708",
+    "id": "04de34492",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "whoever uploaded super fast parrot.. i love you",
+    "ts": "1462366256.002709",
+    "id": "04de34493",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": ":shuffleparrot: :shufflefurtherparrot: :shuffleparrot: :shufflefurtherparrot: :shuffleparrot: :shufflefurtherparrot: :shuffleparrot: :shufflefurtherparrot: :shuffleparrot: :shufflefurtherparrot: :shuffleparrot: :shufflefurtherparrot: :shuffleparrot: :shufflefurtherparrot: :shuffleparrot: :shufflefurtherparrot: :shuffleparrot: :shufflefurtherparrot: :shuffleparrot: :shufflefurtherparrot: :shuffleparrot: :shufflefurtherparrot: :shuffleparrot: :shufflefurtherparrot: :shuffleparrot: :shufflefurtherparrot: :shuffleparrot: :shufflefurtherparrot: :shuffleparrot: :shufflefurtherparrot: :shuffleparrot: :shufflefurtherparrot: :shuffleparrot: :shufflefurtherparrot: :shuffleparrot: :shufflefurtherparrot: :shuffleparrot: :shufflefurtherparrot: :shuffleparrot: :shufflefurtherparrot: :shuffleparrot: :shufflefurtherparrot: :shuffleparrot: :shufflefurtherparrot: :shuffleparrot: :shufflefurtherparrot: :shuffleparrot: :shufflefurtherparrot:",
+    "ts": "1462366293.002710",
+    "id": "04de34494",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U162W3HV0",
+    "subtype": "channel_join",
+    "text": "<@U162W3HV0|carl_partridge> has joined the channel",
+    "ts": "1462366399.002711",
+    "id": "04de34495",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U162W3HV0",
+    "text": "Hey all, thanks for having me!  Out of interest, what version of Android Studio are ppl standardising on for stable development at the mo?  2.0 or 2.1?",
+    "ts": "1462366505.002712",
+    "id": "04de34496",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "2.1 its only locked up on me like twice lol",
+    "ts": "1462366557.002713",
+    "id": "04de34497",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Bleeding edge canary all the way",
+    "ts": "1462366560.002714",
+    "id": "04de34498",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "welcome <@U162W3HV0>",
+    "ts": "1462366565.002715",
+    "id": "04de34499",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "Always on canary",
+    "ts": "1462366569.002716",
+    "id": "04de34500",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "but on OS X AS2.1 dies sometimes when screen gets locked",
+    "edited": {
+      "user": "U0548MM6B",
+      "ts": "1462366581.000000"
+    },
+    "ts": "1462366576.002717",
+    "id": "04de34501",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U162W3HV0",
+    "text": "Thanks <@U0548MM6B> - do you find it stable enough for production development?  And what does 2.1 bring over 2.0 for you?",
+    "ts": "1462366589.002719",
+    "id": "04de34502",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "Well, I find canary stable for development, been on it for a while now :smile:",
+    "ts": "1462366613.002720",
+    "id": "04de34503",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "tbh nothing much",
+    "ts": "1462366616.002721",
+    "id": "04de34504",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "support for N, but that’s the only diff between 2.0 and 2.1",
+    "ts": "1462366627.002722",
+    "reactions": [
+      {
+        "name": "nutella",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "04de34505",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U162W3HV0",
+    "text": "Thanks - tempting to go bleeding edge.",
+    "ts": "1462366662.002723",
+    "id": "04de34506",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "canary",
+    "ts": "1462367204.002724",
+    "id": "04de34507",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "/gif canary",
+    "ts": "1462367211.002725",
+    "id": "04de34508",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "",
+    "bot_id": "B0GH4RVHU",
+    "attachments": [
+      {
+        "fallback": "<http://stream1.gifsoup.com/view/971755/canary-o.gif>",
+        "image_url": "http://stream1.gifsoup.com/view/971755/canary-o.gif",
+        "image_width": 320,
+        "image_height": 240,
+        "image_bytes": 4797068,
+        "is_animated": true,
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1462367213.002726",
+    "id": "04de34509",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N4RS70W",
+    "text": "anybody faced an issue when logging in with facebook with the app installed ? i login perfectly if i don’t facebook app installed, then, i install facebook, and boom, telling me the key hash is wrong (is not i have the same one in the console)",
+    "ts": "1462368047.002727",
+    "id": "04de34510",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "uninstall facebook app. it made my phone crash way less",
+    "ts": "1462368289.002728",
+    "id": "04de34511",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "in all seriousness, it seems odd. do you have the latest sdk?",
+    "ts": "1462368319.002729",
+    "id": "04de34512",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N4RS70W",
+    "text": "lol i don’t have the app in my phone is crap. but it is on the testing devices",
+    "ts": "1462368347.002730",
+    "id": "04de34513",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N4RS70W",
+    "text": "not sure what sdk is, will check that maybe updating fix it",
+    "ts": "1462368360.002731",
+    "id": "04de34514",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "knowing fb, it could be anything",
+    "ts": "1462368481.002732",
+    "id": "04de34515",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "wouldn’t put it past them to deliberately break the sdk as one of their ab tests",
+    "ts": "1462368518.002733",
+    "id": "04de34516",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DU1GQTV",
+    "text": "Having a bit of a weird time with the google play store. I can find my app in there via the browser and install it to my android tv device without issue. However, when I search for my app in the play store on the device it doesn't show up",
+    "ts": "1462368877.002734",
+    "id": "04de34517",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "try clearing play cache",
+    "ts": "1462368904.002735",
+    "id": "04de34518",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N4RS70W",
+    "text": "oh god they changed so many classes, the project was using version 3.x lol",
+    "edited": {
+      "user": "U0N4RS70W",
+      "ts": "1462369007.000000"
+    },
+    "ts": "1462368997.002736",
+    "id": "04de34519",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "just occurred to me - when the robot uprising inevitably happens, how will the robots know when their caches are out of date",
+    "ts": "1462369012.002738",
+    "id": "04de34520",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "or will they just randomly explode when they assimilate facebook’s source code",
+    "ts": "1462369030.002739",
+    "id": "04de34521",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "yeah I’m not afraid of AI uprising",
+    "ts": "1462369041.002740",
+    "id": "04de34522",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "if it can teach itself, it will probably stumble upon facebook",
+    "ts": "1462369051.002741",
+    "id": "04de34523",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "it will crash pretty fast",
+    "ts": "1462369067.002742",
+    "id": "04de34524",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0H67LJUA",
+    "text": "If they stumble upon slack first, now they will know to avoid facebook :anguished:",
+    "ts": "1462369091.002743",
+    "id": "04de34525",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "fresco will eat all of its memory",
+    "ts": "1462369105.002744",
+    "id": "04de34526",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "luckily only last 10k messages are visible :sweat_smile:",
+    "ts": "1462369126.002745",
+    "id": "04de34527",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "q",
+    "ts": "1462369136.002746",
+    "id": "04de34528",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "u",
+    "ts": "1462369136.002747",
+    "id": "04de34529",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "i",
+    "ts": "1462369137.002748",
+    "id": "04de34530",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "c",
+    "ts": "1462369138.002749",
+    "id": "04de34531",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "k",
+    "ts": "1462369139.002750",
+    "id": "04de34532",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "w",
+    "ts": "1462369141.002751",
+    "id": "04de34533",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "r",
+    "ts": "1462369142.002752",
+    "id": "04de34534",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "i",
+    "ts": "1462369142.002753",
+    "id": "04de34535",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "t",
+    "ts": "1462369143.002754",
+    "id": "04de34536",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "e",
+    "ts": "1462369144.002755",
+    "id": "04de34537",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "it will probably try to send “kill human” broadcast to it’s weapons process, but it’s ashmem will be too full of Minion pics and duckfaces",
+    "ts": "1462369168.002756",
+    "id": "04de34538",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DU1GQTV",
+    "text": "<@U0548MM6B> I",
+    "ts": "1462369236.002757",
+    "id": "04de34539",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DU1GQTV",
+    "text": "derp",
+    "ts": "1462369239.002758",
+    "id": "04de34540",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DU1GQTV",
+    "text": "I tried that, but it still doesn't show :disappointed:",
+    "ts": "1462369250.002759",
+    "id": "04de34541",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "huh, weird",
+    "ts": "1462369280.002760",
+    "id": "04de34542",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "maybe because you can’t choose a device to which you want to install using play store",
+    "ts": "1462369294.002761",
+    "id": "04de34543",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "so it isn’t eligible",
+    "ts": "1462369297.002762",
+    "id": "04de34544",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U163S2W07",
+    "subtype": "channel_join",
+    "text": "<@U163S2W07|fedorparetsky> has joined the channel",
+    "ts": "1462373396.002763",
+    "id": "04de34545",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U163T1S93",
+    "subtype": "channel_join",
+    "text": "<@U163T1S93|pavelpilar> has joined the channel",
+    "ts": "1462373516.002764",
+    "id": "04de34546",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "I have this code in my manifest\n```    &lt;uses-feature\n        android:name=\"android.hardware.camera.autofocus\"\n        android:required=\"false\" /&gt;```\nbut some phones that don’t have autofocus cannot download my app from play store, does anybody know where is the problem ?",
+    "edited": {
+      "user": "U0JBR7LUV",
+      "ts": "1462383763.000000"
+    },
+    "ts": "1462383721.002765",
+    "id": "04de34547",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "it happens because I have third-party library that requires autofocus, any idea how to change the manifest of this library?",
+    "ts": "1462384136.002767",
+    "id": "04de34548",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "Anybody know of a website I can go to to find out the percentage distribution of android devices by API level for a particular country? I’ve been to here: <http://developer.android.com/about/dashboards/index.html> and here: <http://gs.statcounter.com>   Both have great information, but not the detail I’m looking for",
+    "attachments": [
+      {
+        "title": "StatCounter Global Stats - Browser, OS, Search Engine including Mobile Usage Share",
+        "title_link": "http://gs.statcounter.com",
+        "text": "Tracks the Usage Share of Search Engines, Browsers and Operating Systems including Mobile from over 15 billion monthly page views.",
+        "fallback": "StatCounter Global Stats - Browser, OS, Search Engine including Mobile Usage Share",
+        "from_url": "http://gs.statcounter.com",
+        "id": 1
+      }
+    ],
+    "ts": "1462384663.002768",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "04de34549",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "Any one here to help me test on s7 edge",
+    "ts": "1462386337.002770",
+    "id": "04de34550",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "What can I do? I have one",
+    "ts": "1462386437.002771",
+    "id": "04de34551",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "<@U04TK850N>:  :taco: :taco: ",
+    "ts": "1462386757.002773",
+    "id": "04de34552",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "<@U04TK850N>: :taco:  thanks again",
+    "ts": "1462387594.002775",
+    "id": "04de34553",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": ":simple_smile:",
+    "ts": "1462387603.002776",
+    "id": "04de34554",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N92TLT1",
+    "text": "I have a rxjava question. Does anyone how to make Observable.Amb(o1,o2) to unsubscribe the other observer when one of them returns?",
+    "ts": "1462388572.002777",
+    "id": "04de34555",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KK98UU",
+    "text": "isn’t that the default behavior?",
+    "ts": "1462388970.002778",
+    "id": "04de34556",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KK98UU",
+    "text": "from the source code:",
+    "ts": "1462388996.002779",
+    "id": "04de34557",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KK98UU",
+    "text": "```\nif ((c = choice.get()) != null) {\n                // Already chose one, the rest can be skipped and we can clean up\n                selection.unsubscribeOthers(c);\n                return;\n            }\n```",
+    "edited": {
+      "user": "U08KK98UU",
+      "ts": "1462389021.000000"
+    },
+    "ts": "1462388999.002780",
+    "id": "04de34558",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N92TLT1",
+    "text": "nice. I read the docs and thought that it just let’s it eventually die out",
+    "ts": "1462393979.002782",
+    "id": "04de34559",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N92TLT1",
+    "text": "thanks",
+    "ts": "1462393987.002783",
+    "id": "04de34560",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KK98UU",
+    "text": "the docs are pretty good, but the source code holds the truth :simple_smile:",
+    "ts": "1462394186.002784",
+    "id": "04de34561",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16AKGX50",
+    "subtype": "channel_join",
+    "text": "<@U16AKGX50|stevensiahaan> has joined the channel",
+    "ts": "1462424353.002785",
+    "id": "04de34562",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U15AP1H7S",
+    "text": "Any one working on an open source app or library??",
+    "ts": "1462428844.002786",
+    "id": "04de34563",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U15AP1H7S",
+    "text": "I have been out of programming around a year.",
+    "ts": "1462428868.002787",
+    "id": "04de34564",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U15AP1H7S",
+    "text": "I need to refresh my skills.",
+    "ts": "1462428886.002788",
+    "id": "04de34565",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "<@U08GFT5V5> is working on <@U0N7D6F50>",
+    "ts": "1462429358.002789",
+    "id": "04de34566",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "join <#C08SR981Y> for more info",
+    "ts": "1462429382.002790",
+    "id": "04de34567",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

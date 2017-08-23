@@ -1,0 +1,345 @@
+[
+  {
+    "user": "U053NE3TN",
+    "text": "<@U053NE3TN|hoanngothanh> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1467968045.000216",
+    "id": "08te1636",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1PV7DVH7",
+    "text": "<@U1PV7DVH7|mauricegavin> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1467973996.000217",
+    "id": "08te1637",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1N5PJDTL",
+    "text": "anyone here familiar with dagger2 and testing?  I’m trying to figure out how to provide mock dependencies to an activity espresso test",
+    "ts": "1467997835.000218",
+    "id": "08te1638",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1N5PJDTL",
+    "text": "I have an activity like \n\n```\npublic abstract class BaseActivity&lt;C extends BaseComponent&gt; extends AppCompatActivity {\n    ...\n    protected C component;\n    abstract protected C buildComponent();\n    protected void setComponent(C component) {\n        this.component = component;\n    }\n\n    @Override\n    protected void onCreate(@Nullable Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        component = (component == null ? buildComponent() : component);\n    }\n   ...\n```\n\n```\npublic class DummyActivity extends BaseActivity&lt;DummyComponent&gt;{\n\n    @Inject String dummyString;\n\n    @Override\n    protected void onCreate(@Nullable Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        component.inject(this);\n    }\n\n    @Override\n    protected DummyComponent buildComponent() {\n        return DaggerDummyComponent.builder()\n                .appComponent(CalculatorApplication.getAppComponent(this))\n                .build();\n    }\n}\n```",
+    "ts": "1467998068.000219",
+    "id": "08te1639",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1N5PJDTL",
+    "text": "and in my test, I want to replace the component with one that provides mocks using my `setComponent` method.  I’m not sure where to do this in my espresso test, though",
+    "ts": "1467998133.000220",
+    "id": "08te1640",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KC373GX",
+    "text": "same way you’re doing dagger with the actual activities. provide the same modules thru something like a TestComponent that injects the modules you need. then make your mock stuff (services..?) and make them extend the real classes",
+    "ts": "1467998361.000221",
+    "id": "08te1641",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1N5PJDTL",
+    "text": "I have that part.  I have a test component that provides mocks.  The part I’m stuck on is replacing the component in the activity with the test component.",
+    "ts": "1467998606.000222",
+    "id": "08te1642",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1N5PJDTL",
+    "text": "basically, I think I need a way to call `setComponent(myTestComponent)` before `onCreate` is called",
+    "ts": "1467998848.000223",
+    "id": "08te1643",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1N5PJDTL",
+    "text": "is that possible?",
+    "ts": "1467998852.000224",
+    "id": "08te1644",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KC373GX",
+    "text": "yeah",
+    "ts": "1467999201.000225",
+    "id": "08te1645",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1N5PJDTL",
+    "text": "Any idea how?  I tried in `@Before`, but onCreate is called before my mocks are made\n\nI’ve also tried in activityTestRule.beforeActivityLaunched, but the activity is null at this point",
+    "ts": "1467999602.000226",
+    "id": "08te1646",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KC373GX",
+    "text": "hmm, yeah you put all this in `@Before`. you should tell espresso to use the custom test application you’re using. you can use this repo as a guide -&gt; <https://github.com/chiuki/android-test-demo/tree/master/app/src/androidTest/java/com/sqisland/android/test_demo>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "chiuki/android-test-demo",
+        "title_link": "https://github.com/chiuki/android-test-demo/tree/master/app/src/androidTest/java/com/sqisland/android/test_demo",
+        "text": "android-test-demo - Android testing with Dagger 2, Espresso 2 and Mockito",
+        "fallback": "GitHub: chiuki/android-test-demo",
+        "thumb_url": "https://avatars3.githubusercontent.com/u/354458?v=3&s=400",
+        "from_url": "https://github.com/chiuki/android-test-demo/tree/master/app/src/androidTest/java/com/sqisland/android/test_demo",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1468000006.000227",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "08te1647",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KC373GX",
+    "text": "sorry for not being too specific, I’m in a meeting :slightly_smiling_face:",
+    "ts": "1468000052.000229",
+    "id": "08te1648",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1N5PJDTL",
+    "text": "no problem.  thanks for your help\n\ni’m actually currently using a similar pattern for mocking Application  scoped dependencies for my tests",
+    "edited": {
+      "user": "U1N5PJDTL",
+      "ts": "1468000323.000000"
+    },
+    "ts": "1468000315.000230",
+    "id": "08te1649",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1N5PJDTL",
+    "text": "so that’s working fine, but mocking activity scoped dependencies with my test component is where i’m having a bit of trouble",
+    "ts": "1468000437.000232",
+    "id": "08te1650",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1N5PJDTL",
+    "text": "I guess i can call `setComponent` in `@Before` and just inject again using the new component, but that means `onCreate` and `onResume` ran using real items instead of mocks",
+    "ts": "1468000499.000233",
+    "id": "08te1651",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "<@U1N5PJDTL>: I’d suggest to hook into creation of subcomponent through the application class: basically you can override behavior of `mainComponent.plus(module)` and return component which will perform injection of required test object, or you can override module passed to `plus(module)` and provide test dependencies",
+    "ts": "1468001651.000234",
+    "id": "08te1652",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

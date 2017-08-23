@@ -1,0 +1,340 @@
+[
+  {
+    "user": "U2YVBLHRN",
+    "text": "<@U2YVBLHRN|nishkavijay> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1478594893.000063",
+    "id": "08de6529",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2ZJVU2HH",
+    "text": "<@U2ZJVU2HH|clauzefanya> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1478595992.000064",
+    "id": "08de6530",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U30CXS86S",
+    "text": "<@U30CXS86S|hey777> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1478605494.000065",
+    "id": "08de6531",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2Z814HR7",
+    "text": "<@U2Z814HR7|cobblebunt> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1478626443.000066",
+    "id": "08de6532",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2Z85KQD7",
+    "text": "<@U2Z85KQD7|eusebi> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1478626901.000067",
+    "id": "08de6533",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2Z7P9VA4",
+    "text": "<@U2Z7P9VA4|iandouglas> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1478628423.000068",
+    "id": "08de6534",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2Z7P9VA4",
+    "text": "hey all, I have an odd design problem. I have a toolbar theme defined in my styles.xml which works just fine for my MainActivity, but when MainActivity starts a new activity using startActivityWithResult() and passing in the new activity intent, the toolbar style changes and I don't know which style I should inherit from to use my toolbar theme elements.",
+    "ts": "1478628576.000069",
+    "id": "08de6535",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2Z7P9VA4",
+    "text": "all I can find on StackOverflow, etc are ways to theme the main toolbar, which I’ve done, but launching another activity (which maintains the action bar, I didn’t add any other toolbar/actionbar views in my new activity’s layout xml) seems to change the style to something else.",
+    "ts": "1478629524.000070",
+    "id": "08de6536",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U2Z7P9VA4> could you share your startActivityWithResult code?",
+    "edited": {
+      "user": "U061HDV96",
+      "ts": "1478632048.000000"
+    },
+    "ts": "1478632037.000071",
+    "id": "08de6537",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2Z7P9VA4",
+    "text": "Yeah as soon as I get back from lunch",
+    "ts": "1478632412.000073",
+    "id": "08de6538",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2Z7P9VA4",
+    "text": "```intent = new Intent(context, RegisterActivity.class);\nTaskStackBuilder taskStackBuilder = TaskStackBuilder.create(this);\n        taskStackBuilder.addParentStack(MainActivity.class);\n        taskStackBuilder.addNextIntent(intent);\n\n        PendingIntent pendingIntent = taskStackBuilder.getPendingIntent(0, PendingIntent.FLAG_ONE_SHOT);\n\n        NotificationCompat.Builder builder = new NotificationCompat.Builder(this);\n        builder.setContentIntent(pendingIntent);\n\n        startActivityForResult(intent, requestCode);```",
+    "ts": "1478634547.000074",
+    "id": "08de6539",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2Z7P9VA4",
+    "text": "<@U061HDV96> ^",
+    "ts": "1478634563.000075",
+    "id": "08de6540",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I'm working on something and don't have the time right now. I bet some other people can help. This is more suited for <#C04NZAN54|development> so there might be some more people there that can help you",
+    "ts": "1478634635.000076",
+    "id": "08de6541",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2Z7P9VA4",
+    "text": "okay, thanks, figured it was a design issue with styling",
+    "ts": "1478634648.000077",
+    "id": "08de6542",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U302R1EAE",
+    "text": "<@U302R1EAE|dhood> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1478641932.000078",
+    "id": "08de6543",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U302V6F8A",
+    "text": "<@U302V6F8A|edwardaux> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1478642416.000079",
+    "id": "08de6544",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2ZF9GE80",
+    "text": "<@U2ZF9GE80|satadeep> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1478665291.000080",
+    "id": "08de6545",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3063KMGT",
+    "text": "<@U3063KMGT|dhar619> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1478677188.000081",
+    "id": "08de6546",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

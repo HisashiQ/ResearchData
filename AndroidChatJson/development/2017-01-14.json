@@ -1,0 +1,8484 @@
+[
+  {
+    "user": "U3DCPPVCP",
+    "text": "Hey guys. I need to implement a timer feature in my project.(Like next race in: 5 hours 30 minutes). My use case is like this that as soon as the app opens the timer should start from 5 hours and keep on going until I close the app. The app has a hamburger menu navigation so even if I change the fragment I need the timer to go on. I have made a solution using hot observables from RxJava (I have the luxury of experimenting in this project so I thought why not use it). From what I understand hot observable is an observable which will keep emitting values even if nobody is listening (i.e. no subscriber is subscribed to get the events). So my solution is to make an observable object in my application class and use publish() on it to make it a ConnectableObservable, which is basically an observer which will start emitting items when someone calls connect() on it and then will behave like a hot observable. So after I convert it to ConnectableObservable I let it exist in the application class. Whenever the fragment that shows the timer is loaded I subscribe to this ConnectableObservable in onStart() and unsubscribe in onStop().",
+    "ts": "1484381994.001140",
+    "id": "14de60410",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3DCPPVCP",
+    "text": "Here is my application class",
+    "ts": "1484382003.001141",
+    "id": "14de60411",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U3DCPPVCP|batdroid> uploaded a file: <https://androidchat.slack.com/files/batdroid/F3RHC2NCA/applicationclass.java|ApplicationClass>",
+    "file": {
+      "id": "F3RHC2NCA",
+      "created": 1484382029,
+      "timestamp": 1484382029,
+      "name": "ApplicationClass.java",
+      "title": "ApplicationClass",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U3DCPPVCP",
+      "editable": true,
+      "size": 613,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F3RHC2NCA/applicationclass.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F3RHC2NCA/download/applicationclass.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/batdroid/F3RHC2NCA/applicationclass.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F3RHC2NCA-7a44dce9d8",
+      "edit_link": "https://androidchat.slack.com/files/batdroid/F3RHC2NCA/applicationclass.java/edit",
+      "preview": "public class SrijanApplication extends Application {\r\n    static ConnectableObservable<Long> raceTimerObservable;\r\n\r\n    public SrijanApplication() {\r\n        super();\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-keyword\">public</span> <span class=\"cm-keyword\">class</span> <span class=\"cm-def\">SrijanApplication</span> <span class=\"cm-keyword\">extends</span> <span class=\"cm-variable\">Application</span> {</pre></div>\n<div><pre>    <span class=\"cm-keyword\">static</span> <span class=\"cm-variable\">ConnectableObservable</span><span class=\"cm-operator\">&lt;</span><span class=\"cm-variable-3\">Long</span><span class=\"cm-operator\">&gt;</span> <span class=\"cm-variable\">raceTimerObservable</span>;</pre></div>\n<div><pre>&#8203;</pre></div>\n<div><pre>    <span class=\"cm-keyword\">public</span> <span class=\"cm-variable\">SrijanApplication</span>() {</pre></div>\n<div><pre>        <span class=\"cm-keyword\">super</span>();</pre></div>\n</div>\n</div>\n",
+      "lines": 25,
+      "lines_more": 20,
+      "preview_is_truncated": false,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U3DCPPVCP",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U3DCPPVCP|batdroid>",
+    "bot_id": null,
+    "ts": "1484382029.001142",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "14de60412",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3DCPPVCP",
+    "text": "Here is my fragment",
+    "ts": "1484382054.001143",
+    "id": "14de60413",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U3DCPPVCP|batdroid> uploaded a file: <https://androidchat.slack.com/files/batdroid/F3RFBT0FM/homefragment.java|HomeFragment>",
+    "file": {
+      "id": "F3RFBT0FM",
+      "created": 1484382066,
+      "timestamp": 1484382066,
+      "name": "HomeFragment.java",
+      "title": "HomeFragment",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U3DCPPVCP",
+      "editable": true,
+      "size": 2136,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F3RFBT0FM/homefragment.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F3RFBT0FM/download/homefragment.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/batdroid/F3RFBT0FM/homefragment.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F3RFBT0FM-08f998af80",
+      "edit_link": "https://androidchat.slack.com/files/batdroid/F3RFBT0FM/homefragment.java/edit",
+      "preview": "public class HomeFragment extends Fragment {\r\n\r\n    final long raceTime = 60 * 60 * 5;\r\n    @BindView(R.id.imageSliderLayoutHomeFragment)\r\n    SliderLayout imageSliderLayout;\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-keyword\">public</span> <span class=\"cm-keyword\">class</span> <span class=\"cm-def\">HomeFragment</span> <span class=\"cm-keyword\">extends</span> <span class=\"cm-variable\">Fragment</span> {</pre></div>\n<div><pre>&#8203;</pre></div>\n<div><pre>    <span class=\"cm-keyword\">final</span> <span class=\"cm-variable-3\">long</span> <span class=\"cm-variable\">raceTime</span> <span class=\"cm-operator\">=</span> <span class=\"cm-number\">60</span> <span class=\"cm-operator\">*</span> <span class=\"cm-number\">60</span> <span class=\"cm-operator\">*</span> <span class=\"cm-number\">5</span>;</pre></div>\n<div><pre>    <span class=\"cm-meta\">@BindView</span>(<span class=\"cm-variable\">R</span>.<span class=\"cm-variable\">id</span>.<span class=\"cm-variable\">imageSliderLayoutHomeFragment</span>)</pre></div>\n<div><pre>    <span class=\"cm-variable\">SliderLayout</span> <span class=\"cm-variable\">imageSliderLayout</span>;</pre></div>\n</div>\n</div>\n",
+      "lines": 62,
+      "lines_more": 57,
+      "preview_is_truncated": true,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U3DCPPVCP",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U3DCPPVCP|batdroid>",
+    "bot_id": null,
+    "ts": "1484382066.001144",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "14de60414",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3DCPPVCP",
+    "text": "Is my understanding of these things and my approach correct?",
+    "ts": "1484382096.001145",
+    "id": "14de60415",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "<@U3PG8K6R5> unless your draw/navigation items are dynamically created, I’d stick to regular navigation view",
+    "ts": "1484384900.001147",
+    "id": "14de60416",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFZ453R",
+    "text": "Hi, is there a way to populate adapter using RealmList?",
+    "ts": "1484385613.001148",
+    "id": "14de60417",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U0LFZ453R> first question is, is there any reason why it's a RealmList and NOT a RealmResults?",
+    "ts": "1484387724.001149",
+    "id": "14de60418",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFZ453R",
+    "text": "<@U39P7U6EP> thanks for the reply, I am using a nested realm object, which consist of a RealmList, and want to populate the adapter using the values of the realm list only.",
+    "ts": "1484388103.001150",
+    "id": "14de60419",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U0LFZ453R> I see, if it is a managed RealmObject's RealmList parameter then [RealmRecyclerViewAdapter](<https://github.com/realm/realm-android-adapters/blob/master/adapters/src/main/java/io/realm/RealmRecyclerViewAdapter.java>) can handle it",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "realm/realm-android-adapters",
+        "title_link": "https://github.com/realm/realm-android-adapters/blob/master/adapters/src/main/java/io/realm/RealmRecyclerViewAdapter.java",
+        "text": "realm-android-adapters - Adapters for combining Realm Java with Android UI components and framework classes",
+        "fallback": "GitHub: realm/realm-android-adapters",
+        "thumb_url": "https://avatars1.githubusercontent.com/u/7575099?v=3&s=400",
+        "from_url": "https://github.com/realm/realm-android-adapters/blob/master/adapters/src/main/java/io/realm/RealmRecyclerViewAdapter.java",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1484390238.001151",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "14de60420",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "if you check the code, it adds a RealmChangeListener to the realm instance associated with the given RealmList, so I think it gets called even if some other object gets written to and not this table; but it does maintain reactivity which is nice",
+    "ts": "1484390298.001153",
+    "id": "14de60421",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3M3UTLJ3",
+    "text": "Hi , can I ask the cost for app , I want to do one but I don't know how much I can request from client ",
+    "ts": "1484390583.001154",
+    "id": "14de60422",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U0LFZ453R> please don't cross post. I removed your other post.",
+    "ts": "1484390984.001155",
+    "id": "14de60423",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U3M3UTLJ3> Google it, this isn't the place to ask.",
+    "ts": "1484391005.001156",
+    "id": "14de60424",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "If you need to ask how much it is, then you can't afford it.",
+    "ts": "1484391018.001157",
+    "id": "14de60425",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3RFRD6RZ",
+    "text": "<@U3RFRD6RZ|mraiur> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1484392765.001158",
+    "id": "14de60426",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFZ453R",
+    "text": "<@U061HDV96>, Sorry about that.",
+    "ts": "1484393241.001159",
+    "id": "14de60427",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFZ453R",
+    "text": "<@U39P7U6EP>, I am manually copying the data to the realm, it is an unmanaged list.",
+    "ts": "1484393267.001160",
+    "id": "14de60428",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U0LFZ453R> If it is an unmanaged list, then it works like any plain ArrayList ",
+    "ts": "1484394159.001161",
+    "id": "14de60429",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFZ453R",
+    "text": "Okay",
+    "ts": "1484395672.001162",
+    "id": "14de60430",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3RJ74KQA",
+    "text": "<@U3RJ74KQA|chrishoenack> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1484397512.001163",
+    "id": "14de60431",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U39P7U6EP> I've got a weird Realm bug",
+    "ts": "1484404662.001164",
+    "id": "14de60432",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I've got a change listener on all items of a specific class",
+    "ts": "1484404682.001165",
+    "id": "14de60433",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Here is the structure briefly: OrderedFood.original.ingredients &lt;- list of Ingredient objects",
+    "ts": "1484404728.001166",
+    "id": "14de60434",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "In the change listener that list of ingredients is empty",
+    "ts": "1484404745.001167",
+    "id": "14de60435",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "But I check the database and it definitely is not empty",
+    "ts": "1484404754.001168",
+    "id": "14de60436",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "And it works just fine when I got an OrderedFood somewhere else",
+    "ts": "1484404773.001169",
+    "id": "14de60437",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "The cause seems to be that because I set that original one again in a transaction (to the exact same one)",
+    "ts": "1484405673.001170",
+    "id": "14de60438",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "But that shouldn't cause that problem",
+    "ts": "1484405680.001171",
+    "id": "14de60439",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "If only I could debug these lambdas",
+    "ts": "1484405694.001172",
+    "id": "14de60440",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U061HDV96|andreasbackx> uploaded a file: <https://androidchat.slack.com/files/andreasbackx/F3S9GQTLP/-.kt|Untitled>",
+    "file": {
+      "id": "F3S9GQTLP",
+      "created": 1484405750,
+      "timestamp": 1484405750,
+      "name": "-.kt",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "kotlin",
+      "pretty_type": "Kotlin",
+      "user": "U061HDV96",
+      "editable": true,
+      "size": 542,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F3S9GQTLP/-.kt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F3S9GQTLP/download/-.kt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/andreasbackx/F3S9GQTLP/-.kt",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F3S9GQTLP-ac96548111",
+      "edit_link": "https://androidchat.slack.com/files/andreasbackx/F3S9GQTLP/-.kt/edit",
+      "preview": "\t\t\t\t\t\tRealm.getDefaultInstance().use {\r\n\t\t\t\t\t\t\tit.executeTransactionAsync {\r\n\t\t\t\t\t\t\t\tval orderedfood = it.where(OrderedFood::class.java)\r\n\t\t\t\t\t\t\t\t\t.equalTo(\"id\", addedOrderedfoodId)\r\n\t\t\t\t\t\t\t\t\t.findFirst()\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>\t\t\t\t\t\t<span class=\"cm-variable\">Realm</span>.<span class=\"cm-variable\">getDefaultInstance</span>().<span class=\"cm-variable\">use</span> {</pre></div>\n<div><pre>\t\t\t\t\t\t\t<span class=\"cm-variable\">it</span>.<span class=\"cm-variable\">executeTransactionAsync</span> {</pre></div>\n<div><pre>\t\t\t\t\t\t\t\t<span class=\"cm-keyword\">val</span> <span class=\"cm-def\">orderedfood</span> <span class=\"cm-operator\">=</span> <span class=\"cm-variable\">it</span>.<span class=\"cm-keyword\">where</span>(<span class=\"cm-variable\">OrderedFood</span>::<span class=\"cm-keyword\">class</span>.<span class=\"cm-variable\">java</span>)</pre></div>\n<div><pre>\t\t\t\t\t\t\t\t\t.<span class=\"cm-variable\">equalTo</span>(<span class=\"cm-string\">&quot;id&quot;</span>, <span class=\"cm-variable\">addedOrderedfoodId</span>)</pre></div>\n<div><pre>\t\t\t\t\t\t\t\t\t.<span class=\"cm-variable\">findFirst</span>()</pre></div>\n</div>\n</div>\n",
+      "lines": 14,
+      "lines_more": 9,
+      "preview_is_truncated": false,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U061HDV96",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U061HDV96|andreasbackx>",
+    "bot_id": null,
+    "ts": "1484405750.001173",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "14de60441",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "price.food.id will always equal orderedfood.original.id",
+    "ts": "1484405778.001174",
+    "id": "14de60442",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Because we temporarily disabled something on the backend that might get enabled again",
+    "ts": "1484405795.001175",
+    "id": "14de60443",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "I would need to see more, but if you open the Realm and close it like that on the UI thread for the transaction, then the RealmChangeListener might not be called if the Realm instance it belongs to is closed ",
+    "ts": "1484406047.001176",
+    "id": "14de60444",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "The listener is called, that's where I see the ingredients are empty",
+    "ts": "1484406073.001177",
+    "id": "14de60445",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "That's also on the IO thread",
+    "ts": "1484406115.001178",
+    "id": "14de60446",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "The listener shouldn't be called on the io thread, only looper threads listen to realm changes ",
+    "ts": "1484406601.001179",
+    "id": "14de60447",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I had a similar problem, it was realted to threading",
+    "ts": "1484406662.001180",
+    "id": "14de60448",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "but I dumped Realm now because I couldn't resolve it",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1484406690.000000"
+    },
+    "ts": "1484406676.001181",
+    "id": "14de60449",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "<https://www.youtube.com/watch?v=Yxof4sXXwcg>",
+    "attachments": [
+      {
+        "service_name": "YouTube",
+        "service_url": "https://www.youtube.com/",
+        "title": "Serverless in an Offline-First world - Alexander Stigsen",
+        "title_link": "https://www.youtube.com/watch?v=Yxof4sXXwcg",
+        "author_name": "Serverlessconf",
+        "author_link": "https://www.youtube.com/channel/UCqlcVgk8SkUmve4Kw4xSlgw",
+        "thumb_url": "https://i.ytimg.com/vi/Yxof4sXXwcg/hqdefault.jpg",
+        "thumb_width": 480,
+        "thumb_height": 360,
+        "fallback": "YouTube Video: Serverless in an Offline-First world - Alexander Stigsen",
+        "video_html": "<iframe width=\"400\" height=\"225\" src=\"https://www.youtube.com/embed/Yxof4sXXwcg?feature=oembed&autoplay=1&iv_load_policy=3\" frameborder=\"0\" allowfullscreen></iframe>",
+        "video_html_width": 400,
+        "video_html_height": 225,
+        "from_url": "https://www.youtube.com/watch?v=Yxof4sXXwcg",
+        "service_icon": "https://a.slack-edge.com/2089/img/unfurl_icons/youtube.png",
+        "id": 1
+      }
+    ],
+    "ts": "1484406899.001183",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "14de60450",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "you seen this?",
+    "ts": "1484406903.001185",
+    "id": "14de60451",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "To me, this is not serverless",
+    "ts": "1484406914.001186",
+    "id": "14de60452",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "and he tells a few porkies about realm",
+    "ts": "1484406924.001187",
+    "id": "14de60453",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Alexander Stigsen CEO of Realm ex Nokia",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1484407139.000000"
+    },
+    "ts": "1484406928.001188",
+    "id": "14de60454",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": ":smile:",
+    "ts": "1484406931.001189",
+    "id": "14de60455",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3RLY4SLU",
+    "text": "<@U3RLY4SLU|iliadobrev> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1484407086.001190",
+    "id": "14de60456",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "RxJava is frustrating at times, but when you get it right, its beautiful",
+    "ts": "1484407175.001192",
+    "id": "14de60457",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I had this clever login flow, login and register and validate with a single button and I wanted to do it in a single stream",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1484407291.000000"
+    },
+    "ts": "1484407203.001193",
+    "id": "14de60458",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "took me a while, in the end its simple",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1484407221.000000"
+    },
+    "ts": "1484407216.001194",
+    "id": "14de60459",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U061HDV96> if you can share a gist of the code that doesn't work, then I can check into it",
+    "ts": "1484407228.001196",
+    "id": "14de60460",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "I have this wild guess that it probably has to do with version retention on non-autoupdating threads in a  thread pool ",
+    "ts": "1484407257.001197",
+    "id": "14de60461",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "That's typically what most of these bugs are about, background thread queries outside of transactions, with a not-refreshed version of the Realm instance ",
+    "ts": "1484407303.001199",
+    "id": "14de60462",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "So those changes are made on the io thread",
+    "ts": "1484407316.001200",
+    "id": "14de60463",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "The listener is created in the onStart",
+    "ts": "1484407327.001201",
+    "id": "14de60464",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "<@U39P7U6EP> In my case I made sure it was all on looper thread and it still gave me null",
+    "ts": "1484407333.001202",
+    "id": "14de60465",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "On the main thread",
+    "ts": "1484407333.001203",
+    "id": "14de60466",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "And it still gets called",
+    "ts": "1484407341.001204",
+    "id": "14de60467",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "So is the problem that it somehow tries to get those objects to the main thread perhaps and fails?",
+    "ts": "1484407369.001205",
+    "id": "14de60468",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "That seems unlikely",
+    "ts": "1484407475.001206",
+    "id": "14de60469",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "`onStart`? Is this a fragment? ",
+    "ts": "1484407501.001207",
+    "id": "14de60470",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "I've told the Realm people time and time again that they should move the Realm instance open/close to `onCreateView` and `onDestroyView` but that never happened -_-",
+    "ts": "1484407560.001208",
+    "id": "14de60471",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Sorry, I mean onResume",
+    "edited": {
+      "user": "U061HDV96",
+      "ts": "1484407569.000000"
+    },
+    "ts": "1484407566.001209",
+    "id": "14de60472",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "I think change notifications that don't get queued and can get lost are scary",
+    "ts": "1484407599.001211",
+    "id": "14de60473",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "You still busting that Realm T?",
+    "ts": "1484407646.001212",
+    "id": "14de60474",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "If you get a system dialog like an intent chooser and you write while the intent chooser is on screen, then the UI will get desynced",
+    "ts": "1484407652.001213",
+    "id": "14de60475",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "I think ",
+    "ts": "1484407653.001214",
+    "id": "14de60476",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "damn",
+    "ts": "1484407669.001215",
+    "id": "14de60477",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "thats not good",
+    "ts": "1484407671.001216",
+    "id": "14de60478",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I am so glad I use SQlite",
+    "ts": "1484407683.001217",
+    "id": "14de60479",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "I wouldn't put the listener in onResume",
+    "ts": "1484407687.001218",
+    "id": "14de60480",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "I always put them in onCreate and onDestroy, or onCreateView and onDestroView",
+    "ts": "1484407709.001219",
+    "id": "14de60481",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U3E2EEX38> this applies to anything listener based, not just realm ",
+    "ts": "1484407735.001220",
+    "id": "14de60482",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "<@U39P7U6EP> The custom view hate is REAL on reddit, hey?",
+    "ts": "1484407735.001221",
+    "id": "14de60483",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "They love their Multi fragment world",
+    "ts": "1484407759.001222",
+    "id": "14de60484",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I mean activity",
+    "ts": "1484407765.001223",
+    "id": "14de60485",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U3E2EEX38> I think they just hate the fact that I talk about Flow so much, but I am actually a bit frustrated because this wasn't about Flow at all",
+    "ts": "1484407767.001224",
+    "id": "14de60486",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Ye",
+    "ts": "1484407774.001225",
+    "id": "14de60487",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I tried to stick up for you",
+    "ts": "1484407782.001226",
+    "id": "14de60488",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "haha",
+    "ts": "1484407785.001227",
+    "id": "14de60489",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "I know, thank you",
+    "ts": "1484407787.001228",
+    "id": "14de60490",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "np",
+    "ts": "1484407790.001229",
+    "id": "14de60491",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "That guy is a total douchebag",
+    "ts": "1484407808.001230",
+    "id": "14de60492",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "Like, this is specifically not about flow",
+    "ts": "1484407828.001231",
+    "id": "14de60493",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I was arguing with one guy in another thread, and wow 3 years android dev and he didnt understand how Android handle memory",
+    "ts": "1484407838.001232",
+    "id": "14de60494",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "Hahahaha",
+    "ts": "1484407844.001233",
+    "id": "14de60495",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "lmao",
+    "ts": "1484407847.001234",
+    "id": "14de60496",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "Oh yeah I remember that ",
+    "ts": "1484407849.001235",
+    "id": "14de60497",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U39P7U6EP> there was a reason I put them in onResume",
+    "ts": "1484407863.001236",
+    "id": "14de60498",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Let's not get into that now",
+    "ts": "1484407869.001237",
+    "id": "14de60499",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "The guy who claimed that \"having all code in one activity will make android kill it sooner\" ",
+    "ts": "1484407899.001238",
+    "id": "14de60500",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "hahahahaha",
+    "ts": "1484407904.001239",
+    "id": "14de60501",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I had a good laugh",
+    "ts": "1484407909.001240",
+    "id": "14de60502",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "trying to get a shitty HP printer to print some documents",
+    "subtype": "me_message",
+    "user": "U061HDV96",
+    "ts": "1484407914.001241",
+    "id": "14de60503",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "I think he doesn't understand what single activity architect looks like",
+    "ts": "1484407917.001242",
+    "id": "14de60504",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "FUUUUUUUUU",
+    "subtype": "me_message",
+    "user": "U061HDV96",
+    "ts": "1484407919.001243",
+    "id": "14de60505",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "Oh yeah, you're lucky it's not Canon printer tho",
+    "ts": "1484407931.001244",
+    "id": "14de60506",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "He thought we were putting alllogic in one activity",
+    "ts": "1484407931.001245",
+    "id": "14de60507",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "Those are worse",
+    "ts": "1484407934.001246",
+    "id": "14de60508",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Brother is even worse",
+    "ts": "1484407942.001247",
+    "id": "14de60509",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U3E2EEX38> I'm just not sure why he didn't get what we were talking about even after 7 posts XD",
+    "ts": "1484407960.001248",
+    "id": "14de60510",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Well we're filing our VAT stuff",
+    "ts": "1484407965.001249",
+    "id": "14de60511",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "But this mofo is messing with me; <https://i.imgur.com/aNMT9BW.png>",
+    "attachments": [
+      {
+        "fallback": "286x71px image",
+        "image_url": "https://i.imgur.com/aNMT9BW.png",
+        "image_width": 286,
+        "image_height": 71,
+        "image_bytes": 8558,
+        "from_url": "https://i.imgur.com/aNMT9BW.png",
+        "id": 1
+      }
+    ],
+    "ts": "1484407978.001250",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "14de60512",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I tried to keep it civil but in the end he was frustrating me",
+    "ts": "1484407983.001252",
+    "id": "14de60513",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U3E2EEX38> link?",
+    "ts": "1484407998.001253",
+    "id": "14de60514",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U3E2EEX38> I think the backstack I showed was pretty simple. It's what I originally imagined",
+    "ts": "1484408012.001254",
+    "id": "14de60515",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "<https://www.reddit.com/r/androiddev/comments/5ncu53/modern_android_ditching_activities_and_fragments/>",
+    "attachments": [
+      {
+        "service_name": "reddit",
+        "title": "Modern Android: Ditching Activities and Fragments • /r/androiddev",
+        "title_link": "https://www.reddit.com/r/androiddev/comments/5ncu53/modern_android_ditching_activities_and_fragments/",
+        "text": "92 points and 104 comments so far on reddit",
+        "fallback": "reddit: Modern Android: Ditching Activities and Fragments • /r/androiddev",
+        "thumb_url": "https://www.redditstatic.com/icon.png",
+        "from_url": "https://www.reddit.com/r/androiddev/comments/5ncu53/modern_android_ditching_activities_and_fragments/",
+        "thumb_width": 256,
+        "thumb_height": 256,
+        "service_icon": "https://www.reddit.com/favicon.ico",
+        "id": 1
+      }
+    ],
+    "ts": "1484408012.001255",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "14de60516",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "read this whole thread",
+    "ts": "1484408016.001257",
+    "id": "14de60517",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "lol",
+    "ts": "1484408019.001258",
+    "id": "14de60518",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Everyone hates Fragment less and single activity",
+    "ts": "1484408037.001259",
+    "id": "14de60519",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U3E2EEX38> I just need to add the ability to queue state changes and then it'll be pretty stable too, especially for a PoC",
+    "ts": "1484408064.001260",
+    "id": "14de60520",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U3E2EEX38> so who should I look at? I'm not gonna read that all",
+    "ts": "1484408099.001261",
+    "id": "14de60521",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Ye, I think the way you've done it looks nice, can you handle saving state on rotation",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1484408405.000000"
+    },
+    "ts": "1484408103.001262",
+    "id": "14de60522",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "\"This is my username\" is name_gone",
+    "ts": "1484408114.001263",
+    "id": "14de60523",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "ye",
+    "ts": "1484408118.001264",
+    "id": "14de60524",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "hang on",
+    "ts": "1484408121.001265",
+    "id": "14de60525",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "<https://www.reddit.com/r/androiddev/comments/5ncu53/modern_android_ditching_activities_and_fragments/dcbnnu0/>",
+    "attachments": [
+      {
+        "service_name": "reddit",
+        "title": "Modern Android: Ditching Activities and Fragments • /r/androiddev",
+        "title_link": "https://www.reddit.com/r/androiddev/comments/5ncu53/modern_android_ditching_activities_and_fragments/dcbnnu0/",
+        "text": "93 points and 104 comments so far on reddit",
+        "fallback": "reddit: Modern Android: Ditching Activities and Fragments • /r/androiddev",
+        "thumb_url": "https://www.redditstatic.com/icon.png",
+        "from_url": "https://www.reddit.com/r/androiddev/comments/5ncu53/modern_android_ditching_activities_and_fragments/dcbnnu0/",
+        "thumb_width": 256,
+        "thumb_height": 256,
+        "service_icon": "https://www.reddit.com/favicon.ico",
+        "id": 1
+      }
+    ],
+    "ts": "1484408179.001266",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "14de60526",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "`By splitting your application into user activities (not screens!) you give the system some help in how it can manage its resources.`",
+    "ts": "1484408228.001268",
+    "id": "14de60527",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "this is the longest time I've held a reddit account, I usually get peed off with people downvoting for no reason and delete my acount",
+    "ts": "1484408293.001269",
+    "id": "14de60528",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "That guy is such a goof",
+    "ts": "1484408500.001272",
+    "id": "14de60529",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "haha",
+    "ts": "1484408521.001273",
+    "id": "14de60530",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I think hes got two accounts aswell",
+    "ts": "1484408530.001274",
+    "id": "14de60531",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "he uses it to downvote",
+    "ts": "1484408536.001275",
+    "id": "14de60532",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Ugh",
+    "ts": "1484408705.001276",
+    "id": "14de60533",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "This whole Android navigation is just a pain in the fucking ass",
+    "ts": "1484408718.001277",
+    "id": "14de60534",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "It's probably the next thing I'll use a library for",
+    "ts": "1484408732.001278",
+    "id": "14de60535",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "And I heard this from my brother who does iOS dev",
+    "ts": "1484408741.001279",
+    "id": "14de60536",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "\"You literally *need* libraries for Android development\"",
+    "edited": {
+      "user": "U061HDV96",
+      "ts": "1484408754.000000"
+    },
+    "ts": "1484408751.001280",
+    "id": "14de60537",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Well I got two branches, Fragment and fragmentless both use a single activity",
+    "ts": "1484408756.001282",
+    "id": "14de60538",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "It's a big pain and I agree with him",
+    "ts": "1484408759.001283",
+    "id": "14de60539",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "its not that bad",
+    "ts": "1484408770.001284",
+    "id": "14de60540",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Android development without libraries is close to impossible to maintain",
+    "ts": "1484408771.001285",
+    "id": "14de60541",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "And be productive",
+    "ts": "1484408780.001286",
+    "id": "14de60542",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Not really, some libraries cause more problems than they solve",
+    "ts": "1484408796.001287",
+    "id": "14de60543",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "obviously there are a staple of libraries like retrofit , dagger and rxjava",
+    "ts": "1484408825.001288",
+    "id": "14de60544",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "you would be stupid not to use those",
+    "ts": "1484408836.001289",
+    "id": "14de60545",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "but using a library for trivial things is pointless",
+    "ts": "1484408852.001290",
+    "id": "14de60546",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "The fragment version of my app takes slightly longer to load a fragment on certain screens and the animations in and out are a bit harder to manage",
+    "ts": "1484408906.001291",
+    "id": "14de60547",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "but other than that its not too bad",
+    "ts": "1484408922.001292",
+    "id": "14de60548",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "you get some things for free and cleaner code",
+    "ts": "1484408930.001293",
+    "id": "14de60549",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "and you don't have to worry about edge cases when using views",
+    "ts": "1484408992.001294",
+    "id": "14de60550",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Login, register and validate including rest and database call and ui interaction, 87 lines",
+    "ts": "1484409917.001295",
+    "reactions": [
+      {
+        "name": "eyes",
+        "users": [
+          "U3E2EEX38"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "14de60551",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U3E2EEX38> the only edge case I know of is that you don't get an explicit \"please kill yourself\" callback to views when `Activity.onDestroy()` happens",
+    "ts": "1484410054.001296",
+    "id": "14de60552",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "this is especially a problem with viewpagers",
+    "ts": "1484410059.001297",
+    "id": "14de60553",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U061HDV96> navigation can be easily simplified imo if you use your own backstack, i've just started a series of articles on it",
+    "ts": "1484410414.001298",
+    "id": "14de60554",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "Reddit hates it for whatever reason but I think they're just being dicks.",
+    "ts": "1484410421.001299",
+    "id": "14de60555",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Link?",
+    "ts": "1484410433.001300",
+    "id": "14de60556",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I'll refer to it later, I can't do multiple things at the same time",
+    "ts": "1484410443.001301",
+    "id": "14de60557",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3RH3C9RQ",
+    "text": "Aloha everyone! Does anyone know how to do VR/AR dev on Android? If you do, please DM me or post here :slightly_smiling_face:",
+    "ts": "1484410604.001302",
+    "id": "14de60558",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U061HDV96> well it'll become a feasable backstack implementation in part 3 so i guess there is still time, lol",
+    "ts": "1484410724.001303",
+    "id": "14de60559",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "<@U39P7U6EP> Have you completed part 3?",
+    "ts": "1484410810.001304",
+    "id": "14de60560",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I have to admit I didn't encounter any edge cases when using views",
+    "ts": "1484410854.001305",
+    "id": "14de60561",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "i mean, it worked flawlessly but I was using a small bit of reflection",
+    "ts": "1484410881.001306",
+    "id": "14de60562",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I didn't like it",
+    "ts": "1484410889.001307",
+    "id": "14de60563",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Even though the android OS uses reflection",
+    "ts": "1484410906.001308",
+    "id": "14de60564",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U3E2EEX38> i've only needed reflection for parsing annotations",
+    "ts": "1484410929.001309",
+    "id": "14de60565",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "any annotation can be replaced with interfaces",
+    "ts": "1484410934.001310",
+    "id": "14de60566",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I was using reflection to get the class of the view and find the constructor",
+    "ts": "1484410960.001311",
+    "id": "14de60567",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "so I could pass the view class around",
+    "ts": "1484410975.001312",
+    "id": "14de60568",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "and that is what I stored in the back stack",
+    "ts": "1484410987.001313",
+    "id": "14de60569",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "probably a bad idea",
+    "ts": "1484410991.001314",
+    "id": "14de60570",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "lol",
+    "ts": "1484410993.001315",
+    "id": "14de60571",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "<@U39P7U6EP> private `ArrayList&lt;Parcelable&gt; stack = new ArrayList&lt;&gt;();`",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1484411040.000000"
+    },
+    "ts": "1484411033.001316",
+    "id": "14de60572",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "what are you actually storing?",
+    "ts": "1484411058.001318",
+    "id": "14de60573",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I'm a bit confused",
+    "ts": "1484411065.001319",
+    "id": "14de60574",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "what is a key?",
+    "ts": "1484411073.001320",
+    "id": "14de60575",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U3E2EEX38> I need to code the stuff for part 3 and then write part 3 :stuck_out_tongue:",
+    "ts": "1484411153.001321",
+    "id": "14de60576",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "key represents the current state in the application",
+    "ts": "1484411159.001322",
+    "id": "14de60577",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "hmmm",
+    "ts": "1484411177.001323",
+    "id": "14de60578",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "can you explain that",
+    "ts": "1484411182.001324",
+    "id": "14de60579",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "technically in this case it's just a Parcelable that has a `int layout()`  method",
+    "ts": "1484411185.001325",
+    "id": "14de60580",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "right",
+    "ts": "1484411198.001326",
+    "id": "14de60581",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "so an enum?",
+    "ts": "1484411205.001327",
+    "id": "14de60582",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "could be an enum",
+    "ts": "1484411213.001328",
+    "id": "14de60583",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "in this case it's just a single parcelable class",
+    "ts": "1484411218.001329",
+    "id": "14de60584",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<https://github.com/Zhuinden/simple-stack-demo/blob/master/demo-stack-example/src/main/java/com/zhuinden/simplestackdemoexample/demo/FirstKey.java>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "Zhuinden/simple-stack-demo",
+        "title_link": "https://github.com/Zhuinden/simple-stack-demo/blob/master/demo-stack-example/src/main/java/com/zhuinden/simplestackdemoexample/demo/FirstKey.java",
+        "text": "simple-stack-demo - Simple Stack Demo",
+        "fallback": "GitHub: Zhuinden/simple-stack-demo",
+        "thumb_url": "https://avatars3.githubusercontent.com/u/11718392?v=3&s=400",
+        "from_url": "https://github.com/Zhuinden/simple-stack-demo/blob/master/demo-stack-example/src/main/java/com/zhuinden/simplestackdemoexample/demo/FirstKey.java",
+        "thumb_width": 308,
+        "thumb_height": 308,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1484411239.001330",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "14de60585",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Ye i just started looking through it",
+    "ts": "1484411251.001332",
+    "id": "14de60586",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Wait, so you have a class that is parcelable and you are storing that inside an array?",
+    "ts": "1484411279.001333",
+    "id": "14de60587",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "that class extends a viewgroup?",
+    "ts": "1484411298.001334",
+    "id": "14de60588",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "the class that is parcelable returns an `int` that is actually `R.layout.whatever`",
+    "ts": "1484411326.001335",
+    "id": "14de60589",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "based on this parcelable, the `R.layout.whatever` is inflated",
+    "ts": "1484411335.001336",
+    "id": "14de60590",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "right but how to you decouple the logic",
+    "ts": "1484411346.001337",
+    "id": "14de60591",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "bind the view",
+    "ts": "1484411349.001338",
+    "id": "14de60592",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "this `R.layout.whatever` contains a custom viewgroup as root",
+    "ts": "1484411350.001339",
+    "id": "14de60593",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "<@U39P7U6EP> when you inflate the view",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1484411739.000000"
+    },
+    "ts": "1484411358.001340",
+    "id": "14de60594",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "how do you bind it",
+    "ts": "1484411366.001341",
+    "id": "14de60595",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "you would have to have all the elements of every layout",
+    "ts": "1484411383.001342",
+    "id": "14de60596",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "surely?",
+    "ts": "1484411387.001343",
+    "id": "14de60597",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "So you are inflating a view group inside the activity",
+    "ts": "1484411493.001344",
+    "id": "14de60598",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "from the key",
+    "ts": "1484411498.001345",
+    "id": "14de60599",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "how will you attach the buttons and textviews etc",
+    "ts": "1484411524.001346",
+    "id": "14de60600",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "and then bind the view to those",
+    "ts": "1484411538.001347",
+    "id": "14de60601",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "you dont have a view",
+    "ts": "1484411544.001348",
+    "id": "14de60602",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U3E2EEX38> oh that is simple, just look at FirstView",
+    "ts": "1484411816.001350",
+    "id": "14de60603",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<https://github.com/Zhuinden/simple-stack-demo/blob/master/demo-stack-example/src/main/java/com/zhuinden/simplestackdemoexample/demo/FirstView.java#L54-L57>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "Zhuinden/simple-stack-demo",
+        "title_link": "https://github.com/Zhuinden/simple-stack-demo/blob/master/demo-stack-example/src/main/java/com/zhuinden/simplestackdemoexample/demo/FirstView.java#L54-L57",
+        "text": "simple-stack-demo - Simple Stack Demo",
+        "fallback": "GitHub: Zhuinden/simple-stack-demo",
+        "thumb_url": "https://avatars3.githubusercontent.com/u/11718392?v=3&s=400",
+        "from_url": "https://github.com/Zhuinden/simple-stack-demo/blob/master/demo-stack-example/src/main/java/com/zhuinden/simplestackdemoexample/demo/FirstView.java#L54-L57",
+        "thumb_width": 308,
+        "thumb_height": 308,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1484411834.001351",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "14de60604",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "haha",
+    "ts": "1484411984.001353",
+    "id": "14de60605",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I was trying to do something similar",
+    "ts": "1484411990.001354",
+    "id": "14de60606",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "but I couldn't bind to the view",
+    "ts": "1484412014.001355",
+    "id": "14de60607",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I had all sorts of problem",
+    "ts": "1484412019.001356",
+    "id": "14de60608",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I was using rxjava bindings",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1484412084.000000"
+    },
+    "ts": "1484412077.001357",
+    "id": "14de60609",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U3E2EEX38> depends on what you mean by binding, it seems to work fine :open_mouth:",
+    "ts": "1484412239.001359",
+    "id": "14de60610",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "what i do in Flowless is that I call the same method when you either remove the view in state changer, or when onDestroy happens",
+    "ts": "1484412259.001360",
+    "id": "14de60611",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "i might try to integrate your backstack",
+    "ts": "1484412315.001361",
+    "id": "14de60612",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "in another branch",
+    "ts": "1484412322.001362",
+    "id": "14de60613",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "remove my backstack",
+    "ts": "1484412328.001363",
+    "id": "14de60614",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "yours is much cleaner",
+    "ts": "1484412335.001364",
+    "id": "14de60615",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "the simple stack doesn't queue traversals yet",
+    "ts": "1484412371.001365",
+    "id": "14de60616",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "that can cause problems",
+    "ts": "1484412374.001366",
+    "id": "14de60617",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "that is part 3",
+    "ts": "1484412383.001367",
+    "id": "14de60618",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "thats fine mine didnt either",
+    "ts": "1484412411.001368",
+    "id": "14de60619",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "i only went or forward",
+    "ts": "1484412421.001369",
+    "id": "14de60620",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "or directly to a view and then in that case I destroy the stack",
+    "ts": "1484412434.001370",
+    "id": "14de60621",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "forward or back i mean",
+    "ts": "1484412447.001371",
+    "id": "14de60622",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U3E2EEX38> the only thing you can't really avoid is the initializing :smile:",
+    "ts": "1484412465.001372",
+    "id": "14de60623",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "that is a bit of a hack",
+    "ts": "1484412469.001373",
+    "id": "14de60624",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "which part?",
+    "ts": "1484412486.001374",
+    "id": "14de60625",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "ah in the backstack",
+    "ts": "1484412512.001375",
+    "id": "14de60626",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "it will ned animations aswell but that will be trivial to add",
+    "ts": "1484412567.001376",
+    "id": "14de60627",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "goToFrom() or something",
+    "ts": "1484412603.001377",
+    "id": "14de60628",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U3E2EEX38> what Flow does is that animation is the responsibility of the StateChanger",
+    "ts": "1484412781.001378",
+    "id": "14de60629",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "ahh i see",
+    "ts": "1484412792.001379",
+    "id": "14de60630",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "might be better",
+    "ts": "1484412796.001380",
+    "id": "14de60631",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I'm just playing with it at the moment",
+    "ts": "1484412819.001381",
+    "id": "14de60632",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I'm going to test some things",
+    "ts": "1484412826.001382",
+    "id": "14de60633",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "i'm pretty sure if you click the button twice while animating then you'll get a crash or somethin'",
+    "ts": "1484413036.001383",
+    "id": "14de60634",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "which is why i said, state change should be queued",
+    "ts": "1484413048.001384",
+    "id": "14de60635",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "although technically i could just swallow it, saying `if(stateChangeInProgress) return;`",
+    "edited": {
+      "user": "U39P7U6EP",
+      "ts": "1484413061.000000"
+    },
+    "ts": "1484413059.001385",
+    "id": "14de60636",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "well, its actually really nice",
+    "ts": "1484413422.001387",
+    "id": "14de60637",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "im going to integrate it into my view branch",
+    "ts": "1484413434.001388",
+    "id": "14de60638",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U3E2EEX38> currently the view state is not persisted though, it's kinda expected that the state changer will do it - this is how Flow 0.8 worked as well and it wasn't very smart",
+    "ts": "1484413871.001389",
+    "id": "14de60639",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "it's totally something that the library should handle :smile:",
+    "ts": "1484413880.001390",
+    "id": "14de60640",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Ye I will make anew branch and integrate what you have and then modify it",
+    "ts": "1484413897.001391",
+    "id": "14de60641",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "viewstate persistence is part 4",
+    "ts": "1484413908.001392",
+    "id": "14de60642",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "hehe",
+    "ts": "1484413912.001393",
+    "id": "14de60643",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "maybe i should wait then",
+    "ts": "1484413918.001394",
+    "id": "14de60644",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U3E2EEX38> it's not that much magic though, I'm just gonna add it how Flow does it",
+    "ts": "1484414098.001395",
+    "id": "14de60645",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "it keeps a Map of the keys and binds a \"State\" object to it which has the key, the viewstate and a bundle",
+    "ts": "1484414115.001396",
+    "id": "14de60646",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "sounds simple enough",
+    "ts": "1484414138.001397",
+    "id": "14de60647",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "and what it does is that in `onSaveInstanceState()`, it converts it into Parcelable ArrayList as usual and saves it out",
+    "ts": "1484414197.001398",
+    "id": "14de60648",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "it keeps it separate from the keys, most likely so that you can just set a new stack of keys and then it aligns the currently stored State to it",
+    "edited": {
+      "user": "U39P7U6EP",
+      "ts": "1484414341.000000"
+    },
+    "ts": "1484414327.001399",
+    "id": "14de60649",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3QUNE9H7",
+    "text": "<@U3QUNE9H7|taco> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1484415140.001402",
+    "id": "14de60650",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3RHBHCE7",
+    "text": "<@U3RHBHCE7|orionbeast> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1484417147.001403",
+    "id": "14de60651",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3SA9L5K9",
+    "text": "<@U3SA9L5K9|dholmes> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1484417768.001404",
+    "id": "14de60652",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "<@U39P7U6EP> I made an even easier backstack",
+    "ts": "1484421731.001405",
+    "id": "14de60653",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I solved the problem i had before",
+    "ts": "1484421742.001406",
+    "id": "14de60654",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "thanks to your code",
+    "ts": "1484421748.001407",
+    "id": "14de60655",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "Oh my",
+    "ts": "1484421765.001408",
+    "id": "14de60656",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "What was the solution? And the problem? :D",
+    "ts": "1484421781.001409",
+    "id": "14de60657",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I was having trouble binding to views",
+    "ts": "1484421800.001410",
+    "id": "14de60658",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "when I inflate",
+    "ts": "1484421808.001411",
+    "id": "14de60659",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "it was that onInflateFinished wasnt getting called but that is solved",
+    "ts": "1484421828.001412",
+    "id": "14de60660",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I have a simply array list and I just push pop when I change view",
+    "ts": "1484421845.001413",
+    "id": "14de60661",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "You need to use the layout inflater ",
+    "ts": "1484421846.001414",
+    "id": "14de60662",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I was",
+    "ts": "1484421849.001415",
+    "id": "14de60663",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I didnt declare the layout id",
+    "ts": "1484421857.001416",
+    "id": "14de60664",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "as the reference to the class",
+    "ts": "1484421862.001417",
+    "id": "14de60665",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "thats why onInflateFinished wasnt getting called",
+    "ts": "1484421882.001418",
+    "id": "14de60666",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "the root layout id that is",
+    "ts": "1484421896.001419",
+    "id": "14de60667",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "no need for any fancy backstack",
+    "ts": "1484421911.001420",
+    "id": "14de60668",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "you literally declare the back stack in the main activity",
+    "ts": "1484421928.001421",
+    "id": "14de60669",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "haha, im sure there are pitfalls",
+    "ts": "1484421937.001422",
+    "id": "14de60670",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "Flow is funky because it also gives you the previous state",
+    "edited": {
+      "user": "U39P7U6EP",
+      "ts": "1484421978.000000"
+    },
+    "ts": "1484421968.001423",
+    "id": "14de60671",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "when you say state you mean what?",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1484421986.000000"
+    },
+    "ts": "1484421977.001424",
+    "id": "14de60672",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "the positions of elements?",
+    "ts": "1484421998.001427",
+    "id": "14de60673",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "etc",
+    "ts": "1484422006.001428",
+    "id": "14de60674",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "What the stack was before the change ",
+    "ts": "1484422008.001429",
+    "id": "14de60675",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "Going from A B C to D",
+    "ts": "1484422021.001430",
+    "id": "14de60676",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "well thats easy",
+    "ts": "1484422022.001431",
+    "id": "14de60677",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "pop 1",
+    "ts": "1484422028.001432",
+    "id": "14de60678",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "get last",
+    "ts": "1484422030.001433",
+    "id": "14de60679",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "You get both A B C,  and D",
+    "ts": "1484422032.001434",
+    "id": "14de60680",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "push 1",
+    "ts": "1484422034.001435",
+    "id": "14de60681",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I can go A B back to A",
+    "ts": "1484422063.001436",
+    "id": "14de60682",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "For example opening a dashboard after logging in",
+    "ts": "1484422064.001437",
+    "id": "14de60683",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "yes thats easy",
+    "ts": "1484422082.001438",
+    "id": "14de60684",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "Closing the login behind you ",
+    "ts": "1484422083.001439",
+    "id": "14de60685",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "the view is dead when I leave it",
+    "ts": "1484422099.001440",
+    "id": "14de60686",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "i just store the layout id",
+    "ts": "1484422105.001441",
+    "id": "14de60687",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "In my other stack I was saving the state also",
+    "ts": "1484422123.001442",
+    "id": "14de60688",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "well",
+    "ts": "1484422130.001443",
+    "id": "14de60689",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "saving a bundle",
+    "ts": "1484422136.001444",
+    "id": "14de60690",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "so I can have a class that has a layoutid and a bundle",
+    "ts": "1484422155.001445",
+    "id": "14de60691",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "and just use that as my stack class",
+    "ts": "1484422164.001446",
+    "id": "14de60692",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "pass layout to swap view",
+    "ts": "1484422175.001447",
+    "id": "14de60693",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "and get bundle",
+    "ts": "1484422179.001448",
+    "id": "14de60694",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I am maybe being naive, and missing some stuff",
+    "ts": "1484422210.001449",
+    "id": "14de60695",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "but I dont see a problem",
+    "ts": "1484422216.001450",
+    "id": "14de60696",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "atm",
+    "ts": "1484422219.001451",
+    "id": "14de60697",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "shall I upload it to github?",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1484422302.000000"
+    },
+    "ts": "1484422291.001452",
+    "id": "14de60698",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "Sure :+1: ",
+    "ts": "1484422306.001454",
+    "id": "14de60699",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "Storing viewstate in the stack is not safe",
+    "ts": "1484422326.001455",
+    "id": "14de60700",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "That is why Flow detached it",
+    "ts": "1484422334.001456",
+    "id": "14de60701",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "why is it not safe?",
+    "ts": "1484422344.001457",
+    "id": "14de60702",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I can even save for rotations",
+    "ts": "1484422353.001458",
+    "id": "14de60703",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "If you want to set a new history ",
+    "ts": "1484422359.001459",
+    "id": "14de60704",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "what do you mean ? erase it?",
+    "ts": "1484422372.001460",
+    "id": "14de60705",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Its just an array list",
+    "ts": "1484422382.001461",
+    "id": "14de60706",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "Hmm",
+    "ts": "1484422396.001462",
+    "id": "14de60707",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "hehe",
+    "ts": "1484422404.001463",
+    "id": "14de60708",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I think maybe some terms are being confused",
+    "ts": "1484422425.001464",
+    "id": "14de60709",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "like state",
+    "ts": "1484422428.001465",
+    "id": "14de60710",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "When I say state(it can mean the arraylist&lt;Screen&gt;",
+    "ts": "1484422450.001466",
+    "id": "14de60711",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "or",
+    "ts": "1484422453.001467",
+    "id": "14de60712",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "the data ie bundle associated with the screen",
+    "ts": "1484422467.001468",
+    "id": "14de60713",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "or do you mean the view hierarchy?",
+    "ts": "1484422479.001469",
+    "id": "14de60714",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "I mean the SparseArray inside the stack,that isn't safe",
+    "ts": "1484422498.001470",
+    "id": "14de60715",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "I'm not sure why exactly atm",
+    "ts": "1484422505.001471",
+    "id": "14de60716",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "But what does the SparseArray represent",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1484422531.000000"
+    },
+    "ts": "1484422525.001472",
+    "id": "14de60717",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I was  saving this (State) in my arraylist in the other implementation and I had 0 problems",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1484422567.000000"
+    },
+    "ts": "1484422558.001474",
+    "id": "14de60718",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U3E2EEX38> okay, so now that I'm back at a keyboard",
+    "ts": "1484423192.001476",
+    "id": "14de60719",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "i mean that what I store in the stack is a bunch of \"keys\", right",
+    "ts": "1484423203.001477",
+    "id": "14de60720",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "they represent the \"current application state\", as in \"Which View + Parameters\"",
+    "ts": "1484423216.001478",
+    "id": "14de60721",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "but considering it's Parcelable, you might be tempted to make it \"current application state\" + \"current view hierarchy state (SparseArray&lt;Parcelable&gt;) + bundle\"",
+    "ts": "1484423253.001479",
+    "id": "14de60722",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "but storing the appstate + hierarchystate together is not safe... for whatever reason",
+    "ts": "1484423273.001480",
+    "id": "14de60723",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "or at least you need to take extra precautions when you swap the states",
+    "ts": "1484423285.001481",
+    "id": "14de60724",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "in my simple backstack implementation, it just clears the stack and adds the new data",
+    "ts": "1484423301.001482",
+    "id": "14de60725",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I do not need to save the view heirarchy state",
+    "ts": "1484423311.001483",
+    "id": "14de60726",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "ah",
+    "ts": "1484423315.001484",
+    "id": "14de60727",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "there is simply no reason",
+    "ts": "1484423324.001485",
+    "id": "14de60728",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "you kinda should save it somewhere",
+    "ts": "1484423325.001486",
+    "id": "14de60729",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "why though?",
+    "ts": "1484423330.001487",
+    "id": "14de60730",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "so that if you are writing into an edit text and you rotate the screen, then you don't lose it",
+    "ts": "1484423341.001488",
+    "id": "14de60731",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "or the selection in a spinner",
+    "ts": "1484423345.001489",
+    "id": "14de60732",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "things like that",
+    "ts": "1484423347.001490",
+    "id": "14de60733",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I did that at first in my old implementation",
+    "ts": "1484423349.001491",
+    "id": "14de60734",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "well, unless you actually do 100% pure mvp",
+    "ts": "1484423354.001492",
+    "id": "14de60735",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "All I do is save the data in the edit text and restore it",
+    "ts": "1484423372.001493",
+    "id": "14de60736",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "which can set up the views even from the persisted state of presenter",
+    "ts": "1484423372.001494",
+    "id": "14de60737",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U3E2EEX38> well that is not a bad idea",
+    "ts": "1484423387.001495",
+    "id": "14de60738",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "i dont need to save the whole hierarchy for that",
+    "ts": "1484423395.001496",
+    "id": "14de60739",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "the hierarchy is just recreated new",
+    "ts": "1484423411.001497",
+    "id": "14de60740",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "the presenter is new too",
+    "ts": "1484423421.001498",
+    "id": "14de60741",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "that would definitely fix some things like, BadParcelException",
+    "ts": "1484423426.001499",
+    "id": "14de60742",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "but then you don't store the recyclerview scroll state, for example",
+    "ts": "1484423432.001500",
+    "id": "14de60743",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "yes you can",
+    "ts": "1484423439.001501",
+    "id": "14de60744",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I did that too",
+    "ts": "1484423442.001502",
+    "id": "14de60745",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "so when you rotate the screen, your recyclerview jumps to top",
+    "ts": "1484423443.001503",
+    "id": "14de60746",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "oh?",
+    "ts": "1484423446.001504",
+    "id": "14de60747",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "you can grab the recycler state from the layout manager",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1484423467.000000"
+    },
+    "ts": "1484423457.001505",
+    "id": "14de60748",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "hmm",
+    "ts": "1484423465.001507",
+    "id": "14de60749",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "you save the position",
+    "ts": "1484423476.001510",
+    "id": "14de60750",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "and restore when you recreate",
+    "ts": "1484423485.001511",
+    "id": "14de60751",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I have an example of this",
+    "ts": "1484423491.001512",
+    "id": "14de60752",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "you just take the postion in x y",
+    "ts": "1484423522.001513",
+    "id": "14de60753",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "or you can take the position as in the current element",
+    "ts": "1484423538.001514",
+    "id": "14de60754",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Persisting the presenter is not good in my opinion, you get bad references left behind",
+    "ts": "1484423595.001515",
+    "id": "14de60755",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "requires some kind of hacky stuff",
+    "ts": "1484423605.001516",
+    "id": "14de60756",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "views can override onSaveinstance and save a bundle",
+    "ts": "1484423670.001517",
+    "id": "14de60757",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "you just intercept the bundle",
+    "ts": "1484423682.001518",
+    "id": "14de60758",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "and save it",
+    "ts": "1484423687.001519",
+    "id": "14de60759",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "well there is multiple ways",
+    "ts": "1484423719.001520",
+    "id": "14de60760",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Ill upload this to git hub gonna remove the rx stuff",
+    "ts": "1484423759.001521",
+    "id": "14de60761",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U3E2EEX38> persisting presenter is bad, I'd persist its state",
+    "ts": "1484423904.001522",
+    "id": "14de60762",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "ye",
+    "ts": "1484423912.001523",
+    "id": "14de60763",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "overriding view.onSaveInstanceState is scary btw",
+    "ts": "1484423922.001524",
+    "id": "14de60764",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "why?",
+    "ts": "1484423928.001525",
+    "id": "14de60765",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "because it has this `BaseSavedState` thing going on",
+    "ts": "1484423932.001526",
+    "id": "14de60766",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Ive done it perfectly fine",
+    "ts": "1484423936.001527",
+    "id": "14de60767",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "with 10 views",
+    "ts": "1484423940.001528",
+    "id": "14de60768",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "so it can act in unexpected ways",
+    "ts": "1484423944.001529",
+    "id": "14de60769",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "never did :slightly_smiling_face:",
+    "ts": "1484423950.001530",
+    "id": "14de60770",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "I'd be wary in case of things like, RecyclerView",
+    "ts": "1484423951.001531",
+    "id": "14de60771",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "and other support-library things",
+    "ts": "1484423959.001532",
+    "id": "14de60772",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I havnt had a problem",
+    "ts": "1484423978.001533",
+    "id": "14de60773",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "im not saving anything in this example",
+    "ts": "1484424041.001534",
+    "id": "14de60774",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "its the same as your example except I dont save anything",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1484426720.000000"
+    },
+    "ts": "1484424054.001535",
+    "id": "14de60775",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "and it has 3 files",
+    "ts": "1484424071.001536",
+    "id": "14de60776",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "each with 50-60 lines",
+    "ts": "1484424077.001537",
+    "id": "14de60777",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": ":slightly_smiling_face:",
+    "ts": "1484424081.001538",
+    "id": "14de60778",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "you have to override dispatchSaveInstanceState",
+    "ts": "1484424171.001539",
+    "id": "14de60779",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "when you are saving in custom view",
+    "ts": "1484424183.001540",
+    "id": "14de60780",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "thats maybe why you had a problem",
+    "ts": "1484424231.001541",
+    "id": "14de60781",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "ah that is possible",
+    "ts": "1484424433.001542",
+    "id": "14de60782",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "although that is what automatizes the state saving of the child views",
+    "ts": "1484424447.001543",
+    "id": "14de60783",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "i think",
+    "ts": "1484424449.001544",
+    "id": "14de60784",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "<@U39P7U6EP> What do you think? It is super simple and I haven't accounted for many things but that's the basic idea",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1484424903.000000"
+    },
+    "ts": "1484424887.001545",
+    "id": "14de60785",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "if you had a presenter",
+    "ts": "1484424923.001547",
+    "id": "14de60786",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "you can just call switchview on the view",
+    "ts": "1484424932.001548",
+    "id": "14de60787",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U3E2EEX38> while it makes sense to store the `Stack&lt;Integer&gt;`, the question arises how you open a view and give it a parameter (for example, you have a list view showing a recyclerview of posts, and you click a post, and you should know what ID your PostView should show)",
+    "ts": "1484428607.001550",
+    "id": "14de60788",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "and also lack of `onSaveInstanceState()` means that you lose where you are on process death",
+    "ts": "1484428622.001551",
+    "id": "14de60789",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "and i think on config change too",
+    "ts": "1484428646.001552",
+    "id": "14de60790",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "that is for the example, realistically I would have a class that stores a bundle and the layout id",
+    "ts": "1484428656.001553",
+    "id": "14de60791",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "and I can easily save everything",
+    "ts": "1484428670.001554",
+    "id": "14de60792",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "also `((MainActivity)context).switchView(layoutResID, 1);` is not actually necessarily `MainActivity` as context",
+    "ts": "1484428678.001555",
+    "id": "14de60793",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "people have found that the direct context in a view can be `ContextThemeWrapper`",
+    "ts": "1484428689.001556",
+    "id": "14de60794",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "ye, like I said it was a quick example",
+    "ts": "1484428703.001557",
+    "id": "14de60795",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "probably a thing on API lower than 21",
+    "ts": "1484428706.001558",
+    "id": "14de60796",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "i see",
+    "ts": "1484428708.001559",
+    "id": "14de60797",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "parametrization of the view seems to be an issue if the layout identifier is the only thing stored",
+    "ts": "1484428721.001560",
+    "id": "14de60798",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "why?",
+    "ts": "1484428729.001561",
+    "id": "14de60799",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "you inflate the view from the layout ID",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1484428748.000000"
+    },
+    "ts": "1484428742.001562",
+    "id": "14de60800",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I will flesh it out and show you",
+    "ts": "1484428768.001564",
+    "id": "14de60801",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "its easy to get the ID on an element from a recycler",
+    "ts": "1484428789.001565",
+    "id": "14de60802",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "you can just send it in a bundle",
+    "ts": "1484428805.001566",
+    "id": "14de60803",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "a bundle?",
+    "ts": "1484428816.001567",
+    "id": "14de60804",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "the view switch can have a bundle argument",
+    "ts": "1484428819.001568",
+    "id": "14de60805",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "and you can save any data",
+    "ts": "1484428826.001569",
+    "id": "14de60806",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "to share across views",
+    "ts": "1484428831.001570",
+    "id": "14de60807",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "hmm",
+    "ts": "1484428839.001571",
+    "id": "14de60808",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "i guess that can work",
+    "ts": "1484428843.001572",
+    "id": "14de60809",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I've done this very thing",
+    "ts": "1484428845.001573",
+    "id": "14de60810",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "in my old implementation",
+    "ts": "1484428853.001574",
+    "id": "14de60811",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "that's what the Android framework does too, after all :smile:",
+    "ts": "1484428856.001575",
+    "id": "14de60812",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "yes",
+    "ts": "1484428859.001576",
+    "id": "14de60813",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Bundle bundle = New Bundle()",
+    "ts": "1484428868.001577",
+    "id": "14de60814",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "someone needs to keep track of the sent bundle",
+    "ts": "1484428870.001578",
+    "id": "14de60815",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "but yes",
+    "ts": "1484428872.001579",
+    "id": "14de60816",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "the activity",
+    "ts": "1484428875.001580",
+    "id": "14de60817",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "(for sake of persistence)",
+    "ts": "1484428877.001581",
+    "id": "14de60818",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "or",
+    "ts": "1484428878.001582",
+    "id": "14de60819",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "you have a field",
+    "ts": "1484428884.001583",
+    "id": "14de60820",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "in the screen class",
+    "ts": "1484428887.001584",
+    "id": "14de60821",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "layoutId and bundle as fields",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1484428910.000000"
+    },
+    "ts": "1484428895.001585",
+    "id": "14de60822",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "`Class Screen int layoutId, Bundle data`",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1484428945.000000"
+    },
+    "ts": "1484428937.001587",
+    "id": "14de60823",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "`stack&lt;Screen&gt; backstack`",
+    "ts": "1484428961.001589",
+    "id": "14de60824",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I will improve it to have persistence",
+    "ts": "1484428998.001590",
+    "id": "14de60825",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U3E2EEX38> yeah, persistence is the real hassle :smile:",
+    "ts": "1484430667.001591",
+    "id": "14de60826",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "otherwise it's pretty much just list manipulation",
+    "ts": "1484430675.001592",
+    "id": "14de60827",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "ye its a bit of a pain",
+    "ts": "1484430686.001593",
+    "id": "14de60828",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I remember now why I create the class via refelction",
+    "ts": "1484430706.001594",
+    "id": "14de60829",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "lol",
+    "ts": "1484430707.001595",
+    "id": "14de60830",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18E0PY49",
+    "text": "When you’re starting to love realm and then realize that you can’t have a realmlist of strings :{",
+    "ts": "1484431053.001596",
+    "id": "14de60831",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18E0PY49",
+    "text": "Is there any easy workaround for this ?",
+    "ts": "1484431071.001597",
+    "id": "14de60832",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U18E0PY49> create a class that contains a String",
+    "ts": "1484431523.001598",
+    "id": "14de60833",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "And have it extend RealmObject. That unfortunately is the only way.",
+    "ts": "1484431539.001599",
+    "id": "14de60834",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "If you'd like a better approach, show your support here: <https://github.com/realm/realm-java/issues/1694>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "Support for custom TypeAdapters · Issue #1694 · realm/realm-java · GitHub",
+        "title_link": "https://github.com/realm/realm-java/issues/1694",
+        "text": "Have you considered a way to support custom data types? Maybe by registering a type converter? ORMs like GreenDao support this feature and its very useful. We're currently using the @ignore workaro...",
+        "fallback": "GitHub: Support for custom TypeAdapters · Issue #1694 · realm/realm-java",
+        "thumb_url": "https://avatars2.githubusercontent.com/u/2387680?v=3&s=400",
+        "from_url": "https://github.com/realm/realm-java/issues/1694",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "service_icon": "https://a.slack-edge.com/bfaba/img/unfurl_icons/github.png",
+        "id": 1
+      }
+    ],
+    "ts": "1484431576.001600",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "14de60835",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18E0PY49",
+    "text": "I implemented this, however when I make retrofit-gson calls it doesn’t seem to recongnize the field",
+    "ts": "1484431655.001602",
+    "id": "14de60836",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Create a converter for it",
+    "ts": "1484431674.001603",
+    "id": "14de60837",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Should be easy enough",
+    "ts": "1484431679.001604",
+    "id": "14de60838",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18E0PY49",
+    "text": "got it",
+    "ts": "1484431687.001605",
+    "id": "14de60839",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3RL8UJ66",
+    "text": "<@U3RL8UJ66|riper> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1484431707.001606",
+    "id": "14de60840",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Look up how you create a converter for gson, it should be easy to create it going off of the existing converters and examples online.",
+    "ts": "1484431731.001607",
+    "id": "14de60841",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Would still love to have your voice heard on that issue",
+    "ts": "1484431751.001608",
+    "id": "14de60842",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Realm currently has its priorities wrong me and <@U39P7U6EP> think because of their Realm Server \"mistake\"",
+    "ts": "1484431779.001609",
+    "id": "14de60843",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3QUNE9H7",
+    "text": "<@U3QUNE9H7|taco> has left the channel",
+    "subtype": "channel_leave",
+    "ts": "1484433532.001610",
+    "id": "14de60844",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "<@U39P7U6EP> Ye its impossible",
+    "ts": "1484434273.001611",
+    "id": "14de60845",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "you need to use reflection or some other system possibly the way you were going to do it",
+    "ts": "1484434300.001612",
+    "id": "14de60846",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "you can't save data on the view without a reference to the class",
+    "ts": "1484434321.001613",
+    "id": "14de60847",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3RL8UJ66",
+    "text": "I have a Google Map gm with an ImageView iv on top. iv has a ClickListener and a TouchListener. When dragging iv, is it possible to let the map get the event (expected result: map is panned)? Returning false in iv's touchlistener does not help.",
+    "ts": "1484438875.001614",
+    "id": "14de60848",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Yes its possible",
+    "ts": "1484446243.001615",
+    "id": "14de60849",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3RPP8P28",
+    "text": "<@U3RPP8P28|appfoundry> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1484457401.001616",
+    "id": "14de60850",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

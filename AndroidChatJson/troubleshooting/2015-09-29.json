@@ -1,0 +1,972 @@
+[
+  {
+    "user": "U09NV6N8J",
+    "text": "Hello, it’s my first time trying to ask a question here — does anyone have experience with unit testing?  I think my eyes are just foggy from looking at this and there’s something obvious I’m not trying (symbol not found).",
+    "ts": "1443516656.000507",
+    "id": "29tr2488",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09NV6N8J",
+    "text": "I have a symbol not found error but I think my eyes are simply missing the possible cause.\n\nI have a public class a.b.c.X in src/main/a/b/c/X.java and I made a unit test in test/java/a/b/c/XTest.java.   I added to the package’s build.gradle:\n sourceSet { \n   test {\n     java.srcDirs = ['test/java']\n   }\n}\n\nIt compiles and runs a empty Robolectric unit test.\n\nBut when I try to declare X inside of XTest.java, I get the symbol not found issue.  Any ideas?",
+    "ts": "1443516685.000508",
+    "id": "29tr2489",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "has anyone managed to make a xml drawable version of the android's indeterminate circular progressbar?",
+    "ts": "1443525853.000509",
+    "id": "29tr2490",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "im trying to show an indeterminate circular progressbar as the placeholder for my images loaded via picasso",
+    "ts": "1443525919.000510",
+    "id": "29tr2491",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "<@U054A24ET>: despite that actually possible through &lt;animation-list&gt;, you also need to start your animation from code somehow. I suggest you just use progressbar in your layout file and set its visibility to GONE once the image is loaded using onSuccess() method from Picasso callback",
+    "ts": "1443528348.000511",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U08GFT5V5"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "29tr2492",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "yea but that's going to involve me adding quite a bit of code to my image-heavy app",
+    "ts": "1443528845.000512",
+    "id": "29tr2493",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "im exploring <https://github.com/Sefford/CircularProgressDrawable>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "Sefford/CircularProgressDrawable",
+        "title_link": "https://github.com/Sefford/CircularProgressDrawable",
+        "text": "CircularProgressDrawable - A drawable with capabilities to indicate progress.",
+        "fallback": "GitHub: Sefford/CircularProgressDrawable",
+        "thumb_url": "https://avatars2.githubusercontent.com/u/878293?v=3&s=400",
+        "from_url": "https://github.com/Sefford/CircularProgressDrawable",
+        "thumb_width": 227,
+        "thumb_height": 227,
+        "id": 1
+      }
+    ],
+    "ts": "1443528876.000513",
+    "id": "29tr2494",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "not sure if Picasso will animate it",
+    "ts": "1443528890.000515",
+    "id": "29tr2495",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "hmm, I actually took a quick look into the source code and found something interesting\n```static void setPlaceholder(ImageView target, Drawable placeholderDrawable) {\n    target.setImageDrawable(placeholderDrawable);\n    if (target.getDrawable() instanceof AnimationDrawable) {\n      ((AnimationDrawable) target.getDrawable()).start();\n    }\n  }```",
+    "edited": {
+      "user": "U0830HE7P",
+      "ts": "1443529546.000000"
+    },
+    "ts": "1443529459.000516",
+    "reactions": [
+      {
+        "name": "ok_hand",
+        "users": [
+          "U0548MM6B"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "29tr2496",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "so looks like if you pass drawable from R.anim, it will start the animation",
+    "ts": "1443529599.000523",
+    "id": "29tr2497",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "try it, I don't have projects with Picasso right now",
+    "ts": "1443529647.000524",
+    "id": "29tr2498",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U09NV6N8J>: can you use the preformatted tags ``` around your code in the future?",
+    "edited": {
+      "user": "U061HDV96",
+      "ts": "1443538444.000000"
+    },
+    "ts": "1443538424.000525",
+    "id": "29tr2499",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "&lt;- Or you can post a snippet when clicking on the plus",
+    "ts": "1443538471.000529",
+    "id": "29tr2500",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09NV6N8J",
+    "text": "oh sorry!",
+    "ts": "1443538940.000530",
+    "id": "29tr2501",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09NV6N8J",
+    "text": "thanks",
+    "ts": "1443538943.000531",
+    "id": "29tr2502",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "per your question not sure what’s wrong there :x but i don’t test much",
+    "ts": "1443538996.000532",
+    "id": "29tr2503",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09NV6N8J",
+    "text": "hahaha",
+    "ts": "1443539006.000533",
+    "id": "29tr2504",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09NV6N8J",
+    "text": "I can see why :disappointed:",
+    "ts": "1443539010.000534",
+    "id": "29tr2505",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "thanks <@U0830HE7P>",
+    "ts": "1443541346.000535",
+    "id": "29tr2506",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "i'll take a look into it!",
+    "ts": "1443541355.000536",
+    "id": "29tr2507",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053Q5XP2",
+    "text": "Does anyone know why onBackPressed would stop being called after the hardware menu button is clicked on a samsung device?",
+    "ts": "1443550436.000537",
+    "id": "29tr2508",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "What do you mean <@U053Q5XP2>",
+    "ts": "1443550546.000538",
+    "id": "29tr2509",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053Q5XP2",
+    "text": "I press the hardware menu button, and nothing happens, as it should. But now clicking back doesn’t trigger onBackPressed, although it does trigger onKeyDown. I’m trying to figure out why it’s not reaching onBackPressed now",
+    "ts": "1443550618.000539",
+    "id": "29tr2510",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "So you want the good news or the bad news/",
+    "ts": "1443550817.000540",
+    "id": "29tr2511",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053Q5XP2",
+    "text": "give it to me straight doc",
+    "ts": "1443550824.000541",
+    "id": "29tr2512",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "<https://code.google.com/p/android/issues/detail?id=183334>",
+    "ts": "1443550834.000542",
+    "id": "29tr2513",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "<https://code.google.com/p/android/issues/detail?id=184449>",
+    "ts": "1443550838.000543",
+    "id": "29tr2514",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Bug in appcompat 23",
+    "ts": "1443550844.000544",
+    "id": "29tr2515",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053Q5XP2",
+    "text": "uuuuugh, i just saw the answer on this <http://stackoverflow.com/questions/29852303/upgraded-to-appcompat-v22-1-0-and-now-onkeydown-and-onkeyup-are-not-triggered-wh>\n\nAnd thought it was fixed...",
+    "attachments": [
+      {
+        "title": "Upgraded to AppCompat v22.1.0 and now onKeyDown and onKeyUp are not triggered when menu key is pressed",
+        "title_link": "http://stackoverflow.com/questions/29852303/upgraded-to-appcompat-v22-1-0-and-now-onkeydown-and-onkeyup-are-not-triggered-wh",
+        "text": "I've just upgraded my app to use the newly released v22.1.0 AppCompat and now onKeyDown and onKeyUp are not triggered when menu key is pressed. The other keys correctly trigger onKeyDown and onKeyU...",
+        "fallback": "Upgraded to AppCompat v22.1.0 and now onKeyDown and onKeyUp are not triggered when menu key is pressed",
+        "thumb_url": "http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/questions/29852303/upgraded-to-appcompat-v22-1-0-and-now-onkeydown-and-onkeyup-are-not-triggered-wh",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "id": 1
+      }
+    ],
+    "ts": "1443550898.000545",
+    "id": "29tr2516",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053Q5XP2",
+    "text": "well, at least it’s not my fault, and assigning blame is half the battle",
+    "ts": "1443550914.000547",
+    "id": "29tr2517",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053Q5XP2",
+    "text": "at least onKeyDown is called, but idk how im going to twist the back logic to work right without changing it all over the place. I didn’t expect them to break the back functionality.",
+    "ts": "1443550968.000548",
+    "id": "29tr2518",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Umm… can do a key event, but eh",
+    "ts": "1443551242.000549",
+    "id": "29tr2519",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053Q5XP2",
+    "text": "well, it’s not like I have much of a choice. Now I’m just triggering onBackPressed manually from onKeyDown",
+    "ts": "1443551474.000550",
+    "id": "29tr2520",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09NV6N8J",
+    "text": "In case anyone is interested unit tests, removing the androidTest rule from build.gradle, shuffling files around and following the suggestion <http://tools.android.com/tech-docs/unit-testing-support> to store code and then undoing exactly that with a bunch of gradle syncs seems have fixed the issue.",
+    "attachments": [
+      {
+        "title": "Unit testing support - Android Tools Project Site",
+        "title_link": "http://tools.android.com/tech-docs/unit-testing-support",
+        "text": "Android tools project information site",
+        "fallback": "Unit testing support - Android Tools Project Site",
+        "image_url": "http://tools.android.com/_/rsrc/1423155524754/tech-docs/unit-testing-support/8wr52G5GHf.png?height=129&width=400",
+        "from_url": "http://tools.android.com/tech-docs/unit-testing-support",
+        "image_width": 400,
+        "image_height": 129,
+        "image_bytes": 21113,
+        "id": 1
+      }
+    ],
+    "ts": "1443554260.000551",
+    "id": "29tr2521",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09NV6N8J",
+    "text": "I’m pretending the problem has gone away :innocent:",
+    "ts": "1443554280.000553",
+    "id": "29tr2522",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "which androidTest rule?",
+    "ts": "1443554483.000554",
+    "id": "29tr2523",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09NV6N8J",
+    "text": "sorry, the one in sourceSets",
+    "ts": "1443554518.000555",
+    "id": "29tr2524",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "ah",
+    "ts": "1443554523.000556",
+    "id": "29tr2525",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09NV6N8J",
+    "text": "I do not believe that’s the actual issue as I have branch where it works with both source set declarations",
+    "ts": "1443554592.000557",
+    "id": "29tr2526",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09NV6N8J",
+    "text": "In any case, always terrible practice to solve your programming problems with hoodoo",
+    "ts": "1443554710.000558",
+    "id": "29tr2527",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "that’s why i’m trying to learn more about gradle, i feel like the build process is magic right now but there’s a lot you can do with it if you know what you’re doing",
+    "ts": "1443554891.000559",
+    "id": "29tr2528",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "and most of my troubleshooting with builds is just running some command someone told me to do",
+    "ts": "1443554900.000560",
+    "id": "29tr2529",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "the build process is magic",
+    "ts": "1443554947.000561",
+    "id": "29tr2530",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "dynamic garbage",
+    "ts": "1443554956.000562",
+    "id": "29tr2531",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09NV6N8J",
+    "text": "HA, the idea is that reproducibility is supposed to help us right?  If only it were reproducible...",
+    "ts": "1443554968.000563",
+    "id": "29tr2532",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<@U0546QERR>: magic = <https://twitter.com/cyrilmottier/status/647360417224884224/photo/1>",
+    "attachments": [
+      {
+        "fallback": "<https://twitter.com/cyrilmottier|@cyrilmottier>: Here's a nice print-and-stick-to-the-wall diagram to clear things up a bit regarding the Android build workflow. <https://pbs.twimg.com/media/CPvi3mnWcAAge1u.png>",
+        "ts": 1443177725,
+        "author_name": "Cyril Mottier",
+        "author_link": "https://twitter.com/cyrilmottier/status/647360417224884224",
+        "author_icon": "https://pbs.twimg.com/profile_images/425559011409158144/yrccrk4F_normal.jpeg",
+        "author_subname": "@cyrilmottier",
+        "text": "Here's a nice print-and-stick-to-the-wall diagram to clear things up a bit regarding the Android build workflow. <https://pbs.twimg.com/media/CPvi3mnWcAAge1u.png>",
+        "service_name": "twitter",
+        "service_url": "https://twitter.com/",
+        "image_url": "https://pbs.twimg.com/media/CPvi3mnWcAAge1u.png",
+        "image_width": 600,
+        "image_height": 654,
+        "image_bytes": 181641,
+        "from_url": "https://twitter.com/cyrilmottier/status/647360417224884224/photo/1",
+        "id": 1,
+        "footer": "Twitter",
+        "footer_icon": "https://a.slack-edge.com/6e067/img/services/twitter_pixel_snapped_32.png"
+      }
+    ],
+    "ts": "1443554975.000564",
+    "id": "29tr2533",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "yummy",
+    "ts": "1443554994.000566",
+    "id": "29tr2534",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09NV6N8J",
+    "text": "NICE...",
+    "ts": "1443554998.000567",
+    "id": "29tr2535",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "need to make that into a poster",
+    "ts": "1443555014.000568",
+    "id": "29tr2536",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

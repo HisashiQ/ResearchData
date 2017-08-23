@@ -1,0 +1,1034 @@
+[
+  {
+    "user": "U060Q7J2Y",
+    "text": "hiya",
+    "ts": "1439045873.001655",
+    "id": "08de6235",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08QJGGV7",
+    "text": "hi",
+    "ts": "1439046449.001656",
+    "id": "08de6236",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08751MSR",
+    "text": "Hi guys, I have a little issue with the fragment backstack",
+    "ts": "1439052471.001657",
+    "id": "08de6237",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08751MSR",
+    "text": "I have an activity with two fragments",
+    "ts": "1439052490.001658",
+    "id": "08de6238",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08751MSR",
+    "text": "a sidebar fragment",
+    "ts": "1439052495.001659",
+    "id": "08de6239",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08751MSR",
+    "text": "and a main fragment",
+    "ts": "1439052500.001660",
+    "id": "08de6240",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08751MSR",
+    "text": "When I click an item in the sidebar fragment, the main fragment is replaced with a detail fragment and the transaction is added to the backstack",
+    "ts": "1439052542.001661",
+    "id": "08de6241",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08751MSR",
+    "text": "However, when I press the back button, the application closes",
+    "ts": "1439052563.001662",
+    "id": "08de6242",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08751MSR",
+    "text": "Is this expected behaviour, or do I miss something ?",
+    "ts": "1439052585.001663",
+    "id": "08de6243",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08QJGGV7",
+    "text": "I think you need to handle the fact that the stack is now the place to go to when figuring out where to go back",
+    "ts": "1439054995.001664",
+    "id": "08de6244",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08QJGGV7",
+    "text": "I don’t think that pressing the back button will automatically mean that \"if there was a fragment backstack, use that to know where to go next\"",
+    "ts": "1439055022.001665",
+    "id": "08de6245",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08QJGGV7",
+    "text": "you have to say so",
+    "ts": "1439055025.001666",
+    "id": "08de6246",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08QJGGV7",
+    "text": "pressing back in such a UI is expected to leave the application, not go back one fragment, I think",
+    "ts": "1439055084.001667",
+    "id": "08de6247",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "has anyone tried implementing like any of the new android m features",
+    "ts": "1439062378.001668",
+    "id": "08de6248",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I can't find any substantial information on them and their snippets on the new api's are fairly lacking in information",
+    "ts": "1439062404.001669",
+    "id": "08de6249",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I am getting the impression most or all of the features just don't work on the emulator",
+    "ts": "1439062421.001670",
+    "id": "08de6250",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "yeah, ive not found any reliable resources on it yet",
+    "ts": "1439065766.001671",
+    "id": "08de6251",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08QJGGV7",
+    "text": "depends, what do you want to achieve",
+    "ts": "1439065808.001672",
+    "id": "08de6252",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08QJGGV7",
+    "text": "all of the info fall under the respective API and developer documentation, there’s not going to be some extra special page for all of the new things (there is for Material design though, just design)",
+    "ts": "1439065849.001673",
+    "id": "08de6253",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08QJGGV7",
+    "text": "there’s some great videos out there about the most significant change under M, which is the granular permissions system",
+    "ts": "1439065889.001674",
+    "id": "08de6254",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "pretty much all of it",
+    "ts": "1439067811.001675",
+    "id": "08de6255",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "try using the assist api, or direct share, or hell even the themeable color state list",
+    "ts": "1439067826.001676",
+    "id": "08de6256",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I can use ? lookups in the color state list but I can't override the colors in sub themes it seems",
+    "ts": "1439067848.001677",
+    "id": "08de6257",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I was hoping to find the source for the api demos that is in the emulator but was not able to find it",
+    "ts": "1439067909.001678",
+    "id": "08de6258",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I wanted to do a talk on the new api features in M as I did one on L about a month before it released and it went really well",
+    "ts": "1439067985.001679",
+    "id": "08de6259",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "this time around it seems im SOL",
+    "ts": "1439067991.001680",
+    "id": "08de6260",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08QJGGV7",
+    "text": "I say let it get released first",
+    "ts": "1439068116.001681",
+    "id": "08de6261",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08QJGGV7",
+    "text": "as for finding the stuff, havent searched myself but I rely on their docs consistency in my answer above",
+    "ts": "1439068143.001682",
+    "id": "08de6262",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "isn't the entire point of the preview to be to use the preview...",
+    "ts": "1439068196.001683",
+    "id": "08de6263",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08QJGGV7",
+    "text": "try hitting IRC on Freenode",
+    "ts": "1439068216.001684",
+    "id": "08de6264",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08QJGGV7",
+    "text": "#android-dev",
+    "ts": "1439068219.001685",
+    "id": "08de6265",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "blerg",
+    "ts": "1439068338.001686",
+    "id": "08de6266",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "i just wish <https://android.googlesource.com/platform/development.git/+/android-m-preview-1> had the implementations im seeing in the emulator api demos",
+    "ts": "1439068351.001687",
+    "id": "08de6267",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "isn't that APIDemos app totally outdated?",
+    "ts": "1439068981.001688",
+    "id": "08de6268",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "nope",
+    "ts": "1439069022.001689",
+    "id": "08de6269",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "hm, don't have an M emu on that PC",
+    "ts": "1439069067.001690",
+    "id": "08de6270",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "in the M emulator it hooks to the new text selection for instance via android.intent.action.PROCESS_TEXT",
+    "ts": "1439069070.001691",
+    "id": "08de6271",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "then they didn't push the new source here <https://github.com/android/platform_development/tree/android-m-preview-1/samples>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "android/platform_development",
+        "title_link": "https://github.com/android/platform_development/tree/android-m-preview-1/samples",
+        "text": "Contribute to platform_development development by creating an account on GitHub.",
+        "fallback": "GitHub: android/platform_development",
+        "thumb_url": "https://avatars1.githubusercontent.com/u/30177?v=3&s=400",
+        "from_url": "https://github.com/android/platform_development/tree/android-m-preview-1/samples",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1439069231.001692",
+    "id": "08de6272",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "weird",
+    "ts": "1439069237.001694",
+    "id": "08de6273",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "nope.. <https://github.com/android/platform_development/search?utf8=%E2%9C%93&amp;q=android.intent.action.PROCESS_TEXT>",
+    "ts": "1439069257.001695",
+    "id": "08de6274",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "they did not",
+    "ts": "1439069264.001696",
+    "id": "08de6275",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "which is frustrating, how can we comment on the preview when we can't figure out how to use it",
+    "ts": "1439069282.001697",
+    "id": "08de6276",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "guess that's going to be my comment to them",
+    "ts": "1439069293.001698",
+    "id": "08de6277",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "you can't put docs and source in 19 places then expect quality feedback",
+    "ts": "1439069310.001699",
+    "id": "08de6278",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "maybe you find something on a private blog of one of the devs :smile:",
+    "ts": "1439069393.001700",
+    "id": "08de6279",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "that seems like a legit doc source for them :stuck_out_tongue_winking_eye:",
+    "ts": "1439069404.001701",
+    "id": "08de6280",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "lol",
+    "ts": "1439069405.001702",
+    "id": "08de6281",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "well guess I'll grab the MNC samples and grep those",
+    "ts": "1439069429.001703",
+    "id": "08de6282",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "see if maybe i missed something looking in git",
+    "ts": "1439069437.001704",
+    "id": "08de6283",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "nope",
+    "ts": "1439069463.001705",
+    "id": "08de6284",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "ah wait here we go",
+    "ts": "1439069521.001708",
+    "id": "08de6285",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "so in the samples from the sdk manager, the source is different than the public git",
+    "ts": "1439069551.001709",
+    "id": "08de6286",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "samples\\android-MNC\\legacy\\ApiDemos",
+    "ts": "1439069596.001710",
+    "reactions": [
+      {
+        "name": "rage",
+        "users": [
+          "U04TK850N"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "08de6287",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "well still goes back to stuff being in 19 places",
+    "ts": "1439069660.001713",
+    "id": "08de6288",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08MQ0F8V",
+    "text": "Anyone know of any good MVP examples? Preferably without using an ‘MVP library’ and just using something like Dagger2, RxAndroid and Retrofit straight up? Trying to get my head around it",
+    "ts": "1439073873.001714",
+    "id": "08de6289",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08R5V6SW",
+    "subtype": "channel_join",
+    "text": "<@U08R5V6SW|burzo> has joined the channel",
+    "ts": "1439098253.001715",
+    "id": "08de6290",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

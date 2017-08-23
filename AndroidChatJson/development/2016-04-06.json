@@ -1,0 +1,6470 @@
+[
+  {
+    "user": "U0YBC14Q2",
+    "subtype": "channel_join",
+    "text": "<@U0YBC14Q2|alexf> has joined the channel",
+    "ts": "1459926097.002851",
+    "id": "06de30293",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "Has anyone regularly used RxJava _Single_? I really like the fact that the code is easier documented by using Single, but after using them instead of Observables it seems to me that they are quite limited when you start doing slightly complicated stuff with them.\n\nFor example since Observables can have an empty state you can chain together memoryCache, diskCache and network easily in one call like `Observable.concat(memoryCache, diskCache, network).first()`. Singles though will either return something or throw an error so you have to chain them with the `onErrorResumeNext` like `memoryCache.onErrorResumeNext(diskWithSaveInCache).onErrorResumeNext(network)`.\n\nAny thoughts on `Single`'s usefulness?",
+    "edited": {
+      "user": "U09T8SFG8",
+      "ts": "1459933928.000000"
+    },
+    "ts": "1459933903.002852",
+    "id": "06de30294",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I guess my biggest problem is that in unit testing I have to start throwing exceptions around to simulate that the memoryCache returned nothing for example",
+    "ts": "1459934028.002854",
+    "id": "06de30295",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0QR1SM32",
+    "text": "I can’t think of any usecases where I would prefer using a _Single_",
+    "ts": "1459937504.002855",
+    "id": "06de30296",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "unit testing rx will always cause problems",
+    "ts": "1459938857.002856",
+    "id": "06de30297",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "it’s just not “nice” to test it",
+    "ts": "1459938864.002857",
+    "id": "06de30298",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "until we figure out a magical “right way” that is, of course :simple_smile:",
+    "ts": "1459938896.002858",
+    "id": "06de30299",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UEQSNMC",
+    "text": "do you guys work in companies maintaining products or for customers in different projects every couple of months?",
+    "ts": "1459938983.002859",
+    "id": "06de30300",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UEQSNMC",
+    "text": "its impossible for me to write a test suite for the projects I work in with the allotted time I have for each",
+    "ts": "1459939008.002860",
+    "id": "06de30301",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "I am at a startup, so it’s just one product",
+    "ts": "1459939035.002861",
+    "id": "06de30302",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "it’s also hard to find time to write tests, but I’ve been trying to do as much TDD as I currently can",
+    "ts": "1459939052.002862",
+    "id": "06de30303",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "but if you can’t find time and are working in an agency, tell your management/sales to start adding test time to hour count",
+    "ts": "1459939084.002863",
+    "id": "06de30304",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UEQSNMC",
+    "text": "I do it as an option",
+    "ts": "1459939110.002864",
+    "id": "06de30305",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UEQSNMC",
+    "text": "25% more time if they also want tests",
+    "ts": "1459939120.002865",
+    "id": "06de30306",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UEQSNMC",
+    "text": "I never got a green light to add that extra time",
+    "ts": "1459939260.002866",
+    "id": "06de30307",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UEQSNMC",
+    "text": "and I cant blame them. Tests are mostly to help maintaining the code",
+    "ts": "1459939282.002867",
+    "id": "06de30308",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UEQSNMC",
+    "text": "my projects dont go to iterations after I deliver them",
+    "ts": "1459939297.002868",
+    "id": "06de30309",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UEQSNMC",
+    "text": "except a couple of bug fixes here and there",
+    "ts": "1459939306.002869",
+    "id": "06de30310",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "yes I suppose it depends",
+    "ts": "1459939489.002870",
+    "id": "06de30311",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I can’t advocate against tests",
+    "ts": "1459939499.002871",
+    "id": "06de30312",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KMU3UN",
+    "text": "I was told that we are a small start up we cant afford to write tests",
+    "ts": "1459939504.002872",
+    "id": "06de30313",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "but I understand the situation",
+    "ts": "1459939505.002873",
+    "id": "06de30314",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "only if you throw away all code each iteration can you not afford to write tests",
+    "ts": "1459939525.002874",
+    "id": "06de30315",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "(which never happens)",
+    "ts": "1459939529.002875",
+    "id": "06de30316",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UEQSNMC",
+    "text": "&gt;I was told that we are a small start up we cant afford to write tests\nRed flag there.",
+    "ts": "1459939567.002876",
+    "id": "06de30317",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<@U08KMU3UN> we also rush from release to release, but you have to find time to write tests.",
+    "ts": "1459939576.002877",
+    "id": "06de30318",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "I know features change, stuff gets pushed, but trust me, you’ll than yourself later",
+    "ts": "1459939594.002878",
+    "id": "06de30319",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "you can estimate it in. srsly I’d leave the second they told me to not write tests",
+    "ts": "1459939608.002879",
+    "id": "06de30320",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UEQSNMC",
+    "text": "yea, if you guys own a project, not writing tests is shooting yourself in the foot on the long run",
+    "ts": "1459939636.002880",
+    "id": "06de30321",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "agencies are different because they work with a variety of clients, and depends on how their sales are positioned",
+    "ts": "1459939638.002881",
+    "id": "06de30322",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UEQSNMC",
+    "text": "takes some time in the beggining but saves a lot on the long run",
+    "ts": "1459939653.002882",
+    "id": "06de30323",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UEQSNMC",
+    "text": "so the option of not writing tests is simply bad management",
+    "ts": "1459939667.002883",
+    "id": "06de30324",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UEQSNMC",
+    "text": "the only situation where I think tests are optional is really in situations where you deliver an working app and know you arent going to be working on it anymore",
+    "ts": "1459939717.002884",
+    "id": "06de30325",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UEQSNMC",
+    "text": "you or anyone else",
+    "ts": "1459939728.002885",
+    "id": "06de30326",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UEQSNMC",
+    "text": "which is basically my day job",
+    "ts": "1459939746.002886",
+    "id": "06de30327",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KN6ZHC",
+    "text": "By the way, what kind of tests do you guys usually write ? Unit tests, instrumentation tests ?",
+    "ts": "1459939761.002887",
+    "id": "06de30328",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "Unit",
+    "ts": "1459939771.002888",
+    "id": "06de30329",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UEQSNMC",
+    "text": "integration tests also dont hurt",
+    "ts": "1459939781.002889",
+    "id": "06de30330",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "while I’m refactoring the app piece by piece, it’s unit tests.",
+    "ts": "1459939797.002890",
+    "id": "06de30331",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "later on I’ll make a full test suite",
+    "edited": {
+      "user": "U0548MM6B",
+      "ts": "1459939827.000000"
+    },
+    "ts": "1459939821.002891",
+    "id": "06de30332",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0QR1SM32",
+    "text": "woof.. instrumentation tests :stuck_out_tongue:",
+    "ts": "1459939910.002893",
+    "id": "06de30333",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KN6ZHC",
+    "text": "The thing is the business logic code is usually quite small in an app, I end up writing very few unit tests",
+    "edited": {
+      "user": "U08KN6ZHC",
+      "ts": "1459939960.000000"
+    },
+    "ts": "1459939950.002894",
+    "id": "06de30334",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KN6ZHC",
+    "text": "and I end up writing instrumentation tests which takes ages to set up correctly",
+    "ts": "1459939993.002896",
+    "id": "06de30335",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Testing?",
+    "ts": "1459940022.002897",
+    "id": "06de30336",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "/gif aint got time for that",
+    "ts": "1459940030.002898",
+    "id": "06de30337",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "",
+    "bot_id": "B0GH4RVHU",
+    "attachments": [
+      {
+        "fallback": "<http://i.imgur.com/TONDq.gif>",
+        "image_url": "http://i.imgur.com/TONDq.gif",
+        "image_width": 500,
+        "image_height": 280,
+        "image_bytes": 898399,
+        "is_animated": true,
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1459940030.002899",
+    "reactions": [
+      {
+        "name": "joy",
+        "users": [
+          "U0UEQSNMC",
+          "U04U5KS3Z"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "06de30338",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UEQSNMC",
+    "text": "the usefulness of tests is counter intuitive",
+    "ts": "1459940088.002900",
+    "id": "06de30339",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R75CWCT",
+    "text": "<http://cf.chucklesnetwork.com/items/3/9/0/2/0/original/i-dont-always-test-my-code-but-when-i-do-its-in-production.jpg>",
+    "attachments": [
+      {
+        "fallback": "430x430px image",
+        "image_url": "http://cf.chucklesnetwork.com/items/3/9/0/2/0/original/i-dont-always-test-my-code-but-when-i-do-its-in-production.jpg",
+        "image_width": 430,
+        "image_height": 430,
+        "image_bytes": 142022,
+        "from_url": "http://cf.chucklesnetwork.com/items/3/9/0/2/0/original/i-dont-always-test-my-code-but-when-i-do-its-in-production.jpg",
+        "id": 1
+      }
+    ],
+    "ts": "1459940098.002901",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U0U3MGMPF"
+        ],
+        "count": 2
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "06de30340",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0QR1SM32",
+    "text": "If somebody comments on the lack of tests - blame AndroidChat",
+    "ts": "1459940409.002903",
+    "id": "06de30341",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "/gif gangsta rap made me do it",
+    "ts": "1459940446.002904",
+    "id": "06de30342",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "",
+    "bot_id": "B0GH4RVHU",
+    "attachments": [
+      {
+        "fallback": "<https://media.giphy.com/media/AruySrw4eQlTq/giphy.gif>",
+        "image_url": "https://media.giphy.com/media/AruySrw4eQlTq/giphy.gif",
+        "image_width": 400,
+        "image_height": 225,
+        "image_bytes": 569863,
+        "is_animated": true,
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1459940446.002905",
+    "id": "06de30343",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "AndroidChat made me do it",
+    "ts": "1459940451.002906",
+    "id": "06de30344",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U0UEQSNMC>: I am not in an agency by my advice should apply in every product that is going to be changed at least once by some other developer after being written. \n\nUsually the flow from feature request to implementation goes like this: manager/client requests feature -&gt; I give an estimate -&gt; they say ok start working on it. Now what I simply do is that I never give testing as an option, it is always included in my estimate, it is simply part of the workflow not something extra. If manager/client says \"we want it in 2 weeks instead of 3\" -&gt; I say how that will affect the quality of the product and how that will affect the future maintainability of it -&gt; Then if they say \"do it anyway\" -&gt; I make it with less tests and I would leave the company in the near future. When managers/clients are the ones settings deadlines on important products with technologies that they do not understand then they are not worth anyone's time and they are a bunch of circus people.\n\nAgain, this advice is only for products that are supposed to be used/maintained more than once in the future.",
+    "ts": "1459940461.002907",
+    "reactions": [
+      {
+        "name": "arrow_up",
+        "users": [
+          "U0548MM6B",
+          "U04U5KS3Z"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "06de30345",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "Bottom line is that I personally always include time to write the tests in my estimates",
+    "ts": "1459940486.002908",
+    "id": "06de30346",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UEQSNMC",
+    "text": "does make sense yea, but also means less clients",
+    "ts": "1459940551.002909",
+    "id": "06de30347",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R75CWCT",
+    "text": "/gif applause",
+    "ts": "1459940556.002910",
+    "id": "06de30348",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "",
+    "bot_id": "B0GH4RVHU",
+    "attachments": [
+      {
+        "fallback": "<https://media.giphy.com/media/n5oYbKrHYXylq/giphy.gif>",
+        "image_url": "https://media.giphy.com/media/n5oYbKrHYXylq/giphy.gif",
+        "image_width": 348,
+        "image_height": 195,
+        "image_bytes": 2066851,
+        "is_animated": true,
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1459940556.002911",
+    "id": "06de30349",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "less silly clients and more quality ones. I prefer to work with people that understand that they should leave managing my workflow up to me",
+    "ts": "1459940595.002912",
+    "id": "06de30350",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "Software development is in such a demand that we can choose where to work. For every 1 silly client there are 5 worth working with",
+    "ts": "1459940641.002913",
+    "id": "06de30351",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U09T8SFG8>: \n&gt; and I would leave the company in the near future",
+    "ts": "1459940791.002914",
+    "id": "06de30352",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "You clearly have much money",
+    "ts": "1459940799.002915",
+    "id": "06de30353",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U08GFT5V5>: it's not exclusively about money, it's about a balance between managing savings and being in an area with a big enough demand. I have a good balance between the two that I personally could easily quit without repercussions",
+    "ts": "1459940910.002916",
+    "id": "06de30354",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Where are you located again?",
+    "ts": "1459940928.002917",
+    "id": "06de30355",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "London, huge amount of positions with a huge cost of living",
+    "ts": "1459940944.002918",
+    "id": "06de30356",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "If I was back in my hometown in Greece where there was a single Android dev company then I would be more careful",
+    "ts": "1459940976.002919",
+    "id": "06de30357",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "so i would have more savings in order to be able to move to another city if need be",
+    "ts": "1459940992.002920",
+    "id": "06de30358",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UEQSNMC",
+    "text": "im with <@U09T8SFG8> on this, there is enough market demand for android devs to be demanding with your job",
+    "ts": "1459941004.002921",
+    "id": "06de30359",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "I wonder if those guys offer remote",
+    "ts": "1459941010.002922",
+    "id": "06de30360",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UEQSNMC",
+    "text": "mostly dont, but they do go through a lot of hassle to relocate you",
+    "ts": "1459941042.002923",
+    "id": "06de30361",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R75CWCT",
+    "text": "Remote is the future, but a lot of companies don’t see it just yet",
+    "ts": "1459941077.002924",
+    "id": "06de30362",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I've found that remote depends a lot of the country's culture. I've never seen it in Greece, I see some in the UK and I see a lot in the US",
+    "ts": "1459941086.002925",
+    "id": "06de30363",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UEQSNMC",
+    "text": "I work with remote developers, it is *not* the future by any stretch of the imagination",
+    "ts": "1459941107.002926",
+    "id": "06de30364",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "Personally I don't like remote",
+    "ts": "1459941119.002927",
+    "id": "06de30365",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "remote is awesome imo, but the company has to be remote-first, other way around they mostly discriminate against remote workers",
+    "edited": {
+      "user": "U0548MM6B",
+      "ts": "1459941139.000000"
+    },
+    "ts": "1459941135.002928",
+    "id": "06de30366",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R75CWCT",
+    "text": "I’m a remote dev and the rest of the team too",
+    "ts": "1459941136.002929",
+    "id": "06de30367",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R75CWCT",
+    "text": "we don’t find any trouble",
+    "ts": "1459941144.002931",
+    "id": "06de30368",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UEQSNMC",
+    "text": "im sure you dont, but I can guarantee it that you would be a lot more productive if you were in the same office",
+    "ts": "1459941158.002932",
+    "id": "06de30369",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R75CWCT",
+    "text": "just, skype, slack, mail, etc...",
+    "ts": "1459941160.002933",
+    "id": "06de30370",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U0UEQSNMC>: problem is usually location",
+    "ts": "1459941177.002934",
+    "id": "06de30371",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "If I have to commute 1 - 2 hours to get to work",
+    "ts": "1459941202.002935",
+    "id": "06de30372",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "not worth it imo",
+    "ts": "1459941206.002936",
+    "id": "06de30373",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "depends on what you’re doing that day. for example, I spent a week working remotely from my hometown, everything was great, set my own schedule, was on slack if anybody needed me",
+    "ts": "1459941210.002937",
+    "id": "06de30374",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R75CWCT",
+    "text": "mmm, I’ve been in an office with the sales and customer services guys talking all the time and ppl coming at you for stupid things all the time",
+    "ts": "1459941226.002938",
+    "id": "06de30375",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UEQSNMC",
+    "text": "I would say it depends on the developer",
+    "ts": "1459941231.002939",
+    "id": "06de30376",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UEQSNMC",
+    "text": "some have ethics, others dont",
+    "ts": "1459941236.002940",
+    "id": "06de30377",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UEQSNMC",
+    "text": "slacking a remote dev",
+    "ts": "1459941241.002941",
+    "id": "06de30378",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UEQSNMC",
+    "text": "that is online",
+    "ts": "1459941244.002942",
+    "id": "06de30379",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UEQSNMC",
+    "text": "and only getting an answer after 1 hour",
+    "ts": "1459941249.002943",
+    "id": "06de30380",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UEQSNMC",
+    "text": "red flag there",
+    "ts": "1459941257.002944",
+    "id": "06de30381",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UEQSNMC",
+    "text": "if everyone is in the same office there is no way this will happen",
+    "ts": "1459941266.002945",
+    "id": "06de30382",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UEQSNMC",
+    "text": "plus greatly helps communication",
+    "ts": "1459941277.002946",
+    "id": "06de30383",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UEQSNMC",
+    "text": "also I hate working from home",
+    "ts": "1459941282.002947",
+    "id": "06de30384",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0QR1SM32",
+    "text": "once or twice a month I work from home.. it can be nice",
+    "ts": "1459941313.002948",
+    "id": "06de30385",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "&gt; also I hate working from home\nNo way!!! :joy:",
+    "ts": "1459941315.002949",
+    "id": "06de30386",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0QR1SM32",
+    "text": "But I actually have to focus on beeing focused.",
+    "ts": "1459941334.002950",
+    "id": "06de30387",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "I like working from home. Get work done, dinner in the background",
+    "ts": "1459941364.002951",
+    "id": "06de30388",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Work out at 11 for an hour",
+    "ts": "1459941381.002952",
+    "id": "06de30389",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "finish up by 7",
+    "ts": "1459941388.002953",
+    "id": "06de30390",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "When I'm at my hometown, i dont have  a problem working ",
+    "ts": "1459941415.002954",
+    "id": "06de30391",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R75CWCT",
+    "text": "I usually go to the office once a week, just to see the folks and talk face to face, maybe the best option for me is to have that decision on my plate",
+    "ts": "1459941421.002955",
+    "id": "06de30392",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "^",
+    "ts": "1459941428.002956",
+    "id": "06de30393",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "Even spend less time on lunch, cast screen to a huge plasma and play music ",
+    "ts": "1459941467.002957",
+    "id": "06de30394",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UEQSNMC",
+    "text": "I get really bored, plus I tend to overwork",
+    "ts": "1459941497.002958",
+    "id": "06de30395",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "At the end of the day, I’m a happier worker when I get to do these things",
+    "ts": "1459941531.002959",
+    "id": "06de30396",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Not having to commute increases my quality of life tremendously",
+    "ts": "1459941552.002960",
+    "id": "06de30397",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "Yep, and with modern tools I don't see lack of communication ",
+    "ts": "1459941658.002961",
+    "id": "06de30398",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "Also, less disturbance because if you're in the zone, you can answer 10 mins later instead of being tapped on the shoulder ",
+    "ts": "1459941715.002962",
+    "id": "06de30399",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U0548MM6B>: clearly you need a busy lamp",
+    "ts": "1459941735.002963",
+    "id": "06de30400",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "busy lamp?",
+    "ts": "1459941807.002964",
+    "id": "06de30401",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": ":joy: :joy: :joy: ",
+    "ts": "1459941811.002965",
+    "id": "06de30402",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "please don't make me spend money on useless stuff again because I am tempted",
+    "ts": "1459941828.002966",
+    "id": "06de30403",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "It's a lamp that is red when you're balling and green when you're not",
+    "ts": "1459941840.002967",
+    "id": "06de30404",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "red when tests fail, green when they pass",
+    "ts": "1459941871.002968",
+    "id": "06de30405",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "You're a dev, your mission is to spend money on stupid gadgets ",
+    "ts": "1459941886.002969",
+    "id": "06de30406",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<http://www.unifiedcommunications.com/images/upload/Busylight-in-the-news.jpg>",
+    "attachments": [
+      {
+        "fallback": "1344x462px image",
+        "image_url": "http://www.unifiedcommunications.com/images/upload/Busylight-in-the-news.jpg",
+        "image_width": 1344,
+        "image_height": 462,
+        "image_bytes": 204587,
+        "from_url": "http://www.unifiedcommunications.com/images/upload/Busylight-in-the-news.jpg",
+        "id": 1
+      }
+    ],
+    "ts": "1459941908.002970",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "06de30407",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I know right? I bought a popcorn machine a couple of months ago :stuck_out_tongue:",
+    "ts": "1459941909.002971",
+    "id": "06de30408",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<http://davidnotusinghisfoothammock.tumblr.com>",
+    "attachments": [
+      {
+        "title": "David Not Using The Foot Hammock He Insists He Uses",
+        "title_link": "http://davidnotusinghisfoothammock.tumblr.com",
+        "text": "David bought one of those stupid foot hammocks for his office desk. No one has ever seen him use it....",
+        "fallback": "David Not Using The Foot Hammock He Insists He Uses",
+        "thumb_url": "http://33.media.tumblr.com/avatar_d3b135e5a841_128.png",
+        "from_url": "http://davidnotusinghisfoothammock.tumblr.com",
+        "thumb_width": 128,
+        "thumb_height": 128,
+        "id": 1
+      }
+    ],
+    "ts": "1459941929.002973",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U09T8SFG8"
+        ],
+        "count": 2
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "joy",
+        "users": [
+          "U09T8SFG8"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "06de30409",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U09T8SFG8>: I accept your offer. I will help you spend your money",
+    "edited": {
+      "user": "U08GFT5V5",
+      "ts": "1459941939.000000"
+    },
+    "ts": "1459941937.002975",
+    "id": "06de30410",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "Stuff like this ",
+    "ts": "1459941937.002976",
+    "id": "06de30411",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "Tho David became aware of the blog yesterday ",
+    "ts": "1459941958.002978",
+    "id": "06de30412",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "That office has a bed",
+    "ts": "1459942018.002979",
+    "id": "06de30413",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "Hey, naps are great ",
+    "ts": "1459942039.002980",
+    "id": "06de30414",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<https://cdn.meme.am/instances2/500x/5124450.jpg>",
+    "attachments": [
+      {
+        "fallback": "400x400px image",
+        "image_url": "https://cdn.meme.am/instances2/500x/5124450.jpg",
+        "image_width": 400,
+        "image_height": 400,
+        "image_bytes": 69520,
+        "from_url": "https://cdn.meme.am/instances2/500x/5124450.jpg",
+        "id": 1
+      }
+    ],
+    "ts": "1459942073.002981",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U09T8SFG8"
+        ],
+        "count": 2
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "06de30415",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": ":joy: ",
+    "ts": "1459942086.002983",
+    "id": "06de30416",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "We should do a poll on remote work ",
+    "ts": "1459942098.002984",
+    "id": "06de30417",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0VT7D3QF",
+    "text": "how are you handling the application language change? still restarting the activity and updating the locale everytime?",
+    "ts": "1459943313.002985",
+    "id": "06de30418",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "now I want a foot hammock",
+    "ts": "1459947327.002986",
+    "id": "06de30419",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "<@U0VT7D3QF>: yup, I plainly fiinish and restart our settings activity",
+    "ts": "1459947350.002987",
+    "id": "06de30420",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Any1 has some nice ideas for practicing advanced Rx or something fun to do in Kotlin?",
+    "ts": "1459950556.002988",
+    "id": "06de30421",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Oh and I’m just going to ask the same question again. Any1 knows an alternative for Robolectric? Or has a good tutorial on how to write good consistent readable instrumentation test (and do they work in most CIs actually?)",
+    "ts": "1459950647.002989",
+    "id": "06de30422",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Q5FEWTH",
+    "text": "<@U0K1ALDQE> right now i’m just going through the Koans, I haven’t yet busted into a full out an out android app in kotlin.",
+    "ts": "1459950725.002990",
+    "id": "06de30423",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Q5FEWTH",
+    "text": "although a co-worker of mine did make a taco recipe app",
+    "ts": "1459950751.002991",
+    "id": "06de30424",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Q5FEWTH",
+    "text": "i think it’s on git",
+    "ts": "1459950755.002992",
+    "id": "06de30425",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Q5FEWTH",
+    "text": "i’ll dig around",
+    "ts": "1459950757.002993",
+    "id": "06de30426",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I’ve gone trough most of the Koans yet. And I’ve written our screening app in Kotlin already",
+    "ts": "1459950761.002994",
+    "id": "06de30427",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Q5FEWTH",
+    "text": "ah, yeah you’re well ahead of me",
+    "ts": "1459950781.002995",
+    "id": "06de30428",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I’m just looking for something different since I already written what feels like a million REST API / list master/detail apps",
+    "ts": "1459950798.002996",
+    "id": "06de30429",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Q5FEWTH",
+    "text": "haha, try a video / media player app with chromecast and wear support",
+    "ts": "1459950866.002997",
+    "id": "06de30430",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Q5FEWTH",
+    "text": "that ought to be a challenge",
+    "ts": "1459950873.002998",
+    "id": "06de30431",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "&gt; that ought to be a challenge",
+    "ts": "1459950881.002999",
+    "id": "06de30432",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "for sure :smile:",
+    "ts": "1459950883.003000",
+    "id": "06de30433",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I’ve yet to find a music app that works good with my car. But… media player apps are not so fun :smile:",
+    "edited": {
+      "user": "U0K1ALDQE",
+      "ts": "1459950927.000000"
+    },
+    "ts": "1459950916.003001",
+    "id": "06de30434",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Thanks for the suggestion tho. Advanced is good :simple_smile:",
+    "ts": "1459950948.003003",
+    "id": "06de30435",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "make an IRC client",
+    "ts": "1459951048.003004",
+    "id": "06de30436",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Write a plugin for <@U0N7D6F50>",
+    "ts": "1459951429.003005",
+    "id": "06de30437",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "<@U08GFT5V5> what is link again?",
+    "ts": "1459951471.003006",
+    "id": "06de30438",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "<@U09T8SFG8>: actually not a bad idea. thanks",
+    "ts": "1459951482.003007",
+    "id": "06de30439",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "It’s a bot that does stuff",
+    "ts": "1459951502.003008",
+    "id": "06de30440",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "for example, <http://linkbait.nishtahir.com/week|linkbait.nishtahir.com/week>",
+    "ts": "1459951518.003009",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "06de30441",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "What is git link :smile:",
+    "ts": "1459951524.003010",
+    "id": "06de30442",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I know what it is :stuck_out_tongue_winking_eye:",
+    "ts": "1459951531.003011",
+    "id": "06de30443",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Notice the votes",
+    "ts": "1459951531.003012",
+    "id": "06de30444",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Ask the bot for help",
+    "ts": "1459951541.003013",
+    "id": "06de30445",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "<@U0N7D6F50>: help",
+    "ts": "1459951548.003014",
+    "id": "06de30446",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "<@U08GFT5V5>: :+1:",
+    "ts": "1459951566.003015",
+    "id": "06de30447",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XNRE25S",
+    "text": "So what’s the current flavor of the month for a working camera library?",
+    "ts": "1459951714.003016",
+    "id": "06de30448",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "RxCamera",
+    "ts": "1459951742.003017",
+    "id": "06de30449",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I looked into RxCamera for my last project. but I ended up writing my own RxCamera :smile:",
+    "ts": "1459951836.003018",
+    "id": "06de30450",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XNRE25S",
+    "text": "Rx camera only support 21 and up?",
+    "ts": "1459951859.003019",
+    "id": "06de30451",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "RxCamera should fit your needs tho",
+    "ts": "1459951861.003020",
+    "id": "06de30452",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XNRE25S",
+    "text": "Current target is 18 and up",
+    "ts": "1459951865.003021",
+    "id": "06de30453",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "no",
+    "ts": "1459951870.003022",
+    "id": "06de30454",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "it’s based on android.hardware.camera",
+    "ts": "1459951879.003023",
+    "id": "06de30455",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "not Camera2",
+    "ts": "1459951882.003024",
+    "id": "06de30456",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XNRE25S",
+    "text": "great!",
+    "ts": "1459951894.003025",
+    "id": "06de30457",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XNRE25S",
+    "text": "Thanks for the help",
+    "ts": "1459951897.003026",
+    "id": "06de30458",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XNRE25S",
+    "text": "Lastly, have you seen any libraries for easy video recording/quick editing. I’ve seen a few for iOS, but nothing for android.",
+    "ts": "1459951928.003027",
+    "id": "06de30459",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Q5FEWTH",
+    "text": "<@U0K1ALDQE> that’s actually an awesome idea. i’ve done a little work with auto, but so little adoption still. what about your car experience would you improve? for me the worst part is just getting my bluetooth to connect. for some reason my car or phone decided that automatically connecting was a bad idea.",
+    "ts": "1459951961.003028",
+    "id": "06de30460",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "&gt; for me the worst part is just getting my bluetooth to connect. for some reason my car or phone decided that automatically connecting was a bad idea.",
+    "ts": "1459952001.003029",
+    "id": "06de30461",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Exactly that",
+    "ts": "1459952006.003030",
+    "id": "06de30462",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "And overall it works sketchy",
+    "ts": "1459952027.003031",
+    "id": "06de30463",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Sometimes it works perfectly other times I just have to give up",
+    "ts": "1459952063.003032",
+    "id": "06de30464",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "regarding my issue with ripple and activity starting:\nproblem was in transitions :confused:",
+    "ts": "1459952558.003033",
+    "id": "06de30465",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Ow, so what was it exactly <@U0548MM6B>",
+    "ts": "1459952678.003034",
+    "id": "06de30466",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "I had a scene transition - imageview into imageview, so the transition would start before ripples got fired",
+    "ts": "1459952737.003035",
+    "id": "06de30467",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "didn’t want to use postdelayed",
+    "ts": "1459952746.003036",
+    "id": "06de30468",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "oh yeah ofc",
+    "ts": "1459952767.003037",
+    "id": "06de30469",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R75CWCT",
+    "text": "Guys, I need help: here is the situation, I had to put native lib “.so” files inside jniLibs folder, because UnsatisfiedLinkError. Now the app size has increased a f*cking lot, what can I do??",
+    "ts": "1459953999.003038",
+    "id": "06de30470",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "that’s what happens when you include natively compiled binaries?",
+    "ts": "1459955253.003039",
+    "id": "06de30471",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R75CWCT",
+    "text": "yep, the problem is that the system can’t find the .so inside the lib",
+    "ts": "1459955282.003040",
+    "id": "06de30472",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R75CWCT",
+    "text": "but they’re inside, i’ve checked",
+    "ts": "1459955293.003041",
+    "id": "06de30473",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "ew",
+    "ts": "1459955299.003042",
+    "id": "06de30474",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "that’s weird",
+    "ts": "1459955301.003043",
+    "id": "06de30475",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R75CWCT",
+    "text": "so, know I have duplicates",
+    "ts": "1459955311.003044",
+    "id": "06de30476",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R75CWCT",
+    "text": "maybe with some gradle magic one can exclude the files inside the lib, but haven’t found anything",
+    "ts": "1459955414.003045",
+    "id": "06de30477",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I only know of module exclusions :confused:",
+    "ts": "1459955430.003046",
+    "id": "06de30478",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R75CWCT",
+    "text": "thx anyway :simple_smile:",
+    "ts": "1459955566.003047",
+    "id": "06de30479",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0CHUGUDN|1mike12> uploaded a file: <https://androidchat.slack.com/files/1mike12/F0YF80H37/pasted_image_at_2016_04_06_12_00_pm.png|Pasted image at 2016-04-06, 12:00 PM> and commented: why the hell does Android studio not have mark directory feature that every other intellij product has. It’s so annoying have /build files show up in search results",
+    "file": {
+      "id": "F0YF80H37",
+      "created": 1459958464,
+      "timestamp": 1459958464,
+      "name": "Pasted image at 2016_04_06 12_00 PM.png",
+      "title": "Pasted image at 2016-04-06, 12:00 PM",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U0CHUGUDN",
+      "editable": false,
+      "size": 50556,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0YF80H37/pasted_image_at_2016_04_06_12_00_pm.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0YF80H37/download/pasted_image_at_2016_04_06_12_00_pm.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F0YF80H37-ccf2eb4ec0/pasted_image_at_2016_04_06_12_00_pm_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F0YF80H37-ccf2eb4ec0/pasted_image_at_2016_04_06_12_00_pm_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F0YF80H37-ccf2eb4ec0/pasted_image_at_2016_04_06_12_00_pm_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 360,
+      "thumb_360_h": 144,
+      "thumb_480": "https://files.slack.com/files-tmb/T04PLNDMP-F0YF80H37-ccf2eb4ec0/pasted_image_at_2016_04_06_12_00_pm_480.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_480_w": 480,
+      "thumb_480_h": 192,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F0YF80H37-ccf2eb4ec0/pasted_image_at_2016_04_06_12_00_pm_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "image_exif_rotation": 1,
+      "original_w": 490,
+      "original_h": 196,
+      "permalink": "https://androidchat.slack.com/files/1mike12/F0YF80H37/pasted_image_at_2016_04_06_12_00_pm.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0YF80H37-2b3d16f876",
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 1,
+      "initial_comment": {
+        "id": "Fc0YEXDE0L",
+        "created": 1459958464,
+        "timestamp": 1459958464,
+        "user": "U0CHUGUDN",
+        "is_intro": true,
+        "comment": "why the hell does Android studio not have mark directory feature that every other intellij product has. It’s so annoying have /build files show up in search results",
+        "channel": ""
+      }
+    },
+    "user": "U0CHUGUDN",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0CHUGUDN|1mike12>",
+    "bot_id": null,
+    "ts": "1459958466.003048",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "06de30480",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0YFCJC0H",
+    "subtype": "channel_join",
+    "text": "<@U0YFCJC0H|marcmartin> has joined the channel",
+    "ts": "1459958493.003049",
+    "id": "06de30481",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "it’s probably not tied to gradle well",
+    "ts": "1459959296.003050",
+    "id": "06de30482",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "should be eventually",
+    "ts": "1459959309.003051",
+    "id": "06de30483",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0YFNT516",
+    "subtype": "channel_join",
+    "text": "<@U0YFNT516|don> has joined the channel",
+    "ts": "1459961328.003052",
+    "id": "06de30484",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<http://developer.android.com/about/dashboards/index.html>",
+    "attachments": [
+      {
+        "title": "Dashboards | Android Developers",
+        "title_link": "http://developer.android.com/about/dashboards/index.html",
+        "text": "page.metaDescription=An overview of device characteristics and platform versions that are active in the Android ecosystem.",
+        "fallback": "Dashboards | Android Developers",
+        "from_url": "http://developer.android.com/about/dashboards/index.html",
+        "id": 1
+      }
+    ],
+    "ts": "1459963381.003053",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "06de30485",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "Anyone want to share stats for their apps (anonymous or not)?",
+    "ts": "1459963396.003055",
+    "id": "06de30486",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "There isn't much to share here, my service is in a new development stage.",
+    "ts": "1459963508.003056",
+    "id": "06de30487",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "So the app's dev is stale on the app store.",
+    "ts": "1459963519.003057",
+    "id": "06de30488",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "It's also not very big.",
+    "ts": "1459963523.003058",
+    "id": "06de30489",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U061HDV96>: yeah, but I know some of us here have significantly large userbases they could share data about",
+    "ts": "1459963698.003059",
+    "id": "06de30490",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U053LEHJN>: also I doubt most people are allowed to share that.",
+    "ts": "1459963722.003060",
+    "id": "06de30491",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U061HDV96>: they have in the past, that’s why I asked :simple_smile:",
+    "ts": "1459963734.003061",
+    "id": "06de30492",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "hold on",
+    "ts": "1459963740.003062",
+    "id": "06de30493",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "like I said, anonymized",
+    "ts": "1459963742.003063",
+    "id": "06de30494",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U04TK850N|langerhans> uploaded a file: <https://androidchat.slack.com/files/langerhans/F0YG4PKPZ/pasted_image_at_2016_04_06_07_29_pm.png|Pasted image at 2016-04-06, 7:29 PM>",
+    "file": {
+      "id": "F0YG4PKPZ",
+      "created": 1459963831,
+      "timestamp": 1459963831,
+      "name": "Pasted image at 2016_04_06 07_29 PM.png",
+      "title": "Pasted image at 2016-04-06, 7:29 PM",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U04TK850N",
+      "editable": false,
+      "size": 92661,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0YG4PKPZ/pasted_image_at_2016_04_06_07_29_pm.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0YG4PKPZ/download/pasted_image_at_2016_04_06_07_29_pm.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F0YG4PKPZ-c47f434a85/pasted_image_at_2016_04_06_07_29_pm_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F0YG4PKPZ-c47f434a85/pasted_image_at_2016_04_06_07_29_pm_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F0YG4PKPZ-c47f434a85/pasted_image_at_2016_04_06_07_29_pm_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 360,
+      "thumb_360_h": 213,
+      "thumb_480": "https://files.slack.com/files-tmb/T04PLNDMP-F0YG4PKPZ-c47f434a85/pasted_image_at_2016_04_06_07_29_pm_480.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_480_w": 480,
+      "thumb_480_h": 284,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F0YG4PKPZ-c47f434a85/pasted_image_at_2016_04_06_07_29_pm_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720": "https://files.slack.com/files-tmb/T04PLNDMP-F0YG4PKPZ-c47f434a85/pasted_image_at_2016_04_06_07_29_pm_720.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720_w": 720,
+      "thumb_720_h": 426,
+      "image_exif_rotation": 1,
+      "original_w": 816,
+      "original_h": 483,
+      "permalink": "https://androidchat.slack.com/files/langerhans/F0YG4PKPZ/pasted_image_at_2016_04_06_07_29_pm.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0YG4PKPZ-fa1b8fa103",
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U04TK850N",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U04TK850N|langerhans>",
+    "bot_id": null,
+    "ts": "1459963833.003064",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "06de30495",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "/gif damn",
+    "ts": "1459963855.003065",
+    "id": "06de30496",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "",
+    "bot_id": "B0GH4RVHU",
+    "attachments": [
+      {
+        "fallback": "<http://media3.giphy.com/media/CHRP0NNsUiJBC/giphy.gif>",
+        "image_url": "http://media3.giphy.com/media/CHRP0NNsUiJBC/giphy.gif",
+        "image_width": 197,
+        "image_height": 148,
+        "image_bytes": 1222870,
+        "is_animated": true,
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1459963855.003066",
+    "id": "06de30497",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "that's roughly 9 million users",
+    "ts": "1459963856.003067",
+    "id": "06de30498",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "minSdk = 9",
+    "ts": "1459963864.003068",
+    "id": "06de30499",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I'm gonna pop a bottle at 100k already",
+    "ts": "1459963881.003069",
+    "id": "06de30500",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U04TK850N>: yikes, you’re below average :stuck_out_tongue:",
+    "ts": "1459963884.003070",
+    "id": "06de30501",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Not even remotely close atm",
+    "ts": "1459963886.003071",
+    "id": "06de30502",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "yup",
+    "ts": "1459963890.003072",
+    "id": "06de30503",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "more on 2.3 than 6.0",
+    "ts": "1459963894.003073",
+    "id": "06de30504",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "i got one user on 3.2 :confused:",
+    "ts": "1459964172.003074",
+    "id": "06de30505",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "Does anyone here have like really really good knowledge of GC, lifecycles, and leaks?",
+    "ts": "1459964469.003075",
+    "id": "06de30506",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "I’m…I’m not getting a leak when I expect one",
+    "ts": "1459964478.003076",
+    "id": "06de30507",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "this is the most embarrassing thing ever",
+    "ts": "1459964492.003077",
+    "id": "06de30508",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "lol",
+    "ts": "1459964513.003078",
+    "id": "06de30509",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "If we were really really good with GC, we wouldn't use Java probably.",
+    "ts": "1459964545.003079",
+    "id": "06de30510",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "you mean to say you expect  a leak somewhere and it doesnt happen",
+    "ts": "1459964560.003080",
+    "id": "06de30511",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I guess we all know how references work and how most garbage collectors work.",
+    "ts": "1459964563.003081",
+    "id": "06de30512",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "and how do you know it is not leaking",
+    "ts": "1459964602.003082",
+    "id": "06de30513",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "because I have spent the past hour looking at the memory monitor not going up. Then I took a memory dump and it’s jus not here",
+    "edited": {
+      "user": "U0B8R3VV4",
+      "ts": "1459964749.000000"
+    },
+    "ts": "1459964682.003083",
+    "id": "06de30514",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "then I jumped to printf logs with statics to count the number of alive references, and it was still one.",
+    "ts": "1459964705.003084",
+    "id": "06de30515",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "are you certain it isn’t a short term leak? Like it does leak but something cleans it up later",
+    "ts": "1459964751.003086",
+    "id": "06de30516",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "those can be difficult to catch and you are likely to miss them without active monitoring like leak canary",
+    "ts": "1459964794.003087",
+    "id": "06de30517",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "I’m trying to leak a whole activity by retaining it on an Observable that’s retained in a DI tree retained in the activity",
+    "ts": "1459964798.003088",
+    "id": "06de30518",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R75CWCT",
+    "text": "<@U0B8R3VV4>: Have you tried LeakCanary?",
+    "ts": "1459964812.003089",
+    "id": "06de30519",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "no, no, I have leak canary too and its not peeping",
+    "ts": "1459964819.003090",
+    "id": "06de30520",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R75CWCT",
+    "text": "mmm, maybe if you add a refwatcher you can see something",
+    "ts": "1459964860.003091",
+    "id": "06de30521",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "how do?",
+    "ts": "1459964881.003092",
+    "id": "06de30522",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U0B8R3VV4>: the DI tree is retained in the Activity?",
+    "ts": "1459964901.003093",
+    "id": "06de30523",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R75CWCT",
+    "text": "<@U0B8R3VV4>: <https://corner.squareup.com/2015/05/leak-canary.html> look at the “Introducing LeakCanary” section",
+    "ts": "1459964930.003094",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "06de30524",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<@U0B8R3VV4>: leak canary works by watching things that are important not to leak <https://github.com/square/leakcanary/blob/9e74a8529ca94287fe0c3b02b7a6b39d51ecd704/leakcanary-android/src/main/java/com/squareup/leakcanary/ActivityRefWatcher.java>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "square/leakcanary",
+        "title_link": "https://github.com/square/leakcanary/blob/9e74a8529ca94287fe0c3b02b7a6b39d51ecd704/leakcanary-android/src/main/java/com/squareup/leakcanary/ActivityRefWatcher.java",
+        "text": "leakcanary - A memory leak detection library for Android and Java.",
+        "fallback": "GitHub: square/leakcanary",
+        "thumb_url": "https://avatars0.githubusercontent.com/u/82592?v=3&s=400",
+        "from_url": "https://github.com/square/leakcanary/blob/9e74a8529ca94287fe0c3b02b7a6b39d51ecd704/leakcanary-android/src/main/java/com/squareup/leakcanary/ActivityRefWatcher.java",
+        "thumb_width": 234,
+        "thumb_height": 234,
+        "id": 1
+      }
+    ],
+    "ts": "1459964932.003095",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "06de30525",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "for instance ^",
+    "ts": "1459964937.003097",
+    "id": "06de30526",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "the DI tree goes between activities using onCustomRetainedInstance, so I guess the circular reference gets cleared up at some point",
+    "ts": "1459964940.003098",
+    "id": "06de30527",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "which may mean that the whole thing tears itself down and I’ve just saved me another 20% more grey hair",
+    "ts": "1459964967.003099",
+    "id": "06de30528",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "yeah",
+    "ts": "1459964989.003100",
+    "id": "06de30529",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "that’s what I think",
+    "ts": "1459964993.003101",
+    "id": "06de30530",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "but can’t know more without seeing some code",
+    "ts": "1459964998.003102",
+    "id": "06de30531",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "fuck I love closures when they’re well done",
+    "ts": "1459965093.003103",
+    "id": "06de30532",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R75CWCT",
+    "text": "Hey, I have a library that returns a List&lt;CustomObject&gt; and I cannot make CustomObject implement parcelable, what’s the best approach to send the whole list to another activity?",
+    "ts": "1459965207.003104",
+    "id": "06de30533",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "<@U055GGAHS>: <@U0R75CWCT> When I install LeakCanary, doesn’t it do it for all activities by default?",
+    "ts": "1459965551.003105",
+    "id": "06de30534",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R75CWCT",
+    "text": "yes, just initialize it in the entry point of your app",
+    "ts": "1459965587.003106",
+    "id": "06de30535",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "as long as you init in your application `LeakCanary.install(this);`",
+    "ts": "1459965596.003107",
+    "id": "06de30536",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R75CWCT",
+    "text": "like the Application object if you have it or the first activity that launches",
+    "ts": "1459965609.003108",
+    "id": "06de30537",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R75CWCT",
+    "text": "Does someone help me with my Non parcelable object list and sending it to another activity?:innocent:",
+    "ts": "1459966035.003109",
+    "id": "06de30538",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "Push/pop ino a queue in application class",
+    "ts": "1459966301.003110",
+    "id": "06de30539",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "<@U0R75CWCT>",
+    "ts": "1459966305.003111",
+    "id": "06de30540",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<@U053LEHJN> on our main app:\n30% 6.0\n25% 5.0 \n25% 5.1\n10% 4.4\n10% 4.2 and lower \nThat's about what i remember from a week ago, can't check exact now",
+    "ts": "1459966316.003112",
+    "id": "06de30541",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U0R75CWCT>: through a Bundle?",
+    "ts": "1459966330.003113",
+    "id": "06de30542",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U0548MM6B>: how many users would you say?",
+    "ts": "1459966366.003114",
+    "id": "06de30543",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R75CWCT",
+    "text": "<@U053LEHJN>: the problem is that I cannot make the object Parcelable because its a closed source library object",
+    "ts": "1459966387.003115",
+    "id": "06de30544",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U0R75CWCT>: right, but my point was going to be that you shouldn’t pass objects through a Bundle anyway, if that was your intent",
+    "ts": "1459966413.003116",
+    "id": "06de30545",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<@U0R75CWCT>: that sounds like a good case for not passing it",
+    "ts": "1459966418.003117",
+    "id": "06de30546",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "right as eddie said",
+    "ts": "1459966425.003118",
+    "id": "06de30547",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "go with <@U0B8R3VV4>’s suggestion if you don’t have some other data layer",
+    "ts": "1459966428.003119",
+    "id": "06de30548",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "Not sure, total is about 70k i think? \nNothing big ",
+    "ts": "1459966433.003120",
+    "id": "06de30549",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "<@U0R75CWCT> Push/pop into a queue in application class, or a sticky bus, or a r behavioursubject",
+    "ts": "1459966435.003121",
+    "id": "06de30550",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "*rx",
+    "ts": "1459966442.003122",
+    "id": "06de30551",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "LEAK ACHIEVED by the way. And it’s a tricky one at that.",
+    "ts": "1459966460.003123",
+    "reactions": [
+      {
+        "name": "aw_yeah",
+        "users": [
+          "U053LEHJN",
+          "U04U5KS3Z"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "06de30552",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R75CWCT",
+    "text": "<@U0B8R3VV4>: Maybe the application class solution is best for this, thx",
+    "ts": "1459966467.003124",
+    "id": "06de30553",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<@U0B8R3VV4> what was going on? ",
+    "ts": "1459966477.003125",
+    "id": "06de30554",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XNRE25S",
+    "text": "<@U0K1ALDQE>: Do yo have experience with RxCamera? Having trouble getting my texture/surface view to preview the camera",
+    "ts": "1459966504.003126",
+    "id": "06de30555",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "leakcanary's readme could really use some info about adding refwatchers, whenever people talk about it they act like you just install the lib and you're good",
+    "ts": "1459966509.003127",
+    "id": "06de30556",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "I thought I had struck gold by finding an Rx pattern that skipped all Android lifecycle",
+    "ts": "1459966514.003128",
+    "id": "06de30557",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "but nope",
+    "ts": "1459966516.003129",
+    "id": "06de30558",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "<@U0B8R3VV4>: what you trying to do?",
+    "ts": "1459966545.003130",
+    "id": "06de30559",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "<@U0XNRE25S>: I just finished a project with camera + rx",
+    "ts": "1459966563.003131",
+    "id": "06de30560",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "reimplementing RxLifecycle on my MVVM architecture",
+    "ts": "1459966579.003132",
+    "id": "06de30561",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U0B8R3VV4>: I’ve already skipped the lifecycle",
+    "ts": "1459966603.003133",
+    "id": "06de30562",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "<@U0XNRE25S>: brb, I need to pick some1. Pm me with more detais",
+    "ts": "1459966613.003134",
+    "id": "06de30563",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "so, if your initial Observable is inside the activity i.e. RxBinding, the whole chain will be stored and GCd alongside the activity",
+    "ts": "1459966615.003135",
+    "id": "06de30564",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "check and mate, Android",
+    "ts": "1459966621.003136",
+    "id": "06de30565",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "but if it’s somewhere else, i.e. repository or static context or application, you leak",
+    "ts": "1459966631.003137",
+    "id": "06de30566",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "You guys using view only at Novoda? ",
+    "ts": "1459966639.003138",
+    "id": "06de30567",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "<@U053LEHJN>: we still have UX linked to lifecycle, sadly",
+    "ts": "1459966663.003139",
+    "id": "06de30568",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "so not gtting away from it",
+    "ts": "1459966669.003140",
+    "id": "06de30569",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Actually what do you guys do for lifecycle. I currently try to keep it in presenter, no android stuff in there. And it’s a compositesub in onAttach (create) and onDetach (detroy)",
+    "ts": "1459966681.003141",
+    "id": "06de30570",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "that was my v1",
+    "ts": "1459966702.003142",
+    "id": "06de30571",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "I’m migrating to v2 because we have requests that outlast the activity i.e. network",
+    "ts": "1459966717.003143",
+    "id": "06de30572",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "we could bypass by storing and refetching on database/memory, which is what I’m trying to achieve",
+    "ts": "1459966736.003144",
+    "id": "06de30573",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "Over a year ago my first attempt was to basically recreate Fragments, but keep things simpler to understand",
+    "ts": "1459966743.003145",
+    "id": "06de30574",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "but if you unsubscribe from the whole chain before that it doesn’t get forwarded from the flatmap",
+    "ts": "1459966752.003146",
+    "id": "06de30575",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "<@U0K1ALDQE>: You have to use takeUntil befre the flatmap, and a different takeUntil or nothing afterwards",
+    "ts": "1459966814.003147",
+    "id": "06de30576",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "and expose the lifecycle events as in RxLifecycle, rather than calling into the presenter",
+    "ts": "1459966837.003148",
+    "id": "06de30577",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "the presenter forwards the view onResume to all the Observables to be created",
+    "ts": "1459966880.003149",
+    "id": "06de30578",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0B8R3VV4|pakoito> uploaded a file: <https://androidchat.slack.com/files/pakoito/F0YGE0W20/proof.txt|proof>",
+    "file": {
+      "id": "F0YGE0W20",
+      "created": 1459967000,
+      "timestamp": 1459967000,
+      "name": "proof.txt",
+      "title": "proof",
+      "mimetype": "text/plain",
+      "filetype": "text",
+      "pretty_type": "Plain Text",
+      "user": "U0B8R3VV4",
+      "editable": true,
+      "size": 1041,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": true,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0YGE0W20/proof.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0YGE0W20/download/proof.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/pakoito/F0YGE0W20/proof.txt",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0YGE0W20-4829536887",
+      "edit_link": "https://androidchat.slack.com/files/pakoito/F0YGE0W20/proof.txt/edit",
+      "preview": "@Test\r\n    public void testThing() throws Exception {\r\n        Observable.interval(1, TimeUnit.SECONDS).doOnNext(new Action1<Long>() {\r\n            @Override\r\n            public void call(final Long aLong) {\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>@Test</pre></div>\n<div><pre>    public void testThing() throws Exception {</pre></div>\n<div><pre>        Observable.interval(1, TimeUnit.SECONDS).doOnNext(new Action1&lt;Long&gt;() {</pre></div>\n<div><pre>            @Override</pre></div>\n<div><pre>            public void call(final Long aLong) {</pre></div>\n<div><pre></pre></div>\n</div>\n</div>\n",
+      "lines": 22,
+      "lines_more": 17,
+      "preview_is_truncated": true,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U0B8R3VV4",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0B8R3VV4|pakoito>",
+    "bot_id": null,
+    "ts": "1459967000.003150",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "06de30579",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "<@U0B8R3VV4>: wait what!? ",
+    "ts": "1459967080.003151",
+    "id": "06de30580",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "the tricky bit is that you can’t do UI inside the flatmap, so you need an intermediate state store or just suck it up and handle errors by ignoring them",
+    "ts": "1459967085.003152",
+    "id": "06de30581",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "sorry, too much info, it’s better structured on my head",
+    "ts": "1459967183.003153",
+    "id": "06de30582",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "what’s your question",
+    "ts": "1459967186.003154",
+    "id": "06de30583",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "How you handle your observable lifecycle",
+    "edited": {
+      "user": "U0K1ALDQE",
+      "ts": "1459967517.000000"
+    },
+    "ts": "1459967501.003155",
+    "id": "06de30584",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "subscribe onAttach and unsubscribe onDetach doesn’t work for operations that have to outlast rotation, i.e. network call going out and has to be later applied to UI",
+    "ts": "1459967549.003157",
+    "id": "06de30585",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "so I’m moving to something that does by using takeUntil, like in RxLifecycle",
+    "ts": "1459967589.003158",
+    "id": "06de30586",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "ow yeah, true",
+    "ts": "1459967595.003159",
+    "id": "06de30587",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "like your snippet",
+    "ts": "1459967672.003160",
+    "id": "06de30588",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "yep",
+    "ts": "1459967679.003161",
+    "id": "06de30589",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "except that if you do any UI in, say, line 18 before takeUntil(), you’ll leak the view regardless",
+    "ts": "1459967710.003162",
+    "id": "06de30590",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "because that observable retains it",
+    "ts": "1459967721.003163",
+    "id": "06de30591",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "so you have to come up with a solution for that, nominally that all chains do not update UI directly, but a data store",
+    "ts": "1459967762.003164",
+    "id": "06de30592",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "which is what Google wanted all along, except fuck SQLite",
+    "ts": "1459967773.003165",
+    "id": "06de30593",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "on the topic of sqlite.. requery is pretty good imo",
+    "ts": "1459967794.003166",
+    "id": "06de30594",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "so it’s gone full circle ;___;",
+    "ts": "1459967797.003167",
+    "id": "06de30595",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "&gt;or use immutable types such as those generated by @AutoValue:",
+    "ts": "1459967921.003168",
+    "id": "06de30596",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "yo requery",
+    "ts": "1459967924.003169",
+    "id": "06de30597",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "i read about requery",
+    "ts": "1459968352.003170",
+    "id": "06de30598",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "looks quite nice",
+    "ts": "1459968365.003171",
+    "id": "06de30599",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "except it still uses sqlite",
+    "ts": "1459968406.003172",
+    "id": "06de30600",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "right now its just changing really fast which would be my only complaint as it broke some of the documentation",
+    "ts": "1459968409.003173",
+    "id": "06de30601",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<@U053LEHJN>: yes but not limited to",
+    "ts": "1459968416.003174",
+    "id": "06de30602",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "the fact that its pure java compat is nice",
+    "ts": "1459968422.003175",
+    "id": "06de30603",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "also if you use his sqlite lib (look at his other repos) you can have the latest sqlite version on all devices",
+    "ts": "1459968451.003176",
+    "id": "06de30604",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "and he fixed some of the performance issues",
+    "ts": "1459968464.003177",
+    "id": "06de30605",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "It is nice though, I wish it was around years ago",
+    "ts": "1459968503.003178",
+    "id": "06de30606",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KK98UU",
+    "text": "am I the only one not jumping on the AutoValue train?",
+    "ts": "1459970342.003179",
+    "id": "06de30607",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KK98UU",
+    "text": "I tried it out but it seemed clunky",
+    "ts": "1459970363.003180",
+    "id": "06de30608",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0YHKEF0V",
+    "subtype": "channel_join",
+    "text": "<@U0YHKEF0V|ifiokidiang> has joined the channel",
+    "ts": "1459972072.003181",
+    "id": "06de30609",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "I haven't yet, but I used to be a lombok YOLO",
+    "ts": "1459984725.003182",
+    "id": "06de30610",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "what’s clunky about it",
+    "ts": "1459989315.003183",
+    "id": "06de30611",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HA5ABNW",
+    "text": "hello guys",
+    "ts": "1460003760.003184",
+    "id": "06de30612",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HA5ABNW",
+    "text": "i am facing issue with serialisation of a string “~~~~5.8^P” i am using alamofire with objectmapper..",
+    "ts": "1460003838.003185",
+    "id": "06de30613",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HA5ABNW",
+    "text": "could some one suggest me how to escape the specail character “~\"",
+    "ts": "1460003870.003186",
+    "id": "06de30614",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HA5ABNW",
+    "text": "sorry wrong group..",
+    "ts": "1460003919.003187",
+    "id": "06de30615",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "this is android",
+    "ts": "1460004728.003188",
+    "id": "06de30616",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "lol",
+    "ts": "1460004731.003189",
+    "id": "06de30617",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Anyone ever built a WebView on MVP principles?",
+    "ts": "1460010293.003190",
+    "id": "06de30618",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I’m struggling to not put everything into the View part, e.g. my WebViewClient that has quite some logic which would in theory belong to the Presenter, but since it’s directly coupled to the webview it seems easier to keep it in the View",
+    "ts": "1460010390.003191",
+    "id": "06de30619",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LEG60J0",
+    "text": "android developer facing so many problem check this\n\n[12:04] \n<https://twitter.com/patelvishal1401/status/717940693344194560>",
+    "attachments": [
+      {
+        "fallback": "<https://twitter.com/patelvishal1401|@patelvishal1401>: <https://twitter.com/sundarpichai|@sundarpichai> developers are facing problem in google developer account termination with out any notice. <https://www.change.org/p/sergey-brin-respect-the-efforts-of-small-and-indie-android-developers?recruiter=86686242&amp;utm_campaign=twitter_link&amp;utm_medium=twitter&amp;utm_source=share_petition+via+%40Change>",
+        "ts": 1460005374,
+        "author_name": "Vishal patel",
+        "author_link": "https://twitter.com/patelvishal1401/status/717940693344194560",
+        "author_icon": "https://pbs.twimg.com/profile_images/707956827800133632/-gpZvSyU_normal.jpg",
+        "author_subname": "@patelvishal1401",
+        "text": "<https://twitter.com/sundarpichai|@sundarpichai> developers are facing problem in google developer account termination with out any notice. <https://www.change.org/p/sergey-brin-respect-the-efforts-of-small-and-indie-android-developers?recruiter=86686242&amp;utm_campaign=twitter_link&amp;utm_medium=twitter&amp;utm_source=share_petition+via+%40Change>",
+        "service_name": "twitter",
+        "service_url": "https://twitter.com/",
+        "from_url": "https://twitter.com/patelvishal1401/status/717940693344194560",
+        "id": 1,
+        "footer": "Twitter",
+        "footer_icon": "https://a.slack-edge.com/6e067/img/services/twitter_pixel_snapped_32.png"
+      }
+    ],
+    "ts": "1460010994.003192",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50",
+          "U0MUJ1S13",
+          "U0UEQSNMC"
+        ],
+        "count": 3
+      }
+    ],
+    "id": "06de30620",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

@@ -1,0 +1,1208 @@
+[
+  {
+    "user": "U1HQUQP98",
+    "subtype": "channel_join",
+    "text": "<@U1HQUQP98|paragvaidya> has joined the channel",
+    "ts": "1466147931.000337",
+    "id": "17de37519",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HQS89D3",
+    "subtype": "channel_join",
+    "text": "<@U1HQS89D3|rakshakhegde> has joined the channel",
+    "ts": "1466150088.000338",
+    "id": "17de37520",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HRL1C0H",
+    "subtype": "channel_join",
+    "text": "<@U1HRL1C0H|aro> has joined the channel",
+    "ts": "1466155315.000339",
+    "id": "17de37521",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Z248CVB",
+    "text": "Hello, guys. I would like to have custom markers on Google maps which should be circles with text on them. The only problem I have right now is that the text is very small. Here is my code:\n```    @Override\n    protected void onClusterItemRendered(MarkerItem clusterItem, Marker marker) {\n\n        super.onClusterItemRendered(clusterItem, marker);\n        \n        // set for small marker\n        int radius = 160;\n        int stroke = 6;\n        double verticalAnchor = 0.944f;\n\n\n        Bitmap.Config conf = Bitmap.Config.ARGB_8888;\n        Bitmap bmp = Bitmap.createBitmap((int) radius, (int) radius + 25, conf);\n        Canvas canvas = new Canvas(bmp);\n\n        Paint paint = new Paint();\n        paint.setAntiAlias(true);\n        paint.setColor(0xff464646);\n        paint.setStyle(Paint.Style.FILL);\n\n        // ==========================================================================\n\n        Paint paintText = new Paint();\n        paintText.setAntiAlias(true);\n        paintText.setColor(currentContext.getResources().getColor(R.color.radio_button_unselected_color));\n        paintText.setStyle(Paint.Style.STROKE);\n        String gText = \"Cars\";\n        Rect bounds = new Rect();\n        paintText.getTextBounds(gText, 0, gText.length(), bounds);\n\n        paint.setTextSize(70);\n        paint.setTextScaleX(4);\n\n        int x = (bmp.getWidth() - bounds.width())/2;\n        int y = (bmp.getHeight() + bounds.height())/2;\n\n        // ==========================================================================\n\n        // the triangle laid under the circle\n        int pointedness = 20;\n        Path path = new Path();\n        path.setFillType(Path.FillType.EVEN_ODD);\n        path.moveTo(radius / 2, radius + 15);\n        path.lineTo(radius / 2 + pointedness, radius - 10);\n        path.lineTo(radius / 2 - pointedness, radius - 10);\n        canvas.drawPath(path, paint);\n\n        // gray circle background\n        RectF rect = new RectF(0, 0, radius, radius);\n        canvas.drawRoundRect(rect, radius / 2, radius / 2, paint);\n\n        rect = new RectF(stroke, stroke, radius - stroke, radius - stroke);\n\n        canvas.drawRoundRect(rect, (radius - stroke) / 2, (radius - stroke) / 2, paint);\n        canvas.drawText(gText, x, y, paintText);\n\n        marker.setIcon(BitmapDescriptorFactory.fromBitmap(bmp));\n    }\n```\n\nThe text is barely visible although the textSize is set to 70",
+    "ts": "1466158352.000342",
+    "id": "17de37522",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0Z248CVB|vaklinzi> uploaded a file: <https://androidchat.slack.com/files/vaklinzi/F1HRJPN22/screenshot_2016-06-17-13-13-02.png|Screenshot_2016-06-17-13-13-02.png>",
+    "file": {
+      "id": "F1HRJPN22",
+      "created": 1466158414,
+      "timestamp": 1466158414,
+      "name": "Screenshot_2016-06-17-13-13-02.png",
+      "title": "Screenshot_2016-06-17-13-13-02.png",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U0Z248CVB",
+      "editable": false,
+      "size": 864186,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F1HRJPN22/screenshot_2016-06-17-13-13-02.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F1HRJPN22/download/screenshot_2016-06-17-13-13-02.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F1HRJPN22-48d6e2afb9/screenshot_2016-06-17-13-13-02_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F1HRJPN22-48d6e2afb9/screenshot_2016-06-17-13-13-02_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F1HRJPN22-48d6e2afb9/screenshot_2016-06-17-13-13-02_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 203,
+      "thumb_360_h": 360,
+      "thumb_480": "https://files.slack.com/files-tmb/T04PLNDMP-F1HRJPN22-48d6e2afb9/screenshot_2016-06-17-13-13-02_480.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_480_w": 270,
+      "thumb_480_h": 480,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F1HRJPN22-48d6e2afb9/screenshot_2016-06-17-13-13-02_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720": "https://files.slack.com/files-tmb/T04PLNDMP-F1HRJPN22-48d6e2afb9/screenshot_2016-06-17-13-13-02_720.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720_w": 405,
+      "thumb_720_h": 720,
+      "thumb_960": "https://files.slack.com/files-tmb/T04PLNDMP-F1HRJPN22-48d6e2afb9/screenshot_2016-06-17-13-13-02_960.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_960_w": 540,
+      "thumb_960_h": 960,
+      "thumb_1024": "https://files.slack.com/files-tmb/T04PLNDMP-F1HRJPN22-48d6e2afb9/screenshot_2016-06-17-13-13-02_1024.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_1024_w": 576,
+      "thumb_1024_h": 1024,
+      "image_exif_rotation": 1,
+      "original_w": 1080,
+      "original_h": 1920,
+      "permalink": "https://androidchat.slack.com/files/vaklinzi/F1HRJPN22/screenshot_2016-06-17-13-13-02.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F1HRJPN22-30fc630aae",
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U0Z248CVB",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0Z248CVB|vaklinzi>",
+    "bot_id": null,
+    "ts": "1466158418.000343",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "17de37523",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "<@U0Z248CVB>: the text size you provide here is not the same you provide in the xml layout.",
+    "ts": "1466159000.000344",
+    "id": "17de37524",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "you actually need to provide the right pixels for this based on the resolution of your mobile",
+    "ts": "1466159035.000345",
+    "id": "17de37525",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "I use this function",
+    "ts": "1466159057.000347",
+    "id": "17de37526",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "to get the right value",
+    "ts": "1466159069.000348",
+    "id": "17de37527",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0XCFE6AH|niks> uploaded a file: <https://androidchat.slack.com/files/niks/F1HS1D4U9/-.txt|Untitled>",
+    "file": {
+      "id": "F1HS1D4U9",
+      "created": 1466159148,
+      "timestamp": 1466159148,
+      "name": "-.txt",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "text",
+      "pretty_type": "Plain Text",
+      "user": "U0XCFE6AH",
+      "editable": true,
+      "size": 164,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F1HS1D4U9/-.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F1HS1D4U9/download/-.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/niks/F1HS1D4U9/-.txt",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F1HS1D4U9-08c0831e94",
+      "edit_link": "https://androidchat.slack.com/files/niks/F1HS1D4U9/-.txt/edit",
+      "preview": " public static float getSP(Resources res, float unit) {\r\n        return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, unit, res.getDisplayMetrics());\r\n    }",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre> public static float getSP(Resources res, float unit) {</pre></div>\n<div><pre>        return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, unit, res.getDisplayMetrics());</pre></div>\n<div><pre>    }</pre></div>\n</div>\n</div>\n",
+      "lines": 3,
+      "lines_more": 0,
+      "preview_is_truncated": false,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0,
+      "reactions": [
+        {
+          "name": "+1",
+          "users": [
+            "U0Z248CVB"
+          ],
+          "count": 1
+        }
+      ]
+    },
+    "user": "U0XCFE6AH",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0XCFE6AH|niks>",
+    "bot_id": null,
+    "ts": "1466159148.000351",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "17de37528",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Z248CVB",
+    "text": "and unit should be?",
+    "ts": "1466159150.000352",
+    "id": "17de37529",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Z248CVB",
+    "text": "the size I would like: for example 40?",
+    "ts": "1466159171.000353",
+    "id": "17de37530",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "that will be the size",
+    "ts": "1466159174.000354",
+    "id": "17de37531",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "of the font based on your requirement",
+    "ts": "1466159194.000355",
+    "id": "17de37532",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Z248CVB",
+    "text": "I see. Thank you, <@U0XCFE6AH>! I will try right now",
+    "ts": "1466159198.000356",
+    "id": "17de37533",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "might be some other issue",
+    "ts": "1466159586.000362",
+    "id": "17de37534",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Z248CVB",
+    "text": "<@U0XCFE6AH>, I am sorry. It works perfectly, I have mistaken paintText with just paint",
+    "ts": "1466159611.000363",
+    "id": "17de37535",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Z248CVB",
+    "text": "Thank you so much!",
+    "ts": "1466159618.000364",
+    "id": "17de37536",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0XCFE6AH|niks> uploaded a file: <https://androidchat.slack.com/files/niks/F1HS36DU1/-.txt|Untitled>",
+    "file": {
+      "id": "F1HS36DU1",
+      "created": 1466159633,
+      "timestamp": 1466159633,
+      "name": "-.txt",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "text",
+      "pretty_type": "Plain Text",
+      "user": "U0XCFE6AH",
+      "editable": true,
+      "size": 181,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F1HS36DU1/-.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F1HS36DU1/download/-.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/niks/F1HS36DU1/-.txt",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F1HS36DU1-0ac2a1c398",
+      "edit_link": "https://androidchat.slack.com/files/niks/F1HS36DU1/-.txt/edit",
+      "preview": "public static float getDP(Resources res, float unit) {\r\n        return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, unit,\r\n                res.getDisplayMetrics());\r\n    }",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>public static float getDP(Resources res, float unit) {</pre></div>\n<div><pre>        return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, unit,</pre></div>\n<div><pre>                res.getDisplayMetrics());</pre></div>\n<div><pre>    }</pre></div>\n</div>\n</div>\n",
+      "lines": 4,
+      "lines_more": 0,
+      "preview_is_truncated": false,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U0XCFE6AH",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0XCFE6AH|niks>",
+    "bot_id": null,
+    "ts": "1466159633.000366",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "17de37537",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "incase you need this too..",
+    "ts": "1466159643.000367",
+    "id": "17de37538",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Z248CVB",
+    "text": ":+1:",
+    "ts": "1466159661.000368",
+    "id": "17de37539",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETHUPB5",
+    "text": "Does anyone have any suggestions on a cheapish samsung phone for development purposes? looking for something around kitkat. As long as it is API level 16 or above",
+    "ts": "1466165044.000369",
+    "id": "17de37540",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "S5, S5 Neo, S4?",
+    "edited": {
+      "user": "U0548MM6B",
+      "ts": "1466165334.000000"
+    },
+    "ts": "1466165305.000370",
+    "id": "17de37541",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1CV5DAMT",
+    "text": "<@U0ETHUPB5> Why samsung?  Nexus phone to me are the most value for money phone and are great for development as they have an up to date OS for about 2 years after you get it.",
+    "ts": "1466165346.000372",
+    "id": "17de37542",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "Galaxy Core 2 is kitkat and is about 150 eur",
+    "ts": "1466165356.000373",
+    "id": "17de37543",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETHUPB5",
+    "text": "<@U1CV5DAMT>: I already have a nexus 5X but I’ve noticed a few crashes that are specific to older samsung devices :disappointed:",
+    "ts": "1466165400.000374",
+    "id": "17de37544",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "Then Core 2 and Core Prime are safe bets, they will probably cause a crash or two",
+    "ts": "1466165452.000375",
+    "id": "17de37545",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1CV5DAMT",
+    "text": "I would then suggest getting the samsung device that has that issue and has the most users using it",
+    "ts": "1466165477.000376",
+    "id": "17de37546",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETHUPB5",
+    "text": "yeah i’ve just looked up the Core 2, looks like a pretty good fit",
+    "ts": "1466165485.000377",
+    "id": "17de37547",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "Galaxy Core Plus is even more terrible :smile:",
+    "ts": "1466165494.000378",
+    "id": "17de37548",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETHUPB5",
+    "text": "cheers guys, just have to run it by my boss :+1:",
+    "ts": "1466165572.000379",
+    "id": "17de37549",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0H67LJUA",
+    "text": "Anyone tried Samsung test lab? might work here. Personally I never got it to do anything but crash",
+    "ts": "1466165893.000380",
+    "id": "17de37550",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0H67LJUA",
+    "text": "The client* If the devices crashed, that would be good :smile:",
+    "ts": "1466165938.000381",
+    "id": "17de37551",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "oh their online simulator? tried it a few times, but devices were at the wrong version for what I needed :disappointed:",
+    "ts": "1466166320.000382",
+    "id": "17de37552",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "btw, the thing I wanted to test was crashing the device on real phones so I thought it was gonna happen on their test lab too :joy:",
+    "ts": "1466166448.000383",
+    "id": "17de37553",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETHUPB5",
+    "text": "I’ve only used google’s but I can tell you that my login screen had no crashes :joy:",
+    "ts": "1466167741.000384",
+    "id": "17de37554",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETHUPB5",
+    "text": "I might have to make an APK that skips the login screen",
+    "ts": "1466167764.000385",
+    "id": "17de37555",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETHUPB5",
+    "text": "unless they’ve added some way to provide login details or something",
+    "ts": "1466167784.000386",
+    "id": "17de37556",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HRX5N8K",
+    "subtype": "channel_join",
+    "text": "<@U1HRX5N8K|codmajik> has joined the channel",
+    "ts": "1466171218.000387",
+    "id": "17de37557",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U0Z248CVB>: you should split that up into functions instead of using `// --------------------------------------` imo.",
+    "ts": "1466172965.000388",
+    "id": "17de37558",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1GNSUSMB",
+    "text": "is it possible to import 1 androidstudio project into another androidstudio project ?",
+    "ts": "1466178742.000389",
+    "id": "17de37559",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1GNSUSMB",
+    "text": "by doing this :  1) create project2, (2) file-&gt;new-&gt;import project ?",
+    "ts": "1466178848.000390",
+    "id": "17de37560",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HV1PYH4",
+    "subtype": "channel_join",
+    "text": "<@U1HV1PYH4|wambiri> has joined the channel",
+    "ts": "1466181476.000391",
+    "id": "17de37561",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KTPB91V",
+    "text": "somebody knows how to use rxbinding with alert dialogs?",
+    "ts": "1466192894.000392",
+    "id": "17de37562",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL9UB7B",
+    "text": "what is there to know?",
+    "ts": "1466193195.000393",
+    "id": "17de37563",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KTPB91V",
+    "text": "can’t see any `DialogInterface.OnClickListener` related stuff in rxbinding",
+    "ts": "1466193519.000394",
+    "id": "17de37564",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KTPB91V",
+    "text": "never tried rxbinding myself, :X",
+    "ts": "1466193536.000395",
+    "id": "17de37565",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL9UB7B",
+    "text": "yeah, it doesn't have dialog stuff in there. i wrote my own rx date picker dialog for a project a couple months ago and it wasn't hard",
+    "ts": "1466193570.000396",
+    "id": "17de37566",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL9UB7B",
+    "text": "i think the reason it doesn't have support for those is that you have to pass the listener in at creation time",
+    "ts": "1466193611.000397",
+    "id": "17de37567",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL9UB7B",
+    "text": "so he would have to subclass the alertdialog, pass in a callback in the constructor, then expose the observable stuff on that class",
+    "ts": "1466193673.000398",
+    "id": "17de37568",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL9UB7B",
+    "text": "totally possible, but to me doesn't fit in rxbinding where everything takes a view/widget and returns you an observable/action to interact with it",
+    "ts": "1466193713.000399",
+    "id": "17de37569",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "<https://goo.gl/photos/yFuCJ4zRcKLnJX6r7>\nI am implementing the `ViewPager.PageTransformer` class and in the `transformPage()` method i am calling `View.setTranslationX()` and `View.setTranslationY()` on some views.  On Android N Developer Preview 4, these white lines get drawn on the screen while changing pages in a `ViewPager` .  On earlier versions of Android I don’t have this issue.  Is this a known bug in the Android N Developer Preview 4?",
+    "attachments": [
+      {
+        "service_name": "Google Photos",
+        "title": "New photo by Etienne Lawlor",
+        "title_link": "https://goo.gl/photos/yFuCJ4zRcKLnJX6r7",
+        "fallback": "Google Photos: New photo by Etienne Lawlor",
+        "image_url": "https://lh3.googleusercontent.com/irzC7Gm_wT9QvA0uD_2Xv0bwtNV_x0LMYHD75Zb0CI0kOxSpTOy_0ht3gzf-jmAMY2-10qpUIOYsCw",
+        "image_width": 141,
+        "image_height": 250,
+        "from_url": "https://goo.gl/photos/yFuCJ4zRcKLnJX6r7",
+        "image_bytes": 22331,
+        "service_icon": "http://ssl.gstatic.com/images/branding/product/2x/photos_96dp.png",
+        "id": 1
+      }
+    ],
+    "edited": {
+      "user": "U0A1BE7KQ",
+      "ts": "1466204839.000000"
+    },
+    "ts": "1466204457.000400",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "17de37570",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1J3YRQ6Q",
+    "subtype": "channel_join",
+    "text": "<@U1J3YRQ6Q|kaiwalya> has joined the channel",
+    "ts": "1466228286.000403",
+    "id": "17de37571",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

@@ -1,0 +1,326 @@
+[
+  {
+    "user": "U055GGAHS",
+    "text": "<@U0546MZGX>: where did you see this information?",
+    "ts": "1439045680.000619",
+    "id": "08li1111",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "the pre release is treated differently than real releases in the build tools, is that what you are talking about?",
+    "ts": "1439045706.000620",
+    "id": "08li1112",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "but, assuming what you said is entirely correct. It is trivial to publish multiple aar versions so it would be easy to publish a v22 target variant and a v23 target variant with just a few lines of gradle",
+    "ts": "1439046019.000621",
+    "id": "08li1113",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "Docs say `targetSdkVersion` behaves like `minSdkVersion`, meaning when merging manifests, your app has to support the highest min sdk and the highest target sdk. ",
+    "ts": "1439056056.000622",
+    "id": "08li1114",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "Now, targeting 20, 21 or 22 is not a big deal for an app maker",
+    "ts": "1439056076.000623",
+    "id": "08li1115",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "But targeting 23 will change that, since according to Google that means a user can revoke a permission at any time. So your app should be able to handle this. ",
+    "ts": "1439056115.000624",
+    "id": "08li1116",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "I was just wondering if the new libraries, like support libraries, will be targeting 23. It's a breaking change for an app. ",
+    "ts": "1439056152.000625",
+    "id": "08li1117",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "We've all changed and bumped support library versions before, without having to worry about almost anything. ",
+    "ts": "1439056216.000626",
+    "id": "08li1118",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "So my guess is the same as yours, they'll be releasing two different versions of the support libraries. Same code, just different target sdk. ",
+    "ts": "1439056307.000627",
+    "id": "08li1119",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "a lot of libraries do not require permissions so I do not think its a big deal",
+    "ts": "1439060322.000628",
+    "id": "08li1120",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "ones that do often leave it to the implementer to require the necessaries since only recently could the libraries provide that information themselves",
+    "ts": "1439060358.000629",
+    "id": "08li1121",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "I would not want them to split it into api-23 and pre-api-23 variants",
+    "ts": "1439063090.000630",
+    "id": "08li1122",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "If you're bumping the targetSdkVersion, it's your responsibility to make sure the app works as intended",
+    "ts": "1439063109.000631",
+    "id": "08li1123",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "same goes for if you want to use a new library that targets 23+",
+    "ts": "1439063139.000632",
+    "id": "08li1124",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "<@U055GGAHS> its not about permissions in libraries, it's the library forcing you to deal with \"optional\" permissions",
+    "ts": "1439075437.000633",
+    "id": "08li1125",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "<@U053LEHJN> they might do that, but then the support library version 23 and above will be a breaking change ",
+    "ts": "1439075479.000634",
+    "id": "08li1126",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U0546MZGX>: as far as I'm concerned, if you're updating an app when API 23 is available, you need to target it and update it to comply with the new permission mechanics anyway",
+    "ts": "1439076216.000635",
+    "id": "08li1127",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "Yeah I know. Just wanted to point that bumping to 23 will break many apps if you don't know you have to support the new permissions. ",
+    "ts": "1439081303.000636",
+    "id": "08li1128",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

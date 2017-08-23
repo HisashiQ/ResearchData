@@ -1,0 +1,388 @@
+[
+  {
+    "user": "U0LETFK18",
+    "text": "How do I fetch more data when user has scrolled my recyclerview to the bottom of the screen? I did search around SO, but when I tried using some of their implementation, the method onLoadMore is called even before user has scrolled",
+    "ts": "1456912142.000863",
+    "id": "02be3451",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "```                if (productCursor != \"\") {\n                    visibleItemCount = searchProductRecyclerview.getChildCount();\n                    totalItemCount = mGridLayoutManager.getItemCount();\n                    firstVisibleItem = mGridLayoutManager.findFirstVisibleItemPosition();\n\n                    if (loading) {\n                        if (totalItemCount &gt; previousTotal) {\n                            loading = false;\n                            previousTotal = totalItemCount;\n                        }\n                    }\n\n                    if (!loading &amp;&amp; (totalItemCount - visibleItemCount) &lt;= (firstVisibleItem + visibleThreshold)) {\n\n                        // Do something\n                        String cursorProductURL = ShopprUrlUtils.getSearchProductUrl(getApplicationContext(), productSearchTerm);\n                        String cursorURLPath = productSearchTerm + \"?cursor=\" + productCursor;\n                        String fullCursorProductURLPath = cursorProductURL + cursorURLPath;\n                        executeSearchProduct(cursorURLPath);\n\n                        loading = true;\n                    }\n                }\n            }```",
+    "ts": "1456914094.000864",
+    "id": "02be3452",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0PSJLDCN",
+    "subtype": "channel_join",
+    "text": "<@U0PSJLDCN|salavert> has joined the channel",
+    "ts": "1456915169.000865",
+    "id": "02be3453",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "I found the answer for the ^",
+    "ts": "1456918206.000866",
+    "id": "02be3454",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "For those who are curious, i basically have to check if the recyclerview has been scrolled or not",
+    "ts": "1456918227.000867",
+    "id": "02be3455",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "onStateChanged helped =]",
+    "ts": "1456918254.000868",
+    "id": "02be3456",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0PSRAF4N",
+    "subtype": "channel_join",
+    "text": "<@U0PSRAF4N|abdellah> has joined the channel",
+    "ts": "1456918723.000869",
+    "id": "02be3457",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0PSKS6F6",
+    "subtype": "channel_join",
+    "text": "<@U0PSKS6F6|futabooo> has joined the channel",
+    "ts": "1456919690.000870",
+    "id": "02be3458",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "Got a question regarding setting specific ViewHolders in RecyclerView. There would be 2 types of row in this RecyclerView. And the first type, would be the first 3 rows of the RecyclerView. This is fixed. The second type would have different layout then the first, and the order of content is random. My stumbling block now is, how do I fix a specific type of layout for the first 3 rows?",
+    "ts": "1456931103.000871",
+    "id": "02be3459",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0M1CFR7B",
+    "text": "Hey everybody! I’m back to working on the app I was asking about last week. I’ve managed to get the app to respond to whether it is getting charged or not when the app is first launched (by rendering a particular Webview), but I’m having trouble figuring out how to set it to listen for this change. I think I need a BroadcastReceiver, but I only need the app to monitor this while it is running, so it seems I should be using a LocalBroadcastManager (which still requires that I define a BroadcastReceiver, right?). Here is my working code so far.   ```public class MainActivity extends AppCompatActivity {\n\n    @Override\n    protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n\n        IntentFilter ifilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);\n        Intent batteryStatus = registerReceiver(null, ifilter);\n\n        int status = batteryStatus.getIntExtra(BatteryManager.EXTRA_STATUS, -1);\n        boolean isCharging = status == BatteryManager.BATTERY_STATUS_CHARGING || status == BatteryManager.BATTERY_STATUS_FULL;\n\n        if (isCharging) {\n            WebView dockedWebView = new WebView(this);\n            setContentView(dockedWebView);\n            dockedWebView.loadUrl(\"<http://www.dockedpage.com>\");\n        } else {\n            WebView undockedWebView = new WebView(this);\n            setContentView(undockedWebView);\n            undockedWebView.loadUrl(\"<http://www.undockedpage.com>\");\n        }\n    }\n}``` So, I guess one major question I have, is should I be creating another Activity, like this StackOverflow answer suggests <http://stackoverflow.com/questions/8802157/how-to-use-localbroadcastmanager> , is it possibly to accomplish this all in my MainActivity, or do I set up a BroadcastReceiver in another file and link it in like the docs _sort of_ describe <http://developer.android.com/training/monitoring-device-state/battery-monitoring.html> ?",
+    "attachments": [
+      {
+        "title": "how to use LocalBroadcastManager?",
+        "title_link": "http://stackoverflow.com/questions/8802157/how-to-use-localbroadcastmanager",
+        "text": "can any one tell me how to use/locate LocalBroadcastManager as described in google docs and Service broadcast doc? i tried to google it, but theres no code available to start with? the documents ...",
+        "fallback": "how to use LocalBroadcastManager?",
+        "thumb_url": "http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/questions/8802157/how-to-use-localbroadcastmanager",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "id": 1
+      },
+      {
+        "title": "Monitoring the Battery Level and Charging State | Android Developers",
+        "title_link": "http://developer.android.com/training/monitoring-device-state/battery-monitoring.html",
+        "text": "When you're altering the frequency of your background updates to reduce the effect of those updates on battery life, checking the current battery level and charging state is a good place to start. The battery-life impact of performing application …",
+        "fallback": "Monitoring the Battery Level and Charging State | Android Developers",
+        "from_url": "http://developer.android.com/training/monitoring-device-state/battery-monitoring.html",
+        "id": 2
+      }
+    ],
+    "ts": "1456933534.000872",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "02be3460",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Local broadcast manager is local to your app, it won't register the system wide broadcasts afaik ",
+    "ts": "1456934601.000874",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U0M1CFR7B"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "02be3461",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0PTZHCUS",
+    "subtype": "channel_join",
+    "text": "<@U0PTZHCUS|sideral> has joined the channel",
+    "ts": "1456935396.000875",
+    "id": "02be3462",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "<@U0LETFK18>: in `getItemViewType` in your adapter you can return a different integer depending on the position",
+    "ts": "1456936627.000876",
+    "id": "02be3463",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "then in `onCreateViewHolder` you get that same integer back which you can use in logic to create different viewholders",
+    "ts": "1456936670.000877",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U0PB2LT98"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "02be3464",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0PU9CNTU",
+    "subtype": "channel_join",
+    "text": "<@U0PU9CNTU|goros> has joined the channel",
+    "ts": "1456938174.000878",
+    "id": "02be3465",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0M1CFR7B",
+    "text": "Figured it out! Thank you!",
+    "ts": "1456938972.000879",
+    "id": "02be3466",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Q23Q201",
+    "subtype": "channel_join",
+    "text": "<@U0Q23Q201|ani> has joined the channel",
+    "ts": "1456985679.000880",
+    "id": "02be3467",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Q21MWUD",
+    "subtype": "channel_join",
+    "text": "<@U0Q21MWUD|jiyinyiyong> has joined the channel",
+    "ts": "1456987836.000881",
+    "id": "02be3468",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

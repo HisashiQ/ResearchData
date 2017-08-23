@@ -1,0 +1,464 @@
+[
+  {
+    "user": "U2YSGL18T",
+    "text": "<@U2YSGL18T|simple-dev-user> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1478438920.000169",
+    "id": "06be10037",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2Z0UALD8",
+    "text": "<@U2Z0UALD8|kiril> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1478467065.000170",
+    "id": "06be10038",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2Z0UALD8",
+    "text": "Folks,  I have a bit of a problem with data binding",
+    "ts": "1478467195.000171",
+    "id": "06be10039",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2Z0UALD8",
+    "text": "I can't figure out how to automatically update the visibility of an element within a layout, using data binding",
+    "ts": "1478467213.000172",
+    "id": "06be10040",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2Z0UALD8",
+    "text": "here is my SO question: <http://stackoverflow.com/questions/40448989/how-to-update-a-layout-elements-visibility-with-data-binding>",
+    "attachments": [
+      {
+        "title": "How to update a layout element's visibility with data binding",
+        "title_link": "http://stackoverflow.com/questions/40448989/how-to-update-a-layout-elements-visibility-with-data-binding",
+        "text": "I'm having a hard time understanding how to update the view using data binding. I have a simple example I'm experimenting with, in which a toggle switch will make a button appear/disappear in the v...",
+        "fallback": "How to update a layout element's visibility with data binding",
+        "thumb_url": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/questions/40448989/how-to-update-a-layout-elements-visibility-with-data-binding",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "service_icon": "http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d",
+        "service_name": "stackoverflow.com",
+        "id": 1
+      }
+    ],
+    "ts": "1478467220.000173",
+    "id": "06be10041",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2Z0UALD8",
+    "text": "I'd love to get some feedback",
+    "ts": "1478467236.000175",
+    "id": "06be10042",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2YS4P90E",
+    "text": "Not sure, but have you tried `android:visibility=\"@{() -&gt; businessLogic.getVisible()}\"`",
+    "ts": "1478472093.000176",
+    "id": "06be10043",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2YS4P90E",
+    "text": "I'd be putting a breakpoint in `getVisible` to see if it's even being invoked.",
+    "ts": "1478472167.000177",
+    "id": "06be10044",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2Z0UALD8",
+    "text": "yah, it gets invoked",
+    "ts": "1478472952.000178",
+    "id": "06be10045",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2Z0UALD8",
+    "text": "<@U2YS4P90E> however, it only gets invoked once",
+    "ts": "1478472966.000179",
+    "id": "06be10046",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2Z0UALD8",
+    "text": "when the layout is loaded",
+    "ts": "1478472974.000180",
+    "id": "06be10047",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2Z0UALD8",
+    "text": "and then it doesn't get updated when I change the value with the toggle button",
+    "ts": "1478472987.000181",
+    "id": "06be10048",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2Z0UALD8",
+    "text": ":confused:",
+    "ts": "1478472991.000182",
+    "id": "06be10049",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U2Z0UALD8> <https://developer.android.com/topic/libraries/data-binding/index.html>",
+    "attachments": [
+      {
+        "title": "    Data Binding Library | Android Developers  ",
+        "title_link": "https://developer.android.com/topic/libraries/data-binding/index.html",
+        "text": "The Data Binding Library enables you to write declarative layouts.",
+        "fallback": "    Data Binding Library | Android Developers  ",
+        "from_url": "https://developer.android.com/topic/libraries/data-binding/index.html",
+        "service_icon": "https://developer.android.com/favicon.ico",
+        "service_name": "developer.android.com",
+        "id": 1
+      }
+    ],
+    "ts": "1478473807.000183",
+    "id": "06be10050",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Scroll to Layout Details",
+    "ts": "1478473816.000185",
+    "id": "06be10051",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "It’s pretty straight forward",
+    "ts": "1478473824.000186",
+    "id": "06be10052",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U2Z0UALD8> I think your issue might be that you aren’t calling notify",
+    "ts": "1478474390.000187",
+    "id": "06be10053",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "`notifyPropertyChanged(com.example.myapplication.BR.{propertyName});`",
+    "ts": "1478474421.000188",
+    "id": "06be10054",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2Z0UALD8",
+    "text": "<@U08GFT5V5> I'm calling it in the BusinessLogic class",
+    "ts": "1478499486.000189",
+    "id": "06be10055",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U2Z0UALD8|kiril> uploaded a file: <https://androidchat.slack.com/files/kiril/F2YCWL1K3/togglevisibility.java|toggleVisibility> and commented: I am notifying that the property changed.",
+    "file": {
+      "id": "F2YCWL1K3",
+      "created": 1478499545,
+      "timestamp": 1478499545,
+      "name": "toggleVisibility.java",
+      "title": "toggleVisibility",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U2Z0UALD8",
+      "editable": true,
+      "size": 100,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F2YCWL1K3/togglevisibility.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F2YCWL1K3/download/togglevisibility.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/kiril/F2YCWL1K3/togglevisibility.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F2YCWL1K3-56a4fbd7b0",
+      "edit_link": "https://androidchat.slack.com/files/kiril/F2YCWL1K3/togglevisibility.java/edit",
+      "preview": "public void toggleVisibility() {\r\n    visible = !visible;\r\n    notifyPropertyChanged(BR.visible);\r\n}",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-keyword\">public</span> <span class=\"cm-variable-3\">void</span> <span class=\"cm-def\">toggleVisibility</span>() {</pre></div>\n<div><pre>    <span class=\"cm-variable\">visible</span> <span class=\"cm-operator\">=</span> <span class=\"cm-operator\">!</span><span class=\"cm-variable\">visible</span>;</pre></div>\n<div><pre>    <span class=\"cm-variable\">notifyPropertyChanged</span>(<span class=\"cm-variable\">BR</span>.<span class=\"cm-variable\">visible</span>);</pre></div>\n<div><pre>}</pre></div>\n</div>\n</div>\n",
+      "lines": 4,
+      "lines_more": 0,
+      "preview_is_truncated": false,
+      "channels": [
+        "C055MSDCM"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 1,
+      "initial_comment": {
+        "id": "Fc2YBZK1NU",
+        "created": 1478499545,
+        "timestamp": 1478499545,
+        "user": "U2Z0UALD8",
+        "is_intro": true,
+        "comment": "I am notifying that the property changed.",
+        "channel": ""
+      }
+    },
+    "user": "U2Z0UALD8",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U2Z0UALD8|kiril>",
+    "bot_id": null,
+    "ts": "1478499546.000190",
+    "id": "06be10056",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2ZP99P7Y",
+    "text": "<@U2ZP99P7Y|arslan.sheerazi> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1478500553.000191",
+    "id": "06be10057",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

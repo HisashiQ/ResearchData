@@ -1,0 +1,637 @@
+[
+  {
+    "user": "U0VCEC2BV",
+    "subtype": "channel_join",
+    "text": "<@U0VCEC2BV|alexnikov> has joined the channel",
+    "ts": "1458890237.000313",
+    "id": "25be3984",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0T25TAKY",
+    "text": "Hi there, I am using many fragments in an activity. I have a String variable currentLoadedFragment that gets updated every time I call a function named showFragment(String fragment, Bundle params);  \nwhich get or create an instance of the fragment I want to show, and ask the fragmentManager to show this instance.\nIn my activity I have declared null references to each of my fragments, for example :\nprivate LoginFragment loginFragment = null;\nThen to get or create the fragment instance I am using the method below",
+    "edited": {
+      "user": "U0T25TAKY",
+      "ts": "1458900174.000000"
+    },
+    "ts": "1458900102.000314",
+    "id": "25be3985",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0T25TAKY|k2ndlab> uploaded a file: <https://androidchat.slack.com/files/k2ndlab/F0VEKPQR5/-.java|Untitled>",
+    "file": {
+      "id": "F0VEKPQR5",
+      "created": 1458900123,
+      "timestamp": 1458900123,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U0T25TAKY",
+      "editable": true,
+      "size": 482,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0VEKPQR5/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0VEKPQR5/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/k2ndlab/F0VEKPQR5/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0VEKPQR5-060da304c1",
+      "edit_link": "https://androidchat.slack.com/files/k2ndlab/F0VEKPQR5/-.java/edit",
+      "preview": "public LoginFragment getLoginFragment() {\r\n        if (null == loginFragment) {\r\n            Fragment currentFragment = getFragmentManager().findFragmentById(R.id.content_frame);\r\n            if (currentFragment instanceof LoginFragment) {\r\n                loginFragment = (LoginFragment) currentFragment;\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-keyword\">public</span> <span class=\"cm-variable\">LoginFragment</span> <span class=\"cm-def\">getLoginFragment</span>() {</pre></div>\n<div><pre>        <span class=\"cm-keyword\">if</span> (<span class=\"cm-atom\">null</span> <span class=\"cm-operator\">==</span> <span class=\"cm-variable\">loginFragment</span>) {</pre></div>\n<div><pre>            <span class=\"cm-variable\">Fragment</span> <span class=\"cm-variable\">currentFragment</span> <span class=\"cm-operator\">=</span> <span class=\"cm-variable\">getFragmentManager</span>().<span class=\"cm-variable\">findFragmentById</span>(<span class=\"cm-variable\">R</span>.<span class=\"cm-variable\">id</span>.<span class=\"cm-variable\">content_frame</span>);</pre></div>\n<div><pre>            <span class=\"cm-keyword\">if</span> (<span class=\"cm-variable\">currentFragment</span> <span class=\"cm-keyword\">instanceof</span> <span class=\"cm-variable\">LoginFragment</span>) {</pre></div>\n<div><pre>                <span class=\"cm-variable\">loginFragment</span> <span class=\"cm-operator\">=</span> (<span class=\"cm-variable\">LoginFragment</span>) <span class=\"cm-variable\">currentFragment</span>;</pre></div>\n</div>\n</div>\n",
+      "lines": 13,
+      "lines_more": 8,
+      "preview_is_truncated": null,
+      "channels": [
+        "C055MSDCM"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U0T25TAKY",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0T25TAKY|k2ndlab>",
+    "bot_id": null,
+    "ts": "1458900123.000315",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "25be3986",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0T25TAKY",
+    "text": "It's working.. but I was wondering if I am making mistakes and if this is the usual way to do it ? Thanks in advance for your advises :simple_smile:",
+    "edited": {
+      "user": "U0T25TAKY",
+      "ts": "1458900287.000000"
+    },
+    "ts": "1458900270.000318",
+    "id": "25be3987",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Why are you doing two null checks?",
+    "ts": "1458900423.000320",
+    "id": "25be3988",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0T25TAKY|k2ndlab> uploaded a file: <https://androidchat.slack.com/files/k2ndlab/F0VEAU0MA/oops_yes__i_mean.java|oops Yes, I mean>",
+    "file": {
+      "id": "F0VEAU0MA",
+      "created": 1458900589,
+      "timestamp": 1458900589,
+      "name": "oops_Yes__I_mean.java",
+      "title": "oops Yes, I mean",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U0T25TAKY",
+      "editable": true,
+      "size": 445,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0VEAU0MA/oops_yes__i_mean.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0VEAU0MA/download/oops_yes__i_mean.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/k2ndlab/F0VEAU0MA/oops_yes__i_mean.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0VEAU0MA-96d0b74ca3",
+      "edit_link": "https://androidchat.slack.com/files/k2ndlab/F0VEAU0MA/oops_yes__i_mean.java/edit",
+      "preview": "public LoginFragment getLoginFragment() {\r\n        if (null == loginFragment) {\r\n            Fragment currentFragment = getFragmentManager().findFragmentById(R.id.content_frame);\r\n            if (currentFragment instanceof LoginFragment) {\r\n                loginFragment = (LoginFragment) currentFragment;\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-keyword\">public</span> <span class=\"cm-variable\">LoginFragment</span> <span class=\"cm-def\">getLoginFragment</span>() {</pre></div>\n<div><pre>        <span class=\"cm-keyword\">if</span> (<span class=\"cm-atom\">null</span> <span class=\"cm-operator\">==</span> <span class=\"cm-variable\">loginFragment</span>) {</pre></div>\n<div><pre>            <span class=\"cm-variable\">Fragment</span> <span class=\"cm-variable\">currentFragment</span> <span class=\"cm-operator\">=</span> <span class=\"cm-variable\">getFragmentManager</span>().<span class=\"cm-variable\">findFragmentById</span>(<span class=\"cm-variable\">R</span>.<span class=\"cm-variable\">id</span>.<span class=\"cm-variable\">content_frame</span>);</pre></div>\n<div><pre>            <span class=\"cm-keyword\">if</span> (<span class=\"cm-variable\">currentFragment</span> <span class=\"cm-keyword\">instanceof</span> <span class=\"cm-variable\">LoginFragment</span>) {</pre></div>\n<div><pre>                <span class=\"cm-variable\">loginFragment</span> <span class=\"cm-operator\">=</span> (<span class=\"cm-variable\">LoginFragment</span>) <span class=\"cm-variable\">currentFragment</span>;</pre></div>\n</div>\n</div>\n",
+      "lines": 11,
+      "lines_more": 6,
+      "preview_is_truncated": null,
+      "channels": [
+        "C055MSDCM"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U0T25TAKY",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0T25TAKY|k2ndlab>",
+    "bot_id": null,
+    "ts": "1458900589.000321",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "25be3989",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0T25TAKY",
+    "text": "But the general idea about keeping fragment instances, re-using them, having something like a string variable of the displayed fragment, this is how you guys do it ? I mean in professional apps",
+    "ts": "1458900765.000322",
+    "id": "25be3990",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0VEP0944",
+    "subtype": "channel_join",
+    "text": "<@U0VEP0944|quantai> has joined the channel",
+    "ts": "1458906812.000323",
+    "id": "25be3991",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0QPPQ8GG",
+    "text": "<@U0T25TAKY>: You are on the right track. For one I recommend you call getSupportFragmentManager to ensure backwards compatibility. Also don't directly use the constructor like this. If you need to pass bundle arguments to the fragment than it is best to create either a static method or class to help you setup that bundle and have it return the fragment to you. In this case where it is a login fragment, I doubt it has any arguments it needs so this will work fine.",
+    "ts": "1458911357.000324",
+    "id": "25be3992",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0QPPQ8GG",
+    "text": "Also if the activity layout is pretty static you can just use the &lt;fragment/&gt; tag in it's layout and let the inflation system do this for you.",
+    "ts": "1458911388.000325",
+    "id": "25be3993",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0VFET9PA",
+    "subtype": "channel_join",
+    "text": "<@U0VFET9PA|zycheng> has joined the channel",
+    "ts": "1458912768.000326",
+    "id": "25be3994",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0T25TAKY",
+    "text": "<@U0QPPQ8GG>: ok thanks for support lib tips. About passing bundle arguments if I use something like a newInstance(Bundle params) static method in my fragment, my fragment will always have this params attached to it.",
+    "ts": "1458916039.000327",
+    "id": "25be3995",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0T25TAKY",
+    "text": "But depending from where I am launching my fragment I need to give it different params, that is why I made a setParams() method in the BaseFragment class all my fragments are extending",
+    "ts": "1458916156.000328",
+    "id": "25be3996",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0T25TAKY",
+    "text": "because the fragment is not always a fresh instance",
+    "ts": "1458916184.000329",
+    "id": "25be3997",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "&gt; But the general idea about keeping fragment instances, re-using them, having something like a string variable of the displayed fragment, this is how you guys do it ?\n\nnot here, keeping things immutable is a good practice",
+    "ts": "1458920001.000330",
+    "id": "25be3998",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "I usually use primitives in my `newInstance` methods then package a bundle within that",
+    "ts": "1458920079.000331",
+    "id": "25be3999",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "the garbage collector will pick up old fragments as long as they're not in the back stack or referenced otherwise <@U0T25TAKY> ",
+    "ts": "1458920154.000332",
+    "id": "25be4000",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0T25TAKY",
+    "text": "But a fragment is representing a view, his states changes constantly, how can it be considered immutable ? <@U0546QERR>",
+    "edited": {
+      "user": "U0T25TAKY",
+      "ts": "1458921233.000000"
+    },
+    "ts": "1458921150.000333",
+    "id": "25be4001",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0QPPQ8GG",
+    "text": "I personally prefer to not keep fragment instances and use the on save instance state behavior to its fullest. This allows me to nest fragments(there be dragons, tread with caution) without anywhere near the level of crap to deal with on the random lifecycle crashes. Only exception is when it is a dialog fragment",
+    "ts": "1458921656.000335",
+    "id": "25be4002",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0T25TAKY",
+    "text": "ok I think I read somewhere that onSaveInstanceState was not reliable or always called, but I will try this in my next app or if I get too many crash report with this one :simple_smile:",
+    "edited": {
+      "user": "U0T25TAKY",
+      "ts": "1458922853.000000"
+    },
+    "ts": "1458922836.000336",
+    "id": "25be4003",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0QPPQ8GG",
+    "text": "<@U0T25TAKY>: if you havn’t looked into it already. I recommend adding crashlytics to your app. It has saved me many times.",
+    "ts": "1458923443.000338",
+    "id": "25be4004",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0T25TAKY",
+    "text": "Yes it is in my todo :simple_smile: Because I realized that on the play store I was only receiving the crash reports manually sent by the user. I think with crashlytics I will receive them all",
+    "edited": {
+      "user": "U0T25TAKY",
+      "ts": "1458924500.000000"
+    },
+    "ts": "1458924473.000339",
+    "id": "25be4005",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0QPPQ8GG",
+    "text": "correct. and it is super easy to setup",
+    "ts": "1458930009.000342",
+    "id": "25be4006",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0VHELPGU",
+    "subtype": "channel_join",
+    "text": "<@U0VHELPGU|ifeoma> has joined the channel",
+    "ts": "1458931442.000343",
+    "id": "25be4007",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0VJWUU3Z",
+    "subtype": "channel_join",
+    "text": "<@U0VJWUU3Z|johnsexton> has joined the channel",
+    "ts": "1458942430.000344",
+    "id": "25be4008",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0VHTK50T",
+    "subtype": "channel_join",
+    "text": "<@U0VHTK50T|shell-bell> has joined the channel",
+    "ts": "1458947291.000345",
+    "id": "25be4009",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0VKDNACU",
+    "subtype": "channel_join",
+    "text": "<@U0VKDNACU|xenetics> has joined the channel",
+    "ts": "1458955761.000346",
+    "id": "25be4010",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

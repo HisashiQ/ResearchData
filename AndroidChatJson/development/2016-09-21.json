@@ -1,0 +1,1874 @@
+[
+  {
+    "user": "U2E2H610C",
+    "text": "<@U2E2H610C|webweb> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1474442761.001382",
+    "id": "21de46226",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "OMG, I spent _hours_ last night and this morning trying to figure out why my custom annotation processors and butterknife weren’t working together. I read the source of `android-apt`, looked through a ton of its bug reports, etc..   what did the problem turn out to be?  I was trying to apply `@BindView` from butterknife to a private field.",
+    "ts": "1474443434.001383",
+    "id": "21de46227",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "/gif duh",
+    "ts": "1474443447.001384",
+    "id": "21de46228",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "",
+    "bot_id": "B0GH4RVHU",
+    "attachments": [
+      {
+        "fallback": "<http://gifsoup.com/view2/1624593/duh-o.gif>",
+        "image_url": "http://gifsoup.com/view2/1624593/duh-o.gif",
+        "image_width": 320,
+        "image_height": 240,
+        "image_bytes": 436539,
+        "is_animated": true,
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1474443447.001385",
+    "id": "21de46229",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "<@U16GF1B0F> Happens sometimes",
+    "ts": "1474443502.001386",
+    "id": "21de46230",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "/gif git blame",
+    "ts": "1474443526.001387",
+    "id": "21de46231",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "",
+    "bot_id": "B0GH4RVHU",
+    "attachments": [
+      {
+        "fallback": "<http://31.media.tumblr.com/30d2bb731c09443b67f4281ac5846b7c/tumblr_inline_ngysj0ya2X1raprkq.gif>",
+        "image_url": "http://31.media.tumblr.com/30d2bb731c09443b67f4281ac5846b7c/tumblr_inline_ngysj0ya2X1raprkq.gif",
+        "image_width": 500,
+        "image_height": 329,
+        "image_bytes": 1609581,
+        "is_animated": true,
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1474443526.001388",
+    "id": "21de46232",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLABD1S",
+    "text": "Follow up on the single-threaded dispatcher with RxJava. The `AndroidSchedulers.from(looper)` did not really work out well. Wasn't able to get it run properly (not sure how it is expected to be used). But the simplest way to have a single-threaded-scheduler is this:\n```\nfinal ExecutorService executor = Executors.newSingleThreadExecutor();\nobservable.observeOn(Schedulers.from(executor))\n    .doOnUnsubscribe(new Action0() {\n        @Override public void call() {\n            // The dispatcher thread is stopped upon unsubscribing.\n            executor.shutdownNow();\n        }\n    })\n    .subscribe();\n```",
+    "ts": "1474446297.001389",
+    "id": "21de46233",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLABD1S",
+    "text": "This works very well. For future reference :wink:",
+    "ts": "1474446306.001390",
+    "id": "21de46234",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1DQY6TTQ",
+    "text": "hi",
+    "ts": "1474452729.001391",
+    "id": "21de46235",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1T13H6S3",
+    "text": "hey",
+    "ts": "1474452797.001392",
+    "id": "21de46236",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2E4S6W93",
+    "text": "<@U2E4S6W93|norbert> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1474455238.001393",
+    "id": "21de46237",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2E551QSJ",
+    "text": "<@U2E551QSJ|stijnsmit> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1474458325.001394",
+    "id": "21de46238",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2E55QHTQ",
+    "text": "<@U2E55QHTQ|jaisonfdo> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1474458474.001395",
+    "id": "21de46239",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2E5H803B",
+    "text": "<@U2E5H803B|ranjith> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1474458533.001396",
+    "id": "21de46240",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HA5ABNW",
+    "text": "Thanks <@U053PPGDC>",
+    "ts": "1474459090.001397",
+    "id": "21de46241",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HA5ABNW",
+    "text": "could someone suggest a good webscoket android client library..",
+    "ts": "1474459130.001398",
+    "id": "21de46242",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "is there any reason in particular you would need to use websockets?",
+    "ts": "1474459951.001399",
+    "id": "21de46243",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "a regular ol’ TCP (or maybe even UDP) socket connection would work too",
+    "ts": "1474459970.001400",
+    "id": "21de46244",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "and you don’t need much in the way of a client library",
+    "ts": "1474459978.001401",
+    "id": "21de46245",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "at <http://www.transloc.com|www.transloc.com> we pushed vehicle locations using UDP",
+    "ts": "1474460058.001402",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "21de46246",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "anything really - if you’re constantly connected to power (as you are, in a car) you don’t care about battery etc",
+    "ts": "1474460064.001403",
+    "id": "21de46247",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HA5ABNW",
+    "text": "I just need to use socket.. and not perticulerly websocket",
+    "ts": "1474460335.001404",
+    "id": "21de46248",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HA5ABNW",
+    "text": "do we have any default api provided for tcp or udp ?",
+    "ts": "1474460354.001405",
+    "id": "21de46249",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "yeah, java.net.Socket :slightly_smiling_face:",
+    "ts": "1474460463.001406",
+    "id": "21de46250",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "(<https://docs.oracle.com/javase/7/docs/api/java/net/Socket.html>)",
+    "ts": "1474460467.001407",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "21de46251",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HA5ABNW",
+    "text": "hehe..Thanks very much",
+    "ts": "1474464562.001408",
+    "id": "21de46252",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "Things I’ve learned trying to write a nice convenient hybrid encryption lib that works on seemingly everything but Samsung devices:\n1) Fuck you Samsung, just simply fuck you\n2) Samsung y u hate securitay?",
+    "ts": "1474467343.001409",
+    "id": "21de46253",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "samsung hates encryption?",
+    "ts": "1474467521.001410",
+    "id": "21de46254",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "<@U055GGAHS> :taco: :nutella:",
+    "ts": "1474467540.001411",
+    "id": "21de46255",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "yeah across a bunch of various samsung phones they have a multitude of keystore related issues. Things like the keystore will not generate keys if the lock screen has been changed (ever). Some devices let me create a key to encrypt then and I can never access the key again.  Other devices seem to work but it seems my stream gets corrupted or something and everything falls apart.",
+    "ts": "1474467637.001412",
+    "id": "21de46256",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "But this is just a simple partially hybrid encryption. Basically if the device supports hardware backed AES then I use that. If it’s one of the other 99.99% of devices I use an RSA  key to wrap an AES key that I store on disk and use AES to do the actual encryption etc",
+    "ts": "1474467702.001413",
+    "id": "21de46257",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "pretty simply stuff, works great unless you have a samsung device",
+    "ts": "1474467711.001414",
+    "id": "21de46258",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "¯\\_(ツ)_/¯",
+    "ts": "1474467831.001415",
+    "id": "21de46259",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "ah yeah, i remember playing a little bit around with keystore but there seemed to be a bunch of cases which meant that would break",
+    "ts": "1474467952.001416",
+    "id": "21de46260",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": ":disappointed:",
+    "ts": "1474467954.001417",
+    "id": "21de46261",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U29E5H0BU",
+    "text": "I experiences that issue in my last job, we ended up going with a custom implementation",
+    "ts": "1474468069.001418",
+    "id": "21de46262",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U29E5H0BU",
+    "text": "Samsung really makes it hard to reliably work with the keystore",
+    "ts": "1474468085.001419",
+    "id": "21de46263",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "on some devices it looks like it’s impossible to work with the keystore",
+    "ts": "1474468141.001420",
+    "id": "21de46264",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U29E5H0BU",
+    "text": "Yep pretty much, and really hard to reproduce which makes it worse",
+    "ts": "1474468290.001421",
+    "id": "21de46265",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I dont understand how some of these phones have playstore support, they seem genuinely broken",
+    "ts": "1474468333.001422",
+    "id": "21de46266",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Yeh, but android’s gonna android",
+    "ts": "1474468358.001423",
+    "id": "21de46267",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "one example <https://code.google.com/p/android/issues/detail?id=177459>",
+    "ts": "1474468499.001424",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "21de46268",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "that’s still an issue",
+    "ts": "1474468503.001425",
+    "id": "21de46269",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "huh didn’t know this is a thing.. <https://developers.google.com/identity/smartlock-passwords/android/store-credentials>",
+    "ts": "1474468668.001426",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U29E5H0BU"
+        ],
+        "count": 2
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "21de46270",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "anyone using that ^",
+    "ts": "1474468681.001427",
+    "id": "21de46271",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "oh damn",
+    "ts": "1474468810.001428",
+    "id": "21de46272",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "kind of handy",
+    "ts": "1474468817.001429",
+    "id": "21de46273",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2E7T2SBZ",
+    "text": "<@U2E7T2SBZ|supermazena> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1474469188.001430",
+    "id": "21de46274",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U29E5H0BU",
+    "text": "Seen it but not used it, looks pretty handy but I’m still skeptical about how they store the password if its capable of syncing across devices",
+    "ts": "1474469197.001431",
+    "id": "21de46275",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "We recently implemented the SmartLock functionality but haven't rolled it out to users yet. I'm going to bring the Store credentials up to the PM as it seems handy.",
+    "ts": "1474469690.001432",
+    "id": "21de46276",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLABD1S",
+    "text": "Hah, speaking of samsung :smile: Some time ago we had to drop support for one model of Galaxy Note 2, because Samsung developers decided it is a good idea to drop a method of the native garbage collector implementation – making it impossible to keep the device from leaking, and leaking, and leaking ....",
+    "ts": "1474473078.001433",
+    "id": "21de46277",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLABD1S",
+    "text": "Here's the issue for everybody interested :smile: <https://code.google.com/p/android/issues/detail?id=71073>",
+    "ts": "1474473126.001434",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "21de46278",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLABD1S",
+    "text": "Still makes me chuckle now and again",
+    "ts": "1474473152.001435",
+    "id": "21de46279",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "Hahah classic sammy",
+    "ts": "1474473224.001436",
+    "id": "21de46280",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "We had an S6 update which caused our app to crash the whole phone",
+    "ts": "1474473264.001437",
+    "id": "21de46281",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "Because they did some shady video voodoo ",
+    "ts": "1474473281.001438",
+    "id": "21de46282",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLABD1S",
+    "text": "So they managed to exploit themselves :stuck_out_tongue:",
+    "ts": "1474473306.001439",
+    "id": "21de46283",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "They always do, heard from someone who works with Knox that the new approval process they have can be hacked and you can imitate nearly any knox app",
+    "ts": "1474473377.001440",
+    "id": "21de46284",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "Like the fuck ",
+    "ts": "1474473382.001441",
+    "id": "21de46285",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "Shamsung ",
+    "ts": "1474473385.001442",
+    "id": "21de46286",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "they should stick to making [non-smart] tvs, and refrigerators",
+    "ts": "1474473582.001443",
+    "id": "21de46287",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "And tanks ",
+    "ts": "1474473904.001444",
+    "id": "21de46288",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U0542GLTE> <@U055GGAHS> I think the devices we're using on our build servers for our project are all KitKat Samsung tablets",
+    "ts": "1474474469.001445",
+    "id": "21de46289",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "none of the models you listed though",
+    "ts": "1474474474.001446",
+    "id": "21de46290",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLABD1S",
+    "text": "Also fun fact: we had to move all of our activity launch extras into a second level bundle, because Samsung does some magic inside the activity manager service, unparceling those with the system class loader, causing it to crash :flushed:",
+    "ts": "1474474762.001447",
+    "id": "21de46291",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLABD1S",
+    "text": "It was only noticeable from a crash log in logcat. No affect on the app itself, but customers don't like to see such ",
+    "ts": "1474474804.001448",
+    "id": "21de46292",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2BQQ068P",
+    "text": "hey guys , \n    locationManager.requestLocationUpdates(provider,\n                MIN_TIME_FOR_UPDATE, MIN_DISTANCE_FOR_UPDATE, App.getLocationListener());\nlocation = locationManager.getLastKnownLocation(provider);\n\ngives me a good Location, but when I turn off my GPS and turn it on again, locationManager.getLastKnownLocation(provider); gives me a null value, even though I called reuqestLocationUpdates before",
+    "ts": "1474475506.001449",
+    "id": "21de46293",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2BQQ068P",
+    "text": "does anyone know why?",
+    "ts": "1474475508.001450",
+    "id": "21de46294",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2E9RNQ0Z",
+    "text": "<@U2E9RNQ0Z|julianfalcionelli> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1474476093.001451",
+    "id": "21de46295",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2BQQ068P",
+    "text": "im stupid and i solved it thx",
+    "ts": "1474477057.001452",
+    "id": "21de46296",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2BQQ068P",
+    "text": "this shitty thing made me delay my deadline for over a week",
+    "ts": "1474477086.001453",
+    "id": "21de46297",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2EB192V8",
+    "text": "<@U2EB192V8|spences10> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1474480253.001454",
+    "id": "21de46298",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2EB89YDT",
+    "text": "<@U2EB89YDT|eduardsi> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1474482229.001455",
+    "id": "21de46299",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "I’m thinking of abstracting all my realm database calls into a bunch of seperate classes based on what they save/retrieve, are there any pros/cons to this approach instead of accessing direct?",
+    "ts": "1474487899.001456",
+    "id": "21de46300",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "I say do",
+    "ts": "1474487993.001457",
+    "id": "21de46301",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "pros: better separation of data domain and rest of the app which gives you more flexibility if you need to make changes in isolation",
+    "ts": "1474488027.001458",
+    "id": "21de46302",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "cons: more code/some duplication",
+    "edited": {
+      "user": "U04U5KS3Z",
+      "ts": "1474488051.000000"
+    },
+    "ts": "1474488039.001459",
+    "id": "21de46303",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Yeah that’s basically what I was thinking",
+    "ts": "1474488094.001461",
+    "id": "21de46304",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Also I’m finally at the point of implementing tests (inherited the app with none) so I’m thinking having it abstracted away will help with mocking",
+    "ts": "1474488117.001462",
+    "id": "21de46305",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2EB9BMDH",
+    "text": "<@U2EB9BMDH|alex_c> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1474488937.001463",
+    "id": "21de46306",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "God I hate the last coder on this app",
+    "ts": "1474491121.001464",
+    "id": "21de46307",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "said every dev ever",
+    "ts": "1474491454.001465",
+    "id": "21de46308",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Yep",
+    "ts": "1474491576.001466",
+    "id": "21de46309",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<https://github.com/yanex/intellij-yoga-theme>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "yanex/intellij-yoga-theme",
+        "title_link": "https://github.com/yanex/intellij-yoga-theme",
+        "text": "intellij-yoga-theme - Yoga theme for IntelliJ IDEA and Android Studio",
+        "fallback": "GitHub: yanex/intellij-yoga-theme",
+        "thumb_url": "https://avatars1.githubusercontent.com/u/95996?v=3&s=400",
+        "from_url": "https://github.com/yanex/intellij-yoga-theme",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1474492573.001467",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "21de46310",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<https://github.com/yanex/intellij-yoga-theme/raw/master/img.png>",
+    "attachments": [
+      {
+        "fallback": "1302x564px image",
+        "image_url": "https://github.com/yanex/intellij-yoga-theme/raw/master/img.png",
+        "image_width": 1302,
+        "image_height": 564,
+        "image_bytes": 314330,
+        "from_url": "https://github.com/yanex/intellij-yoga-theme/raw/master/img.png",
+        "id": 1
+      }
+    ],
+    "ts": "1474492582.001469",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "21de46311",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2ECBGCPM",
+    "text": "<@U2ECBGCPM|dayfun> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1474493650.001471",
+    "id": "21de46312",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U1LJG0Y03> same",
+    "ts": "1474498338.001472",
+    "id": "21de46313",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Oh wait...",
+    "ts": "1474498341.001473",
+    "id": "21de46314",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "The last coder was me :troll:",
+    "ts": "1474498345.001474",
+    "id": "21de46315",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Jk, the last coder was a god",
+    "ts": "1474498358.001475",
+    "id": "21de46316",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2EFE903D",
+    "text": "<@U2EFE903D|wz.lee> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1474521910.001476",
+    "id": "21de46317",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2EHF260Z",
+    "text": "<@U2EHF260Z|koperko> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1474525229.001477",
+    "id": "21de46318",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U23T8GVA9",
+    "text": "Can I use ButterKnife like:\n@BindView(R.id.progressContainer)\n    RelativeLayout progressContainer;",
+    "ts": "1474525828.001478",
+    "id": "21de46319",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

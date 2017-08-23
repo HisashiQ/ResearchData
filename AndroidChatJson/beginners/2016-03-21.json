@@ -1,0 +1,1172 @@
+[
+  {
+    "user": "U0U54P3JS",
+    "subtype": "channel_join",
+    "text": "<@U0U54P3JS|abdulsamad> has joined the channel",
+    "ts": "1458551312.000133",
+    "id": "21be3816",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0U5G61EC",
+    "subtype": "channel_join",
+    "text": "<@U0U5G61EC|waqas> has joined the channel",
+    "ts": "1458551370.000134",
+    "id": "21be3817",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0U722YCF",
+    "subtype": "channel_join",
+    "text": "<@U0U722YCF|sj> has joined the channel",
+    "ts": "1458568100.000135",
+    "id": "21be3818",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0U7ATKL4",
+    "subtype": "channel_join",
+    "text": "<@U0U7ATKL4|prats> has joined the channel",
+    "ts": "1458571342.000136",
+    "id": "21be3819",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R3QC1UH",
+    "subtype": "channel_leave",
+    "text": "<@U0R3QC1UH|ykhdzr> has left the channel",
+    "ts": "1458576314.000137",
+    "id": "21be3820",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RUE2ZUK",
+    "text": "Hi folks, I think this is is a beginner question: Is it possible to have a service that continues running even when an app is restarted? I am trying to update a non google play store app manually. I was thinking some service could handle installing the new apk and relaunching the app.",
+    "ts": "1458576678.000138",
+    "id": "21be3821",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055JANKU",
+    "text": "You cannot have a service handle installing the new APK, since you need user interaction to install it.",
+    "ts": "1458576968.000139",
+    "id": "21be3822",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RUE2ZUK",
+    "text": "In my case, our app is device owner so we will have elevated install privileges",
+    "ts": "1458577008.000140",
+    "id": "21be3823",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RUE2ZUK",
+    "text": "we want to update (reinstall/relaunch) the device owner app silently",
+    "ts": "1458577025.000141",
+    "id": "21be3824",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Even a non device owner can do that. You just register a broadcast receiver that listens for the package update and starts your main activity. Then from within the app you launch the apk file with an intent.",
+    "edited": {
+      "user": "U04TK850N",
+      "ts": "1458577747.000000"
+    },
+    "ts": "1458577732.000142",
+    "id": "21be3825",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Of course a non device owner app requires the user to click update ",
+    "ts": "1458577782.000144",
+    "id": "21be3826",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RUE2ZUK",
+    "text": "Ok cool, so I'm thinking I will start a service in a separate process (so it doesn't die when the newer apk is installed), and that service will have the broadcast receiever. When the install is finished it will relaunch my main app and then terminate itself.",
+    "edited": {
+      "user": "U0RUE2ZUK",
+      "ts": "1458577917.000000"
+    },
+    "ts": "1458577900.000145",
+    "id": "21be3827",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RUE2ZUK",
+    "text": "or are you saying I can actually have the receiver inside my main app?",
+    "ts": "1458578008.000147",
+    "id": "21be3828",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055JANKU",
+    "text": "the last thing",
+    "ts": "1458578014.000148",
+    "id": "21be3829",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055JANKU",
+    "text": "`android.intent.action.PACKAGE_CHANGED` / `android.intent.action.PACKAGE_INSTALL` / `android.intent.action.PACKAGE_REPLACED`",
+    "edited": {
+      "user": "U055JANKU",
+      "ts": "1458578108.000000"
+    },
+    "ts": "1458578045.000149",
+    "id": "21be3830",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RUE2ZUK",
+    "text": "oh wow, so the main app can start an install (of itself - with the newer apk), listen for it to be completed and then relaunch itself?",
+    "ts": "1458578090.000150",
+    "id": "21be3831",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055JANKU",
+    "text": "yep",
+    "ts": "1458578112.000152",
+    "id": "21be3832",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RUE2ZUK",
+    "text": "that's awesome",
+    "ts": "1458578116.000153",
+    "id": "21be3833",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055JANKU",
+    "text": "<https://developer.android.com/reference/android/content/Intent.html#ACTION_PACKAGE_REPLACED>",
+    "ts": "1458578117.000154",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "21be3834",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RUE2ZUK",
+    "text": "thx guys",
+    "ts": "1458578120.000155",
+    "id": "21be3835",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Exactly. Pretty sure even a different process would be killed otherwise. ",
+    "ts": "1458578297.000156",
+    "id": "21be3836",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RUE2ZUK",
+    "text": "gotcha, thx",
+    "ts": "1458578317.000157",
+    "id": "21be3837",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0U8RMW9Z",
+    "subtype": "channel_join",
+    "text": "<@U0U8RMW9Z|laurynas> has joined the channel",
+    "ts": "1458585658.000158",
+    "id": "21be3838",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U098J6T1V",
+    "text": "Hi guys! Do you have any materials about MVP + RecylclerView? I'm searching google but with any bigger luck. Found sth from <http://remind.com|remind.com> but I need more time to understand it better. In the meantime I'm looking something for total noobs :wink: Thanks in advance",
+    "ts": "1458586271.000159",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "21be3839",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "<@U098J6T1V>: you are familiar with the MVP pattern, but want to know how people architect list-based layouts around that?",
+    "ts": "1458586496.000160",
+    "id": "21be3840",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U098J6T1V",
+    "text": "I'm just starting with this pattern and I want to compare my thoughts with more experienced developers.",
+    "ts": "1458586655.000161",
+    "id": "21be3841",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i had some trouble thinking about it at first with RecyclerView because you generally have several classes that are responsible for different things, i.e. fragment, adapter, viewholder",
+    "ts": "1458586815.000162",
+    "id": "21be3842",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i ended up creating my presenter in the fragment as usual and passing it into the adapter and viewholders",
+    "ts": "1458586850.000163",
+    "id": "21be3843",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U098J6T1V",
+    "text": "I know, especially this adapter+viewholder is bit confusing",
+    "ts": "1458586859.000164",
+    "id": "21be3844",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "with respect to MVP, or just in general?",
+    "ts": "1458586879.000165",
+    "id": "21be3845",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U098J6T1V",
+    "text": "with mvp",
+    "ts": "1458586886.000166",
+    "id": "21be3846",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U098J6T1V",
+    "text": "If I understood correctly you're passing one presenter as a parameter to adapter to control both adapter and viewholder?",
+    "ts": "1458586988.000167",
+    "id": "21be3847",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "yeah so it can call back to the presenter for notifying when the user interacts with the viewholder",
+    "ts": "1458587033.000168",
+    "id": "21be3848",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i only pass into the adapter so it can pass into viewholders",
+    "ts": "1458587043.000169",
+    "id": "21be3849",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U098J6T1V",
+    "text": "this presenter instance is also controling parent fragment?",
+    "ts": "1458587083.000170",
+    "id": "21be3850",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "your viewholder class has all of your views in recyclerview layouts, rather than the fragment",
+    "ts": "1458587084.000171",
+    "id": "21be3851",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "yeah, for any views outside the recyclerview",
+    "ts": "1458587100.000172",
+    "id": "21be3852",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "keep in mind this is just my interpretation, there's no well-established rules for the pattern",
+    "ts": "1458587162.000173",
+    "id": "21be3853",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "other people might do it differently",
+    "ts": "1458587177.000174",
+    "id": "21be3854",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U098J6T1V",
+    "text": "I was thinking about it rather \"one presenter per view\" and was considering recyclerview as a separate view from my fragment/activity",
+    "ts": "1458587186.000175",
+    "id": "21be3855",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "that sounds reasonable",
+    "ts": "1458587211.000176",
+    "id": "21be3856",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U098J6T1V",
+    "text": "but what you're saying make sense...recyclerview is just one of views which belongs to parent view like for ex fragment",
+    "ts": "1458587234.000177",
+    "id": "21be3857",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055JANKU",
+    "text": "View in MVP does not necessarily mean it is a View object.",
+    "edited": {
+      "user": "U055JANKU",
+      "ts": "1458587250.000000"
+    },
+    "ts": "1458587243.000178",
+    "id": "21be3858",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U098J6T1V",
+    "text": "therefore the could have one presenter",
+    "ts": "1458587254.000180",
+    "id": "21be3859",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055JANKU",
+    "text": "It’s just a term",
+    "ts": "1458587256.000181",
+    "id": "21be3860",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U098J6T1V",
+    "text": "they*",
+    "ts": "1458587259.000182",
+    "id": "21be3861",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "if you want to decouple the list-related logic from your fragment that's probably good",
+    "ts": "1458587320.000183",
+    "id": "21be3862",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i never really thought about that",
+    "ts": "1458587327.000184",
+    "id": "21be3863",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U098J6T1V",
+    "text": "ok, let me correct myself. I was thinking not in therm of \"one presenter per view\" but rather \"one presenter per parent view like fragment/activity\"",
+    "ts": "1458587418.000185",
+    "id": "21be3864",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U098J6T1V",
+    "text": "But what Damien presented is interesting. Thanks! I will try to come up with something",
+    "ts": "1458587496.000186",
+    "id": "21be3865",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U098J6T1V>: listen to <@U091EBYSU>'s podcast _The Context_, specifically episode 1 <https://github.com/artem-zinnatullin/TheContext-Podcast> . They touched on this very subject if a presenter should be on the top only (on the Fragment/Activity) or if he should be further in as well (in the adapter)",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "artem-zinnatullin/TheContext-Podcast",
+        "title_link": "https://github.com/artem-zinnatullin/TheContext-Podcast",
+        "text": "TheContext-Podcast - Podcast about Android Development",
+        "fallback": "GitHub: artem-zinnatullin/TheContext-Podcast",
+        "thumb_url": "https://avatars2.githubusercontent.com/u/967132?v=3&s=400",
+        "from_url": "https://github.com/artem-zinnatullin/TheContext-Podcast",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1458587681.000187",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "21be3866",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "in b4 they reject everything i just recommended lol",
+    "ts": "1458587871.000189",
+    "id": "21be3867",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "will give that a listen though, nice :simple_smile:",
+    "ts": "1458587886.000190",
+    "id": "21be3868",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U098J6T1V",
+    "text": "<@U09T8SFG8> Thank You!",
+    "ts": "1458587939.000191",
+    "id": "21be3869",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UBB6SJ1",
+    "subtype": "channel_join",
+    "text": "<@U0UBB6SJ1|jeremybenmoussa> has joined the channel",
+    "ts": "1458592525.000192",
+    "id": "21be3870",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UBZ4CBS",
+    "subtype": "channel_join",
+    "text": "<@U0UBZ4CBS|markyosullivan> has joined the channel",
+    "ts": "1458596090.000193",
+    "id": "21be3871",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UC65MC0",
+    "subtype": "channel_join",
+    "text": "<@U0UC65MC0|mauritsd> has joined the channel",
+    "ts": "1458597678.000194",
+    "id": "21be3872",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UC4LVAB",
+    "subtype": "channel_join",
+    "text": "<@U0UC4LVAB|sprillaman> has joined the channel",
+    "ts": "1458598293.000195",
+    "id": "21be3873",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UCH74LE",
+    "subtype": "channel_join",
+    "text": "<@U0UCH74LE|tompark> has joined the channel",
+    "ts": "1458604227.000196",
+    "id": "21be3874",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C7D9RH7",
+    "subtype": "channel_join",
+    "text": "<@U0C7D9RH7|markfulton> has joined the channel",
+    "ts": "1458617406.000197",
+    "id": "21be3875",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

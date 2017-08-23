@@ -1,0 +1,2346 @@
+[
+  {
+    "user": "U09T8SFG8",
+    "text": "Thanks everyone for your answers, I went with different sourcesets :wink:",
+    "ts": "1443883379.003556",
+    "id": "03de11783",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": ":thumbsup:",
+    "ts": "1443884013.003557",
+    "id": "03de11784",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "The most vital thing in my app is a Service. It handles synchronization with other peers, sending out info to them, basically implements the whole protocol my app talks. Where would such a Service fit in MVP? It clearly does more than just storage of data, but of course it is also not just a view. I figure I would need to abstract out every interaction with it into an interface so I can later switch the service out with something else (testing, or a desktop version). My issue is mostly, that I can't bind to the service or call anything in it without violating the dependency rules. But on the other hand, binding it to the Activity and routing that to the presenter seems off to me too. Any hints?",
+    "ts": "1443884231.003558",
+    "id": "03de11785",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "IMHO, that would be the data layer or the Model in MVP,  and change of data would propagate through the presenter down to the view.",
+    "ts": "1443884420.003559",
+    "id": "03de11786",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "So an interface which the service implements, communicating with the presenter",
+    "ts": "1443884461.003560",
+    "id": "03de11787",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "and how would I get that interface into my presenter? To call methods on a Service directly, the Service needs to be bound iirc. Something the presenter can't do",
+    "ts": "1443884508.003561",
+    "id": "03de11788",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "hm, trying to think of something that would be clean and make sense, but doesn’t seem like it can be that way..",
+    "ts": "1443884680.003562",
+    "id": "03de11789",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "That's the only thing left in the architecture that gives me headaches :smile:",
+    "ts": "1443884717.003563",
+    "id": "03de11790",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "bind the service to the activity, make the service accessible from the Ui interface class",
+    "ts": "1443888402.000002",
+    "id": "03de11791",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "getUi().getWhateverService(), which is an interface itself",
+    "ts": "1443888413.000003",
+    "id": "03de11792",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "as log as you're respecting lifecycle in your presenter it's not a biggie",
+    "ts": "1443888431.000004",
+    "id": "03de11793",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "it just felt a bit dirty :smile:",
+    "ts": "1443888448.000005",
+    "id": "03de11794",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "welol, you have to bridge Android's shortcomings",
+    "ts": "1443888461.000006",
+    "id": "03de11795",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "it's not architecturally dirty",
+    "ts": "1443888468.000007",
+    "id": "03de11796",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "you're still decoupled",
+    "ts": "1443888472.000008",
+    "id": "03de11797",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "it's just not where you would expect",
+    "ts": "1443888479.000009",
+    "id": "03de11798",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "hm, right",
+    "ts": "1443888495.000010",
+    "id": "03de11799",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "another option",
+    "ts": "1443888528.000011",
+    "id": "03de11800",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "when you're binding activity and presenter stuff on runtime, just bind the service too",
+    "ts": "1443888549.000012",
+    "id": "03de11801",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "to a field",
+    "ts": "1443888553.000013",
+    "id": "03de11802",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "pass the field to the presenter maybe",
+    "ts": "1443888588.000014",
+    "id": "03de11803",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "<@U0548MM6B> nah that just messes up on ownership",
+    "ts": "1443888618.000015",
+    "id": "03de11804",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "I never call on presenters, they decide what to do, so there's no preconfiguration needed",
+    "ts": "1443888637.000016",
+    "id": "03de11805",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "okay, yes, there's the view binding method which is called unto",
+    "ts": "1443888657.000017",
+    "id": "03de11806",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "so maybe that's the one",
+    "ts": "1443888660.000018",
+    "id": "03de11807",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "but it is kinda pointless to interact with a passive view instead of a service to call the needed methods, because view should bind to UI, not the service",
+    "ts": "1443888699.000019",
+    "id": "03de11808",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "agreed, but why not bind both",
+    "ts": "1443888752.000020",
+    "id": "03de11809",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "same as youre binding the Ui interface, you do it with the Service interface",
+    "ts": "1443888767.000021",
+    "id": "03de11810",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "same method or a separate one",
+    "ts": "1443888773.000022",
+    "id": "03de11811",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "if you're using DI you won't have the service available during graph construction",
+    "ts": "1443888804.000023",
+    "id": "03de11812",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "probably there's a mechanism to get it later, I have never found this case",
+    "edited": {
+      "user": "U0B8R3VV4",
+      "ts": "1443888830.000000"
+    },
+    "ts": "1443888824.000024",
+    "id": "03de11813",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "so your smell is either an extra bind/unbind method on your presenter",
+    "ts": "1443888932.000026",
+    "id": "03de11814",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "or fetching the service through the Ui",
+    "ts": "1443888938.000027",
+    "id": "03de11815",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "yeah, have to make a choice there, but since it’s only once place it shouldn’t be a huge problem",
+    "ts": "1443889467.000028",
+    "id": "03de11816",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "has anyone played with the data binding library?",
+    "ts": "1443894718.000029",
+    "id": "03de11817",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "did, but not a lot, just enough i needed to give a short talk on the topic",
+    "ts": "1443895313.000030",
+    "id": "03de11818",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "but amusice did, he even gave a lengthy talk about it",
+    "ts": "1443895330.000031",
+    "id": "03de11819",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "what did you use it for?",
+    "ts": "1443895468.000032",
+    "id": "03de11820",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "and did you find it useful?",
+    "ts": "1443895473.000033",
+    "id": "03de11821",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "nothing special, simple UI updates, most useful thing was BindingAdapters, those rock",
+    "ts": "1443895541.000034",
+    "id": "03de11822",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "interesting",
+    "ts": "1443895563.000035",
+    "id": "03de11823",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "I'm going to try and use it for vector element sizing",
+    "ts": "1443895581.000036",
+    "id": "03de11824",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "I've always wanted to be able to tell a widget that it should be 1/5 or 2/5's the screen size",
+    "ts": "1443895609.000037",
+    "id": "03de11825",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "regardless of screen size",
+    "ts": "1443895613.000038",
+    "id": "03de11826",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "how do you get your ActivityBinding class? I can't seem to generate it",
+    "ts": "1443896403.000039",
+    "id": "03de11827",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "it’s generated on build",
+    "ts": "1443896520.000040",
+    "id": "03de11828",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "LayoutNameBinding",
+    "ts": "1443896532.000041",
+    "id": "03de11829",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "btw that sizing is in percentage in design support lib",
+    "ts": "1443896547.000042",
+    "id": "03de11830",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "waaaaaaaaaat it is?",
+    "ts": "1443896643.000043",
+    "id": "03de11831",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "yeeep",
+    "ts": "1443896817.000044",
+    "id": "03de11832",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<https://developer.android.com/reference/android/support/percent/package-summary.html>",
+    "ts": "1443896831.000045",
+    "id": "03de11833",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "thank ya!",
+    "ts": "1443896977.000046",
+    "id": "03de11834",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "I've been bad at keeping up with everything thats in the support libs",
+    "ts": "1443896987.000047",
+    "id": "03de11835",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "there’s so many of them, it’s starting to feel like keeping up with the kardashians",
+    "ts": "1443897062.000048",
+    "reactions": [
+      {
+        "name": "grin",
+        "users": [
+          "U055JANKU",
+          "U0B9TKCRL"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "03de11836",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "haha",
+    "ts": "1443897770.000049",
+    "id": "03de11837",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "man, this is frustrating, I've been trying to build for the last five minutes and I keep getting build errors, saying that it doesn't have resource identifiers for layout_widthPercent/heightPercent",
+    "ts": "1443897802.000050",
+    "id": "03de11838",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "with that lib? weird",
+    "ts": "1443897828.000051",
+    "id": "03de11839",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "yeah, i've got com.android.support:design:23.0.1 in gradle",
+    "ts": "1443897860.000052",
+    "id": "03de11840",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "and i have the app namespace in my layout, I'm using android.support.percent.PercentRelativeLayout",
+    "ts": "1443897886.000053",
+    "id": "03de11841",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "idk",
+    "ts": "1443897890.000054",
+    "id": "03de11842",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "weird",
+    "ts": "1443897891.000055",
+    "id": "03de11843",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "hurdur its not in design, its in it's own package",
+    "ts": "1443898224.000056",
+    "id": "03de11844",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "should have checked that haha",
+    "ts": "1443898235.000057",
+    "id": "03de11845",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "oh, thought it was part of the design",
+    "ts": "1443898252.000058",
+    "id": "03de11846",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "its in android.support:percent",
+    "ts": "1443898262.000059",
+    "id": "03de11847",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "lol",
+    "ts": "1443898263.000060",
+    "id": "03de11848",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "<https://speakerdeck.com/rallat/android-development-like-a-pro>",
+    "attachments": [
+      {
+        "service_name": "Speaker Deck",
+        "title": "Android development like a pro",
+        "title_link": "https://speakerdeck.com/rallat/android-development-like-a-pro",
+        "text": "Slides from the talk <http://www.meetup.com/sfandroid/events/224952292/> The talk will show how to make your app scalable, your code clean, your performance optimized and your UI neat. The talk will show in a pragmatic way the pros and cons of using certain Android APIs, strategies and libraries.",
+        "fallback": "Speaker Deck: Android development like a pro",
+        "image_url": "https://speakerd.s3.amazonaws.com/presentations/b20a880059114624a1af9774d72fd695/slide_0.jpg",
+        "from_url": "https://speakerdeck.com/rallat/android-development-like-a-pro",
+        "image_width": 444,
+        "image_height": 250,
+        "image_bytes": 60369,
+        "id": 1
+      }
+    ],
+    "ts": "1443919650.000061",
+    "id": "03de11849",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "Nothing new, but apparently not widespread enough",
+    "ts": "1443919661.000063",
+    "id": "03de11850",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "use Observables as a unified callback",
+    "ts": "1443919809.000064",
+    "id": "03de11851",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "and you're brillo",
+    "ts": "1443919827.000065",
+    "id": "03de11852",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "you don't have to go balls deep RxBinding like I showed days ago, but getting as far as this is a good stepstone",
+    "edited": {
+      "user": "U0B8R3VV4",
+      "ts": "1443919862.000000"
+    },
+    "ts": "1443919850.000066",
+    "id": "03de11853",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "i never got it, what does it mean to make a mobile app scalable",
+    "ts": "1443919949.000068",
+    "id": "03de11854",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "it’s the client, not like it is a difference if it handles 100 users or 100 000 000 users :confused:",
+    "ts": "1443919982.000069",
+    "id": "03de11855",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "like ok, maybe scalable = {crash-free, maintainable, high-performance, supporting all kinds of devices}",
+    "ts": "1443920042.000070",
+    "id": "03de11856",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "but it should be that at any scale",
+    "ts": "1443920064.000071",
+    "id": "03de11857",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "scalable means 100 people can work on it at the same time without stepping on each other's work",
+    "ts": "1443920254.000072",
+    "id": "03de11858",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "so you keep modularity",
+    "ts": "1443920258.000073",
+    "id": "03de11859",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "scalable can also mean that you have tens of millions of users,, and bad practices can hammer your servers down",
+    "ts": "1443920287.000074",
+    "id": "03de11860",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "so you have to be smart about your cache policies and amount of networking you do",
+    "ts": "1443920324.000075",
+    "id": "03de11861",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "you may think that's something trivial and obvious, but reality on the wild is that things are slapped together without any thought for the future, or willingness to pay technical debt instead of add more and more features",
+    "ts": "1443920375.000076",
+    "id": "03de11862",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "ok for the modularity because of number of engineers, but good practices should be used even if you don’t plan to scale",
+    "ts": "1443920380.000077",
+    "id": "03de11863",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "so a nice scaffolding becomes incredibly important",
+    "ts": "1443920386.000078",
+    "id": "03de11864",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "&gt; things are slapped together without any thought for the future, or willingness to pay technical debt instead of add more and more features\n\noh working on one like that",
+    "ts": "1443920401.000079",
+    "id": "03de11865",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "but yeah, as you said, I consider that stuff obvious",
+    "ts": "1443920429.000080",
+    "id": "03de11866",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "tho now that I think of it, most apps where I had a peek at the code, had loads of bad practices under the hood",
+    "ts": "1443920461.000081",
+    "id": "03de11867",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "I used to until not so long ago, but I'm defeated now -.-",
+    "ts": "1443920467.000082",
+    "id": "03de11868",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "I'm guilty of some too",
+    "ts": "1443920478.000083",
+    "id": "03de11869",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "but never of just not caring",
+    "ts": "1443920487.000084",
+    "id": "03de11870",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "i’m trying not to be guilty of any, maybe something slips because I get lazy, but esp after experiences like the current one, I force myself to care",
+    "ts": "1443920544.000085",
+    "id": "03de11871",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "like, ok, we need new features, but there is so much technical debt that a simple “elevation=8dp” needs 2 days of refactoring because someone didn’t know how to create a grid",
+    "ts": "1443920599.000086",
+    "id": "03de11872",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "so he modded a fork of a lib abandonded years ago",
+    "ts": "1443920639.000087",
+    "id": "03de11873",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "meh, it happens",
+    "ts": "1443920710.000088",
+    "id": "03de11874",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "I've seen a shortcircuit of listview inner view inflation",
+    "ts": "1443920724.000089",
+    "id": "03de11875",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "just because someone couldn't into static grids",
+    "ts": "1443920746.000090",
+    "id": "03de11876",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "so they had to nest a gridview inside each listview row O.o",
+    "ts": "1443920759.000091",
+    "id": "03de11877",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "I've written something similar for a project that required a custom component that needed diagonal scrolling AND hori/vert headers",
+    "edited": {
+      "user": "U0B8R3VV4",
+      "ts": "1443920855.000000"
+    },
+    "ts": "1443920829.000092",
+    "id": "03de11878",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "worst easter holiday ever",
+    "ts": "1443920842.000093",
+    "id": "03de11879",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "haha oh man, had similar situations",
+    "ts": "1443920903.000095",
+    "id": "03de11880",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "i had to rewrite a \"viewpager recently\". well it wasn’t a viewpager but a series of views inflated in a horizontal scrollview, all being inflated inside something that extends adapter but doesn’t use any adapter methods.",
+    "ts": "1443920959.000096",
+    "id": "03de11881",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "what page are you on? oh use that static int  ProjectUtility.SELECTED_PAGE to check",
+    "edited": {
+      "user": "U0548MM6B",
+      "ts": "1443921005.000000"
+    },
+    "ts": "1443920998.000097",
+    "id": "03de11882",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "*pinch nosebridge*",
+    "ts": "1443921075.000099",
+    "id": "03de11883",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "every time I see a static that's not final",
+    "ts": "1443921136.000100",
+    "id": "03de11884",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "I mean, it's not about being a bad practice per se",
+    "ts": "1443921144.000101",
+    "id": "03de11885",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "there can be cases",
+    "ts": "1443921149.000102",
+    "id": "03de11886",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "but if it's happening, it means that someone is actually willing to just go and do it instead of working around it",
+    "ts": "1443921170.000103",
+    "id": "03de11887",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "oh man I hope I can just open source this app once in it’s original state",
+    "ts": "1443921209.000104",
+    "id": "03de11888",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "i’ve seen activity context assigned to a static and getting leaked so many times I thought I worked for samsung",
+    "edited": {
+      "user": "U0548MM6B",
+      "ts": "1443921256.000000"
+    },
+    "ts": "1443921244.000105",
+    "reactions": [
+      {
+        "name": "grin",
+        "users": [
+          "U0B8R3VV4"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "03de11889",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "context used to give me headaches too",
+    "ts": "1443921344.000107",
+    "id": "03de11890",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "until I discovered that all views hold an instance to it",
+    "ts": "1443921356.000108",
+    "id": "03de11891",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "and so far I haven't found a place where I needed it and just didn't have it",
+    "ts": "1443921388.000109",
+    "id": "03de11892",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "together with avoiding runOnUiThread, getActivity() on fragments and such",
+    "ts": "1443921414.000110",
+    "id": "03de11893",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "&gt;and so far I haven't found a place where I needed it and just didn't have it\n\n\nthis so much",
+    "ts": "1443921430.000111",
+    "id": "03de11894",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "I mean...the whole Rx thing just ties this stuff together so well",
+    "ts": "1443921435.000112",
+    "id": "03de11895",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "I know I can't abuse it because not many people is willing to jump the bandwagon",
+    "ts": "1443921462.000113",
+    "id": "03de11896",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "but still",
+    "ts": "1443921469.000114",
+    "id": "03de11897",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "well everyone started to jump on the RxWagon lately, it’s gonna be the most used pattern",
+    "ts": "1443921659.000115",
+    "id": "03de11898",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "I will probably opensource my Balls Deep Rx app soon",
+    "ts": "1443921665.000116",
+    "id": "03de11899",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "yeah but just as a Retrofit callback and such",
+    "ts": "1443921681.000117",
+    "id": "03de11900",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "there's still no open example using RxBinding",
+    "ts": "1443921691.000118",
+    "id": "03de11901",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "as in, a 100% RxJava presenter",
+    "edited": {
+      "user": "U0B8R3VV4",
+      "ts": "1443921718.000000"
+    },
+    "ts": "1443921707.000119",
+    "id": "03de11902",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "tied to an RxBinding activity",
+    "ts": "1443921733.000121",
+    "id": "03de11903",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "I'm waiting until that thing I'm keeping on the down low is over, clean up the repo a bit and put it out to be tear to shreads by Jake Wharton xD",
+    "ts": "1443921769.000122",
+    "id": "03de11904",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "haven’t seen any, nah",
+    "ts": "1443921782.000123",
+    "id": "03de11905",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "why not put it out now? :O",
+    "ts": "1443921792.000124",
+    "id": "03de11906",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "might help you with that thing",
+    "ts": "1443921801.000125",
+    "id": "03de11907",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "nah, it's my trump card",
+    "ts": "1443921819.000126",
+    "id": "03de11908",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "and some people may get annoyed",
+    "ts": "1443921848.000127",
+    "id": "03de11909",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

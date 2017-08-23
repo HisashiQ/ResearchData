@@ -1,0 +1,10236 @@
+[
+  {
+    "user": "U379MC1E0",
+    "text": "is deleting data from App &gt; Settings also deletes its DB?",
+    "ts": "1481705331.002962",
+    "id": "14de54181",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "yes",
+    "ts": "1481705464.002963",
+    "id": "14de54182",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "```\n        realm = Realm.getDefaultInstance();\n        val _realm = realm;\n        _realm?.executeTransaction {\n            if(it.where(Dog::class.java).findAll().size &lt;= 0) {\n                val dog = it.createObject(Dog::class.java);\n                dog.name = \"Hello world!\";\n            }\n        };\n```\n\nand\n\n```\n        try(Realm r = Realm.getDefaultInstance()) {\n            r.executeTransaction((realm) -&gt; {\n               if(realm.where(Dog.class).size() &lt;= 0) {\n                   Dog dog = Realm.createObject(Dog.class);\n                   dog.setName(\"Hello world!\");\n               }\n            });\n        }\n```",
+    "ts": "1481707462.002964",
+    "id": "14de54183",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "I don't feel Kotlin being so much less verbose",
+    "ts": "1481707467.002965",
+    "id": "14de54184",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3ELEHVJ9",
+    "text": "<@U3ELEHVJ9|dominykas> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481708468.002966",
+    "id": "14de54185",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "Q - what are your build times? Mine range from 14s to 2m30s",
+    "ts": "1481710424.002967",
+    "id": "14de54186",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "weird that it’s such a huge range",
+    "ts": "1481710435.002968",
+    "id": "14de54187",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "ranges from  4 minutes to 10 :cat:",
+    "ts": "1481710445.002969",
+    "id": "14de54188",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "6s-1m30s",
+    "ts": "1481710449.002970",
+    "id": "14de54189",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "technically it becomes faster if I close Chrome.",
+    "ts": "1481710455.002971",
+    "id": "14de54190",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "clearly a RAM issue",
+    "ts": "1481710466.002972",
+    "id": "14de54191",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "how dare you deny chrome access to all your RAM? smh",
+    "ts": "1481710477.002973",
+    "id": "14de54192",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Would probably halve if you close slack :troll:",
+    "ts": "1481710485.002974",
+    "id": "14de54193",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "not really :stuck_out_tongue:",
+    "ts": "1481710492.002975",
+    "id": "14de54194",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "If I am watching a music video in chrome and I build my app in AS chrome crashes",
+    "ts": "1481711043.002976",
+    "id": "14de54195",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "but firefox doesnt",
+    "ts": "1481711052.002977",
+    "id": "14de54196",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "99% cpu usgae thing",
+    "ts": "1481711068.002978",
+    "id": "14de54197",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "YouTube lags like hell when I'm compiling",
+    "ts": "1481711155.002979",
+    "id": "14de54198",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "for some reason if your cpu reaches 99% chrome fails when rendering video",
+    "ts": "1481711225.002980",
+    "id": "14de54199",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "check your usage",
+    "ts": "1481711262.002981",
+    "id": "14de54200",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "How do you guys manage syncing your offline - online",
+    "ts": "1481711310.002982",
+    "id": "14de54201",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I use odrive for syncing with multiple Google Drive accounts",
+    "ts": "1481711342.002983",
+    "id": "14de54202",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "It's free",
+    "ts": "1481711345.002984",
+    "id": "14de54203",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I mean in app",
+    "ts": "1481711350.002985",
+    "id": "14de54204",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "And it's okay, not great though",
+    "ts": "1481711352.002986",
+    "id": "14de54205",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Oh",
+    "ts": "1481711353.002987",
+    "id": "14de54206",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": ":slightly_smiling_face:",
+    "ts": "1481711355.002988",
+    "id": "14de54207",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Use Google Drive? :stuck_out_tongue:",
+    "ts": "1481711363.002989",
+    "id": "14de54208",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I use google drive too",
+    "ts": "1481711369.002990",
+    "id": "14de54209",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "lol",
+    "ts": "1481711371.002991",
+    "id": "14de54210",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Oh wait",
+    "ts": "1481711383.002992",
+    "id": "14de54211",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I dont really have any local data",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1481711397.000000"
+    },
+    "ts": "1481711389.002993",
+    "id": "14de54212",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "You probably mean your db",
+    "ts": "1481711391.002994",
+    "id": "14de54213",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Yes",
+    "ts": "1481711399.002996",
+    "id": "14de54214",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Well that is an odd question",
+    "ts": "1481711406.002997",
+    "id": "14de54215",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "why?",
+    "ts": "1481711411.002998",
+    "id": "14de54216",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "It depends on how you handle data",
+    "ts": "1481711411.002999",
+    "id": "14de54217",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "A reddit app for example, you shouldn't sync local data there. You can't",
+    "ts": "1481711452.003000",
+    "id": "14de54218",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "But in our iPad app, we do sync data.",
+    "ts": "1481711467.003001",
+    "id": "14de54219",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "We just load everything onto the database and patch it every time.",
+    "ts": "1481711482.003002",
+    "id": "14de54220",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "But we probably won't have multiple devices changing data at the same time",
+    "ts": "1481711503.003003",
+    "id": "14de54221",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Well  when you reboot the my app it will display data from the db everytime the db gets updated as and when there is a net connection",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1481711563.000000"
+    },
+    "ts": "1481711547.003004",
+    "id": "14de54222",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "If that makes sense",
+    "ts": "1481711580.003006",
+    "id": "14de54223",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Well what is your app about?",
+    "ts": "1481711592.003007",
+    "id": "14de54224",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "What data is stored?",
+    "ts": "1481711594.003008",
+    "id": "14de54225",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "What should be uploaded?",
+    "ts": "1481711597.003009",
+    "id": "14de54226",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Posts from other users get stored",
+    "ts": "1481711608.003010",
+    "id": "14de54227",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "your posts are uploaded",
+    "ts": "1481711620.003011",
+    "id": "14de54228",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "requests",
+    "ts": "1481711628.003012",
+    "id": "14de54229",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "just json data",
+    "ts": "1481711634.003013",
+    "id": "14de54230",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "So override posts you receive",
+    "ts": "1481711640.003014",
+    "id": "14de54231",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "And when you \"upload\" a post, save the data you get returned too",
+    "ts": "1481711659.003015",
+    "id": "14de54232",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "In case the server adds or changes something",
+    "ts": "1481711666.003016",
+    "id": "14de54233",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "well, my question is how do you manage the syncing",
+    "ts": "1481711720.003017",
+    "id": "14de54234",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "ie",
+    "ts": "1481711727.003018",
+    "id": "14de54235",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I need some kind of Queue or something else",
+    "ts": "1481711746.003019",
+    "id": "14de54236",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I don't see why you need syncing",
+    "ts": "1481711756.003020",
+    "id": "14de54237",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "lets say your offline",
+    "ts": "1481711764.003021",
+    "id": "14de54238",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "no net",
+    "ts": "1481711767.003022",
+    "id": "14de54239",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "And what do you even mean with syncing?",
+    "ts": "1481711768.003023",
+    "id": "14de54240",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "What is your desired behaviour?",
+    "edited": {
+      "user": "U061HDV96",
+      "ts": "1481711773.000000"
+    },
+    "ts": "1481711772.003024",
+    "id": "14de54241",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I don't even know what \"posts\" are?",
+    "ts": "1481711790.003026",
+    "id": "14de54242",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Give us some screenshots, examples...",
+    "ts": "1481711795.003027",
+    "id": "14de54243",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Your offline without a net connection and you can still use the app as if you were online (obviosuly you cant get new data)",
+    "ts": "1481711801.003028",
+    "id": "14de54244",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "the details of the app(the actual data) are irrelevent",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1481711886.000000"
+    },
+    "ts": "1481711819.003029",
+    "id": "14de54245",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Well then just keep a queue of what you want to upload perhaps",
+    "ts": "1481711949.003031",
+    "id": "14de54246",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "But if you want to upload something that might've changed by the time you've uploaded it, you might want to add in some safeguards",
+    "ts": "1481711977.003032",
+    "id": "14de54247",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "But I doubt that that'll be a problem for you because you'll probably be creating posts and not changing them",
+    "ts": "1481711997.003033",
+    "id": "14de54248",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "nah they can change",
+    "ts": "1481712025.003034",
+    "id": "14de54249",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "thas another problem",
+    "ts": "1481712031.003035",
+    "id": "14de54250",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Well you do it by id",
+    "ts": "1481712036.003036",
+    "id": "14de54251",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "So when you add to queue, you remove anything in the queue with that Id",
+    "ts": "1481712047.003037",
+    "id": "14de54252",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Or update",
+    "ts": "1481712051.003038",
+    "id": "14de54253",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Suppose it’s tag, not id",
+    "ts": "1481712067.003039",
+    "id": "14de54254",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "one way is to have a ur entities have a local id based on whats generated in ur db and another column which is the id provided by the server",
+    "ts": "1481712141.003040",
+    "id": "14de54255",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "if the  server id field is blank, then u you know it’s an item to be sent to the backend",
+    "ts": "1481712167.003041",
+    "id": "14de54256",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3F9ARVKR",
+    "text": "<@U3F9ARVKR|kw> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481712177.003042",
+    "id": "14de54257",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "thanks, I have some thinking to do",
+    "ts": "1481712296.003043",
+    "id": "14de54258",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1FECKXA9",
+    "text": "Hi all, I'm struggling to implement this criteria: Accept a POST of an item into the shopping cart.  I been given the URL that shows the Request and Response. See here: <http://pastebin.com/HKs8BK8E>  I have use Retrofit to GET items but I have never use it to POST and item before. How should I go about implementing this in retrofit. Do I just add my item to the shopping cart and then call my retrofit method to send  the HTTP POST.",
+    "attachments": [
+      {
+        "service_name": "Pastebin",
+        "title": "post - Pastebin.com",
+        "title_link": "http://pastebin.com/HKs8BK8E",
+        "fallback": "Pastebin: post - Pastebin.com",
+        "image_url": "http://pastebin.com/i/facebook.png",
+        "from_url": "http://pastebin.com/HKs8BK8E",
+        "image_width": 250,
+        "image_height": 250,
+        "image_bytes": 19206,
+        "service_icon": "http://pastebin.com/favicon.ico",
+        "id": 1
+      }
+    ],
+    "ts": "1481713026.003044",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "14de54259",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "make a model of the object",
+    "ts": "1481713140.003046",
+    "id": "14de54260",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "\"cartId\": 1,\n  \"productId\": 100",
+    "ts": "1481713144.003047",
+    "id": "14de54261",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "as the fields",
+    "ts": "1481713147.003048",
+    "id": "14de54262",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "set them",
+    "ts": "1481713149.003049",
+    "id": "14de54263",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "and send the model as the body",
+    "ts": "1481713156.003050",
+    "id": "14de54264",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "to retrofit",
+    "ts": "1481713160.003051",
+    "id": "14de54265",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "done",
+    "ts": "1481713174.003052",
+    "id": "14de54266",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1FECKXA9",
+    "text": "okay is simple as that?",
+    "ts": "1481713330.003053",
+    "id": "14de54267",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "yep",
+    "ts": "1481713335.003054",
+    "id": "14de54268",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I think I got the plan",
+    "ts": "1481713878.003055",
+    "id": "14de54269",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "No need for queues",
+    "ts": "1481713888.003056",
+    "id": "14de54270",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "the DB is my queue",
+    "ts": "1481713896.003057",
+    "id": "14de54271",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09UQHPQV",
+    "text": "Anyone know how to search 6 month old post question to earn *Excavator* badges at Stackoverflow ?",
+    "edited": {
+      "user": "U09UQHPQV",
+      "ts": "1481717141.000000"
+    },
+    "ts": "1481717074.003058",
+    "id": "14de54272",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25S789JR",
+    "text": "does anyone know why retrofit image upload does not work after refactoring package name of our project ?? please guys m in big trouble",
+    "ts": "1481717210.003060",
+    "id": "14de54273",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3DKMUK53",
+    "text": "Hello folks, i need to record a sound from my android device and match it with another one predefined in the device, does anyone know how can i do make that?",
+    "ts": "1481717878.003061",
+    "id": "14de54274",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "<@U25S789JR> are you using ProGuard?",
+    "ts": "1481721001.003062",
+    "id": "14de54275",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "<@U3DKMUK53> seems like you need Shazam / SoundHound",
+    "ts": "1481721022.003063",
+    "id": "14de54276",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3DKMUK53",
+    "text": "yeah",
+    "ts": "1481721041.003064",
+    "id": "14de54277",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3DKMUK53",
+    "text": "i need to make something like shazam on a very very very small scale",
+    "ts": "1481721062.003065",
+    "id": "14de54278",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3DKMUK53",
+    "text": "only work with simple tones",
+    "ts": "1481721069.003066",
+    "id": "14de54279",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "You can take an open-source guitar tuner and convert an audio into note sequence",
+    "ts": "1481721111.003067",
+    "id": "14de54280",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3DKMUK53",
+    "text": "ok ThanQ <@U2M0WUZ7A>",
+    "ts": "1481721302.003068",
+    "id": "14de54281",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Anyone use Stetho-realm?",
+    "ts": "1481721476.003069",
+    "id": "14de54282",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "its not showing any data in my db for some reason",
+    "ts": "1481721487.003070",
+    "id": "14de54283",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "are you using stetho-realm 2.0.0 <https://github.com/uPhyca/stetho-realm/>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "uPhyca/stetho-realm",
+        "title_link": "https://github.com/uPhyca/stetho-realm/",
+        "text": "stetho-realm - Realm module for Stetho",
+        "fallback": "GitHub: uPhyca/stetho-realm",
+        "thumb_url": "https://avatars1.githubusercontent.com/u/735713?v=3&s=400",
+        "from_url": "https://github.com/uPhyca/stetho-realm/",
+        "thumb_width": 200,
+        "thumb_height": 200,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1481721526.003071",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "14de54284",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "someone claims that it only works for `default.realm` for some reason, although he changed 1 line in the lib and it started working",
+    "ts": "1481721670.003073",
+    "id": "14de54285",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "i haven't actually used stetho-realm i just see people want to use it",
+    "ts": "1481721677.003074",
+    "id": "14de54286",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "oh",
+    "ts": "1481721697.003075",
+    "id": "14de54287",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "wait a second",
+    "ts": "1481721699.003076",
+    "id": "14de54288",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U3E2EEX38> are you using Realm 1.2.0 as I said?",
+    "ts": "1481721710.003077",
+    "id": "14de54289",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "I should update my realm-browser-android :disappointed:",
+    "ts": "1481721711.003078",
+    "id": "14de54290",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "you should then use 1.x branch: <https://github.com/uPhyca/stetho-realm/tree/release_1.x>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "uPhyca/stetho-realm",
+        "title_link": "https://github.com/uPhyca/stetho-realm/tree/release_1.x",
+        "text": "stetho-realm - Realm module for Stetho",
+        "fallback": "GitHub: uPhyca/stetho-realm",
+        "thumb_url": "https://avatars1.githubusercontent.com/u/735713?v=3&s=400",
+        "from_url": "https://github.com/uPhyca/stetho-realm/tree/release_1.x",
+        "thumb_width": 200,
+        "thumb_height": 200,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1481721727.003079",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "14de54291",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "so it is `compile 'com.uphyca:stetho_realm:0.9.0'`",
+    "ts": "1481721745.003081",
+    "id": "14de54292",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "yep",
+    "ts": "1481721753.003082",
+    "id": "14de54293",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I figured",
+    "ts": "1481721755.003083",
+    "id": "14de54294",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "but didnt knwo which version",
+    "ts": "1481721760.003084",
+    "id": "14de54295",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "actually this example is using 2.0.0",
+    "ts": "1481721772.003085",
+    "id": "14de54296",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "well it's lying",
+    "ts": "1481721779.003086",
+    "id": "14de54297",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "i guess i should make an article for 1.2.0 and stetho 0.9.0 -_-",
+    "ts": "1481721788.003087",
+    "id": "14de54298",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "never thought i'd need to make one but hey",
+    "ts": "1481721792.003088",
+    "id": "14de54299",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I'm using realm 2.0.0 in this project and steth 1.4.1 I tried Stetch 1.3.0 but htat crashes my app",
+    "ts": "1481721826.003090",
+    "id": "14de54300",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "why are you using realm 2.0.0",
+    "ts": "1481721837.003092",
+    "id": "14de54301",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "that's literally the least stable version since 0.81.1",
+    "ts": "1481721846.003093",
+    "id": "14de54302",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Im not, Its an example project that had 2.0.0 already",
+    "ts": "1481721864.003094",
+    "id": "14de54303",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I used it to test steth",
+    "ts": "1481721872.003095",
+    "id": "14de54304",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "ah",
+    "ts": "1481721878.003096",
+    "id": "14de54305",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "well",
+    "ts": "1481721880.003097",
+    "id": "14de54306",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "Realm 1.2.0 and Stetho-Realm 0.9.0",
+    "ts": "1481721886.003098",
+    "id": "14de54307",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "it also says `compile 'com.facebook.stetho:stetho:1.3.1'`",
+    "ts": "1481721896.003099",
+    "id": "14de54308",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "You sure you can handle their scale?",
+    "subtype": "slackbot_response",
+    "user": "USLACKBOT",
+    "ts": "1481721896.003100",
+    "id": "14de54309",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "if that counts",
+    "ts": "1481721898.003101",
+    "id": "14de54310",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I will change it to the latest realm",
+    "ts": "1481721911.003102",
+    "id": "14de54311",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "and latest Steth",
+    "ts": "1481721918.003103",
+    "id": "14de54312",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": ".",
+    "ts": "1481721922.003104",
+    "id": "14de54313",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "if it doesnt show any data showthing is fishy",
+    "ts": "1481721936.003105",
+    "id": "14de54314",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "in that case it is \n\n```\n    compile 'com.facebook.stetho:stetho:1.4.1'\n    compile 'com.uphyca:stetho_realm:2.0.0'\n```\n\nand realm 2.2.1",
+    "ts": "1481721952.003107",
+    "id": "14de54315",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "You sure you can handle their scale?",
+    "subtype": "slackbot_response",
+    "user": "USLACKBOT",
+    "ts": "1481721952.003108",
+    "id": "14de54316",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "ye",
+    "ts": "1481721980.003110",
+    "id": "14de54317",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I had a problem with dagger 2.7 and Realm 1.2.0",
+    "ts": "1481722003.003111",
+    "id": "14de54318",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "but I figured it out",
+    "ts": "1481722008.003112",
+    "id": "14de54319",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "it was because I was using annotation processor instead of apt",
+    "ts": "1481722030.003113",
+    "id": "14de54320",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "using `android-apt`, and `apt` scope",
+    "ts": "1481722031.003114",
+    "id": "14de54321",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "ya",
+    "ts": "1481722034.003115",
+    "id": "14de54322",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "figured",
+    "ts": "1481722036.003116",
+    "id": "14de54323",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": ":slightly_smiling_face:",
+    "ts": "1481722040.003117",
+    "id": "14de54324",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Oh great",
+    "ts": "1481722068.003118",
+    "id": "14de54325",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "this app dont work with realm 2.2.1",
+    "ts": "1481722075.003119",
+    "id": "14de54326",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "that is odd",
+    "ts": "1481722092.003120",
+    "id": "14de54327",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "there were no breaking changes between 2.0.0 and 2.2.1 that i keep track of",
+    "ts": "1481722102.003121",
+    "id": "14de54328",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "did they change alot from 2.0.0 to 2.2.1?",
+    "ts": "1481722104.003122",
+    "id": "14de54329",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "oh.",
+    "ts": "1481722118.003123",
+    "id": "14de54330",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "this app is using Parceler",
+    "ts": "1481722126.003124",
+    "id": "14de54331",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "you probably just need to apply `android-apt` before you apply `realm-android`",
+    "ts": "1481722126.003125",
+    "id": "14de54332",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "lol",
+    "ts": "1481722127.003126",
+    "id": "14de54333",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": ":S",
+    "ts": "1481722206.003127",
+    "id": "14de54334",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "also disable instant run, that helps",
+    "ts": "1481722213.003128",
+    "id": "14de54335",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "a clean + rebuild should work",
+    "ts": "1481722220.003129",
+    "id": "14de54336",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "probably clean and rebuild",
+    "ts": "1481722236.003130",
+    "id": "14de54337",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "its complaing about realm proxy",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1481722252.000000"
+    },
+    "ts": "1481722242.003131",
+    "id": "14de54338",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "what is your plugin order",
+    "ts": "1481722260.003133",
+    "id": "14de54339",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "its workign now",
+    "ts": "1481722295.003134",
+    "id": "14de54340",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "clean",
+    "ts": "1481722298.003135",
+    "id": "14de54341",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "k",
+    "ts": "1481722307.003136",
+    "id": "14de54342",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "RealmProxy doesnt work in 2.2.1?",
+    "ts": "1481722361.003137",
+    "id": "14de54343",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Who needs that anyway",
+    "ts": "1481722369.003138",
+    "id": "14de54344",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I wont be using parceler class",
+    "ts": "1481722379.003139",
+    "id": "14de54345",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "RealmProxy should be generated by annotation processor",
+    "ts": "1481722392.003140",
+    "id": "14de54346",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "ye but it had one already",
+    "ts": "1481722401.003141",
+    "id": "14de54347",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "it was ref int he parcler",
+    "ts": "1481722407.003142",
+    "id": "14de54348",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "which is what was failing after I upgraded cversion",
+    "ts": "1481722420.003143",
+    "id": "14de54349",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "it should be ok after the rebuild because proxies are generated by apt",
+    "ts": "1481722438.003144",
+    "id": "14de54350",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "wow",
+    "ts": "1481722504.003145",
+    "id": "14de54351",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "now the app dont work :disappointed:",
+    "ts": "1481722509.003146",
+    "id": "14de54352",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I will give up",
+    "ts": "1481722514.003147",
+    "id": "14de54353",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "lol",
+    "ts": "1481722517.003148",
+    "id": "14de54354",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "its not my app",
+    "ts": "1481722519.003149",
+    "id": "14de54355",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "welp",
+    "ts": "1481722525.003150",
+    "id": "14de54356",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "it should work tho",
+    "ts": "1481722527.003151",
+    "id": "14de54357",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "worst case scenario,",
+    "ts": "1481722532.003152",
+    "id": "14de54358",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "you can do that you",
+    "ts": "1481722534.003153",
+    "id": "14de54359",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "change `apt` to `annotationProcessor` and remove `android-apt`",
+    "ts": "1481722543.003154",
+    "id": "14de54360",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "it is supported since 2.2.0",
+    "ts": "1481722551.003155",
+    "id": "14de54361",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "it also broke other things but that is ok",
+    "ts": "1481722558.003156",
+    "id": "14de54362",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "ok illtry that",
+    "ts": "1481722568.003157",
+    "id": "14de54363",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "(as in, the support of `annotationProcessor` is the reason why the order of plugins matters, it's hacky XD)",
+    "ts": "1481722588.003158",
+    "id": "14de54364",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "still no data",
+    "ts": "1481723021.003159",
+    "id": "14de54365",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "lol",
+    "ts": "1481723024.003160",
+    "id": "14de54366",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "But the data is deffinetly there",
+    "ts": "1481723032.003161",
+    "id": "14de54367",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "if I switch the app offline",
+    "ts": "1481723038.003162",
+    "id": "14de54368",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "and reload",
+    "ts": "1481723041.003163",
+    "id": "14de54369",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "it pulls from realm",
+    "ts": "1481723046.003164",
+    "id": "14de54370",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "steth just shows an empty db",
+    "ts": "1481723063.003165",
+    "id": "14de54371",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "that was not worth the hassle lOL",
+    "ts": "1481723081.003166",
+    "id": "14de54372",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "nope",
+    "ts": "1481723085.003167",
+    "id": "14de54373",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "is the database called `default.realm` ?",
+    "ts": "1481723087.003168",
+    "id": "14de54374",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "no it wasnt",
+    "ts": "1481723093.003169",
+    "id": "14de54375",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "is there a `name()` parameter for `RealmConfiguration.Builder()`",
+    "ts": "1481723097.003170",
+    "id": "14de54376",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "but there is 2 dbs now",
+    "ts": "1481723101.003171",
+    "id": "14de54377",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "yes",
+    "ts": "1481723118.003172",
+    "id": "14de54378",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "i think if you remove that, then it'll work",
+    "ts": "1481723132.003173",
+    "id": "14de54379",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "this seems to be a bug in the new stetho-realm",
+    "ts": "1481723138.003174",
+    "id": "14de54380",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "why is it so dam hard to view the content of the db",
+    "ts": "1481723176.003175",
+    "id": "14de54381",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "haha",
+    "ts": "1481723179.003176",
+    "id": "14de54382",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "which version of steth worked for realm 2.0.0?",
+    "ts": "1481723233.003177",
+    "id": "14de54383",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "compile 'com.uphyca:stetho_realm:2.0.0'",
+    "ts": "1481723252.003178",
+    "id": "14de54384",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "ok i removed the name",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1481723357.000000"
+    },
+    "ts": "1481723349.003179",
+    "id": "14de54385",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "it works haha stupid bug",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1481723639.000000"
+    },
+    "ts": "1481723385.003181",
+    "id": "14de54386",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "default.realm",
+    "ts": "1481723402.003184",
+    "id": "14de54387",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "that bug is still present in the latest steth",
+    "ts": "1481723420.003185",
+    "id": "14de54388",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "for realm",
+    "ts": "1481723426.003186",
+    "id": "14de54389",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "hmm",
+    "ts": "1481723453.003187",
+    "id": "14de54390",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "now I can view the other db too",
+    "ts": "1481723460.003188",
+    "id": "14de54391",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "wierd",
+    "ts": "1481723465.003189",
+    "id": "14de54392",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "the named one",
+    "ts": "1481723468.003190",
+    "id": "14de54393",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Thats cool though at least I know it works",
+    "ts": "1481723542.003191",
+    "id": "14de54394",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "<@U39P7U6EP> thanks for the help",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1481723582.000000"
+    },
+    "ts": "1481723561.003192",
+    "id": "14de54395",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U3E2EEX38> you're welcome :smiley_cat:",
+    "edited": {
+      "user": "U39P7U6EP",
+      "ts": "1481723836.000000"
+    },
+    "ts": "1481723698.003198",
+    "reactions": [
+      {
+        "name": "smiley_cat",
+        "users": [
+          "U2M0WUZ7A"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "14de54396",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I am raelly kind of frustrated in Android Studio",
+    "ts": "1481725491.003200",
+    "id": "14de54397",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I cannot understand why AS eats up 100% of my CPU",
+    "ts": "1481725503.003201",
+    "id": "14de54398",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "PC becoming unusable",
+    "ts": "1481725513.003202",
+    "reactions": [
+      {
+        "name": "neutral_face",
+        "users": [
+          "U2M0WUZ7A"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "14de54399",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I mean Android Studio 2.2.2 has already addressed some of the performance issue",
+    "ts": "1481725549.003203",
+    "id": "14de54400",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "but everytime I build",
+    "ts": "1481725560.003204",
+    "id": "14de54401",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "everytime I open my project",
+    "ts": "1481725565.003205",
+    "id": "14de54402",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "right now it took 1 hour to be usable",
+    "ts": "1481725572.003206",
+    "id": "14de54403",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I cannot stand this anymore",
+    "ts": "1481725580.003207",
+    "id": "14de54404",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "You’re developing in it wrong :appleinc:",
+    "ts": "1481725626.003208",
+    "id": "14de54405",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "wait...",
+    "ts": "1481725631.003209",
+    "id": "14de54406",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "You us e a mac?",
+    "ts": "1481725677.003210",
+    "id": "14de54407",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": ":disappointed:",
+    "ts": "1481725682.003211",
+    "id": "14de54408",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "no",
+    "ts": "1481725689.003212",
+    "id": "14de54409",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "PC",
+    "ts": "1481725691.003213",
+    "id": "14de54410",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Good",
+    "ts": "1481725697.003214",
+    "id": "14de54411",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I mean I don't have the most powerfful PC ever",
+    "ts": "1481725706.003215",
+    "id": "14de54412",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "and I know I should have switch to SSD",
+    "ts": "1481725712.003216",
+    "id": "14de54413",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "but this is unnacceptable",
+    "ts": "1481725717.003217",
+    "id": "14de54414",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U379MC1E0> you need 8 GB RAM and should probably close Chrome",
+    "ts": "1481725717.003218",
+    "id": "14de54415",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I am talking about CPU here",
+    "ts": "1481725720.003219",
+    "id": "14de54416",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I have 8gig",
+    "ts": "1481725723.003220",
+    "id": "14de54417",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I can still use my pc fine when AS builds",
+    "ts": "1481725726.003221",
+    "id": "14de54418",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "why is it taking so much CPU process?",
+    "ts": "1481725733.003222",
+    "id": "14de54419",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "are you in WIndows?",
+    "ts": "1481725734.003223",
+    "id": "14de54420",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "but i Have 32GB of ram",
+    "ts": "1481725738.003224",
+    "id": "14de54421",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "of course I am on window",
+    "ts": "1481725740.003225",
+    "id": "14de54422",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "can someone explain the 100% CPU process?",
+    "ts": "1481725755.003226",
+    "id": "14de54423",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "add this to your gradle.properties `org.gradle.jvmargs=-Xms2048m -Xmx4608m -XX:MaxPermSize=2048m -XX:ReservedCodeCacheSize=2048m`",
+    "ts": "1481725756.003227",
+    "id": "14de54424",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "this is fucking crazy",
+    "ts": "1481725759.003228",
+    "id": "14de54425",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I did that already",
+    "ts": "1481725762.003229",
+    "id": "14de54426",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "AS alwasy uses maximum CPU",
+    "ts": "1481725763.003230",
+    "id": "14de54427",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "you should exclude the project directory in Windows Defender",
+    "ts": "1481725764.003231",
+    "id": "14de54428",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "and .gradle",
+    "ts": "1481725766.003232",
+    "id": "14de54429",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "and .AndroidStudio",
+    "ts": "1481725773.003233",
+    "id": "14de54430",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I am so sick and tired of changing it over and over and over and over and over and over and over",
+    "ts": "1481725776.003234",
+    "id": "14de54431",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<@U379MC1E0> the ‘recommended’ requirements for AS are really the minimum requirements\n\n<https://developer.android.com/studio/index.html#Requirements>",
+    "attachments": [
+      {
+        "title": "    Download Android Studio and SDK Tools | Android Studio  ",
+        "title_link": "https://developer.android.com/studio/index.html#Requirements",
+        "text": "Download the official Android IDE and developer tools to build apps for Android phones, tablets, wearables, TVs, and more.",
+        "fallback": "    Download Android Studio and SDK Tools | Android Studio  ",
+        "from_url": "https://developer.android.com/studio/index.html#Requirements",
+        "service_icon": "https://developer.android.com/images/brand/Android_Robot_200.png",
+        "service_name": "developer.android.com",
+        "id": 1
+      }
+    ],
+    "ts": "1481725780.003235",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "14de54432",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I give up",
+    "ts": "1481725783.003237",
+    "id": "14de54433",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I am ranting though",
+    "ts": "1481725788.003238",
+    "id": "14de54434",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "8gb of ram.. pssh",
+    "ts": "1481725791.003239",
+    "id": "14de54435",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I just have to get use to this",
+    "ts": "1481725792.003240",
+    "id": "14de54436",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "more like 16 minimum",
+    "ts": "1481725795.003241",
+    "id": "14de54437",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U379MC1E0> you should at least attempt to read what I've just said lol",
+    "ts": "1481725796.003242",
+    "id": "14de54438",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "nvm",
+    "ts": "1481725811.003243",
+    "id": "14de54439",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I did that @zhuiden",
+    "ts": "1481725824.003244",
+    "id": "14de54440",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "if you have anything less than an I7 4770hq.. you are not going to have fun",
+    "ts": "1481725825.003245",
+    "id": "14de54441",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "he provided you a potential fix",
+    "ts": "1481725828.003246",
+    "id": "14de54442",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "even excluding folders in anti-virus?",
+    "ts": "1481725842.003247",
+    "id": "14de54443",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "Why I7 4770hq? this",
+    "ts": "1481725844.003248",
+    "id": "14de54444",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "yeah",
+    "ts": "1481725846.003249",
+    "id": "14de54445",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "Oh wait",
+    "ts": "1481725854.003250",
+    "id": "14de54446",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "because compiling code takes horsepower",
+    "ts": "1481725859.003251",
+    "id": "14de54447",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "are you on an HDD",
+    "ts": "1481725864.003252",
+    "id": "14de54448",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "cause that doesn’t help either",
+    "ts": "1481725870.003253",
+    "id": "14de54449",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "<@U08N9CH9V> so the 100% CPU usage",
+    "ts": "1481725878.003254",
+    "id": "14de54450",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I have an i5-4670K and AS is super fast I have about 40 Chrome tabs open and I can even run a video game or photoshop if I want",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1481725890.000000"
+    },
+    "ts": "1481725881.003255",
+    "id": "14de54451",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "they should advertise that I need the Google Mainframe computer on system requirement",
+    "ts": "1481725895.003257",
+    "id": "14de54452",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "lol",
+    "ts": "1481725896.003258",
+    "id": "14de54453",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "i have an HDD here and i need to close Chrome if i want a fast AS",
+    "ts": "1481725900.003259",
+    "id": "14de54454",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<@U3E2EEX38> yeah but xx70k, im talking relative performance",
+    "edited": {
+      "user": "U055GGAHS",
+      "ts": "1481725910.000000"
+    },
+    "ts": "1481725902.003260",
+    "id": "14de54455",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "but otherwise it's ok",
+    "ts": "1481725904.003261",
+    "id": "14de54456",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "ye sure",
+    "ts": "1481725912.003263",
+    "id": "14de54457",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "it's the memory caching to disk that kills it for me",
+    "ts": "1481725912.003264",
+    "id": "14de54458",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "alright",
+    "ts": "1481725919.003265",
+    "id": "14de54459",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "so i need to make sure that does not happen",
+    "ts": "1481725920.003266",
+    "id": "14de54460",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I have a fast SSD though also",
+    "ts": "1481725926.003267",
+    "id": "14de54461",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "70 and 90 series chips are going to have high single core performance which will be :ok_hand:",
+    "ts": "1481725928.003268",
+    "id": "14de54462",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "intel broke that theme though on the 6700k which will be very decent",
+    "ts": "1481725940.003269",
+    "id": "14de54463",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "so if I buy a new computer with a quad core i5, As would not run properly",
+    "ts": "1481725946.003270",
+    "id": "14de54464",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "not as well as it could",
+    "ts": "1481725958.003271",
+    "id": "14de54465",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Compiling on a mac here",
+    "ts": "1481725961.003272",
+    "id": "14de54466",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "It’s fine",
+    "ts": "1481725963.003273",
+    "id": "14de54467",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Not even a mac",
+    "ts": "1481725966.003274",
+    "id": "14de54468",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Macbook Pro",
+    "ts": "1481725969.003275",
+    "id": "14de54469",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Mac &gt;&lt;",
+    "ts": "1481725970.003276",
+    "id": "14de54470",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "My boss was so upset when on the first week of starting I bootcamped it with win10",
+    "ts": "1481725986.003277",
+    "id": "14de54471",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I had a maxed out last gen macbook pro.. my 4770k desktop crushed its performance in windows and linux",
+    "ts": "1481725992.003278",
+    "id": "14de54472",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I am poor and I can't upgrade to 16 because 8 is my max",
+    "ts": "1481725996.003279",
+    "id": "14de54473",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "hardware is the bottleneck not the OS",
+    "ts": "1481726002.003280",
+    "id": "14de54474",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I run a hackintosh on my other SSD and it super fast compared to any mac ive ever used",
+    "ts": "1481726018.003281",
+    "id": "14de54475",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "current gen maxed mbp is slower than last gen",
+    "ts": "1481726020.003282",
+    "id": "14de54476",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I can fill my ram up to 6 gig but my CPU reaches 100% and my PC freezes",
+    "ts": "1481726025.003283",
+    "id": "14de54477",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "So whypay Apple prices",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1481726055.000000"
+    },
+    "ts": "1481726045.003284",
+    "id": "14de54478",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I am jsut wondering why it uses that much CPU process",
+    "ts": "1481726047.003285",
+    "id": "14de54479",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "because Gradle needs your soul to compile that damn thing",
+    "ts": "1481726057.003287",
+    "id": "14de54480",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "because most of the work of compiling is single core work",
+    "ts": "1481726061.003288",
+    "id": "14de54481",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "alright how can I speed it up?",
+    "ts": "1481726075.003289",
+    "id": "14de54482",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "also if you added `compile dagger-compiler` to your app then that's a bad thing and should be `apt` or `annotationProcessor`",
+    "edited": {
+      "user": "U39P7U6EP",
+      "ts": "1481726084.000000"
+    },
+    "ts": "1481726076.003290",
+    "id": "14de54483",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "and be happy.. it uses a *lot* less resources now vs what it used to use",
+    "edited": {
+      "user": "U055GGAHS",
+      "ts": "1481726086.000000"
+    },
+    "ts": "1481726085.003292",
+    "id": "14de54484",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "you should also not include the entire `google play services`",
+    "ts": "1481726096.003294",
+    "id": "14de54485",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "some people make that mistake",
+    "ts": "1481726099.003295",
+    "id": "14de54486",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "Android 2.2.2 is definitely better",
+    "ts": "1481726100.003296",
+    "id": "14de54487",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "haha",
+    "ts": "1481726101.003297",
+    "id": "14de54488",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "its faster",
+    "ts": "1481726102.003298",
+    "id": "14de54489",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "the building is shit",
+    "ts": "1481726105.003299",
+    "id": "14de54490",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "nothing changes",
+    "ts": "1481726108.003300",
+    "id": "14de54491",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "include the entire `google play services` lol",
+    "ts": "1481726124.003301",
+    "id": "14de54492",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "yep.. frankly you need expensive hardware",
+    "ts": "1481726129.003302",
+    "id": "14de54493",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "But I notice huge performance on 2.2.2",
+    "ts": "1481726132.003303",
+    "id": "14de54494",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "do you think any googlers are building android apps on an i3 with 8gb of ram?",
+    "ts": "1481726141.003304",
+    "id": "14de54495",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I did that my first week but quickly figured out on my own it was bad",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1481726153.000000"
+    },
+    "ts": "1481726143.003305",
+    "id": "14de54496",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "lol I haven't gone to including google play services yet",
+    "ts": "1481726147.003306",
+    "id": "14de54497",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I believe they are building it on their Mainframe Computers",
+    "ts": "1481726165.003308",
+    "id": "14de54498",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Lol, google play services auto import is a nightmare",
+    "ts": "1481726170.003309",
+    "id": "14de54499",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "so lets wrap up here",
+    "ts": "1481726190.003310",
+    "id": "14de54500",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "also I disable that firebase crap",
+    "ts": "1481726191.003311",
+    "id": "14de54501",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "its embedded into AS",
+    "ts": "1481726200.003312",
+    "id": "14de54502",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "at google they have essentially unlimited computing power, they could spin up virtual VM instances if they want and get access to 22+ core machines. They aren’t worried too much about performance at the low end of the laptop/desktop performance. *It works* is all they care about",
+    "ts": "1481726212.003313",
+    "id": "14de54503",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I need an extreme edition of Intel Core i7, much preferably the server process intel has, 32gig of ram and a very fast SSD",
+    "ts": "1481726224.003314",
+    "id": "14de54504",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "that would be ideal",
+    "ts": "1481726237.003315",
+    "id": "14de54505",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "What do you mean Ideal?",
+    "ts": "1481726252.003316",
+    "id": "14de54506",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "what you just said",
+    "ts": "1481726263.003317",
+    "id": "14de54507",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "you seriously just need the SSD. -_-",
+    "ts": "1481726268.003318",
+    "id": "14de54508",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "no I need a new hardware",
+    "ts": "1481726278.003319",
+    "id": "14de54509",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I am just saving up",
+    "ts": "1481726281.003320",
+    "id": "14de54510",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "our app has a lot of native code.. even with a fast i7 a clean build for us is like 5 minutes",
+    "ts": "1481726286.003321",
+    "id": "14de54511",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "SSD and new RAM is the best upgrade you can get atm",
+    "ts": "1481726295.003322",
+    "id": "14de54512",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "In that order",
+    "ts": "1481726297.003323",
+    "id": "14de54513",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I am not caring about long build times actually",
+    "ts": "1481726299.003324",
+    "id": "14de54514",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "breaking up our app saved a lot of time",
+    "ts": "1481726303.003325",
+    "id": "14de54515",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "RAM is cheap",
+    "ts": "1481726309.003326",
+    "id": "14de54516",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "get a Xeon",
+    "ts": "1481726311.003327",
+    "id": "14de54517",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I am not complaining about the long build times I think its pretty normal",
+    "ts": "1481726311.003328",
+    "id": "14de54518",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "what I am complaining about is 100% CPU usage",
+    "ts": "1481726320.003329",
+    "id": "14de54519",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Buy a second hand Xeon cpu",
+    "ts": "1481726330.003330",
+    "id": "14de54520",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<@U3E2EEX38> been looking at that actually lol",
+    "ts": "1481726341.003331",
+    "id": "14de54521",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "they are so cheap",
+    "ts": "1481726348.003332",
+    "id": "14de54522",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "you can get like $5k chips for $800 and shit",
+    "ts": "1481726353.003333",
+    "id": "14de54523",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "second hand:)",
+    "ts": "1481726354.003334",
+    "id": "14de54524",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "How much is that?",
+    "ts": "1481726355.003335",
+    "id": "14de54525",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "oh",
+    "ts": "1481726367.003336",
+    "id": "14de54526",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "ok",
+    "ts": "1481726369.003337",
+    "id": "14de54527",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I can tell you that my i5 with 32gb of ram and Intel SSD has no problems with anything",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1481726423.000000"
+    },
+    "ts": "1481726407.003338",
+    "id": "14de54528",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "lol was about to say, 3?",
+    "ts": "1481726423.003340",
+    "id": "14de54529",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "haha",
+    "ts": "1481726425.003342",
+    "id": "14de54530",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "typo",
+    "ts": "1481726427.003343",
+    "id": "14de54531",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I totally get though that some people can’t afford that",
+    "ts": "1481726438.003344",
+    "id": "14de54532",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "pretty fortunate not to be in that situation",
+    "ts": "1481726449.003345",
+    "id": "14de54533",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "so if I buy SSD my 100% cpu usage is gone",
+    "ts": "1481726450.003346",
+    "id": "14de54534",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Thing is it wasnt expensive",
+    "ts": "1481726454.003347",
+    "id": "14de54535",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "compared to MAcs etc",
+    "ts": "1481726469.003348",
+    "id": "14de54536",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I built it myself",
+    "ts": "1481726476.003349",
+    "id": "14de54537",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<@U379MC1E0> honestly I think you have something else going on causing that. I get 100% on a single core frequently but not my entire system",
+    "ts": "1481726479.003350",
+    "id": "14de54538",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "its like my storage is the bottle neck",
+    "ts": "1481726484.003351",
+    "id": "14de54539",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "ti is",
+    "ts": "1481726491.003352",
+    "id": "14de54540",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "there are some points where my system will lock up during clean builds and such but those are momentary",
+    "ts": "1481726500.003353",
+    "id": "14de54541",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "prior 2.2.2 this is pretty frequent on my machine",
+    "ts": "1481726508.003354",
+    "id": "14de54542",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "no I get 100% cpu usage but if anther process needs that cpu then it is given up by AS",
+    "ts": "1481726511.003355",
+    "id": "14de54543",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "with only AS opened",
+    "ts": "1481726512.003356",
+    "id": "14de54544",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "but on 2.2.2 it rarely happens",
+    "ts": "1481726519.003357",
+    "id": "14de54545",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "well try getting an SSD",
+    "ts": "1481726524.003358",
+    "id": "14de54546",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "if that doesn’t fix it, you can always move your SSD to a new system",
+    "ts": "1481726535.003359",
+    "id": "14de54547",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "so its not like you lose anything trying it",
+    "ts": "1481726540.003360",
+    "id": "14de54548",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "alright",
+    "ts": "1481726549.003361",
+    "id": "14de54549",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "and more ram",
+    "ts": "1481726554.003362",
+    "id": "14de54550",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I would get more  ram",
+    "ts": "1481726559.003363",
+    "id": "14de54551",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "alright",
+    "ts": "1481726560.003364",
+    "id": "14de54552",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "first",
+    "ts": "1481726560.003365",
+    "id": "14de54553",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "840 evo’s are really good $ to performance",
+    "ts": "1481726562.003366",
+    "id": "14de54554",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "first SSD",
+    "ts": "1481726566.003367",
+    "id": "14de54555",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "then RAM",
+    "ts": "1481726567.003368",
+    "id": "14de54556",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "you need double or triple that ram",
+    "ts": "1481726583.003369",
+    "id": "14de54557",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "like 128gig of RAM?",
+    "ts": "1481726602.003370",
+    "id": "14de54558",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "nah 16 min",
+    "ts": "1481726613.003371",
+    "id": "14de54559",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "^",
+    "ts": "1481726616.003372",
+    "id": "14de54560",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": ":slightly_smiling_face:",
+    "ts": "1481726620.003373",
+    "id": "14de54561",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "how about 32?",
+    "ts": "1481726622.003374",
+    "id": "14de54562",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "16gb is definitely the minimum",
+    "ts": "1481726624.003375",
+    "id": "14de54563",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "32 is sweet",
+    "ts": "1481726628.003376",
+    "id": "14de54564",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "32 if you can afford it and if your processor supports it",
+    "ts": "1481726634.003377",
+    "id": "14de54565",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "how about 64?",
+    "ts": "1481726634.003378",
+    "id": "14de54566",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "LOl",
+    "ts": "1481726637.003379",
+    "id": "14de54567",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "hahaha",
+    "ts": "1481726643.003380",
+    "id": "14de54568",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "overkill",
+    "ts": "1481726644.003381",
+    "id": "14de54569",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "64 if you run lots of virtual machines",
+    "ts": "1481726646.003382",
+    "id": "14de54570",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "You think AS is bad/long",
+    "ts": "1481726686.003383",
+    "id": "14de54571",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "try building Unreal engine",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1481726713.000000"
+    },
+    "ts": "1481726694.003384",
+    "id": "14de54572",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "from source",
+    "ts": "1481726696.003385",
+    "id": "14de54573",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "takes hours",
+    "ts": "1481726700.003386",
+    "id": "14de54574",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "lol",
+    "ts": "1481726701.003387",
+    "id": "14de54575",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "but doesn't take 100% CPU right?",
+    "ts": "1481726714.003389",
+    "id": "14de54576",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "sure it does",
+    "ts": "1481726718.003390",
+    "id": "14de54577",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Visual Studio",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1481726726.000000"
+    },
+    "ts": "1481726722.003391",
+    "id": "14de54578",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "It will take as much as is available",
+    "ts": "1481726733.003393",
+    "id": "14de54579",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "they have a swarm manager",
+    "ts": "1481726772.003394",
+    "id": "14de54580",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "for building some things",
+    "ts": "1481726784.003395",
+    "id": "14de54581",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "becuase they just take too long other wise",
+    "ts": "1481726799.003396",
+    "id": "14de54582",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3EKHMY59",
+    "text": "<@U3EKHMY59|bnsantos> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481727243.003397",
+    "id": "14de54583",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U21R4GP5J",
+    "text": "I think everything takes 100% CPU if you allow",
+    "ts": "1481732013.003398",
+    "id": "14de54584",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U21R4GP5J",
+    "text": "At least it’s like this on windows. I have a shitty pc, so even some games use 100% of my CPU",
+    "ts": "1481732041.003399",
+    "id": "14de54585",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "ye exactly",
+    "ts": "1481732931.003400",
+    "id": "14de54586",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "the OS delegates",
+    "ts": "1481732936.003401",
+    "id": "14de54587",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "full build takes 16s",
+    "ts": "1481732983.003402",
+    "id": "14de54588",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "lol",
+    "ts": "1481732987.003403",
+    "id": "14de54589",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "that from a clean and rebuild",
+    "ts": "1481733039.003404",
+    "id": "14de54590",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "im using dagger aswell",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1481733053.000000"
+    },
+    "ts": "1481733044.003405",
+    "id": "14de54591",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Why can't I add List&lt;RealmObjects&gt;",
+    "ts": "1481736360.003407",
+    "id": "14de54592",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "to a realm",
+    "ts": "1481736363.003408",
+    "id": "14de54593",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "annoying",
+    "ts": "1481736372.003409",
+    "id": "14de54594",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "RealmList&lt;&gt;",
+    "ts": "1481737066.003410",
+    "id": "14de54595",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "no",
+    "ts": "1481737081.003411",
+    "id": "14de54596",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Retrofit returns a List",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1481737095.000000"
+    },
+    "ts": "1481737088.003412",
+    "id": "14de54597",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Its a JSON array",
+    "ts": "1481737103.003414",
+    "id": "14de54598",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "its telling me the object is null",
+    "ts": "1481737121.003415",
+    "id": "14de54599",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "lol",
+    "ts": "1481737122.003416",
+    "id": "14de54600",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Attempt to invoke virtual method 'void io.realm.Realm.executeTransaction(io.realm.Realm$Transaction)' on a null object",
+    "ts": "1481737145.003417",
+    "id": "14de54601",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "Hrm",
+    "ts": "1481737152.003418",
+    "id": "14de54602",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "but its deffiently not null",
+    "ts": "1481737153.003419",
+    "id": "14de54603",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "ints an innrer class",
+    "ts": "1481737167.003420",
+    "id": "14de54604",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "inner*",
+    "ts": "1481737170.003421",
+    "id": "14de54605",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "The inner class should be static class",
+    "ts": "1481737178.003422",
+    "id": "14de54606",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "ahh",
+    "ts": "1481737271.003423",
+    "id": "14de54607",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "thats most likely the problem then I need to inject realm",
+    "ts": "1481737284.003424",
+    "id": "14de54608",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "wow",
+    "ts": "1481737326.003425",
+    "id": "14de54609",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "How to get a reference to realm from inner clas",
+    "ts": "1481737336.003426",
+    "id": "14de54610",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I have Realm as a singleton",
+    "ts": "1481737346.003427",
+    "id": "14de54611",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3697FDAN",
+    "text": "I didn't read the whole thing but carefull with inject realm",
+    "ts": "1481737351.003428",
+    "id": "14de54612",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "but in static inner class I cant get it",
+    "ts": "1481737356.003429",
+    "id": "14de54613",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "why?",
+    "ts": "1481737370.003430",
+    "id": "14de54614",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3697FDAN",
+    "text": "If i'm not mistaken to access the realm object you have to always create a a Realm.geTInstance or something like that",
+    "ts": "1481737377.003431",
+    "id": "14de54615",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I am using Dagger to do that",
+    "ts": "1481737385.003432",
+    "id": "14de54616",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "module",
+    "ts": "1481737393.003433",
+    "id": "14de54617",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3697FDAN",
+    "text": "Exactly, you can't really do that with dagger",
+    "ts": "1481737401.003434",
+    "id": "14de54618",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I just inject Realm",
+    "ts": "1481737402.003435",
+    "id": "14de54619",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "oh",
+    "ts": "1481737406.003436",
+    "id": "14de54620",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "how come?",
+    "ts": "1481737409.003437",
+    "id": "14de54621",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I inject realm in my Application",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1481737438.000000"
+    },
+    "ts": "1481737427.003438",
+    "id": "14de54622",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3697FDAN",
+    "text": "Let me see if I can find the explanation i made",
+    "ts": "1481737431.003439",
+    "id": "14de54623",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I have it workign fine",
+    "ts": "1481737443.003441",
+    "id": "14de54624",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "in another project",
+    "ts": "1481737447.003442",
+    "id": "14de54625",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Injected",
+    "ts": "1481737451.003443",
+    "id": "14de54626",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "But I had to manually inject it",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1481737493.000000"
+    },
+    "ts": "1481737484.003444",
+    "id": "14de54627",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3697FDAN",
+    "text": "You always have to provide it yes",
+    "ts": "1481737534.003446",
+    "id": "14de54628",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3697FDAN",
+    "text": "@Provides\n    Realm provideRealm() {\n        return Realm.getDefaultInstance();\n    }",
+    "ts": "1481737545.003447",
+    "id": "14de54629",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3697FDAN",
+    "text": "Hmm i guess you can ignore my state about injecting realm with dagger",
+    "ts": "1481737563.003448",
+    "id": "14de54630",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "yes",
+    "ts": "1481737586.003449",
+    "id": "14de54631",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "thats what I did",
+    "ts": "1481737590.003450",
+    "id": "14de54632",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I provide the default instance",
+    "ts": "1481737606.003451",
+    "id": "14de54633",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I mean Realm is not complaining",
+    "ts": "1481737767.003452",
+    "id": "14de54634",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "that its not initialized",
+    "ts": "1481737773.003453",
+    "id": "14de54635",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3697FDAN",
+    "text": "i know i had a problem with dagger and realm",
+    "ts": "1481737886.003454",
+    "id": "14de54636",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I'm stuck",
+    "ts": "1481737886.003455",
+    "id": "14de54637",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "That might be it",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1481737898.000000"
+    },
+    "ts": "1481737892.003456",
+    "id": "14de54638",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3697FDAN",
+    "text": "Which was related to Realm.getDefaultInstance(); and it was one of the reasons that made me ditch realm",
+    "ts": "1481737915.003458",
+    "id": "14de54639",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "lol",
+    "ts": "1481737921.003459",
+    "id": "14de54640",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3697FDAN",
+    "text": "But i can't remember why and what was the problem",
+    "ts": "1481737923.003460",
+    "id": "14de54641",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "this has me stumped",
+    "ts": "1481739501.003461",
+    "id": "14de54642",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Realm is initialized",
+    "ts": "1481739515.003462",
+    "id": "14de54643",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "there is data",
+    "ts": "1481739521.003463",
+    "id": "14de54644",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "that data is a List of RealmObjects",
+    "ts": "1481739531.003464",
+    "id": "14de54645",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "real says its null",
+    "ts": "1481739547.003465",
+    "id": "14de54646",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "lol",
+    "ts": "1481739549.003466",
+    "id": "14de54647",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "or is it saying real is null hmm",
+    "ts": "1481739571.003467",
+    "id": "14de54648",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "ok it was the Realm instance, its working now, I hadn't injected it properly",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1481740650.000000"
+    },
+    "ts": "1481740630.003468",
+    "id": "14de54649",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "sweet, works well",
+    "ts": "1481740732.003471",
+    "id": "14de54650",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "replaced listview with recyclerview and loadermanager with Rx and suddenly that fragment runs so much smoother :heart:",
+    "ts": "1481740855.003472",
+    "id": "14de54651",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "lol",
+    "ts": "1481740895.003473",
+    "id": "14de54652",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Rx is awesome",
+    "ts": "1481740908.003474",
+    "id": "14de54653",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I have a background service that loads data from the network",
+    "ts": "1481740978.003475",
+    "id": "14de54654",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "and saves inside Realm",
+    "ts": "1481740989.003476",
+    "id": "14de54655",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "my app only reads from realm",
+    "ts": "1481740995.003477",
+    "id": "14de54656",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "to the UI",
+    "ts": "1481740999.003478",
+    "id": "14de54657",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "and writes to realm",
+    "ts": "1481741008.003479",
+    "id": "14de54658",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "the background sync service takes care of updating realm",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1481741034.000000"
+    },
+    "ts": "1481741026.003480",
+    "id": "14de54659",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "even after the app is dead",
+    "ts": "1481741043.003482",
+    "id": "14de54660",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25HQJX6J",
+    "text": "hi",
+    "ts": "1481741154.003483",
+    "id": "14de54661",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": ":champagne:",
+    "ts": "1481741233.003484",
+    "id": "14de54662",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25HQJX6J",
+    "text": "How I can make Multi app with same layout",
+    "ts": "1481741353.003485",
+    "id": "14de54663",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25HQJX6J",
+    "text": "Build Variants ?",
+    "ts": "1481741364.003486",
+    "id": "14de54664",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "Can also look into product flavors",
+    "ts": "1481742467.003487",
+    "id": "14de54665",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "awesome, my app works offline now",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1481743271.000000"
+    },
+    "ts": "1481743263.003488",
+    "id": "14de54666",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Realm is good",
+    "ts": "1481743302.003490",
+    "id": "14de54667",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Realm is the simplest databse I've ever used",
+    "ts": "1481744068.003491",
+    "id": "14de54668",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "who was that guy who had to write a library for other people to use",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1481744146.000000"
+    },
+    "ts": "1481744130.003492",
+    "id": "14de54669",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "nesho?",
+    "ts": "1481744133.003493",
+    "id": "14de54670",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "lol",
+    "ts": "1481744135.003494",
+    "id": "14de54671",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DU1GQTV",
+    "text": "I feel more comfortable editing xml than using a gui tool, but i also want to see a preview. I wonder why there isn't a split screen view in studio to do both at the same time",
+    "ts": "1481744941.003496",
+    "id": "14de54672",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "there is",
+    "ts": "1481745474.003497",
+    "id": "14de54673",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "open another tab",
+    "ts": "1481745478.003498",
+    "id": "14de54674",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "with the same layout",
+    "ts": "1481745486.003499",
+    "id": "14de54675",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "and switch one to text",
+    "ts": "1481745491.003500",
+    "id": "14de54676",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "split the view vertically",
+    "ts": "1481745504.003501",
+    "id": "14de54677",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "Or when you are editing your XML layout in text mode, on the right there is a Preview button under Gradle.",
+    "ts": "1481746053.003502",
+    "id": "14de54678",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U05473HHT|michaelcarrano> uploaded a file: <https://androidchat.slack.com/files/michaelcarrano/F3EV4RUNQ/screen_shot_2016-12-14_at_3.07.44_pm.png|Screen Shot 2016-12-14 at 3.07.44 PM.png>",
+    "file": {
+      "id": "F3EV4RUNQ",
+      "created": 1481746115,
+      "timestamp": 1481746115,
+      "name": "Screen Shot 2016-12-14 at 3.07.44 PM.png",
+      "title": "Screen Shot 2016-12-14 at 3.07.44 PM.png",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U05473HHT",
+      "editable": false,
+      "size": 5100,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F3EV4RUNQ/screen_shot_2016-12-14_at_3.07.44_pm.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F3EV4RUNQ/download/screen_shot_2016-12-14_at_3.07.44_pm.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F3EV4RUNQ-68778af080/screen_shot_2016-12-14_at_3.07.44_pm_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F3EV4RUNQ-68778af080/screen_shot_2016-12-14_at_3.07.44_pm_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F3EV4RUNQ-68778af080/screen_shot_2016-12-14_at_3.07.44_pm_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 36,
+      "thumb_360_h": 244,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F3EV4RUNQ-68778af080/screen_shot_2016-12-14_at_3.07.44_pm_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "image_exif_rotation": 1,
+      "original_w": 36,
+      "original_h": 244,
+      "permalink": "https://androidchat.slack.com/files/michaelcarrano/F3EV4RUNQ/screen_shot_2016-12-14_at_3.07.44_pm.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F3EV4RUNQ-b319edf179",
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U05473HHT",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U05473HHT|michaelcarrano>",
+    "bot_id": null,
+    "ts": "1481746116.003503",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "14de54679",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3ESXRQMQ",
+    "text": "<@U3ESXRQMQ|bennyboy2120> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481746432.003504",
+    "id": "14de54680",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U04TK850N> now replace the fragment with custom viewgroup and feel the true power ",
+    "ts": "1481746773.003505",
+    "id": "14de54681",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "?",
+    "ts": "1481747393.003506",
+    "id": "14de54682",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "<@U39P7U6EP> I now have an MVP design with single activity, each pages in my activity is a self contained view that is a custom view group. All networking/location/rest Services are modules that are injected with dagger. All data is read into the view from an offline database and when the network connection is available the database does online network tasks in the background.",
+    "ts": "1481747635.003507",
+    "id": "14de54683",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Also a custom backstack manager for the views",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1481747653.000000"
+    },
+    "ts": "1481747644.003508",
+    "id": "14de54684",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "Beautiful :cat:",
+    "ts": "1481747746.003510",
+    "id": "14de54685",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I'm really happy with this :slightly_smiling_face:",
+    "ts": "1481747757.003511",
+    "id": "14de54686",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Not bad for being an android developer since October",
+    "ts": "1481747778.003512",
+    "id": "14de54687",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": ":smile:",
+    "ts": "1481747786.003513",
+    "id": "14de54688",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "ahhhhh, spent 10 mins trying figure out why my Subscription wasn't working. I forgot to activate it.",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1481749836.000000"
+    },
+    "ts": "1481749829.003514",
+    "id": "14de54689",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "Let me go back on my initial problem",
+    "ts": "1481768149.003516",
+    "id": "14de54690",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "so I have an activity A, which contained a string sent from another Activity (say A1)",
+    "ts": "1481768181.003517",
+    "id": "14de54691",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "Activity A launches activity B (Activity consumes Activity A's string)",
+    "ts": "1481768200.003518",
+    "id": "14de54692",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "when I press up navigation on B",
+    "ts": "1481768207.003519",
+    "id": "14de54693",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "A loses its string",
+    "ts": "1481768213.003520",
+    "id": "14de54694",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "Intent loses its extras",
+    "ts": "1481768237.003521",
+    "id": "14de54695",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I checked if I am using singleTop, I am not, onNewIntent didn't fire anyway",
+    "ts": "1481768258.003522",
+    "id": "14de54696",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "onCreate() bundle is also null",
+    "ts": "1481768270.003523",
+    "id": "14de54697",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "nvm I think I fixed it",
+    "ts": "1481768499.003524",
+    "id": "14de54698",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U379MC1E0> <http://stackoverflow.com/a/30059708/2413303>",
+    "attachments": [
+      {
+        "title": "Android - Navigation Up from Activity to Fragment",
+        "title_link": "http://stackoverflow.com/a/30059708/2413303",
+        "text": "I'm developing some application and I have one problem.I have :1. Activity A (Navigation Drawer pattern) with ListFragment in FrameLayout:xml: &lt;FrameLayout ...&gt; &lt;/",
+        "fallback": "Android - Navigation Up from Activity to Fragment",
+        "thumb_url": "https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded",
+        "from_url": "http://stackoverflow.com/a/30059708/2413303",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "service_icon": "https://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d",
+        "service_name": "stackoverflow.com",
+        "id": 1
+      }
+    ],
+    "ts": "1481769307.003525",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "14de54699",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I just forgot to provide singleTop on my Activity thats why",
+    "ts": "1481769351.003527",
+    "id": "14de54700",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": ":disappointed:",
+    "ts": "1481769352.003528",
+    "id": "14de54701",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "Hi",
+    "ts": "1481771381.003529",
+    "id": "14de54702",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "what is TextUtilsCompat",
+    "ts": "1481771385.003530",
+    "id": "14de54703",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "up to what backward version does it support?",
+    "ts": "1481771396.003531",
+    "id": "14de54704",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "My min SDk is 15",
+    "ts": "1481771403.003532",
+    "id": "14de54705",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "do I have to use this?",
+    "ts": "1481771413.003533",
+    "id": "14de54706",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "<@U379MC1E0> Does your app localized to multiple lang including Arabian? or does your apps use html plainly?",
+    "ts": "1481773289.003534",
+    "id": "14de54707",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "1 Nope, 2 Nope",
+    "ts": "1481773318.003535",
+    "id": "14de54708",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "Then you don't need it",
+    "ts": "1481773329.003536",
+    "id": "14de54709",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "thanks!",
+    "ts": "1481773521.003537",
+    "id": "14de54710",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U09UQHPQV|quock> uploaded a file: <https://androidchat.slack.com/files/quock/F3FP5B4TG/dump_file_shallow.png|dump_file_shallow.png> and commented: Analyzing a dump memory mean hprof file in Android studio Editor.",
+    "file": {
+      "id": "F3FP5B4TG",
+      "created": 1481784038,
+      "timestamp": 1481784038,
+      "name": "dump_file_shallow.png",
+      "title": "dump_file_shallow.png",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U09UQHPQV",
+      "editable": false,
+      "size": 3923,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F3FP5B4TG/dump_file_shallow.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F3FP5B4TG/download/dump_file_shallow.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F3FP5B4TG-97f75dee6f/dump_file_shallow_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F3FP5B4TG-97f75dee6f/dump_file_shallow_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F3FP5B4TG-97f75dee6f/dump_file_shallow_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 360,
+      "thumb_360_h": 30,
+      "thumb_480": "https://files.slack.com/files-tmb/T04PLNDMP-F3FP5B4TG-97f75dee6f/dump_file_shallow_480.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_480_w": 480,
+      "thumb_480_h": 41,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F3FP5B4TG-97f75dee6f/dump_file_shallow_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720": "https://files.slack.com/files-tmb/T04PLNDMP-F3FP5B4TG-97f75dee6f/dump_file_shallow_720.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720_w": 720,
+      "thumb_720_h": 61,
+      "image_exif_rotation": 1,
+      "original_w": 733,
+      "original_h": 62,
+      "permalink": "https://androidchat.slack.com/files/quock/F3FP5B4TG/dump_file_shallow.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F3FP5B4TG-3370afce8f",
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 1,
+      "initial_comment": {
+        "id": "Fc3F5V1H6H",
+        "created": 1481784038,
+        "timestamp": 1481784038,
+        "user": "U09UQHPQV",
+        "is_intro": true,
+        "comment": "Analyzing a dump memory mean hprof file in Android studio Editor.",
+        "channel": ""
+      }
+    },
+    "user": "U09UQHPQV",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U09UQHPQV|quock>",
+    "bot_id": null,
+    "ts": "1481784040.003538",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "14de54711",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09UQHPQV",
+    "text": "But not clear difference between Shallow size and Retained size ?",
+    "ts": "1481784079.003539",
+    "id": "14de54712",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "Weird",
+    "ts": "1481784314.003540",
+    "id": "14de54713",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "my Android build button is greyed out",
+    "ts": "1481784319.003541",
+    "id": "14de54714",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "<@U09UQHPQV> To put it simple, shallow size is the size of that object itself in heap and retained size is the size of heap that will be freed if that object got collected by garbage collector",
+    "edited": {
+      "user": "U0ESBF4AV",
+      "ts": "1481784360.000000"
+    },
+    "ts": "1481784341.003542",
+    "id": "14de54715",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3DKMUK53",
+    "text": "Hello everybody, anyone has an android hdmi tv box “mini-pc” ?",
+    "ts": "1481786441.003544",
+    "id": "14de54716",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I don't have one :confused:",
+    "ts": "1481787199.003545",
+    "id": "14de54717",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09UQHPQV",
+    "text": "<@U0ESBF4AV>  and dominating size is same as retain size right ?",
+    "ts": "1481787447.003546",
+    "id": "14de54718",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09UQHPQV",
+    "text": "<http://stackoverflow.com/a/33399883/1339473>",
+    "attachments": [
+      {
+        "title": "Android Studio heap snapshot analyzer - what does \"Dominating size\" represent?",
+        "title_link": "http://stackoverflow.com/a/33399883/1339473",
+        "text": "After dumping heap in Android Studio and viewing the created snapshot, there's a field called \"dominstaing size\".What does it stand for?",
+        "fallback": "Android Studio heap snapshot analyzer - what does \"Dominating size\" represent?",
+        "thumb_url": "https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded",
+        "from_url": "http://stackoverflow.com/a/33399883/1339473",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "service_icon": "https://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d",
+        "service_name": "stackoverflow.com",
+        "id": 1
+      }
+    ],
+    "ts": "1481787541.003547",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "14de54719",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "I think yes, actually never heard of it before",
+    "ts": "1481787577.003549",
+    "id": "14de54720",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "the common word for it is retained size I think",
+    "ts": "1481787587.003550",
+    "id": "14de54721",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09UQHPQV",
+    "text": "Retained Size : -    Size of memory that all instances of this class is dominating.\nDominating Size: - Size of memory that this instance dominating.",
+    "edited": {
+      "user": "U09UQHPQV",
+      "ts": "1481787987.000000"
+    },
+    "ts": "1481787976.003551",
+    "id": "14de54722",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

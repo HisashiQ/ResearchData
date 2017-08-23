@@ -1,0 +1,168 @@
+[
+  {
+    "user": "U0NQ6CY8G",
+    "text": "Hello all. How can I test (with robolectric) if I have the right number of tabs? I am using an activity with several tab fragments.",
+    "ts": "1458740335.000103",
+    "id": "23te879",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "<@U0NQ6CY8G> maybe you can extract this logic to some place like Presenter / ViewModel so you won't need instantiate activity and rely on Robolectric? ",
+    "ts": "1458740637.000104",
+    "id": "23te880",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0NQ6CY8G",
+    "text": "Thanks <@U091EBYSU>. I don't really get what  you are saying. What I have is an activity with several tabs, I want to test with robolectric, if I have the right number of tabs.",
+    "ts": "1458741026.000105",
+    "id": "23te881",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "<@U0NQ6CY8G> You can test it on level before UI, just assert that right number if tabs is going to the adapter/etx",
+    "ts": "1458742426.000106",
+    "id": "23te882",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "espresso probably has a matcher for that",
+    "ts": "1458743536.000107",
+    "id": "23te883",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0NQ6CY8G",
+    "text": "I have a tabbed activity (tabbed with fragments). How can I test each fragment on this activity?",
+    "ts": "1458745066.000108",
+    "id": "23te884",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0NQ6CY8G",
+    "text": "Thanks <@U091EBYSU> and <@U060Q7J2Y>. In response to my first question (checking if i have the right number of tabs), i did it (in robolectric) by getting the tablayout from my activity, and then calling its getTabCount method. Also, in order to test fragment tabs on my activity, I had to request (with fragment manager) and test it one after the other.",
+    "edited": {
+      "user": "U0NQ6CY8G",
+      "ts": "1458755664.000000"
+    },
+    "ts": "1458755623.000109",
+    "id": "23te885",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "possibly noob question.. since you're using robolectric, aren't you asserting on the mocked version of the framework? wouldn't the test for number of tabs be better done as an end-to-end automated UI test, on an emulator?",
+    "ts": "1458755943.000112",
+    "id": "23te886",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i always heard it was best to avoid testing android views and framework interactions since google does that already.. arguably better done in the end-to-end testing phase",
+    "ts": "1458756111.000113",
+    "id": "23te887",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

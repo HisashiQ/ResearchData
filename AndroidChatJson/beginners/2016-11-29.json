@@ -1,0 +1,693 @@
+[
+  {
+    "user": "U0E72HWTX",
+    "text": "Took a quick peek and in SplashActivity you shouldn't create anonymous Handler like this.",
+    "ts": "1480409033.000651",
+    "id": "29be10470",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "create private final Handler uiHandler = new Handler() field",
+    "ts": "1480409061.000652",
+    "id": "29be10471",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "postDelay to it",
+    "ts": "1480409064.000653",
+    "id": "29be10472",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "and remember to `handler.removeCallbacksAndMessages(null);` in `onDestroy`",
+    "edited": {
+      "user": "U0E72HWTX",
+      "ts": "1480409121.000000"
+    },
+    "ts": "1480409079.000654",
+    "id": "29be10473",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "is this for memory issues ?",
+    "ts": "1480409642.000656",
+    "id": "29be10474",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "<@U0E72HWTX> Thanks for taking a look",
+    "ts": "1480409663.000657",
+    "id": "29be10475",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "<@U0E72HWTX> I would love to get more feedback and improve",
+    "ts": "1480409681.000658",
+    "id": "29be10476",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "Thats because if i kill the activity in this 1500 ms window it will leak",
+    "ts": "1480409700.000659",
+    "id": "29be10477",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "ok :+1:",
+    "ts": "1480409719.000660",
+    "id": "29be10478",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "because as you might now anonymous classes hold reference to outer classes",
+    "ts": "1480409735.000661",
+    "id": "29be10479",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "does passing the context of an activity to presenter and than removing the activity holds the reference to whole activity ? is that also a memory issue ?",
+    "ts": "1480409785.000662",
+    "id": "29be10480",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "check out LeakCanary library that will look for memory leaks in your app.",
+    "ts": "1480409800.000663",
+    "id": "29be10481",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "its good to have it early when the project is still small",
+    "ts": "1480409825.000664",
+    "id": "29be10482",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "bBasically whenever you start passing context around you need to be careful",
+    "ts": "1480409881.000665",
+    "id": "29be10483",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "use ApplicationContext where possible",
+    "ts": "1480409892.000666",
+    "id": "29be10484",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "in MVP case you should bind unbind your View (activity) dynamically",
+    "ts": "1480409977.000667",
+    "id": "29be10485",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "Probably create presenter in `onCreate()`",
+    "ts": "1480410021.000668",
+    "id": "29be10486",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "presenter.bind(view) in onResume and presenter.unbind() in onPause",
+    "ts": "1480410055.000669",
+    "id": "29be10487",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "where unbind is basically view=null in presenter",
+    "ts": "1480410076.000670",
+    "id": "29be10488",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "ok",
+    "ts": "1480410092.000671",
+    "id": "29be10489",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "Yeah I have used LeakCanary for couple of projects in past",
+    "ts": "1480410115.000672",
+    "id": "29be10490",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "but those projects deal with bitmaps and heavy media manipulation",
+    "ts": "1480410140.000673",
+    "id": "29be10491",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U386Z6N85",
+    "text": "<@U386Z6N85|thanhmssl10> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1480410684.000674",
+    "id": "29be10492",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37DZP5S5",
+    "text": "<@U37DZP5S5|roubben> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1480410850.000675",
+    "id": "29be10493",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U38R2HKHC",
+    "text": "<@U38R2HKHC|namharr> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1480415335.000676",
+    "id": "29be10494",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37DVBNHE",
+    "text": "<@U37DVBNHE|anuj-786> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1480415517.000677",
+    "id": "29be10495",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U38RP8HGF",
+    "text": "<@U38RP8HGF|klijakub> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1480416991.000678",
+    "id": "29be10496",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U0LFEJ1ST> Your implementation isn’t following the MVP pattern right now",
+    "ts": "1480421899.000679",
+    "id": "29be10497",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Your activities hold all of the business logic",
+    "ts": "1480421918.000680",
+    "id": "29be10498",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "You should review the problem that MVP is trying to solve and how it’s attempting to solve it",
+    "ts": "1480421956.000681",
+    "id": "29be10499",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3727CXMF",
+    "text": "<@U3727CXMF|pkazmierczak> has left the channel",
+    "subtype": "channel_leave",
+    "ts": "1480423846.000682",
+    "reactions": [
+      {
+        "name": "kissing",
+        "users": [
+          "U379MC1E0"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "29be10500",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U389F8GSY",
+    "text": "<@U389F8GSY|surendran> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1480426419.000683",
+    "id": "29be10501",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U38AS2HFE",
+    "text": "<@U38AS2HFE|sak1b> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1480432150.000684",
+    "id": "29be10502",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U389MTR26",
+    "text": "<@U389MTR26|vinicius> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1480436083.000685",
+    "id": "29be10503",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U392Z0YUF",
+    "text": "<@U392Z0YUF|timothyslai> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1480445126.000686",
+    "id": "29be10504",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U38GLJMA7",
+    "text": "<@U38GLJMA7|charlenopires> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1480480690.000687",
+    "id": "29be10505",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U38K3577C",
+    "text": "<@U38K3577C|quoctran> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1480486231.000688",
+    "id": "29be10506",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

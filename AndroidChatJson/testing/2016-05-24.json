@@ -1,0 +1,285 @@
+[
+  {
+    "user": "U0KTPB91V",
+    "text": "hi, how can I unit test a `TextWatcher`?, probably with robolectric?",
+    "ts": "1464103589.000265",
+    "id": "24te1312",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KTPB91V",
+    "text": "dunno how to star triggering those text watcher callback methods, :confused:",
+    "ts": "1464103626.000266",
+    "id": "24te1313",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "why don't you just espresso test it? what do you want to test exactly on it?",
+    "ts": "1464103651.000267",
+    "id": "24te1314",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "yeah why do you need to test it",
+    "ts": "1464104000.000268",
+    "id": "24te1315",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "could just delegate to a pojo you can unit test",
+    "ts": "1464104035.000269",
+    "id": "24te1316",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KTPB91V",
+    "text": "well, I made a custom text watcher, so, it does something inside `afterTextChanged`, probably a espresso test makes more sense",
+    "ts": "1464104204.000270",
+    "id": "24te1317",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "possibly, depends on what it does",
+    "ts": "1464104358.000271",
+    "id": "24te1318",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I had a textwatcher for an input field, that just sent the string to a validator I made &amp; I unit tested the validator alone, much easier",
+    "ts": "1464104444.000272",
+    "id": "24te1319",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "<@U0KTPB91V>: just instantiate an object and ivoke methods?",
+    "ts": "1464105446.000273",
+    "id": "24te1320",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KTPB91V",
+    "text": "yep, <@U091EBYSU> I did that",
+    "ts": "1464105476.000274",
+    "id": "24te1321",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KTPB91V",
+    "text": "```\n@Test public void testAppendSeparatorFirstTwoCharsDateOfBirthCase() throws Exception {\n    final Editable inputText = new Editable.Factory().newEditable(\"12\");\n    final CardUserDateOfBirthValidator cardUserDateOfBirthValidator =\n        mock(CardUserDateOfBirthValidator.class);\n    final DateFormatterTextWatcher subject =\n        new DateFormatterTextWatcher(editText, cardUserDateOfBirthValidator);\n    subject.afterTextChanged(inputText);\n\n    assertThat(inputText, is(\"12/\"));\n  }\n```",
+    "ts": "1464105495.000275",
+    "id": "24te1322",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KTPB91V",
+    "text": "¯\\_(ツ)_/¯",
+    "ts": "1464105508.000276",
+    "id": "24te1323",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "you can mock `Editable` if you need btw",
+    "ts": "1464105545.000277",
+    "id": "24te1324",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0MJLRK96",
+    "text": "Guys, someone have tried <http://www.adapteva.com/parallella/> this running jenkins for parallel builds? makes sense?",
+    "attachments": [
+      {
+        "service_name": "Adapteva",
+        "title": "The Parallella Computer",
+        "title_link": "http://www.adapteva.com/parallella/",
+        "text": "The Parallella platform is an open source, energy efficient, high performance, credit-card sized computer based on the Epiphany multicore chips developed by Adapteva. This affordable platform is de…",
+        "fallback": "Adapteva: The Parallella Computer",
+        "thumb_url": "http://www.adapteva.com/wp-content/uploads/parallella_board1_400x221.gif",
+        "ts": 1378402066,
+        "from_url": "http://www.adapteva.com/parallella/",
+        "thumb_width": 400,
+        "thumb_height": 221,
+        "id": 1
+      }
+    ],
+    "ts": "1464108054.000278",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "24te1325",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

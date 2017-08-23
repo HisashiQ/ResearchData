@@ -1,0 +1,2743 @@
+[
+  {
+    "user": "U0Z248CVB",
+    "text": "Hello, guys. I have a google map with custom info window. Also I added some logic for centering the info window when the marker/pin is clicked. But because of that the buttons for direction and gps are not visible. Although I set explicitly mMap.getUiSettings().setMapToolbarEnabled(true); it’s not working. Here is my code:\n```mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {\n\n            @Override\n            public boolean onMarkerClick(final Marker marker) {\n\n                // Description: Get device height\n                // ------------------------------------------------------------------------------------\n\n                WindowManager wm = (WindowManager) view.getContext().getSystemService(Context.WINDOW_SERVICE);\n                Display display = wm.getDefaultDisplay();\n                Point size = new Point();\n                display.getSize(size);\n                int height = size.y;\n\n                // Description: Move the camera up so title of info window is visible\n                // ------------------------------------------------------------------------------------\n\n                LatLng markerLocation = marker.getPosition();\n                Point mappoint = mMap.getProjection().toScreenLocation(new LatLng(markerLocation.latitude, markerLocation.longitude));\n                mappoint.set(mappoint.x, mappoint.y - (height / 3));\n\n                CameraUpdate cu = CameraUpdateFactory.newLatLng(mMap.getProjection().fromScreenLocation(mappoint));\n\n                mMap.getUiSettings().setMapToolbarEnabled(true);\n\n                mMap.animateCamera(cu, new GoogleMap.CancelableCallback() {\n\n                    @Override\n                    public void onFinish() {\n                        if (marker != null) {\n                            \n                            marker.showInfoWindow();\n                            \n                            mMap.getUiSettings().setMapToolbarEnabled(true);\n                        }\n                    }\n\n                    @Override\n                    public void onCancel() {\n                    }\n                });\n\n                return true;\n            }\n        });```",
+    "ts": "1470208063.001531",
+    "id": "03de41403",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HQS89D3",
+    "text": "<@U1L1P3M16>: JobScheduler was introduced in v21",
+    "ts": "1470209188.001532",
+    "id": "03de41404",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HQS89D3",
+    "text": "Use FirebaseJobDispatcher",
+    "ts": "1470209196.001533",
+    "id": "03de41405",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TJ9D30B",
+    "text": "Hi everyone, I’m using hamburger menu in my app, for this I use a DrawerLayout with a navigationview all work fine. My problem is that. Since my menu has many items it’s scrollable, I believe it uses a recyclerview and my problem is I don’t want it to recycle (in particular I don’t want to recycle the header since it’s causes a lag (big drawable))",
+    "ts": "1470211444.001534",
+    "id": "03de41406",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "i don't think it recycles the header",
+    "ts": "1470211523.001535",
+    "id": "03de41407",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "you are using a `headerLayout` right?",
+    "ts": "1470211568.001536",
+    "id": "03de41408",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Z248CVB",
+    "text": "someone knowing how I can override setOnMarkerClickListener and at the same time showing the ui buttons for “Navigation” and “GPS” when clicking on a marker. Because that’s seem to be the reason why they are hidden.",
+    "ts": "1470212333.001537",
+    "id": "03de41409",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11P75HMW",
+    "text": "Any help on this <http://stackoverflow.com/questions/38738440/where-exactly-android-wear-app-permission-request-to-be-placed>",
+    "attachments": [
+      {
+        "title": "Where exactly Android Wear app Permission request to be placed",
+        "title_link": "http://stackoverflow.com/questions/38738440/where-exactly-android-wear-app-permission-request-to-be-placed",
+        "text": "I want to request the permissions that I need for my android wear app upfront as per this. So Programmatically where exactly I should put my permission request code. Also is the protocol to ask for",
+        "fallback": "Where exactly Android Wear app Permission request to be placed",
+        "thumb_url": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/questions/38738440/where-exactly-android-wear-app-permission-request-to-be-placed",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "service_icon": "http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d",
+        "service_name": "stackoverflow.com",
+        "id": 1
+      }
+    ],
+    "ts": "1470213379.001538",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "03de41410",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1XP759FC",
+    "text": "<@U1XP759FC|akesik> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1470215523.001540",
+    "id": "03de41411",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I might need to speak to someone from the toolkit team",
+    "ts": "1470217763.001541",
+    "id": "03de41412",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1F1JCBBM",
+    "text": "Hello guys who can help me with Gradle?",
+    "ts": "1470220804.001542",
+    "id": "03de41413",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TJ9D30B",
+    "text": "<@U054A24ET>: Hi, I didn’t see you’ve answered, thank you for your reply. Yes I’m using a headerLayout",
+    "ts": "1470220830.001543",
+    "id": "03de41414",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U1F1JCBBM>: what do you need?",
+    "ts": "1470220845.001544",
+    "id": "03de41415",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U1F1JCBBM|lion4ik> uploaded a file: <https://androidchat.slack.com/files/lion4ik/F1XPLAY07/-.java|Untitled>",
+    "file": {
+      "id": "F1XPLAY07",
+      "created": 1470220933,
+      "timestamp": 1470220933,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U1F1JCBBM",
+      "editable": true,
+      "size": 462,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F1XPLAY07/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F1XPLAY07/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/lion4ik/F1XPLAY07/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F1XPLAY07-835b3558de",
+      "edit_link": "https://androidchat.slack.com/files/lion4ik/F1XPLAY07/-.java/edit",
+      "preview": "tried this at the root of project \r\n\r\next{\r\n        supportLibVersion = '23.4.0'\r\n        minVersion = 14\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-variable\">tried</span> <span class=\"cm-keyword\">this</span> <span class=\"cm-variable\">at</span> <span class=\"cm-variable\">the</span> <span class=\"cm-variable\">root</span> <span class=\"cm-variable\">of</span> <span class=\"cm-variable\">project</span> </pre></div>\n<div><pre>&#8203;</pre></div>\n<div><pre><span class=\"cm-variable\">ext</span>{</pre></div>\n<div><pre>        <span class=\"cm-variable\">supportLibVersion</span> <span class=\"cm-operator\">=</span> <span class=\"cm-string\">'23.4.0'</span></pre></div>\n<div><pre>        <span class=\"cm-variable\">minVersion</span> <span class=\"cm-operator\">=</span> <span class=\"cm-number\">14</span></pre></div>\n</div>\n</div>\n",
+      "lines": 15,
+      "lines_more": 10,
+      "preview_is_truncated": null,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U1F1JCBBM",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U1F1JCBBM|lion4ik>",
+    "bot_id": null,
+    "ts": "1470220933.001545",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "03de41416",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1F1JCBBM",
+    "text": "it said me something shit like this:  Error:(26, 0) Cannot get property 'supportLibVersion' on extra properties extension as it does not exist",
+    "ts": "1470220955.001546",
+    "id": "03de41417",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1F1JCBBM",
+    "text": "what the fuck is it ?(",
+    "ts": "1470220966.001547",
+    "id": "03de41418",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1F1JCBBM",
+    "text": "I've declared ext and want to use, but not work.",
+    "ts": "1470220990.001548",
+    "id": "03de41419",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U1F1JCBBM>: if I'm not mistaken it should be under allprojects",
+    "ts": "1470221051.001549",
+    "id": "03de41420",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "so something like this on your root build.gradle",
+    "ts": "1470221060.001550",
+    "id": "03de41421",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1F1JCBBM",
+    "text": "hm",
+    "ts": "1470221068.001551",
+    "id": "03de41422",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1F1JCBBM",
+    "text": "it is in buildscript",
+    "ts": "1470221081.001552",
+    "id": "03de41423",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "```\nallprojects {\n    ext {\n        supportLibVersion = '23.4.0'\n        minVersion = 14\n        targetVersion = 23\n        buildToolsVersion = '23.0.3'\n    }\n\n    repositories {\n        jcenter() \n    }\n```",
+    "ts": "1470221092.001553",
+    "id": "03de41424",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1F1JCBBM",
+    "text": "trie to move",
+    "ts": "1470221109.001554",
+    "id": "03de41425",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "no put it after buildscript",
+    "ts": "1470221111.001555",
+    "id": "03de41426",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "out of it i mean",
+    "ts": "1470221115.001556",
+    "id": "03de41427",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1F1JCBBM",
+    "text": "doens't work",
+    "ts": "1470221116.001557",
+    "id": "03de41428",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "post your whole build.gradle",
+    "ts": "1470221130.001558",
+    "id": "03de41429",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1F1JCBBM",
+    "text": "hate gradle(",
+    "ts": "1470221130.001559",
+    "id": "03de41430",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "the root",
+    "ts": "1470221133.001560",
+    "id": "03de41431",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U1F1JCBBM|lion4ik> uploaded a file: <https://androidchat.slack.com/files/lion4ik/F1XMZ7P99/-.java|Untitled>",
+    "file": {
+      "id": "F1XMZ7P99",
+      "created": 1470221150,
+      "timestamp": 1470221150,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U1F1JCBBM",
+      "editable": true,
+      "size": 719,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F1XMZ7P99/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F1XMZ7P99/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/lion4ik/F1XMZ7P99/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F1XMZ7P99-a3103c4009",
+      "edit_link": "https://androidchat.slack.com/files/lion4ik/F1XMZ7P99/-.java/edit",
+      "preview": "// Top-level build file where you can add configuration options common to all sub-projects/modules.\r\n\r\nbuildscript {\r\n    repositories {\r\n        jcenter()\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-comment\">// Top-level build file where you can add configuration options common to all sub-projects/modules.</span></pre></div>\n<div><pre>&#8203;</pre></div>\n<div><pre><span class=\"cm-variable\">buildscript</span> {</pre></div>\n<div><pre>    <span class=\"cm-variable\">repositories</span> {</pre></div>\n<div><pre>        <span class=\"cm-variable\">jcenter</span>()</pre></div>\n</div>\n</div>\n",
+      "lines": 30,
+      "lines_more": 25,
+      "preview_is_truncated": null,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U1F1JCBBM",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U1F1JCBBM|lion4ik>",
+    "bot_id": null,
+    "ts": "1470221150.001561",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "03de41432",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1F1JCBBM",
+    "text": "the same error",
+    "ts": "1470221178.001562",
+    "id": "03de41433",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1F1JCBBM",
+    "text": "gradle doesn't understand me :disappointed:",
+    "edited": {
+      "user": "U1F1JCBBM",
+      "ts": "1470221213.000000"
+    },
+    "ts": "1470221203.001563",
+    "id": "03de41434",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "in your subproject build.gradle delete the other `ext.supportLibVersion` and do `println ext.supportLibVersion`",
+    "ts": "1470221295.001565",
+    "id": "03de41435",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1F1JCBBM",
+    "text": "hm",
+    "ts": "1470221311.001566",
+    "id": "03de41436",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1F1JCBBM",
+    "text": "<@U09T8SFG8>: does not compile",
+    "ts": "1470221475.001567",
+    "id": "03de41437",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "same error",
+    "ts": "1470221486.001568",
+    "id": "03de41438",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "?&gt;",
+    "ts": "1470221487.001569",
+    "id": "03de41439",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1F1JCBBM",
+    "text": "yes",
+    "ts": "1470221497.001570",
+    "id": "03de41440",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1F1JCBBM",
+    "text": "it does not compile since i write ext.supportLibVersion`",
+    "ts": "1470221531.001571",
+    "id": "03de41441",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "what if you delete the line I posted, does it compile <@U1F1JCBBM>",
+    "ts": "1470221601.001572",
+    "id": "03de41442",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1F1JCBBM",
+    "text": "if delete println ext.supportLibVersion`\n\nit works",
+    "ts": "1470221695.001573",
+    "id": "03de41443",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U1F1JCBBM>: post your settings.gradle",
+    "ts": "1470221865.001574",
+    "id": "03de41444",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1F1JCBBM",
+    "text": "<@U09T8SFG8>: now It works",
+    "ts": "1470221978.001575",
+    "id": "03de41445",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1F1JCBBM",
+    "text": "project.supportLibVersion",
+    "ts": "1470221979.001576",
+    "id": "03de41446",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1F1JCBBM",
+    "text": "just need to use like that",
+    "ts": "1470221985.001577",
+    "id": "03de41447",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "alright that's good",
+    "ts": "1470221999.001578",
+    "id": "03de41448",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1F1JCBBM",
+    "text": "<http://stackoverflow.com/questions/25600621/android-gradle-build-how-to-set-global-variables>",
+    "attachments": [
+      {
+        "title": "Android gradle build: how to set global variables",
+        "title_link": "http://stackoverflow.com/questions/25600621/android-gradle-build-how-to-set-global-variables",
+        "text": "How can I set a global variable that can be accessed from build.gradle and tasks?",
+        "fallback": "Android gradle build: how to set global variables",
+        "thumb_url": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/questions/25600621/android-gradle-build-how-to-set-global-variables",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "service_icon": "http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d",
+        "service_name": "stackoverflow.com",
+        "id": 1
+      }
+    ],
+    "ts": "1470222030.001579",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "03de41449",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1F1JCBBM",
+    "text": "stack helps me",
+    "ts": "1470222034.001581",
+    "id": "03de41450",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1F1JCBBM",
+    "text": "<@U09T8SFG8>: Any way I still dislike gradle :grimacing:",
+    "ts": "1470222058.001582",
+    "id": "03de41451",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1F1JCBBM",
+    "text": ":smile:",
+    "ts": "1470222064.001583",
+    "id": "03de41452",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "everyone does....at least it's better than maven",
+    "ts": "1470222107.001584",
+    "id": "03de41453",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "maven might be fast but the moment you have to make a script you are fucked",
+    "ts": "1470222122.001585",
+    "id": "03de41454",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "haha yeah",
+    "ts": "1470222333.001586",
+    "id": "03de41455",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "maven is just copy/paste whereas gradle is something that might actually make sense some day",
+    "ts": "1470222347.001587",
+    "id": "03de41456",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Gradle is pretty Groovy",
+    "ts": "1470222565.001592",
+    "id": "03de41457",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "if you write plugins in Kotlin, it’s also fun",
+    "ts": "1470222607.001593",
+    "id": "03de41458",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I’m so proud of myself now",
+    "ts": "1470222628.001594",
+    "id": "03de41459",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TAPEH0E",
+    "text": "Hello everyone!\n\nPlease suggest some good chat head (like FB Messenger's) library. Or should I implement the functionality on my own? Anybody has any advice to offer here?",
+    "ts": "1470224505.001595",
+    "id": "03de41460",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "please don’t cross-post between channels <@U1TAPEH0E>",
+    "ts": "1470224623.001596",
+    "id": "03de41461",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I see you posted in <#C054ZUY2W> as well",
+    "ts": "1470224634.001597",
+    "id": "03de41462",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U053PPGDC>: :taco:",
+    "ts": "1470224659.001598",
+    "id": "03de41463",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U1TAPEH0E>: I removed the other post. Please keep posts to the most appropriate channel (we're quite loose). You'll most probably get an answer if you wait a while.",
+    "ts": "1470224733.001599",
+    "id": "03de41464",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TAPEH0E",
+    "text": "<@U053PPGDC>: <@U061HDV96>: Sorry for that.",
+    "ts": "1470224834.001600",
+    "id": "03de41465",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Don't worry about it.",
+    "ts": "1470224850.001601",
+    "id": "03de41466",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "<@U053PPGDC>: you write Gradle in kotlin?",
+    "ts": "1470228034.001602",
+    "id": "03de41467",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I was thinking about trying it out",
+    "ts": "1470228047.001603",
+    "id": "03de41468",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "no I don't",
+    "ts": "1470228051.001604",
+    "id": "03de41469",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "it was just announced that you could",
+    "ts": "1470228062.001605",
+    "id": "03de41470",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "and that only applies to plugins, not .gradle files afaik",
+    "ts": "1470228071.001606",
+    "id": "03de41471",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I just wanted to mention fun and kotlin in the same sentence.",
+    "ts": "1470228098.001607",
+    "id": "03de41472",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "and laugh at my own joke",
+    "ts": "1470228104.001608",
+    "id": "03de41473",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "oh lol :smile:",
+    "ts": "1470228107.001609",
+    "id": "03de41474",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": ":joy:",
+    "ts": "1470228110.001610",
+    "id": "03de41475",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K7B1C4R",
+    "text": "Hi guys. Does anyone know how to set background color to notification’s small icon?",
+    "ts": "1470234186.001611",
+    "id": "03de41476",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "<@U1TJ9D30B> i imagine the lag should be caused by the way you're loading the drawable into the header layout. i never had an issue with lag in the navigation drawer with glide loading the image",
+    "ts": "1470235520.001612",
+    "id": "03de41477",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XNRE25S",
+    "text": "is there a way to detect if a device supports flag emojis over country codes?",
+    "ts": "1470236943.001613",
+    "id": "03de41478",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "well this explains a lot <https://code.google.com/p/android/issues/detail?id=82185>",
+    "ts": "1470237570.001614",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "03de41479",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1XRYQA3W",
+    "text": "<@U1XRYQA3W|nadjib> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1470237589.001615",
+    "id": "03de41480",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1XSMBRM5",
+    "text": "<@U1XSMBRM5|yurigabrich> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1470239144.001616",
+    "id": "03de41481",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1L1P3M16",
+    "text": "<@U1HQS89D3>: any example for FirebaseJobDispatcher?",
+    "ts": "1470240944.001617",
+    "id": "03de41482",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TKETBU3",
+    "text": "Hi guys, i'm trying to develop an android app that needs to be sync with another app installed in a pc; in your experience, what connection method do you think is better taking into account that the synchronization needs to be as fast as possible, at any time, bidirectional for both (android and the pc apps):\n 1- Connection through a web service\n 2- Wifi P2P\n 3- other method\nThanks for your answers",
+    "ts": "1470241900.001618",
+    "id": "03de41483",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1XTP7L1M",
+    "text": "<@U1XTP7L1M|tahab621> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1470244040.001619",
+    "id": "03de41484",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "gcm and a remote server",
+    "ts": "1470244514.001620",
+    "id": "03de41485",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "firebase is a good example of an all in one",
+    "ts": "1470244534.001621",
+    "id": "03de41486",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U1TKETBU3>: you could make the pc app the server and make the mobile app broadcast a discover message to discover the IP of the PC and start a connection.",
+    "ts": "1470245150.001622",
+    "id": "03de41487",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "But what sync do you mean btw? It really depends on what type of sync you need",
+    "ts": "1470245180.001623",
+    "id": "03de41488",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "^ true but he said account information which really isn’t very much data usually",
+    "ts": "1470245358.001624",
+    "id": "03de41489",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "don’t do wifi p2p, it is basically useless on android which is why no one uses it",
+    "ts": "1470245375.001625",
+    "id": "03de41490",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TKETBU3",
+    "text": "<@U061HDV96>: from the android app, i need to sync sensors data, and from the pc execute actions according to user input and receive and analyze the sensor data and return other values",
+    "ts": "1470245394.001626",
+    "id": "03de41491",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I guess starting an active connection will be fine for that and send json or something across it.",
+    "ts": "1470245473.001627",
+    "id": "03de41492",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "But I'm not sure about firewall problems.",
+    "ts": "1470245488.001628",
+    "id": "03de41493",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "You'll have to do some googling.",
+    "ts": "1470245495.001629",
+    "id": "03de41494",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TKETBU3",
+    "text": "yes, i think the firewall should be disabled",
+    "ts": "1470245527.001630",
+    "id": "03de41495",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "or just set a rule instead of turning off the entire firewall",
+    "ts": "1470245545.001631",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U1TKETBU3"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "03de41496",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "^ Or you could send discover messages from your PC which will establish a connection after. Outgoing and established connection will go through.",
+    "ts": "1470245584.001632",
+    "id": "03de41497",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "hate to clarify that but ive seen to many guides that are 1) turn off the firewall.",
+    "ts": "1470245595.001633",
+    "id": "03de41498",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I'm sure the firewall stuff on mobile phones is easier",
+    "ts": "1470245601.001634",
+    "id": "03de41499",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "making connections on a lan usually are not blocked by firewalls",
+    "ts": "1470245615.001635",
+    "id": "03de41500",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "if both devices are outgoing it should work fine in most cases",
+    "ts": "1470245631.001636",
+    "id": "03de41501",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "How does the Chromecast do it?",
+    "ts": "1470245632.001637",
+    "id": "03de41502",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "You could look at libraries for casting how they discover and make a connection",
+    "ts": "1470245673.001638",
+    "id": "03de41503",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<@U061HDV96>: <https://support.google.com/accounts/answer/6260286?hl=en>",
+    "attachments": [
+      {
+        "title": "Use Nearby to interact with what’s around you - Accounts Help",
+        "title_link": "https://support.google.com/accounts/answer/6260286?hl=en",
+        "text": "Nearby helps you find and interact with services and devices close to you (within about 30 m or 100 ft). Nearby discoveries On your phone, you can do things like pay for parking in a garage, o",
+        "fallback": "Use Nearby to interact with what’s around you - Accounts Help",
+        "from_url": "https://support.google.com/accounts/answer/6260286?hl=en",
+        "service_icon": "https://support.google.com/favicon.ico",
+        "service_name": "support.google.com",
+        "id": 1
+      }
+    ],
+    "ts": "1470245702.001639",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "+1",
+        "users": [
+          "U1TKETBU3"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "03de41504",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Oh yea I forgot about that",
+    "ts": "1470245720.001641",
+    "id": "03de41505",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "same way your printer works, it broadcasts messages that can be searched for on a network",
+    "ts": "1470245720.001642",
+    "id": "03de41506",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I was gonna implement that to interact between an iPad app and iPhone/Android app",
+    "ts": "1470245741.001643",
+    "id": "03de41507",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TKETBU3",
+    "text": "i'm going to research around those options, thanks guys",
+    "ts": "1470245856.001644",
+    "id": "03de41508",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "you can look at this to get an idea of how most devices perform discovery on local networks <https://en.wikipedia.org/wiki/Bonjour_(software)>",
+    "ts": "1470246005.001645",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "+1",
+        "users": [
+          "U1TKETBU3"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "03de41509",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "zero-conf is the other name (but not quite the same thing)",
+    "edited": {
+      "user": "U055GGAHS",
+      "ts": "1470246018.000000"
+    },
+    "ts": "1470246010.001646",
+    "id": "03de41510",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I like bonjour as you can get chrome plugins to discover advertised services on your network. When I was working on making phones talk to each other directly, I used bonjour and some quick java code to test connectivity between a laptop and phone before trying phone to phone",
+    "ts": "1470246088.001648",
+    "id": "03de41511",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "aka, should be easy to accomplish because im an idiot and I figured it out :wink:",
+    "ts": "1470246099.001649",
+    "id": "03de41512",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TKETBU3",
+    "text": "jajajaja thanks",
+    "ts": "1470247001.001650",
+    "id": "03de41513",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "<https://sites.google.com/a/android.com/tools/recent/constraintlayout-alpha5available|ConstraintLayout - alpha 5 available>\nWe've just released ConstraintLayout alpha 5, available in the SDK Manager (under the \"Support Repository\" section)This builds primarily fixes various issues, and we highly encourage you to switch from alpha 4!forward references were brokencorrect handling of \"any size\" on layoutlayout issues on pre-ICS systemsWe also introduce a new notation for referencing a constraint to the parent -- instead of having to specify an...",
+    "username": "Posts of Recent Changes",
+    "icons": {
+      "image_36": "https://a.slack-edge.com/66f9/img/services/rss_36.png",
+      "image_48": "https://a.slack-edge.com/66f9/img/services/rss_48.png",
+      "image_72": "https://a.slack-edge.com/205a/img/services/rss_72.png"
+    },
+    "bot_id": "B062SSUPJ",
+    "attachments": [
+      {
+        "title": "ConstraintLayout - alpha 5 available - Android Studio Project Site",
+        "title_link": "https://sites.google.com/a/android.com/tools/recent/constraintlayout-alpha5available",
+        "text": "Android tools project information site",
+        "fallback": "ConstraintLayout - alpha 5 available - Android Studio Project Site",
+        "from_url": "https://sites.google.com/a/android.com/tools/recent/constraintlayout-alpha5available",
+        "thumb_url": "https://sites.google.com/a/android.com/tools/_/rsrc/1460493325829/config/customLogo.gif?revision=1",
+        "thumb_width": 100,
+        "thumb_height": 100,
+        "service_icon": "https://ssl.gstatic.com/sites/p/75dc7c/system/app/images/apple-touch-icon.png",
+        "service_name": "sites.google.com",
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1470248774.001651",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "03de41514",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U1TKETBU3>: I can confirm that <@U055GGAHS> is an idiot",
+    "ts": "1470249484.001653",
+    "id": "03de41515",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": ":heart:",
+    "ts": "1470249491.001654",
+    "reactions": [
+      {
+        "name": "joy",
+        "users": [
+          "U1TKETBU3"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "03de41516",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": ":thumbsup:",
+    "ts": "1470249495.001655",
+    "id": "03de41517",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U055GGAHS>: :taco:",
+    "ts": "1470249505.001656",
+    "id": "03de41518",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U04VA47NB|ariana> uploaded a file: <https://androidchat.slack.com/files/ariana/F1Y1AVCUQ/screen_shot_2016-08-03_at_2.43.31_pm.png|I keep hearing Gollum’s voice> and commented: “We hates hobbitses\"",
+    "file": {
+      "id": "F1Y1AVCUQ",
+      "created": 1470260856,
+      "timestamp": 1470260856,
+      "name": "Screen Shot 2016-08-03 at 2.43.31 PM.png",
+      "title": "I keep hearing Gollum’s voice",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U04VA47NB",
+      "editable": false,
+      "size": 17219,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F1Y1AVCUQ/screen_shot_2016-08-03_at_2.43.31_pm.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F1Y1AVCUQ/download/screen_shot_2016-08-03_at_2.43.31_pm.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F1Y1AVCUQ-18cac0ee56/screen_shot_2016-08-03_at_2.43.31_pm_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F1Y1AVCUQ-18cac0ee56/screen_shot_2016-08-03_at_2.43.31_pm_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F1Y1AVCUQ-18cac0ee56/screen_shot_2016-08-03_at_2.43.31_pm_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 303,
+      "thumb_360_h": 154,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F1Y1AVCUQ-18cac0ee56/screen_shot_2016-08-03_at_2.43.31_pm_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "image_exif_rotation": 1,
+      "original_w": 303,
+      "original_h": 154,
+      "permalink": "https://androidchat.slack.com/files/ariana/F1Y1AVCUQ/screen_shot_2016-08-03_at_2.43.31_pm.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F1Y1AVCUQ-09c6e996a1",
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 1,
+      "initial_comment": {
+        "id": "Fc1XVADUCB",
+        "created": 1470260856,
+        "timestamp": 1470260856,
+        "user": "U04VA47NB",
+        "is_intro": true,
+        "comment": "“We hates hobbitses\"",
+        "channel": ""
+      }
+    },
+    "user": "U04VA47NB",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U04VA47NB|ariana>",
+    "bot_id": null,
+    "ts": "1470260857.001657",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "03de41519",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DTEGLJF",
+    "text": "dear lawd! make the voice stop!",
+    "edited": {
+      "user": "U0DTEGLJF",
+      "ts": "1470261251.000000"
+    },
+    "ts": "1470261244.001658",
+    "id": "03de41520",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": ":joy:",
+    "ts": "1470261365.001660",
+    "id": "03de41521",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U04VA47NB>: :taco:",
+    "ts": "1470262101.001661",
+    "id": "03de41522",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Now I'm actually curious to who gave the most tacos",
+    "ts": "1470262124.001662",
+    "id": "03de41523",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Like who's tacos are worth the least :stuck_out_tongue:",
+    "ts": "1470262139.001663",
+    "id": "03de41524",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LQTK6G2",
+    "text": "I'm Taco. I'm here to help you recognize your teammates when they do or say awesome things. Learn how I work by typing: *@heytaco learn more*",
+    "ts": "1470262143.001664",
+    "id": "03de41525",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1Y30UT1A",
+    "text": "<@U1Y30UT1A|android_geek-7> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1470277268.001665",
+    "id": "03de41526",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1Y3ZNW4S",
+    "text": "<@U1Y3ZNW4S|daxiong> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1470282200.001666",
+    "id": "03de41527",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "Does retrofit remove the trailing slash from a relative url for an endpoint?",
+    "ts": "1470285140.001667",
+    "id": "03de41528",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HQS89D3",
+    "text": "<@U1L1P3M16>: There are plenty of examples. Here’s one: <https://github.com/firebase/firebase-jobdispatcher-android>\n\n<http://giyf.com|giyf.com> :wink:",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "firebase/firebase-jobdispatcher-android",
+        "title_link": "https://github.com/firebase/firebase-jobdispatcher-android",
+        "text": "Contribute to firebase-jobdispatcher-android development by creating an account on GitHub.",
+        "fallback": "GitHub: firebase/firebase-jobdispatcher-android",
+        "thumb_url": "https://avatars2.githubusercontent.com/u/1335026?v=3&s=400",
+        "from_url": "https://github.com/firebase/firebase-jobdispatcher-android",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1470293505.001668",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U1L1P3M16"
+        ],
+        "count": 2
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "03de41529",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1L1P3M16",
+    "text": "<@U1HQS89D3>: Yeah started working :slightly_smiling_face: thanks",
+    "ts": "1470293532.001670",
+    "id": "03de41530",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

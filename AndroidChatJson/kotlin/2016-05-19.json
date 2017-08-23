@@ -1,0 +1,75 @@
+[
+  {
+    "user": "U08MQ0F8V",
+    "text": "<@U0546QERR>: I could have done it that way, but that would create a new `TextWatcher` for each stream. :wink:",
+    "ts": "1463671783.000097",
+    "id": "19ko1502",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08MQ0F8V",
+    "text": "More like this:",
+    "ts": "1463671791.000098",
+    "id": "19ko1503",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08MQ0F8V",
+    "text": "```fun TextView.textEvents(): Observable&lt;TextEvent&gt; {\n    return Observable.create {\n        if (!it.isUnsubscribed) {\n            val watcher = object : TextWatcher {\n                override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {\n                    it.onNext(TextChangedEvent(s, start, before, count))\n                }\n\n                override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {\n                    it.onNext(BeforeTextChangedEvent(s, start, count, after))\n                }\n\n                override fun afterTextChanged(s: Editable?) {\n                    it.onNext(AfterTextChangedEvent(s))\n                }\n            }\n            val removeListener = { removeTextChangedListener(watcher) }\n            it.add(object : MainThreadSubscription() {\n                override fun onUnsubscribe() {\n                    removeListener()\n                }\n            })\n        }\n    }\n}```",
+    "ts": "1463671828.000101",
+    "id": "19ko1504",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETAQDMF",
+    "subtype": "channel_join",
+    "text": "<@U0ETAQDMF|mthd> has joined the channel",
+    "ts": "1463685727.000102",
+    "id": "19ko1505",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

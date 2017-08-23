@@ -1,0 +1,1791 @@
+[
+  {
+    "user": "U3JPVLZ5J",
+    "text": "<@U3JPVLZ5J|krrish0x00> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1482695726.007061",
+    "id": "25de57866",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U3E2EEX38> \n&gt;&gt; add object to Realm executeAsync &lt;&gt; get object from background thread with new instance of Realm, Realm object null",
+    "ts": "1482700970.007062",
+    "id": "25de57867",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "why are you bouncing between threads? o-o",
+    "ts": "1482700987.007063",
+    "id": "25de57868",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "you could execute the transaction synchronously on the background thread",
+    "ts": "1482701002.007064",
+    "id": "25de57869",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "Realm is very very simple",
+    "ts": "1482701102.007065",
+    "id": "25de57870",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "you just write into it, and you listen with change listeners",
+    "ts": "1482701109.007066",
+    "id": "25de57871",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "if you bounce UI thread -&gt; Realm's background executor -&gt; UI thread -&gt; some random background thread, then sure, you can run into weird things",
+    "ts": "1482701154.007067",
+    "id": "25de57872",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "the ultimate workaround for this stuff though if you have not-closed Realm instances, work on background thread pools where multiple concurrent Realm instances exist, etc. is to use <http://stackoverflow.com/a/38839808/2413303> this code after `Realm.getDefaultInstance()`, although in my use-cases this does not come up because I only use Realm on background threads when I need to *write* there, so I open a transaction in which you *always* see the latest version",
+    "attachments": [
+      {
+        "title": "RealmChangeListener does not get called when Realm gets updated in NotificationListenerService",
+        "title_link": "http://stackoverflow.com/a/38839808/2413303",
+        "text": "I'm doing Realm insertions on a extended NotificationListenerService, like this:public class NLService extends NotificationListenerService { @Override public void onNotificationPosted(",
+        "fallback": "RealmChangeListener does not get called when Realm gets updated in NotificationListenerService",
+        "thumb_url": "https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded",
+        "from_url": "http://stackoverflow.com/a/38839808/2413303",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "service_icon": "https://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d",
+        "service_name": "stackoverflow.com",
+        "id": 1
+      }
+    ],
+    "ts": "1482702012.007068",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "25de57873",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U3E2EEX38> so I'm honestly not sure how you ran into a problem in the first place :open_mouth:",
+    "ts": "1482702097.007070",
+    "id": "25de57874",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "<@U39P7U6EP> Sure I understand that bouncing between threads will cause problems, which is what I thought was the issue, so I tried to do everything on the UI Thread and It still does not work",
+    "ts": "1482702663.007071",
+    "id": "25de57875",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "The wierd thing is",
+    "ts": "1482702673.007072",
+    "id": "25de57876",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "that if the Realm database exists then even using execute in background and then new instance get object in new thread it works if the realm database is already created",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1482702736.000000"
+    },
+    "ts": "1482702719.007073",
+    "id": "25de57877",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "and the even weirder thing, is that if you reset everything and spam the database with writes eventually it works",
+    "ts": "1482702800.007075",
+    "id": "25de57878",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I agree Realm is simple",
+    "ts": "1482702843.007076",
+    "id": "25de57879",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "but there is a lot of stuff happening in the background that I have no control over",
+    "ts": "1482702871.007077",
+    "id": "25de57880",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "at least thats what it feels like to me",
+    "ts": "1482702933.007078",
+    "id": "25de57881",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Its kinda like the situation with fragments in that regard",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1482702959.000000"
+    },
+    "ts": "1482702942.007079",
+    "id": "25de57882",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I am taking a token from a rest api and saving in realm along with other data then I am trying to retrieve that token straight after",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1482703356.000000"
+    },
+    "ts": "1482703294.007081",
+    "id": "25de57883",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "and the realm file is getting created at the same time",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1482703652.000000"
+    },
+    "ts": "1482703312.007082",
+    "id": "25de57884",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I verified the object exists in the realm file with Stetho-Realm but it still returns null",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1482703531.000000"
+    },
+    "ts": "1482703417.007084",
+    "id": "25de57885",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "unless I restart the app",
+    "ts": "1482703427.007085",
+    "id": "25de57886",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "then I am able to retrieve it",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1482703443.000000"
+    },
+    "ts": "1482703435.007086",
+    "id": "25de57887",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "and subsequently after deleting the token and then running the same code again for a new user (Realm file exists already here) it works fine.",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1482703599.000000"
+    },
+    "ts": "1482703583.007090",
+    "id": "25de57888",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "so for the moment I've replaced Realm with Sqlite for the token part and  its working fine :smile:",
+    "ts": "1482703732.007093",
+    "id": "25de57889",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "with plans to replace everything with sqlite",
+    "ts": "1482703819.007094",
+    "id": "25de57890",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I realise I could use shared preferences for the token but goal here is to store all data in a Database I am also getting a lot of null values in my database, for some models, no idea why. it might be a stetho-realm bug but if I insert one object, I get 10 all with null fields.",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1482704095.000000"
+    },
+    "ts": "1482703846.007095",
+    "id": "25de57891",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "-------------------END WALL OF TEXT",
+    "ts": "1482703876.007096",
+    "id": "25de57892",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "So what I get from all I see about Realm recently is that it's pretty good in some cases and not so good in others. :smile:",
+    "ts": "1482704654.007099",
+    "id": "25de57893",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Ye",
+    "ts": "1482704664.007100",
+    "id": "25de57894",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "The rest of my use of Realm is great",
+    "ts": "1482704672.007101",
+    "id": "25de57895",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "its working fine",
+    "ts": "1482704682.007102",
+    "id": "25de57896",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I think next time I need a DB I'll try StorIO",
+    "ts": "1482704697.007103",
+    "id": "25de57897",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Ye I was looking at that",
+    "ts": "1482704709.007104",
+    "id": "25de57898",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "atm I am doing Raw sqlite",
+    "ts": "1482704719.007105",
+    "id": "25de57899",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I also already have a prototype app where Realm works pretty good, so no bashing from me here :smile:",
+    "ts": "1482704724.007106",
+    "id": "25de57900",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": ":smile:",
+    "ts": "1482704732.007107",
+    "id": "25de57901",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I am not bashing it, I think its great",
+    "ts": "1482704745.007108",
+    "id": "25de57902",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "At work I have a monster contentprovider to deal with :smile:",
+    "ts": "1482704749.007109",
+    "id": "25de57903",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I see",
+    "ts": "1482704755.007110",
+    "id": "25de57904",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Also lots of migrations, and that always seems something not very well documented in Realm",
+    "ts": "1482704780.007111",
+    "id": "25de57905",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Oh ye, its not very well documented at all",
+    "ts": "1482704793.007112",
+    "id": "25de57906",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "there was a guy here the other day who had to do a migration in production",
+    "ts": "1482704820.007113",
+    "id": "25de57907",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "he showed me the work around that he found that wasn't documented",
+    "ts": "1482704834.007114",
+    "id": "25de57908",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "<https://gist.github.com/Jenovas/7ba357540091e0b5ca1288b0c627ede3>",
+    "ts": "1482704859.007115",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "25de57909",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U3E2EEX38|name_gone> uploaded a file: <https://androidchat.slack.com/files/name_gone/F3J1XNTLZ/-.java|Untitled>",
+    "file": {
+      "id": "F3J1XNTLZ",
+      "created": 1482704869,
+      "timestamp": 1482704869,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U3E2EEX38",
+      "editable": true,
+      "size": 159,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F3J1XNTLZ/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F3J1XNTLZ/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/name_gone/F3J1XNTLZ/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F3J1XNTLZ-e92aee5744",
+      "edit_link": "https://androidchat.slack.com/files/name_gone/F3J1XNTLZ/-.java/edit",
+      "preview": "try {\r\n    Realm.getInstance(realmConfiguration);\r\n} catch (RealmMigrationNeededException e) {\r\n    Realm.migrateRealm(realmConfiguration, new Migration());\r\n}",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-keyword\">try</span> {</pre></div>\n<div><pre>    <span class=\"cm-variable\">Realm</span>.<span class=\"cm-variable\">getInstance</span>(<span class=\"cm-variable\">realmConfiguration</span>);</pre></div>\n<div><pre>} <span class=\"cm-keyword\">catch</span> (<span class=\"cm-variable\">RealmMigrationNeededException</span> <span class=\"cm-variable\">e</span>) {</pre></div>\n<div><pre>    <span class=\"cm-variable\">Realm</span>.<span class=\"cm-variable\">migrateRealm</span>(<span class=\"cm-variable\">realmConfiguration</span>, <span class=\"cm-keyword\">new</span> <span class=\"cm-variable\">Migration</span>());</pre></div>\n<div><pre>}</pre></div>\n</div>\n</div>\n",
+      "lines": 5,
+      "lines_more": 0,
+      "preview_is_truncated": false,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U3E2EEX38",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U3E2EEX38|name_gone>",
+    "bot_id": null,
+    "ts": "1482704869.007116",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "25de57910",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "he said he had to do this but it wasn't documented any where",
+    "ts": "1482704882.007117",
+    "id": "25de57911",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I havnt tried",
+    "ts": "1482704924.007118",
+    "id": "25de57912",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U3E2EEX38> that's odd because you can specify a Migration class to your RealmConfiguration, and it is called automagically when Realm fails schema validation",
+    "ts": "1482704937.007119",
+    "id": "25de57913",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Ye, I remember reading that",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1482704964.000000"
+    },
+    "ts": "1482704955.007120",
+    "id": "25de57914",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "like, `new RealmConfiguration.Builder().migration(new Migration()).schemaVersion(2).build();`",
+    "ts": "1482704957.007121",
+    "id": "25de57915",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U3E2EEX38|name_gone> uploaded a file: <https://androidchat.slack.com/files/name_gone/F3JMX31A6/-.java|Untitled>",
+    "file": {
+      "id": "F3JMX31A6",
+      "created": 1482704980,
+      "timestamp": 1482704980,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U3E2EEX38",
+      "editable": true,
+      "size": 320,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F3JMX31A6/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F3JMX31A6/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/name_gone/F3JMX31A6/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F3JMX31A6-227348b293",
+      "edit_link": "https://androidchat.slack.com/files/name_gone/F3JMX31A6/-.java/edit",
+      "preview": "RealmConfiguration realmConfiguration = new RealmConfiguration.Builder(context)\r\n    .setModules(new MyRealmModule())\r\n    .schemaVersion(2)\r\n    .build();\r\n\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-variable\">RealmConfiguration</span> <span class=\"cm-variable\">realmConfiguration</span> <span class=\"cm-operator\">=</span> <span class=\"cm-keyword\">new</span> <span class=\"cm-variable\">RealmConfiguration</span>.<span class=\"cm-variable\">Builder</span>(<span class=\"cm-variable\">context</span>)</pre></div>\n<div><pre>    .<span class=\"cm-variable\">setModules</span>(<span class=\"cm-keyword\">new</span> <span class=\"cm-variable\">MyRealmModule</span>())</pre></div>\n<div><pre>    .<span class=\"cm-variable\">schemaVersion</span>(<span class=\"cm-number\">2</span>)</pre></div>\n<div><pre>    .<span class=\"cm-variable\">build</span>();</pre></div>\n<div><pre>&#8203;</pre></div>\n</div>\n</div>\n",
+      "lines": 11,
+      "lines_more": 6,
+      "preview_is_truncated": false,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U3E2EEX38",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U3E2EEX38|name_gone>",
+    "bot_id": null,
+    "ts": "1482704980.007123",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "25de57916",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "he didnt do that obv",
+    "ts": "1482704993.007124",
+    "id": "25de57917",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "lol",
+    "ts": "1482704995.007125",
+    "id": "25de57918",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "module? is he using a library?",
+    "ts": "1482704995.007126",
+    "id": "25de57919",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I have no idea this is what he provided me with",
+    "ts": "1482705013.007127",
+    "id": "25de57920",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "you only need module if you want to either restrict the Realm schema to specific classes in that given Realm configuration, or if you expose the Realm classes from a library module",
+    "ts": "1482705023.007128",
+    "id": "25de57921",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I see, maybe he misunderstood some things",
+    "ts": "1482705051.007129",
+    "id": "25de57922",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Did you read my wall of text?",
+    "ts": "1482705089.007130",
+    "id": "25de57923",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "something about version retention as usual",
+    "ts": "1482705129.007131",
+    "id": "25de57924",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "I haven't really had background thread Realms without running a transaction on that thread",
+    "ts": "1482705189.007132",
+    "id": "25de57925",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "they really should add `refresh()` back for background thread Realms, it's kinda a necessity for scheduled tasks, lol",
+    "ts": "1482705215.007133",
+    "id": "25de57926",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "this does not sound like a scheduled task, this just sounds like race conditions for when some Realm is opened and some is not",
+    "ts": "1482705230.007134",
+    "id": "25de57927",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "ye",
+    "ts": "1482705237.007135",
+    "id": "25de57928",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "there was no work around for me, as I need the token to make an api call",
+    "ts": "1482705253.007136",
+    "id": "25de57929",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "the workaround I posted would have fixed it",
+    "ts": "1482705256.007137",
+    "id": "25de57930",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "ahh ok",
+    "ts": "1482705262.007138",
+    "id": "25de57931",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I might try it",
+    "ts": "1482705269.007139",
+    "id": "25de57932",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "it's a fairly simple workaround",
+    "ts": "1482705279.007140",
+    "id": "25de57933",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "\"please tell Realm synchronously that there was a local commit so it should update itself to the latest version right now\"",
+    "ts": "1482705290.007141",
+    "id": "25de57934",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "kinda package-private but idc lol",
+    "ts": "1482705297.007142",
+    "id": "25de57935",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "it should be part of public API",
+    "ts": "1482705303.007143",
+    "id": "25de57936",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "it was before 0.89.0 but it breaks auto-updating Realms",
+    "ts": "1482705313.007144",
+    "id": "25de57937",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I see",
+    "ts": "1482705321.007145",
+    "id": "25de57938",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "which is why i think it is stupid that it was removed in the first place",
+    "ts": "1482705329.007146",
+    "id": "25de57939",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "you *should* be able to update background thread Realms",
+    "ts": "1482705339.007147",
+    "id": "25de57940",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "they do not auto-update",
+    "ts": "1482705341.007148",
+    "id": "25de57941",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "technically refresh was removed because it didn't play well with iterators in RealmResults or something like that",
+    "ts": "1482705366.007149",
+    "id": "25de57942",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "I'm not sure anymore",
+    "ts": "1482705378.007150",
+    "id": "25de57943",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "anyways, what i posted works",
+    "ts": "1482705381.007151",
+    "id": "25de57944",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Ye thanks for that I will give it a try later",
+    "ts": "1482705392.007152",
+    "id": "25de57945",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<http://stackoverflow.com/a/38839808/2413303> &lt;-- this one",
+    "ts": "1482705400.007153",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "25de57946",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Ye, I got it, I have a version before I added sqlite",
+    "ts": "1482705423.007154",
+    "id": "25de57947",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "so will be easy to test",
+    "ts": "1482705429.007155",
+    "id": "25de57948",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "(auto-updating Realm == the Realm on the UI thread, typically - so refreshing a background thread Realm only affects that thread's Realm instances, so technically it works just fine)",
+    "ts": "1482705526.007156",
+    "id": "25de57949",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Makes sense",
+    "ts": "1482705614.007157",
+    "id": "25de57950",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "You can use a Kotlin extension and just make it look like the public API :stuck_out_tongue:",
+    "ts": "1482706858.007158",
+    "id": "25de57951",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3J220EU8",
+    "text": "<@U3J220EU8|hing.tang> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1482726676.007159",
+    "id": "25de57952",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

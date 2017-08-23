@@ -1,0 +1,1278 @@
+[
+  {
+    "user": "U0HJX4F9V",
+    "text": "I am having some problems designing layouts for devices which do not fall under standard density buckets like some phones with dp width of 320 instead of 360 and dp height of 540. In some layouts I have given the width as 325dp which is not looking good on these non-standard phones",
+    "ts": "1456828951.002441",
+    "id": "01de26317",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HJX4F9V",
+    "text": "Any advice as to how to fix this?",
+    "ts": "1456828967.002442",
+    "id": "01de26318",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "Use weight or percentages? ",
+    "ts": "1456829178.002443",
+    "id": "01de26319",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0EJWJWRK",
+    "text": "or margins instead of width  if your design expects this",
+    "ts": "1456829292.002444",
+    "id": "01de26320",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HJX4F9V",
+    "text": "The use case is, I have a RecyclerView which will be horizontal and every item of recycler view will be a cardView. For the case where recyclerview has only item, I inflate a layout where width of card is match parent with some left and right margins. But if the recycler view has more than one elements, I have to show same card but little bit shrinked in width so that some parts of the card on left and right of a given card are also visible.",
+    "ts": "1456829779.002445",
+    "id": "01de26321",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HJX4F9V",
+    "text": "So, in this layout, I was setting the width to 325 dp",
+    "ts": "1456829802.002446",
+    "id": "01de26322",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0EJWJWRK",
+    "text": "calc layout params for item",
+    "ts": "1456829965.002447",
+    "id": "01de26323",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0EJWJWRK",
+    "text": "according to display width",
+    "ts": "1456829979.002448",
+    "id": "01de26324",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HJX4F9V",
+    "text": "I am trying to do that, but isn’t there any other method?",
+    "ts": "1456830387.002449",
+    "id": "01de26325",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HJX4F9V",
+    "text": "If I could just set the width of the cardView to like 80% of screen width, it would be great",
+    "ts": "1456830420.002450",
+    "id": "01de26326",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N4RS70W",
+    "text": "you can calculate that if you want",
+    "ts": "1456830576.002451",
+    "id": "01de26327",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0MBWFDT8",
+    "text": "<http://developer.android.com/reference/android/support/percent/PercentRelativeLayout.html> read sth with percentage ^^",
+    "edited": {
+      "user": "U0MBWFDT8",
+      "ts": "1456830669.000000"
+    },
+    "ts": "1456830637.002452",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U0CT7JDN3"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "01de26328",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Any1 here that can help me with a RxJava question: more specific: I have a network call (retrofit) getPeople(int page). The result object has a field “int next” in case a next page is available.",
+    "ts": "1456833373.002454",
+    "id": "01de26329",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I need to chain all observable that emits all items gotten by those calls.",
+    "ts": "1456833410.002455",
+    "id": "01de26330",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "So basically I have to chain to the observable based on the result.",
+    "ts": "1456833444.002456",
+    "id": "01de26331",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "chain / merge / concat. I’m not sure of the correct syntax.",
+    "ts": "1456833462.002457",
+    "id": "01de26332",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HJX4F9V",
+    "text": "<@U0MBWFDT8>: I saw that one. I have a layout whose outermost item is a linear layout with width 325dp and a card view as it’s child. Now suppose, I use the PercetageRelativeLayout  as the outermost container with width as match parent and let it’s child be card view with layout width percentage as 80% (assume), the problem that I think will happen is, even though my card would be of correct width(like 325 dp), but the layout will take up all the width as percentage relative layout has width match parent. This will in turn, not allow other cards on the sides to be visible.",
+    "ts": "1456834523.002458",
+    "id": "01de26333",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09UQHPQV",
+    "text": "<@U0K1ALDQE>:  they are many combine observable operator but merge operator might be very useful in this case.\n<https://github.com/ReactiveX/RxJava/wiki/Combining-Observables>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "ReactiveX/RxJava",
+        "title_link": "https://github.com/ReactiveX/RxJava/wiki/Combining-Observables",
+        "text": "RxJava – Reactive Extensions for the JVM – a library for composing asynchronous and event-based programs using observable sequences for the Java VM.",
+        "fallback": "GitHub: ReactiveX/RxJava",
+        "thumb_url": "https://avatars3.githubusercontent.com/u/6407041?v=3&s=400",
+        "from_url": "https://github.com/ReactiveX/RxJava/wiki/Combining-Observables",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1456835405.002459",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "01de26334",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I already went trough a lot. problem is I need to chain based on the result.",
+    "ts": "1456835481.002461",
+    "id": "01de26335",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Merge would only work for me if I knew beforehand how many pages I’d have to available to me",
+    "ts": "1456835511.002462",
+    "id": "01de26336",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Then I could do `Observable.merge(getPeople(1),getPeople(2),getPeople(3))`",
+    "ts": "1456835535.002463",
+    "id": "01de26337",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09UQHPQV",
+    "text": "So one observable output is become a input for second observable in simple flatmap operator . You can  set  getPeople(2) in observable 2  when getPeople(1) finished it's observable 1 and so as chain.",
+    "edited": {
+      "user": "U09UQHPQV",
+      "ts": "1456836377.000000"
+    },
+    "ts": "1456836338.002464",
+    "id": "01de26338",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B6XQJ2F",
+    "text": "hey what's up guys, anyone used TouchDelegate recently? I've got a requirement to make touch area larger for a couple of views, but their parent is smaller than the area I want",
+    "ts": "1456836656.002467",
+    "id": "01de26339",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B6XQJ2F",
+    "text": "is there a way to delegate parent's parent's touches to my view?",
+    "ts": "1456836667.002468",
+    "id": "01de26340",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Why not place an invisible larger view on top of everything? :confused:",
+    "ts": "1456836769.002469",
+    "id": "01de26341",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B6XQJ2F",
+    "text": "yeah, that's one way of doing it",
+    "ts": "1456836780.002470",
+    "id": "01de26342",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B6XQJ2F",
+    "text": "it gets a bit complicated, because these views act as anchors to other views (relativelayout), and I will have to change margins/paddings everywhere",
+    "ts": "1456836867.002471",
+    "id": "01de26343",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B6XQJ2F",
+    "text": "just to clarify, I've got something similar to this:\n`FrameLayout`\n`    LinearLayout`\n`        View`\n\nLinearLayout is too small, that's why I need to delegate FrameLayout's touches to View",
+    "ts": "1456836952.002472",
+    "id": "01de26344",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0PM4EGUF",
+    "subtype": "channel_join",
+    "text": "<@U0PM4EGUF|adrian110288> has joined the channel",
+    "ts": "1456837138.002473",
+    "id": "01de26345",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B6XQJ2F",
+    "text": "well, I've just tried TouchDelegate, and I can just call `setTouchDelegate` on my FrameLayout and it works",
+    "ts": "1456837719.002474",
+    "id": "01de26346",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "<@U0K1ALDQE>: sounds to me like you need some form of recursion.",
+    "ts": "1456838258.002475",
+    "id": "01de26347",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "merging streams won’t work like that, as you don’t have parallel streams",
+    "ts": "1456838348.002476",
+    "id": "01de26348",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "^ I know",
+    "ts": "1456838438.002477",
+    "id": "01de26349",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I just can’t figure out how.",
+    "ts": "1456838443.002478",
+    "id": "01de26350",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0MBWFDT8",
+    "text": "<@U0B6XQJ2F>: did you find a way?",
+    "ts": "1456842642.002479",
+    "id": "01de26351",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B6XQJ2F",
+    "text": "yeah, I did <@U0MBWFDT8>",
+    "ts": "1456842665.002480",
+    "id": "01de26352",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B6XQJ2F",
+    "text": "when calling `setTouchDelegate`, call it for desired parent, and not view's parent",
+    "ts": "1456842688.002481",
+    "id": "01de26353",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0MBWFDT8",
+    "text": "sounds easy",
+    "ts": "1456842713.002482",
+    "id": "01de26354",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0MBWFDT8",
+    "text": "nice i will try it later",
+    "ts": "1456842717.002483",
+    "id": "01de26355",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B6XQJ2F",
+    "text": "be sure to properly calculate the `Rect` coordinates, because `getHitRect` returns coordinates relative to its immediate parent",
+    "ts": "1456842722.002484",
+    "id": "01de26356",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0B6XQJ2F|egor> uploaded a file: <https://androidchat.slack.com/files/egor/F0PMD49NY/-.txt|Untitled> and commented: is this what you're looking for, <@U0K1ALDQE> ?",
+    "file": {
+      "id": "F0PMD49NY",
+      "created": 1456843041,
+      "timestamp": 1456843041,
+      "name": "-.txt",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "text",
+      "pretty_type": "Plain Text",
+      "user": "U0B6XQJ2F",
+      "editable": true,
+      "size": 397,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0PMD49NY/-.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0PMD49NY/download/-.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/egor/F0PMD49NY/-.txt",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0PMD49NY-ed659daaa1",
+      "edit_link": "https://androidchat.slack.com/files/egor/F0PMD49NY/-.txt/edit",
+      "preview": "class Wrapper {\r\n  int next;\r\n  List<People> people;\r\n}\r\n\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>class Wrapper {</pre></div>\n<div><pre>  int next;</pre></div>\n<div><pre>  List&lt;People&gt; people;</pre></div>\n<div><pre>}</pre></div>\n<div><pre></pre></div>\n<div><pre></pre></div>\n</div>\n</div>\n",
+      "lines": 16,
+      "lines_more": 11,
+      "preview_is_truncated": false,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 1,
+      "initial_comment": {
+        "id": "Fc0PMLC5G9",
+        "created": 1456843041,
+        "timestamp": 1456843041,
+        "user": "U0B6XQJ2F",
+        "is_intro": true,
+        "comment": "is this what you're looking for, <@U0K1ALDQE> ?",
+        "channel": ""
+      }
+    },
+    "user": "U0B6XQJ2F",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0B6XQJ2F|egor>",
+    "bot_id": null,
+    "ts": "1456843041.002485",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "01de26357",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "That seems like it might look what I was looking for.",
+    "ts": "1456843123.002486",
+    "id": "01de26358",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Sec :stuck_out_tongue_winking_eye: &amp; thanks. I’ll let you know in a sec",
+    "ts": "1456843134.002487",
+    "id": "01de26359",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B6XQJ2F",
+    "text": "sure",
+    "ts": "1456843142.002488",
+    "id": "01de26360",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B6XQJ2F",
+    "text": "I wrote it right here in slack, so there might be some troubles with the syntax",
+    "ts": "1456843161.002489",
+    "id": "01de26361",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B6XQJ2F",
+    "text": "I'll be back in 20 minutes and then can answer your questions",
+    "ts": "1456843372.002490",
+    "id": "01de26362",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Oh god &gt;&lt; thanks <@U0B6XQJ2F> :taco:",
+    "ts": "1456843566.002494",
+    "id": "01de26363",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "It was almost exactly what I needed, so I figured it out :smile:",
+    "ts": "1456843593.002495",
+    "id": "01de26364",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B6XQJ2F",
+    "text": "<@U0K1ALDQE>: glad I could help",
+    "ts": "1456844305.002496",
+    "id": "01de26365",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0PNVF36J",
+    "subtype": "channel_join",
+    "text": "<@U0PNVF36J|andre.pelisoli> has joined the channel",
+    "ts": "1456855846.002497",
+    "id": "01de26366",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DMFJC0H",
+    "text": "Calling all developers: Brian from Google is telling us how to boost success in the Play Store. Check it out: <https://plus.google.com/hangouts/_/google.com/play-policy>",
+    "attachments": [
+      {
+        "service_name": "GOOGLE HANGOUTS",
+        "title": "Join this live Google Hangouts video call",
+        "title_link": "https://plus.google.com/hangouts/_/google.com/play-policy",
+        "text": "Click to join now. If the call is over, invite your friends to a new one or start a chat with text, photos and emoji.",
+        "fallback": "GOOGLE HANGOUTS: Join this live Google Hangouts video call",
+        "thumb_url": "https://www.gstatic.com/images/icons/material/product/2x/hangouts_512dp.png",
+        "from_url": "https://plus.google.com/hangouts/_/google.com/play-policy",
+        "thumb_width": 1024,
+        "thumb_height": 1024,
+        "id": 1
+      }
+    ],
+    "ts": "1456856286.002498",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "01de26367",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBN2DV2",
+    "text": "hey everyone ,   does adding email verification in our apps matters ? can anyone explain me why ??",
+    "ts": "1456856910.002500",
+    "id": "01de26368",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBN2DV2",
+    "text": "hey everyone ,does adding email verification in our apps matters ? can anyone explain me why ??",
+    "ts": "1456856956.002501",
+    "id": "01de26369",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09NV6N8J",
+    "subtype": "channel_join",
+    "text": "<@U09NV6N8J|sgaw> has joined the channel",
+    "ts": "1456862198.002502",
+    "id": "01de26370",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0P40THS9",
+    "subtype": "channel_leave",
+    "text": "<@U0P40THS9|nexusfan> has left the channel",
+    "ts": "1456868410.002503",
+    "id": "01de26371",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KTPB91V",
+    "text": "somebody knows how to get the current position when you scroll a recyclerview?",
+    "ts": "1456875183.002504",
+    "id": "01de26372",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "something like this? <http://developer.android.com/reference/android/support/v7/widget/LinearLayoutManager.html#findFirstVisibleItemPosition()>",
+    "ts": "1456875376.002505",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U0KTPB91V"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "01de26373",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KTPB91V",
+    "text": "<@U0546QERR>: maybe, yes, thank you sr, :smile:",
+    "ts": "1456875633.002506",
+    "id": "01de26374",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0PQP190T",
+    "subtype": "channel_join",
+    "text": "<@U0PQP190T|klauss> has joined the channel",
+    "ts": "1456878914.002507",
+    "id": "01de26375",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U0KTPB91V>: I got something like this in my code somewhere: `int adapterPosition = recyclerView.getChildAdapterPosition(recyclerView.getChildAt(0));`",
+    "ts": "1456882035.002508",
+    "id": "01de26376",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0PREEV9C",
+    "subtype": "channel_join",
+    "text": "<@U0PREEV9C|cercatrova> has joined the channel",
+    "ts": "1456892490.002509",
+    "id": "01de26377",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

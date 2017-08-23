@@ -1,0 +1,604 @@
+[
+  {
+    "user": "U0GPEN18E",
+    "subtype": "channel_join",
+    "text": "<@U0GPEN18E|dalia_ali> has joined the channel",
+    "ts": "1450255885.000559",
+    "id": "16li3085",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U053Q5XP2>: how are those strings going to be used? Are they going to be visible to a user (not the library user but an app user)?",
+    "ts": "1450260969.000560",
+    "id": "16li3086",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053Q5XP2",
+    "text": "it’s actually drawables and integers for animation defaults. I’d like to provide a default placeholder and animation timings that a developer can ovverwrite in a style. Some of the library’s methods don’t take a view, so I can’t guarantee I’ll have a context to set up the animation and whatnot. Calling Library.setContext() isn’t a big deal, it just seems weird that it’s neccesary.",
+    "ts": "1450261168.000561",
+    "id": "16li3087",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "If it's drawables then you should definitely get a context",
+    "ts": "1450261510.000562",
+    "id": "16li3088",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "if your library will be used per activity have the devs do something like `MyLibrary.init(this)` in the onCreate",
+    "ts": "1450261550.000563",
+    "id": "16li3089",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "if you designed it for global use then have them do the same in the App.onCreate",
+    "ts": "1450261581.000564",
+    "id": "16li3090",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "for the integers you could put them in public static finals if they end up being your only resources",
+    "ts": "1450261688.000565",
+    "id": "16li3091",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "Alternatively, if you can't decide yet, create an internal interface `ResourceProvider` which has methods for providing your integers/drawables. Then start with a `ContextResourceProvider`  implementation where it's constructor takes the context and uses it internally for retrieving the resources and later down the line if you see that you do not need the default drawable anymore (or if you start creating them programmaticaly) create a `InMemoryResourceProvider`  where you put your integers and other resources in fields.",
+    "edited": {
+      "user": "U09T8SFG8",
+      "ts": "1450261921.000000"
+    },
+    "ts": "1450261906.000566",
+    "id": "16li3092",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053Q5XP2",
+    "text": "good advice ty",
+    "ts": "1450264258.000568",
+    "id": "16li3093",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C5E9X2N",
+    "text": "hey guys...",
+    "ts": "1450266246.000569",
+    "id": "16li3094",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C5E9X2N",
+    "text": "do any of you know a lib i can use to build pin ?",
+    "ts": "1450266268.000570",
+    "id": "16li3095",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C5E9X2N",
+    "text": "to embed pin protection in my app",
+    "ts": "1450266281.000571",
+    "id": "16li3096",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "<@U0C5E9X2N>: there are several libs for that:",
+    "ts": "1450266485.000572",
+    "id": "16li3097",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "<https://android-arsenal.com/details/1/1425>\n<https://android-arsenal.com/details/1/2824>\n<https://android-arsenal.com/details/1/2411>",
+    "edited": {
+      "user": "U0830HE7P",
+      "ts": "1450266516.000000"
+    },
+    "ts": "1450266496.000573",
+    "id": "16li3098",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0GPQK1TK",
+    "subtype": "channel_join",
+    "text": "<@U0GPQK1TK|kimshone> has joined the channel",
+    "ts": "1450266991.000578",
+    "id": "16li3099",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBKWKA",
+    "text": "If your app is like a service provider which serves in specific blocks of a city, what would you guys use to check if he is outside your  area?",
+    "ts": "1450268374.000579",
+    "id": "16li3100",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBKWKA",
+    "text": "I can manage with LatLng",
+    "ts": "1450268384.000580",
+    "id": "16li3101",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBKWKA",
+    "text": "but the user has an option to enter address manually too due to which lat lng checking would fail",
+    "ts": "1450268413.000581",
+    "id": "16li3102",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBKWKA",
+    "text": "Retrieving LatLng from address is not reliable in my country.",
+    "ts": "1450268436.000582",
+    "id": "16li3103",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "maybe Geofences will work for you?",
+    "ts": "1450268547.000583",
+    "id": "16li3104",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "<http://developer.android.com/intl/ru/training/location/geofencing.html>",
+    "attachments": [
+      {
+        "text": "Geofencing combines awareness of the user's current location with awareness of the user's proximity to locations that may be of interest. To mark a location of interest, you specify its latitude and longitude. To adjust the proximity for the location…",
+        "fallback": "Geofencing combines awareness of the user's current location with awareness of the user's proximity to locations that may be of interest. To mark a location of interest, you specify its latitude and longitude. To adjust the proximity for the location…",
+        "from_url": "http://developer.android.com/intl/ru/training/location/geofencing.html",
+        "id": 1
+      }
+    ],
+    "ts": "1450268549.000584",
+    "id": "16li3105",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "what the comrade said, geofencing is the way to go",
+    "ts": "1450268573.000586",
+    "id": "16li3106",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBKWKA",
+    "text": "<@U0830HE7P>: <@U0548MM6B>  The problem with this is, if the user enters the location himself, and if that location is different from his current location, the LatLng would be wrong",
+    "ts": "1450270244.000587",
+    "id": "16li3107",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0GQ2TSBG",
+    "subtype": "channel_join",
+    "text": "<@U0GQ2TSBG|sgarelick> has joined the channel",
+    "ts": "1450277460.000588",
+    "id": "16li3108",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C5E9X2N",
+    "text": "<@U0830HE7P>: thank you! i got one of that",
+    "ts": "1450281496.000589",
+    "id": "16li3109",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0GQ9EJNM",
+    "subtype": "channel_join",
+    "text": "<@U0GQ9EJNM|namhoai> has joined the channel",
+    "ts": "1450282065.000590",
+    "id": "16li3110",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0GQBTSC9",
+    "subtype": "channel_join",
+    "text": "<@U0GQBTSC9|andgiordano> has joined the channel",
+    "ts": "1450283573.000591",
+    "id": "16li3111",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0GQMRBRT",
+    "subtype": "channel_join",
+    "text": "<@U0GQMRBRT|nibbio> has joined the channel",
+    "ts": "1450291658.000592",
+    "id": "16li3112",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0GQX31SA",
+    "subtype": "channel_join",
+    "text": "<@U0GQX31SA|kylepotts> has joined the channel",
+    "ts": "1450294705.000593",
+    "id": "16li3113",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0GRQNVSL",
+    "subtype": "channel_join",
+    "text": "<@U0GRQNVSL|mikemathieu> has joined the channel",
+    "ts": "1450317314.000594",
+    "id": "16li3114",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0GRT85T5",
+    "subtype": "channel_join",
+    "text": "<@U0GRT85T5|gittieatlas> has joined the channel",
+    "ts": "1450323764.000595",
+    "id": "16li3115",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0GS1HZND",
+    "subtype": "channel_join",
+    "text": "<@U0GS1HZND|prashant.hingrajiya> has joined the channel",
+    "ts": "1450332650.000596",
+    "id": "16li3116",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

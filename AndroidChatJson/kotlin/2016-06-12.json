@@ -1,0 +1,397 @@
+[
+  {
+    "user": "U08GFT5V5",
+    "text": "Does kotlin have guard ifs?",
+    "ts": "1465727623.000003",
+    "id": "12ko1635",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "or are they just regular ifs?",
+    "ts": "1465727636.000004",
+    "id": "12ko1636",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Got an example? ",
+    "ts": "1465731759.000005",
+    "id": "12ko1637",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "```\nif (user.email.isBlank() || user.password.isBlank()) {\n    return false\n}\n```",
+    "edited": {
+      "user": "U08GFT5V5",
+      "ts": "1465731807.000000"
+    },
+    "ts": "1465731787.000006",
+    "id": "12ko1638",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Okay am confused lol ",
+    "ts": "1465731961.000009",
+    "id": "12ko1639",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "so something like this",
+    "ts": "1465731976.000010",
+    "id": "12ko1640",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "```\nfun myFun()  {\n    if(notfun){\n        //Guard if   \n        return\n    }\n\n    … \n}\n```",
+    "ts": "1465732038.000011",
+    "id": "12ko1641",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "so is there like dedicated syntax for this? I remember reading something about that",
+    "ts": "1465732060.000012",
+    "id": "12ko1642",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Hmm can't remember reading anything like that ",
+    "ts": "1465732222.000013",
+    "id": "12ko1643",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I see swift has it ",
+    "ts": "1465732230.000014",
+    "id": "12ko1644",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Okay I checked and there is at least something for a != null thing ",
+    "ts": "1465732484.000015",
+    "id": "12ko1645",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "You can write \n`user.email?.let {}`",
+    "ts": "1465732572.000016",
+    "id": "12ko1646",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "And the block will only run when email is not null ",
+    "ts": "1465732593.000017",
+    "id": "12ko1647",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Dang, I think you're right ",
+    "ts": "1465732894.000018",
+    "id": "12ko1648",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "I confused swift with kotlin ",
+    "ts": "1465732908.000019",
+    "id": "12ko1649",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Does kotlin have javadocs?",
+    "ts": "1465748374.000020",
+    "id": "12ko1650",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "or something similar?",
+    "ts": "1465748378.000021",
+    "id": "12ko1651",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "<https://github.com/Kotlin/dokka>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "Kotlin/dokka",
+        "title_link": "https://github.com/Kotlin/dokka",
+        "text": "dokka - Documentation Engine for Kotlin",
+        "fallback": "GitHub: Kotlin/dokka",
+        "thumb_url": "https://avatars2.githubusercontent.com/u/1446536?v=3&s=400",
+        "from_url": "https://github.com/Kotlin/dokka",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1465748445.000022",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "12ko1652",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": ":partyparrot:",
+    "ts": "1465748499.000024",
+    "id": "12ko1653",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "I’m liking kotlin… such procedural code",
+    "ts": "1465748512.000025",
+    "id": "12ko1654",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

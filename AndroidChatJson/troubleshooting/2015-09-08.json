@@ -1,0 +1,1824 @@
+[
+  {
+    "user": "U061HDV96",
+    "text": "What could be the reason `android:background=\"?attr/selectableItemBackground\"` isn't making the ripple on RecyclerView items? I'm using it on the root tag of the element.",
+    "ts": "1441728308.000100",
+    "id": "08tr2116",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Why is it so hard to get this working? :cry: It works on some items but not on others? WUUT",
+    "ts": "1441729665.000101",
+    "id": "08tr2117",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053Q5XP2",
+    "text": "Maybe something else is intercepting the click?",
+    "ts": "1441735098.000102",
+    "id": "08tr2118",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07MUKUBW",
+    "text": "<@U061HDV96>: clickable and focusable=true",
+    "ts": "1441736345.000103",
+    "id": "08tr2119",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07MUKUBW",
+    "text": "try that",
+    "ts": "1441736347.000104",
+    "id": "08tr2120",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "kinda confused how retrofit 2.0 is supposed to work with RxJava, the return type on my API methods is Observable&lt;Response&lt;?&gt;&gt; where ? is my data class but if i subscribe to them I get crashes from network calls on the UI thread",
+    "ts": "1441739000.000105",
+    "id": "08tr2121",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "with 1.9 i just had Observable&lt;?&gt; but we’re supposed to be able to access the Response data in the new API",
+    "ts": "1441739056.000106",
+    "id": "08tr2122",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A9BLW85",
+    "text": "<@U0546QERR>: I think in 2.0, you have to supply a `CallAdapter.Factory` if you want something different than the built in synchronous (`call.execute()`) or asynchronous (`call.enqueue()`) call types. According to the slides from DroidCon NYC,  you can supply a custom `CallAdapter.Factory` through `Retrofit.Builder`: <https://github.com/square/retrofit/blob/master/retrofit/src/main/java/retrofit/Retrofit.java#L225> - and here’s the factory you’re looking for: <https://github.com/square/retrofit/blob/master/retrofit-adapters/rxjava/src/main/java/retrofit/RxJavaCallAdapterFactory.java>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "square/retrofit",
+        "title_link": "https://github.com/square/retrofit/blob/master/retrofit/src/main/java/retrofit/Retrofit.java#L225",
+        "text": "retrofit - Type-safe HTTP client for Android and Java by Square, Inc.",
+        "fallback": "GitHub: square/retrofit",
+        "thumb_url": "https://avatars0.githubusercontent.com/u/82592?v=3&s=400",
+        "from_url": "https://github.com/square/retrofit/blob/master/retrofit/src/main/java/retrofit/Retrofit.java#L225",
+        "thumb_width": 234,
+        "thumb_height": 234,
+        "id": 1
+      }
+    ],
+    "ts": "1441740210.000107",
+    "id": "08tr2123",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A9BLW85",
+    "text": "I haven’t played around with the new API yet in a project, so I’m not sure if this is the issue you’re facing - just taking a stab.",
+    "ts": "1441740288.000109",
+    "id": "08tr2124",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "thanks, and yeah I did supply the RxJava call adapter factory, doesn't seem to be it :( I think I'm just confused about how these adapters are used. will dig into it a bit more soon",
+    "ts": "1441740534.000110",
+    "id": "08tr2125",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A9BLW85",
+    "text": "I wonder if you manually have to supply on which schedulers the Observable subscribes and observes, like `observable.subscribeOn(<http://Schedulers.io|Schedulers.io>()).observeOn(AndroidSchedulers.mainThread())` - could that be related to the network call on UI thread crash you mentioned?",
+    "ts": "1441740812.000111",
+    "id": "08tr2126",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "will try subscribeOn, I already had observeOn for posting the events back to my event bus",
+    "ts": "1441741199.000112",
+    "id": "08tr2127",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U07MUKUBW>: thanks. I'll give it a try in a second. I'm on a break for a second. I'm suddenly SO TIRED",
+    "ts": "1441741332.000113",
+    "id": "08tr2128",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I was thinking that too",
+    "ts": "1441741341.000114",
+    "id": "08tr2129",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Because it was working with stuff that had an onclicklistener",
+    "ts": "1441741358.000115",
+    "id": "08tr2130",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07MUKUBW",
+    "text": "has anyone found a significant difference between setImageResource and setImageDrawable?",
+    "ts": "1441742099.000116",
+    "id": "08tr2131",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i’m guessing one is just an alias for the other",
+    "ts": "1441742296.000117",
+    "id": "08tr2132",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "sorta",
+    "ts": "1441742300.000118",
+    "id": "08tr2133",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "yeah it looks like setImageResource just calls getResources().getDrawable(id), probably not much different",
+    "edited": {
+      "user": "U0546QERR",
+      "ts": "1441742687.000000"
+    },
+    "ts": "1441742679.000119",
+    "id": "08tr2134",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "nah they are different",
+    "ts": "1441742717.000121",
+    "id": "08tr2135",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "setImageDrawable does not lock the UI thread",
+    "ts": "1441742728.000122",
+    "reactions": [
+      {
+        "name": "lock",
+        "users": [
+          "U0A9BLW85"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "08tr2136",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U055GGAHS|ian.shaun.thomas> uploaded a file: <https://androidchat.slack.com/files/ian.shaun.thomas/F0AAXLBNU/-.txt|Untitled>",
+    "file": {
+      "id": "F0AAXLBNU",
+      "created": 1441742748,
+      "timestamp": 1441742748,
+      "name": "-.txt",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "text",
+      "pretty_type": "Plain Text",
+      "user": "U055GGAHS",
+      "editable": true,
+      "size": 316,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0AAXLBNU/-.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0AAXLBNU/download/-.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/ian.shaun.thomas/F0AAXLBNU/-.txt",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0AAXLBNU-b29e7fb4bb",
+      "edit_link": "https://androidchat.slack.com/files/ian.shaun.thomas/F0AAXLBNU/-.txt/edit",
+      "preview": "Sets a drawable as the content of this ImageView.\r\nThis does Bitmap reading and decoding on the UI thread, which can cause a latency hiccup. If that's a concern, consider using setImageDrawable(android.graphics.drawable.Drawable) or setImageBitmap(android.graphics.Bitmap) and android.graphics.BitmapFactory instead.",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>Sets a drawable as the content of this ImageView.</pre></div>\n<div><pre>This does Bitmap reading and decoding on the UI thread, which can cause a latency hiccup. If that's a concern, consider using setImageDrawable(android.graphics.drawable.Drawable) or setImageBitmap(android.graphics.Bitmap) and android.graphics.BitmapFactory instead.</pre></div>\n</div>\n</div>\n",
+      "lines": 2,
+      "lines_more": 0,
+      "preview_is_truncated": false,
+      "channels": [
+        "C0565EVTD"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U055GGAHS",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U055GGAHS|ian.shaun.thomas>",
+    "bot_id": null,
+    "ts": "1441742749.000123",
+    "id": "08tr2137",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<http://grepcode.com/file/repository.grepcode.com/java/ext/com.google.android/android/5.1.1_r1/android/widget/ImageView.java#ImageView.setImageResource%28int%29>",
+    "attachments": [
+      {
+        "text": "android.widget.ImageView - Displays an arbitrary image, such as an icon",
+        "fallback": "android.widget.ImageView - Displays an arbitrary image, such as an icon",
+        "from_url": "http://grepcode.com/file/repository.grepcode.com/java/ext/com.google.android/android/5.1.1_r1/android/widget/ImageView.java#ImageView.setImageResource%28int%29",
+        "id": 1
+      }
+    ],
+    "ts": "1441742762.000124",
+    "id": "08tr2138",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "I thought Resource was deprecated",
+    "ts": "1441742783.000126",
+    "id": "08tr2139",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "ah huh, interesting. i never used it for bitmaps so didn’t think of that",
+    "ts": "1441742823.000127",
+    "id": "08tr2140",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "though it is in the docs I was reading /cough",
+    "edited": {
+      "user": "U0546QERR",
+      "ts": "1441742865.000000"
+    },
+    "ts": "1441742838.000128",
+    "id": "08tr2141",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07MUKUBW",
+    "text": "the reason why i’m asking is because i’m getting OOMs after a lotta memory optimization in image handling. The only cause of error i can see and think of is at the point of setImageResource",
+    "ts": "1441743041.000130",
+    "id": "08tr2142",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07MUKUBW",
+    "text": "i’m think if i use the alternative maybe it wont cause the issues. Have you <@U0542GLTE> <@U0546QERR> <@U055GGAHS> ever tried using the setimageDrawable as a workaround for setImageResource?",
+    "ts": "1441743100.000131",
+    "id": "08tr2143",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "well are you blindly optimizing or are you using allocation tracking to validate the problem areas?",
+    "ts": "1441743115.000132",
+    "id": "08tr2144",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "How big of an image are you trying to set also",
+    "ts": "1441743122.000133",
+    "id": "08tr2145",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07MUKUBW",
+    "text": "well, a single image is not that big, less than an mb",
+    "ts": "1441743135.000134",
+    "id": "08tr2146",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07MUKUBW",
+    "text": "but i have several images in a view pager",
+    "ts": "1441743142.000135",
+    "id": "08tr2147",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "well less than a mb as a png/jpg or less than a mb as a bitmap?",
+    "ts": "1441743156.000136",
+    "id": "08tr2148",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07MUKUBW",
+    "text": "png",
+    "ts": "1441743172.000137",
+    "id": "08tr2149",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "yeah you need to look at your allocation tracker then to validate how much each image is really using",
+    "ts": "1441743192.000138",
+    "id": "08tr2150",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "then use something like ion or picasso (most commonly) to help you shrink to what you really need",
+    "ts": "1441743210.000139",
+    "id": "08tr2151",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07MUKUBW",
+    "text": "which i’ve done",
+    "ts": "1441743217.000140",
+    "id": "08tr2152",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07MUKUBW",
+    "text": "using picasso",
+    "ts": "1441743222.000141",
+    "id": "08tr2153",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07MUKUBW",
+    "text": "but there arises a point where i need to manually set the image",
+    "ts": "1441743238.000142",
+    "id": "08tr2154",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07MUKUBW",
+    "text": "besides that, i even down sampled the image when in bitmap",
+    "ts": "1441743274.000143",
+    "id": "08tr2155",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07MUKUBW",
+    "text": "it helps just marginally",
+    "ts": "1441743278.000144",
+    "id": "08tr2156",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "sure but the allocation tracker will tell you exactly whats up",
+    "ts": "1441743295.000145",
+    "id": "08tr2157",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "you may be trying to fix bitmaps and they aren’t the issue",
+    "ts": "1441743310.000146",
+    "id": "08tr2158",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07MUKUBW",
+    "text": "```java.lang.OutOfMemoryError\n       at android.graphics.BitmapFactory.nativeDecodeAsset(BitmapFactory.java)\n       at android.graphics.BitmapFactory.decodeStream(BitmapFactory.java:683)\n       at android.graphics.BitmapFactory.decodeResourceStream(BitmapFactory.java:513)\n       at android.graphics.drawable.Drawable.createFromResourceStream(Drawable.java:889)\n       at android.content.res.Resources.loadDrawable(Resources.java:3080)\n       at android.content.res.Resources.getDrawable(Resources.java:1627)\n       at android.widget.ImageView.resolveUri(ImageView.java:648)\n       at android.widget.ImageView.setImageResource(ImageView.java:377)```",
+    "ts": "1441743340.000147",
+    "id": "08tr2159",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "they can often take the blame though because they are large allocations which make them often the most likely to cause an OOM regardless of if they took all the memory or not",
+    "ts": "1441743343.000148",
+    "id": "08tr2160",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "yep.. so that ‘could’ be because its way too big or it could be because it tried to allocate when no memory was left",
+    "ts": "1441743393.000149",
+    "id": "08tr2161",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07MUKUBW",
+    "text": "so you are saying there could be some other object which is occupying helluva lotta memory that when i try to add an image it might blow it up?",
+    "ts": "1441743394.000150",
+    "id": "08tr2162",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "it could be few or many objects",
+    "ts": "1441743407.000151",
+    "id": "08tr2163",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07MUKUBW",
+    "text": "which might not even be image related?",
+    "ts": "1441743423.000152",
+    "id": "08tr2164",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "but if you aren’t looking at allocations you are just guessing",
+    "ts": "1441743426.000153",
+    "id": "08tr2165",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "yes",
+    "ts": "1441743429.000154",
+    "id": "08tr2166",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07MUKUBW",
+    "text": "well, i thought that might be the issue, so i took out all the code related to images loading",
+    "ts": "1441743460.000155",
+    "id": "08tr2167",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07MUKUBW",
+    "text": "and it didnt crash",
+    "ts": "1441743464.000156",
+    "id": "08tr2168",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07MUKUBW",
+    "text": "and the app hardly used any memory",
+    "ts": "1441743470.000157",
+    "id": "08tr2169",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07MUKUBW",
+    "text": "i’m talking about 10mb or so",
+    "ts": "1441743481.000158",
+    "id": "08tr2170",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07MUKUBW",
+    "text": "when images come into the picture, after several and repeated use of the activity which handles the images - bOOM :stuck_out_tongue:",
+    "ts": "1441743520.000159",
+    "id": "08tr2171",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<https://developer.android.com/tools/performance/heap-viewer/index.html>",
+    "attachments": [
+      {
+        "text": "Report in real-time how many objects of what types and sizes your application is allocating and find memory leaks.",
+        "fallback": "Report in real-time how many objects of what types and sizes your application is allocating and find memory leaks.",
+        "from_url": "https://developer.android.com/tools/performance/heap-viewer/index.html",
+        "id": 1
+      }
+    ],
+    "ts": "1441743530.000160",
+    "id": "08tr2172",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "and <https://developer.android.com/tools/performance/allocation-tracker/index.html>",
+    "attachments": [
+      {
+        "text": "Record you app's memory allocations with their call stack to identify code that allocates and frees objects unnecessarily.",
+        "fallback": "Record you app's memory allocations with their call stack to identify code that allocates and frees objects unnecessarily.",
+        "from_url": "https://developer.android.com/tools/performance/allocation-tracker/index.html",
+        "id": 1
+      }
+    ],
+    "ts": "1441743537.000162",
+    "id": "08tr2173",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "you need to be looking at both of those to validate the cause",
+    "ts": "1441743545.000164",
+    "id": "08tr2174",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Yeah, could be a lot of things. Sorry, I am sitting in  a meeting currently",
+    "ts": "1441743567.000165",
+    "id": "08tr2175",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "OOM errors are complex problems and you *have* to understand the full problem before looking at any particular potential source",
+    "edited": {
+      "user": "U055GGAHS",
+      "ts": "1441743584.000000"
+    },
+    "ts": "1441743570.000166",
+    "id": "08tr2176",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07MUKUBW",
+    "text": "ok",
+    "ts": "1441743579.000167",
+    "id": "08tr2177",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07MUKUBW",
+    "text": "i’ll take a look at it with a closer eye :simple_smile:",
+    "ts": "1441743592.000169",
+    "id": "08tr2178",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07MUKUBW",
+    "text": "nevertheless, just outta curiosity, has anyone used setImageDrawable as an alternative? :simple_smile:",
+    "ts": "1441743615.000170",
+    "id": "08tr2179",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "from what you are saying, yes it is likely to be the cause of image loading but it may be something significantly less obvious like holding references when you did not believe you where",
+    "ts": "1441743622.000171",
+    "id": "08tr2180",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "yes ive used all of the image view features",
+    "ts": "1441743635.000172",
+    "id": "08tr2181",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07MUKUBW",
+    "text": "awright :simple_smile: lemme give it another try",
+    "ts": "1441743651.000173",
+    "id": "08tr2182",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07MUKUBW",
+    "text": "thanks <@U055GGAHS>",
+    "ts": "1441743655.000174",
+    "id": "08tr2183",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "np",
+    "ts": "1441743657.000175",
+    "id": "08tr2184",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "you can try using leakcanary as well but there is potential it can not report the issue as sometimes non leaks are just holding too much memory",
+    "ts": "1441743700.000176",
+    "id": "08tr2185",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "just wondering, why wouldn’t Picasso work for what you’re trying to do?",
+    "ts": "1441743715.000177",
+    "id": "08tr2186",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "Picasso can load from resource id, files, or a uri",
+    "ts": "1441743851.000178",
+    "id": "08tr2187",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "so can ION :sunglasses:",
+    "ts": "1441743872.000179",
+    "id": "08tr2188",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "lol",
+    "ts": "1441743974.000180",
+    "id": "08tr2189",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Just won’t let it go",
+    "ts": "1441743980.000181",
+    "id": "08tr2190",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "neva",
+    "ts": "1441743983.000182",
+    "id": "08tr2191",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "ion...the elephone of image loading",
+    "ts": "1441743991.000183",
+    "id": "08tr2192",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "lol",
+    "ts": "1441743996.000184",
+    "id": "08tr2193",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "haha",
+    "ts": "1441743999.000185",
+    "id": "08tr2194",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "hahahah",
+    "ts": "1441744022.000186",
+    "id": "08tr2195",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "except that ion was written by someone that basically everyone has used his software",
+    "ts": "1441744026.000187",
+    "id": "08tr2196",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U07MUKUBW>: solely setting clickable to true does the job btw.",
+    "ts": "1441744341.000188",
+    "id": "08tr2197",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "You can also barely see it. When I add more animations, it'll all come together.",
+    "ts": "1441744419.000189",
+    "id": "08tr2198",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Any idea why it doesn't show unless I hold it?",
+    "edited": {
+      "user": "U061HDV96",
+      "ts": "1441744868.000000"
+    },
+    "ts": "1441744814.000190",
+    "id": "08tr2199",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "It works without an onClickListener.. hmm..",
+    "ts": "1441744918.000192",
+    "id": "08tr2200",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T0F8BW",
+    "text": "Quick question.",
+    "ts": "1441745599.000193",
+    "id": "08tr2201",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T0F8BW",
+    "text": "According to the android testing documentation, you are supposed to now contain your tests in a separate package as: &lt;you_package_name&gt;.tests",
+    "ts": "1441745646.000194",
+    "id": "08tr2202",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T0F8BW",
+    "text": "If this is the case, how do you test protected methods?",
+    "ts": "1441745658.000195",
+    "id": "08tr2203",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T0F8BW",
+    "text": "(from the main application package)",
+    "ts": "1441745669.000196",
+    "id": "08tr2204",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "extend the objects adding public wrapper methods or don’t make them protected",
+    "ts": "1441745850.000197",
+    "id": "08tr2205",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "heh, we have a library accessing objects from the main app module by using facades in a common library... you could totally do the same? :smile:",
+    "ts": "1441749458.000198",
+    "id": "08tr2206",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "actually, don't do this. it's bad",
+    "edited": {
+      "user": "U04TK850N",
+      "ts": "1441749480.000000"
+    },
+    "ts": "1441749465.000199",
+    "id": "08tr2207",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": ":disappointed:",
+    "ts": "1441749468.000200",
+    "id": "08tr2208",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "regarding my Rx + Retrofit 2 question, subscribeOn(<http://Schedulers.io|Schedulers.io>()) seems to have fixed the calls on the UI thread. i really hope there will be an easy way to set this for all calls though",
+    "ts": "1441759165.000202",
+    "id": "08tr2209",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "maybe i can do some magic in RxJavaCallAdapterFactory",
+    "ts": "1441759212.000203",
+    "id": "08tr2210",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

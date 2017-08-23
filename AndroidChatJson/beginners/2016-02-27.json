@@ -1,0 +1,984 @@
+[
+  {
+    "user": "U0P5WCK7Z",
+    "text": "Hey guys, I have a newbie question about MVP architecture. When I don't need model and therefore presenter to update my View, should I use it (presenter)? Or it's 100% legit to update view in itself? To clarify, one Activity starts another one.",
+    "edited": {
+      "user": "U0P5WCK7Z",
+      "ts": "1456563486.000000"
+    },
+    "ts": "1456563465.000739",
+    "id": "27be3336",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0PAY5FPZ",
+    "subtype": "channel_join",
+    "text": "<@U0PAY5FPZ|ofirchakon> has joined the channel",
+    "ts": "1456568352.000741",
+    "id": "27be3337",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0PB2LT98",
+    "subtype": "channel_join",
+    "text": "<@U0PB2LT98|tintran> has joined the channel",
+    "ts": "1456578238.000742",
+    "id": "27be3338",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0PB0D73M",
+    "subtype": "channel_join",
+    "text": "<@U0PB0D73M|rosy> has joined the channel",
+    "ts": "1456579717.000743",
+    "id": "27be3339",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0PB6969G",
+    "subtype": "channel_join",
+    "text": "<@U0PB6969G|es0329> has joined the channel",
+    "ts": "1456584554.000744",
+    "id": "27be3340",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "<@U0P5WCK7Z> I think that's acceptable, I tend to just have the view implement logic if it's just navigation-related. no need to over-engineer imo",
+    "ts": "1456587763.000745",
+    "id": "27be3341",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i.e. callback to the presenter just to call the same view method",
+    "edited": {
+      "user": "U0546QERR",
+      "ts": "1456587811.000000"
+    },
+    "ts": "1456587781.000746",
+    "id": "27be3342",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Yeah, if it’s just to start activity or update view no need to go to presenter and back",
+    "ts": "1456588989.000748",
+    "id": "27be3343",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "just for the heck of going to presenter",
+    "ts": "1456589002.000749",
+    "id": "27be3344",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0P5D3WQ2",
+    "text": "Guys stupid question, the app store listing means that i can have different game name displayed in the google play for users from different countries?",
+    "ts": "1456595195.000750",
+    "id": "27be3345",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0P5D3WQ2",
+    "text": "the app store listing translation*",
+    "ts": "1456595211.000751",
+    "id": "27be3346",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0P5D3WQ2",
+    "text": "i think that's the case but i am not sure, can someone please confirm this",
+    "ts": "1456595316.000752",
+    "id": "27be3347",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0P5WCK7Z",
+    "text": "Yes, you can have different application name for locales. I've seen many applications using this feature.",
+    "ts": "1456596198.000753",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U0P5D3WQ2"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "27be3348",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0P5D3WQ2",
+    "text": "can you give name of some app?",
+    "ts": "1456596230.000754",
+    "id": "27be3349",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0P5D3WQ2",
+    "text": "i have tried a lot of apps i never seen they use this feature",
+    "ts": "1456596242.000755",
+    "id": "27be3350",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0P5D3WQ2",
+    "text": "idk why",
+    "ts": "1456596245.000756",
+    "id": "27be3351",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0P5WCK7Z",
+    "text": "<https://play.google.com/store/apps/details?id=com.vkontakte.android>",
+    "ts": "1456596556.000757",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "27be3352",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N7D6F50",
+    "text": "",
+    "attachments": [
+      {
+        "fallback": "VK",
+        "text": "VK is a social network that unites people all over the world and helps them communicate comfortably and promptly. You can message your friends and see what's new in their lives, share photos, watch films, and listen to music. Our users join communities, meet new people, and adore playing games. The new VK app lets you enjoy all this and much more.",
+        "title": "VK",
+        "id": 1,
+        "title_link": "https://play.google.com/store/apps/details?id=https://play.google.com/store/apps/details?id=com.vkontakte.android&hl=en&gl=us",
+        "color": "3F51B5",
+        "fields": [
+          {
+            "title": "Author",
+            "value": "<http://VK.com|VK.com>",
+            "short": true
+          },
+          {
+            "title": "Price",
+            "value": "Free",
+            "short": true
+          },
+          {
+            "title": "Last updated",
+            "value": "November 24, 2015",
+            "short": true
+          },
+          {
+            "title": "Downloads",
+            "value": "100,000,000 - 500,000,000",
+            "short": true
+          },
+          {
+            "title": "All hail his Majesty",
+            "value": "@nish",
+            "short": false
+          }
+        ]
+      }
+    ],
+    "ts": "1456596557.000758",
+    "id": "27be3353",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0P5WCK7Z",
+    "text": "<https://play.google.com/store/apps/details?id=com.twitter.android> also use this feature, at least in Russian locale",
+    "ts": "1456596604.000759",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "27be3354",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N7D6F50",
+    "text": "",
+    "attachments": [
+      {
+        "fallback": "Twitter",
+        "text": "Find the best of Twitter in an instant with Moments. Follow top stories through immersive pics, clips, and conversations. Get insights and perspectives you won't find anywhere else. Twitter is a free app that lets you connect with people, express yourself, and discover more about all the things you love. &amp;bull; Get breaking news. Stay informed with the local and global news that matters to you most, as it happens. &amp;bull; Go behind the scenes at exclusive events like the Oscars, the Emmys, the MTV VMA's and the World Cup. &amp;bull; Express yourself with text, photos, emoji, emoticons, video, GIFs and Vines. &amp;bull; Use hashtags (like #NFL) to find more Tweets about topics you love. &amp;bull; Get closer to people who interest you, including celebrities like Kim Kardashian, Harry Styles and Rihanna. &amp;bull; Share Tweets with apps like Facebook, Whatsapp, Kik, LINE, email and SMS. &amp;bull; Tweet links from sites like YouTube, Pinterest, Instagram, Spotify and Pandora. &amp;bull; Send a private message without limits: now you're no longer limited to 140 characters when writing a Direct Message. &amp;bull; Now it's even easier to share a Tweet privately in a Direct Message. Simply press and hold the Tweet you want to share, then pick the people you want to send it to. Click here to see why Twitter is requesting permission to access features on your device: <https://support.twitter.com/groups/54-mobile-apps/topics/223-android/articles/20171517-why-is-the-twitter-app-requesting-permission-to-access-features-on-my-android-device>",
+        "title": "Twitter",
+        "id": 1,
+        "title_link": "https://play.google.com/store/apps/details?id=https://play.google.com/store/apps/details?id=com.twitter.android&hl=en&gl=us",
+        "color": "3F51B5",
+        "fields": [
+          {
+            "title": "Author",
+            "value": "Twitter, Inc.",
+            "short": true
+          },
+          {
+            "title": "Price",
+            "value": "Free",
+            "short": true
+          },
+          {
+            "title": "Last updated",
+            "value": "February 22, 2016",
+            "short": true
+          },
+          {
+            "title": "Downloads",
+            "value": "100,000,000 - 500,000,000",
+            "short": true
+          },
+          {
+            "title": "All hail his Majesty",
+            "value": "@nish",
+            "short": false
+          }
+        ]
+      }
+    ],
+    "ts": "1456596604.000760",
+    "id": "27be3355",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0P5WCK7Z",
+    "text": "Check out also Firefox browser",
+    "ts": "1456596651.000761",
+    "id": "27be3356",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0P5D3WQ2",
+    "text": "on the web version of play store they are all on english locale",
+    "ts": "1456596811.000762",
+    "id": "27be3357",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0P5WCK7Z",
+    "text": "Well, what locale your browser/play store use right now?",
+    "ts": "1456596935.000763",
+    "id": "27be3358",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0P5D3WQ2",
+    "text": "english",
+    "ts": "1456597190.000764",
+    "id": "27be3359",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0P5D3WQ2",
+    "text": "i just changed it right now and still no translations",
+    "ts": "1456597199.000765",
+    "id": "27be3360",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0P5D3WQ2",
+    "text": "nvm bro",
+    "ts": "1456597456.000766",
+    "id": "27be3361",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0P5D3WQ2",
+    "text": "i will play more with it later",
+    "ts": "1456597464.000767",
+    "id": "27be3362",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "<@U0P5D3WQ2>: : you can force the store in differen languages: <https://play.google.com/store/apps/details?id=com.twitter.android&amp;hl=ru>",
+    "edited": {
+      "user": "U04TK850N",
+      "ts": "1456597732.000000"
+    },
+    "ts": "1456597716.000768",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U0P5D3WQ2"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "27be3363",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N7D6F50",
+    "text": "",
+    "attachments": [
+      {
+        "fallback": "Twitter",
+        "text": "Find the best of Twitter in an instant with Moments. Follow top stories through immersive pics, clips, and conversations. Get insights and perspectives you won't find anywhere else. Twitter is a free app that lets you connect with people, express yourself, and discover more about all the things you love. &amp;bull; Get breaking news. Stay informed with the local and global news that matters to you most, as it happens. &amp;bull; Go behind the scenes at exclusive events like the Oscars, the Emmys, the MTV VMA's and the World Cup. &amp;bull; Express yourself with text, photos, emoji, emoticons, video, GIFs and Vines. &amp;bull; Use hashtags (like #NFL) to find more Tweets about topics you love. &amp;bull; Get closer to people who interest you, including celebrities like Kim Kardashian, Harry Styles and Rihanna. &amp;bull; Share Tweets with apps like Facebook, Whatsapp, Kik, LINE, email and SMS. &amp;bull; Tweet links from sites like YouTube, Pinterest, Instagram, Spotify and Pandora. &amp;bull; Send a private message without limits: now you're no longer limited to 140 characters when writing a Direct Message. &amp;bull; Now it's even easier to share a Tweet privately in a Direct Message. Simply press and hold the Tweet you want to share, then pick the people you want to send it to. Click here to see why Twitter is requesting permission to access features on your device: <https://support.twitter.com/groups/54-mobile-apps/topics/223-android/articles/20171517-why-is-the-twitter-app-requesting-permission-to-access-features-on-my-android-device>",
+        "title": "Twitter",
+        "id": 1,
+        "title_link": "https://play.google.com/store/apps/details?id=https://play.google.com/store/apps/details?id=com.twitter.android&amp&hl=en&gl=us",
+        "color": "3F51B5",
+        "fields": [
+          {
+            "title": "Author",
+            "value": "Twitter, Inc.",
+            "short": true
+          },
+          {
+            "title": "Price",
+            "value": "Free",
+            "short": true
+          },
+          {
+            "title": "Last updated",
+            "value": "February 22, 2016",
+            "short": true
+          },
+          {
+            "title": "Downloads",
+            "value": "100,000,000 - 500,000,000",
+            "short": true
+          },
+          {
+            "title": "All hail his Majesty",
+            "value": "@nish",
+            "short": false
+          }
+        ]
+      }
+    ],
+    "ts": "1456597717.000769",
+    "id": "27be3364",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "before anyone complains, The language setting for <@U0N7D6F50> is intentional",
+    "edited": {
+      "user": "U08GFT5V5",
+      "ts": "1456597770.000000"
+    },
+    "ts": "1456597764.000771",
+    "id": "27be3365",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "It’s a feature, not a bug",
+    "ts": "1456597779.000773",
+    "id": "27be3366",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0P5D3WQ2",
+    "text": "<@U04TK850N>: cool, is it possible also to force the whole play store? not just app listing?",
+    "ts": "1456597854.000774",
+    "id": "27be3367",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0P5D3WQ2",
+    "text": "<@U04TK850N>: how can i for example check the top apps in different countries",
+    "ts": "1456597870.000775",
+    "id": "27be3368",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "just add `&amp;hl=ru` to the url",
+    "ts": "1456597871.000776",
+    "id": "27be3369",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "works on almost all google service",
+    "ts": "1456597878.000777",
+    "id": "27be3370",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "that is just the language tho, for geo blocking use a proxy",
+    "ts": "1456597895.000778",
+    "id": "27be3371",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0P5D3WQ2",
+    "text": "i think i tried that but it still shows top apps from my country",
+    "ts": "1456597939.000779",
+    "id": "27be3372",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0P5D3WQ2",
+    "text": "thank you btw for the `hl` trick",
+    "ts": "1456598027.000780",
+    "id": "27be3373",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0NB2HX8A",
+    "text": "What's the best recommended way to store a URL string you receive at login that will be used across multiple activities?",
+    "ts": "1456606768.000781",
+    "id": "27be3374",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0PBQUJ94",
+    "subtype": "channel_join",
+    "text": "<@U0PBQUJ94|mwerschy> has joined the channel",
+    "ts": "1456606806.000782",
+    "id": "27be3375",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "shared preferences would work for that scenario",
+    "ts": "1456606826.000783",
+    "id": "27be3376",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0NB2HX8A",
+    "text": "Thanks, <@U04U5KS3Z> ! ",
+    "ts": "1456606876.000784",
+    "id": "27be3377",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0NB2HX8A",
+    "text": "That's more effective than sending intents all over the place",
+    "ts": "1456606926.000785",
+    "id": "27be3378",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0NB2HX8A",
+    "text": "(I meant adding extras to intents)",
+    "ts": "1456606977.000786",
+    "id": "27be3379",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

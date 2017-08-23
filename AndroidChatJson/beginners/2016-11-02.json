@@ -1,0 +1,511 @@
+[
+  {
+    "user": "U0ESBKWKA",
+    "text": "is it ok to pass a view (which implements Parcelable) in a bundle to another activity?",
+    "ts": "1478079903.000068",
+    "id": "02be9944",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2XD6327M",
+    "text": "<@U2XD6327M|pintofeggs> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1478081053.000069",
+    "id": "02be9945",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "What are you trying to achieve?",
+    "ts": "1478081246.000070",
+    "id": "02be9946",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBKWKA",
+    "text": "I wanted a way to insert view from one activity to another.",
+    "ts": "1478096413.000071",
+    "id": "02be9947",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBKWKA",
+    "text": "Building a library. I have some prefilled data with which I am creating an activity. But want to create a way for the user to insert his views",
+    "ts": "1478096462.000072",
+    "id": "02be9948",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBKWKA",
+    "text": "I know getting a layoutRes and using inflateView would have worked but",
+    "ts": "1478096476.000073",
+    "id": "02be9949",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBKWKA",
+    "text": "The user wouldn’t have received the onclick or other listener",
+    "ts": "1478096495.000074",
+    "id": "02be9950",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBKWKA",
+    "text": "What I ended up doing was taking a Fragment class file from the user and use newInstace() and fragmentManager to inflate it",
+    "ts": "1478096538.000075",
+    "id": "02be9951",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBKWKA",
+    "text": "This way user’s Fragment would still receive all the action",
+    "ts": "1478096562.000076",
+    "id": "02be9952",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Pass the data between activities, then pass it into a new view",
+    "ts": "1478096614.000077",
+    "id": "02be9953",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Don’t pass views around",
+    "ts": "1478096618.000078",
+    "id": "02be9954",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBKWKA",
+    "text": "That would be through interfaces right?",
+    "ts": "1478096658.000079",
+    "id": "02be9955",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBKWKA",
+    "text": "I am not really passing views, just the class reference and loading it when required. Is it a wrong approach?",
+    "ts": "1478096684.000080",
+    "id": "02be9956",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "If you’re starting a new activity, then you pass in the data that activity needs in a bundle",
+    "ts": "1478096740.000081",
+    "id": "02be9957",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Then you display that data however you want",
+    "ts": "1478096754.000082",
+    "id": "02be9958",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "If you need to create different views depending on the data, then maybe consider creating something like a View Factory",
+    "ts": "1478096781.000083",
+    "id": "02be9959",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1ZKPL2HJ",
+    "text": "Hey everyone, I am looking for some ideas on how I can get something done. I have a linear layout section on the bottom of my app. I pull JSON data and fill the layout with its corresponding data. Now the JSON data changes every 15 seconds or so. Is it possible depending on the JSON response (some fields get null for example) to change the linear layout items?",
+    "ts": "1478101732.000084",
+    "id": "02be9960",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "Yes, it is.",
+    "ts": "1478104416.000085",
+    "id": "02be9961",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1ZKPL2HJ",
+    "text": "how would I go about that? Would I just hide and show elements? Or can I make specific linear layout properties?",
+    "ts": "1478104763.000086",
+    "id": "02be9962",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "Are you facing certain problems?",
+    "ts": "1478108007.000087",
+    "id": "02be9963",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1ZKPL2HJ",
+    "text": "no, just looking for some ideas on how to change bottom portion of a layout based on JSON response. (top portion is a video)",
+    "ts": "1478108058.000088",
+    "id": "02be9964",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Wait, are you using the linearlayout as a listview or something?",
+    "ts": "1478108103.000089",
+    "id": "02be9965",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Because if you are, don’t, and if you aren’t, just reference the views directly like you normally would",
+    "ts": "1478108122.000090",
+    "id": "02be9966",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "Just populate your layout other times like you do first time.\nAnd yes, you should use RecyclerView.",
+    "edited": {
+      "user": "U2M0WUZ7A",
+      "ts": "1478108192.000000"
+    },
+    "ts": "1478108141.000091",
+    "id": "02be9967",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1ZKPL2HJ",
+    "text": "<@U1LJG0Y03> not as a listview. Imagine a stats bar at the bottom (ESPN for example). and every 15-30 seconds, I make a call to an endpoint and I update the text and images in that linearlayout(horizontal). But sometimes it requires more than one image or no images, and the layout for these differences change.",
+    "ts": "1478108295.000094",
+    "id": "02be9968",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Just update them like you normally would",
+    "ts": "1478108332.000095",
+    "id": "02be9969",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "On the first pass",
+    "ts": "1478108341.000096",
+    "id": "02be9970",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1ZKPL2HJ",
+    "text": "ok ill give it a shot",
+    "ts": "1478108435.000097",
+    "id": "02be9971",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

@@ -1,0 +1,136 @@
+[
+  {
+    "user": "U14AQ1PGE",
+    "text": "<@U0LETFK18>: RecyclerView is not intended to display Fragments. If the ViewPager container is inside a Fragment, and you use a FragmentPagerAdapter, then you will need to use `getChildFragmentManager()` for nested Fragments is you need the manager instance. ViewPager is widely used for tabs with sticky sie scrolling, while RecyclerView belongs to lists",
+    "ts": "1461827768.000243",
+    "id": "28be4511",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "<@U14AQ1PGE>: Noted! thanks!",
+    "ts": "1461835022.000244",
+    "id": "28be4512",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0BQ5H6JG",
+    "subtype": "channel_join",
+    "text": "<@U0BQ5H6JG|brian> has joined the channel",
+    "ts": "1461865077.000245",
+    "id": "28be4513",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0BGDHB6E",
+    "subtype": "channel_leave",
+    "text": "<@U0BGDHB6E|fgsguedes> has left the channel",
+    "ts": "1461888390.000246",
+    "id": "28be4514",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "Trying to set ViewPager’s height to be equaling the height of Recyclerview that’s in it. However, when I do override onMeasure method to get the height, the getMeasuredHeight is always 0.  Hence, heightMeasureSpec is always  0. And nothing gets displayed in the Viewpager.\n\n```\n        @Override\n    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {\n\n       if (mCurrentView == null) {\n           super.onMeasure(widthMeasureSpec, heightMeasureSpec);\n           return;\n       }\n\n       int height = 0;\n       mCurrentView.measure(widthMeasureSpec, MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED));\n       int h = mCurrentView.getMeasuredHeight();\n       if (h &gt; height) {\n           height = h;\n       }\n\n       heightMeasureSpec = MeasureSpec.makeMeasureSpec(height, MeasureSpec.EXACTLY);\n\n        super.onMeasure(widthMeasureSpec, heightMeasureSpec);\n    }\n```",
+    "edited": {
+      "user": "U0LETFK18",
+      "ts": "1461902861.000000"
+    },
+    "ts": "1461902822.000247",
+    "id": "28be4515",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U14Q91KLJ",
+    "subtype": "channel_join",
+    "text": "<@U14Q91KLJ|marklackey> has joined the channel",
+    "ts": "1461904258.000249",
+    "id": "28be4516",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U14QF3LCS",
+    "subtype": "channel_join",
+    "text": "<@U14QF3LCS|anuragkondeya> has joined the channel",
+    "ts": "1461907956.000250",
+    "id": "28be4517",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

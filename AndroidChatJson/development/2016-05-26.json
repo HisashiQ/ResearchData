@@ -1,0 +1,839 @@
+[
+  {
+    "user": "U0SNJDQDC",
+    "text": "Any of you guys using ActiveAndroid or any other ORM library? Is it possible to migrate these sqlite db to Realm? Just curious.",
+    "ts": "1464247611.004467",
+    "id": "26de36066",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Z248CVB",
+    "text": "Hello, guys. I would like to stack the coming push notifications but they don’t group. Here is my code:\n```Intent intent = new Intent(this, MainActivity.class);\n        intent.replaceExtras(extras);\n        PendingIntent contentIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);\n\n        if (GROUP_ID != null) {\n            int notId = GROUP_ID.equals(GROUP_ADDS) ? NOTIFICATION_ADD_ID : NOTIFICATION_GAME_ID;\n\n            NotificationCompat.Builder build = new NotificationCompat.Builder(this)\n                    .setContentTitle(messageTitle)\n                    .setContentText(messageValue)\n                    .setSmallIcon(R.drawable.free_logo_01)\n                    .setGroup(GROUP_ID)\n                    .setAutoCancel(true)\n                    .setCategory(NotificationCompat.CATEGORY_SOCIAL)\n                    .setGroupSummary(true)\n                    .setContentIntent(contentIntent)\n                    .setStyle(new NotificationCompat.BigTextStyle()\n                            .bigText(messageValue))\n                    .setContentIntent(contentIntent);\n\n            NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);\n            notificationManager.notify(notId, build.build());\n\n            // notify activity\n            Intent intentNewPush = new Intent(Consts.NEW_PUSH_EVENT);\n            intentNewPush.replaceExtras(extras);\n            LocalBroadcastManager.getInstance(this).sendBroadcast(intentNewPush);\n        }```",
+    "ts": "1464249263.004468",
+    "id": "26de36067",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U081R6C78",
+    "subtype": "channel_leave",
+    "text": "<@U081R6C78|juanramon> has left the channel",
+    "ts": "1464251624.004469",
+    "id": "26de36068",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1BUAFESJ",
+    "subtype": "channel_join",
+    "text": "<@U1BUAFESJ|kanika> has joined the channel",
+    "ts": "1464258264.004471",
+    "id": "26de36069",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Z248CVB",
+    "text": "someone knowing how to fix the problem with push notifications grouping?",
+    "ts": "1464263527.004472",
+    "id": "26de36070",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U15CXBV39",
+    "text": "Is GCM really good for push Notifications..\nespecially for Chat applications..\nI do not think that apps like Facebook Messenger, Skype, Whatsapp uses GCM.\nCuz GCM sometimes might delay the message or not have it delivered..",
+    "ts": "1464265424.004474",
+    "id": "26de36071",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Z248CVB",
+    "text": "just for now it works fine. also our app is not chat or something like that. it’s simple app with notifications for particular events",
+    "ts": "1464265692.004475",
+    "id": "26de36072",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18QA73GE",
+    "text": "right <@U15CXBV39>: GCM alone is not reliable and apps might miss notifications, facebook messenger uses mqtt, we at applozic also uses mqtt, maintaining a socket connection when the app is in foreground for real time update.",
+    "ts": "1464266791.004476",
+    "id": "26de36073",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U15CXBV39",
+    "text": "<@U18QA73GE>:  great, Please can you refer me on how to use mqtt for android, i have read a bit about rabbitMQ and VerneMQ",
+    "ts": "1464266917.004477",
+    "id": "26de36074",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18QA73GE",
+    "text": "you can check out our open source client sdk <https://github.com/AppLozic/Applozic-Android-SDK>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "AppLozic/Applozic-Android-SDK",
+        "title_link": "https://github.com/AppLozic/Applozic-Android-SDK",
+        "text": "Applozic-Android-SDK - Android Real Time Chat &amp; Messaging SDK",
+        "fallback": "GitHub: AppLozic/Applozic-Android-SDK",
+        "thumb_url": "https://avatars0.githubusercontent.com/u/11265330?v=3&s=400",
+        "from_url": "https://github.com/AppLozic/Applozic-Android-SDK",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1464266989.004478",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50",
+          "U1AHWC17G"
+        ],
+        "count": 2
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U1ADY7PBP"
+        ],
+        "count": 2
+      },
+      {
+        "name": "+1",
+        "users": [
+          "U1AHWC17G",
+          "U1ADY7PBP"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "26de36075",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18QA73GE",
+    "text": "it is using mqtt for real time update",
+    "ts": "1464267015.004480",
+    "id": "26de36076",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1C0C2DPS",
+    "subtype": "channel_join",
+    "text": "<@U1C0C2DPS|ribesg> has joined the channel",
+    "ts": "1464270857.004481",
+    "id": "26de36077",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1C0C2DPS",
+    "text": "Hi, I'm working on a thing <https://files.ribesg.fr/.random/.device-2016-05-22-162623.mp4>\nIt's kinda like the Youtube Android app: the flying view you see will be a small video/stream player, which will be able to hover over the entire app. To achieve this, I will be using a single activity for my entire app.\nI will have multiple \"levels\" of what's called \"overlay view\" in the video. I'm wondering what I should use for these.\n- Would using just views work well?\n- Should I use Fragments instead?\n- I implemented this with a custom layout. What's better, adding Fragments to the Layout directly or adding Fragments to \"host views\" which I would add to the layout?",
+    "ts": "1464271495.004482",
+    "id": "26de36078",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KC373GX",
+    "text": "are there any resources for… free assets? looking for 8bit specifically",
+    "ts": "1464279890.004483",
+    "id": "26de36079",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JGJJMLP",
+    "text": "<@U0KC373GX>: like <http://opengameart.org/>",
+    "ts": "1464280054.004484",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U0KC373GX"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "26de36080",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KC373GX",
+    "text": "<@U0JGJJMLP>: thanks!",
+    "ts": "1464281100.004485",
+    "id": "26de36081",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1C26BLBG",
+    "subtype": "channel_join",
+    "text": "<@U1C26BLBG|ashok> has joined the channel",
+    "ts": "1464282905.004486",
+    "id": "26de36082",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1C2SJ1H7",
+    "subtype": "channel_join",
+    "text": "<@U1C2SJ1H7|flash3001> has joined the channel",
+    "ts": "1464284202.004487",
+    "id": "26de36083",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1C2PFY3A",
+    "subtype": "channel_join",
+    "text": "<@U1C2PFY3A|aaaashish1> has joined the channel",
+    "ts": "1464285340.004488",
+    "id": "26de36084",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1C2PFY3A",
+    "text": "heyy guys",
+    "ts": "1464285485.004489",
+    "id": "26de36085",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1C2PFY3A",
+    "text": "heyy Bro...\ni am working on android keyboard project. I want to add suggestions to my keyboard based on the users input. I have read about candidiates view but i cannot understand from where to start, Can you help me in anyway?",
+    "ts": "1464285618.004490",
+    "id": "26de36086",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1C2PFY3A",
+    "text": "can anybody help me please",
+    "ts": "1464285656.004491",
+    "id": "26de36087",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1BQ2C83W",
+    "text": "suggestions or auto-completion?",
+    "ts": "1464287296.004492",
+    "id": "26de36088",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1BQ2C83W",
+    "text": "<@U1C2PFY3A>:",
+    "ts": "1464287307.004493",
+    "id": "26de36089",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1C34PXNY",
+    "subtype": "channel_join",
+    "text": "<@U1C34PXNY|cenkerdemir> has joined the channel",
+    "ts": "1464289561.004494",
+    "id": "26de36090",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "has anyone ever profiled class.getSimpleName()? feels like a silly question, i don't know why it would be expensive but my coworker seems to be seeing high CPU usage from it in our app. most instances of it are assigned to static constants so i don't think we're calling it _too_ much",
+    "ts": "1464289661.004495",
+    "id": "26de36091",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i've seen lots of devs use it for logging tags and such, and never heard anything about bad perf. so if it's actually expensive, that sucks",
+    "ts": "1464289763.004496",
+    "id": "26de36092",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "okay he refactored the instances we were using it in a non-static field and the profiler isn't even picking up the method anymore. i guess the compiler optimizes the call and it's not even called at runtime now. interesting :neutral_face:",
+    "ts": "1464291382.004497",
+    "id": "26de36093",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KTPB91V",
+    "text": "I guess is because `class.getSimpleName` does some kind of reflection",
+    "ts": "1464292421.004498",
+    "id": "26de36094",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1C492T7H",
+    "subtype": "channel_join",
+    "text": "<@U1C492T7H|marlonwalker> has joined the channel",
+    "ts": "1464295463.004499",
+    "id": "26de36095",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KTPB91V",
+    "text": "<http://techcrunch.com/2016/05/26/jury-finds-googles-implementation-of-java-in-android-was-fair-use/>",
+    "attachments": [
+      {
+        "service_name": "TechCrunch",
+        "service_url": "http://techcrunch.com",
+        "title": "Jury finds Google’s implementation of Java in Android was fair use",
+        "title_link": "http://techcrunch.com/2016/05/26/jury-finds-googles-implementation-of-java-in-android-was-fair-use/",
+        "author_name": "Kate Conger",
+        "thumb_url": "https://i1.wp.com/tctechcrunch2011.files.wordpress.com/2016/05/shutterstock_140867215.jpg?fit=200%2C150&ssl=1",
+        "thumb_width": 200,
+        "thumb_height": 112,
+        "text": "Software developers can breathe a massive sigh of relief &amp;mdash; a jury found today that Google&amp;rsquo;s implementation of 37 Java APIs in Android qualified as fair use. However, Oracle attorneys&amp;nbsp;have already indicated that they will appeal the decision.\n&amp;ldquo;Today&amp;rsquo;s verdict that Android makes fair use of Java APIs represents a win for the Android ecosystem, for the Java programming community, and for software developers who rely on open and free programming languages to build innovative consumer products,&amp;rdquo; a Google spokesperson said.\nIf the jury had found in favor of Oracle, which owns the Java programming language, it may have scared developers away from reimplementing&amp;nbsp;other companies&amp;rsquo;&amp;nbsp;APIs&amp;nbsp;in their work &amp;mdash; a widespread practice in software development.\nOracle&amp;rsquo;s fight with Google began in 2010, when Oracle filed a suit claiming Google used implementing code from the Oracle-owned Java programming language without permission. A court initially found that Google did not violate Oracle&amp;rsquo;s copyright, but the decision was overturned when an appeals court found that the APIs in question are indeed copyrightable. The case then turned to the question of fair use, which allows for the use of copyrighted material&amp;nbsp;under certain conditions.\nOracle licenses the use of Java in commercial products, but Google argued that its implementation of the 37 APIs in question fell under fair use because it transformed the bits of Java it used into a unique product &amp;mdash; the Android platform. If Oracle had won, it stood to gain roughly $9 billion in damages.\n&amp;ldquo;Overall, this is a win&amp;nbsp;for software development,&amp;rdquo; said Mitch Stoltz, a senior staff attorney at the Electronic Frontier Foundation who focuses on copyright issues. &amp;ldquo;I think it&amp;rsquo;ll give software developers a bit more confidence that reimplementing APIs is not something that&amp;rsquo;s going to get them sued.&amp;rdquo; However, Stoltz pointed out that the appellate ruling still stands, and small developers could still face copyright lawsuits from tech behemoths.\nDuring his testimony in the case, Google co-founder and Alphabet CEO Larry Page disputed Oracle&amp;rsquo;s assertion that Google engineers had copied code when they built the Android platform. &amp;ldquo;I don&amp;rsquo;t accept the definition of code includes API declarations,&amp;rdquo; he told the jury. Page also called his engineers&amp;rsquo; use of&amp;nbsp;the Java declaring code in Android &amp;ldquo;widespread industry practice.&amp;rdquo;\n\n\tRelated Articles\n\n\t\t\t\t\tGoogle and Oracle present closing arguments in battle over Java\n\t\t\t\t\tAlphabet CEO Larry Page defends Android's use of Java APIs in court\n\t\t\t\t\tIn Oracle's world, Android is a crime against open source\n\t\t\t\t\tOracle CEO claims it discounted Java by 97.5% to beat out Android on Amazon's Paperwhite\n\t\nJudge William Alsup, who also presided over Oracle&amp;rsquo;s copyright case against Google, frequently praised the jury for its thoughtful approach to this case. In a somewhat unusual move, Alsup allowed jurors to take their notes home with them before they heard closing arguments in the case and during their deliberations, so they could study the facts. \nThe ruling could indicate the winding down of a legal battle &amp;mdash; but Oracle has already said it will appeal.&amp;nbsp;\n&amp;ldquo;We strongly believe that Google developed Android by illegally copying core Java technology to rush into the mobile device market,&amp;rdquo; Oracle&amp;rsquo;s general counsel Dorian Daley said in a statement. &amp;ldquo;Oracle brought this lawsuit to put a stop to Google&amp;rsquo;s illegal behavior. We believe there are numerous grounds for appeal and we plan to bring this case back to the Federal Circuit on appeal.&amp;rdquo;\nThis is a developing story and will be updated.",
+        "fallback": "TechCrunch Link: Jury finds Google&#8217;s implementation of Java in Android was fair&nbsp;use",
+        "from_url": "http://techcrunch.com/2016/05/26/jury-finds-googles-implementation-of-java-in-android-was-fair-use/",
+        "service_icon": "http://techcrunch.com/favicon.ico",
+        "id": 1
+      }
+    ],
+    "ts": "1464296788.004500",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "26de36096",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KTPB91V",
+    "text": ":O",
+    "ts": "1464296792.004502",
+    "id": "26de36097",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U0KTPB91V>: might be better off in <#C0GMUND6Z>",
+    "ts": "1464297052.004503",
+    "id": "26de36098",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KTPB91V",
+    "text": ":thumbsup:",
+    "ts": "1464297062.004504",
+    "id": "26de36099",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0SNJDQDC",
+    "text": "$9 billion case over some codes. Wow",
+    "ts": "1464316625.004505",
+    "id": "26de36100",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0SNJDQDC",
+    "text": "Glad they won",
+    "ts": "1464316635.004506",
+    "id": "26de36101",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "the 9 billion is a small sum compared to the bigger issue of api usage rights and policies",
+    "ts": "1464321381.004507",
+    "id": "26de36102",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Google had 74.54 billion USD revenue in 2015",
+    "ts": "1464330884.004508",
+    "id": "26de36103",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "So 9 bill is more than 10% of that. That would’ve been a huge setback no matter how you look at it, it would’ve impacted everything.",
+    "ts": "1464330929.004509",
+    "id": "26de36104",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "sure, it would drop the share price",
+    "ts": "1464331681.004510",
+    "id": "26de36105",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "impact on the developer world would be worse tho",
+    "ts": "1464331701.004511",
+    "id": "26de36106",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

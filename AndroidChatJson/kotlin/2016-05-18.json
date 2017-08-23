@@ -1,0 +1,232 @@
+[
+  {
+    "user": "U08GFT5V5",
+    "text": "/gif golf clap",
+    "ts": "1463565318.000085",
+    "id": "18ko1490",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "",
+    "bot_id": "B0GH4RVHU",
+    "attachments": [
+      {
+        "fallback": "<http://i.imgur.com/29XYmgE.gif>",
+        "image_url": "http://i.imgur.com/29XYmgE.gif",
+        "image_width": 450,
+        "image_height": 345,
+        "image_bytes": 1940566,
+        "is_animated": true,
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1463565318.000086",
+    "id": "18ko1491",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08MQ0F8V",
+    "text": "Going to throw something in here for opinion/review. \nSo I’ve created my own RxBindings (in Kotlin) for EditText, that combine all of the TextWatcher events in one Rx stream. I noticed that this doesn’t exist in JWs RxBindings library (there is a stream per event, so multiple text watchers get set up there). The resulting API looks like this:",
+    "ts": "1463566880.000087",
+    "id": "18ko1492",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08MQ0F8V",
+    "text": "```editText?.textEvents()\n                ?.filter { it is AfterTextChangedEvent || it is BeforeTextChangedEvent }\n                ?.debounce(1, TimeUnit.SECONDS)\n                ?.subscribe {\n                    when (it) {\n                        is AfterTextChangedEvent -&gt; { Log.d(\"Callback\", \"value after is \" + it.value) }\n                        is BeforeTextChangedEvent -&gt; { Log.d(\"Callback\", \"value before is \" + it.value + \", count:\" + it.count) }\n                    }\n                }```",
+    "ts": "1463566889.000088",
+    "id": "18ko1493",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08MQ0F8V",
+    "text": "Does anyone have any opinion on this? Would it be useful?",
+    "ts": "1463566967.000089",
+    "id": "18ko1494",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "subtype": "channel_join",
+    "text": "<@U09T8SFG8|aki> has joined the channel",
+    "ts": "1463580640.000090",
+    "id": "18ko1495",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "<@U08MQ0F8V> you would get a similar effect by just calling `merge` on the streams from jw's library wouldn't you?",
+    "ts": "1463589117.000091",
+    "id": "18ko1496",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "or is that how you did it :stuck_out_tongue:",
+    "ts": "1463589175.000092",
+    "id": "18ko1497",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0677FXK8",
+    "subtype": "channel_join",
+    "text": "<@U0677FXK8|mandeep> has joined the channel",
+    "ts": "1463590983.000093",
+    "id": "18ko1498",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "&gt; You can develop your plugins in any JVM language, but as part of this effort, we are working on making Kotlin the language of choice for developing Gradle plugins. Stay tuned!",
+    "ts": "1463619057.000094",
+    "id": "18ko1499",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U08GFT5V5>: Groovy is doomed!",
+    "ts": "1463619061.000095",
+    "id": "18ko1500",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "(that’s a quote from Gradle, not JetBrains, fyi)",
+    "ts": "1463619078.000096",
+    "id": "18ko1501",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

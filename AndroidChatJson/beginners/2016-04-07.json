@@ -1,0 +1,372 @@
+[
+  {
+    "user": "U0YM7S9JB",
+    "subtype": "channel_join",
+    "text": "<@U0YM7S9JB|kuwako> has joined the channel",
+    "ts": "1460013962.000499",
+    "id": "07be4156",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0YNTS2R4",
+    "subtype": "channel_join",
+    "text": "<@U0YNTS2R4|learner> has joined the channel",
+    "ts": "1460030148.000500",
+    "id": "07be4157",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D7JS821",
+    "subtype": "channel_leave",
+    "text": "<@U0D7JS821|bgardner> has left the channel",
+    "ts": "1460036619.000501",
+    "id": "07be4158",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K8T5YNT",
+    "text": "<@U0LETFK18>: I have the same problem. Do you already have a solution?",
+    "ts": "1460041306.000502",
+    "id": "07be4159",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "<@U0K8T5YNT>: Unfortunately no. I’ve search around, but it seems most of the answers are pointing to the WebSettings done above. My last resort (if I don’t find an alternative way for this particular site I am trying to load) I would open up the default device browser. It loads waaayyy faster. The drawback of course is user leaving your app, but, the loading is much much better",
+    "ts": "1460041946.000503",
+    "reactions": [
+      {
+        "name": "notbad",
+        "users": [
+          "U0K8T5YNT"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "07be4160",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JEC0JHJ",
+    "text": "Hi guys, I ve a question about editext and softkeyboard. Is ```if (actionId == EditorInfo.IME_ACTION_SEND) {}``` can be never triggered on some custom softkeyboard ?",
+    "edited": {
+      "user": "U0JEC0JHJ",
+      "ts": "1460042353.000000"
+    },
+    "ts": "1460042316.000504",
+    "id": "07be4161",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JEC0JHJ",
+    "text": "even if I set ```            android:imeOptions=« actionSend »```",
+    "ts": "1460042330.000505",
+    "id": "07be4162",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JEC0JHJ",
+    "text": "?",
+    "ts": "1460042334.000506",
+    "id": "07be4163",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K8T5YNT",
+    "text": "<@U0LETFK18>: With the default device browser, really is faster, but I really need open it into my fragment :disappointed:\nIf i find a effective solution, ring you.",
+    "ts": "1460046318.000509",
+    "id": "07be4164",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K8T5YNT",
+    "text": "<@U0LETFK18>: This snippet works to me:\n```\n        webView = (WebView) view.findViewById(R.id.webview);\n        WebSettings webSettings = webView.getSettings();\n        webSettings.setJavaScriptEnabled(true);\n        webSettings.setDatabaseEnabled(true);\n        webSettings.setDomStorageEnabled(true);\n        webSettings.setAppCacheEnabled(true);\n        webSettings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);\n        webView.loadUrl(url);\n\n        webView.setWebViewClient(new WebViewClient() {\n            @Override\n            public boolean shouldOverrideUrlLoading(WebView view, String url) {\n                view.loadUrl(url);\n                return true;\n            }\n        });\n\n```",
+    "edited": {
+      "user": "U0K8T5YNT",
+      "ts": "1460051724.000000"
+    },
+    "ts": "1460047869.000510",
+    "id": "07be4165",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0YRXMYTH",
+    "subtype": "channel_join",
+    "text": "<@U0YRXMYTH|icechen1> has joined the channel",
+    "ts": "1460048096.000513",
+    "id": "07be4166",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0YQTNAHZ",
+    "subtype": "channel_join",
+    "text": "<@U0YQTNAHZ|mcondle> has joined the channel",
+    "ts": "1460049966.000514",
+    "id": "07be4167",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0YSYGRUM",
+    "subtype": "channel_join",
+    "text": "<@U0YSYGRUM|dankan83> has joined the channel",
+    "ts": "1460053776.000516",
+    "id": "07be4168",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0YRJEDHR",
+    "subtype": "channel_join",
+    "text": "<@U0YRJEDHR|cparker15> has joined the channel",
+    "ts": "1460054122.000517",
+    "id": "07be4169",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0YT1GNRK",
+    "subtype": "channel_join",
+    "text": "<@U0YT1GNRK|borjabravo10> has joined the channel",
+    "ts": "1460054291.000518",
+    "id": "07be4170",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0YUQGM9B",
+    "subtype": "channel_join",
+    "text": "<@U0YUQGM9B|kishore> has joined the channel",
+    "ts": "1460065094.000519",
+    "id": "07be4171",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "<@U0K8T5YNT>: thanks! I think most of your code are similar to mine. Mine is a peculiar case, where one particular website is loading slow. The rest works fine",
+    "ts": "1460075130.000520",
+    "id": "07be4172",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Z1AJPHP",
+    "subtype": "channel_join",
+    "text": "<@U0Z1AJPHP|asamofalov> has joined the channel",
+    "ts": "1460088112.000521",
+    "id": "07be4173",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Z1CAW5U",
+    "subtype": "channel_join",
+    "text": "<@U0Z1CAW5U|barrowkada> has joined the channel",
+    "ts": "1460095830.000522",
+    "id": "07be4174",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

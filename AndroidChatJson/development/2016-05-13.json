@@ -1,0 +1,2003 @@
+[
+  {
+    "user": "U0A1BE7KQ",
+    "text": "The first parameter of `Intent.putExtra()` is  The name of the extra data, with package prefix.  The javadocs say :\nThe name must include a package prefix, for example the app com.android.contacts would use names like \"com.android.contacts.ShowAll”.\nWhere is the best place to store strings like this in an Android application?",
+    "ts": "1463123444.003474",
+    "id": "13de35174",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U14CSV4F6",
+    "text": "@lawlorslar",
+    "ts": "1463123495.003475",
+    "id": "13de35175",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U14CSV4F6",
+    "text": "<@U0A1BE7KQ>: in strings.xml on your values folder",
+    "ts": "1463123505.003476",
+    "id": "13de35176",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "so i thought that would be a candidate",
+    "ts": "1463124012.003477",
+    "id": "13de35177",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "any reasoning behind that",
+    "ts": "1463124018.003478",
+    "id": "13de35178",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "i just want to follow best practices",
+    "ts": "1463124028.003479",
+    "id": "13de35179",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U14CSV4F6",
+    "text": "the best practice is to always use resource folder (eg. color, string, drawable) as this will  make your work much lesser compared to hard coded strings. Also to support multi-language, you need to use the strings.xml as this will automatically get the right file base on your systems localization",
+    "ts": "1463124371.003480",
+    "id": "13de35180",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "what about using Constants?",
+    "ts": "1463124448.003481",
+    "id": "13de35181",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "`private static final String ONBOARDING_SETTINGS = \"onboarding_settings\";`",
+    "ts": "1463124468.003482",
+    "id": "13de35182",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "for `SharedPreferences.getSharedPreferences()`",
+    "ts": "1463124504.003483",
+    "id": "13de35183",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "or `Bundle.putInt()`",
+    "ts": "1463124629.003484",
+    "id": "13de35184",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "there are several things like this that require a string as the first param",
+    "ts": "1463124653.003485",
+    "id": "13de35185",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "it usually represents the `key`",
+    "ts": "1463124673.003486",
+    "id": "13de35186",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U14CSV4F6",
+    "text": "I think this will clarify things, I think i was wrong with my 1st answer. You can use string.xml if you want the Strings to be shown in your views such as labels, hints, etc.",
+    "ts": "1463124683.003487",
+    "id": "13de35187",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "yes im doing that",
+    "ts": "1463124697.003488",
+    "id": "13de35188",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "all of the UI",
+    "ts": "1463124703.003489",
+    "id": "13de35189",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U14CSV4F6",
+    "text": "you must use constants for strings that does not come up in your UI",
+    "ts": "1463124712.003490",
+    "id": "13de35190",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "i have the strings in strings.xml",
+    "ts": "1463124712.003491",
+    "id": "13de35191",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U14CSV4F6",
+    "text": "like shared preference",
+    "ts": "1463124719.003492",
+    "id": "13de35192",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "no hardcoded strings",
+    "ts": "1463124720.003493",
+    "id": "13de35193",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U14CSV4F6",
+    "text": "what you are doing right now is correct",
+    "ts": "1463124738.003494",
+    "id": "13de35194",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "so things that don’t get displayed in the UI should go where?",
+    "ts": "1463124755.003495",
+    "id": "13de35195",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "not in strings.xml",
+    "ts": "1463124762.003496",
+    "id": "13de35196",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "but ...",
+    "ts": "1463124764.003497",
+    "id": "13de35197",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U14CSV4F6",
+    "text": "constants",
+    "ts": "1463124768.003498",
+    "id": "13de35198",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "so just use constants",
+    "ts": "1463124777.003499",
+    "id": "13de35199",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U14CSV4F6",
+    "text": "you can make it constants for that activity",
+    "ts": "1463124782.003500",
+    "id": "13de35200",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "how about this example",
+    "ts": "1463124792.003501",
+    "id": "13de35201",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U14CSV4F6",
+    "text": "or u can make a class full of constants but for me activity specific constants is much better",
+    "ts": "1463124801.003502",
+    "id": "13de35202",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "i pass data from activity A to activity B",
+    "ts": "1463124802.003503",
+    "id": "13de35203",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "and i want to use constants to define these keys",
+    "ts": "1463124823.003504",
+    "id": "13de35204",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "where do i keep the constant",
+    "ts": "1463124829.003505",
+    "id": "13de35205",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "in activity A or activity B",
+    "ts": "1463124833.003506",
+    "id": "13de35206",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U14CSV4F6",
+    "text": "you can call another activity constants or duplicate that constants to other activity",
+    "ts": "1463124841.003507",
+    "id": "13de35207",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "whats better practice?",
+    "ts": "1463124856.003508",
+    "id": "13de35208",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "duplicating constants",
+    "ts": "1463124859.003509",
+    "id": "13de35209",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "or making a constant public?",
+    "ts": "1463124866.003510",
+    "id": "13de35210",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U14CSV4F6",
+    "text": "im not sure with that one, for me i call constants from other activity",
+    "ts": "1463124892.003511",
+    "id": "13de35211",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "so that it can be accessed outside of the class it is defined",
+    "ts": "1463124893.003512",
+    "id": "13de35212",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "okay",
+    "ts": "1463124901.003513",
+    "id": "13de35213",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "i really want to get this right",
+    "ts": "1463124906.003514",
+    "id": "13de35214",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "ive been pretty haphazard on this front",
+    "ts": "1463124915.003515",
+    "id": "13de35215",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "and i feel like it could really help me clean up my code",
+    "ts": "1463124923.003516",
+    "id": "13de35216",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U14CSV4F6",
+    "text": "no problem with that, it depends on you on what is your coding standard",
+    "ts": "1463125027.003517",
+    "id": "13de35217",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18JKKXPD",
+    "subtype": "channel_join",
+    "text": "<@U18JKKXPD|kirem> has joined the channel",
+    "ts": "1463128804.003518",
+    "id": "13de35218",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U0A1BE7KQ>: definitely public constants. Having duplicate constants can easily lead to very hard to find bugs",
+    "ts": "1463130149.003519",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U0A1BE7KQ"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "13de35219",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "also the constants should originate where the data originates. So if you are sending from activity A to activity B then the constant should be a public constant in activity A",
+    "ts": "1463130191.003520",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U0A1BE7KQ"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "13de35220",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "strings.xml is only for UI strings because that way you can easily translate them",
+    "ts": "1463130217.003521",
+    "id": "13de35221",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0SNJDQDC",
+    "text": "Hey guys, how do I handle an action button in Notification? The button appears in my notification, but I do not know how to handle it. I'm currently playing around with `BroadcastReceiver`, but nothing comes out when I press the button. What am I missing?",
+    "ts": "1463130444.003522",
+    "id": "13de35222",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0SNJDQDC",
+    "text": "I created a standalone `BroadcastReceiver` class because I do not want activity to fire when I click it. I'm using it to store information to db.",
+    "ts": "1463130509.003523",
+    "id": "13de35223",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055JANKU",
+    "text": "<@U09T8SFG8> So let’s say I have Activity A, B and C. I’m having this setup where I’m opening Activity C from A and Activity C from B. From both A and B I’m sending the same kind of data using an extra in the intent. Then I should have a public constant for the key in Activity A and in Activity B. And in Activity C I should read the data using the constant in Activity A or Activity B.\n\nI don’t see why that is good. Something with duplicating constants that can easily lead to very hard to find bugs?",
+    "edited": {
+      "user": "U055JANKU",
+      "ts": "1463137637.000000"
+    },
+    "ts": "1463137553.003524",
+    "id": "13de35224",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U055JANKU>: in that case you put it in C or to be consistent you always put it where the data ends up. It can make more sense to always put the constants where the data ends up anyway",
+    "ts": "1463137906.003528",
+    "id": "13de35225",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055JANKU",
+    "text": ":stuck_out_tongue:",
+    "ts": "1463137920.003529",
+    "id": "13de35226",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I was talking more generaly that as a rule of thumb I try to have constants close to the data but in the case of android this can be clearly wrong like in your example",
+    "ts": "1463137972.003530",
+    "id": "13de35227",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055JANKU",
+    "text": "That I completely agree with.",
+    "ts": "1463138037.003531",
+    "id": "13de35228",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "This looks like a good rule of thumb <http://codereview.stackexchange.com/questions/56949/where-to-define-constants-bundle-keys-used-between-2-activities>",
+    "attachments": [
+      {
+        "title": "Where to define constants (Bundle Keys) used between 2 Activities?",
+        "title_link": "http://codereview.stackexchange.com/questions/56949/where-to-define-constants-bundle-keys-used-between-2-activities",
+        "text": "public class FirstActivity extends Activity { private String userName; private Uri userPhoto; private void onOkButtonPressed() { Intent intent = new Intent(this,",
+        "fallback": "Where to define constants (Bundle Keys) used between 2 Activities?",
+        "thumb_url": "http://cdn.sstatic.net/Sites/codereview/img/apple-touch-icon@2.png?v=060c5939ecf4&a",
+        "from_url": "http://codereview.stackexchange.com/questions/56949/where-to-define-constants-bundle-keys-used-between-2-activities",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "id": 1
+      }
+    ],
+    "ts": "1463138145.003532",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "13de35229",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055JANKU",
+    "text": "<@U09T8SFG8>: :taco:",
+    "ts": "1463139076.003534",
+    "id": "13de35230",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055JANKU",
+    "text": "look a lot like what I do :wink:",
+    "ts": "1463139084.003535",
+    "id": "13de35231",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0M37UGKD",
+    "text": "Hey all, Ive been banging my head against the wall for the past few days on a real strange issue. After the user takes a photo, the activity calls back with the bitmap which i show in an ImageView, but only on the Samsung S4’s it refuses to show in the ImageView. I have tried :\n- invalidate() after setting the Bitmap \n- tried to RunOnUIThread(), \n- setting a Handler with a postDelayed(), but nothing has helped",
+    "ts": "1463139281.003536",
+    "id": "13de35232",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0M37UGKD",
+    "text": "All other phones seems to work",
+    "ts": "1463139298.003537",
+    "id": "13de35233",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": ":samsung: :trashcan:",
+    "ts": "1463141980.003538",
+    "id": "13de35234",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U163T1S93",
+    "text": "<@U0M37UGKD>: There's a very easy fix, just disable the app on the S4 :grinning: ",
+    "ts": "1463142090.003539",
+    "id": "13de35235",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "<@U0M37UGKD>: the samsung s4's camera app will destroy your activity while starting up",
+    "ts": "1463142504.003540",
+    "id": "13de35236",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "i can't remember what i did to solve it",
+    "ts": "1463142533.003541",
+    "id": "13de35237",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "if im not wrong if you check your onActivityResult the uri to the photo taken is erroneous",
+    "ts": "1463142570.003542",
+    "id": "13de35238",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0M37UGKD",
+    "text": "I have a workaround but I was hoping to actually fix this issue. So I can take the picture and when the OnResult is called, determine if its a S4, if true, then launch the Select Image Intent. The poor S4 user will just have a few extra taps to do",
+    "ts": "1463142625.003543",
+    "id": "13de35239",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0M37UGKD",
+    "text": "Any way to tell that the user is on a S4?",
+    "ts": "1463142637.003544",
+    "id": "13de35240",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18N4P5DE",
+    "subtype": "channel_join",
+    "text": "<@U18N4P5DE|ammarelahi> has joined the channel",
+    "ts": "1463148064.003545",
+    "id": "13de35241",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "What’s the right way to cite Open Source libs used as part of another open source lib on Github?",
+    "ts": "1463150607.003546",
+    "id": "13de35242",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "you shouldn’t need to I think",
+    "ts": "1463151014.003547",
+    "id": "13de35243",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "they should cite others",
+    "ts": "1463151046.003548",
+    "id": "13de35244",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "yeah I would only cite the top level deps",
+    "ts": "1463151050.003549",
+    "id": "13de35245",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "But shouldn’t I at least tell them what to cite?",
+    "ts": "1463151376.003550",
+    "id": "13de35246",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "say I made library X, which uses libraries Y and Z.. even if I don’t need to cite anything, I’d assume that the user of library X would need to cite X, Y and Z?",
+    "edited": {
+      "user": "U16GF1B0F",
+      "ts": "1463151421.000000"
+    },
+    "ts": "1463151414.003551",
+    "id": "13de35247",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "#weneedalawyer",
+    "ts": "1463151495.003553",
+    "id": "13de35248",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "if libraries are OS you can see that anyway",
+    "ts": "1463151591.003554",
+    "id": "13de35249",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "that’s how I see it at least",
+    "ts": "1463151598.003555",
+    "id": "13de35250",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "also citing should be dependant on the license of the lib itself",
+    "ts": "1463151623.003556",
+    "id": "13de35251",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "in my case both my library and my library’s dependency are under Apache 2.0",
+    "ts": "1463151658.003557",
+    "id": "13de35252",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "do you want to cite both?",
+    "ts": "1463151680.003558",
+    "id": "13de35253",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "well, I’m wondering what (if anything) I need to do as a maintainer of my library to let downstream consumers know about the dependency",
+    "ts": "1463151716.003559",
+    "id": "13de35254",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "include the build.gradle / pom.xml with described deps? :confused: ¯\\_(ツ)_/¯",
+    "ts": "1463151747.003560",
+    "id": "13de35255",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18NSE2U8",
+    "subtype": "channel_join",
+    "text": "<@U18NSE2U8|bobbake4> has joined the channel",
+    "ts": "1463151750.003561",
+    "id": "13de35256",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "that feels incorrect.. but I suppose I can go with that unless I ever hear something from the dependency’s creator",
+    "ts": "1463151787.003562",
+    "id": "13de35257",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "yep",
+    "ts": "1463151800.003563",
+    "id": "13de35258",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I think that’s how most of us are going",
+    "ts": "1463151808.003564",
+    "id": "13de35259",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "the way I see it - it’s open source, hence it’s transparent",
+    "ts": "1463151825.003565",
+    "id": "13de35260",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "the dependencies are described… in code, but they are human readable still",
+    "ts": "1463151841.003566",
+    "id": "13de35261",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "if you’re building an app (or a closed-source lib) then you include top level dependencies, the ones you *directly* depend on",
+    "ts": "1463151886.003567",
+    "id": "13de35262",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "the consumer could then recursively look at those if they are so inclined",
+    "ts": "1463151916.003568",
+    "id": "13de35263",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "fair enough, I guess that’ll have to do :shrug:",
+    "ts": "1463152027.003569",
+    "id": "13de35264",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": ":wink:",
+    "ts": "1463152037.003570",
+    "id": "13de35265",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "/gif I’m not a lawyer",
+    "ts": "1463152047.003571",
+    "id": "13de35266",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "",
+    "bot_id": "B0GH4RVHU",
+    "attachments": [
+      {
+        "fallback": "<http://img.pandawhale.com/post-52271-look-I-dont-know-all-the-detai-mrdY.gif>",
+        "image_url": "http://img.pandawhale.com/post-52271-look-I-dont-know-all-the-detai-mrdY.gif",
+        "image_width": 365,
+        "image_height": 203,
+        "image_bytes": 4148380,
+        "is_animated": true,
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1463152047.003572",
+    "id": "13de35267",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": ":joy:",
+    "ts": "1463152081.003573",
+    "id": "13de35268",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "good one :simple_smile:",
+    "ts": "1463152100.003574",
+    "id": "13de35269",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": ":hodor:",
+    "ts": "1463152103.003575",
+    "id": "13de35270",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "for anyone interested in IoT",
+    "ts": "1463154796.003576",
+    "id": "13de35271",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<https://aws.amazon.com/iot/button/>",
+    "ts": "1463154797.003577",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U0J3AKMPS",
+          "U17H2D4A3",
+          "U061HDV96",
+          "U0XCFE6AH"
+        ],
+        "count": 5
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "13de35272",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18QA73GE",
+    "subtype": "channel_join",
+    "text": "<@U18QA73GE|devashish> has joined the channel",
+    "ts": "1463161806.003578",
+    "id": "13de35273",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18QENHL4",
+    "subtype": "channel_join",
+    "text": "<@U18QENHL4|johnboker> has joined the channel",
+    "ts": "1463163102.003579",
+    "id": "13de35274",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18SQPZ09",
+    "subtype": "channel_join",
+    "text": "<@U18SQPZ09|krypticcliff> has joined the channel",
+    "ts": "1463176667.003580",
+    "id": "13de35275",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07MUKUBW",
+    "text": "anyone facing issues with a combination of Fabric + Data binding?",
+    "ts": "1463182943.003581",
+    "id": "13de35276",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I havent been able to use data binding 1.1 and I assumed it was because of requery",
+    "ts": "1463198013.003582",
+    "id": "13de35277",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "so.. maybe?",
+    "ts": "1463198017.003583",
+    "id": "13de35278",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "i think im on the beta4 plugin and the beta5 library for databinding",
+    "ts": "1463198037.003584",
+    "id": "13de35279",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

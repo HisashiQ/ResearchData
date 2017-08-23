@@ -1,0 +1,494 @@
+[
+  {
+    "user": "U052T1M9T",
+    "subtype": "channel_join",
+    "text": "<@U052T1M9T|ajay> has joined the channel",
+    "ts": "1432734703.000049",
+    "id": "27de427",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04VA47NB",
+    "text": "has anyone tried showing a progress dialog in `onActivityResult`? I can’t find anything useful online :disappointed:",
+    "ts": "1432744565.000050",
+    "id": "27de428",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04VA47NB",
+    "text": "I’m making the call to `show` on the ui thread (`runOnUiThread`)",
+    "ts": "1432744624.000051",
+    "id": "27de429",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "shouldn't that be the UI thread anyway?",
+    "ts": "1432744665.000052",
+    "id": "27de430",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04VA47NB",
+    "text": "that’s what I thought, but the dialog isn’t showing",
+    "ts": "1432744713.000053",
+    "id": "27de431",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04VA47NB",
+    "text": "I’ve removed the dismiss logic to verify that",
+    "ts": "1432744738.000054",
+    "id": "27de432",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "does the same code show the dialog when called somewhere else?",
+    "ts": "1432744746.000055",
+    "id": "27de433",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04VA47NB",
+    "text": "the same code shows the dialog when I call it `onResume`",
+    "ts": "1432744768.000056",
+    "id": "27de434",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04VA47NB",
+    "text": "I’m also reusing that same code block in a bunch of different places without a problem",
+    "ts": "1432744792.000057",
+    "id": "27de435",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04VA47NB",
+    "text": "but this is the one place where I’m making the call in `onActivityResult`",
+    "ts": "1432744806.000058",
+    "id": "27de436",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "hm",
+    "ts": "1432744943.000059",
+    "id": "27de437",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Okay, `onActivityResult` is called before `onResume`. So you could just mark the dialog to be shown and show it in `onResume`",
+    "edited": {
+      "user": "U04TK850N",
+      "ts": "1432745039.000000"
+    },
+    "ts": "1432745031.000060",
+    "id": "27de438",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04VA47NB",
+    "text": "oh cool! let me try that",
+    "ts": "1432745101.000062",
+    "id": "27de439",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04VA47NB",
+    "text": "wonderful! thanks a lot",
+    "ts": "1432745937.000063",
+    "id": "27de440",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": ":simple_smile:",
+    "ts": "1432745951.000064",
+    "id": "27de441",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "Hi guys, i’m just getting started integrating Google maps in my app. I got Google Maps working OK in the MainActivity, but when I start another activity the Google Maps won’t dissapear",
+    "ts": "1432747358.000065",
+    "id": "27de442",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "But the toolbar etc do change",
+    "ts": "1432747365.000066",
+    "id": "27de443",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I have never worked wtih maps",
+    "ts": "1432747411.000067",
+    "id": "27de444",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U052AQM7J",
+    "subtype": "channel_join",
+    "text": "<@U052AQM7J|bastien> has joined the channel",
+    "ts": "1432748762.000068",
+    "id": "27de445",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U052AQM7J",
+    "text": "Hi all, I try to launch unit test from Android studio (1.2.1.1) with robolectric 3, and I have an Issue doing that. I have a common module which is a java library module. And when I run my test I get NoClassDefFoundError for every class in this module. I tried to add  :    testCompile project(':common'), but nothing change. Any ideas ? Thank's :simple_smile:",
+    "ts": "1432749039.000069",
+    "id": "27de446",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "hm sorry, no idea",
+    "ts": "1432757319.000070",
+    "id": "27de447",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04VA47NB",
+    "text": "anyone worked with `AnimationDrawable` before? I’m having a weird issue when running it on KitKat",
+    "ts": "1432762015.000071",
+    "id": "27de448",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "not me :confused:",
+    "ts": "1432762048.000072",
+    "id": "27de449",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04VA47NB",
+    "text": "boo :disappointed:",
+    "ts": "1432762079.000073",
+    "id": "27de450",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "How would I escape characters?",
+    "ts": "1432766158.000074",
+    "id": "27de451",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "é characters etc",
+    "ts": "1432766175.000075",
+    "id": "27de452",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Did anyone ever have a problem that the back arrow in the Toolbar sometimes becomes invisible? Especially when working with animations or generally showing/hiding other views in the Activity dynamically.",
+    "ts": "1432795876.000076",
+    "id": "27de453",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

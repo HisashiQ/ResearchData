@@ -1,0 +1,1397 @@
+[
+  {
+    "user": "U2YS4P90E",
+    "text": "<@U0Z248CVB> you may need to call a method to determine the resource, so `\"@{post.getBackgroundStyle()}\"`",
+    "ts": "1479888024.001659",
+    "id": "23de50735",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2YS4P90E",
+    "text": "does anyone know why Android Studio wouldn't break on exceptions when debugging on a cell phone? the app just crashes on the phone and I get no indication in Android Studio.",
+    "ts": "1479888064.001660",
+    "id": "23de50736",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2YS4P90E",
+    "text": "the stack trace does show up in Android Studio's logcat window though",
+    "ts": "1479888238.001661",
+    "id": "23de50737",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U328LL9HB",
+    "text": "Hi all, any clues about to use Flux/Redux on android?\nIm looking for some ach that help me to save and restore viewStates",
+    "ts": "1479892275.001662",
+    "id": "23de50738",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2YS4P90E",
+    "text": "<@U328LL9HB> this probably won't help, but if you were doing Xamarin there's <http://Redux.NET|Redux.NET> which works great. not sure about android native though.",
+    "ts": "1479893302.001663",
+    "id": "23de50739",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U35F0P68G",
+    "text": "<@U35F0P68G|jp> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1479893307.001664",
+    "id": "23de50740",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U36BX1F38",
+    "text": "Hello! Help please with rx. I want to create observable wrapper over dialog, to use in reply on errors. \nhere is implementation.\n```\nfun Context.rxDialog(title: String,\n                     message: String,\n                     yes: String = getString(R.string.yes),\n                     no: String = getString(<http://R.string.no|R.string.no>)): Observable&lt;Boolean&gt; {\n        val dialog =\n            Observable.create&lt;Boolean&gt; {\n                AlertDialog.Builder(this)\n                        .setTitle(title)\n                        .setMessage(message)\n                        .setPositiveButton(yes) { dialog, which -&gt;\n                            it.onNext(true)\n                        }\n                        .setNegativeButton(no) { dialog, which -&gt;\n                            it.onNext(false)\n                        }\n                        .create()\n                        .run {\n                            it.add(Subscriptions.create({ this.dismiss() }))\n                            show()\n                        }\n            }\n    return rx.Observable.just(Unit)\n            .observeOn(AndroidSchedulers.mainThread())\n            .flatMap { dialog }\n}\n```\n It can be called from non ui thread. Can I rewrite it without last 3 lines to open dialog on AndroidSchedulers.mainThread() ?",
+    "ts": "1479894006.001665",
+    "id": "23de50741",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RRH206T",
+    "text": "<@U1EVBKSKV> Try Sinch,Tokbox, Twilio",
+    "ts": "1479896907.001666",
+    "id": "23de50742",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1EVBKSKV",
+    "text": "<@U2RRH206T> thanks",
+    "ts": "1479896963.001667",
+    "id": "23de50743",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RRH206T",
+    "text": "Guys is there a way to launch an Activity for result (eg launching the camera using Intent)  and then returning the result of the Intent call to any other activity instead of the parent activity (the activity which launched the camera using Intent ) ?",
+    "ts": "1479897046.001668",
+    "id": "23de50744",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RRH206T",
+    "text": "Kinda like I launch the camera app from any app using Intent and then when the photo is clicked, it returns to a Gallery-like Activity which shoes all the photos (including the one clicked right now) instead of returning to the First App.",
+    "ts": "1479897154.001669",
+    "id": "23de50745",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RRH206T",
+    "text": "*First Activity (not First App)",
+    "ts": "1479897178.001670",
+    "id": "23de50746",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HA5ABNW",
+    "text": "Hello all..",
+    "ts": "1479898332.001671",
+    "id": "23de50747",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HA5ABNW",
+    "text": "is there any limit on FCM notifications.. as i want to use these notifications to send the realtime tracking.. to all the device which request for tracking and the time interval will be 5 sec..",
+    "ts": "1479898765.001672",
+    "id": "23de50748",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18QA73GE",
+    "text": "wouldn't suggest FCM for it, use mqtt for real time updates",
+    "ts": "1479898825.001673",
+    "id": "23de50749",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18QA73GE",
+    "text": "i have written a blog on how to build a typing indicator using mqtt, might be helpful to get an idea on how to build real time tracking <https://www.applozic.com/blog/how-to-implement-typing-indicator-in-android-chat-app/>",
+    "attachments": [
+      {
+        "service_name": "Applozic Blog",
+        "title": "How to implement typing indicator in android chat app?",
+        "title_link": "https://www.applozic.com/blog/how-to-implement-typing-indicator-in-android-chat-app/",
+        "text": "Add typing indicator into android app using MQTT, Publish-Subcribe pattern and TextWatcher.",
+        "fallback": "Applozic Blog: How to implement typing indicator in android chat app?",
+        "thumb_url": "https://www.applozic.com/blog/wp-content/uploads/2016/04/Screen-Shot-2016-03-28-at-11.18.56-PM.png",
+        "ts": 1459839600,
+        "from_url": "https://www.applozic.com/blog/how-to-implement-typing-indicator-in-android-chat-app/",
+        "thumb_width": 342,
+        "thumb_height": 303,
+        "service_icon": "https://www.applozic.com/blog/wp-content/uploads/2016/03/imageedit_1_2481648482.png",
+        "id": 1
+      }
+    ],
+    "ts": "1479898897.001674",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "23de50750",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C5E9X2N",
+    "text": "hi there…anyone using to build for android ? could you guys talk a little about the workflow ?",
+    "ts": "1479899110.001676",
+    "id": "23de50751",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RRH206T",
+    "text": "Using 'what' ?",
+    "ts": "1479899177.001677",
+    "id": "23de50752",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C5E9X2N",
+    "text": "hahah..",
+    "ts": "1479899774.001678",
+    "id": "23de50753",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C5E9X2N",
+    "text": "docker",
+    "ts": "1479899775.001679",
+    "id": "23de50754",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C5E9X2N",
+    "text": "sorry",
+    "ts": "1479899777.001680",
+    "id": "23de50755",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HA5ABNW",
+    "text": "<@U18QA73GE> thanks for the information..",
+    "ts": "1479900121.001681",
+    "id": "23de50756",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HA5ABNW",
+    "text": "but is it not good to open a default socket client to listen for the incoming tracking information when ever user wants to track.",
+    "ts": "1479900155.001682",
+    "id": "23de50757",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HA5ABNW",
+    "text": "?",
+    "ts": "1479900155.001683",
+    "id": "23de50758",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18QA73GE",
+    "text": "it is better to use socket connection then using http + FCM (push notification)",
+    "ts": "1479900791.001684",
+    "id": "23de50759",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18QA73GE",
+    "text": "the frequency for which you are looking for is 5 second, in this case FCM will not be reliable",
+    "ts": "1479900826.001685",
+    "id": "23de50760",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "Polling with HTTP is exhausting.",
+    "ts": "1479906414.001686",
+    "id": "23de50761",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "Low-level socket connection will be good if done properly.",
+    "ts": "1479906436.001687",
+    "id": "23de50762",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U368V5LN6",
+    "text": "<@U368V5LN6|arionix> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1479907345.001688",
+    "id": "23de50763",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3697FDAN",
+    "text": "<@U3697FDAN|peddro> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1479909265.001689",
+    "id": "23de50764",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U35KJA0DP",
+    "text": "<@U35KJA0DP|iiro.krankka> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1479912676.001690",
+    "id": "23de50765",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2PTP2W1J",
+    "text": "hi guys\nplease tell me how can I get city by longitude and latitude ?",
+    "ts": "1479917511.001691",
+    "id": "23de50766",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "<http://maps.googleapis.com/maps/api/geocode/json?latlng=&lt;lat&gt;,&lt;lng&gt;>",
+    "ts": "1479918902.001692",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "23de50767",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2NBJQXDM",
+    "text": "just a little question for my understanding:\nwhen i use a ListView with the id `@android:id/list` and a TextView with the id `@android:id/empty`, from where does the TextView know if the List is empty, and that the TextView even has to consider this ListView i created (how are they connected)",
+    "ts": "1479926411.001693",
+    "id": "23de50768",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U35P0B132",
+    "text": "<@U35P0B132|ctava> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1479929792.001694",
+    "id": "23de50769",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U061HDV96|andreasbackx> uploaded a file: <https://androidchat.slack.com/files/andreasbackx/F35PSLBH6/-.kt|Untitled>",
+    "file": {
+      "id": "F35PSLBH6",
+      "created": 1479933502,
+      "timestamp": 1479933502,
+      "name": "-.kt",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "kotlin",
+      "pretty_type": "Kotlin",
+      "user": "U061HDV96",
+      "editable": true,
+      "size": 163,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F35PSLBH6/-.kt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F35PSLBH6/download/-.kt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/andreasbackx/F35PSLBH6/-.kt",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F35PSLBH6-3c094900d3",
+      "edit_link": "https://androidchat.slack.com/files/andreasbackx/F35PSLBH6/-.kt/edit",
+      "preview": "realm.where(OrderedFood::class.java).findAllAsync().addChangeListener {\r\n\tval test = it\r\n\tcartAdapter.items = ArrayList(it)\r\n\tcartAdapter.notifyDataSetChanged()\r\n}",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-variable\">realm</span>.<span class=\"cm-keyword\">where</span>(<span class=\"cm-variable\">OrderedFood</span>::<span class=\"cm-keyword\">class</span>.<span class=\"cm-variable\">java</span>).<span class=\"cm-variable\">findAllAsync</span>().<span class=\"cm-variable\">addChangeListener</span> {</pre></div>\n<div><pre>\t<span class=\"cm-keyword\">val</span> <span class=\"cm-def\">test</span> <span class=\"cm-operator\">=</span> <span class=\"cm-variable\">it</span></pre></div>\n<div><pre>\t<span class=\"cm-variable\">cartAdapter</span>.<span class=\"cm-variable\">items</span> <span class=\"cm-operator\">=</span> <span class=\"cm-variable\">ArrayList</span>(<span class=\"cm-variable\">it</span>)</pre></div>\n<div><pre>\t<span class=\"cm-variable\">cartAdapter</span>.<span class=\"cm-variable\">notifyDataSetChanged</span>()</pre></div>\n<div><pre>}</pre></div>\n</div>\n</div>\n",
+      "lines": 5,
+      "lines_more": 0,
+      "preview_is_truncated": false,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U061HDV96",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U061HDV96|andreasbackx>",
+    "bot_id": null,
+    "ts": "1479933503.001695",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "23de50770",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Before you ask why there is a val test = it. For some reason the evaluate expression and debugger don't see the variable \"it\" unless that line is there so it's there for debugging.",
+    "ts": "1479933534.001696",
+    "id": "23de50771",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "In the evaluate expression I get default values from my data classes and not the ones they're supposed to have",
+    "ts": "1479933589.001697",
+    "id": "23de50772",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<https://i.imgur.com/cuxzwfv.png>",
+    "attachments": [
+      {
+        "fallback": "1052x351px image",
+        "image_url": "https://i.imgur.com/cuxzwfv.png",
+        "image_width": 1052,
+        "image_height": 351,
+        "image_bytes": 50349,
+        "from_url": "https://i.imgur.com/cuxzwfv.png",
+        "id": 1
+      }
+    ],
+    "ts": "1479933593.001698",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "23de50773",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "As you can see, order is -1 in the string representation of the RealmProxy. Super odd.",
+    "ts": "1479933620.001700",
+    "id": "23de50774",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Why is the debugger so messed up in Kotlin? (I should've perhaps posted this in <#C0BQU1TDF|kotlin> though)",
+    "ts": "1479933709.001701",
+    "id": "23de50775",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U36GA5QMQ",
+    "text": "<@U36GA5QMQ|pedropereira> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1479940158.001702",
+    "id": "23de50776",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Anyone ever got the following exception while building? Just upgraded butterknife alongside some other libraries: ```Error:Execution failed for task ':app:transformClassesWithDexForDebug'.\n&gt; com.android.build.api.transform.TransformException: com.android.ide.common.process.ProcessException: java.util.concurrent.ExecutionException: com.android.dex.DexException: Multiple dex files define Lbutterknife/BuildConfig;```",
+    "ts": "1479942930.001703",
+    "id": "23de50777",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "<@U0548MM6B> :taco: :nutella: Thanks for reviewing my code!",
+    "ts": "1479947317.001704",
+    "id": "23de50778",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "<@U061HDV96> Are you sure there are no multiple butterknife dependencies in your gradle files?",
+    "ts": "1479947441.001705",
+    "id": "23de50779",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "Another possibilities are you have conflict dependencies with butterknife or your app module have the same module name as your dependencies",
+    "ts": "1479947625.001706",
+    "id": "23de50780",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U0ESBF4AV> I'm sure. Downgrading butterknife to 7.1.0 does not make the exception occur.",
+    "edited": {
+      "user": "U061HDV96",
+      "ts": "1479948918.000000"
+    },
+    "ts": "1479948749.001707",
+    "id": "23de50781",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I've checked with the gradle dependencies.",
+    "ts": "1479948758.001708",
+    "id": "23de50782",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "<@U061HDV96> I think you mentioned the wrong people haha, so It's butterknife issue then",
+    "ts": "1479948880.001709",
+    "id": "23de50783",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "How do you declare your butterknife dependency?",
+    "ts": "1479948889.001710",
+    "id": "23de50784",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Woops",
+    "ts": "1479948920.001712",
+    "id": "23de50785",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Just like any other: `compile \"com.jakewharton:butterknife:7.0.1\"`",
+    "ts": "1479948935.001713",
+    "id": "23de50786",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "But I'm stepping away from Butterknife anyway",
+    "ts": "1479948950.001714",
+    "id": "23de50787",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "With Kotlin's new stuff that includes this",
+    "ts": "1479948956.001715",
+    "id": "23de50788",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Small parts of the code still use Butterknife, I'll remove it",
+    "ts": "1479948966.001716",
+    "id": "23de50789",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I basically need to import the android kotlin extensions and remove the findViewById from Kotterknife",
+    "ts": "1479949159.001717",
+    "id": "23de50790",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "Oh I don't know if you use kotlin",
+    "ts": "1479949174.001718",
+    "id": "23de50791",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "The importing isn't great though",
+    "ts": "1479949371.001719",
+    "id": "23de50792",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Doesn't find it sometimes",
+    "ts": "1479949381.001720",
+    "id": "23de50793",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "I see",
+    "ts": "1479949598.001721",
+    "id": "23de50794",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UBTWEE",
+    "text": "Has anyone implemented with rxjava observer retries on button ui button clicks? In the event that there is a onError call (network or application), the user is shown a snack bar with a retry button. If the user clicks retry, i want retrofit to retry the original network call. Help!",
+    "ts": "1479950207.001722",
+    "id": "23de50795",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0BBW096C",
+    "text": "<@U04UBTWEE> <http://blog.danlew.net/2015/12/08/error-handling-in-rxjava/>",
+    "attachments": [
+      {
+        "service_name": "Dan Lew Codes",
+        "title": "Error handling in RxJava",
+        "title_link": "http://blog.danlew.net/2015/12/08/error-handling-in-rxjava/",
+        "text": "RxJava makes error handling a snap. Just use onError, right? That's fine and dandy if you're the subscriber, but what about exceptions that occur inside your operators? How do you ensure that an Exception in, say, flatMap() gets passed along to onError? And what if you don't want the exception",
+        "fallback": "Dan Lew Codes: Error handling in RxJava",
+        "fields": [
+          {
+            "title": "Written by",
+            "value": "Dan Lew",
+            "short": true
+          },
+          {
+            "title": "Filed under",
+            "value": "rxjava",
+            "short": true
+          }
+        ],
+        "ts": 1449587041,
+        "from_url": "http://blog.danlew.net/2015/12/08/error-handling-in-rxjava/",
+        "service_icon": "http://blog.danlew.net/favicon.ico",
+        "id": 1
+      }
+    ],
+    "ts": "1479950585.001723",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "23de50796",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U35T3EN1W",
+    "text": "<@U35T3EN1W|drplease> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1479961384.001725",
+    "id": "23de50797",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "I have a `VectorDrawable` declared in xml that renders correctly with an `android.support.v7.widget.AppCompatImageView` 's property `app:srcCompat` but does not show up when using a standard `ImageViews` 's `app:srcCompat` .  Why is that?",
+    "ts": "1479964413.001726",
+    "id": "23de50798",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U36MLS9CL",
+    "text": "<@U36MLS9CL|jangra.viren> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1479972302.001727",
+    "id": "23de50799",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "<@U0A1BE7KQ> did you define  `vectorDrawables.useSupportLibrary = true `?",
+    "ts": "1479973599.001728",
+    "id": "23de50800",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "Who wants to review my code? :slightly_smiling_face:",
+    "ts": "1479973665.001729",
+    "id": "23de50801",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

@@ -1,0 +1,280 @@
+[
+  {
+    "user": "U0G47NBQV",
+    "text": "tried it <@U054A24ET> nothing changed still",
+    "edited": {
+      "user": "U0G47NBQV",
+      "ts": "1468310401.000000"
+    },
+    "ts": "1468310395.001099",
+    "id": "12be6437",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "check if the adapter's oncreateviewholder is actually caled",
+    "ts": "1468312136.001101",
+    "id": "12be6438",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G47NBQV",
+    "text": "all seems good. i’ll check this thorough.",
+    "ts": "1468314099.001102",
+    "id": "12be6439",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G47NBQV",
+    "text": "can you like tell me at least where could I possibly did it wrong? which part/s",
+    "ts": "1468314147.001103",
+    "id": "12be6440",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "well if oncreateviewholder is indeed called, then it might be a layout problem.",
+    "ts": "1468316092.001104",
+    "id": "12be6441",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "also check getItemCount to make sure it's not returning 0",
+    "ts": "1468316193.001105",
+    "id": "12be6442",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G47NBQV",
+    "text": "alright",
+    "ts": "1468317013.001106",
+    "id": "12be6443",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1QT9GHDK",
+    "text": "<@U1QT9GHDK|rajesh.gauswami> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1468319097.001107",
+    "id": "12be6444",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1R0G2M09",
+    "text": "<@U1R0G2M09|virusman> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1468335509.001108",
+    "id": "12be6445",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1G221P2S",
+    "text": "hi guys, need some help in direction.  I have a list of items, stored in a file in the apk. I wish to load these items into a list(recyclerview) and save some changes related to this as well. The thing is that these are a lot of items, about 1000-5000  per activity. How should I go about loading these items in the recyclerview while also ensuring I maintain its state(selected or unselected) . Will there be any kind of memory related issues I could run into with this. Would paginating the items and load them lead to any improvements in performance? Each item will have a a couple of textviews, an imageview, a checkbox and an edittext box.",
+    "ts": "1468337735.001109",
+    "id": "12be6446",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1G221P2S",
+    "text": "the images will be stored on the phones sd card and will be loaded into the imageview from that.",
+    "ts": "1468337800.001110",
+    "id": "12be6447",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "<@U1G221P2S>: without paginating the loading from disk, you'll be keeping all of those 1000-5000 objects in memory. so i guess it depends on how large those end up being. for the images you'll just have a uri in memory and then load only the images on screen",
+    "ts": "1468339542.001111",
+    "id": "12be6448",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i don't really have any notion of how large would be too large, i'd probably just try it and profile the perf",
+    "ts": "1468339603.001112",
+    "id": "12be6449",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1B9BNNQL",
+    "text": "<@U1B9BNNQL|biraj> has left the channel",
+    "subtype": "channel_leave",
+    "ts": "1468347084.001113",
+    "id": "12be6450",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1R33FC2F",
+    "text": "<@U1R33FC2F|michael.k> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1468358256.001114",
+    "id": "12be6451",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

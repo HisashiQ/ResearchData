@@ -1,0 +1,343 @@
+[
+  {
+    "user": "U061HDV96",
+    "text": "<@U055GGAHS>: currently I keep api and data classes. Might change this. But we plan to release the API anyway.",
+    "ts": "1442319289.000345",
+    "id": "15tr2339",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I haven't really fiddled with Proguard that much",
+    "ts": "1442319339.000346",
+    "id": "15tr2340",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I think I'll have a look at this: <https://www.crashlytics.com/blog/mastering-proguard-for-building-lightweight-android-code>",
+    "attachments": [
+      {
+        "service_name": "Crashlytics Blog",
+        "title": "Mastering ProGuard for Building Lightweight Android Code",
+        "title_link": "https://www.crashlytics.com/blog/mastering-proguard-for-building-lightweight-android-code",
+        "text": "The most powerful, yet lightest weight crash reporting solution for iOS and Android",
+        "fallback": "Crashlytics Blog: Mastering ProGuard for Building Lightweight Android Code",
+        "thumb_url": "https://static1.squarespace.com/static/551df273e4b0a007421f8fd7/t/551eaf27e4b0eb5614175611/1430240923289/?format=1000w",
+        "from_url": "https://www.crashlytics.com/blog/mastering-proguard-for-building-lightweight-android-code",
+        "thumb_width": 198,
+        "thumb_height": 141,
+        "id": 1
+      }
+    ],
+    "ts": "1442323097.000347",
+    "id": "15tr2341",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "They failed a bit here: <https://i.imgur.com/MkDLkD6.png>",
+    "attachments": [
+      {
+        "fallback": "1236x344px image",
+        "image_url": "https://i.imgur.com/MkDLkD6.png",
+        "image_width": 1236,
+        "image_height": 344,
+        "image_bytes": 610035,
+        "from_url": "https://i.imgur.com/MkDLkD6.png",
+        "id": 1
+      }
+    ],
+    "ts": "1442323528.000349",
+    "id": "15tr2342",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "i use this as a general reference and ammend where neccessary - <https://github.com/krschultz/android-proguard-snippets>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "krschultz/android-proguard-snippets",
+        "title_link": "https://github.com/krschultz/android-proguard-snippets",
+        "text": "android-proguard-snippets - Proguard configurations for common Android libraries",
+        "fallback": "GitHub: krschultz/android-proguard-snippets",
+        "thumb_url": "https://avatars0.githubusercontent.com/u/6264?v=3&s=400",
+        "from_url": "https://github.com/krschultz/android-proguard-snippets",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1442323704.000351",
+    "id": "15tr2343",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U04U5KS3Z>: I know of that one. But it has the same Proguard configuration that doesn't work :confused:",
+    "ts": "1442323764.000353",
+    "id": "15tr2344",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Well the article doesn't really state anything useful :confused:",
+    "ts": "1442324716.000354",
+    "id": "15tr2345",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "To avoid processing a library that may have been preprocessed, simply add the following to Proguard.cfg:\n\n[pyg language=\"java\" style=\"monokai\" linenos=\"inline\" linenostart=\"1\" tabwidth=\"1\"] -libraryjars libs -keep class com.crashlytics.** { *; } [/pyg]",
+    "ts": "1442327199.000355",
+    "id": "15tr2346",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "how can i tell if a library is already preprocessed?",
+    "ts": "1442327212.000356",
+    "id": "15tr2347",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I think that means if you have processed it before",
+    "ts": "1442327864.000357",
+    "id": "15tr2348",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "You're not editing dependencies",
+    "ts": "1442327888.000358",
+    "id": "15tr2349",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "So it might just keep that somewhere",
+    "ts": "1442327899.000359",
+    "id": "15tr2350",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U0542GLTE>: should I post an issue on butterknife perhaps? I can't figure it out",
+    "ts": "1442337647.000360",
+    "id": "15tr2351",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I'm gonna check whether 7.0.2-SNAPSHOT fixes it perhaps",
+    "ts": "1442337747.000361",
+    "id": "15tr2352",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I can't be bothered to fiddle with Fabric and Sonatype repositories",
+    "ts": "1442338620.000362",
+    "id": "15tr2353",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I made an issue: <https://github.com/JakeWharton/butterknife/issues/350>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "Using Proguard and BindColor results in error · Issue #350 · JakeWharton/butterknife · GitHub",
+        "title_link": "https://github.com/JakeWharton/butterknife/issues/350",
+        "text": "When trying to generate a signed APK with Proguard the following error occurs: Error: Expected resource of type color [ResourceType] These are the bindings used in the Activity: @BindColor(R.co...",
+        "fallback": "GitHub: Using Proguard and BindColor results in error · Issue #350 · JakeWharton/butterknife",
+        "thumb_url": "https://avatars1.githubusercontent.com/u/1593486?v=3&s=400",
+        "from_url": "https://github.com/JakeWharton/butterknife/issues/350",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1442339823.000363",
+    "id": "15tr2354",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

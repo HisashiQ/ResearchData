@@ -1,0 +1,1011 @@
+[
+  {
+    "user": "U2M0WUZ7A",
+    "text": "Folks, how does realm proxy work? I can see realmGet$field and realmSet$field methods, but how Realm overrides standard Java behavior for getfield / putfield instructions?\nE. g. I have `getfield &lt;***/SomeModel.field&gt;` or `putfield &lt;***/SomeModel.field&gt;` in my bytecode, why I’me getting not actual field values but Realm model values?\nAFAIK, Hibernate’s behavior is very similar. (edite",
+    "ts": "1484568391.000133",
+    "id": "16li8745",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3R9TE2C8",
+    "text": "<@U3R9TE2C8|erifranck> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1484571828.000134",
+    "id": "16li8746",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3R7UUSSJ",
+    "text": "when it comes to sensor data tracking you might also want to have a look at <https://github.com/kibotu/KalmanRx>",
+    "edited": {
+      "user": "U3R7UUSSJ",
+      "ts": "1484575209.000000"
+    },
+    "ts": "1484575204.000135",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "16li8747",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U2M0WUZ7A> it's the classes that are returned by Realm instead of your \"real\" classes. The proxy classes extend your data classes.",
+    "ts": "1484577126.000138",
+    "id": "16li8748",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "<@U061HDV96> yeah, but how realm overrides getfield / putfield opcodes behavior since these fields are unused and are just interface for realm proxies?",
+    "edited": {
+      "user": "U2M0WUZ7A",
+      "ts": "1484577192.000000"
+    },
+    "ts": "1484577174.000139",
+    "id": "16li8749",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "putfield?",
+    "ts": "1484577230.000141",
+    "id": "16li8750",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "You mean getters and setters?",
+    "ts": "1484577246.000142",
+    "id": "16li8751",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "JVM opcodes. If there are no getters/setters, and you operate with fields directly, Realm still works.",
+    "ts": "1484577278.000143",
+    "id": "16li8752",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Let me check the generated code for that",
+    "ts": "1484577451.000144",
+    "id": "16li8753",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Oh",
+    "ts": "1484577899.000145",
+    "id": "16li8754",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I think I realise how they do it",
+    "ts": "1484577905.000146",
+    "id": "16li8755",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Because you start and end transactions, it can always update those classes",
+    "ts": "1484577923.000147",
+    "id": "16li8756",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I would guess it checks all of the managed objects?",
+    "ts": "1484577964.000148",
+    "id": "16li8757",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "I can read data without transactions.",
+    "ts": "1484577971.000149",
+    "id": "16li8758",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Yes",
+    "ts": "1484577979.000150",
+    "id": "16li8759",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "There you get proxy classes",
+    "ts": "1484577983.000151",
+    "id": "16li8760",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "I’m getting proxy classes from Realm, but they extend my classes, and there are field operations in the bytecode.",
+    "ts": "1484578025.000152",
+    "id": "16li8761",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "It looks like field delegation.",
+    "ts": "1484578033.000153",
+    "id": "16li8762",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "Just an assumption: Realm uses bytecode weaving and can replace all your `getfield`/`putfield` opcodes with `invokevirtual`.",
+    "ts": "1484578094.000154",
+    "id": "16li8763",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "yes, I've thought of it, that’s an appropriate way",
+    "edited": {
+      "user": "U2M0WUZ7A",
+      "ts": "1484578123.000000"
+    },
+    "ts": "1484578115.000155",
+    "id": "16li8764",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "You can decompile the resulting binary and check what it does exactly.",
+    "ts": "1484578126.000157",
+    "id": "16li8765",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "You might be correct",
+    "ts": "1484578139.000158",
+    "id": "16li8766",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "so, Hibernate weaves my bytecode too?",
+    "ts": "1484578140.000159",
+    "id": "16li8767",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I never really looked into it",
+    "edited": {
+      "user": "U061HDV96",
+      "ts": "1484578220.000000"
+    },
+    "ts": "1484578144.000160",
+    "id": "16li8768",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "But I've read stuff about byte code manipulation",
+    "ts": "1484578156.000161",
+    "id": "16li8769",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U39P7U6EP> might know more",
+    "ts": "1484578164.000162",
+    "id": "16li8770",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U0RGXBYUD> no, not weaving. Hibernate does wearing (load-time weaving I think?) but Realm does it at compilation time. It's not weaving, it's manipulation ",
+    "ts": "1484578275.000164",
+    "id": "16li8771",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U2M0WUZ7A> Bytecode manipulation using Javassist,  via the Gradle Transform API at compilation time",
+    "ts": "1484578315.000165",
+    "id": "16li8772",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "Direct field access is replaced with the proxy method calls",
+    "ts": "1484578324.000166",
+    "id": "16li8773",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "Inside the compiled class files ",
+    "ts": "1484578334.000167",
+    "id": "16li8774",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "bytecode manipulation, because regular bugs are boring",
+    "ts": "1484578341.000168",
+    "id": "16li8775",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "<@U39P7U6EP> thank you",
+    "ts": "1484578350.000169",
+    "id": "16li8776",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "The code is totally opensource in the realm-java Github under \"realm-transformer\" ",
+    "ts": "1484578358.000170",
+    "id": "16li8777",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "I can sleep quietly now :smiley:",
+    "ts": "1484578384.000171",
+    "id": "16li8778",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U055GGAHS> it actually works surprisingly well, I was also skeptical but it only has odd side effects if you do direct field access in the RealmObject constructor ",
+    "ts": "1484578397.000172",
+    "id": "16li8779",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "Which is already odd to do because you need a no-parameter constructor anyways ",
+    "ts": "1484578413.000173",
+    "id": "16li8780",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "i’m being sarcastic, I know it works well :thumbsup:",
+    "ts": "1484578418.000174",
+    "id": "16li8781",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I’m just salty today because my company doesn’t celebrate mlk day so im here at work instead of at home playing video games",
+    "ts": "1484578462.000175",
+    "id": "16li8782",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "I was skeptical when it came out but it's really cool, it's the reason why you can make \"computed properties\" by modifying multiple properties in the same setter",
+    "ts": "1484578465.000176",
+    "id": "16li8783",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I've always loved this stuff about Python",
+    "ts": "1484578509.000177",
+    "id": "16li8784",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "Welp I'm at work but I'm trying to make a stable backstack independently from Flow",
+    "ts": "1484578511.000178",
+    "id": "16li8785",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "It's being a bitch tho",
+    "ts": "1484578518.000179",
+    "id": "16li8786",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Want to change anything about a single class? Go ahead.",
+    "ts": "1484578518.000180",
+    "id": "16li8787",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3S47BB0T",
+    "text": "<@U3S47BB0T|mishka> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1484594376.000181",
+    "id": "16li8788",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3BM9PZF0",
+    "text": "Who still uses Parse (open-source) Platform? The community is looking for an Android SDK maintainer...",
+    "edited": {
+      "user": "U3BM9PZF0",
+      "ts": "1484597859.000000"
+    },
+    "ts": "1484597802.000182",
+    "id": "16li8789",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Doubt anyone here uses Parse, it's not really something you'd use for _real_ production apps if you know what I mean.",
+    "ts": "1484598233.000184",
+    "id": "16li8790",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3R7UUSSJ",
+    "text": "people converted to firebase as far as i noticed",
+    "ts": "1484599136.000185",
+    "id": "16li8791",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "It's just hard getting people to work on a project as if it were their job. Not many people rely on Parse and it's not a real opportunity these days.",
+    "ts": "1484600279.000186",
+    "id": "16li8792",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3RH3P1CG",
+    "text": "<@U3RH3P1CG|mahenrique94> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1484606570.000187",
+    "id": "16li8793",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3T0TAU07",
+    "text": "<@U3T0TAU07|jb> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1484618230.000188",
+    "id": "16li8794",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3SCYLNBE",
+    "text": "<@U3SCYLNBE|kanand90> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1484625521.000189",
+    "id": "16li8795",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3EQFHSAK",
+    "text": "<https://github.com/kevalpatel2106/Open-Weather-API-Wrapper>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "kevalpatel2106/Open-Weather-API-Wrapper",
+        "title_link": "https://github.com/kevalpatel2106/Open-Weather-API-Wrapper",
+        "text": "Open-Weather-API-Wrapper - An Android wrapper for the APIs of <https://openweathermap.org>",
+        "fallback": "GitHub: kevalpatel2106/Open-Weather-API-Wrapper",
+        "thumb_url": "https://avatars1.githubusercontent.com/u/20060162?v=3&s=400",
+        "from_url": "https://github.com/kevalpatel2106/Open-Weather-API-Wrapper",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1484637095.000190",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U3EQFHSAK"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "16li8796",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

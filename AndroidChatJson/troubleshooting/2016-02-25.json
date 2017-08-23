@@ -1,0 +1,392 @@
+[
+  {
+    "user": "U0P1J43FE",
+    "subtype": "channel_join",
+    "text": "<@U0P1J43FE|mikkobzz> has joined the channel",
+    "ts": "1456409853.000034",
+    "id": "25tr3916",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0P1J43FE",
+    "text": "hello can anyone help with my android searchview? i really need some help",
+    "ts": "1456409859.000035",
+    "id": "25tr3917",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0L565VU3",
+    "subtype": "channel_join",
+    "text": "<@U0L565VU3|thanhbc> has joined the channel",
+    "ts": "1456412659.000036",
+    "id": "25tr3918",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DU1GQTV",
+    "text": "Hey everyone. I'm having an issue fully collapsing an AppBarLayout.  This is my layout:\n```\n&lt;android.support.design.widget.CoordinatorLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n             xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n             android:layout_width=\"match_parent\"\n             android:layout_height=\"match_parent\"&gt;\n    &lt;com.devbrackets.android.exomedia.EMVideoView\n        android:id=\"@+id/video_view\"\n        android:layout_width=\"match_parent\"\n        android:layout_height=\"match_parent\"\n        app:defaultControlsEnabled=\"true\"/&gt;\n\n    &lt;android.support.design.widget.AppBarLayout\n        android:id=\"@+id/playback_app_bar_layout\"\n        android:layout_width=\"match_parent\"\n        android:layout_height=\"wrap_content\"\n        android:theme=\"@style/ThemeOverlay.AppCompat.Dark.ActionBar\"\n        android:background=\"@color/black_overlay\"&gt;\n\n        &lt;include layout=\"@layout/toolbar_default\" /&gt;\n\n    &lt;/android.support.design.widget.AppBarLayout&gt;\n&lt;/android.support.design.widget.CoordinatorLayout&gt;\n```\nThe video view has callback listeners when the controls are shown/hidden and I'm using these methods:\n```\nplaybackAppBarLayout.setExpanded(true, true)\n// and\nplaybackAppBarLayoutSetExpanded(false, true)\n```\nMy issue is that when the AppBarLayout collapses, it seems to only go so far and part of it remains on screen (like as if there was a status bar)\nI should mention that these are the flags I'm using within `setSystemUiVisibility`\n```\nView.SYSTEM_UI_FLAG_LAYOUT_STABLE\n|| View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION\n|| View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN\n|| View.SYSTEM_UI_FLAG_HIDE_NAVIGATION\n|| View.SYSTEM_UI_FLAG_FULLSCREEN\n|| View.KEEP_SCREEN_ON\n|| View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY\n```",
+    "ts": "1456417021.000037",
+    "id": "25tr3919",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0P285BDJ",
+    "subtype": "channel_join",
+    "text": "<@U0P285BDJ|ryancmcmanus> has joined the channel",
+    "ts": "1456417171.000038",
+    "id": "25tr3920",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0MKPH43Y",
+    "text": "<@U0DU1GQTV>: i remember running into this issue before too, i’m digging around to see what i did.",
+    "ts": "1456419089.000039",
+    "id": "25tr3921",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0MKPH43Y",
+    "text": "i don’t remember if i have that code anymore or not to look back on though.  i’ll see what i can find for you",
+    "ts": "1456419115.000040",
+    "id": "25tr3922",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0MKPH43Y",
+    "text": "<@U0DU1GQTV>: try putting this in your EMVideoView — app:layout_behavior=\"@string/appbar_scrolling_view_behavior\"",
+    "ts": "1456419194.000041",
+    "id": "25tr3923",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0MKPH43Y",
+    "text": "when you scroll does it disappear fully, or does it still do what you described?",
+    "edited": {
+      "user": "U0MKPH43Y",
+      "ts": "1456419581.000000"
+    },
+    "ts": "1456419222.000042",
+    "id": "25tr3924",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DU1GQTV",
+    "text": "<@U0MKPH43Y>: the video view should be full screen, so I wanted the appbar to overlay and show/hide when the video controls were shown/hidden. I figured out I was using the wrong system ui flags. I only wanted `SYSTEM_UI_FLAG_FULLSCREEN` and `SYSTEM_UI_FLAG_HIDE_NAVIGATION`",
+    "ts": "1456423213.000045",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U0MKPH43Y"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "25tr3925",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0MKPH43Y",
+    "text": "oh ok, glad you got it figured out!",
+    "ts": "1456423233.000046",
+    "id": "25tr3926",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DU1GQTV",
+    "text": "TIL not to be aggressive with flags",
+    "ts": "1456423462.000047",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U0MKPH43Y"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "25tr3927",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0NQ6CY8G",
+    "subtype": "channel_join",
+    "text": "<@U0NQ6CY8G|crispy> has joined the channel",
+    "ts": "1456428910.000048",
+    "id": "25tr3928",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0L71T98B",
+    "subtype": "channel_join",
+    "text": "<@U0L71T98B|joseearce> has joined the channel",
+    "ts": "1456432511.000049",
+    "id": "25tr3929",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KC373GX",
+    "subtype": "channel_join",
+    "text": "<@U0KC373GX|noel> has joined the channel",
+    "ts": "1456436959.000050",
+    "id": "25tr3930",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0NQ6CY8G",
+    "text": "If I am on an Adapter class, how do I get a Layout (like a linear layout) on the parent activity of that adapter?",
+    "ts": "1456443198.000051",
+    "id": "25tr3931",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i tend to pass an instance of my presenter into my adapter and viewholders, then use that to communicate with my parent view (the fragment or whatever)",
+    "ts": "1456443498.000052",
+    "id": "25tr3932",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "alternatively you could just pass the view into your adapter and use it directly",
+    "ts": "1456443530.000053",
+    "id": "25tr3933",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0M9GA9LP",
+    "subtype": "channel_join",
+    "text": "<@U0M9GA9LP|mexanjuadha> has joined the channel",
+    "ts": "1456458851.000054",
+    "id": "25tr3934",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KU8TDV2",
+    "subtype": "channel_join",
+    "text": "<@U0KU8TDV2|ltpquang> has joined the channel",
+    "ts": "1456470688.000055",
+    "id": "25tr3935",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

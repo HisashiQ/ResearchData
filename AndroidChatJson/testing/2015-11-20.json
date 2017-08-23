@@ -1,0 +1,323 @@
+[
+  {
+    "user": "U0D8P42SC",
+    "text": "How do you guys get around the problem Espresso has with ProgressBars (<https://blog.entwicklerbier.org/2015/05/test-your-ui-on-android-with-espresso-damn-you-progressbar/>)? Creating layout files especially for testing doesn't seem to be a good idea to me.",
+    "attachments": [
+      {
+        "service_name": "Entwicklerbier",
+        "title": "Test your UI on Android with Espresso – Damn you, ProgressBar!",
+        "title_link": "https://blog.entwicklerbier.org/2015/05/test-your-ui-on-android-with-espresso-damn-you-progressbar/",
+        "text": "When a user opens an app and the initial data gets fetched from the server, a good pattern is to display a ProgressBar. When I wanted to test the presence of this loading screen, Espresso was causi…",
+        "fallback": "Entwicklerbier: Test your UI on Android with Espresso – Damn you, ProgressBar!",
+        "thumb_url": "https://s0.wp.com/i/blank.jpg",
+        "ts": 1431199929,
+        "from_url": "https://blog.entwicklerbier.org/2015/05/test-your-ui-on-android-with-espresso-damn-you-progressbar/",
+        "thumb_width": 200,
+        "thumb_height": 200,
+        "id": 1
+      }
+    ],
+    "ts": "1448012761.000206",
+    "id": "20te405",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "hmm… haven’t checked for a progress bar before",
+    "ts": "1448014062.000208",
+    "id": "20te406",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "can’t you just check the invoking methods?",
+    "ts": "1448014565.000209",
+    "id": "20te407",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "that’s what I tend to do",
+    "ts": "1448014746.000210",
+    "id": "20te408",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "unit test that shit",
+    "ts": "1448014749.000211",
+    "id": "20te409",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "no need to espresso what isn’t absolutely mission critial",
+    "ts": "1448014760.000212",
+    "id": "20te410",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8P42SC",
+    "text": "I dont mean checking if a progress bar is shown",
+    "ts": "1448016038.000213",
+    "id": "20te411",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8P42SC",
+    "text": "but _when_ a progressbar is shown espresso stops working because the main thread never settles, so you can't espresso test and activitys that display a progressbar",
+    "ts": "1448016079.000214",
+    "id": "20te412",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8P42SC",
+    "text": "any",
+    "ts": "1448016093.000215",
+    "id": "20te413",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "hmmm",
+    "ts": "1448020506.000216",
+    "id": "20te414",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "interesting",
+    "ts": "1448020509.000217",
+    "id": "20te415",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "<@U0D8P42SC> lol, glad we don’t have `ProgressBars` in the app. Mock it for the test app so it will do nothing and won’t block the Espresso",
+    "ts": "1448035051.000218",
+    "id": "20te416",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETA9WHH",
+    "text": "if you have a progress bar loading animation because you’re waiting for other async tasks to be completed outside of main thread, you probably need to create an idling resource to report back to espresso when that work is completed",
+    "ts": "1448036612.000219",
+    "id": "20te417",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETA9WHH",
+    "text": "or for a truly hackier solution, create a method that continuously checks for the absence of the progress bar and continue after that",
+    "ts": "1448036710.000220",
+    "id": "20te418",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "I'd go for idling resource. ",
+    "ts": "1448037734.000221",
+    "id": "20te419",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ET5HW11",
+    "text": "I find idling resources too complex for most occasions. I just use this Wait helper: <https://gist.github.com/sdsantos/ea8da857978bb038ac88>",
+    "ts": "1448037927.000222",
+    "id": "20te420",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "Idling resource won't solve progress bar problem because progress bar uses Handler to post its animation and Espresso thinks that app is busy. ",
+    "ts": "1448038064.000223",
+    "id": "20te421",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

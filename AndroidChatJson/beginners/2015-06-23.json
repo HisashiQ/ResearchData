@@ -1,0 +1,1282 @@
+[
+  {
+    "user": "U061A6B9V",
+    "text": "<!channel>: how to decide whether we should create new activity or just fragment?",
+    "ts": "1435063246.000151",
+    "id": "23be141",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05173MEQ",
+    "text": "<@U061A6B9V>: Is it going to fill the screen? Do you want to use it in multiple places in combination with other things?",
+    "ts": "1435063288.000152",
+    "id": "23be142",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061A6B9V",
+    "text": "No, I don’t want to combine the screen",
+    "ts": "1435063345.000153",
+    "id": "23be143",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "for me, its navigational",
+    "ts": "1435063387.000154",
+    "id": "23be144",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "if the app has a flat structure",
+    "ts": "1435063398.000155",
+    "id": "23be145",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "i might go with fragments",
+    "ts": "1435063402.000156",
+    "id": "23be146",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "if it’s a more tall structure with child and parent navigation",
+    "ts": "1435063420.000157",
+    "id": "23be147",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "id split that to activities",
+    "ts": "1435063424.000158",
+    "id": "23be148",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053MU86W",
+    "text": "If you are supporting tablets and it makes sense to display both \"views\" then use fragments if it doesn't then start a new activity. ",
+    "ts": "1435063449.000159",
+    "id": "23be149",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061A6B9V",
+    "text": "<@U053MU86W>: so, fragment is used to combine screens? \nI read that crating fragment is lighter than activity..",
+    "ts": "1435063575.000160",
+    "id": "23be150",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TXMX9Q",
+    "text": "<@U061A6B9V>: Very good question. For me the decision depends on whether you want to reuse views",
+    "ts": "1435063733.000161",
+    "id": "23be151",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TXMX9Q",
+    "text": "i agree <@U04U5KS3Z> that it makes sense to use fragments if you have a flat structure",
+    "ts": "1435063803.000162",
+    "id": "23be152",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061A6B9V",
+    "text": "So, I use `navigation drawer` on `MainActivity`.\nOn the drawer, I have settings menu.\nI use fragment for the settings screen.\nOn the settings, I have menu for sensor calibration.\n\nNow, should I create new activity for the sensor calibration screen? Because I think it’s not flat anymore...",
+    "ts": "1435064409.000163",
+    "id": "23be153",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061A6B9V",
+    "text": "<@U05173MEQ>, <@U04U5KS3Z>, <@U053MU86W>, <@U04TXMX9Q> :blush:",
+    "ts": "1435065115.000164",
+    "id": "23be154",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05173MEQ",
+    "text": "I would, yes. However I might build that activity to contain a fragment if I know that I will use it somewhere else later on. ",
+    "ts": "1435065221.000165",
+    "id": "23be155",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053MU86W",
+    "text": "For a smooth experience use fragments with a navigation drawer. I find it really distracting when I tap a navigation drawer item and the whole screen animates a new activity in. ",
+    "ts": "1435065264.000166",
+    "id": "23be156",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061A6B9V",
+    "text": "<@U053MU86W>: I still don't get it. Use fragment attached to a new activity? Or use the MainActivity instead?",
+    "ts": "1435100510.000167",
+    "id": "23be157",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053MU86W",
+    "text": "Use a single activity and switch out the fragments attached to the activity. Call .replace(layout I'd, New Fragment) on the FragmentTransaction to swap out the active Fragment. ",
+    "ts": "1435100827.000168",
+    "id": "23be158",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053MU86W",
+    "text": "So in this case yes you would use your MainActivity. ",
+    "ts": "1435100968.000169",
+    "id": "23be159",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061A6B9V",
+    "text": "<@U053MU86W>: hmm... Is it Ok to tightly coupling all the things to MainActivity?\n<@U05173MEQ>: what do you think?",
+    "ts": "1435101147.000170",
+    "id": "23be160",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053MU86W",
+    "text": "I keep things pretty loosely coupled by registering a callback with the fragment that the Main Activity implements. The fragment has no knowledge of the MainActivity and the primary concern of the MainActivity is to swap out Fragments and Navigate to other Activities.",
+    "ts": "1435101392.000171",
+    "id": "23be161",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "i do something similar",
+    "ts": "1435101529.000172",
+    "id": "23be162",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "but i use something like eventbus/otto for my call backs",
+    "ts": "1435101543.000173",
+    "id": "23be163",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "but <@U053MU86W> ’s way also works well",
+    "ts": "1435101572.000174",
+    "id": "23be164",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053MU86W",
+    "text": "That works too, I have been diving head-first into RXAndroid lately and have been using that instead of Callbacks",
+    "ts": "1435101589.000175",
+    "id": "23be165",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "yeah i forgot this was the beginners channel",
+    "ts": "1435101605.000176",
+    "id": "23be166",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "so recommending frameworks is probably beyond the scope here",
+    "ts": "1435101618.000177",
+    "id": "23be167",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053MU86W",
+    "text": "Yeah I don't know what the scope is either, but I think it is best to learn how to do it the manual way so you can appreciate the frameworks once you start using them :simple_smile:",
+    "ts": "1435101847.000178",
+    "id": "23be168",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "yeah",
+    "ts": "1435101854.000179",
+    "id": "23be169",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "although skip the page about networking on the docs",
+    "ts": "1435101875.000180",
+    "id": "23be170",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "async tasks…. *shudders*",
+    "ts": "1435101889.000181",
+    "id": "23be171",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053MU86W",
+    "text": "That is why I am glad I started learning RX, my team just finished replacing all of our async tasks in our project and it is glorious.",
+    "ts": "1435101981.000182",
+    "id": "23be172",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "yeah, im in the process of getting my head around RX",
+    "ts": "1435102006.000183",
+    "id": "23be173",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "done some simple stuff with retrofit",
+    "ts": "1435102011.000184",
+    "id": "23be174",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053MU86W",
+    "text": "That is a good place to start, if you need help with anything let me know.",
+    "ts": "1435102070.000185",
+    "id": "23be175",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053MU86W",
+    "text": "We are also implementing an MVP architecture in our app and using RX I was able to do massive form validation in a pretty sane way.",
+    "ts": "1435102215.000186",
+    "id": "23be176",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "yeah cheers, i think what’s a little tricky is that all the guides i look at use retrolambda, and I haven’t used that in my projects",
+    "edited": {
+      "user": "U04U5KS3Z",
+      "ts": "1435102237.000000"
+    },
+    "ts": "1435102220.000187",
+    "id": "23be177",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "so im doing stuff the ‘longer’ way",
+    "ts": "1435102246.000189",
+    "id": "23be178",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "and figuring a lot of the stuff myself",
+    "ts": "1435102253.000190",
+    "id": "23be179",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053MU86W",
+    "text": "Yeah, I had the same problem, I use retrolambda for my personal stuff and I miss it dearly at work. It does make the code much nicer to read since it hides all the anonymous inner classes",
+    "ts": "1435102725.000191",
+    "id": "23be180",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "yeah i get the cleanness of it",
+    "ts": "1435103387.000192",
+    "id": "23be181",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "just i never find time to actually learn lambdas",
+    "ts": "1435103397.000193",
+    "id": "23be182",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "lol",
+    "ts": "1435103398.000194",
+    "id": "23be183",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "and then good luck using it in a collab project when no one else knows it",
+    "ts": "1435103420.000195",
+    "id": "23be184",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053MU86W",
+    "text": "Haha yeah, that is the issue I am facing a chunk my team is remote so getting every one on the same tools or to agree on using a plugin is difficult.",
+    "ts": "1435104800.000196",
+    "id": "23be185",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "yeah, i just got them to accept eventbus and butterknife",
+    "ts": "1435104910.000197",
+    "id": "23be186",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "on my project",
+    "ts": "1435104914.000198",
+    "id": "23be187",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053MU86W",
+    "text": "Butterknife is one framework I would recommend to beginners, it just saves so much time. We are using Roboguice 3 which provides the view injection and it also does dependency injection.",
+    "ts": "1435105265.000199",
+    "id": "23be188",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "how is guice - i heard it was pretty inefficient on android last time i checked?",
+    "ts": "1435105354.000200",
+    "id": "23be189",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "we’re trying out dagger 2 - still getting my head around its capabilities",
+    "ts": "1435105372.000201",
+    "id": "23be190",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053MU86W",
+    "text": "It was until 3.0, it switched from runtime to compile time. Dagger is far more powerful but Guice was a lot easier to setup.",
+    "ts": "1435105430.000202",
+    "id": "23be191",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053MU86W",
+    "text": "If you want to Inject a class you just annotate the variable  with @Inject there is not componets or anything to specifiy. It also has a cool thing called ContextSingleton which the lifetime of the object is tied to the Context. If you inject ContextSingleton into an activity and fragment it will be the same object.",
+    "ts": "1435105577.000203",
+    "id": "23be192",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "thats pretty cool",
+    "ts": "1435105621.000204",
+    "id": "23be193",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "What's butterknife used for",
+    "edited": {
+      "user": "U053TJ508",
+      "ts": "1435106382.000000"
+    },
+    "ts": "1435106316.000205",
+    "id": "23be194",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "Here’s the website for it - <https://jakewharton.github.io/butterknife/>",
+    "attachments": [
+      {
+        "text": "View \"injection\" library for Android.",
+        "fallback": "View \"injection\" library for Android.",
+        "from_url": "https://jakewharton.github.io/butterknife/",
+        "id": 1
+      }
+    ],
+    "ts": "1435106623.000207",
+    "id": "23be195",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "In layman’s terms, it saves you writing (SomeView)findviewById(R.id.someviewId); all the time",
+    "ts": "1435106655.000209",
+    "id": "23be196",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "there’s a bit more to it",
+    "ts": "1435106671.000210",
+    "id": "23be197",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "but basically saves a lot of typing",
+    "ts": "1435106675.000211",
+    "id": "23be198",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061A6B9V",
+    "text": "Do you guys still using AndroidAnnotation?\n\nIs it similar to butterknife?",
+    "ts": "1435107430.000212",
+    "id": "23be199",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053MU86W",
+    "text": "It is similar, except AndroidAnnotation does what Butterknife does as well as retrofit I find it a little heavy and perfer to use smaller more focused libraries like Dagger, Butterknife, and Retrofit.",
+    "ts": "1435108575.000213",
+    "id": "23be200",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053MU86W",
+    "text": "Also AndroidAnnotation has the limitation that your xml id and Java variable names have to be the same while Butterkinfe and Guice do not.",
+    "ts": "1435108637.000214",
+    "id": "23be201",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "Would it be easier to have a bunch of fragments who get their data from an RSS feed each. Or is it easier to do this using one fragment and seeing which fragment is showing and then pulling the corresponding RSS feed data?",
+    "ts": "1435109204.000215",
+    "id": "23be202",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053MU86W",
+    "text": "Would the fragments essentially have the same view?  If so you could create one RSSFragment and then pass the feed URL via the .setArguements method and you could reuse the fragment",
+    "ts": "1435111246.000216",
+    "id": "23be203",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "the layout would stay the same, it is just the data that would be changing",
+    "edited": {
+      "user": "U053TJ508",
+      "ts": "1435111349.000000"
+    },
+    "ts": "1435111343.000217",
+    "id": "23be204",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053MU86W",
+    "text": "I would create a single fragment and then just pass it the specific RSS feed url you want it to load.",
+    "ts": "1435111386.000219",
+    "id": "23be205",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "ok thanks, thats what <@U0546QERR> said as well",
+    "ts": "1435111404.000220",
+    "id": "23be206",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "oh whoops i didn't see the conversation in this channel haha, yeah that's right",
+    "ts": "1435111468.000221",
+    "id": "23be207",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "brb though",
+    "ts": "1435111485.000222",
+    "id": "23be208",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "<@U04U5KS3Z>: look at kmatts lecture and articles on rx. I'm going to get him in here shortly. Waiting on him to get a sprint task done ",
+    "ts": "1435122637.000223",
+    "id": "23be209",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "<http://Philosophicalhacker.com|Philosophicalhacker.com>",
+    "ts": "1435122646.000224",
+    "id": "23be210",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

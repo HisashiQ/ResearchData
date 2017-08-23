@@ -1,0 +1,2395 @@
+[
+  {
+    "user": "U2M0WUZ7A",
+    "text": "try `java.lang.String` instead of `string`",
+    "ts": "1485159846.002853",
+    "id": "23de61929",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "anybody has worked with Android data binding views ? Is it better in respect of code reuse and maintainability ?",
+    "edited": {
+      "user": "U0LFEJ1ST",
+      "ts": "1485161137.000000"
+    },
+    "ts": "1485161112.002854",
+    "id": "23de61930",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U08GFT5V5>: :taco: ",
+    "ts": "1485162733.002856",
+    "id": "23de61931",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QKJRNGZ",
+    "text": "<@U2M0WUZ7A> you're the man! :slightly_smiling_face: it worked",
+    "ts": "1485163923.002857",
+    "reactions": [
+      {
+        "name": "simple_smile",
+        "users": [
+          "U2M0WUZ7A"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "23de61932",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3DCPPVCP",
+    "text": "I'm having a weird bug. I have an Android project with a launcher activity which goes to login activity which goes to home activity. If on home activity I press home button then the app minimises and if I come back to app my home activity is open, but if I press back button and come back to my app it starts the app from launcher activity ",
+    "ts": "1485169118.002858",
+    "id": "23de61933",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3DCPPVCP",
+    "text": "I have oneplus3 oxygen is 4.0.2 Nougat",
+    "ts": "1485169146.002859",
+    "id": "23de61934",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3DCPPVCP",
+    "text": "But I confirmed this behaviour on stock android 4.4.2",
+    "ts": "1485169186.002860",
+    "id": "23de61935",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3DCPPVCP",
+    "text": "Is this intended or a bug?",
+    "ts": "1485169199.002861",
+    "id": "23de61936",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3DCPPVCP",
+    "text": "I tested it with my own project and another person's project also but this behaviour is occurring.",
+    "ts": "1485169245.002862",
+    "id": "23de61937",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Intended",
+    "ts": "1485169293.002863",
+    "id": "23de61938",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Home minimises, back removes last activity from stack (unless onBackPressed is overridden)",
+    "edited": {
+      "user": "U1LJG0Y03",
+      "ts": "1485169364.000000"
+    },
+    "ts": "1485169347.002864",
+    "id": "23de61939",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "So when you reopen after clicking back, there’s no stack to restore state from, so you get a fresh app session",
+    "ts": "1485169392.002866",
+    "id": "23de61940",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3DCPPVCP",
+    "text": "So is the way to restore state when coming back is saving it in onSaveInstance()?",
+    "ts": "1485169489.002867",
+    "id": "23de61941",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3DCPPVCP",
+    "text": "Will it call restore state function even if the activity was finished?",
+    "ts": "1485169506.002868",
+    "id": "23de61942",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "If the activity is finished like that then no, you need other methods for restoring, like writing to a DB",
+    "ts": "1485169537.002869",
+    "id": "23de61943",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "If you really want to that is",
+    "ts": "1485169540.002870",
+    "id": "23de61944",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "But there’s not really any cases where that’d be necessary",
+    "ts": "1485169552.002871",
+    "id": "23de61945",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "(I’m sure there’s a few, but they’re not common)",
+    "ts": "1485169580.002872",
+    "id": "23de61946",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3DCPPVCP",
+    "text": "So saving and restoring state is useful in case of minimise by home button?",
+    "edited": {
+      "user": "U3DCPPVCP",
+      "ts": "1485169675.000000"
+    },
+    "ts": "1485169630.002873",
+    "id": "23de61947",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3DCPPVCP",
+    "text": "Strange I never noticed it till now. I thought I was not coding correctly.",
+    "ts": "1485169660.002874",
+    "id": "23de61948",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "It’s a bit more in depth than that, but essentially yes",
+    "ts": "1485169696.002876",
+    "id": "23de61949",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "<https://developer.android.com/guide/components/activities/index.html>",
+    "attachments": [
+      {
+        "title": "    Activities | Android Developers  ",
+        "title_link": "https://developer.android.com/guide/components/activities/index.html",
+        "text": "Improve your app's performance by learning how to optimize power consumption, launch times, and other important areas of performance.",
+        "fallback": "    Activities | Android Developers  ",
+        "from_url": "https://developer.android.com/guide/components/activities/index.html",
+        "service_icon": "https://developer.android.com/images/brand/Android_Robot_200.png",
+        "service_name": "developer.android.com",
+        "id": 1
+      }
+    ],
+    "ts": "1485169707.002877",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "23de61950",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Back is essentially the same as calling onDestroy",
+    "ts": "1485169779.002879",
+    "id": "23de61951",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "<https://developer.android.com/guide/components/activities/activity-lifecycle.html>",
+    "attachments": [
+      {
+        "title": "    The Activity Lifecycle | Android Developers  ",
+        "title_link": "https://developer.android.com/guide/components/activities/activity-lifecycle.html",
+        "text": "An Activity is an application component that provides a screen with which users can interact in order to do something, such as dial the phone, take a photo, send an email, or view a map. Each activity is given a window in which to draw its user interface…",
+        "fallback": "    The Activity Lifecycle | Android Developers  ",
+        "from_url": "https://developer.android.com/guide/components/activities/activity-lifecycle.html",
+        "service_icon": "https://developer.android.com/images/brand/Android_Robot_200.png",
+        "service_name": "developer.android.com",
+        "id": 1
+      }
+    ],
+    "ts": "1485169779.002880",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "23de61952",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3DCPPVCP",
+    "text": "Thanks <@U1LJG0Y03> ",
+    "ts": "1485169846.002882",
+    "id": "23de61953",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3DCPPVCP",
+    "text": "Much clear on the topic now",
+    "ts": "1485169852.002883",
+    "id": "23de61954",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "I’m sure other people here will have much better knowledge on this than me tbh",
+    "ts": "1485169866.002884",
+    "id": "23de61955",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3DCPPVCP",
+    "text": ":taco: <@U1LJG0Y03> ",
+    "ts": "1485169866.002885",
+    "id": "23de61956",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "But that’s just how I view it",
+    "ts": "1485169874.002886",
+    "id": "23de61957",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3VNACCUX",
+    "text": "<@U3VNACCUX|cloud444> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1485171769.002887",
+    "id": "23de61958",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3UAQBEQG",
+    "text": "<@U3UAQBEQG|alexspyr> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1485172184.002888",
+    "id": "23de61959",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18E0PY49",
+    "text": "Anyone here using Kotlin with Dagger ?",
+    "ts": "1485172246.002889",
+    "id": "23de61960",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "yep",
+    "ts": "1485172426.002890",
+    "id": "23de61961",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "It works, if that's the question :stuck_out_tongue:",
+    "ts": "1485172456.002891",
+    "id": "23de61962",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18E0PY49",
+    "text": "So would constructor injection look something like this ?",
+    "ts": "1485172488.002892",
+    "id": "23de61963",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18E0PY49",
+    "text": "```@Inject\n    constructor(private var localDatabase: LocalDatabase,private var accountService: AccountService, private var lectureService: LectureService, private preferencesHelper: PreferencesHelper){```",
+    "ts": "1485172491.002893",
+    "id": "23de61964",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18E0PY49",
+    "text": "cause I'm constantly getting these errors ```Error:Dagger does not support injection into private fields```",
+    "ts": "1485172788.002894",
+    "id": "23de61965",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "well error says it all",
+    "ts": "1485173068.002895",
+    "id": "23de61966",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "your fields are private",
+    "ts": "1485173074.002896",
+    "id": "23de61967",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "`constructor(var localDatabase: LocalDatabase, var accountService: AccountService, var lectureService: LectureService, preferencesHelper: PreferencesHelper)`",
+    "ts": "1485173118.002897",
+    "id": "23de61968",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18E0PY49",
+    "text": "It doesn’t fix the issue tho",
+    "ts": "1485173168.002898",
+    "id": "23de61969",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "You should check other places in your code that utilize dagger then",
+    "ts": "1485173210.002899",
+    "id": "23de61970",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "You can checkout my super simple MVP example where I inject presenter's constructor: <https://github.com/michaldrabik/KotlinMVP/blob/master/app/src/main/java/com/michaldrabik/kotlintest/ui/main/MainPresenter.kt>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "michaldrabik/KotlinMVP",
+        "title_link": "https://github.com/michaldrabik/KotlinMVP/blob/master/app/src/main/java/com/michaldrabik/kotlintest/ui/main/MainPresenter.kt",
+        "text": "KotlinMVP - Simple Android app created using Kotlin and MVP pattern. Tested with JUnit, Robolectric and Mockito.",
+        "fallback": "GitHub: michaldrabik/KotlinMVP",
+        "thumb_url": "https://avatars0.githubusercontent.com/u/11537045?v=3&s=400",
+        "from_url": "https://github.com/michaldrabik/KotlinMVP/blob/master/app/src/main/java/com/michaldrabik/kotlintest/ui/main/MainPresenter.kt",
+        "thumb_width": 160,
+        "thumb_height": 160,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1485173317.002900",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "23de61971",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18E0PY49",
+    "text": "Alright, and If i want to do field injection i just use ```lateinit var``` ?",
+    "ts": "1485173380.002902",
+    "id": "23de61972",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "ye like this: `@Inject lateinit var presenter: MainPresenter`",
+    "ts": "1485173437.002903",
+    "id": "23de61973",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18E0PY49",
+    "text": "Wish it could give me more direct answers",
+    "ts": "1485173726.002904",
+    "id": "23de61974",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18E0PY49",
+    "text": "seems like I’ve fixed it everywhere but it still says there are privates left",
+    "ts": "1485173737.002905",
+    "id": "23de61975",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "We can't really help you more unless your project is smowhere on GIthub",
+    "ts": "1485173806.002906",
+    "id": "23de61976",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18E0PY49",
+    "text": "found this",
+    "ts": "1485173823.002907",
+    "id": "23de61977",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18E0PY49",
+    "text": "```@Module\nclass ActivityModule(private val activity: Activity) {```",
+    "ts": "1485173825.002908",
+    "id": "23de61978",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18E0PY49",
+    "text": "can this be also an issue ?",
+    "ts": "1485173829.002909",
+    "id": "23de61979",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18E0PY49",
+    "text": "because of private val",
+    "ts": "1485173833.002910",
+    "id": "23de61980",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18E0PY49",
+    "text": "<https://github.com/mattdevelops/Mark.me-android/tree/kotlin/Markme/app/src/main/java/io/mattdevelops/markme>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "mattdevelops/Mark.me-android",
+        "title_link": "https://github.com/mattdevelops/Mark.me-android/tree/kotlin/Markme/app/src/main/java/io/mattdevelops/markme",
+        "text": "Mark.me-android - <http://Mark.me|Mark.me> on Android",
+        "fallback": "GitHub: mattdevelops/Mark.me-android",
+        "thumb_url": "https://avatars1.githubusercontent.com/u/24590077?v=3&s=400",
+        "from_url": "https://github.com/mattdevelops/Mark.me-android/tree/kotlin/Markme/app/src/main/java/io/mattdevelops/markme",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1485173959.002911",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "23de61981",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1T13H6S3",
+    "text": "any body worked with android animation, if yeah can i ask sth",
+    "ts": "1485175544.002913",
+    "id": "23de61982",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "Of course, somebody worked with Android animation.",
+    "ts": "1485179702.002914",
+    "id": "23de61983",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3V66U5PF",
+    "text": "<@U3V66U5PF|alilotfi> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1485179812.002915",
+    "id": "23de61984",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3VQTENKH",
+    "text": "<@U3VQTENKH|mary_lo> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1485183300.002916",
+    "id": "23de61985",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3J6W9P0W",
+    "text": "yo! guyz, can anybody suggest nice MVVM in android guide with Rx?",
+    "edited": {
+      "user": "U3J6W9P0W",
+      "ts": "1485205113.000000"
+    },
+    "ts": "1485205111.002917",
+    "id": "23de61986",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3PQZMSF6",
+    "text": "Anyone know a way to have a textview fill its height with as many lines a possible without cutting a line in half vertically?",
+    "ts": "1485208941.002919",
+    "id": "23de61987",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U3PQZMSF6|iancowley> uploaded a file: <https://androidchat.slack.com/files/iancowley/F3VA1AULT/Untitled.txt|Untitled>",
+    "file": {
+      "id": "F3VA1AULT",
+      "created": 1485208997,
+      "timestamp": 1485208997,
+      "name": "Untitled.txt",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "text",
+      "pretty_type": "Plain Text",
+      "user": "U3PQZMSF6",
+      "editable": true,
+      "size": 1173,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F3VA1AULT/Untitled.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F3VA1AULT/download/Untitled.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/iancowley/F3VA1AULT/Untitled.txt",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F3VA1AULT-bef69c6f9b",
+      "edit_link": "https://androidchat.slack.com/files/iancowley/F3VA1AULT/Untitled.txt/edit",
+      "preview": "<LinearLayout\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"match_parent\"\r\n        android:paddingTop=\"20dp\"\r\n        android:paddingBottom=\"20dp\"\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>&lt;LinearLayout</pre></div>\n<div><pre>        android:layout_width=&quot;wrap_content&quot;</pre></div>\n<div><pre>        android:layout_height=&quot;match_parent&quot;</pre></div>\n<div><pre>        android:paddingTop=&quot;20dp&quot;</pre></div>\n<div><pre>        android:paddingBottom=&quot;20dp&quot;</pre></div>\n<div><pre></pre></div>\n</div>\n</div>\n",
+      "lines": 28,
+      "lines_more": 23,
+      "preview_is_truncated": true,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U3PQZMSF6",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U3PQZMSF6|iancowley>",
+    "bot_id": null,
+    "ts": "1485208998.002920",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "23de61988",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3PQZMSF6",
+    "text": "basically second textview needs to fit as much text as possible. I don't care if the text is shortened, only that it shows full height lines",
+    "ts": "1485209099.002922",
+    "id": "23de61989",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "There are some possible solutions listed here, did you try those? <https://stackoverflow.com/questions/11243867/android-last-line-of-textview-cut-off>",
+    "attachments": [
+      {
+        "title": "Android: Last line of textview cut off",
+        "title_link": "https://stackoverflow.com/questions/11243867/android-last-line-of-textview-cut-off",
+        "text": "I have a horizontal LinearLayout containing a TextView followed by a Spinner next to it. This LinearLayout is dynamically inflated multiple times in a fixed vertical LinearLayout contained within a",
+        "fallback": "Android: Last line of textview cut off",
+        "thumb_url": "https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded",
+        "from_url": "https://stackoverflow.com/questions/11243867/android-last-line-of-textview-cut-off",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "service_icon": "https://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d",
+        "service_name": "stackoverflow.com",
+        "id": 1
+      }
+    ],
+    "ts": "1485209270.002923",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "23de61990",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3PQZMSF6",
+    "text": "I've been trying combinations of those but am still having issues. I'm curious if that post is with a variable height layout while mine is a fixed height",
+    "ts": "1485209663.002925",
+    "id": "23de61991",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Hm, then I don't know without trying :confused:",
+    "ts": "1485209727.002926",
+    "id": "23de61992",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3PQZMSF6",
+    "text": "Thanks for trying :slightly_smiling_face:",
+    "ts": "1485209736.002927",
+    "id": "23de61993",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3PQZMSF6",
+    "text": "I'm sure I'll get it working",
+    "ts": "1485209745.002928",
+    "id": "23de61994",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3PQZMSF6",
+    "text": "well, maxLines=\"2\" it is for now :stuck_out_tongue:",
+    "ts": "1485210267.002929",
+    "id": "23de61995",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QKJRNGZ",
+    "text": "Hey, when obfuscating code with proguard, this line works:\n`proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), '<http://proguard-rules.pro|proguard-rules.pro>'`\nwhile this doesn't:\n`consumerProguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), '<http://proguard-rules.pro|proguard-rules.pro>'`\nand I want to use it so devs using my lib won't need to change their proguard file\nanyone stumbled around this?",
+    "ts": "1485223225.002930",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "23de61996",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QKJRNGZ",
+    "text": "lol <@U0N7D6F50> there's no links in my post :face_with_rolling_eyes:",
+    "ts": "1485223286.002931",
+    "id": "23de61997",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "<@U2QKJRNGZ> you aren't setting it up correctly.",
+    "ts": "1485223764.002932",
+    "id": "23de61998",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "```defaultConfig {\n    consumerProguardFiles 'proguard.txt'\n}```",
+    "ts": "1485223781.002933",
+    "id": "23de61999",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "The proguard.txt file is something you define with your own rules for your library.",
+    "ts": "1485223801.002934",
+    "id": "23de62000",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QKJRNGZ",
+    "text": "<@U05473HHT> I've defined it, it worked in the first line (without consumer)\nthe consumerProguardFiles is configured differently?",
+    "ts": "1485224020.002935",
+    "id": "23de62001",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QKJRNGZ",
+    "text": "I've changed <http://proguard-rules.pro|proguard-rules.pro> to what I wanted to keep",
+    "ts": "1485224076.002936",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "23de62002",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QKJRNGZ",
+    "text": "AFAIK proguard.txt is old, it is now built automatically from <http://proguard-rules.pro|proguard-rules.pro>",
+    "ts": "1485224151.002937",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "23de62003",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "Yeah, consumerProguardFiles is the rules for your library.",
+    "ts": "1485224190.002938",
+    "id": "23de62004",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "So if you notice that Proguard strips out Classes from your library that are actually needed, then you would need to write a rule to keep it.",
+    "ts": "1485224261.002939",
+    "id": "23de62005",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QKJRNGZ",
+    "text": "I know",
+    "ts": "1485224269.002940",
+    "id": "23de62006",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QKJRNGZ",
+    "text": "I did that already",
+    "ts": "1485224271.002941",
+    "id": "23de62007",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QKJRNGZ",
+    "text": "and it works with the `proguardFiles` command",
+    "ts": "1485224283.002942",
+    "id": "23de62008",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QKJRNGZ",
+    "text": "but when I change it to `consumerProguardFiles` it stops working",
+    "ts": "1485224296.002943",
+    "id": "23de62009",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "You would define the consumerProguardFiles in your library and then in the app you would just define normal proguardFiles.",
+    "ts": "1485224410.002944",
+    "id": "23de62010",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "The consumerProguardFiles just needs to know your rules and what I posted above is the syntax for setting it up. I use it for an internal library at work.",
+    "ts": "1485224451.002945",
+    "id": "23de62011",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QKJRNGZ",
+    "text": "yea, so that's exactly what I'm trying to do :slightly_smiling_face:",
+    "ts": "1485224509.002946",
+    "id": "23de62012",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QKJRNGZ",
+    "text": "but when defining consumerProguardFiles for my library it ignores the -keep in my <http://proguard-rules.pro|proguard-rules.pro>",
+    "ts": "1485224529.002947",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "23de62013",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "What do you have your -keep rule as?",
+    "ts": "1485224583.002948",
+    "id": "23de62014",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QKJRNGZ",
+    "text": "```\n-keep public class &lt;Classname&gt; {\n    public static &lt;Classname&gt; getInstance();\n    public static java.lang.String &lt;methodName&gt;(java.lang.String);\n}\n```",
+    "ts": "1485224703.002949",
+    "id": "23de62015",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QKJRNGZ",
+    "text": "again, when I minify the library with `proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), '<http://proguard-rules.pro|proguard-rules.pro>'` it works",
+    "ts": "1485224750.002950",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "23de62016",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QKJRNGZ",
+    "text": "<@U05473HHT> Any ideas?",
+    "ts": "1485225109.002951",
+    "id": "23de62017",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "The rule looks right to me. Not really sure why you are having issues.",
+    "edited": {
+      "user": "U05473HHT",
+      "ts": "1485225242.000000"
+    },
+    "ts": "1485225215.002952",
+    "id": "23de62018",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QKJRNGZ",
+    "text": "<@U05473HHT> how does the line from your project looks like?",
+    "ts": "1485225457.002954",
+    "id": "23de62019",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "So in my lib/build.gradle I have what I posted above for defining the consumerProguardFile.",
+    "ts": "1485225505.002955",
+    "id": "23de62020",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "Then I just have a rule to not modify a certain Class at all.",
+    "ts": "1485225530.002956",
+    "id": "23de62021",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QKJRNGZ",
+    "text": "and you're using `'proguard.txt'` directly? not through `<http://proguard-rules.pro|proguard-rules.pro>` ?",
+    "edited": {
+      "user": "U2QKJRNGZ",
+      "ts": "1485225540.000000"
+    },
+    "ts": "1485225536.002957",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "23de62022",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "My file is actually named <http://proguard-rules.pro|proguard-rules.pro> but in my lib directory. All I have is just one line to not modify a certain class.",
+    "ts": "1485225572.002959",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "23de62023",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "then over in app/build.gradle, I just apply proguard with the proguardFiles with `proguardFiles getDefaultProguardFile('proguard-android.txt'), '<http://proguard-rules.pro|proguard-rules.pro>'\n`",
+    "ts": "1485225629.002960",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "23de62024",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QKJRNGZ",
+    "text": "minifyEnabled true\nis also in the defaultConfig or that's in buildTypes.release ?",
+    "ts": "1485225630.002961",
+    "id": "23de62025",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "I have that in my buildTypes.release",
+    "ts": "1485225686.002962",
+    "id": "23de62026",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QKJRNGZ",
+    "text": "so your library's bulid.gradle looks like this:\n```\ndefaultConfig {\n    ...\n    consumerProguardFiles '<http://proguard-rules.pro|proguard-rules.pro>'\n}\nbuildTypes {\n    release {\n        minifyEnabled true\n    }\n}\n```\n?",
+    "ts": "1485225741.002963",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "23de62027",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "yes",
+    "ts": "1485225822.002964",
+    "id": "23de62028",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2042M003",
+    "text": "Hello everyone I'm trying to write a function that will find the highest and lowest temperature from a list of days (Monday, Tuesday..)  and in each day is a list of temperatures for 24 hours. The main requirement is if the temperatures reoccurs, highlight the first instance. And i'm to display this in a recyclerview",
+    "ts": "1485229246.002965",
+    "id": "23de62029",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2042M003",
+    "text": "here is what I have so far",
+    "ts": "1485229252.002966",
+    "id": "23de62030",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U2042M003|aleckson> uploaded a file: <https://androidchat.slack.com/files/aleckson/F3UQK5CTB/-.java|Untitled>",
+    "file": {
+      "id": "F3UQK5CTB",
+      "created": 1485229303,
+      "timestamp": 1485229303,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U2042M003",
+      "editable": true,
+      "size": 1165,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F3UQK5CTB/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F3UQK5CTB/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/aleckson/F3UQK5CTB/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F3UQK5CTB-e56a577880",
+      "edit_link": "https://androidchat.slack.com/files/aleckson/F3UQK5CTB/-.java/edit",
+      "preview": " if (dayforecastSize != 1) {\r\n                if(hourTemp > dayHighestTemp){\r\n                    dayHighestTemp = hourTemp;\r\n                    indexOfHottest = i;\r\n                }\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre> <span class=\"cm-keyword\">if</span> (<span class=\"cm-variable\">dayforecastSize</span> <span class=\"cm-operator\">!=</span> <span class=\"cm-number\">1</span>) {</pre></div>\n<div><pre>                <span class=\"cm-keyword\">if</span>(<span class=\"cm-variable\">hourTemp</span> <span class=\"cm-operator\">&gt;</span> <span class=\"cm-variable\">dayHighestTemp</span>){</pre></div>\n<div><pre>                    <span class=\"cm-variable\">dayHighestTemp</span> <span class=\"cm-operator\">=</span> <span class=\"cm-variable\">hourTemp</span>;</pre></div>\n<div><pre>                    <span class=\"cm-variable\">indexOfHottest</span> <span class=\"cm-operator\">=</span> <span class=\"cm-variable\">i</span>;</pre></div>\n<div><pre>                }</pre></div>\n</div>\n</div>\n",
+      "lines": 26,
+      "lines_more": 21,
+      "preview_is_truncated": true,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 1
+    },
+    "user": "U2042M003",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U2042M003|aleckson>",
+    "bot_id": null,
+    "ts": "1485229303.002967",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "23de62031",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3VDDRW03",
+    "text": "<@U3VDDRW03|anpurnama> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1485232228.002968",
+    "id": "23de62032",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_comment",
+    "text": "<@U0ESBF4AV|nikoyuwono> commented on <@U2042M003|aleckson>’s file <https://androidchat.slack.com/files/aleckson/F3UQK5CTB/-.java|Untitled>: Where do you put this in your code? Inside recycler view adapter?",
+    "file": {
+      "id": "F3UQK5CTB",
+      "created": 1485229303,
+      "timestamp": 1485229303,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U2042M003",
+      "editable": true,
+      "size": 1165,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F3UQK5CTB/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F3UQK5CTB/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/aleckson/F3UQK5CTB/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F3UQK5CTB-e56a577880",
+      "edit_link": "https://androidchat.slack.com/files/aleckson/F3UQK5CTB/-.java/edit",
+      "preview": " if (dayforecastSize != 1) {\r\n                if(hourTemp > dayHighestTemp){\r\n                    dayHighestTemp = hourTemp;\r\n                    indexOfHottest = i;\r\n                }\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre> <span class=\"cm-keyword\">if</span> (<span class=\"cm-variable\">dayforecastSize</span> <span class=\"cm-operator\">!=</span> <span class=\"cm-number\">1</span>) {</pre></div>\n<div><pre>                <span class=\"cm-keyword\">if</span>(<span class=\"cm-variable\">hourTemp</span> <span class=\"cm-operator\">&gt;</span> <span class=\"cm-variable\">dayHighestTemp</span>){</pre></div>\n<div><pre>                    <span class=\"cm-variable\">dayHighestTemp</span> <span class=\"cm-operator\">=</span> <span class=\"cm-variable\">hourTemp</span>;</pre></div>\n<div><pre>                    <span class=\"cm-variable\">indexOfHottest</span> <span class=\"cm-operator\">=</span> <span class=\"cm-variable\">i</span>;</pre></div>\n<div><pre>                }</pre></div>\n</div>\n</div>\n",
+      "lines": 26,
+      "lines_more": 21,
+      "preview_is_truncated": true,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 1
+    },
+    "comment": {
+      "id": "Fc3VEAFD9R",
+      "created": 1485241803,
+      "timestamp": 1485241803,
+      "user": "U0ESBF4AV",
+      "is_intro": false,
+      "comment": "Where do you put this in your code? Inside recycler view adapter?",
+      "channel": ""
+    },
+    "is_intro": false,
+    "ts": "1485241803.002969",
+    "id": "23de62033",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

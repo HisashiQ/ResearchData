@@ -1,0 +1,1255 @@
+[
+  {
+    "user": "U09JL0SMP",
+    "text": "i still need some help with the MapView",
+    "ts": "1440583021.000385",
+    "id": "26tr1885",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "just shoot the question, like you’re on IRC :simple_smile:",
+    "ts": "1440583606.000386",
+    "id": "26tr1886",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09JL0SMP",
+    "text": "ok mate",
+    "ts": "1440583688.000387",
+    "id": "26tr1887",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09JL0SMP",
+    "text": "basically my idea of  nullpointer exception is that an object has only been declared and not instantiated or initialised",
+    "ts": "1440583776.000388",
+    "id": "26tr1888",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09JL0SMP",
+    "text": "in this case where I declared MapView mapView...and later in the onCreateView in my fragment used mapView.onCreate(mapState)",
+    "ts": "1440583883.000389",
+    "id": "26tr1889",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09JL0SMP",
+    "text": "but throws the nullpointer exception",
+    "ts": "1440583902.000390",
+    "id": "26tr1890",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09JL0SMP",
+    "text": "pls how can I go around this?",
+    "ts": "1440583914.000391",
+    "id": "26tr1891",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "post your code bro",
+    "ts": "1440583932.000392",
+    "id": "26tr1892",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "public class MyFragment extends Fragment implements OnMapReadyCallback",
+    "ts": "1440583956.000393",
+    "id": "26tr1893",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "you have this right?",
+    "ts": "1440583958.000394",
+    "id": "26tr1894",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<@U09JL0SMP>: map hasn’t been declared yet",
+    "ts": "1440583980.000395",
+    "id": "26tr1895",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "and you’re invoking it’s method",
+    "ts": "1440583991.000396",
+    "id": "26tr1896",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "just like you can’t use idk Object o;   then  o.toString(); without declaring it",
+    "ts": "1440584014.000397",
+    "id": "26tr1897",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "you need to first inflate the mapView or bind it",
+    "ts": "1440584071.000398",
+    "id": "26tr1898",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "so maybe findViewById(R.id.mapView) first? :simple_smile:",
+    "ts": "1440584087.000399",
+    "id": "26tr1899",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09JL0SMP",
+    "text": "ok let me post my code",
+    "ts": "1440584111.000400",
+    "id": "26tr1900",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "post it on a gist then copy the link here, easier",
+    "edited": {
+      "user": "U0548MM6B",
+      "ts": "1440584152.000000"
+    },
+    "ts": "1440584141.000401",
+    "id": "26tr1901",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09JL0SMP",
+    "text": "ok will do that now",
+    "ts": "1440584199.000403",
+    "id": "26tr1902",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "(You can paste here with Ctrl+Shift+V to create a code snippet)",
+    "ts": "1440585635.000404",
+    "id": "26tr1903",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Or the + button to the left",
+    "ts": "1440585649.000405",
+    "id": "26tr1904",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09JL0SMP",
+    "text": "<https://gist.github.com/progzilla/b279b625599dace0453d>",
+    "ts": "1440586712.000406",
+    "id": "26tr1905",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "you still aren’t following the directions laid out here <https://developers.google.com/maps/documentation/android/>",
+    "attachments": [
+      {
+        "service_name": "Google Developers",
+        "title": "Google Maps Android API  |  Google Developers",
+        "title_link": "https://developers.google.com/maps/documentation/android/",
+        "text": "Add maps to your Android app. Integrate base maps, styled maps, 3D buildings, indoor floor plans, Street View and Satellite imagery, custom markers, info windows, and more.",
+        "fallback": "Google Developers: Google Maps Android API  |  Google Developers",
+        "from_url": "https://developers.google.com/maps/documentation/android/",
+        "id": 1
+      }
+    ],
+    "ts": "1440586834.000407",
+    "id": "26tr1906",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "also since this is a framelayout, im not sure what oncreate is supposed to be but if you are trying to inject more life cycle into views, you are riding down a dangerous road",
+    "ts": "1440586937.000409",
+    "id": "26tr1907",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09JL0SMP",
+    "text": "ok. I have a piece of code where I called the snippet from which actually was throwing the nullpointexception...a min pls",
+    "ts": "1440587031.000410",
+    "id": "26tr1908",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "yeah that onCreate has no place there",
+    "ts": "1440587053.000411",
+    "id": "26tr1909",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "also location fetching logic isn’t supposed to be in a view",
+    "ts": "1440587116.000412",
+    "id": "26tr1910",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "generally, it looks like what you are doing is what a fragment exists for",
+    "ts": "1440587283.000413",
+    "id": "26tr1911",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "if you follow the google maps fragment instructions it shows you how to self contain the map",
+    "ts": "1440587314.000414",
+    "id": "26tr1912",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "alternately I have a repo you can follow just updating it to get it running again real quick",
+    "ts": "1440587325.000415",
+    "id": "26tr1913",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09JL0SMP",
+    "text": "pls I would appreciate if you can share the repo",
+    "ts": "1440587664.000416",
+    "id": "26tr1914",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U09JL0SMP|progzilla> uploaded a file: <https://androidchat.slack.com/files/progzilla/F09LEAKMK/fragmentview_class.java|FragmentView class> and commented: This is the fragment class where i implemented the mapView class",
+    "file": {
+      "id": "F09LEAKMK",
+      "created": 1440587884,
+      "timestamp": 1440587884,
+      "name": "FragmentView_class.java",
+      "title": "FragmentView class",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U09JL0SMP",
+      "editable": true,
+      "size": 530,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F09LEAKMK/fragmentview_class.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F09LEAKMK/download/fragmentview_class.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/progzilla/F09LEAKMK/fragmentview_class.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F09LEAKMK-46da80869b",
+      "edit_link": "https://androidchat.slack.com/files/progzilla/F09LEAKMK/fragmentview_class.java/edit",
+      "preview": "public class DiscountFragment extends SectionFragment {\r\n\r\n    @InjectView(R.id.discount_map) MainMapView mainMapView;\r\n\t\r\n\t@Override\r\n    public View onCreateView(LayoutInflater inflater, ViewGroup container,\r\n                             Bundle savedInstanceState) {\r\n\r\n        Icepick.restoreInstanceState(this, savedInstanceState);\r\n        View view = inflater.inflate(R.layout.fragment_dis, container, false);\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-keyword\">public</span> <span class=\"cm-keyword\">class</span> <span class=\"cm-variable\">DiscountFragment</span> <span class=\"cm-keyword\">extends</span> <span class=\"cm-variable\">SectionFragment</span> {</pre></div>\n<div><pre>&#8203;</pre></div>\n<div><pre>    <span class=\"cm-meta\">@InjectView</span>(<span class=\"cm-variable\">R</span>.<span class=\"cm-variable\">id</span>.<span class=\"cm-variable\">discount_map</span>) <span class=\"cm-variable\">MainMapView</span> <span class=\"cm-variable\">mainMapView</span>;</pre></div>\n<div><pre>\t</pre></div>\n<div><pre>\t<span class=\"cm-meta\">@Override</span></pre></div>\n<div><pre>    <span class=\"cm-keyword\">public</span> <span class=\"cm-variable\">View</span> <span class=\"cm-variable\">onCreateView</span>(<span class=\"cm-variable\">LayoutInflater</span> <span class=\"cm-variable\">inflater</span>, <span class=\"cm-variable\">ViewGroup</span> <span class=\"cm-variable\">container</span>,</pre></div>\n<div><pre>                             <span class=\"cm-variable\">Bundle</span> <span class=\"cm-variable\">savedInstanceState</span>) {</pre></div>\n<div><pre>&#8203;</pre></div>\n<div><pre>        <span class=\"cm-variable\">Icepick</span>.<span class=\"cm-variable\">restoreInstanceState</span>(<span class=\"cm-keyword\">this</span>, <span class=\"cm-variable\">savedInstanceState</span>);</pre></div>\n<div><pre>        <span class=\"cm-variable\">View</span> <span class=\"cm-variable\">view</span> <span class=\"cm-operator\">=</span> <span class=\"cm-variable\">inflater</span>.<span class=\"cm-variable\">inflate</span>(<span class=\"cm-variable\">R</span>.<span class=\"cm-variable\">layout</span>.<span class=\"cm-variable\">fragment_dis</span>, <span class=\"cm-variable\">container</span>, <span class=\"cm-atom\">false</span>);</pre></div>\n</div>\n</div>\n",
+      "lines": 10,
+      "lines_more": 6,
+      "preview_is_truncated": null,
+      "channels": [
+        "C0565EVTD"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 1,
+      "initial_comment": {
+        "id": "Fc09LE83JN",
+        "created": 1440587884,
+        "timestamp": 1440587884,
+        "user": "U09JL0SMP",
+        "is_intro": true,
+        "comment": "This is the fragment class where i implemented the mapView class",
+        "channel": ""
+      }
+    },
+    "user": "U09JL0SMP",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U09JL0SMP|progzilla>",
+    "bot_id": null,
+    "ts": "1440587885.000417",
+    "id": "26tr1915",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<https://github.com/cforlando/bike-orlando-android>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "cforlando/bike-orlando-android",
+        "title_link": "https://github.com/cforlando/bike-orlando-android",
+        "text": "bike-orlando-android - Biking utility for Orlando Florida. BikeOrlando shows users the bike paths and bike parking throughout the Orange County area.",
+        "fallback": "GitHub: cforlando/bike-orlando-android",
+        "thumb_url": "https://avatars1.githubusercontent.com/u/5225505?v=3&s=400",
+        "from_url": "https://github.com/cforlando/bike-orlando-android",
+        "thumb_width": 155,
+        "thumb_height": 155,
+        "id": 1
+      }
+    ],
+    "ts": "1440588060.000418",
+    "id": "26tr1916",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "that project shows a plethora of mapping stuff as well as a crappy UI for filtering (my bad)",
+    "ts": "1440588093.000420",
+    "id": "26tr1917",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "its worth noting it started out as the bike app then started moving towards being something else entirely",
+    "ts": "1440588123.000421",
+    "id": "26tr1918",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09JL0SMP",
+    "text": "ok cool.",
+    "ts": "1440590611.000422",
+    "id": "26tr1919",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "anyone know why i might be getting UnsupportedClassVersionError when trying to run tests? I have a feeling it’s because I use retrolambdas",
+    "ts": "1440601075.000423",
+    "id": "26tr1920",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "but my tests are in the same module so i don’t see why it would make a difference",
+    "ts": "1440601126.000424",
+    "id": "26tr1921",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "&gt;If you are running gradle with java 8 and wish to run unit tests, you must have either JAVA5_HOME/JAVA6_HOME/JAVA7_HOME or this property set. This is so the tests can be run with the correct java version.",
+    "ts": "1440620959.000425",
+    "id": "26tr1922",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "I have this set but it’s still trying to use JDK7 -_-",
+    "ts": "1440620968.000426",
+    "id": "26tr1923",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "sorta figured it out, if i “Use alternative JRE” in the run config for my tests, and specify JRE 8, it works",
+    "ts": "1440622958.000427",
+    "id": "26tr1924",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "but android studio says it’s using JRE 8 already anyway",
+    "ts": "1440622972.000428",
+    "id": "26tr1925",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "*shrugs*",
+    "ts": "1440622985.000429",
+    "id": "26tr1926",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054AD9CZ",
+    "text": "I'm having some trouble understanding how to put a HTTP header from a curl example into retrofit",
+    "ts": "1440630572.000430",
+    "id": "26tr1927",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054AD9CZ",
+    "text": "The curl example has -H 'Authorization: Token token=\"TOKEN_HERE\"'",
+    "ts": "1440630593.000431",
+    "id": "26tr1928",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054AD9CZ",
+    "text": "And then for retrofit I've tried request.addHeader(\"Authorization: Token token\", \"TOKEN_HERE\"); and request.addHeader(\"Authorization: Token\", \"TOKEN_HERE\");",
+    "ts": "1440630639.000432",
+    "id": "26tr1929",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054AD9CZ",
+    "text": "But both of those return 401",
+    "ts": "1440630649.000433",
+    "id": "26tr1930",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i think the header is just “Authorization” and the value is “Token token=“TOKEN_HERE” right?",
+    "ts": "1440630686.000434",
+    "id": "26tr1931",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "seems kinda weird",
+    "ts": "1440630694.000435",
+    "id": "26tr1932",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054AD9CZ",
+    "text": "I'll give it a go",
+    "ts": "1440630698.000436",
+    "id": "26tr1933",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054AD9CZ",
+    "text": "Yup, that worked",
+    "ts": "1440630728.000437",
+    "id": "26tr1934",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054AD9CZ",
+    "text": "That is weird",
+    "ts": "1440630748.000438",
+    "id": "26tr1935",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054AD9CZ",
+    "text": "Thanks <@U0546QERR>",
+    "ts": "1440630752.000439",
+    "id": "26tr1936",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "np",
+    "ts": "1440630758.000440",
+    "id": "26tr1937",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "<@U054AD9CZ>: Anytime you see a header with RetroFit  like that, it’s just the first part. If you ever can’t figure it out, here is a GoTo list <https://en.wikipedia.org/wiki/List_of_HTTP_header_fields#Field_names>",
+    "ts": "1440630908.000441",
+    "id": "26tr1938",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i think okhttp actually has an authorization proxy class that you can use for that header specifically, but i don’t know what the difference is",
+    "ts": "1440631016.000442",
+    "id": "26tr1939",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Easier to just use a RequestInterceptor IMO",
+    "ts": "1440631045.000443",
+    "id": "26tr1940",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "yeah that’s how i did it before i used okhttp",
+    "ts": "1440631054.000444",
+    "id": "26tr1941",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "and had no reason to change once i learned about that class",
+    "ts": "1440631063.000445",
+    "id": "26tr1942",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Oh, wait you are using straight OkHttp?",
+    "ts": "1440631069.000446",
+    "id": "26tr1943",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Sorry, I assumed it was RetroFit",
+    "ts": "1440631075.000447",
+    "id": "26tr1944",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "that guy asked about retrofit",
+    "ts": "1440631081.000448",
+    "id": "26tr1945",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "but a lot of people use both",
+    "ts": "1440631093.000449",
+    "id": "26tr1946",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Just forget everything I just said",
+    "ts": "1440631096.000450",
+    "id": "26tr1947",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "lol",
+    "ts": "1440631097.000451",
+    "id": "26tr1948",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "I need to sleep",
+    "ts": "1440631105.000452",
+    "id": "26tr1949",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

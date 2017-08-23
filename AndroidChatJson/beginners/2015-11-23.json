@@ -1,0 +1,220 @@
+[
+  {
+    "user": "U0F4KDRTP",
+    "subtype": "channel_join",
+    "text": "<@U0F4KDRTP|vega> has joined the channel",
+    "ts": "1448296103.000166",
+    "id": "23be1501",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F5TCN0Y",
+    "subtype": "channel_join",
+    "text": "<@U0F5TCN0Y|fengsterooni> has joined the channel",
+    "ts": "1448335926.000167",
+    "id": "23be1502",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DQJQZ6D",
+    "text": "hi all, in `UriMatcher` the separate code are random numbers?",
+    "ts": "1448349445.000168",
+    "id": "23be1503",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DQJQZ6D",
+    "text": "ex: ```\nprivate static final int PEOPLE = 1;\n    private static final int PEOPLE_ID = 2;\n    private static final int PEOPLE_PHONES = 3;\n    private static final int PEOPLE_PHONES_ID = 4;\n    private static final int PEOPLE_CONTACTMETHODS = 7;\n    private static final int PEOPLE_CONTACTMETHODS_ID = 8;\n```",
+    "ts": "1448349480.000169",
+    "id": "23be1504",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "They can be. But I usually set the directory entry of an entity to a multiple of 10 and the the single entry to that +1, +2,… That allows for an easy check if the query is for the whole set or one element of it",
+    "ts": "1448349545.000170",
+    "id": "23be1505",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "```\n    private static final int DBPPLAN_LIST = 10;\n    private static final int DBPPLAN_ITEM = 11;\n    private static final int DBPVALIDATION_LIST = 20;\n    private static final int DBPVALIDATION_ITEM = 21;\n    private static final int DBPUSER_LIST = 30;\n    private static final int DBPUSER_ITEM = 31;\n```",
+    "ts": "1448349644.000171",
+    "id": "23be1506",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "like this",
+    "ts": "1448349646.000172",
+    "id": "23be1507",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Then you can easily do stuff like this:",
+    "ts": "1448349685.000173",
+    "id": "23be1508",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "```\nint type = URI_MATCHER.match(uri);\nif (type % 10 != 0) { // For a specific item we have to add the ID to the where args\n    if (!TextUtils.isEmpty(selection)) {\n        selection += \" AND \" + BaseColumns._ID + \" = \" + uri.getLastPathSegment();\n    }\n}\n```",
+    "ts": "1448349691.000174",
+    "id": "23be1509",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "or",
+    "ts": "1448349724.000175",
+    "id": "23be1510",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "```\nif (type % 10 != 0) {\n    throw new IllegalArgumentException(\"Insert operation is only valid for directory URIs.\");\n}\n```",
+    "ts": "1448349729.000176",
+    "id": "23be1511",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DQJQZ6D",
+    "text": "yes, thanks a ton, I got it.",
+    "ts": "1448350168.000177",
+    "id": "23be1512",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

@@ -1,0 +1,1015 @@
+[
+  {
+    "user": "U061HDV96",
+    "text": "<@U054A24ET>: there are some examples on Wikipedia to perhaps clear it up (the stuff before the first : is the protocol for absolute URIs): <https://en.wikipedia.org/wiki/Uniform_resource_identifier>",
+    "ts": "1435576823.000975",
+    "id": "29tr918",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I think I found a bug or something :confused:",
+    "ts": "1435577848.000976",
+    "id": "29tr919",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "thanks <@U061HDV96>",
+    "ts": "1435577893.000977",
+    "id": "29tr920",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<@U04TK850N>: what kinda bug?",
+    "ts": "1435577917.000978",
+    "id": "29tr921",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Okay, so I have an EditText which has 2 TextWatcher added",
+    "ts": "1435577945.000979",
+    "id": "29tr922",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I remove one of them, then try to call setText() on the EditText",
+    "ts": "1435577958.000980",
+    "id": "29tr923",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "And get a NPE `at android.widget.TextView.sendBeforeTextChanged(TextView.java:8846)`",
+    "ts": "1435577974.000981",
+    "id": "29tr924",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "It seems like somewhere all TextWatcher get nulled",
+    "ts": "1435577996.000982",
+    "id": "29tr925",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": ":confused:",
+    "ts": "1435577998.000983",
+    "id": "29tr926",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "huh, so if you remove one, all get removed?",
+    "ts": "1435578036.000984",
+    "id": "29tr927",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "wait no, the EditText in question has just one TextWatcher",
+    "ts": "1435578048.000985",
+    "id": "29tr928",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "my ClearableEditText have two, but this here is a normal EditText",
+    "ts": "1435578074.000986",
+    "id": "29tr929",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "and it gets broken by removing? weird af",
+    "ts": "1435578108.000987",
+    "id": "29tr930",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "second, I’ll step into it again",
+    "ts": "1435578138.000988",
+    "id": "29tr931",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "sure it isn’t stack overflow error again?",
+    "ts": "1435578146.000989",
+    "id": "29tr932",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "No :smile:",
+    "ts": "1435578151.000990",
+    "id": "29tr933",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "It’s that NPE up there",
+    "ts": "1435578157.000991",
+    "id": "29tr934",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "totally weird, what happens when you step into?",
+    "ts": "1435578285.000992",
+    "id": "29tr935",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "I’d say report that to google but like they’ll ever notice",
+    "ts": "1435578310.000993",
+    "id": "29tr936",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Meh, I have to get the correct sources :confused:",
+    "ts": "1435578310.000994",
+    "id": "29tr937",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "nevermind… Looks like I had an ordering issue which lead to me attaching two watchers by accident. That still does not explain why removing one kills the other tho",
+    "ts": "1435578391.000995",
+    "id": "29tr938",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Even if it is the same object, it gets removed by id in the ArrayList. That should not also kill the other one",
+    "ts": "1435578446.000996",
+    "id": "29tr939",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "are you sure it removes by id?",
+    "ts": "1435578494.000997",
+    "id": "29tr940",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "```            int i = mListeners.indexOf(watcher);\n\n            if (i &gt;= 0) {\n                mListeners.remove(i);\n            }```",
+    "ts": "1435578520.000998",
+    "id": "29tr941",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "hm",
+    "ts": "1435578522.000999",
+    "id": "29tr942",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "well",
+    "ts": "1435578523.001000",
+    "id": "29tr943",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "afaik an ArrayList is not unique",
+    "edited": {
+      "user": "U04TK850N",
+      "ts": "1435578579.000000"
+    },
+    "ts": "1435578573.001001",
+    "id": "29tr944",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Anyway, it works now :smile: Thanks",
+    "ts": "1435578604.001003",
+    "id": "29tr945",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "ah man didn’t download the sources so browsing just decompiles",
+    "ts": "1435578630.001004",
+    "id": "29tr946",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "poop",
+    "ts": "1435578631.001005",
+    "id": "29tr947",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "On a random note, TextView has almost 10k LoC :open_mouth:",
+    "ts": "1435578641.001006",
+    "id": "29tr948",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "and edittext extends it",
+    "ts": "1435578681.001007",
+    "id": "29tr949",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "what a fucking mess that is :smile:",
+    "ts": "1435578691.001008",
+    "id": "29tr950",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Yes, but EditText says",
+    "ts": "1435578823.001009",
+    "id": "29tr951",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "```/*\n * This is supposed to be a *very* thin veneer over TextView.\n * Do not make any changes here that do anything that a TextView\n * with a key listener and a movement method wouldn't do!\n */```",
+    "ts": "1435578826.001010",
+    "id": "29tr952",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "And actually is 150 LoC",
+    "ts": "1435578832.001011",
+    "id": "29tr953",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "&gt;Just do everything in one class!",
+    "ts": "1435578860.001012",
+    "id": "29tr954",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "View is 22k i believe",
+    "ts": "1435578948.001013",
+    "id": "29tr955",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "so yeah",
+    "ts": "1435578952.001014",
+    "id": "29tr956",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "i like to do everything in one constructor :wink:",
+    "ts": "1435578955.001015",
+    "id": "29tr957",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "I’m pretty convinced android is developed by interns",
+    "ts": "1435578984.001016",
+    "id": "29tr958",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "those 2 guys that aren’t working on hangouts",
+    "ts": "1435578989.001017",
+    "id": "29tr959",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "lol",
+    "ts": "1435578995.001018",
+    "id": "29tr960",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "the rest are too busy trying to turn chrome in to a legit os :confused:",
+    "ts": "1435579113.001019",
+    "id": "29tr961",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Hm, does anyone know if I can easily remove the margin around the closeIcon if a SearchView?",
+    "ts": "1435579519.001020",
+    "id": "29tr962",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "looks like that’s not possible without hacks :confused:",
+    "ts": "1435580045.001021",
+    "id": "29tr963",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04VA47NB",
+    "text": "<@U0542GLTE>: just saw your reply. I got it figured out. Thanks though!",
+    "ts": "1435589404.001022",
+    "id": "29tr964",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "No problem! We just moved to custom drawing a bunch of stuff to improve performance. So, pretty fresh",
+    "ts": "1435589571.001023",
+    "id": "29tr965",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04VA47NB",
+    "text": "Yeah I’m having to do the same. More fun than I thought it would be :smile:",
+    "ts": "1435590495.001024",
+    "id": "29tr966",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Yup. It's definitely a fun challenge.",
+    "ts": "1435593922.001025",
+    "id": "29tr967",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "When using Ion to get data from a url, how can I perform another Ion \"event\" after it finishes?",
+    "ts": "1435634327.001026",
+    "id": "29tr968",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "Do i just put Ion.with(whatever).load(whatever) inside the onCompleted callback of the first one?",
+    "ts": "1435634360.001027",
+    "id": "29tr969",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "or is there another way",
+    "ts": "1435634374.001028",
+    "id": "29tr970",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U053TJ508>: I haven't used Ion in forever, but nesting callbacks like that can get ugly fast. One of the perks of RxJava is you can just map/flatmap results of one request into another, so you form a chain instead of nesting.",
+    "ts": "1435634970.001029",
+    "id": "29tr971",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "Hmm",
+    "ts": "1435635370.001030",
+    "id": "29tr972",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U070REDUJ",
+    "subtype": "channel_join",
+    "text": "<@U070REDUJ|awecodeman> has joined the channel",
+    "ts": "1435646501.001031",
+    "id": "29tr973",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

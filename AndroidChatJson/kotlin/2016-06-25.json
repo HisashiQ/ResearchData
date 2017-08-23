@@ -1,0 +1,226 @@
+[
+  {
+    "user": "U0K1ALDQE",
+    "text": "I come back from a 3 week vacation to the US and you guys are talking about bacon? :joy: ",
+    "ts": "1466844286.000298",
+    "id": "25ko1908",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "just so you’d feel more at home <@U0K1ALDQE> :joy:",
+    "ts": "1466849997.000299",
+    "id": "25ko1909",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Did something dramatic change with dagger/kotlin?",
+    "ts": "1466861986.000300",
+    "id": "25ko1910",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I can’t get it working anymore with the same code. Spend already 4-5 hours looking into it it drives me crazy",
+    "ts": "1466862002.000301",
+    "id": "25ko1911",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "More specific",
+    "ts": "1466864157.000308",
+    "id": "25ko1912",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "```\nerror: android.content.Context cannot be provided without an @Provides-annotated method.\n      android.content.Context is provided at\n          be.vergauwen.simon.core.di.ApplicationComponent.getApplicationContext()\n```",
+    "edited": {
+      "user": "U0K1ALDQE",
+      "ts": "1466864191.000000"
+    },
+    "ts": "1466864161.000309",
+    "id": "25ko1913",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "```\n@Module\nclass ApplicationModule(private val application: Application) {\n\n  @Provides\n  @ApplicationScope\n  fun provideApplicationContext(): Context {\n    return application\n  }\n}\n```",
+    "ts": "1466864177.000310",
+    "id": "25ko1914",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "```\n@ApplicationScope\n@Component(modules = arrayOf(ApplicationModule::class))\ninterface ApplicationComponent {\n  val applicationContext : Context\n}\n```",
+    "edited": {
+      "user": "U0K1ALDQE",
+      "ts": "1466864227.000000"
+    },
+    "ts": "1466864214.000312",
+    "id": "25ko1915",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "For some reason @Provides is ignored",
+    "ts": "1466864242.000314",
+    "id": "25ko1916",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Fixed it… don’t want to talk about it",
+    "ts": "1466865056.000315",
+    "id": "25ko1917",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": ":stuck_out_tongue_winking_eye:",
+    "ts": "1466865057.000316",
+    "id": "25ko1918",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I’m going to get some comfort food",
+    "ts": "1466865068.000317",
+    "id": "25ko1919",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

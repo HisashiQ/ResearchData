@@ -1,0 +1,968 @@
+[
+  {
+    "user": "U0J3AKMPS",
+    "text": "I just need some info regarding addon or plugin for android app how could I create one and implement in my current app ?",
+    "ts": "1472375082.000002",
+    "id": "28be7491",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U0J3AKMPS> as another apk",
+    "ts": "1472375947.000003",
+    "id": "28be7492",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "1 way to go about it is to make the parent app run a service listening for broadcasts",
+    "ts": "1472375989.000004",
+    "id": "28be7493",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "and have the plugin apk fire off broadcasts that tell the parent app what to do",
+    "ts": "1472376019.000005",
+    "id": "28be7494",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0J3AKMPS",
+    "text": "ohk got it thanks <@U08GFT5V5> ",
+    "ts": "1472377408.000006",
+    "id": "28be7495",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25NAS2P9",
+    "text": "<@U25NAS2P9|edgar> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1472383213.000007",
+    "id": "28be7496",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25LQR1V1",
+    "text": "<@U25LQR1V1|kaizer1> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1472387062.000008",
+    "id": "28be7497",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U25LQ5T6J> hey Steven, welcome! Unfortunately we cannot really help you with your device as this Slack team is aimed towards Android development. We're always here in case you want to learn how to start programming.",
+    "ts": "1472392839.000009",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U1FECKXA9",
+          "U25KAR813"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "28be7498",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25NRTHGU",
+    "text": "<@U25NRTHGU|nguyenthanh> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1472403650.000010",
+    "id": "28be7499",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1FECKXA9",
+    "text": "Hi all I’m trying to write a unit test for this class ```public class StringRever {\n\t\n\tpublic static String reverse(String s){\n\t\tList&lt;String&gt; tempArray = new ArrayList&lt;String&gt;(s.length());\n\t\tfor(int i = 0; i &lt;s.length(); i++){\n\t\t\ttempArray.add(s.substring(i, i+1));\n\t\t}\n\t\tStringBuilder reverseString = new StringBuilder(s.length());\n\t\tfor(int i = tempArray.size() - 1; i &gt;=0; i--){\n\t\t\treverseString.append(tempArray.get(i));\n\t\t}\n\t\treturn reverseString.toString();\n\t}\n\n}\n```",
+    "ts": "1472407698.000011",
+    "id": "28be7500",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1FECKXA9",
+    "text": "is this the correct way to write a unit test that throws NPE  when I try to reverse a null String? ```\t@Test(expected = NullPointerException.class)\n\tpublic void testThrowNPE(){\n\t\tStringRever s = new StringRever();\n\t\ts.reverse(null);\n\t\tthrow new NullPointerException();\n\t}\n```",
+    "ts": "1472407734.000012",
+    "id": "28be7501",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1FECKXA9",
+    "text": "It doesnt seem right to me",
+    "ts": "1472407747.000013",
+    "id": "28be7502",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "```\n@Test(expected = NullPointerException.class)\n    public void testThrowNPE(){\n        StringRever s = new StringRever();\n        s.reverse(null);\n    }\n```",
+    "ts": "1472407765.000014",
+    "id": "28be7503",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "if `reverse` throws an exception",
+    "ts": "1472407777.000015",
+    "id": "28be7504",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "it will pass",
+    "ts": "1472407779.000016",
+    "id": "28be7505",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "that means it’s correct",
+    "ts": "1472407784.000017",
+    "id": "28be7506",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "if there is no exception it will fail",
+    "ts": "1472407792.000018",
+    "id": "28be7507",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "But your class shouldn’t throw null pointer exceptions",
+    "ts": "1472407830.000019",
+    "id": "28be7508",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "probably better to try/catch it and assert on that? then you wouldn't get false negatives on other NPEs",
+    "ts": "1472407833.000020",
+    "reactions": [
+      {
+        "name": "100",
+        "users": [
+          "U08GFT5V5"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "28be7509",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1FECKXA9",
+    "text": "ah thanks <@U08GFT5V5>. I thought I have to throw a new NPE after I call s.reverse(null)",
+    "ts": "1472407834.000021",
+    "id": "28be7510",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "bad programming practice",
+    "ts": "1472407837.000022",
+    "id": "28be7511",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1FECKXA9",
+    "text": "more like newbie alert",
+    "ts": "1472407853.000023",
+    "id": "28be7512",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1FECKXA9",
+    "text": "loll",
+    "ts": "1472407855.000024",
+    "id": "28be7513",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "The method under test should throw the exception",
+    "ts": "1472407855.000025",
+    "id": "28be7514",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "not the test",
+    "ts": "1472407857.000026",
+    "id": "28be7515",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1FECKXA9",
+    "text": "ok thanks <@U08GFT5V5>. so what i did is sort of correct",
+    "ts": "1472407890.000027",
+    "id": "28be7516",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1FECKXA9",
+    "text": "i will try using try catch approach",
+    "ts": "1472407898.000028",
+    "id": "28be7517",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "eh honestly either way would be fine",
+    "ts": "1472407917.000029",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U1FECKXA9"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "28be7518",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i just think you have to be careful with the annotation",
+    "ts": "1472407938.000030",
+    "id": "28be7519",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "I think the method shouldn’t throw npe’s in the first place",
+    "ts": "1472407949.000031",
+    "id": "28be7520",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "create your own exception or throw IllegalArgumentException or something",
+    "ts": "1472407974.000032",
+    "id": "28be7521",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1FECKXA9",
+    "text": "ok but whats the logic behind that?",
+    "ts": "1472407992.000033",
+    "id": "28be7522",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "NPE is too generic",
+    "ts": "1472407996.000034",
+    "id": "28be7523",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1FECKXA9",
+    "text": "ah ok",
+    "ts": "1472408003.000035",
+    "id": "28be7524",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "everything throws NPE",
+    "ts": "1472408004.000036",
+    "id": "28be7525",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "so you might not know which",
+    "ts": "1472408013.000037",
+    "id": "28be7526",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1FECKXA9",
+    "text": "makes sense. thanks",
+    "ts": "1472408027.000038",
+    "id": "28be7527",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0NQ6CY8G",
+    "text": "Hi guys, I am trying to implement sharing image and text to facebook, but this :point_down: is not working. What could be wrong?\n```\noverride fun onCreate(savedInstanceState: Bundle?) {\n        super.onCreate(savedInstanceState)\n        imageUri = Uri.parse(arguments.getString(IMAGE_PATH))\n        mCallbackManager = CallbackManager.Factory.create()\n        shareDialog = ShareDialog(this)\n    }\n\nprivate fun shareToFb() {\n        try {\n            requireNotNull(imageUri)\n            val bmp = BitmapFactory.decodeStream(context.contentResolver.openInputStream(imageUri))\n            val imageToShare = SharePhoto.Builder().setBitmap(bmp).build()\n\n            if (ShareDialog.canShow(ShareLinkContent::class.java)) {\n                val shareContent = SharePhotoContent.Builder().addPhoto(imageToShare).build()\n                shareDialog?.show( shareContent)\n\n            }\n        } catch (e: IllegalArgumentException) {\n            val view = view ?: return\n            Snackbar.make(view, \"Error selecting image\", Snackbar.LENGTH_SHORT).show()\n        }\n    }\n```",
+    "edited": {
+      "user": "U0NQ6CY8G",
+      "ts": "1472424082.000000"
+    },
+    "ts": "1472424072.000039",
+    "id": "28be7528",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U0NQ6CY8G> We're gonna need more information than \"not working\"",
+    "ts": "1472426880.000041",
+    "id": "28be7529",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I do like the Kotlin though",
+    "ts": "1472426902.000042",
+    "id": "28be7530",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0NQ6CY8G",
+    "text": "Thanks <@U061HDV96>. When I click to share, I expected the share dialog to show up, but nothing shows up.",
+    "edited": {
+      "user": "U0NQ6CY8G",
+      "ts": "1472427525.000000"
+    },
+    "ts": "1472427502.000043",
+    "id": "28be7531",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Not even the Snackbar?",
+    "ts": "1472427679.000045",
+    "id": "28be7532",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0NQ6CY8G",
+    "text": "Yeah,",
+    "ts": "1472427689.000046",
+    "id": "28be7533",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Enable debug mode and add breakpoints at the if statement",
+    "ts": "1472427711.000047",
+    "id": "28be7534",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Check if it gets to the shareDialog?.show(shareContent)",
+    "ts": "1472427728.000048",
+    "id": "28be7535",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0NQ6CY8G",
+    "text": "I did that, and it gets there",
+    "ts": "1472427752.000049",
+    "id": "28be7536",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0NQ6CY8G",
+    "text": "everything executes, except the catch part",
+    "ts": "1472427770.000050",
+    "id": "28be7537",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "So `shareDialog?.show( shareContent)` gets executed and shareDialog is not null?",
+    "edited": {
+      "user": "U061HDV96",
+      "ts": "1472427813.000000"
+    },
+    "ts": "1472427798.000051",
+    "id": "28be7538",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0NQ6CY8G",
+    "text": "My bad, <@U061HDV96>. I don’t know but it how yet, but it now works.",
+    "edited": {
+      "user": "U0NQ6CY8G",
+      "ts": "1472429304.000000"
+    },
+    "ts": "1472429274.000053",
+    "id": "28be7539",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U0NQ6CY8G> good, no worries :thumbsup:",
+    "ts": "1472429334.000055",
+    "id": "28be7540",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25RN2D60",
+    "text": "<@U25RN2D60|zvaigzdzius> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1472453793.000056",
+    "id": "28be7541",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

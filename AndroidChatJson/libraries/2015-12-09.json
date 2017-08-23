@@ -1,0 +1,820 @@
+[
+  {
+    "user": "U0C5E9X2N",
+    "text": "hello guys",
+    "ts": "1449660872.000252",
+    "id": "09li2836",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C5E9X2N",
+    "text": "we have a library here that returns a Map&lt;String, String&gt;",
+    "ts": "1449660896.000253",
+    "id": "09li2837",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C5E9X2N",
+    "text": "however we are in doubt if it’s better to keep returning a Map or if we should change it to return a JSON String.",
+    "ts": "1449660926.000254",
+    "id": "09li2838",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C5E9X2N",
+    "text": "We are changing because we need to add a parameter to the method…we’ll not break compatibility",
+    "ts": "1449660948.000255",
+    "id": "09li2839",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C5E9X2N",
+    "text": "could you point out some benefits for any of theses case? thanks! : )",
+    "ts": "1449660982.000256",
+    "id": "09li2840",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "I’d prefer Map, it’s more accessible and reusable",
+    "ts": "1449661287.000257",
+    "id": "09li2841",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "it’s easy to convert it into JSON",
+    "ts": "1449661299.000258",
+    "id": "09li2842",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "and it’s easy to manipulate",
+    "ts": "1449661302.000259",
+    "id": "09li2843",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "so if you need to add or remove something, you can work directly on the map and turn it into JSON, instead of json-&gt;obj(or map)-&gt;json",
+    "ts": "1449661360.000260",
+    "id": "09li2844",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "but it depends on the use cases for it",
+    "ts": "1449661373.000261",
+    "id": "09li2845",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U0C5E9X2N>: who is the library for? Private or in-house use? Also if in-house will it be used by developers of the same team that developed the library or by other teams as well?",
+    "ts": "1449662976.000262",
+    "id": "09li2846",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "And how frequently will it be returning this data? If it is high frequency you may instead want to accept a map that you can add to internally or even better return an iterator pointing to the new data allowing reuse internally of the data structure(s) vs returning a new heavy object frequently etc",
+    "ts": "1449667137.000263",
+    "id": "09li2847",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G8VTVMH",
+    "subtype": "channel_join",
+    "text": "<@U0G8VTVMH|esfilho> has joined the channel",
+    "ts": "1449689139.000264",
+    "id": "09li2848",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G94E0QJ",
+    "subtype": "channel_join",
+    "text": "<@U0G94E0QJ|tangra> has joined the channel",
+    "ts": "1449692731.000265",
+    "id": "09li2849",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C5E9X2N",
+    "text": "<@U0548MM6B>: the most frequently use case that happens -&gt; the method return a map with 2 key/value pairs",
+    "ts": "1449693938.000266",
+    "id": "09li2850",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C5E9X2N",
+    "text": "that pair must be sent to our server together…it doesn’t make sense to manipulate this in isolation of each other",
+    "ts": "1449693974.000267",
+    "id": "09li2851",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C5E9X2N",
+    "text": "the device must sent both information to the server…it doen’t mean that it should be sent together at the same time…but on the server it must be treated together…they are dependencies of each other",
+    "ts": "1449694049.000268",
+    "id": "09li2852",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C5E9X2N",
+    "text": "<@U09T8SFG8>: the library is for external clients..apps on the store..used by other teams",
+    "ts": "1449694086.000269",
+    "id": "09li2853",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C5E9X2N",
+    "text": "<@U055GGAHS>: what you consider high frequency? say it happens in 2 or 3 moments during the app lifecycle",
+    "ts": "1449694145.000270",
+    "id": "09li2854",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C5E9X2N",
+    "text": "it can happen may times but it’s not something that is very very frequently accessed...",
+    "ts": "1449694172.000271",
+    "id": "09li2855",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C5E9X2N",
+    "text": "say, for example…that you register a new user…and then you must invoke the method...",
+    "ts": "1449694191.000272",
+    "id": "09li2856",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C5E9X2N",
+    "text": "if it’s an app..and you register yourself…how often do you register yourself?…another example…when you login…you must call our method...",
+    "ts": "1449694221.000273",
+    "id": "09li2857",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I would not call that high frequency",
+    "ts": "1449694239.000274",
+    "id": "09li2858",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C5E9X2N",
+    "text": "how often do you login yourself in an app?? these are questions that might help find out the frequency we need",
+    "ts": "1449694252.000275",
+    "id": "09li2859",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C5E9X2N",
+    "text": "hehe…fair!",
+    "ts": "1449694262.000276",
+    "id": "09li2860",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "anything used in a loop is typically something you want to pre consider optimizing the memory in mobile context",
+    "ts": "1449694267.000277",
+    "id": "09li2861",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "the best example being\n\n```\nRect r = something.getBounds()\n```\nvs\n```\nsomething.getBounds(r)\n```",
+    "ts": "1449694315.000278",
+    "id": "09li2862",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "the 2nd obviously allowing you to avoid unnecessary allocation.. that was the extent of my question/why i asked",
+    "ts": "1449694341.000279",
+    "id": "09li2863",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C5E9X2N",
+    "text": "pretty clear to me…that makes a lot of sense",
+    "ts": "1449694368.000280",
+    "id": "09li2864",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C5E9X2N",
+    "text": ": )",
+    "ts": "1449694438.000281",
+    "id": "09li2865",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C5E9X2N",
+    "text": "it may sound weird or not that important to worry about the return type…but we were questioning if there were some points that would make us chose one way or another",
+    "ts": "1449694579.000282",
+    "id": "09li2866",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U0C5E9X2N> it's indeed not optimization worthy so I would suggest to do the simplest way. Package all of that in an object-&gt; serialise in the server as JSON -&gt; send to client -&gt; Deserialize from JSON to object -&gt; return that nice object from your method ",
+    "ts": "1449694939.000283",
+    "id": "09li2867",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<https://github.com/ReactiveX/RxAndroid/releases/tag/1.1.0>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "ReactiveX/RxAndroid",
+        "title_link": "https://github.com/ReactiveX/RxAndroid/releases/tag/1.1.0",
+        "text": "RxAndroid - RxJava bindings for Android",
+        "fallback": "GitHub: ReactiveX/RxAndroid",
+        "thumb_url": "https://avatars3.githubusercontent.com/u/6407041?v=3&s=400",
+        "from_url": "https://github.com/ReactiveX/RxAndroid/releases/tag/1.1.0",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1449695008.000284",
+    "id": "09li2868",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "^ RxAndroid 1.1.0",
+    "ts": "1449695014.000286",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U0DC95VCP"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "09li2869",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0543MFFP",
+    "text": "It's a big huge release with tons of changes.",
+    "ts": "1449696350.000287",
+    "id": "09li2870",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08LHT588",
+    "subtype": "channel_join",
+    "text": "<@U08LHT588|krillsson> has joined the channel",
+    "ts": "1449697164.000288",
+    "id": "09li2871",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "oh, the new rework is done?",
+    "ts": "1449700573.000289",
+    "id": "09li2872",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "<@U0543MFFP>: haha :joy:",
+    "ts": "1449700601.000290",
+    "id": "09li2873",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "Tons of changes in 5 classes",
+    "ts": "1449700652.000291",
+    "id": "09li2874",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "<@U0543MFFP>: What are the plans for RxLifecycle?",
+    "ts": "1449707761.000292",
+    "id": "09li2875",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "if there's any",
+    "ts": "1449707765.000293",
+    "id": "09li2876",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0543MFFP",
+    "text": "The plan is to get it working with Navi then release the next version.",
+    "ts": "1449718138.000294",
+    "id": "09li2877",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0543MFFP",
+    "text": "I've got some tests I'm working on making the Navi version pass, it's a little tricky.",
+    "ts": "1449718173.000295",
+    "id": "09li2878",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0543MFFP",
+    "text": "I don't think there are any larger plans than that. Navi sort of subsumes a lot of the things I'd thought RxLifecycle might do, but in a better way.",
+    "ts": "1449718291.000296",
+    "id": "09li2879",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

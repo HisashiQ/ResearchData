@@ -1,0 +1,3141 @@
+[
+  {
+    "user": "U0K1ALDQE",
+    "text": "hey guys",
+    "ts": "1476173823.002945",
+    "id": "11de47592",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "```\npublic final class BuildConfig {\n  public static final boolean DEBUG = Boolean.parseBoolean(\"true\");\n```",
+    "ts": "1476173838.002946",
+    "id": "11de47593",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "This is always in my BuildConfig",
+    "ts": "1476173846.002947",
+    "id": "11de47594",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Even when setting my build variant to release",
+    "ts": "1476173852.002948",
+    "id": "11de47595",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "cleaning -&gt; rebuild -&gt; invalidate cache and restart -&gt; clean -&gt; sync gradle -&gt; rebuild",
+    "ts": "1476173879.002949",
+    "id": "11de47596",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "When I do `./gradlew assembleXxxRelease` and sign it and zipalign it GP gives me an error that it’s a debug version",
+    "ts": "1476173907.002950",
+    "id": "11de47597",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Why are you using a debug boolean?",
+    "ts": "1476175368.002951",
+    "id": "11de47598",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2MQJKX1D",
+    "text": "<@U2MQJKX1D|serkansekman> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476175789.002952",
+    "id": "11de47599",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "It’s the default debug boolean.",
+    "ts": "1476175847.002953",
+    "id": "11de47600",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Ah yeah, didn’t see it was the build file :stuck_out_tongue:",
+    "ts": "1476175905.002954",
+    "id": "11de47601",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "You looking in the right BuildConfig when switching to release build variant?",
+    "ts": "1476175959.002955",
+    "id": "11de47602",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "yeah",
+    "ts": "1476176094.002956",
+    "id": "11de47603",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I switched. Cleaned, Synced gradle, cleaned, rebuild. And then looked into the BuildConfig",
+    "ts": "1476176113.002957",
+    "id": "11de47604",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Ah right, just asking because there’s a different BuildConfig file for each, it doesn’t update the same one",
+    "ts": "1476176171.002958",
+    "id": "11de47605",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Yeah, but it’s in `app/build/generated/buildConfig/xxx/release/package/BuildConfig`",
+    "ts": "1476176305.002959",
+    "id": "11de47606",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "so that should be the release BuildConfig",
+    "ts": "1476176313.002960",
+    "id": "11de47607",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Strange",
+    "ts": "1476176319.002961",
+    "id": "11de47608",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Nothing in gradle overriding it?",
+    "ts": "1476176428.002962",
+    "id": "11de47609",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Nope",
+    "ts": "1476176703.002963",
+    "id": "11de47610",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2MR71NAC",
+    "text": "<@U2MR71NAC|mo> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476181803.002964",
+    "id": "11de47611",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2MRKRKPB",
+    "text": "<@U2MRKRKPB|delipenguen> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476182085.002965",
+    "id": "11de47612",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1QM93153",
+    "text": "Solid technical resource on the future of web apps: Polymer vs Angular: <https://goo.gl/A1x2lF> cc <@U0QR1SM32> <@U0JC6J82J> <@U053PPGDC>",
+    "attachments": [
+      {
+        "service_name": "MentorMate",
+        "title": "Polymer vs Angular: Which is leading the future of web apps?",
+        "title_link": "https://goo.gl/A1x2lF",
+        "text": "Polymer vs Angular — one is making a leaner more effective build process and user performance possible for web apps. The question is which one?",
+        "fallback": "MentorMate: Polymer vs Angular: Which is leading the future of web apps?",
+        "thumb_url": "http://mentormate.com/wp-content/uploads/2016/10/Polymer-web-components.png",
+        "ts": 1476077413,
+        "from_url": "https://goo.gl/A1x2lF",
+        "thumb_width": 1188,
+        "thumb_height": 500,
+        "service_icon": "http://cdn.mentormate.com/apple-touch-icon-57x57.png",
+        "id": 1
+      }
+    ],
+    "ts": "1476184176.002967",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11de47613",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2MSG1DBK",
+    "text": "<@U2MSG1DBK|hboregio> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476186801.002969",
+    "id": "11de47614",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "Does gson parse nested objects by default or do i have to write some sort of mapper for it? So can i do something like `@SerializedName(\"destination”) private Location dest;` and expect the nested fields to be parsed properly?",
+    "ts": "1476188216.002970",
+    "id": "11de47615",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "Yes it does.",
+    "ts": "1476188459.002971",
+    "id": "11de47616",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0EG5RUBY",
+    "text": "<@U0546QERR> thanks! BehaviorSubject looks like it does exactly what I need",
+    "ts": "1476189856.002972",
+    "id": "11de47617",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0W3JFY57",
+    "text": "Anyone know a good article on making a drag dictate what percentage of an animation is completed?",
+    "ts": "1476192674.002973",
+    "id": "11de47618",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09E13L9K",
+    "text": "Guys is a good idea to use EventBus to communicate from Activity/Fragment to Presenter instead of callbacks? Since it will also enable fragments communication without all the boilerplate of Frag -&gt; Activity -&gt; Frag callbacks ?",
+    "ts": "1476194022.002974",
+    "id": "11de47619",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0NQ6CY8G",
+    "text": "Hi guys,",
+    "ts": "1476195796.002975",
+    "id": "11de47620",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0NQ6CY8G",
+    "text": "Please how can I fix this error\n```Unresolved reference: databinding\nError:Execution failed for task ':app:compileDebugKotlinAfterJava'.\n&gt; Compilation error. See log for more details```",
+    "edited": {
+      "user": "U0NQ6CY8G",
+      "ts": "1476195872.000000"
+    },
+    "ts": "1476195858.002976",
+    "id": "11de47621",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2MV3QETB",
+    "text": "<@U2MV3QETB|ryza> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476198376.002978",
+    "id": "11de47622",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "<@U0K1ALDQE> is your release build debuggable? i had some trouble before not realizing `BuildConfig.DEBUG` is set by the debuggable property in the gradle plugin",
+    "ts": "1476204850.002979",
+    "id": "11de47623",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "has anyone implemented in-app purchases lately?",
+    "ts": "1476207164.002980",
+    "id": "11de47624",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "I did it using Paypal in a webview last September :doge2:",
+    "ts": "1476209858.002981",
+    "id": "11de47625",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I'm about to implement a GoCardless payment system, not exactly the in-app purchase thing you mean though",
+    "ts": "1476209942.002982",
+    "id": "11de47626",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U21R4GP5J",
+    "text": "Anyone knows if it’s possible to use Facebook Graph API to publish comments to a Wordpress article?",
+    "ts": "1476210025.002983",
+    "id": "11de47627",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N2LTARW",
+    "text": "<@U2N2LTARW|malkiat_91> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476210111.002984",
+    "id": "11de47628",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "nah, it’s okay",
+    "ts": "1476210581.002985",
+    "id": "11de47629",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "it’s sorted",
+    "ts": "1476210583.002986",
+    "id": "11de47630",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "it was a PM mistake :surprise:",
+    "ts": "1476210590.002987",
+    "id": "11de47631",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "I've implemented IAB this summer.",
+    "ts": "1476211154.002988",
+    "id": "11de47632",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N2ZG938",
+    "text": "<@U2N2ZG938|fuzzelogic> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476211421.002989",
+    "id": "11de47633",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N2ZG938",
+    "text": "hi",
+    "ts": "1476211471.002990",
+    "id": "11de47634",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N2ZG938",
+    "text": "anyony whos bored and has ble experience beyond ibeacons ?",
+    "ts": "1476211542.002991",
+    "id": "11de47635",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "&gt;Android 7.1 also adds these much-requested developer features to the platform:\n\n&gt;Image keyboard support — expands the types of content that users can enter from their keyboards, letting them express themselves through custom stickers, animated gifs, and more. Apps can tell the keyboard what types of content they accept, and keyboards can deliver all of the images and other content that they offer to the user. For broad compatibility, this API will also be available in the support library.\n\n&gt;Storage manager Intent — lets an app take the user directly to a new Settings screen to clear unused files and free up storage space on the device.",
+    "ts": "1476211551.002992",
+    "id": "11de47636",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "rip swiftkey in pieces",
+    "ts": "1476211562.002993",
+    "id": "11de47637",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "dodged a bullet not continuing the interview process with them",
+    "ts": "1476211606.002994",
+    "id": "11de47638",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U0B8R3VV4> rip swiftkey? How so?",
+    "ts": "1476212047.002995",
+    "id": "11de47639",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "you install swiftkey for the emojis. Now every app can set their own emojis and gif keyboards",
+    "ts": "1476212073.002996",
+    "id": "11de47640",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "free",
+    "ts": "1476212076.002997",
+    "id": "11de47641",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "on the stock keyboard",
+    "ts": "1476212084.002998",
+    "id": "11de47642",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U2N2ZG938> we plan to implement beacon SDKs in our B2B apps for the B2C apps so they can work together (that's the short explanation)",
+    "ts": "1476212109.002999",
+    "id": "11de47643",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U0B8R3VV4> most people use Swiftkey for the typing experience I think",
+    "ts": "1476212146.003000",
+    "id": "11de47644",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Their suggestions are pretty great",
+    "ts": "1476212162.003001",
+    "id": "11de47645",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N2ZG938",
+    "text": "<@U061HDV96> thanks, I already have a beacon platform - <http://www.Proxitee.com|www.Proxitee.com>  what I am looking for is someone with experience using BLE in automation and the like - home switches and connecting to 3rd party ble chips",
+    "ts": "1476212312.003002",
+    "id": "11de47646",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U2N2ZG938> just ask your question, don't ask to ask then",
+    "ts": "1476212340.003003",
+    "id": "11de47647",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N2ZG938",
+    "text": "wanted to kno whte best way to set and use a ble service and was looking for some who has done it to show me where I'm going wrong",
+    "ts": "1476212934.003004",
+    "id": "11de47648",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "&gt;Image keyboard support — expands the types of content that users can enter from their keyboards, letting them express themselves through custom stickers, animated gifs, and more. Apps can tell the keyboard what types of content they accept, and keyboards can deliver all of the images and other content that they offer to the user. For broad compatibility, this API will also be available in the support library.",
+    "ts": "1476213168.003005",
+    "id": "11de47649",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "ANDROID GONE WILD",
+    "ts": "1476213171.003006",
+    "id": "11de47650",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "WOOOOO",
+    "ts": "1476213172.003007",
+    "id": "11de47651",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "WOOOOOOOO",
+    "ts": "1476213174.003008",
+    "id": "11de47652",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "kimoji for android?",
+    "ts": "1476213214.003009",
+    "id": "11de47653",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": ":eyes: :smirk:",
+    "ts": "1476213391.003010",
+    "id": "11de47654",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N2ZG938",
+    "text": "are there any decent BLE libraries that I use as a back to my app?",
+    "ts": "1476214501.003011",
+    "id": "11de47655",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "BLE library to do what",
+    "ts": "1476214542.003012",
+    "id": "11de47656",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N2ZG938",
+    "text": "<@U055GGAHS> read and write to BLE chip in home automatino",
+    "ts": "1476214630.003013",
+    "id": "11de47657",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "thats going to be application specific, BLE isn’t like bluetooth where you just simply connect and start sending data",
+    "ts": "1476214670.003014",
+    "id": "11de47658",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "there’s a lot of steps to getting to that point and a whole lot of knowledge you need to have",
+    "ts": "1476214689.003015",
+    "id": "11de47659",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N2ZG938",
+    "text": "sounds good and challenging. - do you have a few places to point me to ?",
+    "ts": "1476214728.003016",
+    "id": "11de47660",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I wrote this to simplify scanning but it wont help you on the connection side <https://github.com/ToxicBakery/BTLE-Scanner-Compat>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "ToxicBakery/BTLE-Scanner-Compat",
+        "title_link": "https://github.com/ToxicBakery/BTLE-Scanner-Compat",
+        "text": "BTLE-Scanner-Compat - A wrapper of the BTLE scanning implementation of Android. The wrapper simplifies using the BTLE implementation back to API 19.",
+        "fallback": "GitHub: ToxicBakery/BTLE-Scanner-Compat",
+        "thumb_url": "https://avatars2.githubusercontent.com/u/1614281?v=3&s=400",
+        "from_url": "https://github.com/ToxicBakery/BTLE-Scanner-Compat",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1476214730.003017",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11de47661",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "it’s more a facebook lib though as it only solved what I wanted and probably isn’t something many other people need",
+    "ts": "1476214773.003019",
+    "id": "11de47662",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N2ZG938",
+    "text": "<@U055GGAHS> Thanks - let me check it .",
+    "ts": "1476214786.003020",
+    "id": "11de47663",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "mostly this\n&gt;Note that ScanResultCompat implements a hashCode() and equals(Object) so it may be used in common Java data types such as maps, sets, and collections.",
+    "ts": "1476214791.003021",
+    "id": "11de47664",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "and just ignore my english fail in that description",
+    "ts": "1476214815.003022",
+    "id": "11de47665",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N2ZG938",
+    "text": "all I really want to do is initially scan - find devices, select mine from the list - connect to it and \"BOND\" to it .",
+    "ts": "1476214860.003023",
+    "id": "11de47666",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N2ZG938",
+    "text": "listen for callbacks from it and write data to it :slightly_smiling_face:",
+    "ts": "1476214885.003024",
+    "id": "11de47667",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "the app module in that lib demonstrates scanning",
+    "ts": "1476214899.003025",
+    "id": "11de47668",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "‘bond’ isn’t something you do in BLE",
+    "ts": "1476214904.003026",
+    "id": "11de47669",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "its not like bluetooth",
+    "ts": "1476214911.003027",
+    "id": "11de47670",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N2ZG938",
+    "text": "ok - so how do i stay connected to if ?",
+    "ts": "1476214935.003028",
+    "id": "11de47671",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N2ZG938",
+    "text": "if=it",
+    "ts": "1476214941.003029",
+    "id": "11de47672",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<https://developer.android.com/guide/topics/connectivity/bluetooth-le.html>",
+    "attachments": [
+      {
+        "title": "    Bluetooth Low Energy | Android Developers  ",
+        "title_link": "https://developer.android.com/guide/topics/connectivity/bluetooth-le.html",
+        "text": "DevBytes: Bluetooth Low Energy API Android 4.3 (API Level 18) introduces built-in platform support for Bluetooth Low Energy in the central role and provides APIs that apps can use to discover devices, query for services, and read&amp;#47;write characteristics…",
+        "fallback": "    Bluetooth Low Energy | Android Developers  ",
+        "from_url": "https://developer.android.com/guide/topics/connectivity/bluetooth-le.html",
+        "service_icon": "https://developer.android.com/favicon.ico",
+        "service_name": "developer.android.com",
+        "id": 1
+      }
+    ],
+    "ts": "1476214953.003030",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U2N2ZG938"
+        ],
+        "count": 2
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11de47673",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "specifically ‘Connecting to a GATT Server'",
+    "ts": "1476214978.003032",
+    "id": "11de47674",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "pinned_item",
+    "user": "U061HDV96",
+    "item_type": "C",
+    "attachments": [
+      {
+        "fallback": "[October 11th, 2016 12:39 PM] ian.shaun.thomas: it’s more a facebook lib though as it only solved what I wanted and probably isn’t something many other people need",
+        "ts": "1476214773.003019",
+        "author_subname": "ian.shaun.thomas",
+        "channel_id": "C04NZAN54",
+        "channel_name": "development",
+        "is_msg_unfurl": true,
+        "text": "it’s more a facebook lib though as it only solved what I wanted and probably isn’t something many other people need",
+        "author_name": "Ian 🇺🇸 Thomas",
+        "author_link": "https://androidchat.slack.com/team/ian.shaun.thomas",
+        "author_icon": "https://avatars.slack-edge.com/2015-06-04/5231744419_89a1eb3c0869d6ab7d32_48.jpg",
+        "mrkdwn_in": [
+          "text"
+        ]
+      }
+    ],
+    "text": "<@U061HDV96|andreasbackx> pinned a message to this channel.",
+    "ts": "1476215012.003033",
+    "reactions": [
+      {
+        "name": "joy",
+        "users": [
+          "U061HDV96"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11de47675",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "¯\\_(ツ)_/¯",
+    "ts": "1476215126.003034",
+    "id": "11de47676",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N2ZG938",
+    "text": "<@U055GGAHS>  you got any time to help me build this damn thing .... :slightly_smiling_face:",
+    "ts": "1476215284.003035",
+    "id": "11de47677",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<@U061HDV96> just meant I needed to use stuff in a list and I need compat across API levels. I know there is a support lib impl but I never even bothered looking at it",
+    "ts": "1476215321.003036",
+    "id": "11de47678",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<@U2N2ZG938> if you have money, I have time",
+    "ts": "1476215358.003037",
+    "reactions": [
+      {
+        "name": "moneybag",
+        "users": [
+          "U0P23RWF3"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11de47679",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N2ZG938",
+    "text": "<@U055GGAHS> depends how much money your time costs",
+    "ts": "1476215551.003038",
+    "id": "11de47680",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "~ $75 - $100/hr",
+    "ts": "1476215580.003039",
+    "id": "11de47681",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "it’s BLE so it’s undoubtedly going to be a lot of hours because it’s BLE and Android is bad at it at best",
+    "ts": "1476215613.003040",
+    "id": "11de47682",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "not to discourage you but not exactly one of the more user friendly APIs in Android",
+    "ts": "1476215647.003041",
+    "id": "11de47683",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N2ZG938",
+    "text": "<@U055GGAHS>  - too rich for my blood",
+    "ts": "1476215652.003042",
+    "id": "11de47684",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "BLE itself isn’t user friendly either imo",
+    "ts": "1476215660.003043",
+    "id": "11de47685",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N2ZG938",
+    "text": "yeah - thats why i'm here",
+    "ts": "1476215677.003044",
+    "id": "11de47686",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N2ZG938",
+    "text": "its easy as PI in ios",
+    "ts": "1476215695.003045",
+    "id": "11de47687",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "there are plenty of projects that are open source using BLE though if you combine looking at those with what you see in the google example you can do it",
+    "ts": "1476215716.003046",
+    "id": "11de47688",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N2ZG938",
+    "text": "i can't seem to find a consistent pattern on how to implement a solution with it",
+    "ts": "1476215746.003047",
+    "id": "11de47689",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "yeah that’s because every BLE device is different in it’s needs",
+    "ts": "1476215780.003048",
+    "id": "11de47690",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N2ZG938",
+    "text": "I get that - but surely there's a best practice or something that guides you through things --",
+    "ts": "1476215912.003049",
+    "id": "11de47691",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N2ZG938",
+    "text": "is there any open source project you'd recommend ?",
+    "ts": "1476215932.003050",
+    "id": "11de47692",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<https://github.com/googlesamples/android-BluetoothLeGatt>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "googlesamples/android-BluetoothLeGatt",
+        "title_link": "https://github.com/googlesamples/android-BluetoothLeGatt",
+        "text": "Contribute to android-BluetoothLeGatt development by creating an account on GitHub.",
+        "fallback": "GitHub: googlesamples/android-BluetoothLeGatt",
+        "thumb_url": "https://avatars1.githubusercontent.com/u/7378196?v=3&s=400",
+        "from_url": "https://github.com/googlesamples/android-BluetoothLeGatt",
+        "thumb_width": 200,
+        "thumb_height": 200,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1476216165.003051",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11de47693",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "that’s a good start",
+    "ts": "1476216171.003053",
+    "id": "11de47694",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<https://github.com/iDevicesInc/SweetBlue>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "iDevicesInc/SweetBlue",
+        "title_link": "https://github.com/iDevicesInc/SweetBlue",
+        "text": "SweetBlue - BLE on Android, the easy way.",
+        "fallback": "GitHub: iDevicesInc/SweetBlue",
+        "thumb_url": "https://avatars2.githubusercontent.com/u/9610917?v=3&s=400",
+        "from_url": "https://github.com/iDevicesInc/SweetBlue",
+        "thumb_width": 289,
+        "thumb_height": 289,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1476216247.003054",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11de47695",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "haven’t seen that before but sounds good",
+    "ts": "1476216263.003056",
+    "id": "11de47696",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N7D6F50",
+    "text": "",
+    "bot_id": "B0N7DNUT0",
+    "attachments": [
+      {
+        "fallback": "iDevicesInc/SweetBlue",
+        "text": "&lt;b&gt;|&lt;/b&gt;&amp;nbsp;&lt;a href='#why'&gt;Why?&lt;/a&gt;\n&lt;b&gt;|&lt;/b&gt;&amp;nbsp;&lt;a href='#features'&gt;Features&lt;/a&gt;\n&lt;b&gt;|&lt;/b&gt;&amp;nbsp;&lt;a href='#getting-started'&gt;Getting Started&lt;/a&gt;\n&lt;b&gt;|&lt;/b&gt;&amp;nbsp;&lt;a href='#licensing'&gt;Licensing&lt;/a&gt;\n&lt;b&gt;|&lt;/b&gt;&amp;nbsp;&lt;a href=\"https://github.com/iDevicesInc/SweetBlue/wiki\"&gt;Wiki&lt;/a&gt;\n&lt;b&gt;|&lt;/b&gt;\n&lt;a href=\"https://travis-ci.org/iDevicesInc/SweetBlue\"&gt;\n  &lt;img align=\"right\" src=\"https://img.shields.io/badge/version-2.51.48-blue.svg\" /&gt;\n  &lt;img align=\"right\" src=\"https://travis-ci.org/iDevicesInc/SweetBlue.svg?branch=master\"/&gt;\n&lt;/a&gt;\n&lt;p align=\"center\"&gt;\n  &lt;br&gt;\n  &lt;a href=\"https://idevicesinc.com/sweetblue\"&gt;\n    &lt;img src=\"https://github.com/iDevicesInc/SweetBlue/blob/master/scripts/assets/sweetblue_logo.png\" /&gt;\n  &lt;/a&gt;\n&lt;/p&gt;\nWhy?\n====\n\nAndroid's BLE stack has some...issues...\n\n* <https://github.com/iDevicesInc/SweetBlue/wiki/Android-BLE-Issues>\n* <https://code.google.com/p/android/issues/detail?id=58381>\n* <http://androidcommunity.com/nike-blames-ble-for-their-shunning-of-android-20131202/>\n* <http://stackoverflow.com/questions/17870189/android-4-3-bluetooth-low-energy-unstable>\n\nSweetBlue is a blanket abstraction that shoves all that troublesome behavior behind a clean interface and gracefully degrades when the underlying stack becomes too unstable for even it to handle.\n\nIt’s built on the hard-earned experience of several commercial BLE projects and provides so many transparent workarounds to issues both annoying and fatal that it’s frankly impossible to imagine writing an app without it. It also supports many higher-level constructs, things like atomic transactions for coordinating authentication handshakes and firmware updates, flexible scanning configurations, read polling, transparent retries for transient failure conditions, and, well, the list goes on. The API is dead simple, with usage dependence on a few plain old Java objects and link dependence on standard Android classes. It offers conveniences for debugging and analytics and error handling that will save you months of work - last mile stuff you didn't even know you had to worry about.\n\nFeatures\n========\n\n*\tFull-coverage API documentation: <http://idevicesinc.com/sweetblue/docs/api>\n*\tSample applications.\n*\tBattle-tested in commercial apps.\n*\tPlain old Java with zero API-level dependencies.\n*\tRich, queryable state tracking that makes UI integration a breeze.\n*\tAutomatic service discovery.\n*\tFull support for server role including advertising.\n*\tBuilt-in time series database for easily storing and querying historical data from past reads and notifications.\n*\tEasy RSSI tracking with built-in polling and caching, including distance and friendly signal strength calculations.\n*\tHighly configurable scanning with min/max time limits, periodic bursts, advanced filtering, and more.\n*\tContinuous scanning mode that saves battery and defers to more important operations by stopping and starting as needed under the hood.\n*\tAtomic transactions for easily coordinating authentication handshakes, initialization, and firmware updates.\n* \tAutomatic striping of characteristic writes greater than [MTU](<http://en.wikipedia.org/wiki/Maximum_transmission_unit>) size of 20 bytes. (Coming in a future version).\n*\tUndiscovery based on last time seen.\n*\tClean leakage of underlying native stack objects in case of emergency.\n*\tWraps Android API level checks that gate certain methods.\n*\tVerbose [logging](<https://github.com/iDevicesInc/SweetBlue/wiki/Logging>) that outputs human-readable thread IDs, UUIDs, status codes and states instead of alphabet soup.\n*\tWrangles a big bowl of thread spaghetti behind a nice asynchronous API - make a call on main thread, get a callback on main thread a short time later.\n*\tInternal priority job queue that ensures serialization of all operations so native stack doesn’t get overloaded and important stuff gets done first.\n*\tOptimal coordination of the BLE stack when connected to multiple devices.\n*\tDetection and correction of dozens of BLE failure conditions.\n*\tNumerous manufacturer-specific workarounds and hacks all hidden from you.\n*\tBuilt-in polling for read characteristics with optional change-tracking to simulate notifications.\n*\tTransparent retries for transient failure conditions related to connecting, getting services, and scanning.\n*\tComprehensive callback system with clear enumerated reasons when something goes wrong like connection or read/write failures.\n*\tDistills dozens of lines of boilerplate, booby-trapped, native API usages into single method calls.\n*\tTransparently falls back to Bluetooth Classic for certain BLE failure conditions.\n*\tOn-the-fly-configurable reconnection loops started automatically when random disconnects occur, e.g. from going out of range.\n*\tRetention and automatic reconnection of devices after BLE off-&gt;on cycle or even complete app reboot.\n*\tOne convenient method to completely unwind and reset the Bluetooth stack.\n*\tDetection and reporting of BLE failure conditions that user should take action on, such as restarting the Bluetooth stack or even the entire phone.\n*\tRuntime analytics for tracking average operation times, total elapsed times, and time estimates for long-running operations like firmware updates.\n\n\nGetting Started\n===============\n1. If using **Android Studio** or **Gradle**...\n  1. [Download](<http://idevicesinc.com/sweetblue/#tryit>) the latest release to a subfolder of your project such as `MyApp/src/main/lib/`. This ZIP contains several samples, precompiled JARS, and API docs and is preferable to downloading from GitHub, which only contains the raw source.\n  2. Open the app module's `build.gradle` file.\n  3. If building with source, your gradle file should look something like this:\n\n    ```gradle\n    \n    android {\n        compileSdkVersion 23\n        buildToolsVersion '23.0.2'\n        \n        defaultConfig {\n            minSdkVersion 18\n            targetSdkVersion 23\n            ...\n        }\n    \n        sourceSets {\n            main.java.srcDirs += 'src/main/lib/sweetblue/src'\n            main.res.srcDirs += 'src/main/lib/sweetblue/res'\n            ...\n        }\n        ...\n    }\n    \n    ```\n    \n  4. If you're building with source from github, the sourceSet path is a bit different:\n  \n    ```gradle\n      \n      android {\n          compileSdkVersion 23\n          buildToolsVersion '23.0.2'\n          \n          defaultConfig {\n              minSdkVersion 18\n              targetSdkVersion 23\n              ...\n          }\n      \n          sourceSets {\n              main.java.srcDirs += 'src/main/lib/sweetblue/app/src/main/java'              \n              main.res.srcDirs += 'src/main/lib/sweetblue/app/src/main/res'\n              ...\n          }\n          ...\n      }\n      \n      ```\n    \n  5. Else if building with JAR, it should look something like this:\n\n    ```gradle\n    \n    android {\n        compileSdkVersion 23\n        buildToolsVersion '23.0.2'\n        \n        defaultConfig {\n            minSdkVersion 18\n            targetSdkVersion 23\n            ...\n        }\n    \n        dependencies {\n            compile fileTree(dir: 'libs', include: '*.jar')\n            ...\n        }\n        ...\n    }\n    \n    ```\n    \n2. Else if using **Eclipse**...\n  1. [Download](<http://idevicesinc.com/sweetblue/#tryit>) the latest release to a subfolder of your project such as `MyApp/libs/`. This ZIP contains several samples, precompiled JARS, and API docs and is preferable to downloading from GitHub, which only contains the raw source.\n  2. Open the `Package Explorer` view.\n  3. Expand `MyApp/libs/sweetblue/`.\n  4. If building with source...\n    1. Right-click on the `src` folder.\n    2. Hover over `Build Path-&gt;`.\n    3. Click `Use as Source Folder`.\n  5. Else if building with JAR...\n    1. Expand the `jars` folder.\n    2. Right click on `sweetblue_{versio…",
+        "title": "iDevicesInc/SweetBlue",
+        "id": 1,
+        "title_link": "https://github.com/iDevicesInc/SweetBlue",
+        "color": "FFFFFF",
+        "fields": [
+          {
+            "title": "Open issues",
+            "value": "50",
+            "short": true
+          },
+          {
+            "title": "Languages",
+            "value": "Java, CSS, Shell, HTML",
+            "short": true
+          },
+          {
+            "title": "Contributors",
+            "value": "5",
+            "short": true
+          },
+          {
+            "title": "License",
+            "value": "GNU General Public License v3.0",
+            "short": true
+          },
+          {
+            "title": "Commits",
+            "value": "1060",
+            "short": true
+          },
+          {
+            "title": "Releases",
+            "value": "9",
+            "short": true
+          },
+          {
+            "title": "Branches",
+            "value": "11",
+            "short": true
+          }
+        ],
+        "mrkdwn_in": [
+          "title",
+          "text"
+        ]
+      }
+    ],
+    "ts": "1476216264.003057",
+    "id": "11de47697",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N4EVAP7",
+    "text": "<@U2N4EVAP7|krystaldouglas> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476216550.003058",
+    "id": "11de47698",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N2ZG938",
+    "text": "<@U055GGAHS>  - Thanks",
+    "ts": "1476216575.003059",
+    "id": "11de47699",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N2ZG938",
+    "text": "so trying to do the scaning bit-",
+    "ts": "1476217510.003060",
+    "id": "11de47700",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "<@U055GGAHS> Did you see GoTenna started a new kickstarter, I heard they have a great BT API :kappa:",
+    "ts": "1476218875.003061",
+    "id": "11de47701",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "lol yeah havent had anytime to work on that project but I was making good progress",
+    "ts": "1476218904.003062",
+    "id": "11de47702",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "im going to troll the living shit out of them on twitter if I beat them to releasing an android api",
+    "ts": "1476218923.003063",
+    "id": "11de47703",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "at this point they don't care anymore, huh? This has been a topic here since you joined here at least :smile:",
+    "ts": "1476218962.003064",
+    "id": "11de47704",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "lol yeah",
+    "ts": "1476219145.003065",
+    "id": "11de47705",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "one of these days ¯\\_(ツ)_/¯",
+    "ts": "1476219153.003066",
+    "id": "11de47706",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I’ll make a cool medium article pretending to be a super genius",
+    "ts": "1476219174.003067",
+    "id": "11de47707",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U055GGAHS|ian.shaun.thomas> uploaded a file: <https://androidchat.slack.com/files/ian.shaun.thomas/F2N4SJN12/screen_shot_2016-10-11_at_4.53.01_pm.png|I’ll add stuff like this to article so I can seem legit>",
+    "file": {
+      "id": "F2N4SJN12",
+      "created": 1476219195,
+      "timestamp": 1476219195,
+      "name": "Screen Shot 2016-10-11 at 4.53.01 PM.png",
+      "title": "I’ll add stuff like this to article so I can seem legit",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U055GGAHS",
+      "editable": false,
+      "size": 78614,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F2N4SJN12/screen_shot_2016-10-11_at_4.53.01_pm.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F2N4SJN12/download/screen_shot_2016-10-11_at_4.53.01_pm.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F2N4SJN12-5992a6cd86/screen_shot_2016-10-11_at_4.53.01_pm_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F2N4SJN12-5992a6cd86/screen_shot_2016-10-11_at_4.53.01_pm_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F2N4SJN12-5992a6cd86/screen_shot_2016-10-11_at_4.53.01_pm_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 360,
+      "thumb_360_h": 173,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F2N4SJN12-5992a6cd86/screen_shot_2016-10-11_at_4.53.01_pm_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "image_exif_rotation": 1,
+      "original_w": 472,
+      "original_h": 227,
+      "permalink": "https://androidchat.slack.com/files/ian.shaun.thomas/F2N4SJN12/screen_shot_2016-10-11_at_4.53.01_pm.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F2N4SJN12-f537ca44c1",
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U055GGAHS",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U055GGAHS|ian.shaun.thomas>",
+    "bot_id": null,
+    "ts": "1476219198.003068",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11de47708",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "and that’s how you reverse engineer a protocol",
+    "ts": "1476219215.003069",
+    "id": "11de47709",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<@U055GGAHS> oh I see you’ve been doing whiteboard interviews at a preseed startups",
+    "ts": "1476219512.003070",
+    "id": "11de47710",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": ":kappa:",
+    "ts": "1476219528.003071",
+    "id": "11de47711",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "or is that the 30 minute facebook over phone one?",
+    "edited": {
+      "user": "U0548MM6B",
+      "ts": "1476219536.000000"
+    },
+    "ts": "1476219531.003072",
+    "id": "11de47712",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U055GGAHS|ian.shaun.thomas> uploaded a file: <https://androidchat.slack.com/files/ian.shaun.thomas/F2N5H9YNN/screen_shot_2016-10-11_at_5.00.43_pm.png|But it works on my machine! :(>",
+    "file": {
+      "id": "F2N5H9YNN",
+      "created": 1476219665,
+      "timestamp": 1476219665,
+      "name": "Screen Shot 2016-10-11 at 5.00.43 PM.png",
+      "title": "But it works on my machine! :(",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U055GGAHS",
+      "editable": false,
+      "size": 31173,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F2N5H9YNN/screen_shot_2016-10-11_at_5.00.43_pm.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F2N5H9YNN/download/screen_shot_2016-10-11_at_5.00.43_pm.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F2N5H9YNN-58022b2ab8/screen_shot_2016-10-11_at_5.00.43_pm_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F2N5H9YNN-58022b2ab8/screen_shot_2016-10-11_at_5.00.43_pm_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F2N5H9YNN-58022b2ab8/screen_shot_2016-10-11_at_5.00.43_pm_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 360,
+      "thumb_360_h": 146,
+      "thumb_480": "https://files.slack.com/files-tmb/T04PLNDMP-F2N5H9YNN-58022b2ab8/screen_shot_2016-10-11_at_5.00.43_pm_480.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_480_w": 480,
+      "thumb_480_h": 195,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F2N5H9YNN-58022b2ab8/screen_shot_2016-10-11_at_5.00.43_pm_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "image_exif_rotation": 1,
+      "original_w": 691,
+      "original_h": 280,
+      "permalink": "https://androidchat.slack.com/files/ian.shaun.thomas/F2N5H9YNN/screen_shot_2016-10-11_at_5.00.43_pm.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F2N5H9YNN-1fd9df5d97",
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U055GGAHS",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U055GGAHS|ian.shaun.thomas>",
+    "bot_id": null,
+    "ts": "1476219668.003074",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11de47713",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N2ZG938",
+    "text": "what BT api <@U04TK850N>",
+    "ts": "1476219869.003075",
+    "id": "11de47714",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "he’s talking about something unrelated to what you need <@U2N2ZG938>",
+    "ts": "1476219906.003076",
+    "id": "11de47715",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N2ZG938",
+    "text": "Oh..... :slightly_smiling_face:",
+    "ts": "1476220014.003077",
+    "id": "11de47716",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N2ZG938",
+    "text": "<@U055GGAHS>  - can across this &gt; <https://github.com/alt236/Bluetooth-LE-Library---Android>  could you comment on it ? Good/bad / use it or stay away",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "alt236/Bluetooth-LE-Library---Android",
+        "title_link": "https://github.com/alt236/Bluetooth-LE-Library---Android",
+        "text": "Bluetooth-LE-Library---Android - This library allows for easy access to a Bluetooth LE device's AdRecord and RSSI value. It offers additional functionality for iBeacons.",
+        "fallback": "GitHub: alt236/Bluetooth-LE-Library---Android",
+        "thumb_url": "https://avatars3.githubusercontent.com/u/1143064?v=3&s=400",
+        "from_url": "https://github.com/alt236/Bluetooth-LE-Library---Android",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1476220094.003078",
+    "id": "11de47717",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "if you want to work with beacons im sure it’s probably fine",
+    "ts": "1476220134.003080",
+    "id": "11de47718",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N2ZG938",
+    "text": "<@U055GGAHS>  for this project - no I'm not working with beacons at all -  i'm connecting to BDE-BLEM201",
+    "ts": "1476220398.003081",
+    "id": "11de47719",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U055GGAHS|ian.shaun.thomas> uploaded a file: <https://androidchat.slack.com/files/ian.shaun.thomas/F2N50HE7N/screen_shot_2016-10-11_at_5.13.39_pm.png|lul>",
+    "file": {
+      "id": "F2N50HE7N",
+      "created": 1476220428,
+      "timestamp": 1476220428,
+      "name": "Screen Shot 2016-10-11 at 5.13.39 PM.png",
+      "title": "lul",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U055GGAHS",
+      "editable": false,
+      "size": 318930,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F2N50HE7N/screen_shot_2016-10-11_at_5.13.39_pm.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F2N50HE7N/download/screen_shot_2016-10-11_at_5.13.39_pm.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F2N50HE7N-a9e18631ac/screen_shot_2016-10-11_at_5.13.39_pm_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F2N50HE7N-a9e18631ac/screen_shot_2016-10-11_at_5.13.39_pm_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F2N50HE7N-a9e18631ac/screen_shot_2016-10-11_at_5.13.39_pm_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 254,
+      "thumb_360_h": 360,
+      "thumb_480": "https://files.slack.com/files-tmb/T04PLNDMP-F2N50HE7N-a9e18631ac/screen_shot_2016-10-11_at_5.13.39_pm_480.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_480_w": 339,
+      "thumb_480_h": 480,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F2N50HE7N-a9e18631ac/screen_shot_2016-10-11_at_5.13.39_pm_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720": "https://files.slack.com/files-tmb/T04PLNDMP-F2N50HE7N-a9e18631ac/screen_shot_2016-10-11_at_5.13.39_pm_720.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720_w": 508,
+      "thumb_720_h": 720,
+      "thumb_960": "https://files.slack.com/files-tmb/T04PLNDMP-F2N50HE7N-a9e18631ac/screen_shot_2016-10-11_at_5.13.39_pm_960.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_960_w": 677,
+      "thumb_960_h": 960,
+      "image_exif_rotation": 1,
+      "original_w": 702,
+      "original_h": 995,
+      "permalink": "https://androidchat.slack.com/files/ian.shaun.thomas/F2N50HE7N/screen_shot_2016-10-11_at_5.13.39_pm.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F2N50HE7N-f87253ba0c",
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U055GGAHS",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U055GGAHS|ian.shaun.thomas>",
+    "bot_id": null,
+    "ts": "1476220432.003082",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11de47720",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N2ZG938",
+    "text": "yeah  - but for now I'm looking for connecting and staying connected to it -",
+    "ts": "1476220576.003083",
+    "id": "11de47721",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U055GGAHS> mathjax",
+    "ts": "1476220871.003084",
+    "id": "11de47722",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "if you want to add professional looking equations",
+    "ts": "1476220882.003085",
+    "id": "11de47723",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "use mathjax",
+    "ts": "1476220885.003086",
+    "id": "11de47724",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I’ll stick to my applejacks",
+    "ts": "1476220916.003087",
+    "id": "11de47725",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "/gif cheerios",
+    "ts": "1476221039.003088",
+    "id": "11de47726",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "",
+    "bot_id": "B0GH4RVHU",
+    "attachments": [
+      {
+        "fallback": "<http://i282.photobucket.com/albums/kk271/no1animelover/Cheerios.gif>",
+        "image_url": "http://i282.photobucket.com/albums/kk271/no1animelover/Cheerios.gif",
+        "image_width": 639,
+        "image_height": 479,
+        "image_bytes": 356428,
+        "is_animated": true,
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1476221039.003089",
+    "id": "11de47727",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N2ZG938",
+    "text": "I wan to create an application facade is it ok to extend from AppCompatActivity",
+    "ts": "1476229481.003090",
+    "id": "11de47728",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N63QBV3",
+    "text": "<@U2N63QBV3|josejaguirre> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476230996.003091",
+    "id": "11de47729",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N2ZG938",
+    "text": "My R is being unrecognised - how do i fix that",
+    "ts": "1476233105.003092",
+    "id": "11de47730",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N2ZG938",
+    "text": "ARrrrgggggggggggg",
+    "ts": "1476237333.003093",
+    "id": "11de47731",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N2ZG938",
+    "text": "why can't I find my widgets using R.layout??",
+    "ts": "1476237850.003094",
+    "id": "11de47732",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U23T8GVA9",
+    "text": "A question: If no google play service in the mobile (Like in China), can admob sdk still working?",
+    "ts": "1476240308.003095",
+    "id": "11de47733",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N7BR9JB",
+    "text": "<@U2N7BR9JB|dala> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476240829.003096",
+    "id": "11de47734",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "Does anyone know why notifydatasetchanged work on FragmentStatePagerAdapter but not FragmentPagerAdapter?",
+    "ts": "1476243308.003097",
+    "id": "11de47735",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "Ah nevermind, got it after reading the source code",
+    "ts": "1476244701.003098",
+    "id": "11de47736",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N8FJQUS",
+    "text": "<@U2N8FJQUS|rodney> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476251451.003099",
+    "id": "11de47737",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U2N2ZG938> it's best to go to <#C055MSDCM|beginners> for beginner questions :slightly_smiling_face:",
+    "ts": "1476254001.003100",
+    "id": "11de47738",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

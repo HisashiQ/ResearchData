@@ -1,0 +1,480 @@
+[
+  {
+    "user": "U3RR06KUH",
+    "text": "<@U3RR06KUH|j.watts> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1485161349.000247",
+    "id": "23ko3756",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I must be missing something obvious. How can you implement an abstract class like `Process` such that you set the getters from the constructor",
+    "ts": "1485188404.000248",
+    "id": "23ko3757",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "```\n    class TestProcess (\n            val exitValue: Int = 0,\n            val waitFor: Int = 0,\n            val outputStream: OutputStream = ByteArrayOutputStream(),\n            val errorStream: InputStream = ByteArrayInputStream(ByteArray(0)),\n            val inputStream: InputStream = ByteArrayInputStream(ByteArray(0))\n    ) : Process() {\n\n        override fun destroy() {\n        }\n\n        override fun exitValue(): Int {\n            return exitValue\n        }\n\n        override fun waitFor(): Int {\n            return waitFor\n        }\n\n    }\n```",
+    "ts": "1485188412.000249",
+    "id": "23ko3758",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "all 3 stream values get flagged for ‘accidentally’ overriding the get but that’s what I want",
+    "ts": "1485188441.000250",
+    "id": "23ko3759",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "`override val`",
+    "ts": "1485188587.000251",
+    "id": "23ko3760",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "oh, you can't",
+    "ts": "1485188602.000252",
+    "id": "23ko3761",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "<@U055GGAHS> properties are not allowed to override Java functions.",
+    "ts": "1485188610.000253",
+    "id": "23ko3762",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": ":disappointed:",
+    "ts": "1485188615.000254",
+    "id": "23ko3763",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "You have to do it explicitly",
+    "ts": "1485188630.000255",
+    "id": "23ko3764",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "the only way out is just to declare private properties and override getters.",
+    "ts": "1485188631.000256",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U1HM4MPLJ"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "23ko3765",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "ok",
+    "ts": "1485188635.000257",
+    "id": "23ko3766",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "JB said that allowing such behavior would be somewhat complicated.",
+    "ts": "1485188665.000258",
+    "id": "23ko3767",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "```\n    class TestProcess (\n            val exitValue: Int = 0,\n            val waitFor: Int = 0,\n            private val outputStream: OutputStream = ByteArrayOutputStream(),\n            private val errorStream: InputStream = ByteArrayInputStream(ByteArray(0)),\n            private val inputStream: InputStream = ByteArrayInputStream(ByteArray(0))\n    ) : Process() {\n\n        override fun destroy() {\n        }\n\n        override fun exitValue(): Int {\n            return exitValue\n        }\n\n        override fun waitFor(): Int {\n            return waitFor\n        }\n\n        override fun getOutputStream(): OutputStream {\n            return outputStream\n        }\n\n        override fun getErrorStream(): InputStream {\n            return errorStream\n        }\n\n        override fun getInputStream(): InputStream {\n            return inputStream\n        }\n    }\n```",
+    "ts": "1485188678.000259",
+    "id": "23ko3768",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "that seems to work",
+    "ts": "1485188681.000260",
+    "id": "23ko3769",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "thanks",
+    "ts": "1485188695.000261",
+    "id": "23ko3770",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "You can just do `override fun getInputStream() = inputStream`",
+    "ts": "1485188734.000262",
+    "id": "23ko3771",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "Eats less space :)",
+    "ts": "1485188765.000263",
+    "id": "23ko3772",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "You can write shorter:\n```\noverride fun waitFor(): Int = waitFor\noverride fun getOutputStream(): OutputStream = outputStream\noverride fun getErrorStream(): InputStream = errorStream\noverride fun getInputStream(): InputStream = inputStream\n```\n:slowpoke:",
+    "edited": {
+      "user": "U2M0WUZ7A",
+      "ts": "1485188793.000000"
+    },
+    "ts": "1485188768.000264",
+    "id": "23ko3773",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "good call",
+    "ts": "1485188772.000265",
+    "id": "23ko3774",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "Haha. <@U2M0WUZ7A> that's better. I was feeling too lazy to type out everything ",
+    "ts": "1485188823.000268",
+    "id": "23ko3775",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "`val slackPost by lazy { typeEverything() }`",
+    "edited": {
+      "user": "U2M0WUZ7A",
+      "ts": "1485188859.000000"
+    },
+    "ts": "1485188837.000269",
+    "reactions": [
+      {
+        "name": "grinning",
+        "users": [
+          "U1HM4MPLJ"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "23ko3776",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "Mind you. lazy as is, is synchronized. I tend to use the unsynchronized overload more",
+    "ts": "1485188955.000272",
+    "id": "23ko3777",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "also lazy is a separate object :slightly_smiling_face:",
+    "ts": "1485189136.000273",
+    "id": "23ko3778",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "Yea... That too",
+    "ts": "1485189172.000274",
+    "id": "23ko3779",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054C1CFM",
+    "text": "<@U054C1CFM|panwrona> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1485198659.000275",
+    "id": "23ko3780",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

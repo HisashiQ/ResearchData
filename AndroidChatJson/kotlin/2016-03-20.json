@@ -1,0 +1,136 @@
+[
+  {
+    "user": "U053PPGDC",
+    "text": "got it sorted - need to update versions to the new 1.01",
+    "ts": "1458457835.000031",
+    "id": "20ko875",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "ffs",
+    "ts": "1458457837.000032",
+    "id": "20ko876",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0TCDLNBS",
+    "text": "I am just attempting to convert a small project to Kotlin and have stumbled something I can’t figure out… so if anyone has an idea, it’d be appreciated…\n\nin `MyAdapter class`I have: \n```var someClickListener: SomeClickListener? = null\ninterface SomeClickListener {\n     fun onClicked(l: Long)\n}```\n\nbut in my view I can’t figure out how to attach a listener, I have tried this below, but I get a type mismatch\n\n`MyView class`\n```protected fun configAdapter() {\n  adapter.someClickListener = SomeClickListener::onClicked{presenter::someClicked}\n}```\n\nwhere \n```Presenter#someClicked(l: Long)```\n\n\nAny clues?",
+    "edited": {
+      "user": "U0TCDLNBS",
+      "ts": "1458506584.000000"
+    },
+    "ts": "1458506494.000033",
+    "id": "20ko877",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "Currently you cannot do that: <https://youtrack.jetbrains.com/issue/KT-6947>",
+    "ts": "1458507914.000040",
+    "id": "20ko878",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "So the best you can do is:\n```\nvar someClickListener: ((Long) -&gt; Unit)? = null\n```",
+    "ts": "1458507956.000041",
+    "id": "20ko879",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "```\nprotected fun configAdapter() {\n  adapter.someClickListener = { presenter.someClicked(it) }\n}\n```",
+    "ts": "1458507981.000042",
+    "id": "20ko880",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0TCDLNBS",
+    "text": "<@U0RGXBYUD>: thanks, that is pretty interesting\n\nWould I be right that to invoke it I have to call it like this?\n\n```fun bindCell(l: Long, clickListener: ((Long) -&gt; Unit)?) {\n            itemView.setOnClickListener { clickListener?.invoke(l) }\n        }```",
+    "edited": {
+      "user": "U0TCDLNBS",
+      "ts": "1458509615.000000"
+    },
+    "ts": "1458508282.000043",
+    "id": "20ko881",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

@@ -1,0 +1,399 @@
+[
+  {
+    "user": "U0G1UFLUC",
+    "subtype": "channel_join",
+    "text": "<@U0G1UFLUC|enighma> has joined the channel",
+    "ts": "1450139176.000262",
+    "id": "14te458",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G1UFLUC",
+    "text": "When I add this dependency `androidTestCompile 'com.android.support.test.espresso:espresso-contrib:2.2.1'` \nI get the following error:\n`Warning:Conflict with dependency 'com.android.support:recyclerview-v7'. Resolved versions for app (23.1.1) and test app (23.0.1) differ. See <http://g.co/androidstudio/app-test-app-conflict> for details.`\n\nWhich to me sounds like that one is pulling in an old version of the support lib.",
+    "attachments": [
+      {
+        "title": "Gradle Plugin User Guide - Android Tools Project Site",
+        "title_link": "http://g.co/androidstudio/app-test-app-conflict",
+        "text": "Android tools project information site",
+        "fallback": "Gradle Plugin User Guide - Android Tools Project Site",
+        "from_url": "http://g.co/androidstudio/app-test-app-conflict",
+        "id": 1
+      }
+    ],
+    "edited": {
+      "user": "U0G1UFLUC",
+      "ts": "1450139258.000000"
+    },
+    "ts": "1450139247.000263",
+    "id": "14te459",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETA9WHH",
+    "text": "you probably just need to exclude that dependency conflict from espresso-contrib",
+    "ts": "1450139347.000266",
+    "id": "14te460",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETA9WHH",
+    "text": "configurations {\n    androidTestCompile.exclude group: 'com.android.support'\n}",
+    "ts": "1450139364.000267",
+    "id": "14te461",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "exactly",
+    "ts": "1450139383.000268",
+    "id": "14te462",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETA9WHH",
+    "text": "if you want to blanket exclude from all androidTestCompile",
+    "ts": "1450139383.000269",
+    "id": "14te463",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETA9WHH",
+    "text": "or like this if you just need to exclude from contrib",
+    "ts": "1450139455.000270",
+    "id": "14te464",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETA9WHH",
+    "text": "androidTestCompile (‘com.android.support.test.espresso:espresso-contrib:' + VERSION_SUPPORT_TEST) {\n        exclude group: 'com.android.support'\n    }",
+    "edited": {
+      "user": "U0ETA9WHH",
+      "ts": "1450139461.000000"
+    },
+    "ts": "1450139455.000271",
+    "id": "14te465",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G1UFLUC",
+    "text": "Thanks",
+    "ts": "1450139535.000273",
+    "id": "14te466",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G1UFLUC",
+    "text": "But I think it’s weird that I need to do it. Is there documentation about this? I failed finding it :confused:",
+    "ts": "1450139571.000274",
+    "id": "14te467",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G1UFLUC",
+    "text": "I haven’t really written a lot of espresso tests and I’m trying to find if a certain string exists on a textview inside a list item of a recyclerview.\nI guess a good starting point would be `RecyclerViewActions.actionOnItem()`?",
+    "ts": "1450139735.000275",
+    "id": "14te468",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETA9WHH",
+    "text": "not really, maybe a stackoverflow or two, but i had to figure this out when the versions changed using ./gradlew dependencies",
+    "ts": "1450139754.000276",
+    "id": "14te469",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETA9WHH",
+    "text": "sorry, the apps i test do not currently use RecyclerView. hopefully soon though :simple_smile:",
+    "ts": "1450139873.000277",
+    "id": "14te470",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETA9WHH",
+    "text": "but there’s a sample that’ll probably help <https://github.com/dannyroa/espresso-samples/tree/master/RecyclerView/app/src/androidTest/java/com/dannyroa/espresso_samples/recyclerview>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "dannyroa/espresso-samples",
+        "title_link": "https://github.com/dannyroa/espresso-samples/tree/master/RecyclerView/app/src/androidTest/java/com/dannyroa/espresso_samples/recyclerview",
+        "text": "Contribute to espresso-samples development by creating an account on GitHub.",
+        "fallback": "GitHub: dannyroa/espresso-samples",
+        "thumb_url": "https://avatars2.githubusercontent.com/u/144925?v=3&s=400",
+        "from_url": "https://github.com/dannyroa/espresso-samples/tree/master/RecyclerView/app/src/androidTest/java/com/dannyroa/espresso_samples/recyclerview",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1450139907.000278",
+    "id": "14te471",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G1UFLUC",
+    "text": "That’s a lot of code just to make that happen with what exist..",
+    "ts": "1450140171.000280",
+    "id": "14te472",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G1UFLUC",
+    "text": ":confused:",
+    "ts": "1450140183.000281",
+    "id": "14te473",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETA9WHH",
+    "text": "custom matchers are probably the cleanest way to go about it, even if it’s a bit more work",
+    "ts": "1450140277.000282",
+    "id": "14te474",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G1UFLUC",
+    "text": "This is almost what I want to do:\n```\nEspresso.onView(withId(R.id.listView))\n                .perform(RecyclerViewActions.actionOnItem(\n                        ViewMatchers.hasDescendant(ViewMatchers.withId(R.id.title)), ViewActions.actionWithAssertions()));\n```",
+    "edited": {
+      "user": "U0G1UFLUC",
+      "ts": "1450140419.000000"
+    },
+    "ts": "1450140408.000283",
+    "id": "14te475",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G1UFLUC",
+    "text": "I just want to validate the string on that item",
+    "ts": "1450140439.000285",
+    "id": "14te476",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G1UFLUC",
+    "text": "For this test I just pulled out the good ‘ol `findViewById` :simple_smile:",
+    "ts": "1450142461.000286",
+    "id": "14te477",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

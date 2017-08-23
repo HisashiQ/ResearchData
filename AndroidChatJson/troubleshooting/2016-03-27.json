@@ -1,0 +1,232 @@
+[
+  {
+    "user": "U0VQPS150",
+    "subtype": "channel_join",
+    "text": "<@U0VQPS150|yeomansiii> has joined the channel",
+    "ts": "1459118813.000097",
+    "id": "27tr4209",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0VQPS150",
+    "text": "I'm having trouble getting my CollapsingToolbar to collapse when a RecyclerView inside of a Fragment is scrolled.  It seems like this used to be an issue that was fixed in support library 22.2.0, but I am on 23.2.1 and I am still having this issue.",
+    "ts": "1459118948.000098",
+    "id": "27tr4210",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0VQPS150",
+    "text": "Does anyone possibly know of common issues with collapsable toolbar?",
+    "ts": "1459118979.000099",
+    "id": "27tr4211",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "I know at least 2 issues which might be the ones you’re talking about :sweat_smile:",
+    "ts": "1459119279.000100",
+    "id": "27tr4212",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<http://stackoverflow.com/questions/30923889/flinging-with-recyclerview-appbarlayout>",
+    "attachments": [
+      {
+        "title": "Flinging with RecyclerView + AppBarLayout",
+        "title_link": "http://stackoverflow.com/questions/30923889/flinging-with-recyclerview-appbarlayout",
+        "text": "I am using the new CoordinatorLayout with AppBarLayout and CollapsingToolbarLayout. Below AppBarLayout, I have a RecyclerView with a list of content. I have verified that fling scrolling works on ...",
+        "fallback": "Flinging with RecyclerView + AppBarLayout",
+        "thumb_url": "http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/questions/30923889/flinging-with-recyclerview-appbarlayout",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "id": 1
+      }
+    ],
+    "ts": "1459119280.000101",
+    "id": "27tr4213",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "look at the top comment here for solution to one which I assume you have",
+    "ts": "1459119291.000103",
+    "id": "27tr4214",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0VQPS150",
+    "text": "I'm not having an issue with flinging at all, my collapsing toolbar does not move, shrink, or collapse at all when the recyclerview is scrolled",
+    "ts": "1459119727.000104",
+    "id": "27tr4215",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "you probably didn’t set flag to scroll",
+    "ts": "1459119770.000105",
+    "id": "27tr4216",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "add app:layout_scrollFlags=“scroll” to your collapsing toolbar",
+    "ts": "1459119817.000106",
+    "id": "27tr4217",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "and a layoutbehavior to recycler",
+    "ts": "1459119830.000107",
+    "id": "27tr4218",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0VQPS150",
+    "text": "I had both of those, I've decided to just scrap the collapsing toolbar idea because in the end it wouldn't really work too well for this specific use.  Instead I am just putting a layout and recyclerview inside of a NestedScrollView so they can all scroll together.",
+    "ts": "1459119973.000108",
+    "id": "27tr4219",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0VQPS150",
+    "text": "Hahah, I switched to nested scroll view and now I have the issue with the flinging not working",
+    "ts": "1459125456.000109",
+    "id": "27tr4220",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

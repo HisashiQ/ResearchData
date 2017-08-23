@@ -1,0 +1,660 @@
+[
+  {
+    "user": "U0J39TSTX",
+    "subtype": "channel_join",
+    "text": "<@U0J39TSTX|noahd> has joined the channel",
+    "ts": "1467250878.000101",
+    "id": "29te1529",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LH6B4AW",
+    "text": "Hi, I am kinda stack on how to do the test.\n\nso I have following code which takes the context and generate keyguardManager instance.\n\n```\n public SomeClass(@NonNull Context context){\nkeyguardManager = ((KeyguardManager) context.getSystemService(Context.KEYGUARD_SERVICE))\n}\n```\n\nand in test file, I have done following and not worked\n```\nnew SomeClass(new MockContext())   // this returns runtime exception\nnew SomeClass(Mockito.mock(Context.class)) //  this returns null in keyguardmanager\n```\n\nOne possible solution is to add another argument “keyguardManager\" in SomeClass, but that seems redundant bc you can generate it inside the class\n\nSo I am not sure what I can do next… Any advise will be so thanksful",
+    "ts": "1467260101.000102",
+    "id": "29te1530",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "what is your test trying to assert?",
+    "ts": "1467261568.000103",
+    "id": "29te1531",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "if you’re mocking the Context it seems to me like you’re trying to replicate what Android framework is doing - that is usually not the right thing to do.",
+    "ts": "1467261613.000104",
+    "id": "29te1532",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I presume you’re trying to use the KeyguardManager, am I right?",
+    "ts": "1467261628.000105",
+    "id": "29te1533",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "Also, mockito doesn’t work like that. just having a class mocked will return null by default for each method you call. You need to instruct it what to return for each method.",
+    "ts": "1467261692.000106",
+    "id": "29te1534",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "So, you’d do something like:\n```\nContext ctx = mock(Context.class;\n\n//that’s the bit you’re missing, you need to tell it to return the thing (probably another mock.\nwhen(ctx.getSystemService(anyString()).thenReturn(yourMockService);\n\n//do the rest of the test logic here.\n```",
+    "ts": "1467261824.000107",
+    "id": "29te1535",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "if you give me some more info on what exactly you’re trying to test I might be able to advise you better :slightly_smiling_face:",
+    "ts": "1467261867.000108",
+    "id": "29te1536",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "but usually, when it comes to system bits and pieces you’d keep that away from your tests as much as possible as that’s not the business logic (the stuff you _want_ to test really)",
+    "ts": "1467261922.000109",
+    "id": "29te1537",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "<@U053PPGDC>: can I have you on my team please? need someone to raise our 1% test coverage so badly :smile:",
+    "ts": "1467264629.000110",
+    "id": "29te1538",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "you accept contractors <@U04TK850N> ?",
+    "ts": "1467265424.000111",
+    "id": "29te1539",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I’m kinda between countries atm :stuck_out_tongue:",
+    "ts": "1467265434.000112",
+    "id": "29te1540",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "uh yeah we do",
+    "ts": "1467265954.000113",
+    "id": "29te1541",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "You’d just need to be with the right company for us to buy you :smile:",
+    "ts": "1467265982.000114",
+    "id": "29te1542",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "ah, I can do that here",
+    "ts": "1467265992.000115",
+    "id": "29te1543",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "how does Space Cowboy Rocket Company Ltd with a headquarters in London sound",
+    "ts": "1467266017.000116",
+    "id": "29te1544",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "should I give it a more corporate name",
+    "ts": "1467266030.000117",
+    "id": "29te1545",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I don’t think they are part of our contracts :smile:",
+    "ts": "1467266033.000118",
+    "id": "29te1546",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "nah, someone I know had a company called „wow such business inc.\"",
+    "ts": "1467266051.000119",
+    "id": "29te1547",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "haha",
+    "ts": "1467266059.000120",
+    "id": "29te1548",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "presume dogecoin related :stuck_out_tongue:",
+    "ts": "1467266065.000121",
+    "id": "29te1549",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "yup yup",
+    "ts": "1467266068.000122",
+    "id": "29te1550",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "nice.",
+    "ts": "1467266071.000123",
+    "id": "29te1551",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "fact is - I am looking to leave UK, and De sounds fun.",
+    "ts": "1467266099.000124",
+    "id": "29te1552",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": ":stuck_out_tongue:",
+    "ts": "1467266110.000125",
+    "id": "29te1553",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Well, we are debating on getting another dev right now, but I’m kinda unsure about it",
+    "ts": "1467266149.000126",
+    "id": "29te1554",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Cause right now it would just be to fill a gap and no one knows if that will be still there later. But either way we want 3 devs overall and right now I’m alone, iOS has 2",
+    "ts": "1467266194.000127",
+    "id": "29te1555",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "With the same workload so I’m kinda fucked right now :smile:",
+    "ts": "1467266213.000128",
+    "id": "29te1556",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "everything else is outsourced?",
+    "ts": "1467266213.000129",
+    "id": "29te1557",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "haha",
+    "ts": "1467266218.000130",
+    "id": "29te1558",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "nothing is outsourced",
+    "ts": "1467266223.000131",
+    "id": "29te1559",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "it’s all here in this very office",
+    "ts": "1467266231.000132",
+    "id": "29te1560",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "How is the working culture in De langerhans?",
+    "ts": "1467266247.000133",
+    "id": "29te1561",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "oh wait, part of the app is done by a contractor",
+    "ts": "1467266253.000134",
+    "id": "29te1562",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "highly depends on the team <@U0ESBF4AV> . I really like the folks I’m working with here. But have seen projects going down the shitter just because people were unable to communicate. I think that’s a given in the project business tho. Overall here in an enterprise environment it’s like what you’d expect. You’re just one of many if you don’t stick out somehow. It’s probably easier to stick out in some startup but I have no experience with that",
+    "ts": "1467266363.000135",
+    "id": "29te1563",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Maybe we should move that to <#C04PLQMUM> :smile:",
+    "ts": "1467266378.000136",
+    "reactions": [
+      {
+        "name": "100",
+        "users": [
+          "U053PPGDC"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "29te1564",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

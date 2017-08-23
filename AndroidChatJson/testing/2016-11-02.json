@@ -1,0 +1,236 @@
+[
+  {
+    "user": "U053LEHJN",
+    "text": "How would one unit test (for example) a method that takes some model object and outputs a type provided by the support lib (that happens to be backed by a Bundle)?",
+    "ts": "1478113681.000002",
+    "id": "02te2541",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Reflection? just throwing it out so it's there :smile:",
+    "ts": "1478113826.000003",
+    "id": "02te2542",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U04TK850N> well the issue is that Bundle is all stubbed so the type that gets sent back is empty",
+    "ts": "1478113885.000004",
+    "id": "02te2543",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "and we really want to test that we're adapting our model to the framework/support type",
+    "ts": "1478113902.000005",
+    "id": "02te2544",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Wrap the support type somehow?",
+    "ts": "1478113917.000006",
+    "id": "02te2545",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "hm but still it's stubbed...",
+    "ts": "1478113929.000007",
+    "id": "02te2546",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "Bundle is, yeah",
+    "ts": "1478113936.000008",
+    "id": "02te2547",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "also all classes involved are final",
+    "ts": "1478113945.000009",
+    "id": "02te2548",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "then I'm out of ideas",
+    "ts": "1478113961.000010",
+    "id": "02te2549",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "oh wait",
+    "ts": "1478113979.000011",
+    "id": "02te2550",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "the mocked sdk the gradle plugin spits out has final modifiers stripped",
+    "ts": "1478113991.000012",
+    "id": "02te2551",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": ":thinking_face:",
+    "ts": "1478113998.000013",
+    "id": "02te2552",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "oh yeah right",
+    "ts": "1478114025.000014",
+    "id": "02te2553",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

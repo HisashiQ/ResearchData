@@ -1,0 +1,244 @@
+[
+  {
+    "user": "U0ESBKWKA",
+    "text": "Is anybody facing problem with TintManager NoClassDefFoundError in Moto G2 5.0.2? I have proguard and everything setup, only happens in this phone.",
+    "ts": "1449565134.000214",
+    "id": "08tr3181",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "Try decompiling your apk and verify the class is there",
+    "edited": {
+      "user": "U055GGAHS",
+      "ts": "1449582649.000000"
+    },
+    "ts": "1449582640.000215",
+    "id": "08tr3182",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "so im at a complete fucking loss",
+    "ts": "1449590156.000217",
+    "id": "08tr3183",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I use the putdatamaprequest for communicating with wear and all my messages arrive and work but only in very certain cases like for instance.. clearly none are getting across until I detach the wear device from the charging cable then it gets all the missed messages all at once then it stops getting any",
+    "ts": "1449590226.000218",
+    "id": "08tr3184",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "then i plug it back and in and it processes the new set of waiting messages",
+    "ts": "1449590238.000219",
+    "id": "08tr3185",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "so play services just seems bugged to shit or something and its on multiple watches having super questionable functionality with software that used to work fine on previous wear os/google play versions",
+    "ts": "1449590287.000220",
+    "id": "08tr3186",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I can confirm its unrelated to adb as disabling it on the watch is the same effect.. I literally have to connect or disconnect power to get DataEventBuffer items to be passed to my listener",
+    "edited": {
+      "user": "U055GGAHS",
+      "ts": "1449590731.000000"
+    },
+    "ts": "1449590713.000221",
+    "id": "08tr3187",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I guess alternating waiting a few minutes i will get the messages eventually but again all at once then nothing for minutes.",
+    "ts": "1449592092.000223",
+    "id": "08tr3188",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "this an issue already raised ?",
+    "ts": "1449592110.000224",
+    "id": "08tr3189",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "i cant find anything about it",
+    "ts": "1449592119.000225",
+    "id": "08tr3190",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I want to assume its my own code but that doesn’t seem to be the case given the situation",
+    "ts": "1449592147.000226",
+    "id": "08tr3191",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "ugh god damnit.. you have to setUrgent on the PutDataRequest",
+    "ts": "1449592587.000227",
+    "id": "08tr3192",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "why would they put it on the data item instead of in the actual send request ffs",
+    "ts": "1449592605.000228",
+    "id": "08tr3193",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

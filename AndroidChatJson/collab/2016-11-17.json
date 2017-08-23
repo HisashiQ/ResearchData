@@ -1,0 +1,339 @@
+[
+  {
+    "user": "U16GF1B0F",
+    "text": "Just made posts about SRML on HN and Reddit… if you feel so inclined, upvote please?\n<https://news.ycombinator.com/item?id=12976436>  \n<https://www.reddit.com/r/androiddev/comments/5dfd6e/srml_string_resource_markup_language_easily_style/>",
+    "attachments": [
+      {
+        "service_name": "reddit",
+        "title": "SRML: String Resource Markup Language. Easily style your localized strings for Android. • /r/androiddev",
+        "title_link": "https://www.reddit.com/r/androiddev/comments/5dfd6e/srml_string_resource_markup_language_easily_style/",
+        "text": "1 points and 0 comments so far on reddit",
+        "fallback": "reddit: SRML: String Resource Markup Language. Easily style your localized strings for Android. • /r/androiddev",
+        "thumb_url": "https://www.redditstatic.com/icon.png",
+        "from_url": "https://www.reddit.com/r/androiddev/comments/5dfd6e/srml_string_resource_markup_language_easily_style/",
+        "thumb_width": 256,
+        "thumb_height": 256,
+        "service_icon": "https://www.reddit.com/favicon.ico",
+        "id": 1
+      }
+    ],
+    "ts": "1479383153.000092",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "17co6200",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Gonna tackle strings in my app soon, wondering if I should use something like that or square’s one: <https://github.com/square/phrase>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "square/phrase",
+        "title_link": "https://github.com/square/phrase",
+        "text": "phrase - Phrase is an Android string resource templating library",
+        "fallback": "GitHub: square/phrase",
+        "thumb_url": "https://avatars0.githubusercontent.com/u/82592?v=3&s=400",
+        "from_url": "https://github.com/square/phrase",
+        "thumb_width": 234,
+        "thumb_height": 234,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1479383687.000094",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "17co6201",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Would they work together?",
+    "ts": "1479383728.000096",
+    "id": "17co6202",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "just looking at Phrase’s README, I’m not seeing how they handle i18n… unless you are just supposed to plop stuff from `context.getString` into Phrase",
+    "ts": "1479384113.000097",
+    "id": "17co6203",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "if that’s the case, you could totally use them together, so long as Phrase accepts Spannables/CharSequences, and not just raw strings",
+    "ts": "1479384148.000098",
+    "id": "17co6204",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "you could potentially go the other direction as well.. Phrase -&gt; SRML… but currently SRML only allows you to pull string resources in by resource id, it would be a pretty easy feature to add `SRML.templatize(String s)` though",
+    "edited": {
+      "user": "U16GF1B0F",
+      "ts": "1479384257.000000"
+    },
+    "ts": "1479384236.000099",
+    "id": "17co6205",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "ah, phrase does let you pull from resources too.. so yeah, something like `SRML.templatize(Phrase.from().....format())` might work",
+    "ts": "1479384466.000101",
+    "id": "17co6206",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "```private static class LeftCurlyBracketToken extends Token {\n    LeftCurlyBracketToken(Token prev) {\n      super(prev);\n    }\n\n    @Override void expand(SpannableStringBuilder target, Map&lt;String, CharSequence&gt; data) {\n      int start = getFormattedStart();\n      target.replace(start, start + 2, \"{\");\n    }\n\n    @Override int getFormattedLength() {\n      // Replace {{ with {.\n      return 1;\n    }\n  }```  It looks like they use double curly brackets to “escape” a curly bracket.. which is dumb and would mess with SRML :confused:",
+    "ts": "1479384619.000102",
+    "id": "17co6207",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Ah shame, well I’ll have a play about with both anyway in a new project and see which feels nicer for my use case :slightly_smiling_face:",
+    "ts": "1479387703.000103",
+    "id": "17co6208",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Both look like nice solutions to boilerplate problems, only reason I was thinking Phrase was for easier localisation",
+    "ts": "1479387727.000104",
+    "id": "17co6209",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "%s with context for translators basically",
+    "ts": "1479387740.000105",
+    "id": "17co6210",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "yeah that is true..",
+    "ts": "1479391546.000106",
+    "id": "17co6211",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "I wouldn’t be against a PR which allows you to customize SRML by saying what you want the delimiters to be",
+    "ts": "1479391659.000107",
+    "id": "17co6212",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "currently they’re `{{` and `}}`",
+    "ts": "1479391665.000108",
+    "id": "17co6213",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JTP76DS",
+    "text": "<@U0JTP76DS|zerostatic> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1479391872.000109",
+    "id": "17co6214",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

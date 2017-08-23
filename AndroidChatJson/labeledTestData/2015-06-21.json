@@ -1,0 +1,1228 @@
+[
+  {
+    "user": "U061HDV96",
+    "text": "When I generate my apk that is using proguard, the following exception is thrown even though everything works fine without proguard: ```06-21 14:49:12.859    32686-340/? E/AndroidRuntime﹕ FATAL EXCEPTION: Retrofit-Idle\n    Process: be.lunchbreakapp.lunchbreak, PID: 32686\n    java.lang.NullPointerException: Attempt to read from field 'int be.lunchbreakapp.lunchbreak.b.b.a' on a null object reference\n            at be.lunchbreakapp.lunchbreak.b.b.a(Unknown Source)\n            at be.lunchbreakapp.lunchbreak.b.a.a(Unknown Source)\n            at be.lunchbreakapp.lunchbreak.b.f.&lt;init&gt;(Unknown Source)\n            at be.lunchbreakapp.lunchbreak.b.e.handleError(Unknown Source)\n            at retrofit.CallbackRunnable.run(Unknown Source)\n            at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1113)\n            at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:588)\n            at retrofit.Platform$Android$2$1.run(Unknown Source)\n            at java.lang.Thread.run(Thread.java:818)\n```",
+    "edited": {
+      "user": "U061HDV96",
+      "ts": "1434891132.000000"
+    },
+    "ts": "1434891106.000377",
+    "id": "21tr350",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "What could be the issue?",
+    "ts": "1434891176.000379",
+    "id": "21tr351",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "This happens when sending a Retrofit request.",
+    "ts": "1434891186.000380",
+    "id": "21tr352",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Ugh I guess it removes code that it thinks is useless.",
+    "ts": "1434891701.000381",
+    "id": "21tr353",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Yeah you might need to exclude something in the config",
+    "edited": {
+      "user": "U04TK850N",
+      "ts": "1434892932.000000"
+    },
+    "ts": "1434892922.000382",
+    "id": "21tr354",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Found it: `-keep class be.lunchbreakapp.lunchbreak.** { *; }`",
+    "ts": "1434892934.000384",
+    "id": "21tr355",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "eh not really a solution",
+    "ts": "1434892952.000385",
+    "id": "21tr356",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "That excuses everything ",
+    "ts": "1434892958.000386",
+    "id": "21tr357",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "since it just won’t obfuscate it",
+    "ts": "1434892961.000387",
+    "id": "21tr358",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "You can just disable it then :D",
+    "ts": "1434892971.000388",
+    "id": "21tr359",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "That was a joke lol",
+    "ts": "1434892981.000389",
+    "id": "21tr360",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Use the mapping to find out where the exception happens ",
+    "ts": "1434892985.000390",
+    "id": "21tr361",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Lol ",
+    "ts": "1434892987.000391",
+    "id": "21tr362",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Usually you have to exclude Api pojos and such stuff ",
+    "ts": "1434893030.000392",
+    "id": "21tr363",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "aaaah saw people do it a lot of times so didn’t get the joke",
+    "ts": "1434893031.000393",
+    "id": "21tr364",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "exclude pojos? why?",
+    "ts": "1434893050.000394",
+    "id": "21tr365",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Sometimes custom views ",
+    "ts": "1434893053.000395",
+    "id": "21tr366",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "It was an issue in our app ",
+    "ts": "1434893062.000396",
+    "id": "21tr367",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I'll ignore all pojo's then",
+    "ts": "1434893062.000397",
+    "id": "21tr368",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "weird, never had it happen",
+    "ts": "1434893071.000398",
+    "id": "21tr369",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "except when I don’t annotate them for gson",
+    "ts": "1434893081.000399",
+    "id": "21tr370",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Hm ",
+    "ts": "1434893086.000400",
+    "id": "21tr371",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "So I guess `-keep class be.lunchbreakapp.lunchbreak.POJOPACKAGE.** { *; }`",
+    "ts": "1434893087.000401",
+    "id": "21tr372",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Should do it?",
+    "edited": {
+      "user": "U061HDV96",
+      "ts": "1434893092.000000"
+    },
+    "ts": "1434893090.000402",
+    "id": "21tr373",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "ay",
+    "ts": "1434893094.000404",
+    "id": "21tr374",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Use the mapping, Luke ",
+    "ts": "1434893102.000405",
+    "id": "21tr375",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": ":smile:",
+    "ts": "1434893110.000406",
+    "id": "21tr376",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Did you check the stacktrce? :D",
+    "ts": "1434893116.000407",
+    "id": "21tr377",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I did, it's useless",
+    "ts": "1434893145.000408",
+    "id": "21tr378",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "And yes I did retrace it",
+    "ts": "1434893152.000409",
+    "id": "21tr379",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "We also had to exclude stuff that would only be accessed with Class.forName() ",
+    "ts": "1434893155.000410",
+    "id": "21tr380",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "What is a good way to show a Snackbar when starting a new Activity? The Snackbar gets destroyed together with the Activity unlike the Toast.",
+    "ts": "1434897718.000411",
+    "id": "21tr381",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I was thinking about a simple extra String",
+    "ts": "1434897806.000412",
+    "id": "21tr382",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "That would probably do it ",
+    "ts": "1434898069.000413",
+    "id": "21tr383",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Am I the only one that finds the Snackbar not very easy to use?",
+    "ts": "1434898108.000414",
+    "id": "21tr384",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I preferred the Toast, but that looks bad.",
+    "ts": "1434898116.000415",
+    "id": "21tr385",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I have yet to use the snackbar ",
+    "ts": "1434898140.000416",
+    "id": "21tr386",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "You constantly have to give it a view, I get the root view but that's quite redundant and there should be a shorthand.",
+    "ts": "1434898163.000417",
+    "id": "21tr387",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Wonder if you can give it the phonedecorview so it would survive the activity ",
+    "ts": "1434898220.000418",
+    "id": "21tr388",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Don't know, but Snackbar doesn't work well in immersive mode. The buttons are in front of it :confused:",
+    "ts": "1434898259.000419",
+    "id": "21tr389",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": ":/",
+    "ts": "1434898269.000420",
+    "id": "21tr390",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I guess some of the new views suffer from the limitations of not being a framework feature but a support lib ",
+    "ts": "1434898303.000421",
+    "id": "21tr391",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Android development could improve a whole lot when it comes to support libraries and just some must have libs that are missing, I'm looking at you keyboard",
+    "ts": "1434898359.000422",
+    "id": "21tr392",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Yup some stuff is just a pain ",
+    "ts": "1434898417.000423",
+    "id": "21tr393",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Docs could also be much improved with examples and something to keep them up to date",
+    "ts": "1434898455.000424",
+    "id": "21tr394",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Here is a design support library, now use it without any good docs!",
+    "ts": "1434898473.000425",
+    "id": "21tr395",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Pah, docs. Pieces of art don't need documentation. Or did Van Gogh document his work? ",
+    "ts": "1434898608.000426",
+    "id": "21tr396",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "That's my go to excuse when I get told to comment my code ;) ",
+    "ts": "1434898622.000427",
+    "id": "21tr397",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I document some, not all. Like interfaces and stuff if they're not super obvious.",
+    "edited": {
+      "user": "U061HDV96",
+      "ts": "1434898956.000000"
+    },
+    "ts": "1434898954.000428",
+    "id": "21tr398",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "yeah, kinda weird i use the developer blogs more than the android docs",
+    "ts": "1434899806.000430",
+    "id": "21tr399",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "for the material stuff",
+    "ts": "1434899810.000431",
+    "id": "21tr400",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I use the material design guidelines a lot, like a hell of a lot",
+    "ts": "1434900273.000432",
+    "id": "21tr401",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "But materialup for some ideas because the guidelines don't cover it all",
+    "edited": {
+      "user": "U061HDV96",
+      "ts": "1434900295.000000"
+    },
+    "ts": "1434900287.000433",
+    "id": "21tr402",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "oh yeah for the design parts that is pretty good",
+    "ts": "1434900815.000435",
+    "id": "21tr403",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "but implementing the back port stuff",
+    "ts": "1434900822.000436",
+    "id": "21tr404",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "isn’t so straight forward to find",
+    "ts": "1434900831.000437",
+    "id": "21tr405",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "at least for me",
+    "ts": "1434900835.000438",
+    "id": "21tr406",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "<@U061HDV96>: there are special retrofit things you want to add to your proguard file to exclude. It's not your pojo's that's the issue. ",
+    "ts": "1434901896.000439",
+    "id": "21tr407",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U0542GLTE>: Those were already there. The POJO's and API stuff that used Retrofit were the issue. Can't be bothered to look now, let them decompile it :stuck_out_tongue:",
+    "ts": "1434902184.000440",
+    "id": "21tr408",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Lol",
+    "ts": "1434902262.000441",
+    "id": "21tr409",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Btw, install failed update incompatible occurs when I have a release build on my test phone and want to install a debug/release build. This doesn't happen to the users, right and is normal behaviour?",
+    "ts": "1434902439.000442",
+    "id": "21tr410",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "yep, different keys or release/debug with the same package id or even lower gradle version",
+    "ts": "1434902497.000443",
+    "id": "21tr411",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Alright, thanks",
+    "ts": "1434902677.000444",
+    "id": "21tr412",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "If my app crashes but it doesn't say that the app crashed, could this be a crash on Android's side? I haven't had a crash when I had my Nexus connected, but I'm running Android M so this could be true.",
+    "ts": "1434925026.000445",
+    "id": "21tr413",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "uh yeah, I had native crashes once in a while on one phone",
+    "ts": "1434926150.000446",
+    "id": "21tr414",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "It would actually SIGKILL the virtual machine",
+    "ts": "1434926164.000447",
+    "id": "21tr415",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Okay, I was a bit worried",
+    "ts": "1434928153.000448",
+    "id": "21tr416",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

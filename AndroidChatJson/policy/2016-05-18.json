@@ -1,0 +1,53 @@
+[
+  {
+    "user": "U08GFT5V5",
+    "text": "<https://majadhondt.wordpress.com/2012/05/16/googles-9-lines/>",
+    "attachments": [
+      {
+        "service_name": "Maja D&amp;#039;Hondt",
+        "service_url": "http://majadhondt.wordpress.com",
+        "title": "Google’s 9 lines",
+        "title_link": "https://majadhondt.wordpress.com/2012/05/16/googles-9-lines/",
+        "author_name": "Maja D'Hondt",
+        "author_link": "https://majadhondt.wordpress.com/author/majadhondt/",
+        "thumb_url": "https://i1.wp.com/majadhondt.files.wordpress.com/2012/05/literalcopying.jpg?fit=200%2C150",
+        "thumb_width": 199,
+        "thumb_height": 117,
+        "text": "After reading about the&amp;nbsp;Oracle v. Google&amp;nbsp;trial&amp;nbsp;I looked up the famous&amp;nbsp;9 lines of code&amp;nbsp;that Google allegedly stole from Oracle, which implement the rangeCheck method for arrays. Note that arrays and range checking are as common as dirt in programming languages. Any developer would be hard pressed to write a rangeCheck method that is entirely dissimilar from those 9 lines. However, in this case the Android version of this method from Google is identical to the Java implementation from Oracle. Although Google tried very very hard to make sure there are no literal copies from the Java implementation &amp;ndash; they did a cleanroom implementation of Android &amp;ndash; one developer somehow slipped in the rangeCheck implementation &amp;ldquo;as a temporary measure&amp;rdquo;.\nNow where did I hear this before? Every company&amp;nbsp;tries&amp;nbsp;to control its developers&amp;rsquo; actions, but does management really know what goes into the software? The combination of internet, open source code bases and search engines tempt every developer to search for a piece of code that probably exists already and does what he or she has to implement. If a new version of this code is then implemented with the same functionality, there&amp;rsquo;s no harm done. However, it&amp;rsquo;s not functionality that the developer is after, but a ready-made, cut-and-tried,&amp;nbsp;consumable&amp;nbsp;piece of code. Many developers mistakenly think open source code is fair game because it&amp;rsquo;s open and free. And most of the time, they do it &amp;ldquo;as a temporary measure&amp;rdquo;. Another way this happens is when a developer moves companies and copies part of his previous employer&amp;rsquo;s code into the new employer&amp;rsquo;s software. Again, &amp;ldquo;as a temporary measure&amp;rdquo;. This is just something that developers do. When I warn my students about this I see eyes glaze over at best.\nTo make matters worse in the Oracle v. Google case, this same developer, while employed by Google, also contributed these 9 lines as part of a much faster implementation for sorting arrays to OpenJDK, an open implementation of JavaSE, then controlled by Sun (now Oracle).\nAnyway, Google seems to be winning the argument on this one and Oracle will probably not get the pots of money it was expecting. But we&amp;rsquo;re probably not all as smart as Google&amp;hellip;\nBackground\nOracle is suing Google because Android allegedly infringes Oracle&amp;rsquo;s Java patents and copyright. Oracle acquired Sun Microsystems early 2010 and thus Java. Apparently Oracle experts estimated that Google owes Oracle between&amp;nbsp;$1.4 billion and $6 billion in damages if liable, but these amounts are still under debate.\nPatent claims\nGoogle has managed to eliminate most of Oracle&amp;rsquo;s patent claims, mainly by having the patents reexamined for novelty. Simply put, this means that Google has come up with a huge amount of references that date before the patents were first filed and show that what was patented already existed. However, the phase of the trial covering the patents is being held right now, so no definite outcome yet.\nCopyright claims\nFurthermore, the copyright claims are also being dismanteled steadily but surely, although admittedly the main issue is as of yet undecided: the judge still has to declare whether the&amp;nbsp;structure, sequence and organization&amp;nbsp;of 37 API&amp;rsquo;s that Java and Android have in common is copyrightable. It&amp;rsquo;s interesting to note that the EU Court of Justice just ruled that API&amp;rsquo;s are not copyrightable. In addition to this issue, there is some literal copying of code and comments from Java in some Android files. Although the jury couldn&amp;rsquo;t reach a unanimous decision on all questions, they did agree on the particular 9 lines&amp;nbsp;that implement the rangeCheck method, as shown in the figure. Well, no surprise there, since Google admitted these lines were copied. They argue that the amount of lines copied is negligable.\n\nThe 9 lines themselves\nSo let&amp;rsquo;s take a closer look at how these&amp;nbsp;9 lines&amp;nbsp;got there. After a couple of days in court Joshua Bloch was called as a witness by Oracle. Bloch used to work for Sun as a developer on the Java API&amp;rsquo;s. In 2004 he joined Google and in 2008 he started working on Android. However, while working for Google, he still contributed to the OpenJDK, an open implementation of the Java SE platform, controlled by Sun at the time. One of the things he contributed was a much faster implementation for sorting arrays, based on the algorithm TimSort used in Python. Both the old and new algorithm had the rangeCheck method in common, so he just copied it from the old implementation, as &amp;ldquo;a temporary measure&amp;rdquo;. And some way or other this same rangeCheck method ended up in Android.\nArrays are as common as dirt in programming languages, and range checking is inherent to collections, such as arrays, list, dictionaries. It basically checks whether a data element is within a certain range before performing operations with it. For example, you always want to check if y is different from zero before dividing x by y, or if i is between 0 and 11 before retrieving the ith element of a 10-element list. If you don&amp;rsquo;t, or more aptly, if your programming environment doesn&amp;rsquo;t, your software fails.\nAnd here are the famous 9 lines:\nprivate static void rangeCheck(int arrayLen, int fromIndex, int toIndex {\n     if (fromIndex &amp;gt; toIndex)\n          throw new IllegalArgumentException(\"fromIndex(\" +&amp;nbsp;fromIndex +\n               \") &amp;gt; toIndex(\" + toIndex+\")\");\n     if (fromIndex  arrayLen)&amp;nbsp;\n          throw new ArrayIndexOutOfBoundsException(toIndex);\n}",
+        "fallback": "Maja D&amp;#039;Hondt Link: Google&#8217;s 9 lines",
+        "from_url": "https://majadhondt.wordpress.com/2012/05/16/googles-9-lines/",
+        "id": 1
+      }
+    ],
+    "ts": "1463586664.000127",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "18po3009",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

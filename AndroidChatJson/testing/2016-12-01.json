@@ -1,0 +1,267 @@
+[
+  {
+    "user": "U0D7JS821",
+    "text": "Has anyone used Dagger 2.8 with the annotationProcessor instead of the apt plugin?I can get Dagger to create my component but it isn’t generating the test version of the component",
+    "ts": "1480620471.000243",
+    "id": "01te2760",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D7JS821",
+    "text": "Not sure if it’s something I’m doing wrong or due to Android Studio 2.3 canary 2",
+    "ts": "1480620771.000244",
+    "id": "01te2761",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "<@U0D7JS821> Are you using gradle plugin 2.2 or above?",
+    "ts": "1480638461.000245",
+    "id": "01te2762",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U31T1Q1MM",
+    "text": "How do you guys handle UI differences between phone and tablet version of the application in testing?",
+    "ts": "1480646460.000246",
+    "id": "01te2763",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "<@U31T1Q1MM> Depends on how different the UI",
+    "ts": "1480648312.000247",
+    "id": "01te2764",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "Some screen I'll write different test",
+    "ts": "1480648325.000248",
+    "id": "01te2765",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U31T1Q1MM",
+    "text": "I’m following page object model and define objects for each screen. For example this screen has another object representing Toolbar which has icons and stuff. But some of the icons might not be displayed in the Toolbar on different device with different resolution or tablet, they will be placed in overflow menu instead.",
+    "ts": "1480648434.000249",
+    "id": "01te2766",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "I assume you are doing instrumentation test, and you have one app for both phone and tablet, you'll need to check the screen size in test",
+    "ts": "1480649300.000250",
+    "id": "01te2767",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U31T1Q1MM",
+    "text": "That’s right, but I don’t want to have screen size verifications in test itself. So I was wondering if there is a better way to do this.",
+    "ts": "1480649440.000251",
+    "id": "01te2768",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "Hmmm the only thing I can think of is having custom test rule",
+    "ts": "1480649901.000252",
+    "id": "01te2769",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "<@U31T1Q1MM> looks like this one is a good solution for your problem <http://stackoverflow.com/questions/36140935/android-instrumentation-test-for-multiple-screen-sizes-layouts>",
+    "attachments": [
+      {
+        "title": "Android Instrumentation Test for multiple screen sizes / layouts",
+        "title_link": "http://stackoverflow.com/questions/36140935/android-instrumentation-test-for-multiple-screen-sizes-layouts",
+        "text": "I have some screen that are split-screen on large screens, but single screen in small screens, as described here: <http://developer.android.com/training/basics/fragments/fragment-ui.htmlI> am attem...",
+        "fallback": "Android Instrumentation Test for multiple screen sizes / layouts",
+        "thumb_url": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/questions/36140935/android-instrumentation-test-for-multiple-screen-sizes-layouts",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "service_icon": "http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d",
+        "service_name": "stackoverflow.com",
+        "id": 1
+      }
+    ],
+    "ts": "1480658370.000253",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "01te2770",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U31T1Q1MM",
+    "text": "<@U0ESBF4AV> unfortunately this approach will create lots of duplicated tests :confused:",
+    "ts": "1480658900.000255",
+    "id": "01te2771",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "Yes....",
+    "ts": "1480659000.000256",
+    "id": "01te2772",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

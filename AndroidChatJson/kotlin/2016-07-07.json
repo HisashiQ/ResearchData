@@ -1,0 +1,308 @@
+[
+  {
+    "user": "U0K1ALDQE",
+    "text": "```\n{ error -&gt; timber.log.Timber.e(\"init.onError()\"+error?.message) },\n{\n    -&gt;\n       preferences.setDoneIntializing()\n        view?.stopProgress()\n})\n```",
+    "edited": {
+      "user": "U0K1ALDQE",
+      "ts": "1467877115.000000"
+    },
+    "ts": "1467877080.000358",
+    "id": "07ko1946",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I can’t do `() -&gt;` seems weird. is that normal?",
+    "ts": "1467877153.000360",
+    "id": "07ko1947",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Is it worth it switching to RxKotlin btw?",
+    "ts": "1467877164.000361",
+    "id": "07ko1948",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLABD1S",
+    "text": "<@U0K1ALDQE>: Your snippet is incomplete. What's the original issue?",
+    "ts": "1467881852.000362",
+    "id": "07ko1949",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "subscribing to a completable",
+    "ts": "1467881881.000363",
+    "id": "07ko1950",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "sorry :stuck_out_tongue_winking_eye:",
+    "ts": "1467881883.000364",
+    "id": "07ko1951",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "syntax is still flipped around thought it was fixed. It’s onError,onComplete instead of the other way around",
+    "ts": "1467881913.000365",
+    "id": "07ko1952",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLABD1S",
+    "text": "So this works for me \n```\nCompletable.fromAction({ /* do something */ })\n    .subscribe({ \n        error -&gt; error.printStackTrace() \n    }, { \n        toast(\"We are complete!\") \n    })\n```",
+    "edited": {
+      "user": "U1HLABD1S",
+      "ts": "1467882105.000000"
+    },
+    "ts": "1467882091.000366",
+    "id": "07ko1953",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Yeah, that’s better I guess",
+    "ts": "1467882160.000368",
+    "id": "07ko1954",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I had that on my screen a few minutes ago but it seems not really awake yet",
+    "ts": "1467882180.000369",
+    "reactions": [
+      {
+        "name": "coffee",
+        "users": [
+          "U1HLABD1S",
+          "U0K1ALDQE"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "07ko1955",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I was worrying about where the parameter went &gt;&lt; lol",
+    "ts": "1467882199.000370",
+    "id": "07ko1956",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "yeah, I’m going to get some coffee",
+    "ts": "1467882205.000371",
+    "id": "07ko1957",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLABD1S",
+    "text": ":smile:",
+    "ts": "1467882208.000372",
+    "id": "07ko1958",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Thanks <@U1HLABD1S> :taco:",
+    "ts": "1467882212.000373",
+    "id": "07ko1959",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLABD1S",
+    "text": "Me too",
+    "ts": "1467882213.000374",
+    "id": "07ko1960",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLABD1S",
+    "text": "Wehee!",
+    "ts": "1467882220.000375",
+    "id": "07ko1961",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

@@ -1,0 +1,577 @@
+[
+  {
+    "user": "U08GFT5V5",
+    "text": "So I’m writing a blog post on kotlin reflection tests",
+    "ts": "1466601261.000242",
+    "id": "22ko1860",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "What kind of stats would you like to see in it?",
+    "ts": "1466601275.000243",
+    "id": "22ko1861",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "you mean tests that use reflection on Kotlin?",
+    "ts": "1466602094.000244",
+    "id": "22ko1862",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "yeah benchmarks",
+    "ts": "1466602161.000245",
+    "id": "22ko1863",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "well I guess you already have this in mind but interesting would be access time compared to java",
+    "ts": "1466602517.000246",
+    "id": "22ko1864",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Yeah i’m working on that",
+    "ts": "1466602532.000247",
+    "id": "22ko1865",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "but I need ideas for some good code to test",
+    "ts": "1466602541.000248",
+    "id": "22ko1866",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "wouldn't the simplest code possible be better? A simple private field, private function, private function of inner class etc.",
+    "ts": "1466603216.000249",
+    "id": "22ko1867",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Interesting results so far",
+    "ts": "1466603218.000250",
+    "id": "22ko1868",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "```\nBenchmark                         (size)  Mode  Cnt          Score         Error  Units\nJavaNoReflect.benchmarkMethod        100  avgt  200       8610.419 ±     445.436  ns/op\nJavaNoReflect.benchmarkMethod       1000  avgt  200      86110.967 ±    3362.070  ns/op\nJavaNoReflect.benchmarkMethod    1000000  avgt  200  104357188.489 ± 5515390.468  ns/op\nKotlinNoReflect.benchmarkMethod      100  avgt  200       7832.099 ±     277.667  ns/op\nKotlinNoReflect.benchmarkMethod     1000  avgt  200      91063.490 ±    5376.893  ns/op\nKotlinNoReflect.benchmarkMethod  1000000  avgt  200  107550769.130 ± 4866672.923  ns/op\nKotlinReflect.benchmarkMethod        100  avgt  200       7471.468 ±     147.942  ns/op\nKotlinReflect.benchmarkMethod       1000  avgt  200      83395.755 ±    1977.327  ns/op\nKotlinReflect.benchmarkMethod    1000000  avgt  200  108185604.625 ± 5427419.457  ns/op\n```",
+    "edited": {
+      "user": "U08GFT5V5",
+      "ts": "1466603576.000000"
+    },
+    "ts": "1466603226.000251",
+    "id": "22ko1869",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "It’s weird how kotlin manages to be faster than Java",
+    "ts": "1466603391.000254",
+    "id": "22ko1870",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "might be because of the kotlin string interpolation vs the java string concat i used",
+    "ts": "1466603427.000255",
+    "id": "22ko1871",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "but It’s not as bad as one would assume",
+    "ts": "1466603475.000257",
+    "id": "22ko1872",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "But I think I might be going koo koo here but why is the version with reflection faster than the one without reflection?",
+    "ts": "1466603629.000260",
+    "id": "22ko1873",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U09T8SFG8>: what do you make of this?",
+    "ts": "1466603644.000261",
+    "id": "22ko1874",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U08GFT5V5>: hmmm that's weird, maybe it has to do with your machine? Can you check the bytecode?",
+    "ts": "1466604162.000262",
+    "id": "22ko1875",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<https://github.com/nishtahir/kotlin-jmh-benchmarks>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "nishtahir/kotlin-jmh-benchmarks",
+        "title_link": "https://github.com/nishtahir/kotlin-jmh-benchmarks",
+        "text": "Contribute to kotlin-jmh-benchmarks development by creating an account on GitHub.",
+        "fallback": "GitHub: nishtahir/kotlin-jmh-benchmarks",
+        "thumb_url": "https://avatars3.githubusercontent.com/u/2018617?v=3&s=400",
+        "from_url": "https://github.com/nishtahir/kotlin-jmh-benchmarks",
+        "thumb_width": 420,
+        "thumb_height": 420,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1466604175.000263",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "22ko1876",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "here is the code in case you want to contribute",
+    "ts": "1466604185.000265",
+    "id": "22ko1877",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "So the process it seems is the code gets compiled to class",
+    "ts": "1466604348.000266",
+    "id": "22ko1878",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "then compiled to jmh",
+    "ts": "1466604353.000267",
+    "id": "22ko1879",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1E65QLQ0",
+    "text": "those results are impressive, if accurate",
+    "ts": "1466604354.000268",
+    "id": "22ko1880",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "then jmh is run",
+    "ts": "1466604359.000269",
+    "id": "22ko1881",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U1E65QLQ0>: Don’t take my word for it, feel free to contribute",
+    "ts": "1466604382.000270",
+    "id": "22ko1882",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "ok",
+    "ts": "1466604631.000271",
+    "id": "22ko1883",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I think the fact that TestData is a java file might be interfering",
+    "ts": "1466604648.000272",
+    "id": "22ko1884",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I don't see anything else out of the ordinary",
+    "ts": "1466604670.000273",
+    "id": "22ko1885",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U09T8SFG8>: explain your reasoning",
+    "ts": "1466604745.000274",
+    "id": "22ko1886",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "My only reasoning is that perhaps Kotlin's Java interoperability is messing things up",
+    "ts": "1466604786.000275",
+    "id": "22ko1887",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "I see",
+    "ts": "1466604898.000276",
+    "id": "22ko1888",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "I’ll attempt the test using a data class later",
+    "ts": "1466604910.000277",
+    "id": "22ko1889",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

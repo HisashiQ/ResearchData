@@ -1,0 +1,1041 @@
+[
+  {
+    "user": "U0DLPBRB5",
+    "text": "Hi all, could we read a file for an unit test?",
+    "ts": "1452243213.000317",
+    "id": "08te507",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "I tried this: String file = \"assets/image.jpg”;  in = this.getClass().getClassLoader().getResourceAsStream(file);",
+    "ts": "1452243234.000318",
+    "id": "08te508",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "but not success",
+    "ts": "1452243238.000319",
+    "id": "08te509",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "Try to get the full path first `String fullFilePath = this.getResource(file).getPath();` and then try to get the file `this.getClass().getClassLoader().getResourceAsStream(fullFilePath );`",
+    "ts": "1452248286.000320",
+    "id": "08te510",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "<@U09T8SFG8>: My situation is in unit test, so what is “this” in String fullFilePath = this.getResource(file).getPath();?",
+    "edited": {
+      "user": "U0DLPBRB5",
+      "ts": "1452255007.000000"
+    },
+    "ts": "1452254984.000321",
+    "id": "08te511",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "just the class you are in",
+    "ts": "1452255021.000323",
+    "id": "08te512",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U0DLPBRB5>: if you are in a static context (method for example) call `NameOfClass.class.getResource`",
+    "ts": "1452255100.000324",
+    "id": "08te513",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "but if you are in a test method the code above should be copy-pastable",
+    "ts": "1452255137.000325",
+    "id": "08te514",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "But it just a java pojo class",
+    "ts": "1452255176.000326",
+    "id": "08te515",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "so how can it has getResource() function?",
+    "ts": "1452255201.000327",
+    "id": "08te516",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "You are doing unit tests right? It has the getResource, check this out from my code (pure java no Android) <https://github.com/AkiKanellis/SkySpark/blob/master/skyspark/src/test/java/com/github/dkanellis/skyspark/api/test_utils/DatasetFiles.java>",
+    "edited": {
+      "user": "U09T8SFG8",
+      "ts": "1452255252.000000"
+    },
+    "ts": "1452255247.000328",
+    "id": "08te517",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "`String fullFilePath = DatasetFiles.class.getResource(filePath).getPath();`",
+    "ts": "1452255258.000331",
+    "id": "08te518",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "that's what you do in a static context",
+    "ts": "1452255270.000332",
+    "id": "08te519",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "in non-static you replace `DatasetFiles.class` with `this.getClass()`",
+    "ts": "1452255296.000333",
+    "id": "08te520",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "oh I see",
+    "ts": "1452255321.000334",
+    "id": "08te521",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I think I see what you mean, above I meant to do `String fullFilePath = this.getClass().getResource(file).getPath();` not `String fullFilePath = this.getResource(file).getPath();`",
+    "ts": "1452255332.000335",
+    "id": "08te522",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "I got it :wink:",
+    "ts": "1452255335.000336",
+    "id": "08te523",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "Thank you so much <@U09T8SFG8>",
+    "ts": "1452255344.000337",
+    "id": "08te524",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "let me try it.",
+    "ts": "1452255351.000338",
+    "id": "08te525",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "Alright :wink:",
+    "ts": "1452255355.000339",
+    "id": "08te526",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "I have a test.txt in assets folder",
+    "ts": "1452255678.000340",
+    "id": "08te527",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "but this.getClass().getResource(\"assets/test.txt\").getPath(); return a NPE",
+    "ts": "1452255701.000341",
+    "id": "08te528",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "does “assets/test.txt” correct?",
+    "ts": "1452255735.000342",
+    "id": "08te529",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "<@U09T8SFG8>: could you help me please",
+    "ts": "1452255797.000343",
+    "id": "08te530",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I would play a bit with the slashes, it seems to me that it should be \"/assets/test.txt\"",
+    "ts": "1452255845.000344",
+    "id": "08te531",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "actually, which resource folder do you have the data in? The test resource folder or the main app resource folder?",
+    "ts": "1452255885.000345",
+    "id": "08te532",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "I added a slash like you said but it still throws NPE",
+    "ts": "1452255913.000346",
+    "id": "08te533",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "I put assets folder in test directory",
+    "ts": "1452255938.000347",
+    "id": "08te534",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I believe you have the data in the app's resource folder (\"src/main/res/assets\"). For testing you need to have the resources in the test resource folder (\"src/test/res/assets\")",
+    "ts": "1452255989.000348",
+    "id": "08te535",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "like this: <https://www.evernote.com/l/AJ_OpB_7-v1EkZDj9AUW1aXg-dU0Hj2atzU>",
+    "attachments": [
+      {
+        "service_name": "Evernote",
+        "title": "ExampleUnitTest.java - DaggerSpike - [~/git/project/DaggerSpike]",
+        "title_link": "https://www.evernote.com/l/AJ_OpB_7-v1EkZDj9AUW1aXg-dU0Hj2atzU",
+        "fallback": "Evernote: ExampleUnitTest.java - DaggerSpike - [~/git/project/DaggerSpike]",
+        "image_url": "https://www.evernote.com/shard/s159/sh/cea41ffb-fafd-4491-90e3-f40516d5a5e0/f9d5341e3d9ab735/thm/note/cea41ffb-fafd-4491-90e3-f40516d5a5e0",
+        "from_url": "https://www.evernote.com/l/AJ_OpB_7-v1EkZDj9AUW1aXg-dU0Hj2atzU",
+        "image_width": 250,
+        "image_height": 250,
+        "image_bytes": 26588,
+        "id": 1
+      }
+    ],
+    "ts": "1452255990.000349",
+    "id": "08te536",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I am not sure if you can access \"main\" resources from the \"test\" source set",
+    "ts": "1452256015.000351",
+    "id": "08te537",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "you also need to add the test resources folder in gradle",
+    "ts": "1452256077.000352",
+    "id": "08te538",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U09T8SFG8|aki> uploaded a file: <https://androidchat.slack.com/files/aki/F0J12RKTJ/Untitled.groovy|Untitled>",
+    "file": {
+      "id": "F0J12RKTJ",
+      "created": 1452256090,
+      "timestamp": 1452256090,
+      "name": "Untitled.groovy",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "groovy",
+      "pretty_type": "Groovy",
+      "user": "U09T8SFG8",
+      "editable": true,
+      "size": 83,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0J12RKTJ/Untitled.groovy?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0J12RKTJ/download/Untitled.groovy?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/aki/F0J12RKTJ/Untitled.groovy",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0J12RKTJ-8ede80be8a",
+      "edit_link": "https://androidchat.slack.com/files/aki/F0J12RKTJ/Untitled.groovy/edit",
+      "preview": "sourceSets {\n    test {\n        output.resourcesDir = output.classesDir\n    }\n}",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-variable\">sourceSets</span> {</pre></div>\n<div><pre>    <span class=\"cm-variable\">test</span> {</pre></div>\n<div><pre>        <span class=\"cm-variable\">output</span>.<span class=\"cm-property\">resourcesDir</span> <span class=\"cm-operator\">=</span> <span class=\"cm-variable\">output</span>.<span class=\"cm-property\">classesDir</span></pre></div>\n<div><pre>    }</pre></div>\n<div><pre>}</pre></div>\n</div>\n</div>\n",
+      "lines": 5,
+      "lines_more": 0,
+      "preview_is_truncated": null,
+      "channels": [
+        "C0D6DUW8L"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U09T8SFG8",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U09T8SFG8|aki>",
+    "bot_id": null,
+    "ts": "1452256090.000353",
+    "id": "08te539",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "let my tried to add test resources folder in gradle",
+    "ts": "1452256160.000356",
+    "id": "08te540",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "still NPE :disappointed:",
+    "ts": "1452256212.000357",
+    "id": "08te541",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "do you see the link I give u?",
+    "ts": "1452256242.000358",
+    "id": "08te542",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "does my structure correct?",
+    "ts": "1452256253.000359",
+    "id": "08te543",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "Sorry I just saw it, the structure is not correct, you should have a structure like \"test/res/assets/test.txt\"",
+    "ts": "1452256342.000360",
+    "id": "08te544",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "still the same :disappointed:",
+    "ts": "1452256536.000361",
+    "id": "08te545",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "send me a pic with your current structure",
+    "edited": {
+      "user": "U09T8SFG8",
+      "ts": "1452256575.000000"
+    },
+    "ts": "1452256556.000362",
+    "id": "08te546",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "wait me a moment pls",
+    "ts": "1452256571.000363",
+    "id": "08te547",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "here is the link: <https://www.evernote.com/shard/s159/sh/f90b56d1-0087-48df-95c7-64ccd35ce416/b3e473be35836a9f>",
+    "attachments": [
+      {
+        "service_name": "Evernote",
+        "title": "ExampleUnitTest.java - DaggerSpike - [~/git/project/DaggerSpike]",
+        "title_link": "https://www.evernote.com/shard/s159/sh/f90b56d1-0087-48df-95c7-64ccd35ce416/b3e473be35836a9f",
+        "fallback": "Evernote: ExampleUnitTest.java - DaggerSpike - [~/git/project/DaggerSpike]",
+        "image_url": "https://www.evernote.com/shard/s159/sh/f90b56d1-0087-48df-95c7-64ccd35ce416/b3e473be35836a9f/thm/note/f90b56d1-0087-48df-95c7-64ccd35ce416",
+        "from_url": "https://www.evernote.com/shard/s159/sh/f90b56d1-0087-48df-95c7-64ccd35ce416/b3e473be35836a9f",
+        "image_width": 250,
+        "image_height": 250,
+        "image_bytes": 26800,
+        "id": 1
+      }
+    ],
+    "ts": "1452256631.000365",
+    "id": "08te548",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "very weird, I don't know what is going on :stuck_out_tongue:",
+    "ts": "1452256675.000367",
+    "id": "08te549",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "Thank you so much :wink:",
+    "ts": "1452256701.000368",
+    "id": "08te550",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "I’ll try to investigate :disappointed:",
+    "ts": "1452256722.000369",
+    "id": "08te551",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U0DLPBRB5>: I think I see what is going on, I was giving you the pure Java way of doing it. In Android it's a bit different, you need to use the asset manager to access the files <http://stackoverflow.com/questions/3901342/android-accessing-test-application-assets>",
+    "attachments": [
+      {
+        "title": "android - accessing test application assets",
+        "title_link": "http://stackoverflow.com/questions/3901342/android-accessing-test-application-assets",
+        "text": "I've an XML file in the assets directory of my test application. I want to access this file from my suite method of the test class. ie., public static TestSuite suite(){ InputStream stream = //",
+        "fallback": "android - accessing test application assets",
+        "thumb_url": "http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/questions/3901342/android-accessing-test-application-assets",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "id": 1
+      }
+    ],
+    "edited": {
+      "user": "U09T8SFG8",
+      "ts": "1452257257.000000"
+    },
+    "ts": "1452257119.000370",
+    "id": "08te552",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "and put everything in the assets folder",
+    "ts": "1452257137.000372",
+    "id": "08te553",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "<@U09T8SFG8>: You’ve my date bro",
+    "ts": "1452257604.000374",
+    "id": "08te554",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "I finally access to my file",
+    "ts": "1452257616.000375",
+    "id": "08te555",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": ":heart:",
+    "ts": "1452257622.000376",
+    "id": "08te556",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "cool :wink:",
+    "ts": "1452257632.000377",
+    "id": "08te557",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D7NSABD",
+    "subtype": "channel_join",
+    "text": "<@U0D7NSABD|raktale> has joined the channel",
+    "ts": "1452281310.000378",
+    "id": "08te558",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

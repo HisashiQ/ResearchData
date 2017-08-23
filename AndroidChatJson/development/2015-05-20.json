@@ -1,0 +1,3219 @@
+[
+  {
+    "user": "U04UDN6BY",
+    "subtype": "channel_join",
+    "text": "<@U04UDN6BY|madhurtewani> has joined the channel",
+    "ts": "1432105965.000142",
+    "id": "20de141",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UDV7JJ",
+    "subtype": "channel_join",
+    "text": "<@U04UDV7JJ|minwoo> has joined the channel",
+    "ts": "1432107250.000143",
+    "id": "20de142",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04V2A679",
+    "subtype": "channel_join",
+    "text": "<@U04V2A679|hsiangmin> has joined the channel",
+    "ts": "1432109623.000144",
+    "id": "20de143",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "So <@U04TK850N> just to wrap things up and to understand it; a ContentProvider communicates with the DB. The Adapters fetch data from the ContentProvider and in my activities I call to a Adapter to retrieve data?",
+    "ts": "1432109885.000145",
+    "id": "20de144",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Basically. You just connect the adapter to to the cursor returned by your content provider",
+    "ts": "1432109993.000146",
+    "id": "20de145",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "The ContentProvider encapsulates the CRUD operations into a defined interface you talk to",
+    "ts": "1432110028.000147",
+    "id": "20de146",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "Other thing I dont really understand the fact of returning a Cursor object from a Adapter. I have a 'getAll' method in my CompanyAdapter which return data from the ContentProvider as a Cursor object. So I can add the Cursor to the ListView. Im really used to returning data in Models..",
+    "ts": "1432110033.000148",
+    "id": "20de147",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "Where would the logic be to insert retriever data into a Model?",
+    "ts": "1432110072.000149",
+    "id": "20de148",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "You can do the same. If you e.g. return an ArrayList&lt;MyModel&gt; you can e.g. use an ArrayAdapter :wink:",
+    "ts": "1432110088.000150",
+    "id": "20de149",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "You can just write some helper methods for that. Query the provider, iterate over the cursor, return an array of models, use that to fill the listview",
+    "ts": "1432110238.000151",
+    "id": "20de150",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Just make sure you do that stuff async since DB operations might take a while and block your UI thread depending on the complexity if you do it there",
+    "ts": "1432110273.000152",
+    "id": "20de151",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "With LoaderManager and its LoaderCallbacks you get that for free",
+    "ts": "1432110290.000153",
+    "id": "20de152",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "In our app I use both, usually the cursor since I can freely configure my projections and selections on demand, but for retrieving a single object, I have helper methods to build it. Which runs in an AsyncTask though as it might take a while",
+    "ts": "1432110374.000154",
+    "id": "20de153",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "Ooh okay",
+    "ts": "1432110435.000155",
+    "id": "20de154",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UEGMR4",
+    "subtype": "channel_join",
+    "text": "<@U04UEGMR4|sammybuoy> has joined the channel",
+    "ts": "1432110465.000156",
+    "id": "20de155",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "Great! Thx for clearing up",
+    "ts": "1432110502.000157",
+    "id": "20de156",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "So my Adapter hs tonextend asyntask?",
+    "ts": "1432110512.000158",
+    "id": "20de157",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "No, your adapter extends one of the suitable adapter classes",
+    "ts": "1432110539.000159",
+    "id": "20de158",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "The adapter runs on the UI thread since it fills the UI :smile:",
+    "ts": "1432110557.000160",
+    "id": "20de159",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UEGMR4",
+    "text": "I need help in writing the unit test case. I want to unit test the flow where a activity loads a fragment which makes a network call and updates the UI. I have created a restclient using a retrofit.",
+    "ts": "1432110566.000161",
+    "id": "20de160",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I'm not an expert on UnitTests, sorry :confused:",
+    "ts": "1432110595.000162",
+    "id": "20de161",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UEGMR4",
+    "text": "Ok.. thanks",
+    "ts": "1432110625.000163",
+    "id": "20de162",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "So its a Adapter extending an AsyncAdapter?",
+    "ts": "1432110770.000164",
+    "id": "20de163",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "There is no AsyncAdapter. There is e.g. SimpleCursorAdapter if you go with the cursor approach, or ArrayAdapter if you go with the model aproach",
+    "ts": "1432110877.000165",
+    "id": "20de164",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "The already get the data from you",
+    "edited": {
+      "user": "U04TK850N",
+      "ts": "1432110923.000000"
+    },
+    "ts": "1432110893.000166",
+    "id": "20de165",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Lets go with the cursor example. You let your Fragment implement the LoaderManager.LoaderCallback interface. You at some point start the query to your ContentProvider. Then you'll get a callback once your data is ready, that will give you a Cursor with your data. Then you tell the Adapter to use this cursor and it will build the Views or tell you to build them in its callbacks",
+    "ts": "1432111030.000168",
+    "id": "20de166",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "And the is for the ArrayAdapter?",
+    "ts": "1432111073.000169",
+    "id": "20de167",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Give this a read, it should explain that pretty well: <https://github.com/codepath/android_guides/wiki/Using-an-ArrayAdapter-with-ListView>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "codepath/android_guides",
+        "title_link": "https://github.com/codepath/android_guides/wiki/Using-an-ArrayAdapter-with-ListView",
+        "text": "android_guides - Extensive Open-Source Guides for Android Developers",
+        "fallback": "GitHub: codepath/android_guides",
+        "thumb_url": "https://avatars3.githubusercontent.com/u/3710273?v=3&s=400",
+        "from_url": "https://github.com/codepath/android_guides/wiki/Using-an-ArrayAdapter-with-ListView",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1432111216.000170",
+    "id": "20de168",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Only difference is, that you get your data from your ContentProvider, not from JSON. So you would at one point query your provider, build your models from it, fill the adapter and let it build the listview",
+    "ts": "1432111275.000172",
+    "id": "20de169",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "Okay thx",
+    "ts": "1432111889.000173",
+    "id": "20de170",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "Will take a look at it!",
+    "ts": "1432111899.000174",
+    "id": "20de171",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UF3DMC",
+    "subtype": "channel_join",
+    "text": "<@U04UF3DMC|ewnd9> has joined the channel",
+    "ts": "1432112811.000175",
+    "id": "20de172",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UFA3SU",
+    "subtype": "channel_join",
+    "text": "<@U04UFA3SU|lgvalle> has joined the channel",
+    "ts": "1432113813.000176",
+    "id": "20de173",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UFA3SU",
+    "text": "hi there",
+    "ts": "1432113821.000177",
+    "id": "20de174",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04V44RL9",
+    "subtype": "channel_join",
+    "text": "<@U04V44RL9|bob> has joined the channel",
+    "ts": "1432118227.000178",
+    "id": "20de175",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U18ANZ",
+    "text": "Hi. i have a pojo with some optional fields , what is the best method to handle this?",
+    "ts": "1432120207.000179",
+    "id": "20de176",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "I just read the article you provided me <@U04TK850N>. Great explanation, I think I’ll just go with the ArrayAdapters for this basic app :wink:",
+    "ts": "1432122405.000180",
+    "id": "20de177",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "What are the best practices for retrieving the ArrayLists with Models? I’m used to “Repositories” not sure if that’s the same in the Android world :stuck_out_tongue_winking_eye:",
+    "ts": "1432122457.000181",
+    "id": "20de178",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "So I would have a `CompanyRepository` which contains `all()`, `find()` methods etc to get data from the ContentProvider",
+    "ts": "1432122481.000182",
+    "id": "20de179",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Well querying the provider will give you a Cursor anyway, so you iterate over it and create a model object in each iteration, adding that to your list and returning it when you're done",
+    "ts": "1432122642.000183",
+    "id": "20de180",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "yup, but you don’t do that in the Activity itself right?",
+    "ts": "1432122682.000184",
+    "id": "20de181",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "So what would that class be called when the logic is from creating the models from a Cursor object",
+    "ts": "1432122715.000185",
+    "id": "20de182",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I usually do it like this:\n```\nHCContentProvider: The ContentProvider itself with the CRUD operations\nHCContentProviderWrapper: Helper to translate Cursors into Models and Models into ContentProviderOperations.\nHCDatabase: Handles the actual SQLite access, opening/closing the database, upgrade, creation...\nHCDBContract: The contract I share with the clients. Has Authority, URIs, Column definitions...\nHCDBSchema: This holds the table declarations in the form of a map, mapping column names to data types and a method to generate CREATE TABLE statements from these definitions. Makes it more reliable and easier to extend.\n```",
+    "edited": {
+      "user": "U04TK850N",
+      "ts": "1432123086.000000"
+    },
+    "ts": "1432122859.000186",
+    "id": "20de183",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "oops",
+    "ts": "1432122861.000187",
+    "id": "20de184",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "There you go :smile:",
+    "ts": "1432123090.000189",
+    "id": "20de185",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "HC... is just a prefix I used for the last project",
+    "ts": "1432123098.000190",
+    "id": "20de186",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "The nice thing is, that pattern and the sources are easily reusable. One could also write a simple generator for this",
+    "ts": "1432123220.000191",
+    "id": "20de187",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "Okay and what do you mean with the ‘clients’ in the `HCDBContract`?",
+    "ts": "1432123228.000192",
+    "id": "20de188",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "So for my example, I got two apps which are connected to the same ContentProvider",
+    "ts": "1432123245.000193",
+    "id": "20de189",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "There is one already tho: <https://github.com/BoD/android-contentprovider-generator>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "BoD/android-contentprovider-generator",
+        "title_link": "https://github.com/BoD/android-contentprovider-generator",
+        "text": "android-contentprovider-generator - A small tool to generate an Android ContentProvider.",
+        "fallback": "GitHub: BoD/android-contentprovider-generator",
+        "thumb_url": "https://avatars3.githubusercontent.com/u/372852?v=3&s=400",
+        "from_url": "https://github.com/BoD/android-contentprovider-generator",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1432123249.000194",
+    "id": "20de190",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "I would have the Contract in both of the apps  or something?",
+    "ts": "1432123263.000196",
+    "id": "20de191",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Client would be anyone wanting to access the ContentProvider",
+    "ts": "1432123273.000197",
+    "id": "20de192",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "yep",
+    "ts": "1432123276.000198",
+    "id": "20de193",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "Okay",
+    "ts": "1432123285.000199",
+    "id": "20de194",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Contract classes are standard all around in Android, see: <http://developer.android.com/reference/android/provider/ContactsContract.html>",
+    "ts": "1432123315.000200",
+    "id": "20de195",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "There is one for calendar too",
+    "ts": "1432123322.000201",
+    "id": "20de196",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "Great",
+    "ts": "1432123399.000202",
+    "id": "20de197",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "That’s nice, thanks",
+    "ts": "1432123425.000203",
+    "id": "20de198",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I might be a bit over engineering for a school assignment, but I guess it's good to learn this topic all around from the beginning :smile:",
+    "ts": "1432123447.000204",
+    "id": "20de199",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "You might want to tailor to your needs tho :wink:",
+    "ts": "1432123458.000205",
+    "id": "20de200",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04V02BHM",
+    "subtype": "channel_join",
+    "text": "<@U04V02BHM|rakeeb10> has joined the channel",
+    "ts": "1432123460.000206",
+    "id": "20de201",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "Yup :simple_smile:",
+    "ts": "1432123461.000207",
+    "id": "20de202",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "I code really clean",
+    "ts": "1432123473.000208",
+    "id": "20de203",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "I hate messy classes :stuck_out_tongue:",
+    "ts": "1432123494.000209",
+    "id": "20de204",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "So thats why I’m curious about all the options and the best practices",
+    "ts": "1432123507.000210",
+    "id": "20de205",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "Currently really noob ;D",
+    "ts": "1432123511.000211",
+    "id": "20de206",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Not saying I'm doing best practice, but that is what has worked nicely for me so far",
+    "ts": "1432123530.000212",
+    "id": "20de207",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UHAUS2",
+    "subtype": "channel_join",
+    "text": "<@U04UHAUS2|jmfayard> has joined the channel",
+    "ts": "1432123536.000213",
+    "id": "20de208",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UHAUS2",
+    "text": "Hello, I'm new here, I am an android enthusiast from Berlin, Germany",
+    "ts": "1432123695.000214",
+    "id": "20de209",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "o/",
+    "ts": "1432123709.000215",
+    "id": "20de210",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UHAUS2",
+    "text": "For starting, I thought I will share with you those two  cool podcasts with Jake Wharton I have listened recently.  Really worth the download :simple_smile:\n<http://fragmentedpodcast.com/episodes/6/>\n<http://fragmentedpodcast.com/episodes/7/>",
+    "ts": "1432123826.000216",
+    "id": "20de211",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "&gt;Fragmented\nI see what they did there :smile:",
+    "ts": "1432123888.000217",
+    "id": "20de212",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UHAUS2",
+    "text": "there are some really cool insights there",
+    "ts": "1432124021.000218",
+    "id": "20de213",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "<@U04TK850N>: one more thing, in the contract u define the table column names and indexes etc?",
+    "ts": "1432124081.000219",
+    "id": "20de214",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UHAUS2",
+    "text": "my favorite being this trick from jake on how to contribute to an open source project : create a pull request adding to the test suite a failing test demonstrating what you want to achieve",
+    "ts": "1432124084.000220",
+    "id": "20de215",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "so `static final int INDEX_NAME = 1` and `static final TABLE_NAME = ‘name’` or so",
+    "ts": "1432124145.000221",
+    "id": "20de216",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "<@U04PMQZ9Y>: I'll PM you a contract class I have recently written, should give you an idea",
+    "ts": "1432124549.000222",
+    "id": "20de217",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "sent",
+    "ts": "1432124682.000223",
+    "id": "20de218",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04V5KGMR",
+    "subtype": "channel_join",
+    "text": "<@U04V5KGMR|mryogi> has joined the channel",
+    "ts": "1432125577.000224",
+    "id": "20de219",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04V66ARP",
+    "subtype": "channel_join",
+    "text": "<@U04V66ARP|uguratar> has joined the channel",
+    "ts": "1432129310.000225",
+    "id": "20de220",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UKK7VA",
+    "subtype": "channel_join",
+    "text": "<@U04UKK7VA|danillosantos> has joined the channel",
+    "ts": "1432132080.000226",
+    "id": "20de221",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5H1MR",
+    "text": "Anyone here who uses Eclipse for Android development?",
+    "ts": "1432133298.000227",
+    "id": "20de222",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04ULCMEG",
+    "subtype": "channel_join",
+    "text": "<@U04ULCMEG|buck> has joined the channel",
+    "ts": "1432134728.000228",
+    "id": "20de223",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UEGMR4",
+    "text": "Anyone here who have experience of Unit Testing ?",
+    "ts": "1432138723.000229",
+    "id": "20de224",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U01U4H",
+    "text": "I have some experience",
+    "ts": "1432140314.000230",
+    "id": "20de225",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UZEJRB",
+    "text": "Me too, but, it's really a messy on Android :disappointed:",
+    "ts": "1432140880.000231",
+    "id": "20de226",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04VA47NB",
+    "subtype": "channel_join",
+    "text": "<@U04VA47NB|ariana> has joined the channel",
+    "ts": "1432140948.000232",
+    "id": "20de227",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UNHZEG",
+    "subtype": "channel_join",
+    "text": "<@U04UNHZEG|milas> has joined the channel",
+    "ts": "1432142361.000233",
+    "id": "20de228",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "Hi guys, what is the preffered way to send data to another Activity",
+    "ts": "1432142600.000234",
+    "id": "20de229",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "So I’m on Activity A and I click a button  to go to Acitivity B",
+    "ts": "1432142621.000235",
+    "id": "20de230",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Depends how much, but Intent extras should be good",
+    "ts": "1432142631.000236",
+    "id": "20de231",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "I’ve seen something about the `putExtra` is this common?",
+    "ts": "1432142632.000237",
+    "id": "20de232",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UEGMR4",
+    "text": "Intent .. you can pass data in bunlde",
+    "ts": "1432142634.000238",
+    "id": "20de233",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UEGMR4",
+    "text": "using bundle*",
+    "ts": "1432142647.000239",
+    "id": "20de234",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "Okay then I’ll just use that",
+    "ts": "1432142647.000240",
+    "id": "20de235",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04VA47NB",
+    "text": "Does anyone know a good way to change the color of the navigation drawer toggle? I’ve tried adding a `style` for `DrawerArrowToggle`, but that didn’t work. And I can’t use `colorControlNormal`, since my app’s min API is 15",
+    "ts": "1432143693.000241",
+    "id": "20de236",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "Hi guys I’m using `Multiline Text` component but the text will automatically start in the vertical center. Anyway I can make it just start on the first line?",
+    "ts": "1432144358.000242",
+    "id": "20de237",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TU51RS",
+    "text": "<@U04PMQZ9Y> have you tried <http://stackoverflow.com/questions/10503668/multiline-edittext-in-android-with-the-cursor-starting-on-top> ?",
+    "edited": {
+      "user": "U04TU51RS",
+      "ts": "1432144796.000000"
+    },
+    "ts": "1432144791.000243",
+    "id": "20de238",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TU51RS",
+    "text": "I think it would be a good idea in this channel to include in questions any relevant links you've found by googling to make this process easier. for example my response was just the first link when googling \"android multiline text start at top\"",
+    "ts": "1432144859.000246",
+    "id": "20de239",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UEGMR4",
+    "text": ":thumbsup: +1",
+    "ts": "1432144912.000247",
+    "id": "20de240",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UEGMR4",
+    "text": "<@U04TU51RS>:",
+    "ts": "1432144918.000248",
+    "id": "20de241",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04THD4LG",
+    "text": "<@U04TU51RS>: agreed",
+    "ts": "1432145163.000249",
+    "id": "20de242",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "If u know where to Google on :stuck_out_tongue:",
+    "ts": "1432145775.000250",
+    "id": "20de243",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TU51RS",
+    "text": "Hmm not totally sure how to understand your response, sorry ha. But if it's just what to Google for, I personally find the simple \"android &lt;insert topic&gt; &lt;insert problem&gt;\" approach gets me the right answer 99% of the time",
+    "ts": "1432146903.000251",
+    "id": "20de244",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UQ2BD8",
+    "subtype": "channel_join",
+    "text": "<@U04UQ2BD8|mholtzer> has joined the channel",
+    "ts": "1432147532.000252",
+    "id": "20de245",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "\"get data from contentprovider android” doesn’t give me something good",
+    "ts": "1432148578.000253",
+    "id": "20de246",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "most things do have ContentProviders in the same app",
+    "ts": "1432148768.000254",
+    "id": "20de247",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "So how would I communicate with a external ContentProvider",
+    "ts": "1432148789.000255",
+    "id": "20de248",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UVF995",
+    "text": "basically the same way, getContentResolver().query, just using an URI for a remote contentprovider rather than your own",
+    "ts": "1432151107.000256",
+    "id": "20de249",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "I got it yeah ;D",
+    "ts": "1432151921.000257",
+    "id": "20de250",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "Still got some struggles with it",
+    "ts": "1432152110.000258",
+    "id": "20de251",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "It returns a NULL value",
+    "ts": "1432152117.000259",
+    "id": "20de252",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UVF995",
+    "text": "query returns null instead of a valid cursor, or calling something on the cursor returns null?",
+    "ts": "1432152152.000260",
+    "id": "20de253",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UVF995",
+    "text": "null returned from query probably means your uri is incorrect (or maybe you don’t have permission but i think that throws a securityexception)",
+    "ts": "1432152187.000261",
+    "id": "20de254",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "My ProvierClient returns NULL",
+    "ts": "1432152210.000262",
+    "id": "20de255",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "```ContentProviderClient cProvider = context.getContentResolver().acquireContentProviderClient(DBContract.Company.CONTENT_URI);```",
+    "ts": "1432152215.000263",
+    "id": "20de256",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "The Provider is on another project",
+    "ts": "1432152233.000264",
+    "id": "20de257",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UVF995",
+    "text": "oh i’ve never used ContentProviderClient, i just use query",
+    "ts": "1432152267.000265",
+    "id": "20de258",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UVF995",
+    "text": "oh content providers might not be exported by default",
+    "ts": "1432152567.000266",
+    "id": "20de259",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UVF995",
+    "text": "in your app that includes the provider make sure you have             android:exported=“true” in the &lt;provider part of the manifest",
+    "ts": "1432152592.000267",
+    "id": "20de260",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "yup I got that ;(",
+    "ts": "1432152739.000268",
+    "id": "20de261",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "```&lt;provider\n                android:name=\"com.example.liam.database.DataProvider\"\n                android:authorities=\"com.example.liam.database.DataProvider\"\n                android:readPermission=\"android.permission.permRead\"\n                android:writePermission=\"android.permission.permWrite\"\n                android:exported=\"true\"&gt;\n        &lt;/provider&gt;```",
+    "ts": "1432152744.000269",
+    "id": "20de262",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "This are the settings in the application with the provider",
+    "ts": "1432152754.000270",
+    "id": "20de263",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "Does the location on the system make a difference?",
+    "ts": "1432152766.000271",
+    "id": "20de264",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UVF995",
+    "text": "that looks fine. permissions can be annoying for non-system apps, it’s install order dependent. but i think you get a SecurityException if that’s the issue (and the fix is uninstall both apps and then install the provider that declares the permission first, and the app that requests it second)",
+    "ts": "1432152856.000272",
+    "id": "20de265",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "wel it’s a local",
+    "ts": "1432152892.000273",
+    "id": "20de266",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PMQZ9Y",
+    "text": "wait, maybe I have to run the app with the ContentProvider first…?",
+    "ts": "1432152906.000274",
+    "id": "20de267",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04URQSUW",
+    "subtype": "channel_join",
+    "text": "<@U04URQSUW|superchoob> has joined the channel",
+    "ts": "1432153842.000275",
+    "id": "20de268",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0501UM8F",
+    "subtype": "channel_join",
+    "text": "<@U0501UM8F|ex3ndr> has joined the channel",
+    "ts": "1432167211.000276",
+    "id": "20de269",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0501UM8F",
+    "text": "Hi, guys!",
+    "ts": "1432168125.000277",
+    "id": "20de270",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04PLNDN9",
+    "text": "Welcome <@U0501UM8F>!",
+    "ts": "1432169056.000278",
+    "id": "20de271",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04V25VKT",
+    "subtype": "channel_join",
+    "text": "<@U04V25VKT|dhruvsahgal> has joined the channel",
+    "ts": "1432180068.000279",
+    "id": "20de272",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04V25VKT",
+    "text": "Hi All, Quick question. I’m not a developer but I manage some and build enterprise apps. What’s the best way to test your app on real devices? I find that emulators don’t necessarily reflect the real devices.",
+    "ts": "1432180158.000280",
+    "id": "20de273",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "<@U04V25VKT>: we have test teams with actual devices, lots of different versions and other characteristics like screen size. But we're a big company too...",
+    "ts": "1432181164.000281",
+    "id": "20de274",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04V25VKT",
+    "text": "<@U04TK850N>: thanks for the response. But what if we’re smaller and can’t afford that… :confused: is there any real solution out there? I’m also based in Asia where there are tons of local “flavours” and !",
+    "ts": "1432181238.000282",
+    "id": "20de275",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04V25VKT",
+    "text": "*manufactures!",
+    "ts": "1432181251.000283",
+    "id": "20de276",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "There are some services who offer remote device testing. But you have to script the actual testcases so they can run automatically",
+    "ts": "1432181342.000284",
+    "id": "20de277",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Sony still has their own remote test lab: <https://remotedevicelab.sonymobile.com/>",
+    "ts": "1432181440.000285",
+    "id": "20de278",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "See maybe <https://appthwack.com/devicelab>",
+    "attachments": [
+      {
+        "text": "On-demand, automated testing service for Android, iOS, and responsive web apps on real devices.",
+        "fallback": "On-demand, automated testing service for Android, iOS, and responsive web apps on real devices.",
+        "from_url": "https://appthwack.com/devicelab",
+        "id": 1
+      }
+    ],
+    "ts": "1432181489.000286",
+    "id": "20de279",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "But I have no experience with them ",
+    "ts": "1432181530.000288",
+    "id": "20de280",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U18ANZ",
+    "text": "Hey I created the ActionBar using this :-",
+    "ts": "1432183044.000289",
+    "id": "20de281",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U18ANZ",
+    "text": "getSupportActionBar().setDisplayOptions(android.support.v7.app.ActionBar.DISPLAY_SHOW_CUSTOM);\n        getSupportActionBar().setCustomView(R.layout.action_bar_custom);",
+    "ts": "1432183045.000290",
+    "id": "20de282",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U18ANZ",
+    "text": "this provides me what i need ,but i also need a back button on this.",
+    "ts": "1432183074.000291",
+    "id": "20de283",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Does your custom view have to fill the whole action bar?",
+    "ts": "1432183201.000292",
+    "id": "20de284",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U18ANZ",
+    "text": "now",
+    "ts": "1432183208.000293",
+    "id": "20de285",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U18ANZ",
+    "text": "NO",
+    "ts": "1432183208.000294",
+    "id": "20de286",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Then don't let your layout fill it and you'll get the default back button",
+    "ts": "1432183232.000295",
+    "id": "20de287",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U18ANZ",
+    "text": "&lt;?xml version=\"1.0\" encoding=\"utf-8\"?&gt;\n&lt;LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"wrap_content\"\n    android:layout_gravity=\"center\"\n    android:orientation=\"vertical\"&gt;\n\n&lt;TextView\n    android:id=\"@+id/ActionBarTitle\"\n    android:layout_width=\"wrap_content\"\n    android:layout_height=\"wrap_content\"\n    android:layout_gravity=\"center\"\n    android:text=\"PAGE DETAILS\"\n    android:textColor=\"#939393\"\n    android:textSize=\"16sp\" /&gt;\n&lt;/LinearLayout&gt;",
+    "ts": "1432183259.000296",
+    "id": "20de288",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U18ANZ",
+    "text": "this is what i am inflating",
+    "ts": "1432183266.000297",
+    "id": "20de289",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I guess you just want a centered title?",
+    "ts": "1432183284.000298",
+    "id": "20de290",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U18ANZ",
+    "text": "yes",
+    "ts": "1432183287.000299",
+    "id": "20de291",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Then drop the linear layout and see what's gonna happen",
+    "ts": "1432183314.000300",
+    "id": "20de292",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Keep just the wrap_content textview",
+    "ts": "1432183333.000301",
+    "id": "20de293",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "You might want to consider switching to Toolbar instead, where you can put such a view directly into the Toolbar XML",
+    "ts": "1432183379.000302",
+    "id": "20de294",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U18ANZ",
+    "text": "is there any Doc which i can refer",
+    "ts": "1432183417.000303",
+    "id": "20de295",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U18ANZ",
+    "text": "?",
+    "ts": "1432183418.000304",
+    "id": "20de296",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U18ANZ",
+    "text": "i also find this solution bit hackish.",
+    "ts": "1432183430.000305",
+    "id": "20de297",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I don't think there's much on it, I used the same technique recently and it works so far (the custom view)",
+    "ts": "1432183476.000306",
+    "id": "20de298",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U18ANZ",
+    "text": "cool.",
+    "ts": "1432183506.000307",
+    "id": "20de299",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "The actually hackish way is fiddling with the original title view, which I also saw suggested on SO or something ",
+    "ts": "1432183563.000308",
+    "id": "20de300",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U18ANZ",
+    "text": "I dropped the Linearlayout",
+    "ts": "1432183579.000309",
+    "id": "20de301",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U18ANZ",
+    "text": "but same",
+    "ts": "1432183586.000310",
+    "id": "20de302",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "If you can wait an hour I'll be at work with my code at hand ",
+    "ts": "1432183620.000311",
+    "id": "20de303",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Might need some more flags on it ",
+    "ts": "1432183631.000312",
+    "id": "20de304",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U18ANZ",
+    "text": "sure . np . Thanks a lot.",
+    "ts": "1432183635.000313",
+    "id": "20de305",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "hm, I actually went with an even different approach, which is probably a bit tacky too",
+    "ts": "1432189566.000314",
+    "id": "20de306",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U04TK850N|langerhans> uploaded a file: <https://androidchat.slack.com/files/langerhans/F04UYM1MA/Cenetred_ActionBar_title.java|Cenetred ActionBar title>",
+    "file": {
+      "id": "F04UYM1MA",
+      "created": 1432189593,
+      "timestamp": 1432189593,
+      "name": "Cenetred_ActionBar_title.java",
+      "title": "Cenetred ActionBar title",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U04TK850N",
+      "editable": true,
+      "size": 1043,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F04UYM1MA/Cenetred_ActionBar_title.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F04UYM1MA/download/Cenetred_ActionBar_title.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/langerhans/F04UYM1MA/Cenetred_ActionBar_title.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F04UYM1MA-a98313812e",
+      "edit_link": "https://androidchat.slack.com/files/langerhans/F04UYM1MA/Cenetred_ActionBar_title.java/edit",
+      "preview": "public void setupActionbar() {\n\tif (getSupportActionBar() != null) {\n\t\tActionBar actionBar = getSupportActionBar();\n\t\tactionBar.setDisplayShowCustomEnabled(true);\n\t\tactionBar.setDisplayShowHomeEnabled(true);\n\t\tactionBar.setDisplayHomeAsUpEnabled(true);\n\t\tactionBar.setDisplayShowTitleEnabled(false);\n\n\t\tToolbar toolbar = (Toolbar) findViewById(R.id.main_toolbar);\n\t\tView v = LayoutInflater.from(this).inflate(R.layout.actionbar_centered, toolbar, false);",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-keyword\">public</span> <span class=\"cm-keyword\">void</span> <span class=\"cm-variable\">setupActionbar</span>() {</pre></div>\n<div><pre>\t<span class=\"cm-keyword\">if</span> (<span class=\"cm-variable\">getSupportActionBar</span>() <span class=\"cm-operator\">!=</span> <span class=\"cm-atom\">null</span>) {</pre></div>\n<div><pre>\t\t<span class=\"cm-variable\">ActionBar</span> <span class=\"cm-variable\">actionBar</span> <span class=\"cm-operator\">=</span> <span class=\"cm-variable\">getSupportActionBar</span>();</pre></div>\n<div><pre>\t\t<span class=\"cm-variable\">actionBar</span>.<span class=\"cm-variable\">setDisplayShowCustomEnabled</span>(<span class=\"cm-atom\">true</span>);</pre></div>\n<div><pre>\t\t<span class=\"cm-variable\">actionBar</span>.<span class=\"cm-variable\">setDisplayShowHomeEnabled</span>(<span class=\"cm-atom\">true</span>);</pre></div>\n<div><pre>\t\t<span class=\"cm-variable\">actionBar</span>.<span class=\"cm-variable\">setDisplayHomeAsUpEnabled</span>(<span class=\"cm-atom\">true</span>);</pre></div>\n<div><pre>\t\t<span class=\"cm-variable\">actionBar</span>.<span class=\"cm-variable\">setDisplayShowTitleEnabled</span>(<span class=\"cm-atom\">false</span>);</pre></div>\n<div><pre>&#8203;</pre></div>\n<div><pre>\t\t<span class=\"cm-variable\">Toolbar</span> <span class=\"cm-variable\">toolbar</span> <span class=\"cm-operator\">=</span> (<span class=\"cm-variable\">Toolbar</span>) <span class=\"cm-variable\">findViewById</span>(<span class=\"cm-variable\">R</span>.<span class=\"cm-variable\">id</span>.<span class=\"cm-variable\">main_toolbar</span>);</pre></div>\n<div><pre>\t\t<span class=\"cm-variable\">View</span> <span class=\"cm-variable\">v</span> <span class=\"cm-operator\">=</span> <span class=\"cm-variable\">LayoutInflater</span>.<span class=\"cm-variable\">from</span>(<span class=\"cm-keyword\">this</span>).<span class=\"cm-variable\">inflate</span>(<span class=\"cm-variable\">R</span>.<span class=\"cm-variable\">layout</span>.<span class=\"cm-variable\">actionbar_centered</span>, <span class=\"cm-variable\">toolbar</span>, <span class=\"cm-atom\">false</span>);</pre></div>\n</div>\n</div>\n",
+      "lines": 10,
+      "lines_more": 12,
+      "preview_is_truncated": null,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U04TK850N",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U04TK850N|langerhans>",
+    "bot_id": null,
+    "ts": "1432189593.000315",
+    "id": "20de307",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U04TK850N|langerhans> uploaded a file: <https://androidchat.slack.com/files/langerhans/F0506H501/R_layout_actionbar_centered.xml|R.layout.actionbar_centered>",
+    "file": {
+      "id": "F0506H501",
+      "created": 1432189649,
+      "timestamp": 1432189649,
+      "name": "R_layout_actionbar_centered.xml",
+      "title": "R.layout.actionbar_centered",
+      "mimetype": "text/plain",
+      "filetype": "xml",
+      "pretty_type": "XML",
+      "user": "U04TK850N",
+      "editable": true,
+      "size": 321,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0506H501/R_layout_actionbar_centered.xml?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0506H501/download/R_layout_actionbar_centered.xml?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/langerhans/F0506H501/R_layout_actionbar_centered.xml",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0506H501-9fbefe1a9a",
+      "edit_link": "https://androidchat.slack.com/files/langerhans/F0506H501/R_layout_actionbar_centered.xml/edit",
+      "preview": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<TextView xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    android:id=\"@+id/actionbar_title\"\n    android:layout_width=\"wrap_content\"\n    android:layout_height=\"wrap_content\"\n    android:layout_gravity=\"center_horizontal\"\n    style=\"@style/ActionBarCompatText\" />",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-meta\">&lt;?xml</span> <span class=\"cm-meta\">version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span></pre></div>\n<div><pre><span class=\"cm-tag cm-bracket\">&lt;</span><span class=\"cm-tag\">TextView</span> <span class=\"cm-attribute\">xmlns:android</span>=<span class=\"cm-string\">&quot;http://schemas.android.com/apk/res/android&quot;</span></pre></div>\n<div><pre>    <span class=\"cm-attribute\">android:id</span>=<span class=\"cm-string\">&quot;@+id/actionbar_title&quot;</span></pre></div>\n<div><pre>    <span class=\"cm-attribute\">android:layout_width</span>=<span class=\"cm-string\">&quot;wrap_content&quot;</span></pre></div>\n<div><pre>    <span class=\"cm-attribute\">android:layout_height</span>=<span class=\"cm-string\">&quot;wrap_content&quot;</span></pre></div>\n<div><pre>    <span class=\"cm-attribute\">android:layout_gravity</span>=<span class=\"cm-string\">&quot;center_horizontal&quot;</span></pre></div>\n<div><pre>    <span class=\"cm-attribute\">style</span>=<span class=\"cm-string\">&quot;@style/ActionBarCompatText&quot;</span> <span class=\"cm-tag cm-bracket\">/&gt;</span></pre></div>\n</div>\n</div>\n",
+      "lines": 7,
+      "lines_more": 0,
+      "preview_is_truncated": null,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U04TK850N",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U04TK850N|langerhans>",
+    "bot_id": null,
+    "ts": "1432189650.000317",
+    "id": "20de308",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "<@U04U18ANZ>: see above",
+    "ts": "1432189657.000318",
+    "id": "20de309",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04V25VKT",
+    "text": "thanks <@U04TK850N> will look into those.",
+    "ts": "1432190830.000320",
+    "id": "20de310",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

@@ -1,0 +1,724 @@
+[
+  {
+    "user": "U22E97HR9",
+    "text": "hello guys !\n\ni got a probleme with a callback function : \n\n```\n    public ArrayList&lt;Event&gt; getAllEventDistant(){\n        final ArrayList&lt;Event&gt; events = new ArrayList&lt;&gt;();\n\n        ParseQuery query = new ParseQuery(\"Event\");\n        query.findInBackground(new FindCallback&lt;ParseObject&gt;() {\n            @Override\n            public void done(List&lt;ParseObject&gt; objects, ParseException e) {\n                if(e==null){\n                    for(int i=0; i&lt;objects.size(); i++){\n                        int id = Integer.parseInt((String) objects.get(i).get(COL_IDEVENEMENT));\n                        String title = (String) objects.get(i).get(COL_TITRE_EVENEMENT);\n                        String desc = (String) objects.get(i).get(COL_DESCRIPTION);\n\n                        events.add(new Event(id,deviceId,title,categoryId,desc,dateEvent,nbVote));\n                    }\n                }\n            }\n        });\n    return events;```\n\nevents is always empty..because the \"done\" is not finished... how can i get a ArrayList events not empty ? please help me :confused:",
+    "ts": "1474968369.001236",
+    "id": "27be8997",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U22E97HR9> You have a couple of options here. 1) Return the result asynchronously using a callback, 2) Use the blocking `find` which will block the thread until the results are retrieved",
+    "ts": "1474969491.001237",
+    "id": "27be8998",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "a good practice is (1), but (2) is easier but that will probably block the UI thread making the application hang until the results are retrieved",
+    "ts": "1474969537.001238",
+    "id": "27be8999",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "for (1) you can start by reading here <http://stackoverflow.com/questions/18279302/how-do-i-perform-a-java-callback-between-classes> . An even better solution would be using RxJava (but that is a bit advanced)",
+    "attachments": [
+      {
+        "title": "How do I perform a JAVA callback between classes?",
+        "title_link": "http://stackoverflow.com/questions/18279302/how-do-i-perform-a-java-callback-between-classes",
+        "text": "I am coming from JavaScript, in which callbacks are pretty easy. I am trying to implement them into JAVA, without success.I have a Parent class:import java.net.Socket;import java.util.concurrent.",
+        "fallback": "How do I perform a JAVA callback between classes?",
+        "thumb_url": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/questions/18279302/how-do-i-perform-a-java-callback-between-classes",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "service_icon": "http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d",
+        "service_name": "stackoverflow.com",
+        "id": 1
+      }
+    ],
+    "ts": "1474969586.001239",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "27be9000",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "for (2) you can use `query.find()`",
+    "ts": "1474969603.001241",
+    "id": "27be9001",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U22E97HR9",
+    "text": "so i will try the (2) first",
+    "ts": "1474969631.001242",
+    "id": "27be9002",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U22E97HR9",
+    "text": "thanks !",
+    "ts": "1474969642.001243",
+    "id": "27be9003",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U22E97HR9> is this in a production app for a company or just your app where you are experimenting?",
+    "ts": "1474969670.001244",
+    "id": "27be9004",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U22E97HR9",
+    "text": "experimenting :wink:",
+    "ts": "1474969684.001245",
+    "id": "27be9005",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "ok you can use (2) but I would highly recommend to learn how to use Callbacks and RxJava for the future",
+    "edited": {
+      "user": "U09T8SFG8",
+      "ts": "1474969713.000000"
+    },
+    "ts": "1474969705.001246",
+    "id": "27be9006",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U22E97HR9",
+    "text": "i will try both solution <@U09T8SFG8>  :slightly_smiling_face:",
+    "ts": "1474969727.001248",
+    "id": "27be9007",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Trying to figure out if it’s worth attaching a presenter to a recyclerview adapter, the viewholder, or both… Are there any guidelines around for this, or pros/cons?",
+    "ts": "1474970789.001249",
+    "id": "27be9008",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Ah, nevermind, just thought of a way to do everything just in the viewholder with a presenter :stuck_out_tongue:",
+    "ts": "1474970841.001250",
+    "id": "27be9009",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2GDC2NMQ",
+    "text": "<@U2GDC2NMQ|kendhia> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1474971690.001251",
+    "id": "27be9010",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2D637AKY",
+    "text": "How do i pass the base url to my localhost when trying to use retrofit.",
+    "ts": "1474987231.001252",
+    "id": "27be9011",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2D637AKY",
+    "text": "I am using windows",
+    "ts": "1474987237.001253",
+    "id": "27be9012",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2D637AKY",
+    "text": "am doing this right now :",
+    "ts": "1474987892.001254",
+    "id": "27be9013",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2D637AKY",
+    "text": "&lt;string name=\"api_url\"&gt;http://192.168.1.26/api/v1/&lt;/string&gt;",
+    "ts": "1474987894.001255",
+    "id": "27be9014",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2D637AKY",
+    "text": "and fails, where the ip is my machines",
+    "ts": "1474987904.001256",
+    "id": "27be9015",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2DPZ0JLQ",
+    "text": "<@U2D637AKY> <http://blogs.adobe.com/jtalbot/2010/12/07/accessing-localhost-from-the-android-emulator/>",
+    "ts": "1474988028.001258",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "27be9016",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2D637AKY",
+    "text": "<@U2DPZ0JLQ> : I am using a real device for emulation",
+    "ts": "1474988776.001260",
+    "id": "27be9017",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2DPZ0JLQ",
+    "text": "wut",
+    "ts": "1474988871.001261",
+    "id": "27be9018",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2DPZ0JLQ",
+    "text": "that thing you just said, doesn’t really make sense.  \nyou are running your app on a physical device and you want to use your computer for the web server?",
+    "ts": "1474988935.001262",
+    "id": "27be9019",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "You'll have to setup something like ngrok or localtunnel so that you can proxy the local webserver over the internet so you can access it on the device.",
+    "ts": "1474989093.001263",
+    "id": "27be9020",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2D637AKY",
+    "text": "<@U2DPZ0JLQ> : when testing the app am using my phone as the emulator. the api is hosted in my local machine currently.",
+    "ts": "1474989283.001264",
+    "id": "27be9021",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2DPZ0JLQ",
+    "text": "<@U2D637AKY> sorry to be pedantic, but if you are using a phone you are not using an emulator.",
+    "ts": "1474989339.001265",
+    "id": "27be9022",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2DPZ0JLQ",
+    "text": "you’ll have to follow <@U05473HHT>’s advice or perhaps make your local web server visible externally and access it the long way over the internet.",
+    "ts": "1474989403.001266",
+    "id": "27be9023",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2D637AKY",
+    "text": "<@U2DPZ0JLQ>, I will just make my app visible externally.",
+    "ts": "1474989483.001267",
+    "id": "27be9024",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2DPZ0JLQ",
+    "text": ":thumbsup:",
+    "ts": "1474989508.001268",
+    "id": "27be9025",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2D637AKY",
+    "text": "<@U05473HHT>  thanks I will try that",
+    "ts": "1474989509.001269",
+    "id": "27be9026",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2GHVTE22",
+    "text": "<@U2GHVTE22|joshuah> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1474993481.001270",
+    "id": "27be9027",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2GHVTE22",
+    "text": "Hey",
+    "ts": "1474993596.001271",
+    "id": "27be9028",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2GJGJEBB",
+    "text": "<@U2GJGJEBB|prashannth> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1474994555.001272",
+    "id": "27be9029",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2GKV8E4D",
+    "text": "<@U2GKV8E4D|mather> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1475000252.001273",
+    "id": "27be9030",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U2D637AKY> I got a proxy setup with a webserver I have. But I don't know how you would start an SSH proxy on Windows.",
+    "ts": "1475005089.001274",
+    "id": "27be9031",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETA9WHH",
+    "text": "you can use Charles",
+    "ts": "1475005742.001275",
+    "id": "27be9032",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2GRRD00M",
+    "text": "<@U2GRRD00M|droido> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1475036206.001276",
+    "id": "27be9033",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

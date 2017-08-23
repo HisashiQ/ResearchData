@@ -1,0 +1,749 @@
+[
+  {
+    "user": "U04TK850N",
+    "text": "<@U054JURKR>: I tried Barista. It seemed to work fine until I tried to move the crosshair over a GridView I have. I’m not sure if the cause was the gridview or something else, but it ended in a NullPointerException. I’ll grab a log for you in a moment since the Play Store crash report thing crashed itself :confused:",
+    "ts": "1435909645.003348",
+    "id": "03de3557",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "On that note, does someone have an Espresso test that uses onData on a ListView backed by an adapter extended from BaseAdapter?",
+    "ts": "1435912546.003349",
+    "id": "03de3558",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "found a solution",
+    "ts": "1435918133.003350",
+    "id": "03de3559",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U04TK850N|langerhans> uploaded a file: <https://androidchat.slack.com/files/langerhans/F075TTLE8/custom_matcher_for_baseadapter_content.java|Custom matcher for BaseAdapter content>",
+    "file": {
+      "id": "F075TTLE8",
+      "created": 1435918215,
+      "timestamp": 1435918215,
+      "name": "Custom_matcher_for_BaseAdapter_content.java",
+      "title": "Custom matcher for BaseAdapter content",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U04TK850N",
+      "editable": true,
+      "size": 847,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F075TTLE8/custom_matcher_for_baseadapter_content.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F075TTLE8/download/custom_matcher_for_baseadapter_content.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/langerhans/F075TTLE8/custom_matcher_for_baseadapter_content.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F075TTLE8-b1336a7413",
+      "edit_link": "https://androidchat.slack.com/files/langerhans/F075TTLE8/custom_matcher_for_baseadapter_content.java/edit",
+      "preview": "public void testSetEnvironment() {\r\n    DrawerActions.openDrawer(R.id.drawer_layout, Gravity.LEFT);\r\n    onData(allOf(is(instanceOf(NavigationAction.class)), withContent(getActivity().getString(R.string.navigation_array_settings))))\r\n            .inAdapterView(withId(R.id.drawer_list))\r\n            .onChildView(withId(R.id.nav_menu_text))\r\n            .perform(click());\r\n}\r\n\r\npublic static Matcher<Object> withContent(final String content) {\r\n    return new BoundedMatcher<Object, NavigationAction>(NavigationAction.class) {\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-keyword\">public</span> <span class=\"cm-keyword\">void</span> <span class=\"cm-variable\">testSetEnvironment</span>() {</pre></div>\n<div><pre>    <span class=\"cm-variable\">DrawerActions</span>.<span class=\"cm-variable\">openDrawer</span>(<span class=\"cm-variable\">R</span>.<span class=\"cm-variable\">id</span>.<span class=\"cm-variable\">drawer_layout</span>, <span class=\"cm-variable\">Gravity</span>.<span class=\"cm-variable\">LEFT</span>);</pre></div>\n<div><pre>    <span class=\"cm-variable\">onData</span>(<span class=\"cm-variable\">allOf</span>(<span class=\"cm-variable\">is</span>(<span class=\"cm-variable\">instanceOf</span>(<span class=\"cm-variable\">NavigationAction</span>.<span class=\"cm-keyword\">class</span>)), <span class=\"cm-variable\">withContent</span>(<span class=\"cm-variable\">getActivity</span>().<span class=\"cm-variable\">getString</span>(<span class=\"cm-variable\">R</span>.<span class=\"cm-variable\">string</span>.<span class=\"cm-variable\">navigation_array_settings</span>))))</pre></div>\n<div><pre>            .<span class=\"cm-variable\">inAdapterView</span>(<span class=\"cm-variable\">withId</span>(<span class=\"cm-variable\">R</span>.<span class=\"cm-variable\">id</span>.<span class=\"cm-variable\">drawer_list</span>))</pre></div>\n<div><pre>            .<span class=\"cm-variable\">onChildView</span>(<span class=\"cm-variable\">withId</span>(<span class=\"cm-variable\">R</span>.<span class=\"cm-variable\">id</span>.<span class=\"cm-variable\">nav_menu_text</span>))</pre></div>\n<div><pre>            .<span class=\"cm-variable\">perform</span>(<span class=\"cm-variable\">click</span>());</pre></div>\n<div><pre>}</pre></div>\n<div><pre>&#8203;</pre></div>\n<div><pre><span class=\"cm-keyword\">public</span> <span class=\"cm-keyword\">static</span> <span class=\"cm-variable\">Matcher</span><span class=\"cm-operator\">&lt;</span><span class=\"cm-variable\">Object</span><span class=\"cm-operator\">&gt;</span> <span class=\"cm-variable\">withContent</span>(<span class=\"cm-keyword\">final</span> <span class=\"cm-variable\">String</span> <span class=\"cm-variable\">content</span>) {</pre></div>\n<div><pre>    <span class=\"cm-keyword\">return</span> <span class=\"cm-keyword\">new</span> <span class=\"cm-variable\">BoundedMatcher</span><span class=\"cm-operator\">&lt;</span><span class=\"cm-variable\">Object</span>, <span class=\"cm-variable\">NavigationAction</span><span class=\"cm-operator\">&gt;</span>(<span class=\"cm-variable\">NavigationAction</span>.<span class=\"cm-keyword\">class</span>) {</pre></div>\n</div>\n</div>\n",
+      "lines": 10,
+      "lines_more": 11,
+      "preview_is_truncated": null,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U04TK850N",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U04TK850N|langerhans>",
+    "bot_id": null,
+    "ts": "1435918216.003351",
+    "id": "03de3560",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U063EMGDQ",
+    "text": "Hey guys what do you think about this lib? \nandroid-async-http",
+    "ts": "1435923309.003352",
+    "id": "03de3561",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U063EMGDQ",
+    "text": "<http://loopj.com/android-async-http/>",
+    "attachments": [
+      {
+        "service_name": "loopj - James Smith",
+        "title": "Android Asynchronous Http Client",
+        "title_link": "http://loopj.com/android-async-http/",
+        "fallback": "loopj - James Smith: Android Asynchronous Http Client",
+        "image_url": "http://www.gravatar.com/avatar/20171a64471be602e50c8ba7662313af",
+        "from_url": "http://loopj.com/android-async-http/",
+        "image_width": 80,
+        "image_height": 80,
+        "image_bytes": 2995,
+        "id": 1
+      }
+    ],
+    "ts": "1435923322.003353",
+    "id": "03de3562",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U063EMGDQ",
+    "text": "I need an Http Client",
+    "ts": "1435923322.003354",
+    "id": "03de3563",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "ion is pretty good - <https://github.com/koush/ion>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "koush/ion",
+        "title_link": "https://github.com/koush/ion",
+        "text": "ion - Android Asynchronous Networking and Image Loading",
+        "fallback": "GitHub: koush/ion",
+        "thumb_url": "https://avatars1.githubusercontent.com/u/73924?v=3&s=400",
+        "from_url": "https://github.com/koush/ion",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1435923392.003356",
+    "id": "03de3564",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "<https://github.com/koush/AndroidAsync>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "koush/AndroidAsync",
+        "title_link": "https://github.com/koush/AndroidAsync",
+        "text": "AndroidAsync - Asynchronous socket, http (client+server), websocket, and <http://socket.io|socket.io> library for android. Based on nio, not threads.",
+        "fallback": "GitHub: koush/AndroidAsync",
+        "thumb_url": "https://avatars1.githubusercontent.com/u/73924?v=3&s=400",
+        "from_url": "https://github.com/koush/AndroidAsync",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1435923404.003358",
+    "id": "03de3565",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "Ive used loopj before - its alright",
+    "ts": "1435923404.003360",
+    "id": "03de3566",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "lol",
+    "ts": "1435923409.003361",
+    "id": "03de3567",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "yeah",
+    "ts": "1435923410.003362",
+    "id": "03de3568",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "oh snap <@U04TK850N>",
+    "ts": "1435923412.003363",
+    "id": "03de3569",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Depends on how low level you need it",
+    "ts": "1435923417.003364",
+    "id": "03de3570",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Ion is higher level and adds some good amount of convenience to android-async",
+    "edited": {
+      "user": "U04TK850N",
+      "ts": "1435923445.000000"
+    },
+    "ts": "1435923435.003365",
+    "id": "03de3571",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "if it’s REST based - <https://square.github.io/retrofit/>",
+    "attachments": [
+      {
+        "text": "A type-safe REST client for Android and Java",
+        "fallback": "A type-safe REST client for Android and Java",
+        "from_url": "https://square.github.io/retrofit/",
+        "id": 1
+      }
+    ],
+    "ts": "1435923464.003367",
+    "id": "03de3572",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "+1 for retrofit",
+    "ts": "1435923659.003369",
+    "id": "03de3573",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Hm, so Espresso seems cool, but involves a lot of trial and error at the moment",
+    "ts": "1435923662.003370",
+    "id": "03de3574",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U063EMGDQ",
+    "text": "I am trying to use that one but I am with difficulties to make a good and reusable structure of the lib",
+    "ts": "1435924395.003371",
+    "id": "03de3575",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U063EMGDQ",
+    "text": "Imagine, I need to make multiple requests through the app and and I need structure the services layer like\nHttpClient //auth key //url configs etc etc \nCustomerService // get //post //update and callback\nExample Service // get //post //update  and callback",
+    "ts": "1435924701.003372",
+    "id": "03de3576",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U063EMGDQ",
+    "text": "Ion.with(mContext).load(\"POST\", \"<http://url/api/generateApiKey>\")\n    .addHeader(\"appId\", \"123456789356456\")\n    .addHeader(\"app\", \"client\")\n    .addHeader(\"platform\", \"android\")\n    .asJsonObject()\n    .setCallback(new FutureCallback&lt;JsonObject&gt;() {\n        @Override\n        public void onCompleted(Exception e, JsonObject result) {\n            // print the response code, ie, 200\n            // print the String that was downloaded\n            JsonArray message = result.getAsJsonArray(\"message\");\n            token = message.getAsJsonArray().get(0).getAsJsonObject().get(\"apiKey\").toString();\n        }\n    });",
+    "ts": "1435924790.003373",
+    "id": "03de3577",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "this looks like something i would use retrofit for",
+    "ts": "1435924902.003374",
+    "id": "03de3578",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "firstly because it would remove the need for context",
+    "ts": "1435924974.003375",
+    "id": "03de3579",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U01U4H",
+    "text": "+1 to Retrofit",
+    "ts": "1435924983.003376",
+    "id": "03de3580",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U063EMGDQ",
+    "text": "Retrofit?",
+    "ts": "1435924986.003377",
+    "id": "03de3581",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "<https://androidchat.slack.com/archives/development/p1435923464003367>",
+    "attachments": [
+      {
+        "color": "4D394B",
+        "from_url": "https://androidchat.slack.com/archives/development/p1435923464003367",
+        "fallback": "[July 3rd, 2015 4:37 AM] kv87: if it’s REST based - <https://square.github.io/retrofit/>",
+        "author_subname": "kv87",
+        "ts": 1435923464,
+        "text": "if it’s REST based - <https://square.github.io/retrofit/>",
+        "author_name": "kv87",
+        "author_link": "https://androidchat.slack.com/team/kv87",
+        "author_icon": "https://secure.gravatar.com/avatar/b2ae81ab1c3b67652344e33c5fd958e0.jpg?s=48&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F272a%2Fimg%2Favatars%2Fava_0024-48.png",
+        "mrkdwn_in": [
+          "text"
+        ],
+        "id": 1
+      }
+    ],
+    "ts": "1435925004.003378",
+    "id": "03de3582",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U063EMGDQ",
+    "text": "It seems like they have a nice Documentation",
+    "ts": "1435925045.003380",
+    "id": "03de3583",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "yeah it’s great",
+    "ts": "1435925051.003381",
+    "id": "03de3584",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "retrofit",
+    "ts": "1435925052.003382",
+    "id": "03de3585",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "it’s basically the industry standard",
+    "ts": "1435925062.003383",
+    "id": "03de3586",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "yep",
+    "ts": "1435925193.003384",
+    "id": "03de3587",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U063EMGDQ",
+    "text": "Ok I will give a try :wink: It seems what I am looking for",
+    "ts": "1435925227.003385",
+    "id": "03de3588",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U063EMGDQ",
+    "text": "thank you for your tips",
+    "ts": "1435925239.003386",
+    "id": "03de3589",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "no problem - we all went through the same stuff",
+    "ts": "1435925274.003387",
+    "id": "03de3590",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U076HHM2P",
+    "subtype": "channel_join",
+    "text": "<@U076HHM2P|izumin5210> has joined the channel",
+    "ts": "1435976400.003388",
+    "id": "03de3591",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

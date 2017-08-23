@@ -1,0 +1,2044 @@
+[
+  {
+    "user": "U11BTGUVB",
+    "text": "In a list where each item is an image with text like imagine headlines with small thumbs, should the image be on the left or right?",
+    "ts": "1461481562.001327",
+    "id": "24de33240",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "right imo",
+    "ts": "1461481819.001328",
+    "id": "24de33241",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Because UI changes need to be on the UIThread, shouldn't you subscribe on the UI thread if the subscriber for example updates the adapter? And then make the observable on the background thread?",
+    "ts": "1461500221.001329",
+    "id": "24de33242",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<@U061HDV96>: you subscribe on the thread you want the observable to run on, and you observeOn the thread you want the results to publish",
+    "ts": "1461500311.001330",
+    "id": "24de33243",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "you’re observing the task from the main thread, waiting for it to come",
+    "ts": "1461500329.001331",
+    "id": "24de33244",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "That's what I was thinking",
+    "ts": "1461500339.001332",
+    "id": "24de33245",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Just odd names for those functions...",
+    "ts": "1461500348.001333",
+    "id": "24de33246",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "Hey folks, I have an app that tracks the current location of a user and publishes the data to a channel. I have 2 issues:\n\n1) The code exists on one `Activity`, so switching activities might just stop tracking.\n\n2) Unless the app is always in focus, tracking stops after a while. \n\nWhat I want to be able to do is have this location listener running and regardless of what app is in focus or what Activity(in the app) is in focus, it should keep running. How do I achieve this?",
+    "ts": "1461500822.001334",
+    "id": "24de33247",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "A LocationTracker class with Rx?",
+    "ts": "1461500888.001335",
+    "id": "24de33248",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "you want a service",
+    "ts": "1461500906.001336",
+    "id": "24de33249",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Or if you don’t want to use rx or are not familiar with it. Run it in a service?",
+    "ts": "1461500908.001337",
+    "id": "24de33250",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Key here is to decouple it from your activity.",
+    "ts": "1461500942.001338",
+    "id": "24de33251",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "<@U0K1ALDQE>: dunno anything about Rx",
+    "ts": "1461501105.001339",
+    "id": "24de33252",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "So something like an intent service? like this: <http://javatechig.com/android/creating-a-background-service-in-android>",
+    "attachments": [
+      {
+        "service_name": "Javatechig - Resources for developers",
+        "title": "Creating a Background Service in Android Using IntentService | Java Techig",
+        "title_link": "http://javatechig.com/android/creating-a-background-service-in-android",
+        "text": "In this tutorial we will take a look into one of most important and commonly used Android concept called IntentService. This post explains steps involved in creating a background service in Android using IntentService.",
+        "fallback": "Javatechig - Resources for developers: Creating a Background Service in Android Using IntentService | Java Techig",
+        "thumb_url": "http://javatechig.com/wp-content/uploads/2015/01/Android-Tutorials.jpg",
+        "ts": 1410764428,
+        "from_url": "http://javatechig.com/android/creating-a-background-service-in-android",
+        "thumb_width": 370,
+        "thumb_height": 200,
+        "id": 1
+      }
+    ],
+    "ts": "1461501135.001340",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "24de33253",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U0548MM6B>: regarding subscriptions and Kotlin. I can just change onNext's parameter to not be an optional (it generates an optional in AS). Does this change something? Why would it even give null?",
+    "edited": {
+      "user": "U061HDV96",
+      "ts": "1461501161.000000"
+    },
+    "ts": "1461501136.001341",
+    "id": "24de33254",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "yeah, a location tracker with subscribers is also a good idea",
+    "ts": "1461501138.001343",
+    "id": "24de33255",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "<@U0548MM6B>: _ subscribers_ &lt;= I was thinking of that too using some sort of android message bus",
+    "ts": "1461501182.001345",
+    "id": "24de33256",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<@U061HDV96>: iirc kotlin plugin automatically makes nearly everything nullable",
+    "ts": "1461501207.001346",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U061HDV96"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "24de33257",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<@U0F2AP42X>: I’d use Rx for that as <@U0K1ALDQE> said",
+    "ts": "1461501221.001347",
+    "id": "24de33258",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "Sigh! time to read up on Rx then i guess :cry:",
+    "ts": "1461501353.001348",
+    "id": "24de33259",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "gl &amp; hf :smile:",
+    "ts": "1461501379.001349",
+    "id": "24de33260",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "lol thanks",
+    "ts": "1461501477.001350",
+    "id": "24de33261",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "out of curiosity, surely there was a way to handle a use case like this before  the Rx hype",
+    "edited": {
+      "user": "U0F2AP42X",
+      "ts": "1461501510.000000"
+    },
+    "ts": "1461501497.001351",
+    "id": "24de33262",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "yeah, services",
+    "ts": "1461501860.001353",
+    "id": "24de33263",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": ":scream:",
+    "ts": "1461502098.001354",
+    "id": "24de33264",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I erased that part in my brain",
+    "ts": "1461502109.001355",
+    "id": "24de33265",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "lol",
+    "ts": "1461502712.001356",
+    "id": "24de33266",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "So <@U0548MM6B> <@U0K1ALDQE> why do I need the whole crazy Rx thing as opposed to just a service? I guess i’m looking for a “_Reasons to use Rx for dummies_” brief :see_no_evil:",
+    "ts": "1461502849.001357",
+    "id": "24de33267",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Well for me to write it in rx and test it takes me 10% of the time I’d need to do it for a service. If you have zero knowledge of rx just do it with a service.",
+    "ts": "1461502967.001358",
+    "id": "24de33268",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "But I do recommend trying out rx later on.",
+    "ts": "1461502983.001359",
+    "id": "24de33269",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "but your code will look 100x cleaner and better",
+    "ts": "1461503003.001360",
+    "id": "24de33270",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "<@U0F2AP42X> if you already doing something Rx providing no need to change but yes <@U0K1ALDQE>  is right it makes the code 100x cleaner and also force all to follow same coding style and format... so",
+    "ts": "1461506213.001361",
+    "id": "24de33271",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ZJL26E8",
+    "text": "how should I use Rx? Say I have a main \"manager\" or activity, I get an instance of my say GpsManager, that GpsManager starts a service for getting location updates / geofencing / polygonal geofencing",
+    "ts": "1461506415.001362",
+    "id": "24de33272",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ZJL26E8",
+    "text": "what should I use Rx here for?",
+    "ts": "1461506423.001363",
+    "id": "24de33273",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ZJL26E8",
+    "text": "I would say like to know when my service starts, when the manager does everything, observe geofence events",
+    "ts": "1461506455.001364",
+    "id": "24de33274",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "What is a good way in RxJava to have something execute after the first time onNext is called?",
+    "ts": "1461513552.001365",
+    "id": "24de33275",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Or perhaps pass a boolean `first` to onNext with an intermediary model and `map(...)` somehow?",
+    "edited": {
+      "user": "U061HDV96",
+      "ts": "1461513593.000000"
+    },
+    "ts": "1461513576.001366",
+    "id": "24de33276",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "The Observable.first() ignores everything after the first one.",
+    "ts": "1461513628.001368",
+    "id": "24de33277",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "that sounds like a good thing to just have as an operator",
+    "ts": "1461513666.001369",
+    "id": "24de33278",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "(if only)",
+    "ts": "1461513676.001370",
+    "id": "24de33279",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I'm looking at some operators (<https://github.com/ReactiveX/RxJava/wiki/Alphabetical-List-of-Observable-Operators>) but I can't seem to find anything to help me further.",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "ReactiveX/RxJava",
+        "title_link": "https://github.com/ReactiveX/RxJava/wiki/Alphabetical-List-of-Observable-Operators",
+        "text": "RxJava – Reactive Extensions for the JVM – a library for composing asynchronous and event-based programs using observable sequences for the Java VM.",
+        "fallback": "GitHub: ReactiveX/RxJava",
+        "thumb_url": "https://avatars3.githubusercontent.com/u/6407041?v=3&s=400",
+        "from_url": "https://github.com/ReactiveX/RxJava/wiki/Alphabetical-List-of-Observable-Operators",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1461513743.001371",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "24de33280",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "can't think of a good way to do it with what i know :x",
+    "ts": "1461513746.001373",
+    "id": "24de33281",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I can just have a variable in the Subscriber and check it every time?",
+    "ts": "1461513882.001374",
+    "id": "24de33282",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "yeah",
+    "ts": "1461513895.001375",
+    "id": "24de33283",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Well that'll be it then",
+    "ts": "1461513902.001376",
+    "id": "24de33284",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11BTGUVB",
+    "text": "so im using picasso to load images, is there a way i can load a whole bunch?",
+    "ts": "1461523283.001377",
+    "id": "24de33285",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11BTGUVB",
+    "text": "i dont want images to download every time a user scrolls a new view into the screen",
+    "ts": "1461523319.001378",
+    "id": "24de33286",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11BTGUVB",
+    "text": "i want to load a bunch at once so that when the user scrolls it iwll just load from cache",
+    "ts": "1461523334.001379",
+    "id": "24de33287",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "call `fetch` on everything to preload it into the cache",
+    "ts": "1461524771.001380",
+    "id": "24de33288",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "<@U11BTGUVB>:",
+    "ts": "1461524793.001381",
+    "id": "24de33289",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11BTGUVB",
+    "text": "<@U0546QERR>: how should i handle when the user scrolls down and then the .into() code runs?",
+    "ts": "1461524888.001382",
+    "id": "24de33290",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11BTGUVB",
+    "text": "Will picasso make two requests to the same image if fetch() hasn't completed?",
+    "ts": "1461524901.001383",
+    "id": "24de33291",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11BTGUVB",
+    "text": "Like imagine my list loads &gt; all the fetch requests go out &gt; user scrolls down super fast &gt; all the load.into() requests go out &gt; some of the fetch requests haven't complete and picasso goes to load them again.",
+    "ts": "1461524998.001384",
+    "id": "24de33292",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11BTGUVB",
+    "text": "Not sure if im making sense",
+    "ts": "1461525004.001385",
+    "id": "24de33293",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i doubt it, i'm guessing square thought of that case",
+    "ts": "1461525091.001386",
+    "id": "24de33294",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "your requests are probably cached by the URL so they're not duplicated",
+    "ts": "1461525120.001387",
+    "id": "24de33295",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "but try it and see :stuck_out_tongue:",
+    "ts": "1461525130.001388",
+    "id": "24de33296",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "<http://www.androidpolice.com/2016/04/24/android-n-feature-spotlight-adb-has-much-faster-transfer-speeds-improvements-to-shell-commands-and-a-bunch-of-compatibility-fixes/>",
+    "attachments": [
+      {
+        "service_name": "Android Police",
+        "title": "Android N Feature Spotlight: ADB Has Much Faster Transfer Speeds, Improvements To Shell Commands, And A Bunch Of Compatibility Fixes",
+        "title_link": "http://www.androidpolice.com/2016/04/24/android-n-feature-spotlight-adb-has-much-faster-transfer-speeds-improvements-to-shell-commands-and-a-bunch-of-compatibility-fixes/",
+        "text": "Google's introduction of Android N promises many great enhancements to the operating system, but we can't overlook some of the important awesome changes to... by Cody Toombs in Android N, Development, News",
+        "fallback": "Android Police: Android N Feature Spotlight: ADB Has Much Faster Transfer Speeds, Improvements To Shell Commands, And A Bunch Of Compatibility Fixes",
+        "thumb_url": "https://www.androidpolice.com/wp-content/uploads/2016/04/nexus2cee_aosp-changelog-for-N_thumb-1.png",
+        "ts": 1461520521,
+        "from_url": "http://www.androidpolice.com/2016/04/24/android-n-feature-spotlight-adb-has-much-faster-transfer-speeds-improvements-to-shell-commands-and-a-bunch-of-compatibility-fixes/",
+        "thumb_width": 728,
+        "thumb_height": 350,
+        "id": 1
+      }
+    ],
+    "ts": "1461525551.001389",
+    "reactions": [
+      {
+        "name": "nutella",
+        "users": [
+          "U0N7D6F50",
+          "U08GFT5V5"
+        ],
+        "count": 2
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "24de33297",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11BTGUVB",
+    "text": "<@U0546QERR>: it works fine, thanks :simple_smile:",
+    "ts": "1461525619.001391",
+    "id": "24de33298",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11BTGUVB",
+    "text": "anyone familiar with rxjava?",
+    "ts": "1461530010.001392",
+    "id": "24de33299",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11BTGUVB",
+    "text": "ive made an observable and subscriber",
+    "ts": "1461530019.001393",
+    "id": "24de33300",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11BTGUVB",
+    "text": "how do i reuse it?",
+    "ts": "1461530026.001394",
+    "id": "24de33301",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11BTGUVB",
+    "text": "it just runs once when i open the app",
+    "ts": "1461530036.001395",
+    "id": "24de33302",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11BTGUVB",
+    "text": "i need to be able to run the code multiple times",
+    "ts": "1461530054.001396",
+    "id": "24de33303",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "<@U11BTGUVB>: What do you mean it runs just once? It runs once when you subscribe to it, that is default behaviour.",
+    "ts": "1461531095.001397",
+    "id": "24de33304",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11BTGUVB",
+    "text": "so does subscribe run it?",
+    "ts": "1461531129.001398",
+    "id": "24de33305",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "If you want it to repeat itself to the same subscriber use repeat to create the observable <http://reactivex.io/documentation/operators/repeat.html>",
+    "ts": "1461531141.001399",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "24de33306",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "When you have for example `Observable.just(1,2,3)` it emits 1,2,3. When you subscribe to it",
+    "edited": {
+      "user": "U0K1ALDQE",
+      "ts": "1461531182.000000"
+    },
+    "ts": "1461531172.001400",
+    "id": "24de33307",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11BTGUVB",
+    "text": "Well I have a button in my app that will run it",
+    "ts": "1461531199.001402",
+    "id": "24de33308",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11BTGUVB",
+    "text": "But it just runs on subscribe right now",
+    "ts": "1461531209.001403",
+    "id": "24de33309",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11BTGUVB",
+    "text": "do i have to create a new subscription every time user clicks the button?",
+    "ts": "1461531241.001404",
+    "id": "24de33310",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Anonymous subscription would be the way to go here",
+    "ts": "1461531265.001405",
+    "id": "24de33311",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "```\n@OnClick(R.id.button)\npublic void buttonClicked(){\n    getObservable.\n    subscribe(new Subscription&lt;T&gt;(new Func1(){\n      //.. code\n    );\n}\n```",
+    "ts": "1461531345.001406",
+    "id": "24de33312",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11BTGUVB",
+    "text": "But then how do i manage lifecycle?",
+    "ts": "1461531386.001407",
+    "id": "24de33313",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Don’t copy paste this, I just wrote it in slack. It’s just some example pseudo code. But from memory this should run the `onNext()` every time you click on the button",
+    "ts": "1461531396.001408",
+    "id": "24de33314",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11BTGUVB",
+    "text": "i need to unsubscribe it if my fragment dies",
+    "ts": "1461531398.001409",
+    "id": "24de33315",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Well if it’s something like `Observable.just(“String clicked”);` then don’t worry about it",
+    "ts": "1461531422.001410",
+    "id": "24de33316",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "It will be `onNext(String string)` immediately followed by `onCompleted()` which unsubscribes the subscriber",
+    "ts": "1461531443.001411",
+    "id": "24de33317",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11BTGUVB",
+    "text": "the only thing I thoguth to do was create an array of subscriptions in my fragment and unsubscribe them all in onDetach",
+    "ts": "1461531458.001412",
+    "id": "24de33318",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11BTGUVB",
+    "text": "Yeah its a http request",
+    "ts": "1461531465.001413",
+    "id": "24de33319",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11BTGUVB",
+    "text": "so there's decent change it will leak",
+    "ts": "1461531472.001414",
+    "id": "24de33320",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "If that’s not the case, I’m afraid I cannot answer without more info. You could just use RxLifecycle and bind the lifecycle to the Observable",
+    "ts": "1461531479.001415",
+    "id": "24de33321",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11BTGUVB",
+    "text": "what is rxlifecycle?",
+    "ts": "1461531490.001416",
+    "id": "24de33322",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I would not start a new network call on every button click tho… What is your use case for this?",
+    "ts": "1461531538.001417",
+    "id": "24de33323",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "It’s a library you can use to prevent this kinda thing",
+    "ts": "1461531539.001418",
+    "id": "24de33324",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "<https://github.com/trello/RxLifecycle>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "trello/RxLifecycle",
+        "title_link": "https://github.com/trello/RxLifecycle",
+        "text": "RxLifecycle - Lifecycle handling APIs for Android apps using RxJava",
+        "fallback": "GitHub: trello/RxLifecycle",
+        "thumb_url": "https://avatars1.githubusercontent.com/u/6181431?v=3&s=400",
+        "from_url": "https://github.com/trello/RxLifecycle",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1461531540.001419",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "24de33325",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11BTGUVB",
+    "text": "nice thanks",
+    "ts": "1461531565.001421",
+    "id": "24de33326",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "No problem. I’d do something like this tho",
+    "edited": {
+      "user": "U0K1ALDQE",
+      "ts": "1461531604.000000"
+    },
+    "ts": "1461531596.001422",
+    "id": "24de33327",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "<https://github.com/nomisRev/Android-Retain-Data>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "nomisRev/Android-Retain-Data",
+        "title_link": "https://github.com/nomisRev/Android-Retain-Data",
+        "text": "Android-Retain-Data - Android retaining data over a config change",
+        "fallback": "GitHub: nomisRev/Android-Retain-Data",
+        "thumb_url": "https://avatars3.githubusercontent.com/u/12424668?v=3&s=400",
+        "from_url": "https://github.com/nomisRev/Android-Retain-Data",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1461531597.001423",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "24de33328",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Doing a network call on every button click doesn’t make a lot of sense.",
+    "ts": "1461531616.001426",
+    "id": "24de33329",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Unless you got a very good reason for this :simple_smile:",
+    "ts": "1461531662.001427",
+    "id": "24de33330",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11BTGUVB",
+    "text": "it loads a feed of content into a recycler view",
+    "ts": "1461531697.001428",
+    "id": "24de33331",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11BTGUVB",
+    "text": "the list will load when the user hits the bottom of the page, or they sort via the button",
+    "ts": "1461531708.001429",
+    "id": "24de33332",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11BTGUVB",
+    "text": "so it will happen every now and then basically",
+    "ts": "1461531735.001430",
+    "id": "24de33333",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11BTGUVB",
+    "text": "i simplified it for the sake of convo :simple_smile:",
+    "ts": "1461531742.001431",
+    "id": "24de33334",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Okay :simple_smile: That seems about right.",
+    "ts": "1461531773.001432",
+    "id": "24de33335",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Good luck with it :+1:",
+    "ts": "1461531795.001433",
+    "id": "24de33336",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11BTGUVB",
+    "text": "that links will be useful cheers",
+    "ts": "1461531808.001434",
+    "id": "24de33337",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11BTGUVB",
+    "text": "is there a way to save links in slack?",
+    "ts": "1461531827.001435",
+    "id": "24de33338",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11BTGUVB",
+    "text": "dumb question, i bookmarked it",
+    "ts": "1461531838.001436",
+    "id": "24de33339",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0QPPQ8GG",
+    "text": "<@U11BTGUVB> you can star it in slack but with this free account who knows how long it will be there",
+    "ts": "1461532043.001437",
+    "id": "24de33340",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U13AVN84D",
+    "subtype": "channel_join",
+    "text": "<@U13AVN84D|techfanz> has joined the channel",
+    "ts": "1461553388.001438",
+    "id": "24de33341",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

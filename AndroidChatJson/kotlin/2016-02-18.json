@@ -1,0 +1,292 @@
+[
+  {
+    "user": "U0MUS1A00",
+    "subtype": "channel_join",
+    "text": "<@U0MUS1A00|4brunu> has joined the channel",
+    "ts": "1455803760.000076",
+    "id": "18ko689",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "the solution works",
+    "ts": "1455804187.000077",
+    "id": "18ko690",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i'm not sure how I can add `android:theme` to the attribute set for my appcompat Toolbar with anko, when there's no `setTheme` method or builder for that attribute defined by anko",
+    "ts": "1455826099.000078",
+    "id": "18ko691",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i do that to get light text on a dark appcompat toolbar, which works for my material colors",
+    "ts": "1455826126.000079",
+    "id": "18ko692",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "```  &lt;style name=\"ToolbarThemeLightText\" parent=\"AppTheme\"&gt;\n    &lt;item name=\"android:textColorPrimary\"&gt;@color/icons&lt;/item&gt;\n    &lt;item name=\"actionMenuTextColor\"&gt;@color/icons&lt;/item&gt;\n    &lt;item name=\"android:textColorSecondary\"&gt;@color/icons&lt;/item&gt;\n  &lt;/style&gt;```",
+    "ts": "1455826147.000080",
+    "id": "18ko693",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "anyone ever run into that scenario?",
+    "ts": "1455826171.000081",
+    "id": "18ko694",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U0546QERR>: pretty sure android:theme creates a copy of the existing Theme and calls applyStyle with the overlay you specified. _Then_ that new Theme is applied via a ContextThemeWrapper",
+    "ts": "1455827619.000082",
+    "id": "18ko695",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U0546QERR>: so with Anko, I had to create that ContextThemeWrapper prior to specifying the views that used that theme overlay",
+    "ts": "1455827656.000083",
+    "id": "18ko696",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "<@U053LEHJN>: interesting :sweat: I'll take a look at ContextThemeWrapper and see how that works",
+    "ts": "1455827838.000084",
+    "id": "18ko697",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "doesn't anko up your method count quite a bit?",
+    "ts": "1455830956.000085",
+    "id": "18ko698",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "hmm... it has a lot of methods but most of them are marked inline from what i've seen",
+    "ts": "1455831080.000086",
+    "id": "18ko699",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "the only two apps i've used kotlin for are pretty small so i haven't taken the time to check",
+    "ts": "1455831143.000087",
+    "id": "18ko700",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U04TK850N>: most of them are inlined",
+    "ts": "1455831593.000088",
+    "id": "18ko701",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "same goes for a lot of the methods in the Kotlin standard library",
+    "ts": "1455831612.000089",
+    "id": "18ko702",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "okay cool",
+    "ts": "1455831952.000090",
+    "id": "18ko703",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0MQ05BM4",
+    "subtype": "channel_join",
+    "text": "<@U0MQ05BM4|bananaslikk> has joined the channel",
+    "ts": "1455844856.000091",
+    "id": "18ko704",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

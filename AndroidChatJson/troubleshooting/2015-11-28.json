@@ -1,0 +1,480 @@
+[
+  {
+    "user": "U0FETEN73",
+    "subtype": "channel_join",
+    "text": "<@U0FETEN73|jdope> has joined the channel",
+    "ts": "1448743623.000111",
+    "id": "28tr3085",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0FETEN73",
+    "text": "yo guys. this is sick dude. anyone in the house have retrofit experience?",
+    "ts": "1448743687.000112",
+    "id": "28tr3086",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0FETEN73",
+    "text": "I guess this applies to Java in general. What I'm trying to do is have class X implement Callback&lt;Y&gt;, Callback&lt;Z&gt;",
+    "ts": "1448743719.000113",
+    "id": "28tr3087",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0FETEN73",
+    "text": "what's supposed to happen is a make a call that receives a callback with object Y, I modify that object Y, then make another call that receives a call with object Z, and then do stuff with Z",
+    "ts": "1448743761.000114",
+    "id": "28tr3088",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0FETEN73",
+    "text": "the issue I'm getting is that I can't implement the class Callback twice, as it's perceived as a duplicate, because the generics is not enough to differentiate. makes sense. anyone tackled something like this before?",
+    "ts": "1448743829.000115",
+    "id": "28tr3089",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0FETEN73",
+    "text": "I could break things off into separate classes that each implement the callbacks and handle that logic appropriately, but the thing is, I'm making small modifications to Y and Z and don't want to dedicate entire new classes for handling that, ja feel?",
+    "ts": "1448743888.000116",
+    "id": "28tr3090",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "<@U0FETEN73> why do you need to implement Callback specifically? with retrofit, generally you write an interface which defines methods that return Callback&lt;Y&gt; and Callback&lt;Z&gt; in different functions, then handle the transformation of those return types in a class that has your RestAdapter (or in 2.0, it's just called Retrofit) instance",
+    "ts": "1448749486.000117",
+    "id": "28tr3091",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "why not assign callbacks to member variables?",
+    "ts": "1448749651.000118",
+    "id": "28tr3092",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0FETEN73",
+    "text": "<@U0546QERR> that's how the homie vogella does it: <http://www.vogella.com/tutorials/Retrofit/article.html>",
+    "attachments": [
+      {
+        "text": "Using the Retrofit library as REST client This tutorial explains the usage of the Retrofit library as REST client.",
+        "fallback": "Using the Retrofit library as REST client This tutorial explains the usage of the Retrofit library as REST client.",
+        "from_url": "http://www.vogella.com/tutorials/Retrofit/article.html",
+        "id": 1
+      }
+    ],
+    "ts": "1448749654.000119",
+    "id": "28tr3093",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "oooooh",
+    "ts": "1448749675.000121",
+    "id": "28tr3094",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "you don’t need to do it like that",
+    "ts": "1448749688.000122",
+    "id": "28tr3095",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "you can pass a reference to a callback or a new instance to the call method",
+    "ts": "1448749710.000123",
+    "id": "28tr3096",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "yeah i mean you could, i'm not really a fan of implementing stuff like that at the class level",
+    "ts": "1448749754.000124",
+    "id": "28tr3097",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "like some people like to have their activity implement OnClickListener or whatever",
+    "ts": "1448749770.000125",
+    "id": "28tr3098",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "but then you run into the problem that you're having where you can only have one callback per class",
+    "ts": "1448749801.000126",
+    "id": "28tr3099",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055JANKU",
+    "text": "Depends on the case.",
+    "ts": "1448749808.000127",
+    "id": "28tr3100",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0FETEN73",
+    "text": "oh <@U0548MM6B> solid",
+    "ts": "1448749871.000128",
+    "id": "28tr3101",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0FETEN73",
+    "text": "the member var thing",
+    "ts": "1448749877.000129",
+    "id": "28tr3102",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0FETEN73",
+    "text": "I'm forgetting java as I've been learning Swift all hands on deck recently lol",
+    "ts": "1448749896.000130",
+    "id": "28tr3103",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0FETEN73",
+    "text": "I was just hackily implementing an anonymous class for `Callback&lt;Y&gt;` and inside the `onResponse()` of that implementing another anonymous class for `Callback&lt;Z&gt;` lol nesting4dayz",
+    "ts": "1448749969.000131",
+    "id": "28tr3104",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "sounds like a good use case for rxjava",
+    "ts": "1448750016.000132",
+    "id": "28tr3105",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "but that's a rabbit hole you probably don't want to go down if you aren't already lol",
+    "ts": "1448750037.000133",
+    "id": "28tr3106",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0FETEN73",
+    "text": "haha I've got that open in a separate tab, something I was planning on looking into",
+    "ts": "1448750124.000134",
+    "id": "28tr3107",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0FETEN73",
+    "text": "thanks everyone! :100:",
+    "ts": "1448750149.000135",
+    "id": "28tr3108",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053Q5XP2",
+    "text": "Is anyone else getting s6 users complaining bout -505 store errors when trying to update you apps?",
+    "ts": "1448752795.000136",
+    "id": "28tr3109",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ENUP291",
+    "subtype": "channel_join",
+    "text": "<@U0ENUP291|demiurgous> has joined the channel",
+    "ts": "1448755900.000137",
+    "id": "28tr3110",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

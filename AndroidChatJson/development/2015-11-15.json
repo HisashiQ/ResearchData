@@ -1,0 +1,636 @@
+[
+  {
+    "user": "U0DLPBRB5",
+    "text": "I’m following  Android clean architecture <https://github.com/android10/Android-CleanArchitecture>.",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "android10/Android-CleanArchitecture",
+        "title_link": "https://github.com/android10/Android-CleanArchitecture",
+        "text": "Android-CleanArchitecture - This is a sample app that is part of a blog post I have written about how to architect an android application using Uncle Bob's clean architecture approach.",
+        "fallback": "GitHub: android10/Android-CleanArchitecture",
+        "thumb_url": "https://avatars3.githubusercontent.com/u/1360604?v=3&s=400",
+        "from_url": "https://github.com/android10/Android-CleanArchitecture",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1447590490.000355",
+    "id": "15de16188",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "I have a question that how I implement DoLogin use case.",
+    "ts": "1447590492.000357",
+    "id": "15de16189",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "DoLogin use case need two parameter username and password and they’re dynamic data (which are inputed by user)",
+    "ts": "1447590564.000358",
+    "id": "15de16190",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "So I can’t follow the same approach as getUserDetails in the sample",
+    "ts": "1447590630.000359",
+    "id": "15de16191",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "anyone have an ideal about it? Thanks!",
+    "ts": "1447590642.000360",
+    "id": "15de16192",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B9TKCRL",
+    "text": "in my case, I created two setter method",
+    "ts": "1447590877.000361",
+    "id": "15de16193",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B9TKCRL",
+    "text": "```\npublic DoLogin setId(String name) {\n  this.name = name;\n  return this;\n}\n\npublic DoLogin setPassword(String password) {\n  this.password = password;\n  return this;\n}\n\npublic Observable buildObservable() {\n  if (this.name == null || this.password == null) {\n    throw new NullPointerException();\n  }\n  return this.loginRepository.login(this.name, this.password);\n}\n\n// doLogin.setId(“foo”).setPassword(“bar”).execute().subscribe();\n```",
+    "edited": {
+      "user": "U0B9TKCRL",
+      "ts": "1447591299.000000"
+    },
+    "ts": "1447591056.000362",
+    "id": "15de16194",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B9TKCRL",
+    "text": "like this",
+    "ts": "1447591059.000363",
+    "id": "15de16195",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "<@U0B9TKCRL>: thanks your advice, but I’m using the same approach.",
+    "ts": "1447591076.000364",
+    "id": "15de16196",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "But I’m wondering if there is any way better",
+    "ts": "1447591109.000365",
+    "id": "15de16197",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B9TKCRL",
+    "text": "<https://github.com/android10/Android-CleanArchitecture/issues/32>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "Best practice to pass dynamic parameters to an UseCase? · Issue #32 · android10/Android-CleanArchitecture · GitHub",
+        "title_link": "https://github.com/android10/Android-CleanArchitecture/issues/32",
+        "text": "As in the example, usecase's parameters are set via UserModule: @Module public class UserModule { private int userId = -1; public UserModule() {} public UserModule(int userId) { this.us...",
+        "fallback": "GitHub: Best practice to pass dynamic parameters to an UseCase? · Issue #32 · android10/Android-CleanArchitecture",
+        "thumb_url": "https://avatars0.githubusercontent.com/u/1281889?v=3&s=400",
+        "from_url": "https://github.com/android10/Android-CleanArchitecture/issues/32",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1447591221.000366",
+    "id": "15de16198",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "oh yeah, thanks <@U0B9TKCRL>. It looks like the only way.",
+    "ts": "1447591674.000369",
+    "id": "15de16199",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "And I should use fail fast mechanism like your way. Thank you so much :wink:",
+    "ts": "1447591715.000370",
+    "id": "15de16200",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B9TKCRL",
+    "text": "no problem, please let me know if you find a better way :smile:",
+    "ts": "1447591787.000371",
+    "id": "15de16201",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "yeah, of course :smile:",
+    "edited": {
+      "user": "U0DLPBRB5",
+      "ts": "1447592139.000000"
+    },
+    "ts": "1447592132.000372",
+    "id": "15de16202",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UBTWEE",
+    "text": "is there a way to get Android Studio to compile all variants all the time instead of having to switch and compile?",
+    "ts": "1447634173.000374",
+    "id": "15de16203",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "open the terminal and type ./gradlew assembleDebug",
+    "edited": {
+      "user": "U0B8R3VV4",
+      "ts": "1447636860.000000"
+    },
+    "ts": "1447636837.000375",
+    "id": "15de16204",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "alternativetly, create a new build config that runs that gradle command",
+    "ts": "1447636891.000377",
+    "id": "15de16205",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "you can do it easily from the right side Gradle tab, finding the assembleDebug task and running it",
+    "ts": "1447636912.000378",
+    "id": "15de16206",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "it'll be added to your run list at the top",
+    "ts": "1447636920.000379",
+    "id": "15de16207",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "it doesn't start the app tho",
+    "ts": "1447636926.000380",
+    "id": "15de16208",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "Just terminal it `./gradlew build`",
+    "ts": "1447636940.000381",
+    "id": "15de16209",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "can't remember which task was needed for that",
+    "ts": "1447636946.000382",
+    "id": "15de16210",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "<@U091EBYSU>: why build instead of assemble?",
+    "ts": "1447636976.000383",
+    "id": "15de16211",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "tests!",
+    "ts": "1447636987.000384",
+    "id": "15de16212",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "But, yeah, nobody has them",
+    "ts": "1447637001.000385",
+    "id": "15de16213",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "(we have)",
+    "ts": "1447637007.000386",
+    "id": "15de16214",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "I thought assemble was build + rest",
+    "ts": "1447637016.000387",
+    "id": "15de16215",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "is it the other way around?",
+    "ts": "1447637024.000388",
+    "id": "15de16216",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "nope, `assemble` just assembles (compile, pack apk)",
+    "ts": "1447637042.000389",
+    "id": "15de16217",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "`build` runs `assemble`, `lint`, `test`",
+    "ts": "1447637059.000390",
+    "id": "15de16218",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "Best task in my list of tasks",
+    "ts": "1447637068.000391",
+    "id": "15de16219",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": ":thumbsup: 10/10 will write tests one of these days",
+    "ts": "1447637136.000392",
+    "id": "15de16220",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

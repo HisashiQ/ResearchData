@@ -1,0 +1,1033 @@
+[
+  {
+    "user": "U0Z248CVB",
+    "text": "Hello, guys. I would like to stack the coming push notifications but they don’t group. Here is my code:\n```   Intent intent = new Intent(this, MainActivity.class);\n        intent.replaceExtras(extras);\n        PendingIntent contentIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);\n\n        if (GROUP_ID != null) {\n            int notId = GROUP_ID.equals(GROUP_ADDS) ? NOTIFICATION_ADD_ID : NOTIFICATION_GAME_ID;\n\n            NotificationCompat.Builder build = new NotificationCompat.Builder(this)\n                    .setContentTitle(messageTitle)\n                    .setContentText(messageValue)\n                    .setSmallIcon(R.drawable.free_logo_01)\n                    .setGroup(GROUP_ID)\n                    .setAutoCancel(true)\n                    .setCategory(NotificationCompat.CATEGORY_SOCIAL)\n                    .setGroupSummary(true)\n                    .setContentIntent(contentIntent);\n\n            NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);\n            notificationManager.notify(notId, build.build());\n\n            // notify activity\n            Intent intentNewPush = new Intent(Consts.NEW_PUSH_EVENT);\n            intentNewPush.replaceExtras(extras);\n            LocalBroadcastManager.getInstance(this).sendBroadcast(intentNewPush);\n        }```",
+    "edited": {
+      "user": "U0Z248CVB",
+      "ts": "1464352731.000000"
+    },
+    "ts": "1464333786.004512",
+    "id": "27de36107",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBN2DV2",
+    "text": "anyone can suggest me any workaround for this issue",
+    "ts": "1464339015.004514",
+    "id": "27de36108",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBN2DV2",
+    "text": "i have a RecylclerView with seacrhbar",
+    "ts": "1464339028.004515",
+    "id": "27de36109",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0JBN2DV2|mrbillionbucks> uploaded a file: <https://androidchat.slack.com/files/mrbillionbucks/F1C7FRS92/screen_shot_2016-05-27_at_2.08.51_pm.png|Screen Shot 2016-05-27 at 2.08.51 PM> and commented: *when i search for an item , it works fine*",
+    "file": {
+      "id": "F1C7FRS92",
+      "created": 1464339078,
+      "timestamp": 1464339078,
+      "name": "Screen Shot 2016-05-27 at 2.08.51 PM.png",
+      "title": "Screen Shot 2016-05-27 at 2.08.51 PM",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U0JBN2DV2",
+      "editable": false,
+      "size": 57982,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F1C7FRS92/screen_shot_2016-05-27_at_2.08.51_pm.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F1C7FRS92/download/screen_shot_2016-05-27_at_2.08.51_pm.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F1C7FRS92-f938a75a16/screen_shot_2016-05-27_at_2.08.51_pm_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F1C7FRS92-f938a75a16/screen_shot_2016-05-27_at_2.08.51_pm_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F1C7FRS92-f938a75a16/screen_shot_2016-05-27_at_2.08.51_pm_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 249,
+      "thumb_360_h": 360,
+      "thumb_480": "https://files.slack.com/files-tmb/T04PLNDMP-F1C7FRS92-f938a75a16/screen_shot_2016-05-27_at_2.08.51_pm_480.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_480_w": 332,
+      "thumb_480_h": 480,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F1C7FRS92-f938a75a16/screen_shot_2016-05-27_at_2.08.51_pm_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720": "https://files.slack.com/files-tmb/T04PLNDMP-F1C7FRS92-f938a75a16/screen_shot_2016-05-27_at_2.08.51_pm_720.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720_w": 499,
+      "thumb_720_h": 720,
+      "image_exif_rotation": 1,
+      "original_w": 563,
+      "original_h": 813,
+      "permalink": "https://androidchat.slack.com/files/mrbillionbucks/F1C7FRS92/screen_shot_2016-05-27_at_2.08.51_pm.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F1C7FRS92-79a9a6ba2a",
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 1,
+      "initial_comment": {
+        "id": "Fc1C835T3L",
+        "created": 1464339078,
+        "timestamp": 1464339078,
+        "user": "U0JBN2DV2",
+        "is_intro": true,
+        "comment": "*when i search for an item , it works fine*",
+        "channel": ""
+      }
+    },
+    "user": "U0JBN2DV2",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0JBN2DV2|mrbillionbucks>",
+    "bot_id": null,
+    "ts": "1464339080.004516",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "27de36110",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0JBN2DV2|mrbillionbucks> uploaded a file: <https://androidchat.slack.com/files/mrbillionbucks/F1C7G3B6G/screen_shot_2016-05-27_at_2.09.03_pm.png|Screen Shot 2016-05-27 at 2.09.03 PM> and commented: *but when i do a typo , or enter something not matchable this happens which is off curse obvious behaviour *",
+    "file": {
+      "id": "F1C7G3B6G",
+      "created": 1464339144,
+      "timestamp": 1464339144,
+      "name": "Screen Shot 2016-05-27 at 2.09.03 PM.png",
+      "title": "Screen Shot 2016-05-27 at 2.09.03 PM",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U0JBN2DV2",
+      "editable": false,
+      "size": 49786,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F1C7G3B6G/screen_shot_2016-05-27_at_2.09.03_pm.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F1C7G3B6G/download/screen_shot_2016-05-27_at_2.09.03_pm.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F1C7G3B6G-4ecdb7759f/screen_shot_2016-05-27_at_2.09.03_pm_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F1C7G3B6G-4ecdb7759f/screen_shot_2016-05-27_at_2.09.03_pm_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F1C7G3B6G-4ecdb7759f/screen_shot_2016-05-27_at_2.09.03_pm_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 249,
+      "thumb_360_h": 360,
+      "thumb_480": "https://files.slack.com/files-tmb/T04PLNDMP-F1C7G3B6G-4ecdb7759f/screen_shot_2016-05-27_at_2.09.03_pm_480.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_480_w": 332,
+      "thumb_480_h": 480,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F1C7G3B6G-4ecdb7759f/screen_shot_2016-05-27_at_2.09.03_pm_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720": "https://files.slack.com/files-tmb/T04PLNDMP-F1C7G3B6G-4ecdb7759f/screen_shot_2016-05-27_at_2.09.03_pm_720.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720_w": 499,
+      "thumb_720_h": 720,
+      "image_exif_rotation": 1,
+      "original_w": 563,
+      "original_h": 813,
+      "permalink": "https://androidchat.slack.com/files/mrbillionbucks/F1C7G3B6G/screen_shot_2016-05-27_at_2.09.03_pm.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F1C7G3B6G-8c924851fe",
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 1,
+      "initial_comment": {
+        "id": "Fc1C83D2SE",
+        "created": 1464339144,
+        "timestamp": 1464339144,
+        "user": "U0JBN2DV2",
+        "is_intro": true,
+        "comment": "*but when i do a typo , or enter something not matchable this happens which is off curse obvious behaviour *",
+        "channel": ""
+      }
+    },
+    "user": "U0JBN2DV2",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0JBN2DV2|mrbillionbucks>",
+    "bot_id": null,
+    "ts": "1464339146.004517",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "27de36111",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBN2DV2",
+    "text": "but when i delete my entered query using backspace (one by one single letter  ) my other matchable results do not get fetched",
+    "ts": "1464339196.004518",
+    "id": "27de36112",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0JBN2DV2|mrbillionbucks> uploaded a file: <https://androidchat.slack.com/files/mrbillionbucks/F1C7JEGGN/screen_shot_2016-05-27_at_2.09.14_pm.png|Screen Shot 2016-05-27 at 2.09.14 PM>",
+    "file": {
+      "id": "F1C7JEGGN",
+      "created": 1464339214,
+      "timestamp": 1464339214,
+      "name": "Screen Shot 2016-05-27 at 2.09.14 PM.png",
+      "title": "Screen Shot 2016-05-27 at 2.09.14 PM",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U0JBN2DV2",
+      "editable": false,
+      "size": 41896,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F1C7JEGGN/screen_shot_2016-05-27_at_2.09.14_pm.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F1C7JEGGN/download/screen_shot_2016-05-27_at_2.09.14_pm.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F1C7JEGGN-4f88f47fde/screen_shot_2016-05-27_at_2.09.14_pm_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F1C7JEGGN-4f88f47fde/screen_shot_2016-05-27_at_2.09.14_pm_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F1C7JEGGN-4f88f47fde/screen_shot_2016-05-27_at_2.09.14_pm_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 249,
+      "thumb_360_h": 360,
+      "thumb_480": "https://files.slack.com/files-tmb/T04PLNDMP-F1C7JEGGN-4f88f47fde/screen_shot_2016-05-27_at_2.09.14_pm_480.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_480_w": 332,
+      "thumb_480_h": 480,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F1C7JEGGN-4f88f47fde/screen_shot_2016-05-27_at_2.09.14_pm_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720": "https://files.slack.com/files-tmb/T04PLNDMP-F1C7JEGGN-4f88f47fde/screen_shot_2016-05-27_at_2.09.14_pm_720.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720_w": 499,
+      "thumb_720_h": 720,
+      "image_exif_rotation": 1,
+      "original_w": 563,
+      "original_h": 813,
+      "permalink": "https://androidchat.slack.com/files/mrbillionbucks/F1C7JEGGN/screen_shot_2016-05-27_at_2.09.14_pm.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F1C7JEGGN-2125af0f16",
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U0JBN2DV2",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0JBN2DV2|mrbillionbucks>",
+    "bot_id": null,
+    "ts": "1464339216.004519",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "27de36113",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBN2DV2",
+    "text": "or i can say `onQueryTextChange` and `onQueryTextSubmit` are not responding to my backspace (delete) key",
+    "ts": "1464339262.004520",
+    "id": "27de36114",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBN2DV2",
+    "text": "any idea how to fix this ?",
+    "ts": "1464339272.004521",
+    "id": "27de36115",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1C78KP6F",
+    "subtype": "channel_join",
+    "text": "<@U1C78KP6F|ar0n> has joined the channel",
+    "ts": "1464348920.004522",
+    "id": "27de36116",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1BQ2C83W",
+    "text": "<@U0JBN2DV2>: I just saw your question on stack overflow. I would set a breakpoint at performFiltering and notesAdapter.getFilter().filter(newText); and see what's really going on by stepping through ",
+    "ts": "1464353287.004524",
+    "id": "27de36117",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1BQ2C83W",
+    "text": "Maybe even have a BP in getData().",
+    "ts": "1464353306.004525",
+    "id": "27de36118",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1BQ2C83W",
+    "text": "Especially since you confirmed that the onQueryTextChange is being called successfully.",
+    "ts": "1464353350.004526",
+    "id": "27de36119",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1C8YFV7E",
+    "subtype": "channel_join",
+    "text": "<@U1C8YFV7E|filipesperandio> has joined the channel",
+    "ts": "1464354617.004527",
+    "id": "27de36120",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1C9M21T8",
+    "subtype": "channel_join",
+    "text": "<@U1C9M21T8|micheleli> has joined the channel",
+    "ts": "1464358893.004528",
+    "id": "27de36121",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBN2DV2",
+    "text": "<@U1BQ2C83W>: well i tried to debug the problem ,  still am clueless",
+    "ts": "1464362325.004529",
+    "id": "27de36122",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBN2DV2",
+    "text": "checked all of three",
+    "ts": "1464362344.004530",
+    "id": "27de36123",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBN2DV2",
+    "text": "everything in this 3 methods are working as desired",
+    "ts": "1464362368.004531",
+    "id": "27de36124",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1CC0FMCZ",
+    "subtype": "channel_join",
+    "text": "<@U1CC0FMCZ|siddharth> has joined the channel",
+    "ts": "1464372256.004532",
+    "id": "27de36125",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "<https://sites.google.com/a/android.com/tools/recent/androidstudio22preview2available|Android Studio 2.2 Preview 2 Available>\nWe've just release Android Studio 2.2 Preview 2 to the canary channel.This build contains a number of fixes for various critical bugs found in preview 1:ConstraintLayout: version 1.0.0-alpha2Fixed guidelines crash on deviceFixed typo in attribute name (leftToLeft)Changed orientation attribute namespace from app to android to fix a conflict with GridLayoutConstraintLayout now works properly inside ScrollViewConstraintLayout now works properly inside RecyclerViewPercentage positioning of...",
+    "username": "Posts of Recent Changes",
+    "icons": {
+      "image_36": "https://a.slack-edge.com/66f9/img/services/rss_36.png",
+      "image_48": "https://a.slack-edge.com/66f9/img/services/rss_48.png",
+      "image_72": "https://a.slack-edge.com/205a/img/services/rss_72.png"
+    },
+    "bot_id": "B062SSUPJ",
+    "attachments": [
+      {
+        "title": "Android Studio 2.2 Preview 2 Available - Android Studio Project Site",
+        "title_link": "https://sites.google.com/a/android.com/tools/recent/androidstudio22preview2available",
+        "text": "Android tools project information site",
+        "fallback": "Android Studio 2.2 Preview 2 Available - Android Studio Project Site",
+        "image_url": "https://sites.google.com/a/android.com/tools/_/rsrc/1464372143053/recent/androidstudio22preview2available/22p2.png",
+        "from_url": "https://sites.google.com/a/android.com/tools/recent/androidstudio22preview2available",
+        "image_width": 424,
+        "image_height": 219,
+        "image_bytes": 15898,
+        "service_icon": "https://ssl.gstatic.com/sites/p/fdb0ef/system/app/images/apple-touch-icon.png",
+        "service_name": "sites.google.com",
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1464372368.004533",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50",
+          "U0KA8PLE5"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "27de36126",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JGJJMLP",
+    "text": "oh well \"Unfortunately the Espresso Test Recorder is still not in this build; we're addressing a few more issues and then hope to have it ready in the next build!”",
+    "ts": "1464372980.004535",
+    "id": "27de36127",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETA9WHH",
+    "text": "well it’s a good thing i didn’t go looking for it yet",
+    "ts": "1464373036.004536",
+    "id": "27de36128",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U17NKN5CH",
+    "text": "Due to a bug, we do not have patches from Preview 1 to Preview 2",
+    "ts": "1464374889.004537",
+    "id": "27de36129",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U17NKN5CH",
+    "text": "just like updating xCode, you need to download whopping 4GB for small updates :face_with_rolling_eyes:",
+    "ts": "1464374969.004538",
+    "id": "27de36130",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JGJJMLP",
+    "text": "fail",
+    "ts": "1464375035.004539",
+    "id": "27de36131",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "<https://sites.google.com/a/android.com/tools/recent/androidstudio22preview2available|Android Studio 2.2 Preview 2 Available>\nWe've just released Android Studio 2.2 Preview 2 to the canary channel.This build contains a number of fixes for various critical bugs found in preview 1:ConstraintLayout: version 1.0.0-alpha2Fixed guidelines crash on deviceFixed typo in attribute name (leftToLeft)Changed orientation attribute namespace from app to android to fix a conflict with GridLayoutConstraintLayout now works properly inside ScrollViewConstraintLayout now works properly inside RecyclerViewPercentage positioning of...",
+    "username": "Posts of Recent Changes",
+    "icons": {
+      "image_36": "https://a.slack-edge.com/66f9/img/services/rss_36.png",
+      "image_48": "https://a.slack-edge.com/66f9/img/services/rss_48.png",
+      "image_72": "https://a.slack-edge.com/205a/img/services/rss_72.png"
+    },
+    "bot_id": "B062SSUPJ",
+    "subtype": "bot_message",
+    "ts": "1464375070.004540",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "27de36132",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "was 447 MB for me",
+    "ts": "1464375175.004541",
+    "id": "27de36133",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "which is still kinda large but, c'est la preview",
+    "ts": "1464375212.004542",
+    "id": "27de36134",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KTPB91V",
+    "text": "<@U0546QERR>: but you are using it for daily work?",
+    "ts": "1464378008.004545",
+    "id": "27de36135",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBN2DV2",
+    "text": "hey guys am stuck in a problem ,  i have  `SearchView` in my `RecyclerView`,  user can delete the objects of this  `RecyclerView` but when user searches for anything an deletes the object from the results this is where   am having problem ,   when the search is not active am using a `DefaultArrayList` of Objects but when the searchBar is Active my  result Objects are shown in another ArrayList  named as `FilteredArrayList` and when i delete an item from array list the object is got deleted from the `FilteredArrayList` and from `DataBase` but not from the `DefaultArrayList` so when the search ends the same deleted file still remains at the `DefaultArrayList`",
+    "ts": "1464378013.004546",
+    "id": "27de36136",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KTPB91V",
+    "text": "jack &amp; jill support annotations now?",
+    "ts": "1464378018.004547",
+    "id": "27de36137",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "<@U0KTPB91V> preview? yes i use it for daily dev",
+    "ts": "1464378058.004548",
+    "id": "27de36138",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "haven't looked at any of the new features yet though",
+    "ts": "1464378070.004551",
+    "id": "27de36139",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBN2DV2",
+    "text": "so any idea how can i notify the `DefaultArrayList` that the Object is not exists anymore (which is still cached the `DefaultArrayList` ) ???",
+    "edited": {
+      "user": "U0JBN2DV2",
+      "ts": "1464378163.000000"
+    },
+    "ts": "1464378101.004553",
+    "id": "27de36140",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KTPB91V",
+    "text": "<@U0546QERR>: ahh, right, I’m at 2.1.1, :slightly_smiling_face:",
+    "ts": "1464378137.004554",
+    "id": "27de36141",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CT7JDN3",
+    "text": "<@U0546QERR>: \n```\nAlso, due to a bug, we're not able to offer patches from Preview 1 to Preview 2, so you'll need to download a complete install (and the complete install is a bit bigger in 2.2 than in the past since we now bundle a copy of OpenJDK to address a number of font rendering and other stability issues). However, the bug should be fixed in this build such that patching from Preview 2 to the next build will work.\n```",
+    "ts": "1464379322.004556",
+    "id": "27de36142",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CT7JDN3",
+    "text": "The reason why download is large.",
+    "ts": "1464379339.004557",
+    "id": "27de36143",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "again? ugh",
+    "ts": "1464379348.004558",
+    "id": "27de36144",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "OpenJDK bundled is like +200mb",
+    "edited": {
+      "user": "U08GFT5V5",
+      "ts": "1464379581.000000"
+    },
+    "ts": "1464379553.004559",
+    "id": "27de36145",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CT7JDN3",
+    "text": "`Unfortunately the Espresso Test Recorder is still not in this build; we're addressing a few more issues and then hope to have it ready in the next build!`\n:’(",
+    "edited": {
+      "user": "U0CT7JDN3",
+      "ts": "1464379620.000000"
+    },
+    "ts": "1464379606.004561",
+    "id": "27de36146",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

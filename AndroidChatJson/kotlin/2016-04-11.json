@@ -1,0 +1,315 @@
+[
+  {
+    "user": "U0K1ALDQE",
+    "text": "I figured out what the problem was with the generics <@U0548MM6B>",
+    "ts": "1460365162.000412",
+    "id": "11ko1221",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "managed to do it that way?",
+    "ts": "1460365289.000413",
+    "id": "11ko1222",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Hmm yes.",
+    "ts": "1460366327.000414",
+    "id": "11ko1223",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "But I know why it was necessary :stuck_out_tongue_winking_eye:",
+    "ts": "1460366337.000415",
+    "id": "11ko1224",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Java does not enforce you to specify a nested(?) generic and does a cast under the hood",
+    "ts": "1460366372.000416",
+    "id": "11ko1225",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "so in java I could say:\n`public abstract class MVPActivity&lt;P extends MVPContract.Presenter&gt; extends AppCompatActivit  implements MVPContract.View`",
+    "ts": "1460366450.000417",
+    "id": "11ko1226",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "And it casts to V from the generic MVPContract.Presenter&lt;V extends MVPContract.View&gt; under the hood",
+    "edited": {
+      "user": "U0K1ALDQE",
+      "ts": "1460366508.000000"
+    },
+    "ts": "1460366498.000418",
+    "id": "11ko1227",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "And in kotlin you are required to specify the nested generic. And thus I had to manually cast",
+    "ts": "1460366525.000420",
+    "id": "11ko1228",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "What I overlooked was that java does it for you, and is thus also more error prone.",
+    "ts": "1460366542.000421",
+    "id": "11ko1229",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I was misinformed somewhere and was stupid enough to overlook other stuff because of it.",
+    "ts": "1460366611.000422",
+    "id": "11ko1230",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "It works. The mvp setup is pretty easy and straight forward. And I learned quite a lot during the setup so I’m quite happy. Although I’m really looking forward to that MVP setup you talked about for that contest.",
+    "ts": "1460366683.000423",
+    "id": "11ko1231",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "Interesting, but wonder why it didn’t let me do it in Java :thinking_face:",
+    "ts": "1460366778.000424",
+    "id": "11ko1232",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Cause you didn’t have the nested generic that triggered the nested generic",
+    "ts": "1460366856.000425",
+    "id": "11ko1233",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "This is knee deep in generics :smile:",
+    "ts": "1460366979.000426",
+    "id": "11ko1234",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D545E5T",
+    "subtype": "channel_join",
+    "text": "<@U0D545E5T|aamirabro> has joined the channel",
+    "ts": "1460382848.000427",
+    "id": "11ko1235",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N7D6F50",
+    "inviter": "U08GFT5V5",
+    "subtype": "channel_join",
+    "text": "<@U0N7D6F50|linkbait> has joined the channel",
+    "ts": "1460404075.000428",
+    "id": "11ko1236",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Any1 having problems with kotlin modules and tests?",
+    "ts": "1460443916.000429",
+    "id": "11ko1237",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

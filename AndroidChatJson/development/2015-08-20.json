@@ -1,0 +1,2432 @@
+[
+  {
+    "user": "U053Q5G4E",
+    "text": "Is it possible to have the status transparent in one fragment and non-transparent in another fragment. But both fragments will be displayed on the same activity",
+    "ts": "1440078985.002412",
+    "id": "20de6935",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "pretty sure you just make requests to the window",
+    "ts": "1440079038.002413",
+    "id": "20de6936",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "so like getActivity().getWindow().setFlags maybe?",
+    "ts": "1440079051.002414",
+    "id": "20de6937",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "yeah you can, i have changes even in the same fragment",
+    "ts": "1440079078.002415",
+    "id": "20de6938",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "you can even hack it out with a transparent",
+    "ts": "1440079118.002416",
+    "id": "20de6939",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "is editing the window flags how you toggle the transparency?",
+    "ts": "1440079145.002417",
+    "id": "20de6940",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "i know styles can do it for you",
+    "ts": "1440079160.002418",
+    "id": "20de6941",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053Q5G4E",
+    "text": "Didn't think about a in-code solution yet. I'll have a look!  Tried it with xml and themes... but the only way I could find was setting the windowColor to my primary_dark color. :confused: but.. urgh..",
+    "ts": "1440079171.002419",
+    "id": "20de6942",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "well I think that only works at the activity level",
+    "ts": "1440079195.002420",
+    "id": "20de6943",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I ‘dont’ believe you can make the styles alter the window from a fragment style",
+    "ts": "1440079210.002421",
+    "id": "20de6944",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "but i haven’t had coffee either",
+    "ts": "1440079224.002422",
+    "id": "20de6945",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053Q5G4E",
+    "text": "Chris Banes does it in his cheesesquare app as well. But it seems like the AppBarLayout is doing the magic for him.",
+    "ts": "1440079256.002423",
+    "id": "20de6946",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053Q5G4E",
+    "text": "I guess I'll take the in-code approach. Just thought xml would be cleaner",
+    "ts": "1440079297.002424",
+    "id": "20de6947",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "yeah I think you can’t do it via xml",
+    "ts": "1440079315.002425",
+    "id": "20de6948",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053Q5G4E",
+    "text": "Thanks :simple_smile:",
+    "ts": "1440079380.002426",
+    "id": "20de6949",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Anyone experience with GCM and or APNS?",
+    "ts": "1440086926.002427",
+    "id": "20de6950",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U01U4H",
+    "text": "yup",
+    "ts": "1440086995.002428",
+    "id": "20de6951",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "what specifically? we use both, but we also use the legacy GCM lib :confused:",
+    "ts": "1440087000.002429",
+    "id": "20de6952",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U01U4H",
+    "text": "only client side",
+    "ts": "1440087014.002430",
+    "id": "20de6953",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U01U4H",
+    "text": "xd",
+    "ts": "1440087015.002431",
+    "id": "20de6954",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "So I want to refactor this lib: <https://github.com/jleclanche/django-push-notifications>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "jleclanche/django-push-notifications",
+        "title_link": "https://github.com/jleclanche/django-push-notifications",
+        "text": "django-push-notifications - Send push notifications to mobile devices through GCM or APNS in Django.",
+        "fallback": "GitHub: jleclanche/django-push-notifications",
+        "thumb_url": "https://avatars0.githubusercontent.com/u/235410?v=3&s=400",
+        "from_url": "https://github.com/jleclanche/django-push-notifications",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1440087019.002432",
+    "id": "20de6955",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "As it uses a lot of unneeded data for a library",
+    "ts": "1440087028.002434",
+    "id": "20de6956",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Only a registration token is needed for both APNS and GCM, right?",
+    "ts": "1440087050.002435",
+    "id": "20de6957",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U01U4H",
+    "text": "APNS -&gt; you need the certificates",
+    "edited": {
+      "user": "U04U01U4H",
+      "ts": "1440087117.000000"
+    },
+    "ts": "1440087064.002436",
+    "id": "20de6958",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I mean the registration id of the user",
+    "ts": "1440087088.002437",
+    "id": "20de6959",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U01U4H",
+    "text": "yes, but for the APNS you also need to read the certificates",
+    "ts": "1440087127.002439",
+    "id": "20de6960",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Yes, I know. But I'm talking about data about the user",
+    "ts": "1440087144.002440",
+    "id": "20de6961",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "This library uses device_id too which I find totally unnecessary for a lib like this",
+    "ts": "1440087170.002441",
+    "id": "20de6962",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I only want the ability to send messages and use this model how I want.",
+    "ts": "1440087189.002442",
+    "id": "20de6963",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "So I'm gonna rip it all out",
+    "ts": "1440087198.002443",
+    "id": "20de6964",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "+ I'm gonna fix some stuff that is mentioned in the issues",
+    "ts": "1440087300.002444",
+    "id": "20de6965",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I didn't get any replies regarding my question so I'm just gonna fork it and go from there.",
+    "ts": "1440087318.002445",
+    "id": "20de6966",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Is it mentioned anywhere how long the registration ids can be in GCM? Nothing here: <https://developers.google.com/cloud-messaging/server-ref>",
+    "ts": "1440088635.002446",
+    "id": "20de6967",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Ah damn",
+    "ts": "1440088661.002447",
+    "id": "20de6968",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Can be up to 4K :open_mouth:",
+    "ts": "1440088665.002448",
+    "id": "20de6969",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "can't find it for APNS though..",
+    "ts": "1440089349.002449",
+    "id": "20de6970",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "the id is not 4k long",
+    "ts": "1440089383.002450",
+    "id": "20de6971",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "the payload can be",
+    "ts": "1440089387.002451",
+    "id": "20de6972",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "the id is a string of like... 32 chars?",
+    "ts": "1440089398.002452",
+    "id": "20de6973",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "i'd have to look it up at work",
+    "ts": "1440089411.002453",
+    "id": "20de6974",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "On a Google Group a developer of GCM says it can be up to 4k",
+    "ts": "1440089418.002454",
+    "id": "20de6975",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "The max size for a registration_id is bounded by the max size for a cookie, which is 4K (4096 bytes).",
+    "ts": "1440089453.002455",
+    "id": "20de6976",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "lol that's retarded",
+    "ts": "1440089468.002456",
+    "id": "20de6977",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<https://groups.google.com/forum/#!msg/android-gcm/q2PzJTP71TY/DNX4lvDu5X4J>",
+    "ts": "1440089471.002457",
+    "id": "20de6978",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Why can't Apple mention how long it can be?",
+    "ts": "1440089537.002458",
+    "id": "20de6979",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "In this library it is 64, but where does he get that from?",
+    "ts": "1440089569.002459",
+    "id": "20de6980",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "<https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/CommunicatingWIthAPS.html>",
+    "attachments": [
+      {
+        "text": "Describes how apps can send and receive user notifications locally and remotely.",
+        "fallback": "Describes how apps can send and receive user notifications locally and remotely.",
+        "from_url": "https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/CommunicatingWIthAPS.html",
+        "id": 1
+      }
+    ],
+    "ts": "1440089588.002460",
+    "id": "20de6981",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "it's 32",
+    "ts": "1440089591.002462",
+    "id": "20de6982",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Thank you! :smile:",
+    "ts": "1440089751.002463",
+    "id": "20de6983",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "np :smile:",
+    "ts": "1440089758.002464",
+    "id": "20de6984",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "That mentions 32 bytes",
+    "ts": "1440089913.002465",
+    "id": "20de6985",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "yup",
+    "ts": "1440089952.002466",
+    "id": "20de6986",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "although found another site that mentions the length actually being right in front of the token",
+    "ts": "1440089982.002467",
+    "id": "20de6987",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "¯\\_(ツ)_/¯",
+    "ts": "1440089984.002468",
+    "id": "20de6988",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Is there a request example to an apns server",
+    "ts": "1440090028.002469",
+    "id": "20de6989",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Jesus christ I'm getting tired of their shitty schematic images",
+    "ts": "1440090038.002470",
+    "id": "20de6990",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Well nvm, 64 chars there we go",
+    "ts": "1440090128.002471",
+    "id": "20de6991",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I don't get why GCM has so many",
+    "ts": "1440090144.002472",
+    "id": "20de6992",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Damnit, the guy uses tabs for Python...",
+    "ts": "1440090797.002473",
+    "id": "20de6993",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "<https://twitter.com/m_evans10/status/634409729327034368>",
+    "attachments": [
+      {
+        "fallback": "<https://twitter.com/m_evans10|@m_evans10>: New interactive watch faces in Android Wear 1.3! <http://android-developers.blogspot.com/2015/08/interactive-watch-faces-with-latest.html>",
+        "ts": 1440090040,
+        "author_name": "Mike Evans ☃",
+        "author_link": "https://twitter.com/m_evans10/status/634409729327034368",
+        "author_icon": "https://pbs.twimg.com/profile_images/580820553604403200/oGcBC9ey_normal.jpg",
+        "author_subname": "@m_evans10",
+        "text": "New interactive watch faces in Android Wear 1.3! <http://android-developers.blogspot.com/2015/08/interactive-watch-faces-with-latest.html>",
+        "service_name": "twitter",
+        "service_url": "https://twitter.com/",
+        "from_url": "https://twitter.com/m_evans10/status/634409729327034368",
+        "id": 1,
+        "footer": "Twitter",
+        "footer_icon": "https://a.slack-edge.com/6e067/img/services/twitter_pixel_snapped_32.png"
+      }
+    ],
+    "ts": "1440091567.002474",
+    "id": "20de6994",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "new android wear update",
+    "ts": "1440091570.002476",
+    "id": "20de6995",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "&lt;/shameless self promo&gt;",
+    "ts": "1440091580.002477",
+    "id": "20de6996",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Now I want an Android Wear watch :confused:",
+    "ts": "1440092305.002478",
+    "id": "20de6997",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I like my Pebble, but shiny things like this always get me :smile:",
+    "ts": "1440092326.002479",
+    "id": "20de6998",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "quick change in topic: Say I have a Service and want to constantly update my main Toolbar according to info from that Service. Is that something where Rx could help me? Or do I still don't get it?",
+    "ts": "1440092374.002480",
+    "id": "20de6999",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "<@U04TK850N>: EventBus ftw! :stuck_out_tongue:",
+    "ts": "1440093029.002481",
+    "id": "20de7000",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "That was the alternative I was wondering about",
+    "ts": "1440093044.002482",
+    "id": "20de7001",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "I love my moto 360, but I just wish google now was as powerful as it is on the phone",
+    "ts": "1440093053.002483",
+    "id": "20de7002",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "<@U04TK850N>: sorry I don’t know anything about RxJava/Android, it might be even easier than an event bus",
+    "ts": "1440093087.002484",
+    "id": "20de7003",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U04TK850N>: event bus, Rx, event bus via Rx, and a bound service are a few options",
+    "ts": "1440094384.002485",
+    "id": "20de7004",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "That is just a sample. The Service in question would be an integral part of the app. So talking to it and getting notified by it would happen through the whole app",
+    "ts": "1440094437.002486",
+    "id": "20de7005",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I would strongly recommend against bounded services unless you need IPC",
+    "ts": "1440094578.002487",
+    "id": "20de7006",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I see",
+    "ts": "1440095094.002488",
+    "id": "20de7007",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I'll probably try an event bus approach",
+    "ts": "1440096097.002489",
+    "id": "20de7008",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "I love it. I can’t understand Android development without an event bus right now. Probably a bad thing… but it’s convenient and it works :simple_smile:",
+    "ts": "1440102527.002490",
+    "id": "20de7009",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "do you actually use EventBus or a diff library?",
+    "ts": "1440102619.002491",
+    "id": "20de7010",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "I’ve used EventBus and Otto and I think I like EventBus the most. Mostly because of the way you can handle threads to execute the code on.",
+    "ts": "1440102688.002492",
+    "id": "20de7011",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "This is exactly what I thought from looking at some docs and slides",
+    "ts": "1440102724.002493",
+    "id": "20de7012",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "yup. I might be wrong, but Otto forces you to use a diff bus for diff threads. With EventBus you can decide the thread just naming the method: `onEvent` to run code in the caller’s thread, `onEventMainThread` to run the code in the main thread and so on.",
+    "ts": "1440102989.002494",
+    "id": "20de7013",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "as far as I know, Otto just runs the code in the callers (well, the code producing the event) thread. you can tell the bus to run always in the UI thread, but you can’t reuse it for background threads.",
+    "ts": "1440103037.002495",
+    "id": "20de7014",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Yeah I saw you have to post to the main Looper/Handler",
+    "ts": "1440103113.002496",
+    "id": "20de7015",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "yup, something like that",
+    "ts": "1440103125.002497",
+    "id": "20de7016",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "it feels a bit hack-y, and it can be hard to follow, but the advantages are huge (using an event bus pattern, I mean)",
+    "edited": {
+      "user": "U0546MZGX",
+      "ts": "1440103182.000000"
+    },
+    "ts": "1440103161.002498",
+    "id": "20de7017",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I'll give it a try :simple_smile: Thanks for your input!",
+    "ts": "1440103276.002500",
+    "id": "20de7018",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "sure :smile: let us know how it goes!",
+    "ts": "1440103566.002501",
+    "id": "20de7019",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "would users be salty if you record analytics without asking? with no PII obviously",
+    "ts": "1440116955.002502",
+    "id": "20de7020",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i honestly wouldn’t care but i’m a dev, and people are crazy defensive about their “data” these days",
+    "ts": "1440117051.002503",
+    "id": "20de7021",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U0546QERR>: you need to add a privacy policy (at least here). Put it in there.",
+    "ts": "1440118761.002504",
+    "id": "20de7022",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "But I would have an option to disable it.",
+    "ts": "1440118781.002505",
+    "id": "20de7023",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "But I would say what you analyse and why.",
+    "ts": "1440118799.002506",
+    "id": "20de7024",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053Q5XP2",
+    "text": "We’ve been looking at different analytics platforms. GA seems very limited in terms of figuring out trends and patterns. On the other hand, FB analytics seems out of this world. You can create segments of users based on if they trigger an event or where they come from and then see how likely they are to convert or trigger an event etc. The only limitation from what we can tell is that the even viewer will only let you filter by one custom dimension. Some people are saying “adjust” is another good one but that may be expensive",
+    "ts": "1440122116.002507",
+    "id": "20de7025",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "<@U0546MZGX> I have a snippet I can give you that will allow Otto to run on whatever thread it’s called from, and another one that forces it to the main looper everytime",
+    "ts": "1440127190.002508",
+    "id": "20de7026",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "<@U0542GLTE> but you can't reuse the same bus right? ",
+    "ts": "1440130327.002509",
+    "id": "20de7027",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "You can create two different buses for those two cases, but the caller needs to k ow which one to use and that makes it kinda useless. It should be the receiver of the event who knows how and where to use it. But once again, I might completely wrong abs Otto might allow you to do that. ",
+    "ts": "1440130479.002510",
+    "id": "20de7028",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "```/**\n * Created by amusice on 11/14/14.\n * &lt;p/&gt;\n * Simple extension of Bus to force events to go through the main thread\n */\npublic class MyEventBus extends Bus {\n    private final Handler handler = new Handler(Looper.getMainLooper());\n\n    /**\n     * Overrides post event to enforce that the is receiving the event in the main thread.\n     *\n     * @param event\n     */\n    @Override\n    public void post(final Object event) {\n        //Check if the publishing is already on the main thread\n        if (Looper.myLooper() == Looper.getMainLooper()) {\n            //Simply let it flow through the main thread\n            <http://super.post|super.post>(event);\n        } else {\n            //Event wasn't posted on the main thread, make it go through a different thread\n            <http://handler.post|handler.post>(new Runnable() {\n                @Override\n                public void run() {\n                    <http://MyEventBus.super.post|MyEventBus.super.post>(event);\n                }\n            });\n        }\n    }\n}\n```",
+    "ts": "1440130750.002511",
+    "id": "20de7029",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "<@U0546MZGX>:",
+    "ts": "1440130781.002512",
+    "id": "20de7030",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I saw that snippet :open_mouth: ",
+    "ts": "1440130864.002513",
+    "id": "20de7031",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "It’s not uncommon.",
+    "ts": "1440130969.002514",
+    "id": "20de7032",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Because people often find that Otto is thread based, so handing stuff from say a service back to the MainLooper poises issues",
+    "ts": "1440130997.002515",
+    "id": "20de7033",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Otto actually won’t pick up the event firing",
+    "ts": "1440131012.002516",
+    "id": "20de7034",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "A service should be fine since they run in the main thread by default",
+    "ts": "1440132035.002517",
+    "id": "20de7035",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "That snippet ensures the code to be run in the main thread, but it doesn't work for another threads. Event Bus does this out of the box",
+    "ts": "1440132093.002518",
+    "id": "20de7036",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "So you don't have to worry who fires the event or from where, it's the receiver who handles this",
+    "ts": "1440132158.002519",
+    "id": "20de7037",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "By the way, I think there is no need for that code, you can do this : `new Bus(ThreadEnforcer.MAIN)`",
+    "ts": "1440132358.002520",
+    "id": "20de7038",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "And it takes care of it",
+    "ts": "1440132365.002521",
+    "id": "20de7039",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "It sounds like that would, but it doesn't",
+    "ts": "1440132393.002522",
+    "id": "20de7040",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "Ouch",
+    "ts": "1440132400.002523",
+    "id": "20de7041",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "You can see. <https://github.com/square/otto/issues/38>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "Refreshing the screen (fragment) from another thread · Issue #38 · square/otto · GitHub",
+        "title_link": "https://github.com/square/otto/issues/38",
+        "text": "Hi, I am using Otto on my application. It works well. I would be interested in refreshing the screen from an event in an intentservice (which has its own thread). For that, I am trying to use Ott...",
+        "fallback": "GitHub: Refreshing the screen (fragment) from another thread · Issue #38 · square/otto",
+        "thumb_url": "https://avatars1.githubusercontent.com/u/1029874?v=3&s=400",
+        "from_url": "https://github.com/square/otto/issues/38",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1440132432.002524",
+    "id": "20de7042",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "Oh I see. The documentation is pretty confusing. That rule means the event won't get fired if posted from another thread ",
+    "ts": "1440132536.002526",
+    "id": "20de7043",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "However, I only use an EventBus whenever I am doing something that NSNotification would work for",
+    "ts": "1440132581.002527",
+    "id": "20de7044",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Which happens only a handful of times in an app",
+    "ts": "1440132594.002528",
+    "id": "20de7045",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "NSnotification? ",
+    "ts": "1440132617.002529",
+    "id": "20de7046",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "Sounds like objective c :p",
+    "ts": "1440132636.002530",
+    "id": "20de7047",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "lol. It is.",
+    "ts": "1440132689.002531",
+    "id": "20de7048",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Design patterns are design patterns my friend",
+    "ts": "1440132711.002532",
+    "id": "20de7049",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "Yeah I guess for most cases Otto is more than enough, but I fire events from almost anywhere so I need more flexibility",
+    "ts": "1440132713.002533",
+    "id": "20de7050",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "They are hehe. What do you mean by notification though? ",
+    "ts": "1440132748.002534",
+    "id": "20de7051",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Isn't NSNotification more like a Broadcast?",
+    "ts": "1440133357.002535",
+    "id": "20de7052",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "Oh ok. Not sure. ",
+    "ts": "1440133439.002536",
+    "id": "20de7053",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Yes. NSNotification goes across the entire app",
+    "ts": "1440133468.002537",
+    "id": "20de7054",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Much like an eventbus",
+    "ts": "1440133473.002538",
+    "id": "20de7055",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Aka. I try to not use eventbus unless I need to notify multiple things",
+    "ts": "1440133485.002539",
+    "id": "20de7056",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "Yeah Otto and eventbus are nothing more than a \"simplification\" of broadcasts",
+    "ts": "1440133549.002540",
+    "id": "20de7057",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "I use it all the time to refresh views or to notify about logins and stuff like that",
+    "ts": "1440133634.002541",
+    "id": "20de7058",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "Communication between fragments and activities too",
+    "ts": "1440133705.002542",
+    "id": "20de7059",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "Check out @JakeWharton's Tweet: <https://twitter.com/JakeWharton/status/634591335815729152?s=09>",
+    "attachments": [
+      {
+        "fallback": "<https://twitter.com/JakeWharton|@JakeWharton>: Coming this fall to HBO. <https://pbs.twimg.com/media/CM6FaMNVEAIPQSr.png>",
+        "ts": 1440133339,
+        "author_name": "Jake Wharton",
+        "author_link": "https://twitter.com/JakeWharton/status/634591335815729152",
+        "author_icon": "https://pbs.twimg.com/profile_images/378800000666093975/cbe970ce9a19d2c6bec0d06c6004ccf0_normal.png",
+        "author_subname": "@JakeWharton",
+        "text": "Coming this fall to HBO. <https://pbs.twimg.com/media/CM6FaMNVEAIPQSr.png>",
+        "service_name": "twitter",
+        "service_url": "https://twitter.com/",
+        "image_url": "https://pbs.twimg.com/media/CM6FaMNVEAIPQSr.png",
+        "image_width": 600,
+        "image_height": 400,
+        "image_bytes": 141617,
+        "from_url": "https://twitter.com/JakeWharton/status/634591335815729152?s=09",
+        "id": 1,
+        "footer": "Twitter",
+        "footer_icon": "https://a.slack-edge.com/6e067/img/services/twitter_pixel_snapped_32.png"
+      },
+      {
+        "text": "<https://pbs.twimg.com/media/CM6FdNNUkAABj9B.jpg>",
+        "image_url": "https://pbs.twimg.com/media/CM6FdNNUkAABj9B.jpg",
+        "image_width": 599,
+        "image_height": 337,
+        "image_bytes": 48288,
+        "id": 2
+      }
+    ],
+    "ts": "1440133830.002543",
+    "id": "20de7060",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "After all this time, I still don't know if he is against them or not. ",
+    "ts": "1440133871.002545",
+    "id": "20de7061",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546MZGX",
+    "text": "I use them",
+    "ts": "1440133878.002546",
+    "id": "20de7062",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "against what?",
+    "ts": "1440136760.002547",
+    "id": "20de7063",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "oh, enums?",
+    "ts": "1440136772.002548",
+    "id": "20de7064",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

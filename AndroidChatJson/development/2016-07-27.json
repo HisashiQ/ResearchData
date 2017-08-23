@@ -1,0 +1,2332 @@
+[
+  {
+    "user": "U0K1ALDQE",
+    "text": "What would you guys do for passing a bitmap to another activity / fragment?",
+    "ts": "1469604076.000871",
+    "id": "27de40825",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I was thinking a BitmapRepo kinda implementation where you could push / pop a Bitmap. Kinda like a stack but with only room for 1 Bitmap",
+    "ts": "1469604110.000872",
+    "id": "27de40826",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "You could push it to native ashmem and don’t implement freeing that up again, cause you know there is no use case for that :troll:",
+    "ts": "1469604253.000873",
+    "id": "27de40827",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": ":stuck_out_tongue_winking_eye:",
+    "edited": {
+      "user": "U0K1ALDQE",
+      "ts": "1469604966.000000"
+    },
+    "ts": "1469604665.000874",
+    "id": "27de40828",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1VFFBCK0",
+    "text": "Is there a specific reason, why *onTouchEvent* is not getting called on the whole device display? So my layout kinda looks like a button at the top and nothing else, and the *onTouchEvent* is getting only triggered if I click in the button region, everything below doesn't trigger it :confused:",
+    "ts": "1469605369.000878",
+    "id": "27de40829",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1FECKXA9",
+    "text": "Hi all,\n\nI been following the cookie app example from Udacity.\n\nI want to change it slightly so that  when the user clicks the eatCookie button it displays the (R.drawable.after_cookie) temporarily and then goes back to the default image (which is @drawable/before_cookie\"). Here is the method i want to chang:\n```    public void eatCookie(View view) {\n        // Find a reference to the ImageView in the layout. Change the image.\n        ImageView imageView = (ImageView) findViewById(R.id.android_cookie_image_view);\n        imageView.setImageResource(R.drawable.after_cookie);\n\n        // Find a reference to the TextView in the layout. Change the text.\n        TextView textView = (TextView) findViewById(R.id.status_text_view);\n        textView.setText(\"I'm so full\");\n    }``` \n\nHere is the repo:\n\n<https://github.com/udacity/Cookies-Example>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "udacity/Cookies-Example",
+        "title_link": "https://github.com/udacity/Cookies-Example",
+        "text": "Cookies-Example - The official repository for the first Android Development for Beginners App : Cookies",
+        "fallback": "GitHub: udacity/Cookies-Example",
+        "thumb_url": "https://avatars3.githubusercontent.com/u/1916665?v=3&s=400",
+        "from_url": "https://github.com/udacity/Cookies-Example",
+        "thumb_width": 304,
+        "thumb_height": 304,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1469610849.000879",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "27de40830",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "first of all. It’s bad practice to do `onClick` in xml but w/e",
+    "ts": "1469612297.000881",
+    "id": "27de40831",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "If your `onClick` is set to your Button it will on listen if there was a click on the button",
+    "ts": "1469612325.000882",
+    "id": "27de40832",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1VFFBCK0",
+    "text": "I don't have a specific onClick",
+    "ts": "1469612344.000883",
+    "id": "27de40833",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "If you want it to the whole screen add it to the LinearLayout",
+    "ts": "1469612346.000884",
+    "id": "27de40834",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "You do in your repo",
+    "ts": "1469612349.000885",
+    "id": "27de40835",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "```\n    &lt;Button\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_margin=\"16dp\"\n        android:text=\"Eat cookie\"\n        android:onClick=\"eatCookie\" /&gt;\n```",
+    "ts": "1469612362.000886",
+    "id": "27de40836",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "You have 0 listeners in your code.",
+    "ts": "1469612383.000887",
+    "id": "27de40837",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Z248CVB",
+    "text": "Hey, guys. I am trying to use getResources().getDrawable(R.drawable.btn_default_normal_holo_light) but Android studio cannot find R.drawable.btn_default_normal_holo_light. What I can do?",
+    "ts": "1469612386.000888",
+    "id": "27de40838",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1VFFBCK0",
+    "text": "I got this, which is working but not on the whole screen :     \n@Override\n    public boolean onTouchEvent(MotionEvent ev) {\n        System.out.println(\"touch\");\n        return mDetector.onTouchEvent(ev) || super.onTouchEvent(ev);\n    }",
+    "edited": {
+      "user": "U1VFFBCK0",
+      "ts": "1469612439.000000"
+    },
+    "ts": "1469612415.000889",
+    "id": "27de40839",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "You should give your linearlayout an id",
+    "ts": "1469612479.000891",
+    "id": "27de40840",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "and do something like `findViewById(R.id.container).addOnTouchLisetener(….);`",
+    "edited": {
+      "user": "U0K1ALDQE",
+      "ts": "1469612519.000000"
+    },
+    "ts": "1469612515.000892",
+    "id": "27de40841",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1VFFBCK0",
+    "text": "Wait a second, I explain the source of my problem: I implemented the *DismissOverlayView* exactly like it's explained here <https://developer.android.com/training/wearables/ui/exit.html> , but I don't get any click events",
+    "attachments": [
+      {
+        "title": "    Exiting Full-Screen Activities | Android Developers  ",
+        "title_link": "https://developer.android.com/training/wearables/ui/exit.html",
+        "text": "By default, users exit Android Wear activities by swiping from left to right. If the app contains horizontally scrollable content, users first have to navigate to the edge of the content and then swipe again from left to right to exit the app. For more…",
+        "fallback": "    Exiting Full-Screen Activities | Android Developers  ",
+        "from_url": "https://developer.android.com/training/wearables/ui/exit.html",
+        "service_icon": "https://developer.android.com/favicon.ico",
+        "service_name": "developer.android.com",
+        "id": 1
+      }
+    ],
+    "ts": "1469612572.000894",
+    "id": "27de40842",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "You did that why?",
+    "ts": "1469612676.000896",
+    "id": "27de40843",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1VFFBCK0",
+    "text": "Because I need a DismissOverlay :open_mouth: Or what exactly are you talking about :smile:",
+    "edited": {
+      "user": "U1VFFBCK0",
+      "ts": "1469612767.000000"
+    },
+    "ts": "1469612701.000897",
+    "id": "27de40844",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I don’t understand what you’re trying to do",
+    "ts": "1469613380.000899",
+    "id": "27de40845",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1VFKQWN7",
+    "text": "<@U1VFKQWN7|zakirhussain> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1469613418.000900",
+    "id": "27de40846",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1VFFBCK0",
+    "text": "This : <http://i.stack.imgur.com/qeYhN.png> is the *DismissOverlayView* , which I need to implement. This view should activate on a *longclick* onto your watch. But my app doesn't recognize my touch gestures.",
+    "attachments": [
+      {
+        "fallback": "206x244px image",
+        "image_url": "http://i.stack.imgur.com/qeYhN.png",
+        "image_width": 206,
+        "image_height": 244,
+        "image_bytes": 55436,
+        "from_url": "http://i.stack.imgur.com/qeYhN.png",
+        "id": 1
+      }
+    ],
+    "ts": "1469613598.000901",
+    "id": "27de40847",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "and what is your code… ?",
+    "ts": "1469613908.000903",
+    "id": "27de40848",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1FECKXA9",
+    "text": "hi <@U0K1ALDQE> i removed the onclick in  my xml. my code now looks like this but I still don't dont how to temporarily change the image onclick: ```   @Override\n    protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_main);\n\n\n        mButton = (Button) findViewById(R.id.btn_id);\n        mButton.setOnClickListener(new View.OnClickListener() {\n            public void onClick(View v) {\n\n\n                ImageView imageView = (ImageView) findViewById(R.id.android_cookie_image_view);\n                imageView.setImageResource(R.drawable.after_cookie);\n\n\n                TextView orderSummaryTextView = (TextView) findViewById(R.id.status_text_view);\n                orderSummaryTextView.setText(\"I'm so full\");\n\n\n\n            }\n        });```",
+    "ts": "1469614003.000904",
+    "id": "27de40849",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "You mean like after 5 seconds change it back to `before_cookie`",
+    "ts": "1469614073.000905",
+    "id": "27de40850",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "<http://stackoverflow.com/questions/20330355/timertask-or-handler>",
+    "attachments": [
+      {
+        "title": "Timertask or Handler",
+        "title_link": "http://stackoverflow.com/questions/20330355/timertask-or-handler",
+        "text": "Hi I have a quick question. Let's say that I want to perform some action every 10 seconds and it doesn't necessarily need to update the view. The question is: is it better (I mean more efficient and",
+        "fallback": "Timertask or Handler",
+        "thumb_url": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/questions/20330355/timertask-or-handler",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "service_icon": "http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d",
+        "service_name": "stackoverflow.com",
+        "id": 1
+      }
+    ],
+    "ts": "1469614131.000906",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "27de40851",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1FECKXA9",
+    "text": "yes",
+    "ts": "1469614152.000908",
+    "id": "27de40852",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U1VFFBCK0|tobiasw> uploaded a file: <https://androidchat.slack.com/files/tobiasw/F1VHAAVQF/touch_code.java|Touch code>",
+    "file": {
+      "id": "F1VHAAVQF",
+      "created": 1469614283,
+      "timestamp": 1469614283,
+      "name": "Touch_code.java",
+      "title": "Touch code",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U1VFFBCK0",
+      "editable": true,
+      "size": 428,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F1VHAAVQF/touch_code.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F1VHAAVQF/download/touch_code.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/tobiasw/F1VHAAVQF/touch_code.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F1VHAAVQF-c69fdbda44",
+      "edit_link": "https://androidchat.slack.com/files/tobiasw/F1VHAAVQF/touch_code.java/edit",
+      "preview": "mDetector = new GestureDetector(MainActivity.this, new GestureDetector.SimpleOnGestureListener() {\r\n            @Override\r\n            public void onLongPress(MotionEvent ev) {\r\n                System.out.println(\"LONGCLICK!!!!!\");\r\n\t\t\t}\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div oncopy='if(event.clipboardData){event.clipboardData.setData(\"text/plain\",window.getSelection().toString().replace(/\\u200b/g,\"\"));event.preventDefault();event.stopPropagation();}'><div><pre><span class=\"cm-variable\">mDetector</span> <span class=\"cm-operator\">=</span> <span class=\"cm-keyword\">new</span> <span class=\"cm-variable\">GestureDetector</span>(<span class=\"cm-variable\">MainActivity</span>.<span class=\"cm-keyword\">this</span>, <span class=\"cm-keyword\">new</span> <span class=\"cm-variable\">GestureDetector</span>.<span class=\"cm-variable\">SimpleOnGestureListener</span>() {</pre></div>\n<div><pre>            <span class=\"cm-meta\">@Override</span></pre></div>\n<div><pre>            <span class=\"cm-keyword\">public</span> <span class=\"cm-variable-3\">void</span> <span class=\"cm-variable\">onLongPress</span>(<span class=\"cm-variable\">MotionEvent</span> <span class=\"cm-variable\">ev</span>) {</pre></div>\n<div><pre>                <span class=\"cm-variable\">System</span>.<span class=\"cm-variable\">out</span>.<span class=\"cm-variable\">println</span>(<span class=\"cm-string\">&quot;LONGCLICK!!!!!&quot;</span>);</pre></div>\n<div><pre>\t\t\t}</pre></div>\n</div></div>\n</div>\n",
+      "lines": 16,
+      "lines_more": 11,
+      "preview_is_truncated": null,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U1VFFBCK0",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U1VFFBCK0|tobiasw>",
+    "bot_id": null,
+    "ts": "1469614283.000909",
+    "id": "27de40853",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1VFFBCK0",
+    "text": "It looks like this, which is actually exactly the same code as in this post : <https://developer.android.com/training/wearables/ui/exit.html> just a bit simplified after it didn't work... But this is never getting called on the watch",
+    "edited": {
+      "user": "U1VFFBCK0",
+      "ts": "1469614372.000000"
+    },
+    "ts": "1469614324.000910",
+    "id": "27de40854",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "<http://stackoverflow.com/questions/27524418/how-to-implement-gesture-recognition-in-android-wear>",
+    "attachments": [
+      {
+        "title": "How to implement gesture recognition in android wear",
+        "title_link": "http://stackoverflow.com/questions/27524418/how-to-implement-gesture-recognition-in-android-wear",
+        "text": "Hello i'm looking for how to detect gestures in android wear, in android i use some code like this, but doesn't work in android wear.. is there a way to override the default gestures actions or just",
+        "fallback": "How to implement gesture recognition in android wear",
+        "thumb_url": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/questions/27524418/how-to-implement-gesture-recognition-in-android-wear",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "service_icon": "http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d",
+        "service_name": "stackoverflow.com",
+        "id": 1
+      }
+    ],
+    "ts": "1469614685.000912",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U1VFFBCK0"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "27de40855",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1VFFBCK0",
+    "text": "Looks pretty similar to my stuff, but I will give it a try",
+    "ts": "1469614891.000914",
+    "id": "27de40856",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1VFFBCK0",
+    "text": "I mean I posted a simplified version of my code here, but I got actually all this style stuff and so on like it's explained from google developer website",
+    "ts": "1469614921.000915",
+    "id": "27de40857",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1VFFBCK0",
+    "text": "Mhm well, the touch works in an empty test activity, but still not in my real activity, which is actually a gridviewpager, do you think it is related to this, since both need gestures? But even if the touch works, it's still not opening the DismissView :disappointed:",
+    "edited": {
+      "user": "U1VFFBCK0",
+      "ts": "1469616600.000000"
+    },
+    "ts": "1469615324.000916",
+    "id": "27de40858",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1FECKXA9",
+    "text": "thanks <@U0K1ALDQE>  let me try that",
+    "ts": "1469616372.000917",
+    "id": "27de40859",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UETGCJU",
+    "text": "hey guys, quick question:\nwhat do you think of signing different applications with the same certificate / store key?",
+    "ts": "1469629940.000919",
+    "id": "27de40860",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UETGCJU",
+    "text": "my use case is building different applications with different package name/appId and different variables *but same code from the same project*.\nso there's an inherent connection between this, I guess, \"group\" of apps. \nwhat do you think? is there a considerable drawback to sharing the same signing certificate on all of my apps?",
+    "ts": "1469629949.000920",
+    "id": "27de40861",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "Are they going on play store?",
+    "edited": {
+      "user": "U053PPGDC",
+      "ts": "1469630176.000000"
+    },
+    "ts": "1469630154.000921",
+    "id": "27de40862",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "I have used same signing certificated for 10+ apps before no issue with it As long you following all piracy and other copyright rules..",
+    "ts": "1469630343.000923",
+    "id": "27de40863",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "but use same keystore for one account but not on multiple accounts (which is i guess you dont allow anyway)",
+    "ts": "1469630381.000924",
+    "id": "27de40864",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "well",
+    "ts": "1469630471.000925",
+    "id": "27de40865",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "in case your app gets super popular, and you might want to sell it to someone, I’d sign each with its own cert",
+    "ts": "1469630505.000926",
+    "id": "27de40866",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "so - different certificates",
+    "ts": "1469630514.000927",
+    "id": "27de40867",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "I’ve got a question regarding overdraw reduction…. My app is a single-activity app, where navigation is handled by swapping out fragments. In order to help with overdraw, in `onPostResume` for the root Activity, I’m calling `getWindow().setBackgroundDrawable(null)`. This is working to reduce overdraw, but now whenever I change fragments, there’s a bit of a GPU glitch where things look screwy  before the fragment transition is complete.  Does anybody have experience with this issue?",
+    "ts": "1469630611.000928",
+    "id": "27de40868",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U16GF1B0F>: use that for your background instead of whatever layout you're using",
+    "ts": "1469631148.000929",
+    "id": "27de40869",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "that's the background of the window",
+    "ts": "1469631151.000930",
+    "id": "27de40870",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "if you set it to null (transparent) it's gonna glitch out like you've noticed",
+    "ts": "1469631162.000931",
+    "id": "27de40871",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "\"use that for your background instead of whatever layout you're using”  not sure what you mean",
+    "ts": "1469631201.000932",
+    "id": "27de40872",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U16GF1B0F>: instead of relying on your Activity/Fragment's layout to provide the background, set it on the window directly",
+    "ts": "1469631686.000933",
+    "id": "27de40873",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "that’s unfortunately not an option here.. the design dictates a textured background that scrolls along with the content inside of the scrollviews/recyclerviews…",
+    "ts": "1469631778.000934",
+    "id": "27de40874",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "it it were a solid color then I’d agree",
+    "ts": "1469631790.000935",
+    "id": "27de40875",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U16GF1B0F>: well unless you're sure it's an issue I wouldn't worry about overdraw for now",
+    "ts": "1469631945.000936",
+    "id": "27de40876",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "otherwise just set the window background to something temporary during transitions",
+    "ts": "1469631962.000937",
+    "id": "27de40877",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0J3AKMPS",
+    "text": "how can I blur background of layout  from bitmap ?",
+    "ts": "1469633853.000938",
+    "id": "27de40878",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0J3AKMPS",
+    "text": "like linearlayout ,relativelayout ?",
+    "ts": "1469633902.000939",
+    "id": "27de40879",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "did you search?",
+    "ts": "1469634013.000940",
+    "id": "27de40880",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0J3AKMPS",
+    "text": "well yeah but unable to find :p",
+    "ts": "1469634249.000941",
+    "id": "27de40881",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<http://stacktips.com/tutorials/android/how-to-create-bitmap-blur-effect-in-android-using-renderscript>\n<https://github.com/wasabeef/Blurry>\n<https://developers.500px.com/a-blurring-view-for-android-7f33d41a047d#.m26n6q9f8>\n<https://android-arsenal.com/tag/176>\n\nEither your question is very unclear or you did not.",
+    "attachments": [
+      {
+        "service_name": "Stacktips - Howto Guides, News, Tutorials &amp; Code Snippets",
+        "title": "How to create Bitmap blur effect in Android using RenderScript | StackTips",
+        "title_link": "http://stacktips.com/tutorials/android/how-to-create-bitmap-blur-effect-in-android-using-renderscript",
+        "text": "Android RenderScript framework API can be used for performing computationally intensive tasks at high performance. In this tutorial we will take a look into how to create Bitmap blur effect in using Android RenderScript.",
+        "fallback": "Stacktips - Howto Guides, News, Tutorials &amp; Code Snippets: How to create Bitmap blur effect in Android using RenderScript | StackTips",
+        "image_url": "http://stacktips.com/wp-content/uploads/2016/06/android-tutorials-examples.jpeg",
+        "image_width": 444,
+        "image_height": 250,
+        "ts": 1442878983,
+        "from_url": "http://stacktips.com/tutorials/android/how-to-create-bitmap-blur-effect-in-android-using-renderscript",
+        "image_bytes": 15604,
+        "service_icon": "http://stacktips.com/wp-content/uploads/2016/07/stacktips-apple-touch.png",
+        "id": 1
+      },
+      {
+        "service_name": "GitHub",
+        "title": "wasabeef/Blurry",
+        "title_link": "https://github.com/wasabeef/Blurry",
+        "text": "Blurry is an easy blur library for Android",
+        "fallback": "GitHub: wasabeef/Blurry",
+        "thumb_url": "https://avatars2.githubusercontent.com/u/1833474?v=3&s=400",
+        "from_url": "https://github.com/wasabeef/Blurry",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 2
+      },
+      {
+        "service_name": "Medium",
+        "title": "A Blurring View for Android — 500px Engineering Blog",
+        "title_link": "https://developers.500px.com/a-blurring-view-for-android-7f33d41a047d#.m26n6q9f8",
+        "text": "Blur effect can be used to vividly convey a sense of layering of content. It allows the user to maintain the context, while focused on the…",
+        "fallback": "Medium: A Blurring View for Android — 500px Engineering Blog",
+        "image_url": "https://cdn-images-1.medium.com/max/1200/0*569uH-OzXAmbs4YO.png",
+        "fields": [
+          {
+            "title": "Reading time",
+            "value": "4 mins",
+            "short": true
+          }
+        ],
+        "ts": 1426550400,
+        "from_url": "https://developers.500px.com/a-blurring-view-for-android-7f33d41a047d#.m26n6q9f8",
+        "image_width": 249,
+        "image_height": 250,
+        "image_bytes": 258630,
+        "service_icon": "https://cdn-static-1.medium.com/_/fp/icons/favicon-medium.TAS6uQ-Y7kcKgi0xjcYHXw.ico",
+        "id": 3
+      }
+    ],
+    "edited": {
+      "user": "U055GGAHS",
+      "ts": "1469634435.000000"
+    },
+    "ts": "1469634418.000942",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "27de40882",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0J3AKMPS",
+    "text": "actually I want to blur background of LinearLayout from Imageview\nI know above blur technique",
+    "ts": "1469634597.000945",
+    "id": "27de40883",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0J3AKMPS",
+    "text": ":confused: ",
+    "ts": "1469634610.000946",
+    "id": "27de40884",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "you are trying to set a blurred background to a linearlayout or you want to blur what is behind a view?",
+    "ts": "1469634677.000947",
+    "id": "27de40885",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0J3AKMPS",
+    "text": "blurred background to a linearlayout",
+    "ts": "1469634747.000948",
+    "id": "27de40886",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "then use one of those linked methods to blur an image then set it as the background",
+    "ts": "1469634807.000949",
+    "id": "27de40887",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0J3AKMPS|coolalien01> uploaded a file: <https://androidchat.slack.com/files/coolalien01/F1VLYAERY/s60727-21233086.jpg|Slack for Android Upload>",
+    "file": {
+      "id": "F1VLYAERY",
+      "created": 1469634860,
+      "timestamp": 1469634860,
+      "name": "S60727-21233086.jpg",
+      "title": "Slack for Android Upload",
+      "mimetype": "image/jpeg",
+      "filetype": "jpg",
+      "pretty_type": "JPEG",
+      "user": "U0J3AKMPS",
+      "editable": false,
+      "size": 204508,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F1VLYAERY/s60727-21233086.jpg?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F1VLYAERY/download/s60727-21233086.jpg?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F1VLYAERY-46c4e299fd/s60727-21233086_64.jpg?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F1VLYAERY-46c4e299fd/s60727-21233086_80.jpg?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F1VLYAERY-46c4e299fd/s60727-21233086_360.jpg?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 360,
+      "thumb_360_h": 337,
+      "thumb_480": "https://files.slack.com/files-tmb/T04PLNDMP-F1VLYAERY-46c4e299fd/s60727-21233086_480.jpg?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_480_w": 480,
+      "thumb_480_h": 450,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F1VLYAERY-46c4e299fd/s60727-21233086_160.jpg?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720": "https://files.slack.com/files-tmb/T04PLNDMP-F1VLYAERY-46c4e299fd/s60727-21233086_720.jpg?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720_w": 720,
+      "thumb_720_h": 675,
+      "thumb_960": "https://files.slack.com/files-tmb/T04PLNDMP-F1VLYAERY-46c4e299fd/s60727-21233086_960.jpg?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_960_w": 960,
+      "thumb_960_h": 900,
+      "thumb_1024": "https://files.slack.com/files-tmb/T04PLNDMP-F1VLYAERY-46c4e299fd/s60727-21233086_1024.jpg?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_1024_w": 1024,
+      "thumb_1024_h": 960,
+      "image_exif_rotation": 1,
+      "original_w": 1068,
+      "original_h": 1001,
+      "permalink": "https://androidchat.slack.com/files/coolalien01/F1VLYAERY/s60727-21233086.jpg",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F1VLYAERY-0c0ba365f7",
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U0J3AKMPS",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0J3AKMPS|coolalien01>",
+    "bot_id": null,
+    "ts": "1469634864.000950",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "27de40888",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0J3AKMPS",
+    "text": ":point_up_2: like above image",
+    "ts": "1469634885.000951",
+    "id": "27de40889",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0J3AKMPS",
+    "text": "name of music and stuff blurred ",
+    "ts": "1469634903.000952",
+    "id": "27de40890",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "Hi guys. Quick question.\nWhat library/approach/technique do you use for input validation",
+    "ts": "1469636622.000953",
+    "id": "27de40891",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "Good question, I’d be curious to know peoples’ answers too, going to be a lot of that in my next milestone",
+    "ts": "1469637319.000954",
+    "id": "27de40892",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "depends on what kind of input validation we’re talking about. We have an onboarding/registration feature where we wrote ourselves - it’s quite simple. Data goes in, you validate according to your rules, you show an error message or enable the continue button if it’s all ok",
+    "ts": "1469638456.000955",
+    "id": "27de40893",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "depending on the form/flow, you might want to validate an individual field, or the whole form",
+    "ts": "1469638476.000956",
+    "id": "27de40894",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "<@U053PPGDC>: do you mean attaching a textwatcher or something like that to individual input fields and checking the inputs yourself. I was actually thinking along the lines to specifying the kind of validation you want (say 5 &lt;= length &lt;=10, or some form of pattern, etc),and let the framework/library/whatever take care of validating them",
+    "ts": "1469639659.000957",
+    "id": "27de40895",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "yeah we wrote something in those lines",
+    "ts": "1469639708.000958",
+    "id": "27de40896",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "don’t know whether it exists tho",
+    "ts": "1469639734.000959",
+    "id": "27de40897",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "At the point of submission, I usually find myself doing a lot of checks. I do feel there must be better ways of getting things like that done",
+    "ts": "1469639748.000960",
+    "id": "27de40898",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "Some internal work yea?",
+    "attachments": [
+      {
+        "fallback": "[July 27th, 2016 6:15 PM] zmarkan: don’t know whether it exists tho",
+        "author_subname": "zmarkan",
+        "ts": "1469639734.000959",
+        "channel_id": "C04NZAN54",
+        "channel_name": "development",
+        "is_msg_unfurl": true,
+        "text": "don’t know whether it exists tho",
+        "author_name": "Zan Markan",
+        "author_link": "https://androidchat.slack.com/team/zmarkan",
+        "author_icon": "https://secure.gravatar.com/avatar/117c1e7c12a469a052f1361b6599af31.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0010-48.png",
+        "mrkdwn_in": [
+          "text"
+        ],
+        "color": "D0D0D0",
+        "from_url": "https://androidchat.slack.com/archives/development/p1469639734000959",
+        "is_share": true,
+        "footer": "Posted in #development"
+      }
+    ],
+    "ts": "1469639822.000961",
+    "id": "27de40899",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "<@U1HM4MPLJ>: if you're into Rx, something like this might be helpful <https://www.vokal.io/labs/reactive-forms-with-rxandroid>",
+    "attachments": [
+      {
+        "title": "Reactive Forms with RxAndroid | Vokal",
+        "title_link": "https://www.vokal.io/labs/reactive-forms-with-rxandroid",
+        "text": "Reactive Programming has been getting a lot of attention in the Android community lately. While it has uses throughout the application stack, we're going to focus here on using it to validate forms (exciting!). This approach cuts down on ugly nested if statements and transforms all of the validation logic to just a few simple lines using the RxJava framework. More, it's robust and testable.",
+        "fallback": "Reactive Forms with RxAndroid | Vokal",
+        "image_url": "https://vokal-io.s3.amazonaws.com/d2d6068f37d15a7d17ef0c2569c1ce57.png",
+        "from_url": "https://www.vokal.io/labs/reactive-forms-with-rxandroid",
+        "image_width": 250,
+        "image_height": 250,
+        "image_bytes": 292717,
+        "service_icon": "https://www.vokal.io/images/favicon/apple-touch-icon-57x57.png",
+        "service_name": "Vokal",
+        "id": 1
+      }
+    ],
+    "ts": "1469640274.000962",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "27de40900",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "Hmmm. Yes, Rx is something I intend to take a deeper look into soon enough. At the moment, no",
+    "ts": "1469641104.000964",
+    "id": "27de40901",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "I'm leaning towards a conclusion that there really isn't a universal solution to input validation, on Android at least",
+    "ts": "1469641156.000965",
+    "id": "27de40902",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "I'll just go ahead with my current approach, knowing I'm not alone",
+    "ts": "1469641180.000966",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U0546QERR",
+          "U16GF1B0F",
+          "U04U5KS3Z"
+        ],
+        "count": 3
+      }
+    ],
+    "id": "27de40903",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "Thank you :slightly_smiling_face:",
+    "ts": "1469641188.000967",
+    "id": "27de40904",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "<https://medium.com/@etiennelawlor/rxjava-on-the-sign-in-screen-9ecb66b88572#.mknircxye>",
+    "attachments": [
+      {
+        "service_name": "Medium",
+        "title": "RxJava on the Sign In Screen",
+        "title_link": "https://medium.com/@etiennelawlor/rxjava-on-the-sign-in-screen-9ecb66b88572#.mknircxye",
+        "text": "Before I dive into an example of using RxJava, I’d like to talk a little bit about my journey trying to grok RxJava. What exactly is this…",
+        "fallback": "Medium: RxJava on the Sign In Screen",
+        "image_url": "https://cdn-images-1.medium.com/max/1200/1*UFoXU23_r4YqG6D3v2mV7Q.png",
+        "fields": [
+          {
+            "title": "Reading time",
+            "value": "4 min read",
+            "short": true
+          }
+        ],
+        "ts": 1461443290,
+        "from_url": "https://medium.com/@etiennelawlor/rxjava-on-the-sign-in-screen-9ecb66b88572#.mknircxye",
+        "image_width": 139,
+        "image_height": 250,
+        "image_bytes": 30032,
+        "service_icon": "https://cdn-static-1.medium.com/_/fp/img/apple-touch-icon-ipad-retina.Akq8aSfZqfW1fceMxKqBZA.png",
+        "id": 1
+      }
+    ],
+    "ts": "1469648047.000968",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U0546QERR",
+          "U1HM4MPLJ"
+        ],
+        "count": 3
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "27de40905",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "i have a write up on rx form validation, might also be something useful",
+    "ts": "1469648082.000970",
+    "id": "27de40906",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U085CP84F",
+    "text": "hi guys! anyone with experience getting the phone's speed from the accelerometer?",
+    "ts": "1469654524.000971",
+    "id": "27de40907",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "huh? you mean the acceleration, not speed right?=",
+    "ts": "1469654609.000972",
+    "id": "27de40908",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "cause going a constant speed of 100mph won't show a different reading on that than sitting in the parking lot",
+    "ts": "1469654644.000973",
+    "id": "27de40909",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U085CP84F",
+    "text": "I mean speed. Starting with 0 mph and taking small samples of the acceleration I can get the speed",
+    "ts": "1469654774.000974",
+    "id": "27de40910",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U085CP84F",
+    "text": "its hard, thats why I need someone who already did it",
+    "ts": "1469654811.000975",
+    "id": "27de40911",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U085CP84F",
+    "text": "look <http://physics.stackexchange.com/questions/153159/calculate-speed-from-accelerometer>",
+    "attachments": [
+      {
+        "title": "Calculate speed from accelerometer",
+        "title_link": "http://physics.stackexchange.com/questions/153159/calculate-speed-from-accelerometer",
+        "text": "I am trying to use my accelerometer on my mobile device (smart watch to be specific) to calculate a persons arm swing speed. The data returned from the accelerometer is in $m/s^2$.Since the",
+        "fallback": "Calculate speed from accelerometer",
+        "thumb_url": "http://cdn.sstatic.net/Sites/physics/img/apple-touch-icon@2.png?v=f58801408228&a",
+        "from_url": "http://physics.stackexchange.com/questions/153159/calculate-speed-from-accelerometer",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "service_icon": "http://cdn.sstatic.net/Sites/physics/img/favicon.ico?v=914e8b074a8a",
+        "service_name": "physics.stackexchange.com",
+        "id": 1
+      }
+    ],
+    "ts": "1469654881.000976",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U1VSJTQQL",
+          "U181H6Y21"
+        ],
+        "count": 3
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "27de40912",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1VRA86P6",
+    "text": "<@U1VRA86P6|bennyboy> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1469661858.000978",
+    "id": "27de40913",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "<http://www.globalnerdy.com/wordpress/wp-content/uploads/2016/06/map-filter-reduce-in-emoji-1.png>",
+    "attachments": [
+      {
+        "fallback": "1023x771px image",
+        "image_url": "http://www.globalnerdy.com/wordpress/wp-content/uploads/2016/06/map-filter-reduce-in-emoji-1.png",
+        "image_width": 1023,
+        "image_height": 771,
+        "image_bytes": 362181,
+        "from_url": "http://www.globalnerdy.com/wordpress/wp-content/uploads/2016/06/map-filter-reduce-in-emoji-1.png",
+        "id": 1
+      }
+    ],
+    "ts": "1469661983.000979",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U0KTPB91V",
+          "U04TK850N",
+          "U0N4RS70W",
+          "U16GF1B0F",
+          "U181H6Y21",
+          "U1U643L7Q",
+          "U1M0H2TT3",
+          "U0C0MQXEX"
+        ],
+        "count": 9
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "joy",
+        "users": [
+          "U1TKETBU3",
+          "U04TK850N",
+          "U0K12P76E"
+        ],
+        "count": 3
+      }
+    ],
+    "id": "27de40914",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "<@U04U5KS3Z>: That’s adorable",
+    "edited": {
+      "user": "U0DC95VCP",
+      "ts": "1469662881.000000"
+    },
+    "ts": "1469662877.000981",
+    "id": "27de40915",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1VRSUW1W",
+    "text": "<@U1VRSUW1W|renatoramos> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1469665641.000983",
+    "id": "27de40916",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1VSJTQQL",
+    "text": "<@U1VSJTQQL|b_ferrari> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1469675532.000984",
+    "id": "27de40917",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1VT26R6G",
+    "text": "<@U1VT26R6G|andreass> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1469682770.000985",
+    "id": "27de40918",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0SNJDQDC",
+    "text": "Hey guys, I'm using a 3rd party ORM library. Is is possible to run a sql script on app start even if the library doesn't have the functionality to do so?",
+    "ts": "1469686021.000986",
+    "id": "27de40919",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0SNJDQDC",
+    "text": "The db already exists in the app, now I want to, kind of like, override the sql execution by using a raw query.",
+    "ts": "1469686278.000987",
+    "id": "27de40920",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1T13H6S3",
+    "text": "<@U0SNJDQDC>: it is possible, i have done this in my project while I was using ormlite",
+    "ts": "1469686619.000988",
+    "id": "27de40921",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0SNJDQDC",
+    "text": "Any tutorial/guides in doing so? I never used native SQLite helper though",
+    "ts": "1469686675.000989",
+    "id": "27de40922",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0SNJDQDC",
+    "text": "Let's say I create a sql file in `assets/migrations/` called `2.sql` _(generic way in ActiveAndroid)_, now how do I run this sql file from Application class? I'm not using ActiveAndroid btw. But had experience using it before for migration stuff.",
+    "ts": "1469687077.000990",
+    "id": "27de40923",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1T13H6S3",
+    "text": "<@U0SNJDQDC>: you can implement it inside onCreate method of Class which extends OrmLiteSqliteOpenHelper, also I’m not sure if there is a way to run sql script file directly, I was implementing it with TableUtils Class in ormlite library.",
+    "ts": "1469688887.000991",
+    "id": "27de40924",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

@@ -1,0 +1,256 @@
+[
+  {
+    "user": "U0XEFH6GL",
+    "subtype": "channel_join",
+    "text": "<@U0XEFH6GL|acoman> has joined the channel",
+    "ts": "1459586976.002281",
+    "id": "02de29781",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LHK69NV",
+    "text": "What the hell, I've just received a crash report where an `onClick`-event came in after `onSaveInstanceState`, making the app crash while performing a fragment transaction. No asynchronous tasks or anything. I've been looking on StackOverflow and it looks like this is an actual issue :rage:",
+    "ts": "1459608307.002284",
+    "id": "02de29782",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R5QDE48",
+    "text": "Hi, I'm using evernote API to retrieve my notes in android, but I have a problem with it. \nIf the note doesn't have images in content it works ok, but with images doesn't work fine, it loads text only. \nI retrieve the content with \"String noteContent = noteStoreClient.getNoteContent(note.getGuid());\" and load the html in the webview with: webview.loadDataWithBaseURL(\"\", noteContent, \"text/html\", \"UTF-8\", null);\nCan anyone help me? Thx!",
+    "ts": "1459609467.002285",
+    "id": "02de29783",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U0LHK69NV>: \n&gt; If called, this method will occur before `onStop()`. There are no guarantees about whether it will occur before or after `onPause()`.",
+    "ts": "1459614815.002286",
+    "id": "02de29784",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LHK69NV",
+    "text": "<@U053LEHJN>: Thanks. It's horrible regardless of the fact that it's documented though. Looks like the only way to deal with this is calling `commitAllowingStateloss` instead of `commit` on the transaction, but that would suppress too many other possible errors.",
+    "ts": "1459615156.002287",
+    "id": "02de29785",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LHK69NV",
+    "text": "I can't even safely check if `onSaveInstanceState` was called and call `commitAllowingStateloss` in that case since it's not directly related to the lifecycle events of an Activity, right?",
+    "ts": "1459615279.002288",
+    "id": "02de29786",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U0LHK69NV>: Honestly I couldn't tell you, I stay away from Fragments as much as possible. Are you using the latest version from the support libs?",
+    "ts": "1459615353.002289",
+    "id": "02de29787",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LHK69NV",
+    "text": "<@U053LEHJN>: I am. Seriously, not being able to just directly launch a FragmentTransaction in response to a UI event says a lot about the Android platform.",
+    "ts": "1459615467.002290",
+    "id": "02de29788",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U0LHK69NV>: are you using debouncing in your onClick listener?",
+    "ts": "1459615505.002291",
+    "id": "02de29789",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LHK69NV",
+    "text": "<@U053LEHJN>: Nope.",
+    "ts": "1459615527.002292",
+    "id": "02de29790",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "(If you're using RxBinding's RxView.clicks() or ButterKnife @OnClick, they use a Debouncing listener)",
+    "ts": "1459615539.002293",
+    "id": "02de29791",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U0LHK69NV>: I'd try that first, though. On rare occasions I'll see events sent twice; probably some weird quantum mechanical phenomenon with the touchscreen.",
+    "ts": "1459615601.002294",
+    "id": "02de29792",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LHK69NV",
+    "text": "<@U053LEHJN>: Good idea, thanks. It will only fight a single symptom though :disappointed:",
+    "ts": "1459615704.002295",
+    "id": "02de29793",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XGC0TUP",
+    "subtype": "channel_join",
+    "text": "<@U0XGC0TUP|van_dyke_brown> has joined the channel",
+    "ts": "1459633880.002296",
+    "id": "02de29794",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

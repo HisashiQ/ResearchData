@@ -1,0 +1,677 @@
+[
+  {
+    "user": "U0K1ALDQE",
+    "text": "Any1 here using mockito 2 or mockito-kotlin? I’ve got `org.mockito.plugins.MockMaker` in place, but it doesn’t seem to be working when I start test from AS.\nWhen I run it from gradle, the test runs and works correctly. When I run them from AS they fail, it doesn’t seem to be processing `org.mockito.plugins.MockMaker`",
+    "ts": "1477562363.000206",
+    "id": "27te2468",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U0K1ALDQE> last time I had such a problem was due to using mocks that needed serialization",
+    "ts": "1477564381.000207",
+    "id": "27te2469",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "give me a sec",
+    "ts": "1477564386.000208",
+    "id": "27te2470",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U0K1ALDQE> check this out, I have it fairly well documented because I was quite pissed at it. I don't think you will have the exact same problem but it might give you an idea of what can go wrong <https://github.com/AkiKanellis/skyspark/commit/a51147738e6904c2dc4c62b99bafe3646aadf20e>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "Fix ClassNotFoundException when using a mock inside a Spark job. · AkiKanellis/skyspark@a511477 · GitHub",
+        "title_link": "https://github.com/AkiKanellis/skyspark/commit/a51147738e6904c2dc4c62b99bafe3646aadf20e",
+        "text": "When running the tests with IntelliJ everything would run fine and the tests would pass. When running them with ./gradlew skyspark-scala:test they would fail with a ClassNotFoundException for the M...",
+        "fallback": "GitHub: Fix ClassNotFoundException when using a mock inside a Spark job. · AkiKanellis/skyspark@a511477",
+        "thumb_url": "https://avatars0.githubusercontent.com/u/6104879?v=3&s=200",
+        "from_url": "https://github.com/AkiKanellis/skyspark/commit/a51147738e6904c2dc4c62b99bafe3646aadf20e",
+        "thumb_width": 200,
+        "thumb_height": 200,
+        "service_icon": "https://a.slack-edge.com/e8ef6/img/unfurl_icons/github.png",
+        "id": 1
+      }
+    ],
+    "ts": "1477564527.000209",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U0K1ALDQE"
+        ],
+        "count": 2
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "27te2471",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Allright cool, I'll check it out after standup :+1:",
+    "ts": "1477566530.000211",
+    "id": "27te2472",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I'm having the exact oposite problem <@U09T8SFG8>",
+    "ts": "1477566806.000212",
+    "id": "27te2473",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "they run fine from `./gradlew` they fail from IntelliJ",
+    "ts": "1477566823.000213",
+    "id": "27te2474",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U0K1ALDQE> it could still be the same cause. Your IntelliJ might somehow use different classloaders and your ./gradlew does not",
+    "ts": "1477567210.000214",
+    "id": "27te2475",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "<@U09T8SFG8> will try it out and let you know :wink:",
+    "ts": "1477579280.000215",
+    "id": "27te2476",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "<@U09T8SFG8> I couldn't fix it with your solution. It did work in IntelliJ IDEA but it fails in AS...",
+    "ts": "1477581207.000216",
+    "id": "27te2477",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "So I have no clue how to fix that.",
+    "ts": "1477581227.000217",
+    "id": "27te2478",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "how does it fail exactly?",
+    "ts": "1477581330.000218",
+    "id": "27te2479",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "what is the stacktrace?",
+    "ts": "1477581335.000219",
+    "id": "27te2480",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "```\norg.mockito.exceptions.base.MockitoException: \nCannot mock/spy class be.vergauwen.simon.FinalClass\nMockito cannot mock/spy because :\n - final class\n```",
+    "ts": "1477581549.000220",
+    "id": "27te2481",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Exactly what you'd expect without the setup for mocking final classes",
+    "ts": "1477581572.000221",
+    "id": "27te2482",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0K1ALDQE|simon.vergauwen> uploaded a file: <https://androidchat.slack.com/files/simon.vergauwen/F2V2F24M6/screen_shot_2016-10-27_at_17.19.22.png|Screen Shot 2016-10-27 at 17.19.22.png>",
+    "file": {
+      "id": "F2V2F24M6",
+      "created": 1477581584,
+      "timestamp": 1477581584,
+      "name": "Screen Shot 2016-10-27 at 17.19.22.png",
+      "title": "Screen Shot 2016-10-27 at 17.19.22.png",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U0K1ALDQE",
+      "editable": false,
+      "size": 18766,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F2V2F24M6/screen_shot_2016-10-27_at_17.19.22.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F2V2F24M6/download/screen_shot_2016-10-27_at_17.19.22.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F2V2F24M6-a3a3b5866e/screen_shot_2016-10-27_at_17.19.22_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F2V2F24M6-a3a3b5866e/screen_shot_2016-10-27_at_17.19.22_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F2V2F24M6-a3a3b5866e/screen_shot_2016-10-27_at_17.19.22_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 360,
+      "thumb_360_h": 62,
+      "thumb_480": "https://files.slack.com/files-tmb/T04PLNDMP-F2V2F24M6-a3a3b5866e/screen_shot_2016-10-27_at_17.19.22_480.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_480_w": 480,
+      "thumb_480_h": 83,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F2V2F24M6-a3a3b5866e/screen_shot_2016-10-27_at_17.19.22_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "image_exif_rotation": 1,
+      "original_w": 696,
+      "original_h": 120,
+      "permalink": "https://androidchat.slack.com/files/simon.vergauwen/F2V2F24M6/screen_shot_2016-10-27_at_17.19.22.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F2V2F24M6-d3cded9f1c",
+      "channels": [
+        "C0D6DUW8L"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U0K1ALDQE",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0K1ALDQE|simon.vergauwen>",
+    "bot_id": null,
+    "ts": "1477581585.000222",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "27te2483",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "IntelliJ works, gradle works. But when I run from AS the MockMaker file doesn't get taking into account. So mocking final classes fails. Since I'm working with kotlin, I don't want to make all my classes that shouldn't be hidden behind interfaces open",
+    "ts": "1477581678.000223",
+    "id": "27te2484",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "ok I think what is happening is that AS doesn't add the new resources in incremental compilation",
+    "ts": "1477581768.000224",
+    "id": "27te2485",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "do you run the tests in AS by creating a new junit configuration?",
+    "ts": "1477581790.000225",
+    "id": "27te2486",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "better yet you can check the apk and see if the file is there",
+    "ts": "1477582008.000226",
+    "id": "27te2487",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "actually the jar",
+    "ts": "1477582015.000227",
+    "id": "27te2488",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "&gt; do you run the tests in AS by creating a new junit configuration?",
+    "ts": "1477584841.000228",
+    "id": "27te2489",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "?",
+    "ts": "1477584842.000229",
+    "id": "27te2490",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I'll take a look in the test jar",
+    "ts": "1477584873.000230",
+    "id": "27te2491",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U0K1ALDQE> how do you run the tests in AS? right-click and run?",
+    "ts": "1477586647.000231",
+    "id": "27te2492",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "yea",
+    "ts": "1477590202.000232",
+    "id": "27te2493",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "or the green arrows",
+    "ts": "1477590209.000233",
+    "id": "27te2494",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "That will create a new run configuration and somehow that configuration does not include the mockito file ",
+    "ts": "1477590643.000234",
+    "id": "27te2495",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "Go to the run configurations and try adding as a step to clean and build the code ",
+    "ts": "1477590688.000235",
+    "id": "27te2496",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "Also try to run the tests as a Gradle task from within Android Studio ",
+    "ts": "1477590705.000236",
+    "id": "27te2497",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "That last one should work ",
+    "ts": "1477590713.000237",
+    "id": "27te2498",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I can't change anything in the run configuration window.",
+    "ts": "1477597615.000238",
+    "id": "27te2499",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

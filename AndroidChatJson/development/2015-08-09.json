@@ -1,0 +1,110 @@
+[
+  {
+    "user": "U08KKN48P",
+    "text": "hi. my actual app project contains a recyclerview adapter with a lot of view types. this viewtypes can be resused in other adapters. so i asked my self what is the best way to handle clicks on this viewtypes. should i use interfaces (listener) but then i have a lot to implement and forward it with another listener from the adapter to the activity/fragment which handles the click… i´ve created an example with interfaces (<https://gist.github.com/2add947981b28959c48a.git>)",
+    "ts": "1439145822.001716",
+    "id": "09de6291",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KKN48P",
+    "text": "are there any better solutions to handle clicks?",
+    "ts": "1439145846.001717",
+    "id": "09de6292",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08QJGGV7",
+    "text": "the gist is 404 not found",
+    "ts": "1439153434.001718",
+    "id": "09de6293",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08QJGGV7",
+    "text": "I’ve done something similar where I instantiate the adapter and pass it the listeners, I use myRecycler.getChildPosition(view) inside the clicklistener to figure out which item I’m dealing with",
+    "ts": "1439153479.001719",
+    "id": "09de6294",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08QJGGV7",
+    "text": "inside the recyclerview I add the listeners inside onCreateViewHolder",
+    "ts": "1439153507.001720",
+    "id": "09de6295",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U08KKN48P>: perhaps just create an 'addOnClickListener' method with a viewType and Listener argument where the listener would get fired if clicked on the viewType specified?",
+    "ts": "1439153951.001721",
+    "id": "09de6296",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

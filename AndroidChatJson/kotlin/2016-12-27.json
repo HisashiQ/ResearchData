@@ -1,0 +1,740 @@
+[
+  {
+    "user": "U0RGXBYUD",
+    "text": "<@U061HDV96> OK, let’s assume you want to write your own `Optional` class, which is similar to a nullable value but without using `null`. You need to define two subclasses of `Optional`: `Some` that holds a value and `None` that is an equivalent of `null`.",
+    "ts": "1482835049.000419",
+    "id": "27ko3469",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "In Kotlin 1.1 `Optional` can be described as following:\n```\nsealed class Optional&lt;out T&gt; {\n  data class Some&lt;out T&gt;(val value: T) : Optional&lt;T&gt;()\n  class None&lt;out T&gt; : Optional&lt;T&gt;()\n}\n```",
+    "ts": "1482835177.000420",
+    "id": "27ko3470",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "The problem with this definition is that you will end up having multiple instances of `None`. At least one instance per type `T`.",
+    "ts": "1482835225.000421",
+    "id": "27ko3471",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "You can write a method that will return the same instance of `None` for any `T`:\n```\nprivate val noneInstance = Optional.None&lt;Any&gt;()\n\nfun &lt;T&gt; none(): Optional&lt;T&gt; {\n  return noneInstance as Optional&lt;T&gt;\n}\n```",
+    "ts": "1482835350.000422",
+    "id": "27ko3472",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "While this code works fine it’s a little inconvenient because you can still create additional instances of `None`. It would be much better to have a singleton instance of `None` that is to make `None` an `object`.",
+    "ts": "1482835407.000423",
+    "id": "27ko3473",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "But what type to use instead of `T` for a singleton instance? You can use `Any` or just any other type and perform unchecked casts every time you want to assign `None` to a variable of type `Optional&lt;…&gt;`.",
+    "ts": "1482835509.000424",
+    "id": "27ko3474",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "There must be a better way to do that :slightly_smiling_face:",
+    "ts": "1482835534.000425",
+    "id": "27ko3475",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "And the better way is to use `Nothing`:\n```\n  object None : Optional&lt;Nothing&gt;()\n```",
+    "ts": "1482835579.000426",
+    "id": "27ko3476",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "`Nothing` is an opposite type to `Any` in the type hierarchy. Kotlin's type hierarchy looks like a diamond:\n```\n          Any\n      ^    ^    ^\n     /     |     \\\n  Type1  Type2  TypeN\n    ^      ^      ^\n     \\     |     /\n        Nothing\n```",
+    "ts": "1482835749.000427",
+    "id": "27ko3477",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "Actually the type system is more complicated but let’s simplify things a little.",
+    "ts": "1482835783.000428",
+    "id": "27ko3478",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "So every type is convertible to `Any`. And `Nothing` is convertible to any other type.",
+    "ts": "1482835863.000429",
+    "id": "27ko3479",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "In our case `Optional` has `T` in `out` position, which means that if `U` is a subclass of `T` then `Optional&lt;U&gt;` is convertible to `Optional&lt;T&gt;`.",
+    "ts": "1482835939.000430",
+    "id": "27ko3480",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "And since `Nothing` is convertible to any type `Optional&lt;Nothing&gt;` can be converted to `Optional` parameterized with any type.",
+    "ts": "1482836005.000431",
+    "id": "27ko3481",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "That’s why you can write something like this:\n```\nval optional: Optional&lt;String&gt; = Optional.None\n```",
+    "ts": "1482836033.000432",
+    "id": "27ko3482",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "All this stuff becomes possible because `Nothing` cannot have an instance.",
+    "ts": "1482836192.000433",
+    "id": "27ko3483",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U0RGXBYUD> great explanation, thanks! :slightly_smiling_face:",
+    "ts": "1482852279.000434",
+    "id": "27ko3484",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U0RGXBYUD> :taco: :taco:",
+    "ts": "1482852284.000435",
+    "id": "27ko3485",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "You’re welcome :slightly_smiling_face:",
+    "ts": "1482852291.000436",
+    "id": "27ko3486",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "<https://blog.jetbrains.com/kotlin/2016/12/kotlin-1-0-6-is-here>",
+    "attachments": [
+      {
+        "service_name": "Kotlin Blog",
+        "title": "Kotlin 1.0.6 is here!",
+        "title_link": "https://blog.jetbrains.com/kotlin/2016/12/kotlin-1-0-6-is-here",
+        "text": "We are happy to announce the release of Kotlin 1.0.6, the new bugfix and tooling update for Kotlin 1.0. This version brings a significant number of improvements related to the IDE plugin and Androi…",
+        "fallback": "Kotlin Blog: Kotlin 1.0.6 is here!",
+        "thumb_url": "https://d3nmt5vlzunoa1.cloudfront.net/kotlin/files/2016/12/args.png",
+        "ts": 1482855085,
+        "from_url": "https://blog.jetbrains.com/kotlin/2016/12/kotlin-1-0-6-is-here",
+        "thumb_width": 1300,
+        "thumb_height": 350,
+        "service_icon": "https://d3nmt5vlzunoa1.cloudfront.net/kotlin/wp-content/plugins/multicons/images/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1482861038.000437",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "sunglasses",
+        "users": [
+          "U1HM4MPLJ"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "27ko3487",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I tried updating the kotlin plugin in AS and it ‘worked’ but doesn’t actually update",
+    "ts": "1482862705.000439",
+    "id": "27ko3488",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "so I can ref 1.0.6 in gradle but my IDE complains it doesn’t match the installed 1.0.5-3 plugin version",
+    "ts": "1482862734.000440",
+    "id": "27ko3489",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "seems from intellij the download gets stuck",
+    "ts": "1482862930.000441",
+    "id": "27ko3490",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "nvm just the same behaviour.. plugin finishes updating but isn’t updated",
+    "ts": "1482863013.000442",
+    "id": "27ko3491",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "jk intellij is fine. Restart dialog was in the event log",
+    "ts": "1482863092.000443",
+    "id": "27ko3492",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Never update",
+    "ts": "1482865380.000444",
+    "id": "27ko3493",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U053LEHJN|eddie.ringle> uploaded a file: <https://androidchat.slack.com/files/eddie.ringle/F3KR5F554/screenshot_from_2016-12-27_13-43-03.png|Screenshot from 2016-12-27 13-43-03.png>",
+    "file": {
+      "id": "F3KR5F554",
+      "created": 1482867802,
+      "timestamp": 1482867802,
+      "name": "Screenshot from 2016-12-27 13-43-03.png",
+      "title": "Screenshot from 2016-12-27 13-43-03.png",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U053LEHJN",
+      "editable": false,
+      "size": 16779,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F3KR5F554/screenshot_from_2016-12-27_13-43-03.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F3KR5F554/download/screenshot_from_2016-12-27_13-43-03.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F3KR5F554-6de1242678/screenshot_from_2016-12-27_13-43-03_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F3KR5F554-6de1242678/screenshot_from_2016-12-27_13-43-03_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F3KR5F554-6de1242678/screenshot_from_2016-12-27_13-43-03_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 360,
+      "thumb_360_h": 98,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F3KR5F554-6de1242678/screenshot_from_2016-12-27_13-43-03_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "image_exif_rotation": 1,
+      "original_w": 370,
+      "original_h": 101,
+      "permalink": "https://androidchat.slack.com/files/eddie.ringle/F3KR5F554/screenshot_from_2016-12-27_13-43-03.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F3KR5F554-dabe22f5d5",
+      "channels": [
+        "C0BQU1TDF"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0,
+      "reactions": [
+        {
+          "name": "raised_hands",
+          "users": [
+            "U1HM4MPLJ"
+          ],
+          "count": 1
+        }
+      ]
+    },
+    "user": "U053LEHJN",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U053LEHJN|eddie.ringle>",
+    "bot_id": null,
+    "ts": "1482867803.000445",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "27ko3494",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "(from Kotlin slack)",
+    "ts": "1482867812.000446",
+    "id": "27ko3495",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "kotlin slack, wat",
+    "ts": "1482867891.000447",
+    "id": "27ko3496",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<http://kotlinlang.slack.com|kotlinlang.slack.com>",
+    "ts": "1482867911.000448",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "27ko3497",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I would like to join but I only have 16gb of ram in my ~p-p-p-p-power book~ macbook pro so I dont think I can handle another slack",
+    "edited": {
+      "user": "U055GGAHS",
+      "ts": "1482867964.000000"
+    },
+    "ts": "1482867957.000449",
+    "id": "27ko3498",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U055GGAHS> I only have 8",
+    "ts": "1482868083.000451",
+    "id": "27ko3499",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "/gif it's happening",
+    "ts": "1482869107.000452",
+    "id": "27ko3500",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "",
+    "bot_id": "B0GH4RVHU",
+    "attachments": [
+      {
+        "fallback": "<http://i.imgur.com/7drHiqr.gif>",
+        "image_url": "http://i.imgur.com/7drHiqr.gif",
+        "image_width": 312,
+        "image_height": 213,
+        "image_bytes": 996270,
+        "is_animated": true,
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1482869107.000453",
+    "id": "27ko3501",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

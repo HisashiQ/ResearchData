@@ -1,0 +1,391 @@
+[
+  {
+    "user": "U0Q4720P9",
+    "text": "Can someone explain to me what Notification.setColor (); actually achieves? I am setting a Red color and the smallIcon &amp; Title comes out a dark purple color. If I remove setColor it comes out a generic light blue color.",
+    "ts": "1481882004.000133",
+    "id": "16de6852",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3EQFHSAK",
+    "text": "I am also having the same question.:grinning:",
+    "attachments": [
+      {
+        "fallback": "[December 16th, 2016 3:23 PM] alroberts: Can someone explain to me what Notification.setColor (); actually achieves? I am setting a Red color and the smallIcon &amp; Title comes out a dark purple color. If I remove setColor it comes out a generic light blue color.",
+        "ts": "1481882004.000133",
+        "author_subname": "alroberts",
+        "channel_id": "C055T0HLM",
+        "channel_name": "design",
+        "is_msg_unfurl": true,
+        "text": "Can someone explain to me what Notification.setColor (); actually achieves? I am setting a Red color and the smallIcon &amp; Title comes out a dark purple color. If I remove setColor it comes out a generic light blue color.",
+        "author_link": "https://androidchat.slack.com/team/alroberts",
+        "author_icon": "https://secure.gravatar.com/avatar/2cc65a2f2002009ba3511e19bd643139.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0022-48.png",
+        "mrkdwn_in": [
+          "text"
+        ],
+        "color": "D0D0D0",
+        "from_url": "https://androidchat.slack.com/archives/design/p1481882004000133",
+        "is_share": true,
+        "footer": "Posted in #design"
+      }
+    ],
+    "ts": "1481882487.000134",
+    "id": "16de6853",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Q4720P9",
+    "text": "Noticed that if you put a direct hex into setColor it changes the Title text but not the icon. If you give setColor a color resource it doesn’t work.",
+    "ts": "1481890858.000136",
+    "id": "16de6854",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Q4720P9",
+    "text": "`setColor(0xee4c9b);`",
+    "ts": "1481890874.000137",
+    "id": "16de6855",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "It may require `setColor(ContextCompat.getColor(context, R.color.your_color))`",
+    "ts": "1481892912.000138",
+    "id": "16de6856",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3FRYA136",
+    "text": "<@U3FRYA136|emce> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481898820.000139",
+    "id": "16de6857",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Q4720P9",
+    "text": "thanks <@U0E72HWTX> I remember seeing this actually going through docs",
+    "ts": "1481900582.000140",
+    "id": "16de6858",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Q4720P9",
+    "text": "because I was giving it the Resource reference id instead of the resource value :joy: fml!",
+    "ts": "1481900775.000141",
+    "id": "16de6859",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3BM9PZF0",
+    "text": "So `UIStoryboard(name: \"Main\", bundle:nil).instantiateViewController(withIdentifier: “customVC\") as! CustomViewController` this should hook up IBOutlet’s right?",
+    "ts": "1481903639.000142",
+    "id": "16de6860",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3F4S02CQ",
+    "text": "<@U3F4S02CQ|benlevy> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481906078.000143",
+    "id": "16de6861",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "<@U3BM9PZF0> wrong slack I think :joy:",
+    "ts": "1481906124.000144",
+    "id": "16de6862",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3CNGU56H",
+    "text": "<@U3BM9PZF0> haha in objective-c you can do: `[[UIStoryboard storyboardWithName:@“Main” bundle:nil] instantiateViewControllerWithIdentifier: @“customVC”];`",
+    "ts": "1481914436.000145",
+    "id": "16de6863",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3BM9PZF0",
+    "text": "oops, too many slacks!",
+    "ts": "1481917107.000146",
+    "id": "16de6864",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Objective c",
+    "ts": "1481917175.000147",
+    "id": "16de6865",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "lol",
+    "ts": "1481917176.000148",
+    "id": "16de6866",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "I use Objective C on Android",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1481917198.000000"
+    },
+    "ts": "1481917187.000149",
+    "id": "16de6867",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": ":laughing:",
+    "ts": "1481917210.000153",
+    "id": "16de6868",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3G06ASRY",
+    "text": "<@U3G06ASRY|vivi> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481922772.000154",
+    "id": "16de6869",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3G4V7HMJ",
+    "text": "<@U3G4V7HMJ|andrewh123> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481942900.000155",
+    "id": "16de6870",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3FBTRYJU",
+    "text": "<@U3FBTRYJU|maulik22995> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481958056.000156",
+    "id": "16de6871",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

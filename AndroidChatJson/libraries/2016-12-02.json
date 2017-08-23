@@ -1,0 +1,1023 @@
+[
+  {
+    "user": "U39M4PRFD",
+    "text": "<@U39M4PRFD|schaban> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1480669060.000277",
+    "id": "02li8091",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U39P7U6EP|zhuinden> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1480681226.000278",
+    "id": "02li8092",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U061HDV96>  considering how I monitor Realm questions on SO and on their Github issues on a fairly regular basis and respond to most realm-java questions with either a comment (if data is insufficient) or an answer, it seems a bit awkward to say that contacting others is difficult :stuck_out_tongue:",
+    "ts": "1480681805.000279",
+    "id": "02li8093",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "generally Stack Overflow downvotes questions if 1.) the data is insufficient to solve the problem or 2.) the answer is directly in the official documentation or easily findable with Google",
+    "ts": "1480681850.000280",
+    "id": "02li8094",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U2S3F5PM1> &gt; what database solution (eg SQLite, Realm, ActiveAndroid etc) do you use for your Android projects and why?\n\nI use Realm in most projects, currently capped at 1.2.0 until the ObjectStore integration is complete",
+    "ts": "1480681976.000281",
+    "id": "02li8095",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "otherwise I'd look into either StorIO or SQLBrite",
+    "ts": "1480681987.000282",
+    "id": "02li8096",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2S3F5PM1",
+    "text": "Why? <@U39P7U6EP> ",
+    "ts": "1480683098.000283",
+    "id": "02li8097",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U2S3F5PM1> why to which part? :stuck_out_tongue:",
+    "ts": "1480683186.000284",
+    "id": "02li8098",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2S3F5PM1",
+    "text": "Why Realm?",
+    "ts": "1480683347.000285",
+    "id": "02li8099",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "oh. Because it simplifies a whole bunch of my problems for me, of course.",
+    "ts": "1480683374.000286",
+    "id": "02li8100",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "listening to table changes automagically (if you're ok with adapter.notifyDataSetChanged()), lazy evaluation of queries which means I can just define a query which gets auto-updated on change and i don't need to bother with manual pagination because it doesn't contain real data",
+    "ts": "1480683432.000287",
+    "id": "02li8101",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "the Realm Schema definitions which I do as normal POJOs (aside from extending RealmObject) so no SQL necessary to tinker with relational things",
+    "ts": "1480683460.000288",
+    "id": "02li8102",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "I can just write to the Realm on a background thread, and all my query results are updated automatically on the UI thread, without any additional effort beyond registering a RealmChangeListener. All notifications are handled by Realm itself.",
+    "ts": "1480683522.000289",
+    "id": "02li8103",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "and it's an object store, not a relational database, so I don't need to join tables or anything - I just tinker with Java objects and I'm directly linked to the database without any additional effort",
+    "ts": "1480683594.000290",
+    "id": "02li8104",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "so that's why I like Realm :smile: but I still vote for 1.2.0, the 2.x branch is totally beta",
+    "ts": "1480683615.000291",
+    "id": "02li8105",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U2S3F5PM1> hopefully that answers the question",
+    "ts": "1480683680.000292",
+    "id": "02li8106",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2S3F5PM1",
+    "text": "Yeah, that helps. Thanks",
+    "ts": "1480684495.000293",
+    "id": "02li8107",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<https://realm.io/news/threading-deep-dive/> &lt;-- this explains it well",
+    "attachments": [
+      {
+        "title": "Designing a Database: Realm Threading Deep Dive",
+        "title_link": "https://realm.io/news/threading-deep-dive/",
+        "fallback": "Designing a Database: Realm Threading Deep Dive",
+        "image_url": "https://images.contentful.com/emmiduwd41v7/asset_541/e753c497f43df9e946f1f61db092be46/threading-deep-dive-cover",
+        "from_url": "https://realm.io/news/threading-deep-dive/",
+        "image_width": 478,
+        "image_height": 250,
+        "image_bytes": 47628,
+        "service_name": "Realm is a mobile platform and a replacement for SQLite &amp;amp; Core Data. Build offline-first, reactive mobile experiences using simple data sync.",
+        "id": 1
+      }
+    ],
+    "ts": "1480684877.000294",
+    "id": "02li8108",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U39P7U6EP> I still prefer direct chat contact",
+    "ts": "1480685784.000296",
+    "id": "02li8109",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "By the time I have got a reply on a Stackoverflow question I would either have solved it myself. Perhaps not optimally though. And getting direct feedback allows you to ask questions immediately and better.",
+    "ts": "1480685827.000297",
+    "reactions": [
+      {
+        "name": "white_check_mark",
+        "users": [
+          "U2S3F5PM1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "neutral_face",
+        "users": [
+          "U39P7U6EP"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "02li8110",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Stackoverflow and other forums are slow mediums, IRC and Slack are king.",
+    "edited": {
+      "user": "U061HDV96",
+      "ts": "1480685841.000000"
+    },
+    "ts": "1480685839.000298",
+    "id": "02li8111",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2S3F5PM1",
+    "text": "<@U061HDV96> exactly my POV",
+    "ts": "1480686135.000300",
+    "id": "02li8112",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Also",
+    "ts": "1480686167.000301",
+    "id": "02li8113",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I don't like leaving a trace on the internet of what I'm doing.",
+    "ts": "1480686180.000302",
+    "id": "02li8114",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2S3F5PM1",
+    "text": ":joy: :joy: ",
+    "ts": "1480686192.000303",
+    "id": "02li8115",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Not an easily found trace at least",
+    "ts": "1480686207.000304",
+    "id": "02li8116",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "It's not like I'm trying to stay completely anonymous",
+    "ts": "1480686221.000305",
+    "id": "02li8117",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2S3F5PM1",
+    "text": "I understand.",
+    "ts": "1480686251.000306",
+    "id": "02li8118",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "I don't, otherwise Stack Overflow would be completely empty, and we would lack an important development resource :stuck_out_tongue:",
+    "ts": "1480686498.000307",
+    "id": "02li8119",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U2M0WUZ7A|miha-x64> uploaded a file: <https://androidchat.slack.com/files/miha-x64/F39QRKAD9/__________________________2016-12-02____17.39.34.png|Part of Realm article> and commented: onCreate and onPause :neutral_face:",
+    "file": {
+      "id": "F39QRKAD9",
+      "created": 1480689617,
+      "timestamp": 1480689617,
+      "name": "Снимок экрана 2016-12-02 в 17.39.34.png",
+      "title": "Part of Realm article",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U2M0WUZ7A",
+      "editable": false,
+      "size": 45638,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F39QRKAD9/__________________________2016-12-02____17.39.34.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F39QRKAD9/download/__________________________2016-12-02____17.39.34.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F39QRKAD9-5a7548bb31/__________________________2016-12-02____17.39.34_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F39QRKAD9-5a7548bb31/__________________________2016-12-02____17.39.34_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F39QRKAD9-5a7548bb31/__________________________2016-12-02____17.39.34_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 360,
+      "thumb_360_h": 125,
+      "thumb_480": "https://files.slack.com/files-tmb/T04PLNDMP-F39QRKAD9-5a7548bb31/__________________________2016-12-02____17.39.34_480.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_480_w": 480,
+      "thumb_480_h": 167,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F39QRKAD9-5a7548bb31/__________________________2016-12-02____17.39.34_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720": "https://files.slack.com/files-tmb/T04PLNDMP-F39QRKAD9-5a7548bb31/__________________________2016-12-02____17.39.34_720.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720_w": 720,
+      "thumb_720_h": 251,
+      "image_exif_rotation": 1,
+      "original_w": 818,
+      "original_h": 285,
+      "permalink": "https://androidchat.slack.com/files/miha-x64/F39QRKAD9/__________________________2016-12-02____17.39.34.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F39QRKAD9-9a56961acd",
+      "channels": [
+        "C054ZUY2W"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 1,
+      "initial_comment": {
+        "id": "Fc39SR39UJ",
+        "created": 1480689617,
+        "timestamp": 1480689617,
+        "user": "U2M0WUZ7A",
+        "is_intro": true,
+        "comment": "onCreate and onPause :neutral_face:",
+        "channel": ""
+      },
+      "reactions": [
+        {
+          "name": "unamused",
+          "users": [
+            "U39P7U6EP"
+          ],
+          "count": 1
+        }
+      ]
+    },
+    "user": "U2M0WUZ7A",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U2M0WUZ7A|miha-x64>",
+    "bot_id": null,
+    "ts": "1480689619.000308",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "02li8120",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Should be onResume and onDestroy :troll:",
+    "ts": "1480689660.000309",
+    "reactions": [
+      {
+        "name": "trollface",
+        "users": [
+          "U2M0WUZ7A",
+          "U055GGAHS"
+        ],
+        "count": 2
+      },
+      {
+        "name": "no_mouth",
+        "users": [
+          "U39P7U6EP"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "02li8121",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "Explanation looks quite weak for me. What’s the difference between two realm proxy objects in two different threads?",
+    "ts": "1480690347.000310",
+    "id": "02li8122",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "I've read that article before and yet I've never noticed that, haha. :stuck_out_tongue: \n\nYou need to retain a field reference to prevent the RealmObject from being GCed and stop receiving notifications from the Realm's HandlerController, but I don't see why you'd need to remove the change listener later.",
+    "ts": "1480690737.000311",
+    "id": "02li8123",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U2M0WUZ7A> two Realm Proxy objects in two different threads are locked to two different Realm versions. The typical approach nowadays to establish consistency between threads is immutability. The other approach is thread confinement (no access from any other thread is allowed) - which is what Realm uses.",
+    "ts": "1480690847.000312",
+    "id": "02li8124",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "&gt; don't see why you'd need to remove the change listener later.\nto ignore object updates when UI is disposed",
+    "ts": "1480690915.000313",
+    "id": "02li8125",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "&gt; are locked to two different Realm versions\nOh, really. Thanks.",
+    "ts": "1480690969.000314",
+    "id": "02li8126",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U2M0WUZ7A> every thread has its own \"view\" of the Realm at a given time when you access it for the first time on that thread. So they get their own versions.\n\nAs for the other, in that case, I'd probably remove the listener in `onDestroy()`, and definitely not in `onPause()`. They already have this mess in their documentation that fragment should do `onStart()`/`onStop()` even though the right one is `onCreateView()`/`onDestroyView()`.",
+    "ts": "1480691140.000315",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U2M0WUZ7A"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "02li8127",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "This version retention for given threads is exactly why you need to close the Realm instance in a finally block on background threads, so you close it no matter what happens",
+    "ts": "1480692975.000316",
+    "id": "02li8128",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3A0UPG4D",
+    "text": "<@U3A0UPG4D|denqxotl> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1480693414.000317",
+    "id": "02li8129",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2C6QGWJH",
+    "text": "Hey Guys, I open-sourced a library on aggregating Scheduling APIs (`AlarmManager`, `Handler`, `GcmNetworkManager` &amp; `JobScheduler`)",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "hypertrack/smart-scheduler-android",
+        "title_link": "https://github.com/hypertrack/smart-scheduler-android",
+        "text": "smart-scheduler-android - A utility library for schedule periodic and non-periodic jobs efficiently.",
+        "fallback": "GitHub: hypertrack/smart-scheduler-android",
+        "thumb_url": "https://avatars3.githubusercontent.com/u/13383207?v=3&s=400",
+        "from_url": "https://github.com/hypertrack/smart-scheduler-android",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "edited": {
+      "user": "U2C6QGWJH",
+      "ts": "1480703622.000000"
+    },
+    "ts": "1480702463.000318",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "02li8130",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2C6QGWJH",
+    "text": "Please let me know any thoughts, suggestions or issues. :slightly_smiling_face: If you like it, please dont forget to *star* it.\nHere is the blog i published on the same. <https://medium.com/hypertrack/scheduling-tasks-in-android-made-easy-231ca8178e38>",
+    "attachments": [
+      {
+        "service_name": "Medium",
+        "title": "Scheduling tasks in Android made easy – HyperTrack",
+        "title_link": "https://medium.com/hypertrack/scheduling-tasks-in-android-made-easy-231ca8178e38",
+        "text": "Over the years, Android has introduced several scheduling APIs for jobs that need to be scheduled outside the scope of an application’s…",
+        "fallback": "Medium: Scheduling tasks in Android made easy – HyperTrack",
+        "image_url": "https://d262ilb51hltx0.cloudfront.net/max/1200/1*rxpnUPToenIBihva64trrQ.gif",
+        "fields": [
+          {
+            "title": "Reading time",
+            "value": "4 min read",
+            "short": true
+          }
+        ],
+        "ts": 1480579316,
+        "from_url": "https://medium.com/hypertrack/scheduling-tasks-in-android-made-easy-231ca8178e38",
+        "image_width": 140,
+        "image_height": 250,
+        "image_bytes": 941278,
+        "service_icon": "https://d262ilb51hltx0.cloudfront.net/fit/c/152/152/1*ftIQDUMasupI6ENzh2hhFA.png",
+        "id": 1
+      }
+    ],
+    "ts": "1480702480.000320",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "02li8131",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U399QLP7S",
+    "text": "<@U399QLP7S|sidferreiraz> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1480703974.000323",
+    "id": "02li8132",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3ANP4MK9",
+    "text": "<@U3ANP4MK9|peter.o> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1480709433.000324",
+    "id": "02li8133",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3A4N2P1R",
+    "text": "<@U3A4N2P1R|shohruh_genius> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1480750851.000326",
+    "id": "02li8134",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

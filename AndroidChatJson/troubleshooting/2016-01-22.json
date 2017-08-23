@@ -1,0 +1,1232 @@
+[
+  {
+    "user": "U0K65E0NB",
+    "subtype": "channel_join",
+    "text": "<@U0K65E0NB|hannesk> has joined the channel",
+    "ts": "1453491100.000491",
+    "id": "22tr3435",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "Hey guys, do you have any pointers on implementing some custom behaviour for an edit text?",
+    "ts": "1453491136.000492",
+    "id": "22tr3436",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "I basically want to auto insert the : (colon) for time-entry in a numeric edittext",
+    "ts": "1453491167.000493",
+    "id": "22tr3437",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "but only when appropriate. so when the user enters 2, the field should simply accept the 2. when the user then goes on and adds a 5, the field should read 2:5. When the user ads another 5 =&gt; 2:55, another 5 =&gt; 25:55",
+    "ts": "1453491239.000494",
+    "id": "22tr3438",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "implementing an InputFilter does not let me add more characters it appears",
+    "ts": "1453491258.000495",
+    "id": "22tr3439",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "add a TextWatcher that listens for input and transforms it into what you want displayed",
+    "ts": "1453491275.000496",
+    "id": "22tr3440",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "and implementing a TextWatcher is a pain with the cursor",
+    "ts": "1453491283.000497",
+    "id": "22tr3441",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "I already have to go through the pain with adding and removing the listener in the onTextChanged callback",
+    "ts": "1453491339.000498",
+    "id": "22tr3442",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "when I do input.setText() it always resets the cursor to the beginning",
+    "ts": "1453491386.000499",
+    "id": "22tr3443",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "hmm it doesn't do that for me, I have an EditText which inserts standard text in front of user input once they start typing",
+    "ts": "1453491668.000500",
+    "id": "22tr3444",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "```            if (existing.length() == 1) {\n                String textBefore = input.getText().toString();\n                input.setText(textBefore.concat(\":\").concat(s.toString()));\n            }```",
+    "ts": "1453491711.000501",
+    "id": "22tr3445",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "in `onTextChanged` I have so far",
+    "ts": "1453491738.000502",
+    "id": "22tr3446",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "try using `editable.insert(1, \":\")` instead of setText",
+    "ts": "1453491761.000503",
+    "id": "22tr3447",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "you get an editable in afterTextChanged",
+    "ts": "1453491778.000504",
+    "id": "22tr3448",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "can I detect deletions in afterTextChanged?",
+    "ts": "1453491833.000505",
+    "id": "22tr3449",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "because I dont want to do anything when the user deletes any text",
+    "ts": "1453491843.000506",
+    "id": "22tr3450",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "cache the length of it in the \"before\" callback and compare it to the length in the \"after\" callback",
+    "ts": "1453491888.000507",
+    "id": "22tr3451",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "if it's less, they deleted something so short circuit your code",
+    "ts": "1453491914.000508",
+    "id": "22tr3452",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "<https://github.com/damien5314/HoldTheNarwhal/blob/master/app/src/main/java/com/ddiehl/android/htn/view/widgets/RedditNavEditText.java>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "damien5314/HoldTheNarwhal",
+        "title_link": "https://github.com/damien5314/HoldTheNarwhal/blob/master/app/src/main/java/com/ddiehl/android/htn/view/widgets/RedditNavEditText.java",
+        "text": "HoldTheNarwhal - Android client for reddit",
+        "fallback": "GitHub: damien5314/HoldTheNarwhal",
+        "thumb_url": "https://avatars0.githubusercontent.com/u/1700953?v=3&s=400",
+        "from_url": "https://github.com/damien5314/HoldTheNarwhal/blob/master/app/src/main/java/com/ddiehl/android/htn/view/widgets/RedditNavEditText.java",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1453491992.000509",
+    "id": "22tr3453",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i actually have done something very similar ^ :stuck_out_tongue:",
+    "ts": "1453492023.000511",
+    "id": "22tr3454",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08L60754",
+    "subtype": "channel_leave",
+    "text": "<@U08L60754|jeffinmadison> has left the channel",
+    "ts": "1453492096.000512",
+    "id": "22tr3455",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "lol that looks very similar indeed :simple_smile:",
+    "ts": "1453492137.000513",
+    "id": "22tr3456",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "can I even insert a „:“ for a field that has inputType=number?",
+    "ts": "1453492156.000514",
+    "id": "22tr3457",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "perhaps",
+    "ts": "1453492190.000515",
+    "id": "22tr3458",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "never tried it :x",
+    "ts": "1453492203.000516",
+    "id": "22tr3459",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "```    @Override\n    public void afterTextChanged(Editable s) {\n        s.insert(1, \":\");\n    }\n```",
+    "ts": "1453492217.000517",
+    "id": "22tr3460",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "does not do anything for me",
+    "ts": "1453492224.000518",
+    "id": "22tr3461",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "(except crash when I delete all the text because 1 is then not a valid location anymore lol)",
+    "ts": "1453492242.000519",
+    "id": "22tr3462",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "try removing inputType then",
+    "ts": "1453492268.000520",
+    "id": "22tr3463",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "maybe TextView enforces the inputType on the characters within it",
+    "ts": "1453492277.000521",
+    "id": "22tr3464",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "it will temporarily make your keyboard the wrong type, but then you could tell if your TextWatcher is working or not",
+    "ts": "1453492297.000522",
+    "id": "22tr3465",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "btw I don't know your specific situation but I would think the input should start filling in from the right instead of the left",
+    "ts": "1453492364.000523",
+    "id": "22tr3466",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "so starts off as \"0:00\", you type 5 and get \"0:05\", type 3 and get \"0:53\", type 1 and get \"5:31\"",
+    "ts": "1453492391.000524",
+    "id": "22tr3467",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "hm I just set out to copy the exact behaviour I have on iOS",
+    "ts": "1453492474.000525",
+    "id": "22tr3468",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "ah, gotcha",
+    "ts": "1453492485.000526",
+    "id": "22tr3469",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "but yeah I could think about that again now that you mention it",
+    "ts": "1453492507.000527",
+    "id": "22tr3470",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "yeah you'll need checks for if the field is empty, or length 1, or the user deletes the colon, you probably want it to delete the character before instead",
+    "ts": "1453492524.000528",
+    "id": "22tr3471",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "but I need it to fill out up to xx:xx",
+    "ts": "1453492530.000529",
+    "id": "22tr3472",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "It does add the colon without inputType=number",
+    "ts": "1453492553.000530",
+    "id": "22tr3473",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "but obviously I only want the numeric keyboard",
+    "ts": "1453492564.000531",
+    "id": "22tr3474",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "that's tricky, since TextView doesn't seem to allow other characters with inputType defined",
+    "ts": "1453492642.000532",
+    "id": "22tr3475",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "crap I hit a road block now with everything I tried^^",
+    "ts": "1453492762.000533",
+    "id": "22tr3476",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "maybe I should go with some kind of a „masked input“ thats out there on github somewhere",
+    "ts": "1453492792.000534",
+    "id": "22tr3477",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "<http://stackoverflow.com/questions/3544214/edittext-with-number-keypad-by-default-but-allowing-alphabetic-characters>",
+    "attachments": [
+      {
+        "title": "EditText with number keypad by default, but allowing alphabetic characters",
+        "title_link": "http://stackoverflow.com/questions/3544214/edittext-with-number-keypad-by-default-but-allowing-alphabetic-characters",
+        "text": "I have an EditText box and I want the default keyboard that comes up when it is selected to be the numeric keypad, since most of the time users will be entering numbers. However, I do want to allow...",
+        "fallback": "EditText with number keypad by default, but allowing alphabetic characters",
+        "thumb_url": "http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/questions/3544214/edittext-with-number-keypad-by-default-but-allowing-alphabetic-characters",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "id": 1
+      }
+    ],
+    "ts": "1453492808.000535",
+    "id": "22tr3478",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "actually <http://stackoverflow.com/questions/6153796/how-do-i-default-to-numeric-keyboard-on-edittext-without-forcing-numeric-input/8776491#8776491>",
+    "attachments": [
+      {
+        "title": "How do I default to numeric keyboard on EditText without forcing numeric input?",
+        "title_link": "http://stackoverflow.com/questions/6153796/how-do-i-default-to-numeric-keyboard-on-edittext-without-forcing-numeric-input/8776491#8776491",
+        "text": "This has been asked elsewhere online to no avail. Is there any way in Android to display the numeric soft keyboard when focusing on an EditText, but still allow any text to be entered? I'd like t...",
+        "fallback": "How do I default to numeric keyboard on EditText without forcing numeric input?",
+        "thumb_url": "http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/questions/6153796/how-do-i-default-to-numeric-keyboard-on-edittext-without-forcing-numeric-input/8776491#8776491",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "id": 1
+      }
+    ],
+    "ts": "1453492837.000537",
+    "id": "22tr3479",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "huh is android:digits a thing?",
+    "ts": "1453492890.000539",
+    "id": "22tr3480",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "looks like it",
+    "ts": "1453492954.000540",
+    "id": "22tr3481",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "but still pretty weird to have a full keyboard show up and none of the buttons work except : and the numbers ...",
+    "ts": "1453492983.000541",
+    "id": "22tr3482",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "`        android:inputType=„phone“` looks a little better",
+    "ts": "1453493288.000542",
+    "id": "22tr3483",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "and still accepts the `:`",
+    "ts": "1453493298.000543",
+    "id": "22tr3484",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "not a bad idea",
+    "ts": "1453493413.000544",
+    "id": "22tr3485",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i think that second link i posted is just a one-liner that will allow you to use whatever characters though",
+    "ts": "1453493449.000545",
+    "id": "22tr3486",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "Thank man, will try to move along with the TextWatcher + android:digits + inputType=phone for now",
+    "ts": "1453493583.000546",
+    "id": "22tr3487",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "<@U0546QERR>: ++",
+    "ts": "1453493604.000547",
+    "id": "22tr3488",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "no probs",
+    "ts": "1453493620.000548",
+    "id": "22tr3489",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "hm sorry, thought some karma bot might be around^^",
+    "ts": "1453493626.000549",
+    "id": "22tr3490",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "can I turn off all that logging from in Eclipse from my connected device?",
+    "ts": "1453493810.000550",
+    "id": "22tr3491",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "* Android Studio",
+    "ts": "1453493831.000551",
+    "id": "22tr3492",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "I only care for the output when I do `Log.d(„MyApp“, „foo“)`",
+    "ts": "1453493852.000552",
+    "id": "22tr3493",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "&gt; Eclipse\n:sweat:",
+    "ts": "1453494118.000553",
+    "id": "22tr3494",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "Android Studio will let you filter by process in its android monitor view",
+    "ts": "1453494162.000554",
+    "id": "22tr3495",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "alternatively I think you can supply the package name as some argument to `logcat` in command line",
+    "ts": "1453494194.000555",
+    "id": "22tr3496",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "Its already set to com.myapp.foo in the dropdown",
+    "ts": "1453494214.000556",
+    "id": "22tr3497",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "but still spitting out a bunch of crap with sendBufferedRequest and whatnot",
+    "ts": "1453494230.000557",
+    "id": "22tr3498",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K65E0NB",
+    "text": "every tenth of a second -.-",
+    "ts": "1453494253.000558",
+    "id": "22tr3499",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETA9WHH",
+    "text": "has anyone ran into “Unable to determine package name” when trying to build a project on a windows machine?",
+    "ts": "1453505208.000559",
+    "id": "22tr3500",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

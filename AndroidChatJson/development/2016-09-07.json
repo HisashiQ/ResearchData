@@ -1,0 +1,2557 @@
+[
+  {
+    "user": "U1D7J3UM9",
+    "text": "Hi guys, i have made a shared preferences setting to launch an activity only once on the first install of the app \nthe problem is that when second activity is launched on next app starts the first activity keeps executing in background until it finish",
+    "ts": "1473235772.000297",
+    "id": "07de45226",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "What do you mean?",
+    "ts": "1473235924.000298",
+    "id": "07de45227",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "Do you have some problem like when the user press back butten the user will go back to the first activity?",
+    "ts": "1473235967.000299",
+    "id": "07de45228",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1D7J3UM9",
+    "text": "i dont want that the 1st activity that will be launched only when the first install of the app is made, the user will not have any posibilities to press any back button, but i seen on the logcat that in the first activity is active..",
+    "ts": "1473237644.000300",
+    "id": "07de45229",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "If you set the first activity as the launcher it will be launched everytime your app is launched",
+    "ts": "1473237915.000301",
+    "id": "07de45230",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U1D7J3UM9> do you mean that the first activity remains in memory?",
+    "ts": "1473238229.000302",
+    "id": "07de45231",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "in that case you need to `finish()` your activity before you launch the other one",
+    "ts": "1473238289.000303",
+    "id": "07de45232",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "if you want to only launch that activity once, then you need to have a `GhostActivity` which determines which activity should be launched by checking the shared preferences",
+    "ts": "1473238341.000304",
+    "id": "07de45233",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0J3AKMPS",
+    "text": "<@U1D7J3UM9> you can use this code for one time activity launch (first time only)",
+    "ts": "1473238775.000305",
+    "id": "07de45234",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0J3AKMPS",
+    "text": "currently using in my app",
+    "ts": "1473238786.000306",
+    "id": "07de45235",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0J3AKMPS|coolalien01> uploaded a file: <https://androidchat.slack.com/files/coolalien01/F290PRSA3/-.java|Untitled>",
+    "file": {
+      "id": "F290PRSA3",
+      "created": 1473238839,
+      "timestamp": 1473238839,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U0J3AKMPS",
+      "editable": true,
+      "size": 994,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F290PRSA3/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F290PRSA3/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/coolalien01/F290PRSA3/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F290PRSA3-7f7d5b26cf",
+      "edit_link": "https://androidchat.slack.com/files/coolalien01/F290PRSA3/-.java/edit",
+      "preview": "private int count = 0\r\n\tcount = readSharedPreferenceInt(\"your string\", \"your string\");\r\n       \r\n\r\n\tif (count == 0) {\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-keyword\">private</span> <span class=\"cm-variable-3\">int</span> <span class=\"cm-variable\">count</span> <span class=\"cm-operator\">=</span> <span class=\"cm-number\">0</span></pre></div>\n<div><pre>\t<span class=\"cm-variable\">count</span> <span class=\"cm-operator\">=</span> <span class=\"cm-variable\">readSharedPreferenceInt</span>(<span class=\"cm-string\">&quot;your string&quot;</span>, <span class=\"cm-string\">&quot;your string&quot;</span>);</pre></div>\n<div><pre>       </pre></div>\n<div><pre>&#8203;</pre></div>\n<div><pre>\t<span class=\"cm-keyword\">if</span> (<span class=\"cm-variable\">count</span> <span class=\"cm-operator\">==</span> <span class=\"cm-number\">0</span>) {</pre></div>\n</div>\n</div>\n",
+      "lines": 24,
+      "lines_more": 19,
+      "preview_is_truncated": null,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U0J3AKMPS",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0J3AKMPS|coolalien01>",
+    "bot_id": null,
+    "ts": "1473238840.000307",
+    "id": "07de45236",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U1D7J3UM9|aldocano> uploaded a file: <https://androidchat.slack.com/files/aldocano/F290QRSPK/-.java|Untitled>",
+    "file": {
+      "id": "F290QRSPK",
+      "created": 1473238853,
+      "timestamp": 1473238853,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U1D7J3UM9",
+      "editable": true,
+      "size": 528,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F290QRSPK/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F290QRSPK/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/aldocano/F290QRSPK/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F290QRSPK-0927a05881",
+      "edit_link": "https://androidchat.slack.com/files/aldocano/F290QRSPK/-.java/edit",
+      "preview": "        SharedPreferences pref = getSharedPreferences(\"ActivityPREF\", Context.MODE_PRIVATE);\r\n        if(pref.getBoolean(\"activity_executed\", false)){\r\n            finish();\r\n            Intent intent = new Intent(this, MainActivity.class);\r\n            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>        <span class=\"cm-variable\">SharedPreferences</span> <span class=\"cm-variable\">pref</span> <span class=\"cm-operator\">=</span> <span class=\"cm-variable\">getSharedPreferences</span>(<span class=\"cm-string\">&quot;ActivityPREF&quot;</span>, <span class=\"cm-variable\">Context</span>.<span class=\"cm-variable\">MODE_PRIVATE</span>);</pre></div>\n<div><pre>        <span class=\"cm-keyword\">if</span>(<span class=\"cm-variable\">pref</span>.<span class=\"cm-variable\">getBoolean</span>(<span class=\"cm-string\">&quot;activity_executed&quot;</span>, <span class=\"cm-atom\">false</span>)){</pre></div>\n<div><pre>            <span class=\"cm-variable\">finish</span>();</pre></div>\n<div><pre>            <span class=\"cm-variable\">Intent</span> <span class=\"cm-variable\">intent</span> <span class=\"cm-operator\">=</span> <span class=\"cm-keyword\">new</span> <span class=\"cm-variable\">Intent</span>(<span class=\"cm-keyword\">this</span>, <span class=\"cm-variable\">MainActivity</span>.<span class=\"cm-keyword\">class</span>);</pre></div>\n<div><pre>            <span class=\"cm-variable\">intent</span>.<span class=\"cm-variable\">setFlags</span>(<span class=\"cm-variable\">Intent</span>.<span class=\"cm-variable\">FLAG_ACTIVITY_CLEAR_TOP</span>);</pre></div>\n</div>\n</div>\n",
+      "lines": 13,
+      "lines_more": 8,
+      "preview_is_truncated": null,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U1D7J3UM9",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U1D7J3UM9|aldocano>",
+    "bot_id": null,
+    "ts": "1473238853.000308",
+    "id": "07de45237",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1D7J3UM9",
+    "text": "currently using this, i changed the finish(); on top",
+    "ts": "1473238876.000309",
+    "id": "07de45238",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XJ96KPG",
+    "text": "Hey guys, do you know how to make some 3d map like this app has <https://play.google.com/store/apps/details?id=wm.usceshoppingcenter&amp;hl=en>",
+    "ts": "1473239127.000310",
+    "id": "07de45239",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N7D6F50",
+    "text": "",
+    "bot_id": "B0N7DNUT0",
+    "attachments": [
+      {
+        "text": "Bilo da ste zainteresovani za najnovije aktivnosti UŠĆE SC, akcije prodavnica ili bioskopski repertoar, pomoću ove aplikacije informisaćete se na najjednostavniji način. Na raspolaganju će vam biti i pretraživanje centra pomoću interaktivne 3D mape, pravljenje šoping listi, kao i brz pristup informacijama o tome kako da stignete do UŠĆE SC iz svih delova grada koristeći različita prevozna sredstva. UŠĆE aplikacija vam omogućava da označite svoja omiljena mesta za kupovinu ili razonodu, i na taj način imate pregled svega što vas interesuje. Sistem notifikacija omogucava da od svojih omiljenih radnji dobijate vesti o promocijama i ostalim aktuelnostima. U okviru 3D mape prikazani su svi lokali koji se nalaze u UŠĆE SC pa se lako možete orijentisati, a bez muke ćete pronaći i svoj automobil u garaži. Nova aplikacija jednako će biti korisna ljubiteljima šopinga, ali i onima kojima je potrebna pomoć pri snalaženju u velikom šoping centru. Whether you're interested in the latest SC USCE activities, actions or stores cinematic repertoire with this application is to be informed in the simplest way. At your disposal will be a search center with interactive 3D maps, create shopping lists, as well as quick access to information on how to reach the SC USCE from all parts of the city using different means of transport. MOUTH app lets you mark your favorite places for shopping or leisure, and so you have an overview of everything that interests you. The system enables the notification of their favorite acts get news about promotions and other current events. In the 3D map shows all the bars that are in the MOUTH SC so you can easily orient a hassle and you will find your car in the garage. The new application will be just as useful shopping lovers, and those who need help in getting a large shopping center.",
+        "title": "UsceSC",
+        "id": 1,
+        "color": "3F51B5",
+        "fields": [
+          {
+            "title": "Author",
+            "value": "Wireless Media",
+            "short": true
+          },
+          {
+            "title": "Price",
+            "value": "Free",
+            "short": true
+          },
+          {
+            "title": "Last updated",
+            "value": "October 19, 2015",
+            "short": true
+          },
+          {
+            "title": "Downloads",
+            "value": "10,000 - 50,000",
+            "short": true
+          },
+          {
+            "title": "All hail his Majesty",
+            "value": "@nish",
+            "short": true
+          }
+        ],
+        "fallback": "NO FALLBACK DEFINED"
+      }
+    ],
+    "ts": "1473239128.000311",
+    "id": "07de45240",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "may be load the 3d object file using 3d viewer",
+    "ts": "1473240574.000312",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U0XJ96KPG"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "07de45241",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "you may need to use the opengl",
+    "ts": "1473240586.000313",
+    "id": "07de45242",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "to make similar models you may need to use the maya or other similar software",
+    "ts": "1473240618.000314",
+    "id": "07de45243",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1D7J3UM9",
+    "text": "<@U09T8SFG8> i read the shared preferences on first activity and that decides which to activity to start or not, while it switches to 2nd activity the first activity \"Splashscreen\" keep running until it finish its task.",
+    "ts": "1473240982.000315",
+    "id": "07de45244",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U1D7J3UM9> what have you tried to make it finish?",
+    "ts": "1473241764.000316",
+    "id": "07de45245",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1D7J3UM9",
+    "text": "i tried but success",
+    "ts": "1473241962.000317",
+    "id": "07de45246",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U1D7J3UM9> what did you try?",
+    "ts": "1473243458.000318",
+    "id": "07de45247",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "the finish right?",
+    "ts": "1473243478.000319",
+    "id": "07de45248",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "also how do you know that the activity remains?",
+    "ts": "1473243488.000320",
+    "id": "07de45249",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1D7J3UM9",
+    "text": "I see it on logs, yes i use the finish when i switch to the other activity",
+    "ts": "1473243785.000321",
+    "id": "07de45250",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "when you call `finish()` you should return from the method immediately",
+    "ts": "1473244027.000322",
+    "id": "07de45251",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "I have a feeling you're implementing the one-shot activity incorrectly",
+    "ts": "1473244110.000323",
+    "id": "07de45252",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Move it so that it's only launched if the flag is true, rather than it's finished if the flag is false",
+    "ts": "1473244168.000324",
+    "id": "07de45253",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U291N02SH",
+    "text": "<@U291N02SH|allenwalker> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1473245750.000325",
+    "id": "07de45254",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0J3AKMPS",
+    "text": "hello , any guide to change TextView for whole app  using Preference ?",
+    "ts": "1473248512.000326",
+    "id": "07de45255",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0J3AKMPS",
+    "text": "*font family",
+    "ts": "1473248533.000327",
+    "id": "07de45256",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Use stylers",
+    "ts": "1473248821.000328",
+    "id": "07de45257",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "styles*",
+    "ts": "1473248826.000329",
+    "id": "07de45258",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "<@U0J3AKMPS> This will give you a decent idea of how to apply them; <http://blog.danlew.net/2014/11/19/styles-on-android/>",
+    "attachments": [
+      {
+        "service_name": "Dan Lew Codes",
+        "title": "Styling Views on Android (Without Going Crazy)",
+        "title_link": "http://blog.danlew.net/2014/11/19/styles-on-android/",
+        "text": "Styles are hard to get right on Android. There's a lot of potential for frustration. The hierarchy easily devolves into spaghetti code. How often have you wanted to change a style but feared you might break something unintentionally by doing so? After many years of working with Android, I have",
+        "fallback": "Dan Lew Codes: Styling Views on Android (Without Going Crazy)",
+        "fields": [
+          {
+            "title": "Written by",
+            "value": "Dan Lew",
+            "short": true
+          },
+          {
+            "title": "Filed under",
+            "value": "android",
+            "short": true
+          }
+        ],
+        "ts": 1416412415,
+        "from_url": "http://blog.danlew.net/2014/11/19/styles-on-android/",
+        "service_icon": "http://blog.danlew.net/favicon.ico",
+        "id": 1
+      }
+    ],
+    "ts": "1473248892.000330",
+    "id": "07de45259",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "Also he did a talk which is pretty good - <https://www.youtube.com/watch?v=Jr8hJdVGHAk>",
+    "attachments": [
+      {
+        "service_name": "YouTube",
+        "service_url": "https://www.youtube.com/",
+        "title": "Droidcon NYC 2015 - Using Styles and Themes Without Going Crazy",
+        "title_link": "https://www.youtube.com/watch?v=Jr8hJdVGHAk",
+        "author_name": "touchlab",
+        "author_link": "https://www.youtube.com/channel/UC_LIW0OUdsRI21D0xnWkexw",
+        "thumb_url": "https://i.ytimg.com/vi/Jr8hJdVGHAk/hqdefault.jpg",
+        "thumb_width": 480,
+        "thumb_height": 360,
+        "fallback": "YouTube Video: Droidcon NYC 2015 - Using Styles and Themes Without Going Crazy",
+        "video_html": "<iframe width=\"400\" height=\"225\" src=\"https://www.youtube.com/embed/Jr8hJdVGHAk?feature=oembed&autoplay=1&iv_load_policy=3\" frameborder=\"0\" allowfullscreen></iframe>",
+        "video_html_width": 400,
+        "video_html_height": 225,
+        "from_url": "https://www.youtube.com/watch?v=Jr8hJdVGHAk",
+        "service_icon": "https://a.slack-edge.com/2089/img/unfurl_icons/youtube.png",
+        "id": 1
+      }
+    ],
+    "ts": "1473249043.000332",
+    "id": "07de45260",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UETGCJU",
+    "text": "hello all!\n\nperhaps you could aid me with a problem that I've been sitting on for nearly 3 days now. gahhhh. \n\nis it possible that using the `CollapsedToolbarLayout` or its children as the target for a fragment-to-fragment Shared Element transition doesn't work?\n\nperhaps the `FragmentManager`'s `addSharedElement` only takes care of transitions performed within the fragment's container, and not its hierarchical parents such as `CollapsingToolbarLayout`?\n\nmy situation for context:\n- I have successfully transitioned from fragment A to fragment B with a shared element that is an `ImageView` from fragment A to fragment B as a separate `ImageView` with the exact same `transitionName` property. it's smooth.\n\n- but as soon as I remove the shared `ImageView` from fragment B and instead add the transition to work with the `ImageView` nested in my `CollapsedToolbarLayout` -- it doesn't work!",
+    "edited": {
+      "user": "U0UETGCJU",
+      "ts": "1473251016.000000"
+    },
+    "ts": "1473250976.000334",
+    "id": "07de45261",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UETGCJU",
+    "text": "any idea what might be causing this?",
+    "ts": "1473251018.000337",
+    "id": "07de45262",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UETGCJU",
+    "text": "hope that's detailed enough. if you lack context or anything let me know please. thank you",
+    "ts": "1473251022.000338",
+    "id": "07de45263",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1T13H6S3",
+    "text": "Facebook Graph User return email=“” in android device but gives right email in ios device, im using facebook sdk 4+, any idea?",
+    "ts": "1473251748.000339",
+    "id": "07de45264",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1T13H6S3",
+    "text": "i’ve email permission added to graphRequest, and the same working for other facebook account but not that particular account",
+    "ts": "1473251806.000340",
+    "id": "07de45265",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TJ9D30B",
+    "text": "Hi all, I have a strange behaviour in a particular situation, here it is. I have a button in a RelativeLayout (at bottom) and a recyclerView above it. When I disable the button it goes background, indeed the recyclerview appears on it. I can hack this behaviour by using activate state instead of enable but can someone explain me this behaviour ? Thanks",
+    "ts": "1473252812.000341",
+    "id": "07de45266",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1D7J3UM9",
+    "text": "How can i implement a service like watchdog?",
+    "ts": "1473252857.000342",
+    "id": "07de45267",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "<@U1TJ9D30B> Can you post your xml?",
+    "ts": "1473253252.000343",
+    "id": "07de45268",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TJ9D30B",
+    "text": "&lt;?xml version=\"1.0\" encoding=\"utf-8\"?&gt;\n&lt;RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\"\n    android:clipChildren=\"false\"&gt;\n    &lt;NoResultView\n        android:id=\"@+id/my_adverts_fragment_no_result\"\n        android:layout_width=\"match_parent\"\n        android:layout_height=\"wrap_content\"\n        android:layout_centerVertical=\"true\"\n        android:text=\"@string/my_adverts_no_result\"\n        android:src=\"@drawable/myfavorites_empty\" /&gt;\n    &lt;IconButtonView\n        android:id=\"@+id/my_adverts_fragment_share\"\n        android:layout_width=\"match_parent\"\n        android:layout_height=\"@dimen/buttons_height\"\n        android:layout_alignParentBottom=\"true\"\n        android:gravity=\"center\"\n        android:text=\"@string/my_adverts_fragment_share\"\n        style=\"@style/RightIconButtonDisabledStyle\"\n        android:visibility=\"gone\" /&gt;\n    &lt;android.support.v7.widget.RecyclerView\n        android:id=\"@+id/my_adverts_fragment_recycler\"\n        android:layout_width=\"match_parent\"\n        android:layout_height=\"match_parent\"\n        android:layout_above=\"@id/my_adverts_fragment_share\"\n        android:layout_marginBottom=\"@dimen/global_inner_margin\" /&gt;\n&lt;!--\t&lt;Button\n\t\tandroid:id=\"@+id/my_adverts_fragment_sort\"\n\t\tandroid:layout_width=\"match_parent\"\n\t\tandroid:layout_height=\"@dimen/buttons_height\"\n\t\tandroid:layout_gravity=\"bottom\"\n\t\tandroid:gravity=\"center\"\n\t\tandroid:text=\"@string/my_adverts_fragment_sort\"\n\t\tstyle=\"@style/BaseButtonStyle\" /&gt;--&gt;\n&lt;/RelativeLayout&gt;",
+    "ts": "1473255167.000344",
+    "id": "07de45269",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TJ9D30B",
+    "text": "<@U1LJG0Y03> here it is , thx",
+    "ts": "1473255188.000345",
+    "id": "07de45270",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "<@U1TJ9D30B> next time remember if you press the + button on the right in Slack then you can post code snippets",
+    "ts": "1473255910.000346",
+    "id": "07de45271",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Like this",
+    "ts": "1473255914.000347",
+    "id": "07de45272",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U1LJG0Y03|contract16> uploaded a file: <https://androidchat.slack.com/files/contract16/F2933MEDC/-.xml|Untitled>",
+    "file": {
+      "id": "F2933MEDC",
+      "created": 1473255926,
+      "timestamp": 1473255926,
+      "name": "-.xml",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "xml",
+      "pretty_type": "XML",
+      "user": "U1LJG0Y03",
+      "editable": true,
+      "size": 1622,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F2933MEDC/-.xml?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F2933MEDC/download/-.xml?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/contract16/F2933MEDC/-.xml",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F2933MEDC-5374645b07",
+      "edit_link": "https://androidchat.slack.com/files/contract16/F2933MEDC/-.xml/edit",
+      "preview": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n   android:layout_width=\"match_parent\"\r\n   android:layout_height=\"match_parent\"\r\n   android:clipChildren=\"false\">\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-meta\">&lt;?xml</span> <span class=\"cm-meta\">version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span></pre></div>\n<div><pre><span class=\"cm-tag cm-bracket\">&lt;</span><span class=\"cm-tag\">RelativeLayout</span> <span class=\"cm-attribute\">xmlns:android</span>=<span class=\"cm-string\">&quot;http://schemas.android.com/apk/res/android&quot;</span></pre></div>\n<div><pre>   <span class=\"cm-attribute\">android:layout_width</span>=<span class=\"cm-string\">&quot;match_parent&quot;</span></pre></div>\n<div><pre>   <span class=\"cm-attribute\">android:layout_height</span>=<span class=\"cm-string\">&quot;match_parent&quot;</span></pre></div>\n<div><pre>   <span class=\"cm-attribute\">android:clipChildren</span>=<span class=\"cm-string\">&quot;false&quot;</span><span class=\"cm-tag cm-bracket\">&gt;</span></pre></div>\n</div>\n</div>\n",
+      "lines": 36,
+      "lines_more": 31,
+      "preview_is_truncated": null,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U1LJG0Y03",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U1LJG0Y03|contract16>",
+    "bot_id": null,
+    "ts": "1473255926.000348",
+    "id": "07de45273",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U1LJG0Y03|contract16> uploaded a file: <https://androidchat.slack.com/files/contract16/F293E0F1D/try_this.xml|Try this>",
+    "file": {
+      "id": "F293E0F1D",
+      "created": 1473256012,
+      "timestamp": 1473256012,
+      "name": "Try_this.xml",
+      "title": "Try this",
+      "mimetype": "text/plain",
+      "filetype": "xml",
+      "pretty_type": "XML",
+      "user": "U1LJG0Y03",
+      "editable": true,
+      "size": 1611,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F293E0F1D/try_this.xml?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F293E0F1D/download/try_this.xml?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/contract16/F293E0F1D/try_this.xml",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F293E0F1D-8fd4546e86",
+      "edit_link": "https://androidchat.slack.com/files/contract16/F293E0F1D/try_this.xml/edit",
+      "preview": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n   android:layout_width=\"match_parent\"\r\n   android:layout_height=\"match_parent\"\r\n   android:clipChildren=\"false\">\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-meta\">&lt;?xml</span> <span class=\"cm-meta\">version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span></pre></div>\n<div><pre><span class=\"cm-tag cm-bracket\">&lt;</span><span class=\"cm-tag\">RelativeLayout</span> <span class=\"cm-attribute\">xmlns:android</span>=<span class=\"cm-string\">&quot;http://schemas.android.com/apk/res/android&quot;</span></pre></div>\n<div><pre>   <span class=\"cm-attribute\">android:layout_width</span>=<span class=\"cm-string\">&quot;match_parent&quot;</span></pre></div>\n<div><pre>   <span class=\"cm-attribute\">android:layout_height</span>=<span class=\"cm-string\">&quot;match_parent&quot;</span></pre></div>\n<div><pre>   <span class=\"cm-attribute\">android:clipChildren</span>=<span class=\"cm-string\">&quot;false&quot;</span><span class=\"cm-tag cm-bracket\">&gt;</span></pre></div>\n</div>\n</div>\n",
+      "lines": 36,
+      "lines_more": 31,
+      "preview_is_truncated": null,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U1LJG0Y03",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U1LJG0Y03|contract16>",
+    "bot_id": null,
+    "ts": "1473256013.000349",
+    "id": "07de45274",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Try that one",
+    "ts": "1473256019.000350",
+    "id": "07de45275",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TJ9D30B",
+    "text": "<@U1LJG0Y03> button sort was gone you shouldn’t managed it, I should have removed it from paste code. Whatever I don’t see what you’re xml solved. Thanks anyway, could you try again without managing sort button ? But I don’t think my xml is wrong. The behaviour is realy that IconButtonView goes back when disabled",
+    "ts": "1473256463.000351",
+    "id": "07de45276",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Ah",
+    "ts": "1473256494.000352",
+    "id": "07de45277",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Sec",
+    "ts": "1473256495.000353",
+    "id": "07de45278",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Are you updating any styles when the button is disabled?",
+    "ts": "1473256540.000354",
+    "id": "07de45279",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TJ9D30B",
+    "text": "I change button background and stuff like that but I don’t manipulate the style directly. Plus I’ve commented all the transformations to test if it was the problem and the behaviour still persist in this case.",
+    "ts": "1473257319.000355",
+    "id": "07de45280",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TJ9D30B",
+    "text": "But good idea anyway",
+    "ts": "1473257330.000356",
+    "id": "07de45281",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TJ9D30B",
+    "text": "<@U1LJG0Y03> I’m pretty sure of that it’s the fact I disable the Button which makes it goes background. I’m sure of that since I’m facing the same behaviour just by desabling the button nothing else. Then  I just look for someone to explain me how disabling a button could send it back in z-order.",
+    "ts": "1473259512.000357",
+    "id": "07de45282",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Android doesn't really have z-index",
+    "ts": "1473259560.000358",
+    "id": "07de45283",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "If the recyclerview is set to be above an element, and the it isn't, then something in the styles is either changing the height or visibility of the view element underneath",
+    "ts": "1473259610.000359",
+    "id": "07de45284",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TJ9D30B",
+    "text": "Don’t agree, again I’m facing the same behaviour by disabling the button and nothing else, no style changin, background color changing or anything. + If I scroll down to end I can see the recycler above the button just in the right way even if the recycler doesn’t have any marginBottom",
+    "ts": "1473259838.000360",
+    "id": "07de45285",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TJ9D30B",
+    "text": "But you pointed something interesting it’s true something could had modify the view underneath. But I’ve tested that by doing nothing else than disabling the button",
+    "ts": "1473259892.000361",
+    "id": "07de45286",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TJ9D30B",
+    "text": "Just to be sure I’ve tried with no style on the button xml code and I’m facing the same problem (of course)",
+    "ts": "1473260095.000362",
+    "id": "07de45287",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TJ9D30B",
+    "text": "I’m sure you coud reproduce the exact same behaviour , for now I’ll use an hack (bringToFront) when needed, at term I’ll try in a new project then in needed share the project to find out what really happen",
+    "ts": "1473260170.000363",
+    "id": "07de45288",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Try removing clipChildren",
+    "ts": "1473260371.000364",
+    "id": "07de45289",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TJ9D30B",
+    "text": "hm good idea !",
+    "ts": "1473260425.000365",
+    "id": "07de45290",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TJ9D30B",
+    "text": "It was a good idea since I don’t need clipChildren to simplify the xml. Without clip children false I’m facing another totaly different problem. Even if the button is “gone” the recyclerview is above (like if it had a marginBottom)",
+    "ts": "1473261548.000366",
+    "id": "07de45291",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "It does have a marginBottom though right?",
+    "ts": "1473261580.000367",
+    "id": "07de45292",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TJ9D30B",
+    "text": "no",
+    "ts": "1473261594.000368",
+    "id": "07de45293",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TJ9D30B",
+    "text": "take a look",
+    "ts": "1473261596.000369",
+    "id": "07de45294",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U1TJ9D30B|dayzen> uploaded a file: <https://androidchat.slack.com/files/dayzen/F294E46J2/-.txt|Untitled>",
+    "file": {
+      "id": "F294E46J2",
+      "created": 1473261604,
+      "timestamp": 1473261604,
+      "name": "-.txt",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "text",
+      "pretty_type": "Plain Text",
+      "user": "U1TJ9D30B",
+      "editable": true,
+      "size": 1139,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F294E46J2/-.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F294E46J2/download/-.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/dayzen/F294E46J2/-.txt",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F294E46J2-1969e9c1cf",
+      "edit_link": "https://androidchat.slack.com/files/dayzen/F294E46J2/-.txt/edit",
+      "preview": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\">\r\n    <NoResultView\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</pre></div>\n<div><pre>&lt;RelativeLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</pre></div>\n<div><pre>    android:layout_width=&quot;match_parent&quot;</pre></div>\n<div><pre>    android:layout_height=&quot;match_parent&quot;&gt;</pre></div>\n<div><pre>    &lt;NoResultView</pre></div>\n<div><pre></pre></div>\n</div>\n</div>\n",
+      "lines": 25,
+      "lines_more": 20,
+      "preview_is_truncated": true,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U1TJ9D30B",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U1TJ9D30B|dayzen>",
+    "bot_id": null,
+    "ts": "1473261604.000370",
+    "id": "07de45295",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TJ9D30B",
+    "text": "i’ve removed my custom button iconbuttonview to simplify and don’t distrub you from considering it’s my custombutton class which has a problem",
+    "ts": "1473261644.000371",
+    "id": "07de45296",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Can't see anything obvious there",
+    "ts": "1473261725.000372",
+    "id": "07de45297",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TJ9D30B",
+    "text": "Very strange indeed, the xml is so simple ..",
+    "ts": "1473261770.000373",
+    "id": "07de45298",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TJ9D30B",
+    "text": "I’’l try a last thing, something more radical",
+    "ts": "1473261872.000374",
+    "id": "07de45299",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TJ9D30B",
+    "text": "omg ...",
+    "ts": "1473261918.000375",
+    "id": "07de45300",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TJ9D30B",
+    "text": "you will kill me",
+    "ts": "1473261939.000376",
+    "id": "07de45301",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TJ9D30B",
+    "text": "share.Visibility = show ? ViewStates.Visible : ViewStates.Invisible;",
+    "ts": "1473261943.000377",
+    "id": "07de45302",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TJ9D30B",
+    "text": "...",
+    "ts": "1473261952.000378",
+    "id": "07de45303",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TJ9D30B",
+    "text": "so sorry ...",
+    "ts": "1473261955.000379",
+    "id": "07de45304",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TJ9D30B",
+    "text": "I feel so idiot",
+    "ts": "1473261977.000380",
+    "id": "07de45305",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Haha",
+    "ts": "1473262180.000381",
+    "id": "07de45306",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "It's always the simple things mate :slightly_smiling_face:",
+    "ts": "1473262201.000382",
+    "id": "07de45307",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TJ9D30B",
+    "text": "Thank you very much and so sorry for having wasted you time",
+    "ts": "1473262247.000383",
+    "id": "07de45308",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TJ9D30B",
+    "text": "I’ll remember this one ..",
+    "ts": "1473262262.000384",
+    "id": "07de45309",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Learning is never wasted time mate :slightly_smiling_face:",
+    "ts": "1473262289.000385",
+    "id": "07de45310",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TJ9D30B",
+    "text": "It’s a newbie mistake ! lol",
+    "ts": "1473262320.000386",
+    "id": "07de45311",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LAC855G",
+    "text": "Hi Guys,\nI want to develop an Android Studio Plugin which will add an new option in the 'Build' menu say \"Do Magic\". On click on it I want to build the project, generate an APK , then invoke a ThridParty program and send this generated APK to it. \nCan I do this using Android Studio plugin or should a write a Gradle plugin? Any help will be greatly appreciated.:blush:",
+    "ts": "1473262791.000387",
+    "id": "07de45312",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "you can do all of that with a gradle task and then simply add a build configuration for it",
+    "ts": "1473262878.000388",
+    "id": "07de45313",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "^ ",
+    "ts": "1473262918.000389",
+    "id": "07de45314",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "You don't want to write a Gradle plugin. The documentation is really really bad",
+    "ts": "1473262943.000390",
+    "id": "07de45315",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Like hardware docs bad",
+    "ts": "1473262951.000391",
+    "id": "07de45316",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "lol yep",
+    "ts": "1473262960.000392",
+    "id": "07de45317",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "yeah it sucks",
+    "ts": "1473262961.000393",
+    "id": "07de45318",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "ive written plugins, they are not fun or enjoyable and its completely unclear what you ‘should’ do and it sucks for end users as most of the stuff you can or should do is hidden from them so you have to write good docs on using the plugins",
+    "ts": "1473263002.000394",
+    "id": "07de45319",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "don’t support that cycle",
+    "ts": "1473263008.000395",
+    "id": "07de45320",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LAC855G",
+    "text": "But how do I invoke an Third Party program from gradle task?",
+    "ts": "1473263148.000396",
+    "id": "07de45321",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LAC855G",
+    "text": "<@U055GGAHS>",
+    "ts": "1473263168.000397",
+    "id": "07de45322",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "gradle has exec tasks",
+    "ts": "1473263184.000398",
+    "id": "07de45323",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<https://docs.gradle.org/current/dsl/org.gradle.api.tasks.Exec.html>",
+    "ts": "1473263194.000399",
+    "id": "07de45324",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U0LAC855G>: if you get frustrated just write java",
+    "ts": "1473263227.000400",
+    "id": "07de45325",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Leave out the semicolons",
+    "ts": "1473263233.000401",
+    "id": "07de45326",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I’ve taken recently to just using exec tasks to call scripts so I dont have to use fucking gradle :stuck_out_tongue:",
+    "ts": "1473263243.000402",
+    "id": "07de45327",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Booo booooooo!",
+    "ts": "1473263261.000403",
+    "id": "07de45328",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LAC855G",
+    "text": "<@U08GFT5V5> :joy:",
+    "ts": "1473263265.000404",
+    "id": "07de45329",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "lol",
+    "ts": "1473263271.000405",
+    "id": "07de45330",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "does the same thing",
+    "subtype": "me_message",
+    "user": "U08GFT5V5",
+    "ts": "1473263275.000406",
+    "id": "07de45331",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Problem though is windows users suffer",
+    "ts": "1473263305.000407",
+    "id": "07de45332",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "indeed",
+    "ts": "1473263315.000408",
+    "id": "07de45333",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "but it’s not our fault that windows is still moderately stupid when it comes to most tasks",
+    "ts": "1473263338.000409",
+    "id": "07de45334",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Has anyone tried out kobalt?",
+    "ts": "1473263453.000410",
+    "id": "07de45335",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "I'm curious about what you think",
+    "ts": "1473263463.000411",
+    "id": "07de45336",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U08GFT5V5> I helped with kobalt",
+    "ts": "1473263890.000412",
+    "id": "07de45337",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U08GFT5V5> talk with @cbeust on Kotlin's slack",
+    "ts": "1473263909.000413",
+    "id": "07de45338",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "and the #kobalt channel there",
+    "ts": "1473263913.000414",
+    "id": "07de45339",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LAC855G",
+    "text": "<@U055GGAHS> one last question Is their a way where you can invoke an gradle task task via IntelliJ (Android Studio) Plugin and and also package a gradle task with in the plugin. I want to distribute this solution with as less configuration as possible.",
+    "ts": "1473264387.000415",
+    "id": "07de45340",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1DLM2R6H",
+    "text": "Anybody knows how to use Glide's `preload` and `downloadOnly`?",
+    "ts": "1473267820.000416",
+    "id": "07de45341",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0547SF15",
+    "text": "the same way you would use `into`. I use `preload` to cache assets from the next screen that’ll be shown.",
+    "ts": "1473274935.000417",
+    "id": "07de45342",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0547SF15",
+    "text": "`Glide.with(context).load(imageUrl).preload()`",
+    "ts": "1473274963.000418",
+    "id": "07de45343",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0547SF15",
+    "text": "next time you use `into` with the same url it’ll pull the asset from cache rather than having to download it first",
+    "ts": "1473275029.000419",
+    "id": "07de45344",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1FCQ3R40",
+    "text": "Can anyone suggest a good performance monitoring tool to use?",
+    "ts": "1473299924.000420",
+    "id": "07de45345",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U1T1U3GR0|mohanraj> uploaded a file: <https://androidchat.slack.com/files/mohanraj/F29D09LTZ/qlfysubcat.json|qlfysubcat.json> and commented: Anybody know how to parse the Expandable listview with model class?",
+    "file": {
+      "id": "F29D09LTZ",
+      "created": 1473315462,
+      "timestamp": 1473315462,
+      "name": "qlfysubcat.json",
+      "title": "qlfysubcat.json",
+      "mimetype": "text/plain",
+      "filetype": "javascript",
+      "pretty_type": "JavaScript/JSON",
+      "user": "U1T1U3GR0",
+      "editable": true,
+      "size": 3125,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F29D09LTZ/qlfysubcat.json?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F29D09LTZ/download/qlfysubcat.json?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/mohanraj/F29D09LTZ/qlfysubcat.json",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F29D09LTZ-61a51542cb",
+      "edit_link": "https://androidchat.slack.com/files/mohanraj/F29D09LTZ/qlfysubcat.json/edit",
+      "preview": "{\n  \"status\": true,\n  \"data\": {\n    \"subcategory_ids\": [\n      {",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>{</pre></div>\n<div><pre>  <span class=\"cm-string\">&quot;status&quot;</span>: <span class=\"cm-atom\">true</span>,</pre></div>\n<div><pre>  <span class=\"cm-string\">&quot;data&quot;</span>: {</pre></div>\n<div><pre>    <span class=\"cm-string\">&quot;subcategory_ids&quot;</span>: [</pre></div>\n<div><pre>      {</pre></div>\n</div>\n</div>\n",
+      "lines": 118,
+      "lines_more": 113,
+      "preview_is_truncated": null,
+      "channels": [
+        "C04NZAN54",
+        "C055MSDCM"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 2,
+      "initial_comment": {
+        "id": "Fc29D7GGTU",
+        "created": 1473315462,
+        "timestamp": 1473315462,
+        "user": "U1T1U3GR0",
+        "is_intro": true,
+        "comment": "Anybody know how to parse the Expandable listview with model class?",
+        "channel": ""
+      }
+    },
+    "user": "U1T1U3GR0",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U1T1U3GR0|mohanraj>",
+    "bot_id": null,
+    "ts": "1473315462.000421",
+    "id": "07de45346",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

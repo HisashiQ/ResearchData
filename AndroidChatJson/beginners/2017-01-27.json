@@ -1,0 +1,667 @@
+[
+  {
+    "user": "U0ZJL26E8",
+    "text": "Hi, I gotta a question about RxJava. I need to create an observable that will do one action and after a second do a second action, anyone know how to do this?",
+    "ts": "1485515702.002334",
+    "id": "27be13509",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0ZJL26E8|raskol> uploaded a file: <https://androidchat.slack.com/files/raskol/F3XD44UJH/-.java|Untitled>",
+    "file": {
+      "id": "F3XD44UJH",
+      "created": 1485515809,
+      "timestamp": 1485515809,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U0ZJL26E8",
+      "editable": true,
+      "size": 764,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F3XD44UJH/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F3XD44UJH/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/raskol/F3XD44UJH/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F3XD44UJH-caaaf83388",
+      "edit_link": "https://androidchat.slack.com/files/raskol/F3XD44UJH/-.java/edit",
+      "preview": "Observable<Long> delayObservable = Observable.interval(1000, TimeUnit.MILLISECONDS);\r\nObservable<Object> listObservable = Observable.from(list);\r\nsubscription = listObservable\r\n                .zipWith(delayObservable, new Func2<Object, Long, Object>() {\r\n                    @Override\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-variable\">Observable</span><span class=\"cm-operator\">&lt;</span><span class=\"cm-variable-3\">Long</span><span class=\"cm-operator\">&gt;</span> <span class=\"cm-variable\">delayObservable</span> <span class=\"cm-operator\">=</span> <span class=\"cm-variable\">Observable</span>.<span class=\"cm-variable\">interval</span>(<span class=\"cm-number\">1000</span>, <span class=\"cm-variable\">TimeUnit</span>.<span class=\"cm-variable\">MILLISECONDS</span>);</pre></div>\n<div><pre><span class=\"cm-variable\">Observable</span><span class=\"cm-operator\">&lt;</span><span class=\"cm-variable-3\">Object</span><span class=\"cm-operator\">&gt;</span> <span class=\"cm-variable\">listObservable</span> <span class=\"cm-operator\">=</span> <span class=\"cm-variable\">Observable</span>.<span class=\"cm-variable\">from</span>(<span class=\"cm-variable\">list</span>);</pre></div>\n<div><pre><span class=\"cm-variable\">subscription</span> <span class=\"cm-operator\">=</span> <span class=\"cm-variable\">listObservable</span></pre></div>\n<div><pre>                .<span class=\"cm-variable\">zipWith</span>(<span class=\"cm-variable\">delayObservable</span>, <span class=\"cm-keyword\">new</span> <span class=\"cm-variable\">Func2</span><span class=\"cm-operator\">&lt;</span><span class=\"cm-variable-3\">Object</span>, <span class=\"cm-variable-3\">Long</span>, <span class=\"cm-variable-3\">Object</span><span class=\"cm-operator\">&gt;</span>() {</pre></div>\n<div><pre>                    <span class=\"cm-meta\">@Override</span></pre></div>\n</div>\n</div>\n",
+      "lines": 17,
+      "lines_more": 12,
+      "preview_is_truncated": false,
+      "channels": [
+        "C055MSDCM"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U0ZJL26E8",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0ZJL26E8|raskol>",
+    "bot_id": null,
+    "ts": "1485515809.002335",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "27be13510",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ZJL26E8",
+    "text": "for now I have an observable that does an action every 1 second, but I need it to do an action and after 1 second do a second action and like that for every element in the list",
+    "ts": "1485515865.002336",
+    "id": "27be13511",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3VDXB00G",
+    "text": "Hi all...",
+    "ts": "1485517128.002338",
+    "id": "27be13512",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3VDXB00G",
+    "text": "1. What is a good code..??",
+    "edited": {
+      "user": "U3VDXB00G",
+      "ts": "1485517810.000000"
+    },
+    "ts": "1485517162.002339",
+    "id": "27be13513",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3VDXB00G",
+    "text": "2. As android is an open source O.S. many providers has  customised it.. like Samsung, Xiaomi, Motorola etc.. Does Android app shows diff. behaviour in custom O.S.?",
+    "edited": {
+      "user": "U3VDXB00G",
+      "ts": "1485517820.000000"
+    },
+    "ts": "1485517344.002340",
+    "id": "27be13514",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0NQ6CY8G",
+    "text": "Hi guys, I'm having the following error ` view tag isn't correct on view:null`, and solutions I found on SO aren't working. What could be causing it. My recyclerview has 2 viewtypes, its a particular viewtype that causes the error, but sometime, it doesn't. It throws the error if the viewtype is what is being bound to the recyclerview consecutively",
+    "ts": "1485519543.002343",
+    "id": "27be13515",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3VDXB00G",
+    "text": "HI <@U0NQ6CY8G>  can you plz provide us the Recyclerview Adapter class",
+    "ts": "1485522659.002344",
+    "id": "27be13516",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3MGKGRP1",
+    "text": "<@U3MGKGRP1|edisseus> has left the channel",
+    "subtype": "channel_leave",
+    "ts": "1485524906.002345",
+    "id": "27be13517",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3J6W9P0W",
+    "text": "that’s how this guy push his skills up",
+    "ts": "1485525025.002346",
+    "id": "27be13518",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3XEXJW4C",
+    "text": "<@U3XEXJW4C|safyodedara> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1485526624.002347",
+    "id": "27be13519",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3WNUSQKT",
+    "text": "<@U3WNUSQKT|stevedoesit> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1485529621.002348",
+    "id": "27be13520",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3XC0LWKD",
+    "text": "<@U3XC0LWKD|javad> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1485531753.002350",
+    "id": "27be13521",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3WQ0NF09",
+    "text": "<@U3WQ0NF09|andyjoyce> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1485533591.002352",
+    "id": "27be13522",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3WPNLJ4Q",
+    "text": "<@U3WPNLJ4Q|pavinthan> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1485535037.002353",
+    "id": "27be13523",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U3VDXB00G> could you use snippets instead of preformatted code?",
+    "ts": "1485537656.002354",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U0NQ6CY8G"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "27be13524",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0NQ6CY8G|crispy> uploaded a file: <https://androidchat.slack.com/files/crispy/F3Y6PV6UW/Untitled.kt|Untitled> and commented: My adapter <@U061HDV96>, <@U3VDXB00G>",
+    "file": {
+      "id": "F3Y6PV6UW",
+      "created": 1485538716,
+      "timestamp": 1485538716,
+      "name": "Untitled.kt",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "kotlin",
+      "pretty_type": "Kotlin",
+      "user": "U0NQ6CY8G",
+      "editable": true,
+      "size": 2685,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F3Y6PV6UW/Untitled.kt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F3Y6PV6UW/download/Untitled.kt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/crispy/F3Y6PV6UW/Untitled.kt",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F3Y6PV6UW-1b4b32f517",
+      "edit_link": "https://androidchat.slack.com/files/crispy/F3Y6PV6UW/Untitled.kt/edit",
+      "preview": "class ChatAdapter : RecyclerView.Adapter<ChatAdapter.ViewHolder>() {\r\n    lateinit var viewModel: ChatFragmentViewModel\r\n\r\n    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {\r\n                 return ViewHolder.create(parent, viewModel, viewType) \r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-keyword\">class</span> <span class=\"cm-def\">ChatAdapter</span> : <span class=\"cm-variable\">RecyclerView</span>.<span class=\"cm-variable\">Adapter</span><span class=\"cm-operator\">&lt;</span><span class=\"cm-variable\">ChatAdapter</span>.<span class=\"cm-variable\">ViewHolder</span><span class=\"cm-operator\">&gt;</span>() {</pre></div>\n<div><pre>    <span class=\"cm-keyword\">lateinit</span> <span class=\"cm-keyword\">var</span> <span class=\"cm-def\">viewModel</span>: <span class=\"cm-variable\">ChatFragmentViewModel</span></pre></div>\n<div><pre>&#8203;</pre></div>\n<div><pre>    <span class=\"cm-keyword\">override</span> <span class=\"cm-keyword\">fun</span> <span class=\"cm-def\">onCreateViewHolder</span>(<span class=\"cm-variable\">parent</span>: <span class=\"cm-variable\">ViewGroup</span><span class=\"cm-operator\">?</span>, <span class=\"cm-variable\">viewType</span>: <span class=\"cm-variable\">Int</span>): <span class=\"cm-variable\">ViewHolder</span> {</pre></div>\n<div><pre>                 <span class=\"cm-keyword\">return</span> <span class=\"cm-variable\">ViewHolder</span>.<span class=\"cm-variable\">create</span>(<span class=\"cm-variable\">parent</span>, <span class=\"cm-variable\">viewModel</span>, <span class=\"cm-variable\">viewType</span>) </pre></div>\n</div>\n</div>\n",
+      "lines": 67,
+      "lines_more": 62,
+      "preview_is_truncated": true,
+      "channels": [
+        "C055MSDCM"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 1,
+      "initial_comment": {
+        "id": "Fc3XG4TCLA",
+        "created": 1485538716,
+        "timestamp": 1485538716,
+        "user": "U0NQ6CY8G",
+        "is_intro": true,
+        "comment": "My adapter <@U061HDV96>, <@U3VDXB00G>",
+        "channel": ""
+      }
+    },
+    "user": "U0NQ6CY8G",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0NQ6CY8G|crispy>",
+    "bot_id": null,
+    "ts": "1485538716.002356",
+    "id": "27be13525",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "You can set the syntax to Kotlin btw",
+    "ts": "1485538742.002357",
+    "id": "27be13526",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U0NQ6CY8G> please do not repost your question",
+    "ts": "1485540691.002363",
+    "reactions": [
+      {
+        "name": "100",
+        "users": [
+          "U0NQ6CY8G"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "27be13527",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3XGFJCVC",
+    "text": "Hello",
+    "ts": "1485543616.002366",
+    "id": "27be13528",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3XGFJCVC",
+    "text": "Anyone on",
+    "ts": "1485543633.002367",
+    "id": "27be13529",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055JANKU",
+    "text": "no",
+    "ts": "1485543984.002368",
+    "id": "27be13530",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3UA52NR1",
+    "text": "Definitely not I",
+    "ts": "1485544539.002369",
+    "id": "27be13531",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "/gif tumbleweed",
+    "ts": "1485547338.002370",
+    "id": "27be13532",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "",
+    "bot_id": "B3Q3NH80H",
+    "attachments": [
+      {
+        "fallback": "<https://media.giphy.com/media/O38dU2kkQ9sWc/giphy.gif>",
+        "image_url": "https://media.giphy.com/media/O38dU2kkQ9sWc/giphy.gif",
+        "image_width": 300,
+        "image_height": 225,
+        "image_bytes": 2542011,
+        "is_animated": true,
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1485547338.002371",
+    "id": "27be13533",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3Y9RDF0E",
+    "text": "<@U3Y9RDF0E|penvei> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1485549830.002373",
+    "id": "27be13534",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3Y9RDF0E",
+    "text": "Hi guys",
+    "ts": "1485549887.002374",
+    "id": "27be13535",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3XPKT7PF",
+    "text": "<@U3XPKT7PF|rguzmanc> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1485558277.002375",
+    "id": "27be13536",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

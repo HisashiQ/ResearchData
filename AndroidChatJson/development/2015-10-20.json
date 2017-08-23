@@ -1,0 +1,2217 @@
+[
+  {
+    "user": "U0CLFU10B",
+    "subtype": "channel_join",
+    "text": "<@U0CLFU10B|leifyndestad> has joined the channel",
+    "ts": "1445325973.002296",
+    "id": "20de13939",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "Heya, do you guys know how to suppress `ClassNotFoundException`s when running tests via plain `adb shell am instrument`? I started getting `java.lang.ClassNotFoundException: net.bytebuddy.jar.asm.commons.JSRInlinerAdapter` from the `com.android.support.test:runner:0.4.1` or somewhere else on 5.1 devices and it is super annoying that tests are actually fine but fail because some test runner crap is not bundled on the device. Works fine on 6.0 :confused:",
+    "ts": "1445336895.002297",
+    "id": "20de13940",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I have not seen that, any reason you're running the tests directly with am? Trying to run them remote?",
+    "ts": "1445343234.002298",
+    "id": "20de13941",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "<@U055GGAHS> `gradle connectedCheck` needs the whole project environment to work and I am running tests on Jenkins device slaves as downstream jobs. Direct instrumentation seemed like a better way to use only few archived artifacts (test apks) sent to a slave instead of a full repo... Maybe there is a better way?",
+    "ts": "1445346418.002299",
+    "id": "20de13942",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "on my jenkins slaves I just have them do full checkouts and use gradle but the am instrumentation should work too",
+    "ts": "1445346534.002300",
+    "id": "20de13943",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "not sure what this is being used by, you’re saying test runner depends on this class? <http://grepcode.com/file/repo1.maven.org$maven2@net.bytebuddy$byte-buddy@0.6.8@net$bytebuddy$jar$asm$commons$JSRInlinerAdapter.java>",
+    "attachments": [
+      {
+        "text": "net.bytebuddy.jar.asm.commons.JSRInlinerAdapter",
+        "fallback": "net.bytebuddy.jar.asm.commons.JSRInlinerAdapter",
+        "from_url": "http://grepcode.com/file/repo1.maven.org$maven2@net.bytebuddy$byte-buddy@0.6.8@net$bytebuddy$jar$asm$commons$JSRInlinerAdapter.java",
+        "id": 1
+      }
+    ],
+    "ts": "1445346621.002301",
+    "id": "20de13944",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "I considered doing full checkout however I did not want to do rebuilds on slaves - it kinda beats a slave purpose...",
+    "ts": "1445346741.002303",
+    "id": "20de13945",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "re: JSRInlinerAdapter I am actually not sure where it coming from",
+    "ts": "1445346768.002304",
+    "id": "20de13946",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "what I observed is that instrumentation fails whenever any class loading fails",
+    "ts": "1445346849.002305",
+    "id": "20de13947",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I can understand that but technically your builds should be consistent right?",
+    "ts": "1445346849.002306",
+    "id": "20de13948",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "right",
+    "ts": "1445346856.002307",
+    "id": "20de13949",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "if my library uses api 21 classes (camera2 etc) instrumentation fails on api 19 devices",
+    "ts": "1445346886.002308",
+    "id": "20de13950",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "although code is protected behind version checks",
+    "ts": "1445346904.002309",
+    "id": "20de13951",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "I just hate that",
+    "ts": "1445346907.002310",
+    "id": "20de13952",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "I don't care that the classes don't load - I am not using them on older APIs",
+    "ts": "1445346940.002311",
+    "id": "20de13953",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "I wonder how `connectedCheck` handles that",
+    "ts": "1445346959.002312",
+    "id": "20de13954",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "since internally it should be using the same instrumentation stuff",
+    "ts": "1445346987.002313",
+    "id": "20de13955",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I haven’t looked in a few months before that stuff even existed",
+    "ts": "1445347141.002314",
+    "id": "20de13956",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "let me go check",
+    "ts": "1445347142.002315",
+    "id": "20de13957",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "thanks man",
+    "ts": "1445347163.002316",
+    "id": "20de13958",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "I have checked out Android Gradle plugin source just to understand why `connectedCheck` works fine",
+    "ts": "1445347217.002317",
+    "id": "20de13959",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "is this a library or full application?",
+    "ts": "1445347358.002318",
+    "id": "20de13960",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "this is the test runner building <https://android.googlesource.com/platform/tools/build/+/android-cts-6.0_r1/gradle/src/main/groovy/com/android/build/gradle/internal/tasks/DeviceProviderInstrumentTestTask.groovy>",
+    "ts": "1445347401.002319",
+    "id": "20de13961",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "both library and app",
+    "ts": "1445347445.002320",
+    "id": "20de13962",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "and this is the test runner <https://android.googlesource.com/platform/tools/build/+/android-cts-6.0_r1/gradle/src/main/groovy/com/android/build/gradle/internal/tasks/DeviceProviderInstrumentTestTask.groovy>",
+    "ts": "1445347450.002321",
+    "id": "20de13963",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "ugh god motherfuckers",
+    "ts": "1445347478.002322",
+    "id": "20de13964",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "they have device filtering now.. and its private, I had to write all that shit myself a few months back",
+    "ts": "1445347498.002323",
+    "id": "20de13965",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "TestReport parses the shity instrumentation output I guess",
+    "ts": "1445347517.002324",
+    "id": "20de13966",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "so im not seeing anything custom that they do glancing around, it all looks to just be state related making sure the runner exists, the apk exists, the device is compatible, etc",
+    "ts": "1445347722.002325",
+    "id": "20de13967",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "I wonder how the runner determines failures then",
+    "ts": "1445347777.002326",
+    "id": "20de13968",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "<https://android.googlesource.com/platform/tools/build/+/ef84df96b7b1a26a96a37506d95e3d427ee830ed/builder/src/main/java/com/android/builder/testing/SimpleTestRunner.java>",
+    "ts": "1445347892.002327",
+    "id": "20de13969",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "the gradle plugin source mentions a test apk",
+    "ts": "1445347894.002328",
+    "id": "20de13970",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "so wonder if they are building another variant or just referencing which source variant apk it is",
+    "ts": "1445347929.002329",
+    "id": "20de13971",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "this is probably it: <http://grepcode.com/file/repo1.maven.org/maven2/com.google.android.tools/ddmlib/r10/com/android/ddmlib/testrunner/InstrumentationResultParser.java#InstrumentationResultParser>",
+    "attachments": [
+      {
+        "text": "com.android.ddmlib.testrunner.InstrumentationResultParser - Parses the 'raw output mode' results of an instrumentation test run from shell and informs a ITestRunListener of the results",
+        "fallback": "com.android.ddmlib.testrunner.InstrumentationResultParser - Parses the 'raw output mode' results of an instrumentation test run from shell and informs a ITestRunListener of the results",
+        "from_url": "http://grepcode.com/file/repo1.maven.org/maven2/com.google.android.tools/ddmlib/r10/com/android/ddmlib/testrunner/InstrumentationResultParser.java#InstrumentationResultParser",
+        "id": 1
+      }
+    ],
+    "ts": "1445348037.002330",
+    "id": "20de13972",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "here is the stack trace of one of my failing app tests (tests themselves don't fail): <https://gist.github.com/eleventigers/6fb8b31146410b2c00df>",
+    "ts": "1445348300.002332",
+    "id": "20de13973",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "unfortunately im really not sure.. I just take the testing as the magic black box that it is",
+    "ts": "1445348350.002333",
+    "id": "20de13974",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "sorry :disappointed:",
+    "ts": "1445348357.002334",
+    "id": "20de13975",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "lol :smile:",
+    "ts": "1445348364.002335",
+    "id": "20de13976",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "I might need to switch back to gradle running the tests",
+    "ts": "1445348389.002336",
+    "id": "20de13977",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "sucks balls",
+    "ts": "1445348396.002337",
+    "id": "20de13978",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "i dont see anything in the source that relates to that problem but the gradle plugin has a *lot* of source so its likely im just missing it",
+    "ts": "1445348407.002338",
+    "id": "20de13979",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "yeah",
+    "ts": "1445348412.002339",
+    "id": "20de13980",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "I just want to avoid re-building the project on the slave machine which is quite a slow PC",
+    "ts": "1445348445.002340",
+    "id": "20de13981",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I feel your pain",
+    "ts": "1445348452.002341",
+    "id": "20de13982",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": ":confused: :confused: :confused:",
+    "ts": "1445348459.002342",
+    "id": "20de13983",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "im in the same boat, main server build takes 2 minutes, test server takes 5",
+    "ts": "1445348465.002343",
+    "id": "20de13984",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "good to know that I am not alone",
+    "ts": "1445348480.002344",
+    "id": "20de13985",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "I tried archiving the whole workspace and sending it to the slave",
+    "ts": "1445348505.002345",
+    "id": "20de13986",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "but that is obviously stupid",
+    "ts": "1445348512.002346",
+    "id": "20de13987",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "or not :}",
+    "ts": "1445348526.002347",
+    "id": "20de13988",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "lol",
+    "ts": "1445348667.002348",
+    "id": "20de13989",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "we only deploy from our main server but we have never been concerned with the test instances being different",
+    "ts": "1445348691.002349",
+    "id": "20de13990",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "we also rsync our android sdk from the main to the slaves",
+    "ts": "1445348701.002350",
+    "id": "20de13991",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "so I am reasonably certain the builds are as consistent as possible and all our deps come from artifactory",
+    "ts": "1445348717.002351",
+    "id": "20de13992",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "that's right but what is the point of rebuilding the same artifact that you use to test?",
+    "ts": "1445348750.002352",
+    "id": "20de13993",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "it works :troll:",
+    "ts": "1445348760.002353",
+    "id": "20de13994",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "yeah :]",
+    "ts": "1445348766.002354",
+    "id": "20de13995",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "my pain point is that some libraries involve native builds which require quite a lot of dependencies and/or are slow to build",
+    "ts": "1445348806.002355",
+    "id": "20de13996",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "so I would need to setup native libraries and crap on the slave machine :confused:",
+    "ts": "1445348846.002356",
+    "id": "20de13997",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "gosh why it has to be so hard",
+    "ts": "1445348864.002357",
+    "id": "20de13998",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "So my coworker wasn't able to build our app on another machine at the office either",
+    "ts": "1445354323.002358",
+    "id": "20de13999",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "and asked me to confirm that I was able to build from master again",
+    "ts": "1445354331.002359",
+    "id": "20de14000",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "so only yours?",
+    "ts": "1445354333.002360",
+    "id": "20de14001",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "the plot thickens",
+    "ts": "1445354335.002361",
+    "id": "20de14002",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "so just now I woke up my Linux box and built it successfully",
+    "ts": "1445354350.002362",
+    "id": "20de14003",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "sooooo",
+    "ts": "1445354352.002363",
+    "id": "20de14004",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "it's not me",
+    "ts": "1445354356.002364",
+    "id": "20de14005",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "I asked her to give me the output of `./gradlew --version`",
+    "ts": "1445354366.002365",
+    "id": "20de14006",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "I suspect they're using Apple Java 6",
+    "ts": "1445354372.002366",
+    "id": "20de14007",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "which is the last thing I can think of",
+    "ts": "1445354389.002367",
+    "id": "20de14008",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "since I'm on Java 8",
+    "ts": "1445354391.002368",
+    "id": "20de14009",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "may be",
+    "ts": "1445354407.002369",
+    "id": "20de14010",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "that’s the reason I’m not using retrolambda",
+    "ts": "1445354420.002370",
+    "id": "20de14011",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "since colleague won’t install java 8",
+    "ts": "1445354425.002371",
+    "id": "20de14012",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "pansies",
+    "ts": "1445354438.002372",
+    "id": "20de14013",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CRNH57Z",
+    "subtype": "channel_join",
+    "text": "<@U0CRNH57Z|karol> has joined the channel",
+    "ts": "1445368717.002373",
+    "id": "20de14014",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CRXNLLV",
+    "subtype": "channel_join",
+    "text": "<@U0CRXNLLV|iamtodor> has joined the channel",
+    "ts": "1445370174.002374",
+    "id": "20de14015",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "quick question",
+    "ts": "1445376339.002375",
+    "id": "20de14016",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "42",
+    "ts": "1445376346.002376",
+    "id": "20de14017",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "haha close",
+    "ts": "1445376349.002377",
+    "id": "20de14018",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "what is the proper way to dispose of a thread?",
+    "ts": "1445376364.002378",
+    "id": "20de14019",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "stop using it?",
+    "ts": "1445376419.002379",
+    "id": "20de14020",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "From what I’ve seen, calling Looper.myLooper.quit() seems to be the way to do it",
+    "ts": "1445376419.002380",
+    "id": "20de14021",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "oh",
+    "ts": "1445376424.002381",
+    "id": "20de14022",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "that’s a very different question",
+    "ts": "1445376430.002382",
+    "id": "20de14023",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "is this a real thread or a looper?",
+    "ts": "1445376444.002383",
+    "id": "20de14024",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "its a real thread",
+    "ts": "1445376450.002384",
+    "id": "20de14025",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "just exit the run method",
+    "ts": "1445376464.002385",
+    "id": "20de14026",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "could you elaborate just a bit?",
+    "ts": "1445376522.002386",
+    "id": "20de14027",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "the handlerthread on the other hand can be useful if you need message processing",
+    "ts": "1445376525.002387",
+    "id": "20de14028",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<http://grepcode.com/file_/repository.grepcode.com/java/ext/com.google.android/android/5.1.1_r1/android/os/HandlerThread.java/?v=source>",
+    "ts": "1445376527.002388",
+    "id": "20de14029",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "i mean that a thread has a run method.. that is the entirety of the thread",
+    "ts": "1445376548.002389",
+    "id": "20de14030",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "once that exits the thread is done",
+    "ts": "1445376554.002390",
+    "id": "20de14031",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "oh i see",
+    "ts": "1445376570.002391",
+    "id": "20de14032",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "unless something is holding reference to it, it will eventually end up in GC",
+    "ts": "1445376580.002392",
+    "id": "20de14033",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0548MM6B|bluecup> uploaded a file: <https://androidchat.slack.com/files/bluecup/F0CS41JQK/screen_shot_2015-10-20_at_12.39.28.png|Screen Shot 2015-10-20 at 12.39.28.png> and commented: anyone has a clue what this means in FB SDK when user logs in? we put no restrictions :confused:",
+    "file": {
+      "id": "F0CS41JQK",
+      "created": 1445376615,
+      "timestamp": 1445376615,
+      "name": "Screen Shot 2015-10-20 at 12.39.28.png",
+      "title": "Screen Shot 2015-10-20 at 12.39.28.png",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U0548MM6B",
+      "editable": false,
+      "size": 32753,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0CS41JQK/screen_shot_2015-10-20_at_12.39.28.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0CS41JQK/download/screen_shot_2015-10-20_at_12.39.28.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F0CS41JQK-49a6cc8edf/screen_shot_2015-10-20_at_12.39.28_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F0CS41JQK-49a6cc8edf/screen_shot_2015-10-20_at_12.39.28_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F0CS41JQK-49a6cc8edf/screen_shot_2015-10-20_at_12.39.28_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 360,
+      "thumb_360_h": 95,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F0CS41JQK-49a6cc8edf/screen_shot_2015-10-20_at_12.39.28_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "image_exif_rotation": 1,
+      "original_w": 400,
+      "original_h": 105,
+      "permalink": "https://androidchat.slack.com/files/bluecup/F0CS41JQK/screen_shot_2015-10-20_at_12.39.28.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0CS41JQK-61e42a13b6",
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 1,
+      "initial_comment": {
+        "id": "Fc0CS41M7D",
+        "created": 1445376615,
+        "timestamp": 1445376615,
+        "user": "U0548MM6B",
+        "is_intro": true,
+        "comment": "anyone has a clue what this means in FB SDK when user logs in? we put no restrictions :confused:",
+        "channel": ""
+      }
+    },
+    "user": "U0548MM6B",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0548MM6B|bluecup>",
+    "bot_id": null,
+    "ts": "1445376616.002393",
+    "id": "20de14034",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "because of this executors are often preferable as they can avoid GC or at least provide caching when your load is going to be heavy then light and such scenarios",
+    "ts": "1445376616.002394",
+    "id": "20de14035",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "gotcha",
+    "ts": "1445376664.002395",
+    "id": "20de14036",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "oh okay",
+    "ts": "1445376680.002396",
+    "id": "20de14037",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "i was making it way harder than it needed to be",
+    "ts": "1445376865.002397",
+    "id": "20de14038",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "I was concerned about potential pending messages on the thread, but I just needed to call `removeMessagesAndCallbacks` instead of trying to dispose of the thread manually",
+    "ts": "1445376901.002398",
+    "id": "20de14039",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CLZ2DU5",
+    "text": "Hey guys, first timer here so, I hope this is appropriate: I've started a project to create a Checkstyle configuration to closely match the android coding style guidelines from Google. It's work in progress so, happy to see any pull requests :simple_smile:\n<https://github.com/hypest/checkstyle-android>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "hypest/checkstyle-android",
+        "title_link": "https://github.com/hypest/checkstyle-android",
+        "text": "checkstyle-android - Checkstyle config to match the Android code style guidelines",
+        "fallback": "GitHub: hypest/checkstyle-android",
+        "thumb_url": "https://avatars2.githubusercontent.com/u/1032913?v=3&s=400",
+        "from_url": "https://github.com/hypest/checkstyle-android",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1445377974.002399",
+    "id": "20de14040",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "sweet. i really need to work in checkstyle/findbugs/pmd to my build flow",
+    "ts": "1445378528.002401",
+    "id": "20de14041",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "not a fan of checkstyle, but findbugs and pmd :thumbsup:",
+    "ts": "1445378550.002402",
+    "id": "20de14042",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CS68AR2",
+    "subtype": "channel_join",
+    "text": "<@U0CS68AR2|licuadolala> has joined the channel",
+    "ts": "1445378624.002403",
+    "id": "20de14043",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CLZ2DU5",
+    "text": "thx guys",
+    "ts": "1445378628.002404",
+    "id": "20de14044",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CLZ2DU5",
+    "text": "findbugs/pmd is next on my list to integrate in my workflows",
+    "ts": "1445378650.002405",
+    "id": "20de14045",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CLZ2DU5",
+    "text": "but was puzzled how come there is no \"official\" checkstyle config to use so, I got me a new project :stuck_out_tongue:",
+    "ts": "1445378677.002406",
+    "id": "20de14046",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "probably because \"proper\" style is pretty subjective",
+    "ts": "1445379098.002407",
+    "id": "20de14047",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "but yeah I agree with most of google's guidelines so I'll likely give that a shot",
+    "ts": "1445379115.002408",
+    "reactions": [
+      {
+        "name": "heart",
+        "users": [
+          "U0CLZ2DU5"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "20de14048",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CLZ2DU5",
+    "text": "we follow most of the rules in the guideline at the place I work but, even for those we all agree on, some colleagues fail to follow them consistently. Code reviews trigger OCDs easily :simple_smile:\nCheckstyle comes in as a tool to help us all conform to the rules we already agreed on...",
+    "edited": {
+      "user": "U0CLZ2DU5",
+      "ts": "1445379585.000000"
+    },
+    "ts": "1445379424.002409",
+    "id": "20de14049",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CLZ2DU5",
+    "text": "and afterall, the team can tweak the config to its liking",
+    "ts": "1445379457.002410",
+    "id": "20de14050",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "yeah makes sense. can't stand having to ignore silly code style because there are larger battles to fight",
+    "edited": {
+      "user": "U0546QERR",
+      "ts": "1445379553.000000"
+    },
+    "ts": "1445379522.002411",
+    "id": "20de14051",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CLZ2DU5",
+    "text": "exactly",
+    "ts": "1445379537.002413",
+    "id": "20de14052",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "Has somebody ever needed to add multiple `Fragment`s of same class to one `Activity`? (serious question)",
+    "ts": "1445394491.002416",
+    "id": "20de14053",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CSMK687",
+    "subtype": "channel_join",
+    "text": "<@U0CSMK687|blee> has joined the channel",
+    "ts": "1445395159.002417",
+    "id": "20de14054",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "Ah, just realized that with ViewPager/etc it's a normal thing. ",
+    "ts": "1445397605.002418",
+    "id": "20de14055",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

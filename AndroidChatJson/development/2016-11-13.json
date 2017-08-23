@@ -1,0 +1,586 @@
+[
+  {
+    "user": "U1T13H6S3",
+    "text": "they can make it more simple and easy to read and give apprpriate  examples which shows how to do it.",
+    "ts": "1479024487.000920",
+    "id": "13de50083",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1T13H6S3",
+    "text": "im still confused wether pubnub works its own for push notification or I need to implement GCM with this for push :open_mouth:",
+    "ts": "1479024533.000921",
+    "id": "13de50084",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RKCC8H4",
+    "text": "<@U1T13H6S3> AFAIK with PubNub you have the choice of pure Pubnub or use Pubnub via platform native push services.",
+    "ts": "1479025342.000922",
+    "id": "13de50085",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RKCC8H4",
+    "text": "I remember doing a pure pubnub tutorial about a year ago, but recently I saw something on a Pubnub blog about using it \"with FCM\"",
+    "ts": "1479025382.000923",
+    "id": "13de50086",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RKCC8H4",
+    "text": "I'm currently implementing a notification system that uses AWS SNS as a Fan-out to the platform services, and I'm questioning my sanity .. Why not just use the platform services directly?",
+    "ts": "1479025508.000924",
+    "id": "13de50087",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1T13H6S3",
+    "text": "when we are using pub nub it gives us all data and info in backend if we are using platform service we have to build everything from scratch, i think that is the reason",
+    "ts": "1479025615.000925",
+    "id": "13de50088",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RKCC8H4",
+    "text": "I find that \"building from scratch\" isn't that much extra work.  I'm hoping that the 3rd party service will give value down the line with managing user devices.",
+    "ts": "1479025702.000926",
+    "id": "13de50089",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RKCC8H4",
+    "text": "What I really want is to have a way to not manage user devices at all.  Ideally I want to give the push service a list of _MY OWN_ \"user IDs\" and the service then delivers it to all device where the user preferences does not mute that specific message \"type\".  But even more, if the preferences does mute the message then it must still appear in the chat timeline, so no pop up notification, but the data still delivered to the device(s) of that user.",
+    "ts": "1479025835.000927",
+    "id": "13de50090",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RKCC8H4",
+    "text": "And I want cross-platform dismissal.",
+    "ts": "1479025846.000928",
+    "id": "13de50091",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RKCC8H4",
+    "text": "And I want to know when all receivers have received and have seen the message.",
+    "ts": "1479025867.000929",
+    "id": "13de50092",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RKCC8H4",
+    "text": "Alas, I'm still building my own thing.",
+    "ts": "1479025882.000930",
+    "id": "13de50093",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1T13H6S3",
+    "text": ":+1:",
+    "ts": "1479026452.000931",
+    "id": "13de50094",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "thanks for the info, gives me some insight :slightly_smiling_face:",
+    "ts": "1479026973.000932",
+    "id": "13de50095",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "Checking out Pubnub’s offering now",
+    "ts": "1479026997.000933",
+    "id": "13de50096",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U31RCJH5Z",
+    "text": "<@U31RCJH5Z|ishan5ain> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1479035224.000934",
+    "id": "13de50097",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U31RCJH5Z",
+    "text": "I’m working on Android Wear Game Rotation Vector Sensor. I’m able to display sensor data on wear device itself, however, I’m struggling to send raw data from wear to handheld device. If anyone has developed on Android Wear before and is willing to help, then I shall share my code snippet with you for a better understanding. Thanks!",
+    "ts": "1479035495.000935",
+    "id": "13de50098",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U318916BT",
+    "text": "<@U318916BT|dzakyzf> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1479048610.000936",
+    "id": "13de50099",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U32355UQM",
+    "text": "<@U32355UQM|tomof> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1479080106.000937",
+    "id": "13de50100",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "I am trying to build a chat screen.  I already have two endpoints set up \n\n@GET(\"chat/threads/{threadId}/messages/\")\nCall&lt;List&lt;Message&gt;&gt; getMessages(@Path(\"threadId\") int threadId);\n\nand\n\n@POST(\"chat/threads/\")\nCall&lt;MessageThread&gt; sendMessage(@Body MessageBody messageBody);\n\nnow i am wondering how you would handle new messages on this screen.  So the first time you open the chat screen it calls the getMessages() endpoint.  \n\nBut would you continually call this endpoint at specific intervals to retrieve new messages?  What is the best way to handle this?  I don't necessarily want to go with a 3rd party chat api solution.",
+    "ts": "1479084805.000938",
+    "id": "13de50101",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U0A1BE7KQ> trying to make chat over rest is not the best idea",
+    "ts": "1479086551.000939",
+    "id": "13de50102",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Instead what you want is to use websockets",
+    "ts": "1479086565.000940",
+    "id": "13de50103",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "if you must go with rest",
+    "ts": "1479086579.000941",
+    "id": "13de50104",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Then you need a long polling endpoint",
+    "ts": "1479086608.000942",
+    "id": "13de50105",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "you go to the screen hit on the end point, it doesn’t reply immediately instead keeps the connection open",
+    "ts": "1479086638.000943",
+    "id": "13de50106",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "then after the connection times out, the app hits on the endpoint again",
+    "ts": "1479086657.000944",
+    "id": "13de50107",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "The server only responds when there is a change",
+    "ts": "1479086669.000945",
+    "id": "13de50108",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "web sockets are bidirectional communication by design",
+    "edited": {
+      "user": "U08GFT5V5",
+      "ts": "1479086705.000000"
+    },
+    "ts": "1479086685.000946",
+    "id": "13de50109",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "which is what you actually want in a chat app",
+    "ts": "1479086711.000948",
+    "id": "13de50110",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "right now im looking into Firebase Cloud Messaging",
+    "ts": "1479092822.000949",
+    "id": "13de50111",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "i think thats what i want",
+    "ts": "1479092826.000950",
+    "id": "13de50112",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U322GTWAE",
+    "text": "<@U322GTWAE|amitsoni> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1479103646.000951",
+    "id": "13de50113",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U27JMDPBK",
+    "text": "Anyone know what's the kotlin equivalent to java's single &amp; conjunction?",
+    "ts": "1479109159.000952",
+    "id": "13de50114",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

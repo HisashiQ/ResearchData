@@ -1,0 +1,724 @@
+[
+  {
+    "user": "U1LJG0Y03",
+    "text": "Can someone comment on a class I have for constructing alert dialogs? Trying to figure out any problems that are with it or if I’ve implemented anything incorrectly etc",
+    "ts": "1481635540.000006",
+    "id": "13co6225",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U1LJG0Y03|contract16> uploaded a file: <https://androidchat.slack.com/files/contract16/F3DCPN4F2/-.java|Untitled>",
+    "file": {
+      "id": "F3DCPN4F2",
+      "created": 1481635895,
+      "timestamp": 1481635895,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U1LJG0Y03",
+      "editable": true,
+      "size": 5670,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F3DCPN4F2/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F3DCPN4F2/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/contract16/F3DCPN4F2/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F3DCPN4F2-eb485991c7",
+      "edit_link": "https://androidchat.slack.com/files/contract16/F3DCPN4F2/-.java/edit",
+      "preview": "/**\r\n * A customisable alert dialog\r\n *\r\n * @author Lawrence Pickford\r\n * @version %I%, %G%\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-comment\">/**</span></pre></div>\n<div><pre> <span class=\"cm-comment\">* A customisable alert dialog</span></pre></div>\n<div><pre> <span class=\"cm-comment\">*</span></pre></div>\n<div><pre> <span class=\"cm-comment\">* @author Lawrence Pickford</span></pre></div>\n<div><pre> <span class=\"cm-comment\">* @version %I%, %G%</span></pre></div>\n</div>\n</div>\n",
+      "lines": 179,
+      "lines_more": 174,
+      "preview_is_truncated": true,
+      "channels": [
+        "C08SR981Y"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U1LJG0Y03",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U1LJG0Y03|contract16>",
+    "bot_id": null,
+    "ts": "1481635896.000007",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "13co6226",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "That's just me but if i'm building fluent apis I prefer to not use `set` convention. So `AlertDialogWrapper.with(context).type(...).confirmButton(...).build();`",
+    "ts": "1481636128.000008",
+    "id": "13co6227",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "like Picasso f.e.",
+    "ts": "1481636134.000009",
+    "id": "13co6228",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "but it's just me",
+    "ts": "1481636147.000010",
+    "id": "13co6229",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "That’d make more sense I guess, I’m treating it like a model there which it isn't",
+    "ts": "1481636190.000011",
+    "id": "13co6230",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "this might seem like a silly question but, is there a reason you’re wrapping a dialogbuilder in  another builder?",
+    "ts": "1481636258.000012",
+    "id": "13co6231",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Yeah, if I want to introduce a new layout then I can just do it there",
+    "ts": "1481636279.000013",
+    "id": "13co6232",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Which has happened before",
+    "ts": "1481636282.000014",
+    "id": "13co6233",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "We used to have custom layouts for them, and that got removed in favour of stock",
+    "ts": "1481636311.000015",
+    "id": "13co6234",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "But I decided it’d be best to just wrap it in case the designers changed their mind",
+    "ts": "1481636326.000016",
+    "id": "13co6235",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "If that makes sense :stuck_out_tongue:",
+    "ts": "1481636416.000017",
+    "id": "13co6236",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "I can probably think of other reasons why it’d be useful, but that’s the main one I’m doing it for",
+    "ts": "1481636486.000018",
+    "id": "13co6237",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "i guess so… ive not had that issue yet so take my points with a grain of salt - it just seems like mostly duplicated functionality ¯\\_(ツ)_/¯",
+    "ts": "1481636512.000019",
+    "id": "13co6238",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "It is mainly",
+    "ts": "1481636522.000020",
+    "id": "13co6239",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "unless u know something about a major API change in alertdialog that i dont :stuck_out_tongue:",
+    "ts": "1481636615.000021",
+    "id": "13co6240",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Haha no :stuck_out_tongue:",
+    "ts": "1481636706.000022",
+    "id": "13co6241",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "I can also swap out for other dialogs easily too with this",
+    "ts": "1481636723.000023",
+    "id": "13co6242",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Or add analytics to all my alertdialogs app wide etc",
+    "ts": "1481636743.000024",
+    "id": "13co6243",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Haha",
+    "ts": "1481636745.000025",
+    "id": "13co6244",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "But yeah, this is all due to :designers:",
+    "ts": "1481636759.000026",
+    "id": "13co6245",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Ok, so will update the methods like <@U0E72HWTX> suggested but asides from that nothing jumps out as bad practice?",
+    "ts": "1481636943.000027",
+    "id": "13co6246",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3EQFHSAK",
+    "text": "<@U3EQFHSAK|kevalpatel2106> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481636952.000028",
+    "id": "13co6247",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "seems solid otherwise",
+    "ts": "1481636994.000029",
+    "id": "13co6248",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "tho.... _enums_ :troll:",
+    "ts": "1481637011.000030",
+    "id": "13co6249",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": ":joy:",
+    "ts": "1481637084.000031",
+    "id": "13co6250",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "I use enums in quite a few places",
+    "ts": "1481637090.000032",
+    "id": "13co6251",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U1LJG0Y03> ```/**\n * A customisable alert dialog\n *\n * @author Lawrence Pickford\n * @version %I%, %G%\n * @since 0.7.0\n */\n```",
+    "ts": "1481657299.000033",
+    "id": "13co6252",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Get out",
+    "ts": "1481657302.000034",
+    "id": "13co6253",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Remove that @author",
+    "ts": "1481657310.000035",
+    "id": "13co6254",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "#FREETHECODE",
+    "ts": "1481657320.000036",
+    "id": "13co6255",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "#SLAVERY",
+    "ts": "1481657322.000037",
+    "id": "13co6256",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "#IAMTHECODE",
+    "ts": "1481657416.000038",
+    "id": "13co6257",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "/gif dredd",
+    "ts": "1481657422.000039",
+    "id": "13co6258",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "",
+    "bot_id": "B0GH4RVHU",
+    "attachments": [
+      {
+        "fallback": "<https://66.media.tumblr.com/8f8fa2549368852b21acb8c3387d9ee4/tumblr_mk32maIhdX1qaqy1io10_500.gif>",
+        "image_url": "https://66.media.tumblr.com/8f8fa2549368852b21acb8c3387d9ee4/tumblr_mk32maIhdX1qaqy1io10_500.gif",
+        "image_width": 500,
+        "image_height": 213,
+        "image_bytes": 1019213,
+        "is_animated": true,
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1481657423.000040",
+    "id": "13co6259",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "<@U1LJG0Y03> How about using IntDef instead of enum? another one is just a matter of style but I don't think you need to declare alertDialogWrapper as a local variable in `with(Context context)`",
+    "ts": "1481677022.000042",
+    "id": "13co6260",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

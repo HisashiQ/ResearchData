@@ -1,0 +1,1188 @@
+[
+  {
+    "user": "U060LNQJX",
+    "subtype": "channel_join",
+    "text": "<@U060LNQJX|pauljriley> has joined the channel",
+    "ts": "1433663497.000716",
+    "id": "07de1063",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "How do you guys test for multiple screen sizes/densities, do you just make a bunch of emulators with different specifications and test on that?",
+    "ts": "1433685764.000717",
+    "id": "07de1064",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "I test on hdpi xhdpi and xx",
+    "ts": "1433685887.000718",
+    "id": "07de1065",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "if it works, ship it",
+    "ts": "1433685905.000719",
+    "id": "07de1066",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I hope the new Google cloud test lab makes that easier ",
+    "ts": "1433685940.000720",
+    "id": "07de1067",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "Yeah it seems like it would be a pain",
+    "ts": "1433686207.000721",
+    "id": "07de1068",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Currently I'm only testing on one device. When I'm ready, which is soon because of the deadline, I'll test it using adb's shell in which you can set the the display size and density: 'adb shell wm display-size' and 'adb shell wm display-density' (change wm to am for Android 4.0-4.2). I've also gotten a couple of testers that'll give some feedback on the devices they have.",
+    "ts": "1433690512.000722",
+    "id": "07de1069",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060X2M53",
+    "text": "Another cheap way is to preview your layout file in all densities",
+    "ts": "1433691629.000723",
+    "id": "07de1070",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "another cheap but safer way : genymotion",
+    "ts": "1433691713.000724",
+    "id": "07de1071",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053Q5XP2",
+    "text": "In my experience, it's only really important to test on a non-nexus pre lollipop device to make sure I got all the theming right in appcompat, considering all the arbitrary attributes you have to duplicate in styles.xml",
+    "ts": "1433695303.000725",
+    "id": "07de1072",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "And to test on Samsung devices because of the amount of edge cases you get with those, so I've heard.",
+    "ts": "1433695695.000726",
+    "id": "07de1073",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "<@U061HDV96>: I found that this setting doesn't really reflect the views on a real device. Especially testing smaller densities gives wonky results. Testing tablet views seems to work better tho ",
+    "ts": "1433695711.000727",
+    "id": "07de1074",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Hehe, \"edge\" cases on Samsung ;) I see what you did there",
+    "ts": "1433695732.000728",
+    "id": "07de1075",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": ":stuck_out_tongue:",
+    "ts": "1433695858.000729",
+    "id": "07de1076",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U04TK850N>: it definitely cannot reflect the real views. But it does give you some more information. It's like Google Chrome's emulator for different devices, it's not perfect, but it comes pretty close imo.",
+    "ts": "1433695902.000730",
+    "id": "07de1077",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Take 'emulator' with a grain of salt.",
+    "ts": "1433695928.000731",
+    "id": "07de1078",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Yeah it's good for a quick look and checking if the right layouts get loaded. But for it gave like double sized toolbar on some configs :D",
+    "ts": "1433695988.000732",
+    "id": "07de1079",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Glad I'm not supporting tablets just yet, that's going to be 'fun'.",
+    "ts": "1433696032.000733",
+    "id": "07de1080",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UVF995",
+    "text": "i’m a strong believer in testing on-device, granted i have plenty of devices, but I only fire up the emulator like twice a year or something really weird/specific. Public beta works really well if you have the type of app that would attract volunteer beta testers (and the testers are likely to provide feedback/screenshots). It’ll be interesting to see how the new play console testing works, I think Google said it’ll test against the 20 most popular devices?",
+    "ts": "1433709493.000734",
+    "id": "07de1081",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "yep and they plan to add more devices in the future.",
+    "ts": "1433710048.000735",
+    "id": "07de1082",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Work will use crowd testing for our next update, which will be interesting to see",
+    "ts": "1433710083.000736",
+    "id": "07de1083",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "afaik using this community <http://www.testbirds.com/>",
+    "attachments": [
+      {
+        "service_name": "Testbirds.com",
+        "title": "We test mobile apps and websites. We call that crowdtesting. | Testbirds",
+        "title_link": "http://www.testbirds.com/",
+        "text": "Testbirds offers fast and extensive quality assurance &amp; usability feedback for mobile apps and websites. Crowdtesting gives access to bug and usability experts.",
+        "fallback": "Testbirds.com: We test mobile apps and websites. We call that crowdtesting. | Testbirds",
+        "from_url": "http://www.testbirds.com/",
+        "id": 1
+      }
+    ],
+    "ts": "1433710172.000737",
+    "id": "07de1084",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "People register there, are put on tests and get paid per submitted bug report and/or review",
+    "ts": "1433710202.000739",
+    "id": "07de1085",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UVF995",
+    "text": "interesting",
+    "ts": "1433710212.000740",
+    "id": "07de1086",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UVF995",
+    "text": "paid per submitted bug report or review also helps you get testers where you can get the automatic crash report or analytics and discover problems even without their direct feedback (or paying them for it)",
+    "ts": "1433710246.000741",
+    "id": "07de1087",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "They require you to go through a \"tutorial\" where you actually file reports for bug and those get reviewed. So I'd guess the quality of reports would be actually high",
+    "ts": "1433710303.000742",
+    "id": "07de1088",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UVF995",
+    "text": "i have a private alpha with like 60 members and a public beta with like 175,000 members. the alpha testers are hand picked so they’re pretty good, the reports from beta testers tend to be very low quality or misleading, but the huge number of them makes up for it",
+    "ts": "1433710350.000743",
+    "id": "07de1089",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UVF995",
+    "text": "and i use crashlytics to get automated crash reports, so i find info on crashes across the huge diversity in users and devices",
+    "ts": "1433710399.000744",
+    "id": "07de1090",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UVF995",
+    "text": "existing app obviously though, harder to do for a new app",
+    "ts": "1433710406.000745",
+    "id": "07de1091",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Public betas don't really fit the company's development model I think. Even the crowdtesting is something really unusual for us",
+    "ts": "1433710430.000746",
+    "id": "07de1092",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "(working for a big company, app with 7.2MM users on Android and iOS each)",
+    "ts": "1433710458.000747",
+    "id": "07de1093",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UVF995",
+    "text": "yeah it definitely depends on the type of app and public beta isn’t great for press as it competes for attention with your stable release",
+    "ts": "1433710462.000748",
+    "id": "07de1094",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "true",
+    "ts": "1433710473.000749",
+    "id": "07de1095",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I tried public beta once with a 35k user app. Got 35 testers, and two bug reports :smile:",
+    "ts": "1433710511.000750",
+    "id": "07de1096",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UVF995",
+    "text": "haha",
+    "ts": "1433710521.000751",
+    "id": "07de1097",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UVF995",
+    "text": "it’s interesting how for some updates the initial public beta can be more stressful to release than the stable update, as beta is filled with passionate/vocal users so they’re more likely to talk about things, and generally the issues are resolved before stable release so stable can be pretty uneventful",
+    "ts": "1433710641.000752",
+    "id": "07de1098",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UVF995",
+    "text": "but for big updates, it’s also interesting to see how the public beta users, who are more technical, don’t get confused about an interface change at all but when it goes stable there’s mass confusion",
+    "ts": "1433710670.000753",
+    "id": "07de1099",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UVF995",
+    "text": "that’s likely a problem with any opt-in testing system",
+    "ts": "1433710694.000754",
+    "id": "07de1100",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "yes, so much yes. I notice that so often when out internal testers have no problem with some booking processes and I'm like \"WTF, why do I need 12 steps to book a ticket and what does all that crap even mean??\"",
+    "ts": "1433710757.000755",
+    "id": "07de1101",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Because they know all the processes and technicalities of our business",
+    "ts": "1433710776.000756",
+    "id": "07de1102",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I'm using Crashlytics right now, but is there something to ask the user what he knows when a crash happened? This could help reproduce it.",
+    "ts": "1433710819.000757",
+    "id": "07de1103",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "So I'm really happy that they give out the app to external people beforehand. Although it probably means a lot of work short before release :smile:",
+    "ts": "1433710843.000758",
+    "id": "07de1104",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "The Android crash reports offer this, but the comments you see there are really bad in my experience. I've read the worst insults there, so I usually don't read them",
+    "ts": "1433710907.000759",
+    "id": "07de1105",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I'm thinking about showing a Snackbar when it crashes so they can also just ignore it. I don't know how Android crash reports does it though.",
+    "ts": "1433711030.000760",
+    "id": "07de1106",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "It offers that in the \"Unfortunately ... has stopped\" dialog",
+    "ts": "1433711076.000761",
+    "id": "07de1107",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I'll see what I'll do I guess.",
+    "ts": "1433711130.000762",
+    "id": "07de1108",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "That is quite frustrating though and if the user's device keeps crashing, negative feedback will just be put there.",
+    "ts": "1433711160.000763",
+    "id": "07de1109",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U061HDV96>: you could always implement your own UncaughtExceptionHandler",
+    "ts": "1433711721.000764",
+    "id": "07de1110",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "we did that for our test builds so our testers could attach crash reports to their issue filings. Really helpful, especially with the sub contractor and their ususal \"we can't reproduce here\"",
+    "edited": {
+      "user": "U04TK850N",
+      "ts": "1433711791.000000"
+    },
+    "ts": "1433711785.000765",
+    "id": "07de1111",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Well I'm the sole developer for the Android app and the backend, no sub contractors here, quality has to come from somewhere :wink:",
+    "ts": "1433711888.000767",
+    "id": "07de1112",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "If I wanted to offer a free and paid version of an app, it seems I should use a shared library for the main code or something? Is anyone familiar with this or know of an example I can look at?",
+    "ts": "1433712165.000768",
+    "id": "07de1113",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U053TJ508>: The gradle plugin offers build flavors",
+    "ts": "1433712203.000769",
+    "id": "07de1114",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "Would this produce two different apks? So I would have then have two apps on the play store, a free and paid?",
+    "ts": "1433712321.000770",
+    "id": "07de1115",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U053TJ508>: just to add on your question, but building 2 apps is gonna make the app less popular than if you were to make 1 app with the option to enable a pro feature. Mostly positive reviews will be put on the paid version and negative reviews on the free version (because of ads for example).",
+    "ts": "1433712328.000771",
+    "id": "07de1116",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "The user base is also spread (obviously).",
+    "ts": "1433712347.000772",
+    "id": "07de1117",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I'd assume a separate paid version would be an easier victim for piracy",
+    "ts": "1433712423.000773",
+    "id": "07de1118",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "<@U061HDV96> how would I have an option to upgrade?",
+    "ts": "1433712435.000774",
+    "id": "07de1119",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "in app payment maybe? Google offers that",
+    "ts": "1433712455.000775",
+    "id": "07de1120",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I heard it's not easy to implement though",
+    "ts": "1433712467.000776",
+    "id": "07de1121",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "Hmm. All the upgrade would do is enable some settings and remove ads, could an in app purchase do this or no?",
+    "ts": "1433712518.000777",
+    "id": "07de1122",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "As Max said, it's also much easier to pirate.",
+    "ts": "1433712524.000778",
+    "id": "07de1123",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U053TJ508>:  yes, IAPs can do what you want",
+    "ts": "1433712593.000779",
+    "id": "07de1124",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Google indeed offers payment and it probably also supports to get the paid version back if you lost it. You'll be thanking yourself in the long run.",
+    "ts": "1433712594.000780",
+    "id": "07de1125",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "Thank you everyone",
+    "ts": "1433712611.000781",
+    "id": "07de1126",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U18ANZ",
+    "text": "Can i use SearchView in Layout ?? not in actionbar...?",
+    "ts": "1433746334.000782",
+    "id": "07de1127",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

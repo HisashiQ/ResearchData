@@ -1,0 +1,329 @@
+[
+  {
+    "user": "U0FN3U32R",
+    "subtype": "channel_join",
+    "text": "<@U0FN3U32R|mukwenhac> has joined the channel",
+    "ts": "1449064433.000221",
+    "id": "02be1551",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0FNBSAQ3",
+    "subtype": "channel_join",
+    "text": "<@U0FNBSAQ3|delgado_seb> has joined the channel",
+    "ts": "1449069264.000222",
+    "id": "02be1552",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0FNH2T88",
+    "subtype": "channel_join",
+    "text": "<@U0FNH2T88|eclipticnum> has joined the channel",
+    "ts": "1449070343.000223",
+    "id": "02be1553",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0FNH2T88",
+    "text": "Hey everyone - I am currently trying to implement statefull video player for android, and met a problem. I need to notify service from activity about some state changes. Currently I am using greenrobot EventBus - would really like to use RxJava but I don't know how to pass Observable\\Subject from\\to Activity",
+    "ts": "1449070560.000224",
+    "id": "02be1554",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0FNH2T88",
+    "text": "Any advice?",
+    "ts": "1449070580.000225",
+    "id": "02be1555",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DQJQZ6D",
+    "text": "Hi there",
+    "ts": "1449114095.000226",
+    "id": "02be1556",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DQJQZ6D",
+    "text": "I get stuck with this error: \n`Caused by: java.lang.NullPointerException: Attempt to invoke interface method 'int android.database.Cursor.getCount()' on a null object reference\n            at com.example.android.popularmovies.Utility.isFavorited(Utility.java:32)\n            at com.example.android.popularmovies.DetailFragment$1.doInBackground(DetailFragment.java:104)\n            at com.example.android.popularmovies.DetailFragment$1.doInBackground(DetailFragment.java:101)`",
+    "edited": {
+      "user": "U0DQJQZ6D",
+      "ts": "1449114436.000000"
+    },
+    "ts": "1449114152.000227",
+    "id": "02be1557",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DQJQZ6D",
+    "text": "here is my Utility code:",
+    "ts": "1449114168.000228",
+    "id": "02be1558",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DQJQZ6D",
+    "text": "```\npublic static int isFavorited(Context context, int id){\n        Cursor cursor = context.getContentResolver().query(\n                MoviesData.MovieEntry.CONTENT_URI,\n                null,\n                MoviesData.MovieEntry.COLUMN_MOVIE_ID + \" = ?\",\n                new String[] { Integer.toString(id)},\n                null\n        );\n        int numRows = cursor.getCount();\n        cursor.close();// line 32\n        return numRows;\n    }\n```",
+    "edited": {
+      "user": "U0DQJQZ6D",
+      "ts": "1449114220.000000"
+    },
+    "ts": "1449114202.000229",
+    "id": "02be1559",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DQJQZ6D",
+    "text": "and here is DetailFragment code:",
+    "ts": "1449114243.000231",
+    "id": "02be1560",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DQJQZ6D",
+    "text": "```\n@Override\n                protected Integer doInBackground(Void... params){\n                    Log.e(getClass().getName(), \"the movie id: \"+ Utility.isFavorited(getActivity(), mMovie.getId()));\n                    return Utility.isFavorited(getActivity(), mMovie.getId());// line 104\n                }\n```",
+    "edited": {
+      "user": "U0DQJQZ6D",
+      "ts": "1449114345.000000"
+    },
+    "ts": "1449114329.000232",
+    "id": "02be1561",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0FQ66TAB",
+    "subtype": "channel_join",
+    "text": "<@U0FQ66TAB|onmyway133> has joined the channel",
+    "ts": "1449116530.000235",
+    "id": "02be1562",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "<@U0DQJQZ6D>: looks like the cursor being returned in isFavorited(..) is null. So the database query returned 0 rows.",
+    "ts": "1449117220.000236",
+    "id": "02be1563",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DQJQZ6D",
+    "text": "<@U0DC95VCP>: thanks, I've found this problem, but I didn't know why the query return `null` . According to what I've searched:",
+    "ts": "1449117977.000237",
+    "id": "02be1564",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DQJQZ6D",
+    "text": "```\nContentResolver.query() will return null in the following cases:\n\n1. If you try to pass column names which don't exist in the database (a very common case is when developers use constants as column names, because they look similar to columns).\n2. It is likely to be null because your URI argument is invalid.\n```",
+    "edited": {
+      "user": "U0DQJQZ6D",
+      "ts": "1449118039.000000"
+    },
+    "ts": "1449117986.000238",
+    "id": "02be1565",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DQJQZ6D",
+    "text": "still don't understand about `1`",
+    "ts": "1449118133.000241",
+    "id": "02be1566",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0FQ9LK2B",
+    "subtype": "channel_join",
+    "text": "<@U0FQ9LK2B|whs> has joined the channel",
+    "ts": "1449121469.000242",
+    "id": "02be1567",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

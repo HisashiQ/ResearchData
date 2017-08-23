@@ -1,0 +1,1196 @@
+[
+  {
+    "user": "U0K7B1C4R",
+    "text": "Wondering if there is a way to group views without adding a new view to the hierarchy. Any suggestions?",
+    "ts": "1466407220.000429",
+    "id": "20de37595",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1CV5DAMT",
+    "text": "<@U0K7B1C4R> what is the reason for grouping views?",
+    "ts": "1466407640.000430",
+    "id": "20de37596",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K7B1C4R",
+    "text": "setting the visibility on off on multiple views",
+    "ts": "1466407657.000431",
+    "id": "20de37597",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1CV5DAMT",
+    "text": "you could store then in an array then iterate through the array and set the visibility.  Also I would look at why you are having to set visibility on multiple views as there may be a better way of structuring the activity.",
+    "ts": "1466407791.000432",
+    "id": "20de37598",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K7B1C4R",
+    "text": "<@U1CV5DAMT>: I do not want to add a new view and put all the views inside them, that will just add to the view hierarchy. Yes I can iterated and turn on/off the visibility of views, but was just wondering if there could be a better way.",
+    "ts": "1466407904.000433",
+    "id": "20de37599",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1CV5DAMT",
+    "text": "will fragments not work?",
+    "ts": "1466408050.000434",
+    "id": "20de37600",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K7B1C4R",
+    "text": "There aren’t a lot of views. They are merely `TextView`s. I think it should be fine turning off the visibility for them by setting visibility individually, if there isn’t a grouping way.",
+    "ts": "1466408308.000435",
+    "id": "20de37601",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K7B1C4R",
+    "text": "I was just thinking if it was something like `group#turnOffVisibility`",
+    "ts": "1466408357.000436",
+    "id": "20de37602",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1CV5DAMT",
+    "text": "you can use “tags\" like this <http://stackoverflow.com/questions/5062264/find-all-views-with-tag#answers-header>",
+    "attachments": [
+      {
+        "title": "Find all views with tag?",
+        "title_link": "http://stackoverflow.com/questions/5062264/find-all-views-with-tag#answers-header",
+        "text": "I am looking to find all the views in a specified activity that have the tag \"balloon\" for example then hide them using setVisibility to GONE.Does anyone know how to retrieve a list of views with a",
+        "fallback": "Find all views with tag?",
+        "thumb_url": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/questions/5062264/find-all-views-with-tag#answers-header",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "service_icon": "http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d",
+        "service_name": "stackoverflow.com",
+        "id": 1
+      }
+    ],
+    "edited": {
+      "user": "U1CV5DAMT",
+      "ts": "1466408593.000000"
+    },
+    "ts": "1466408575.000437",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "20de37603",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1FEW1WUW",
+    "text": "<@U0K7B1C4R>, you can use Butterknife, e.g.\n```@BindViews({ R.id.first_name, R.id.middle_name, R.id.last_name })\nList&lt;EditText&gt; nameViews;\nButterKnife.apply(nameViews, DISABLE);```",
+    "edited": {
+      "user": "U1FEW1WUW",
+      "ts": "1466409517.000000"
+    },
+    "ts": "1466409474.000440",
+    "id": "20de37604",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1JBZNAE4",
+    "subtype": "channel_join",
+    "text": "<@U1JBZNAE4|isakosta> has joined the channel",
+    "ts": "1466413342.000442",
+    "id": "20de37605",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XJ96KPG",
+    "text": "Hey guys. I have a lot of short videos in my application. It is going to be &gt; 100mb so I cannot put it in .apk . I decide to put all that videos in one .zip  file on server.  What is the best approach to download that zip file on first app start and export that videos?",
+    "ts": "1466414131.000443",
+    "id": "20de37606",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1JCJDP6E",
+    "subtype": "channel_join",
+    "text": "<@U1JCJDP6E|fedorkz> has joined the channel",
+    "ts": "1466414280.000444",
+    "id": "20de37607",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0H67LJUA",
+    "text": "Are there really not any better way to follow permission guidelines for location other than requesting permission from user, then wait until next location update while the user scratches his head over why location specific app functions do not work yet?",
+    "ts": "1466414747.000445",
+    "id": "20de37608",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "You can try my friend's library -&gt; <https://github.com/hotchemi/PermissionsDispatcher>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "hotchemi/PermissionsDispatcher",
+        "title_link": "https://github.com/hotchemi/PermissionsDispatcher",
+        "text": "PermissionsDispatcher - Provides simple annotation-based API to handle runtime permissions.",
+        "fallback": "GitHub: hotchemi/PermissionsDispatcher",
+        "thumb_url": "https://avatars1.githubusercontent.com/u/471318?v=3&s=400",
+        "from_url": "https://github.com/hotchemi/PermissionsDispatcher",
+        "thumb_width": 240,
+        "thumb_height": 240,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1466414942.000446",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "20de37609",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U08GFT5V5>: I remember you having some issues with SQLite. Interesting read <http://beets.io/blog/sqlite-performance.html>",
+    "ts": "1466415743.000448",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "20de37610",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KU8TDV2",
+    "text": "I guys, i'm working on an app that enable users to add mp3 song to mp4 video",
+    "ts": "1466416470.000449",
+    "id": "20de37611",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KU8TDV2",
+    "text": "i'm using mp4parser library for this task",
+    "ts": "1466416485.000450",
+    "id": "20de37612",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KU8TDV2",
+    "text": "but the output video has no sound at all",
+    "ts": "1466416517.000451",
+    "id": "20de37613",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KU8TDV2",
+    "text": "anyone has experienced about this before?",
+    "ts": "1466416537.000452",
+    "id": "20de37614",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KU8TDV2",
+    "text": "or any library that i can count on?",
+    "ts": "1466416562.000453",
+    "id": "20de37615",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U10V70GJG",
+    "text": "<@U0KU8TDV2> have you tried ffmpeg?",
+    "ts": "1466416619.000454",
+    "id": "20de37616",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KU8TDV2",
+    "text": "yeah currently i'm using ffmpeg for most of my processing tasks, but it adds so much weight to my apk",
+    "ts": "1466416749.000455",
+    "id": "20de37617",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KU8TDV2",
+    "text": "more over, i need to process my videos to achieve more effect that ffmpeg cannot produce",
+    "ts": "1466416784.000456",
+    "id": "20de37618",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KU8TDV2",
+    "text": "so i'm moving away from ffmpeg, seeking for more generic way",
+    "ts": "1466416804.000457",
+    "id": "20de37619",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KU8TDV2",
+    "text": "the processing video with effect is now quite good, but i'm stuck with adding mp3 sound to the output video",
+    "ts": "1466416863.000458",
+    "id": "20de37620",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KU8TDV2",
+    "text": "mp4parser works great with m4a, but not mp3",
+    "ts": "1466416886.000459",
+    "id": "20de37621",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KU8TDV2",
+    "text": ":disappointed:",
+    "ts": "1466416890.000460",
+    "id": "20de37622",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "ffmpeg is unfortunately the de-facto way of video processing in Android",
+    "ts": "1466417628.000461",
+    "id": "20de37623",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KU8TDV2",
+    "text": "what do you mean de-facto <@U09T8SFG8>? :smile:",
+    "ts": "1466418026.000462",
+    "id": "20de37624",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "the most used",
+    "ts": "1466418040.000463",
+    "id": "20de37625",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "what everyone uses",
+    "ts": "1466418046.000464",
+    "id": "20de37626",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KU8TDV2",
+    "text": "yeah but i have some features that ffmpeg cannot do, or hard to be done with ffmpeg",
+    "ts": "1466418115.000465",
+    "id": "20de37627",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KU8TDV2",
+    "text": ":smile:",
+    "ts": "1466418117.000466",
+    "id": "20de37628",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U13NHJB7H",
+    "text": "can anybody share a link of a android project based on mvp architecture..",
+    "ts": "1466418562.000467",
+    "id": "20de37629",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DU4SSPL",
+    "text": "<https://github.com/googlesamples/android-architecture>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "googlesamples/android-architecture",
+        "title_link": "https://github.com/googlesamples/android-architecture",
+        "text": "android-architecture - A collection of samples to discuss and showcase different architectural tools and patterns for Android apps.",
+        "fallback": "GitHub: googlesamples/android-architecture",
+        "thumb_url": "https://avatars1.githubusercontent.com/u/7378196?v=3&s=400",
+        "from_url": "https://github.com/googlesamples/android-architecture",
+        "thumb_width": 200,
+        "thumb_height": 200,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1466419502.000468",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U1FFD7B0D"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "20de37630",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XJ96KPG",
+    "text": "Hello guys! I was following this : <https://developer.android.com/google/play/expansion-files.html#Downloading>  but I have problem to add Library Repository and do build gradle . Is there any better tutorial for this",
+    "attachments": [
+      {
+        "title": "    APK Expansion Files | Android Developers  ",
+        "title_link": "https://developer.android.com/google/play/expansion-files.html#Downloading",
+        "text": "If your app needs more than the 100MB APK max, use free APK expansion files from Google Play.",
+        "fallback": "    APK Expansion Files | Android Developers  ",
+        "from_url": "https://developer.android.com/google/play/expansion-files.html#Downloading",
+        "service_icon": "https://developer.android.com/favicon.ico",
+        "service_name": "developer.android.com",
+        "id": 1
+      }
+    ],
+    "ts": "1466424650.000471",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "20de37631",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K7B1C4R",
+    "text": "Thanks guys <@U1CV5DAMT> <@U1FEW1WUW>",
+    "ts": "1466425724.000474",
+    "id": "20de37632",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1JER4BDK",
+    "subtype": "channel_join",
+    "text": "<@U1JER4BDK|arvikachristy> has joined the channel",
+    "ts": "1466433151.000475",
+    "id": "20de37633",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Z65RHPC",
+    "text": "I Are there any tools out there to analyze the sdk dependencies for an app, we are trying to analyze  different parameters like size of  sdk, network usage  battery drain etc , Can  i get any suggestions on analyzing  sdk.",
+    "ts": "1466433816.000476",
+    "id": "20de37634",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1JER4BDK",
+    "text": "Hi all, I am building an app that tracks a user’s location. At the moment, the location listener is tied to an Activity. The Activity extends LocationListener. Problem with this is if the activity is changed or the app is no longer in focus, tracking halts. How do I go about making this run in the background regardless of which activity or app is in focus?",
+    "ts": "1466435314.000477",
+    "id": "20de37635",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09L2RN4A",
+    "text": "I believe you would need to tie it to a Service rather than an Activity <@U1JER4BDK> - services can run in the background and have no UI.",
+    "ts": "1466435625.000478",
+    "id": "20de37636",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1JER4BDK",
+    "text": "<@U09L2RN4A>: isn't it going to be bounded with that one activity only?  What if I have multiple activities in my app and when I'm moving to another one it's going to stop tracking?",
+    "ts": "1466436067.000479",
+    "id": "20de37637",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1JER4BDK",
+    "text": "because you need to start the service in an activity",
+    "ts": "1466436111.000480",
+    "id": "20de37638",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09L2RN4A",
+    "text": "An Activity can start a service, but a service doesn't have to be tied to that Activity. So, if the Activity is destroyed or changed, the service can carry on in the background.,",
+    "ts": "1466436323.000481",
+    "id": "20de37639",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1JER4BDK",
+    "text": "if the activity starts with an intent, would that be enough to have it decoupled from the activity?",
+    "ts": "1466436439.000482",
+    "id": "20de37640",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1JER4BDK",
+    "text": "by intent i mean `Intent intent = new Intent(this, LocationService.class);`",
+    "ts": "1466436479.000483",
+    "id": "20de37641",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09L2RN4A",
+    "text": "There is some great info on Services here on the Android dev site: <https://developer.android.com/guide/components/services.html>",
+    "attachments": [
+      {
+        "title": "    Services | Android Developers  ",
+        "title_link": "https://developer.android.com/guide/components/services.html",
+        "text": "A Service is an application component that can perform long-running operations in the background and does not provide a user interface. Another application component can start a service and it will continue to run in the background even if the user switches…",
+        "fallback": "    Services | Android Developers  ",
+        "from_url": "https://developer.android.com/guide/components/services.html",
+        "service_icon": "https://developer.android.com/favicon.ico",
+        "service_name": "developer.android.com",
+        "id": 1
+      }
+    ],
+    "ts": "1466436500.000484",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U061HDV96"
+        ],
+        "count": 2
+      },
+      {
+        "name": "slightly_smiling_face",
+        "users": [
+          "U1JER4BDK"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "20de37642",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09L2RN4A",
+    "text": ":slightly_smiling_face:",
+    "ts": "1466436502.000485",
+    "id": "20de37643",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U17NKN5CH",
+    "text": "did anyone here integrated firebase?",
+    "ts": "1466443896.000487",
+    "id": "20de37644",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U17NKN5CH",
+    "text": "sometimes I am not seeing the notifications coming through, also there is lot of delay in seeing the push notification on the device",
+    "ts": "1466443945.000488",
+    "id": "20de37645",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F5VSCNA",
+    "text": "Has anyone here used BuddyBuild and Jitpack together?",
+    "ts": "1466446544.000489",
+    "id": "20de37646",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "not together",
+    "ts": "1466446828.000490",
+    "id": "20de37647",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "but if you have questions, buddybuild has awesome support, just ping them on the intercom",
+    "ts": "1466446853.000491",
+    "id": "20de37648",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1JKXJJ11",
+    "subtype": "channel_join",
+    "text": "<@U1JKXJJ11|debug> has joined the channel",
+    "ts": "1466478926.000492",
+    "id": "20de37649",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1CV5DAMT",
+    "text": "<@U1JER4BDK> Be very careful tracking users locations via a `Service`. Services will run indefinitely if you don’t stop then and the device is not restarted.  LocationServices can be heavy on battery usage that will lead to uninstalls.  Also depending on your country there may be laws that you should be aware of in terms of how that data is used and is the user consents to it.",
+    "ts": "1466483607.000493",
+    "id": "20de37650",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

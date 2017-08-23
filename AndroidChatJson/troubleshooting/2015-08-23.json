@@ -1,0 +1,595 @@
+[
+  {
+    "user": "U094L59R7",
+    "text": "I can’t figure out why my long images aren’t being used — I have 5 drawable folders — the default `drawable` then `drawable-long`, `drawable-notlong`, drawable-long-xhdpi` and `drawable-notlong-xdhpi`. Both my Nexus 7 and 5 use the `drawable-notlong-xhdpi` but if I log if they are long screens or not, I get long. I originally had the directory names as `drawable-xhdpi-notlong` but Android Studio said that was wrong. So I fixed that and yet still..",
+    "ts": "1440352104.000319",
+    "id": "23tr1827",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U094L59R7",
+    "text": "any hints? the image size in `drawable-long-xhdpi` is 1920x1080 (it’s a landscape full screen book kind of thing)",
+    "ts": "1440352210.000320",
+    "id": "23tr1828",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "xhdpi probably takes priority over the notlong qualifier",
+    "ts": "1440365368.000321",
+    "id": "23tr1829",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "regardless of what order you name the folder",
+    "ts": "1440365377.000322",
+    "id": "23tr1830",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I dont see anything in the docs about your issue <@U094L59R7> so from what I see, what you have done should be correct",
+    "ts": "1440365869.000323",
+    "id": "23tr1831",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "long/notlong takes precedence over xhdpi, so that should be fine",
+    "ts": "1440366146.000324",
+    "id": "23tr1832",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "sounds like an SO question, surely someone has an explanation",
+    "ts": "1440366197.000325",
+    "id": "23tr1833",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "table 2 here has the order you need to follow: <https://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources>",
+    "attachments": [
+      {
+        "text": "You should always externalize application resources such as images and strings from your code, so that you can maintain them independently. You should also provide alternative resources for specific device configurations, by grouping them in specially-named…",
+        "fallback": "You should always externalize application resources such as images and strings from your code, so that you can maintain them independently. You should also provide alternative resources for specific device configurations, by grouping them in specially-named…",
+        "from_url": "https://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources",
+        "id": 1
+      }
+    ],
+    "edited": {
+      "user": "U04TK850N",
+      "ts": "1440366253.000000"
+    },
+    "ts": "1440366249.000326",
+    "id": "23tr1834",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "wait",
+    "ts": "1440366325.000329",
+    "id": "23tr1835",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "<@U094L59R7>: Nexus 7 is notlong",
+    "ts": "1440366334.000330",
+    "id": "23tr1836",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "check this: <https://github.com/android/platform_frameworks_base/blob/master/core/java/android/content/res/Configuration.java#L238-L244>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "android/platform_frameworks_base",
+        "title_link": "https://github.com/android/platform_frameworks_base/blob/master/core/java/android/content/res/Configuration.java#L238-L244",
+        "text": "Contribute to platform_frameworks_base development by creating an account on GitHub.",
+        "fallback": "GitHub: android/platform_frameworks_base",
+        "thumb_url": "https://avatars1.githubusercontent.com/u/30177?v=3&s=400",
+        "from_url": "https://github.com/android/platform_frameworks_base/blob/master/core/java/android/content/res/Configuration.java#L238-L244",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1440366475.000331",
+    "id": "23tr1837",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "so a display ratio &gt; 1.6667 will trigger `long`",
+    "ts": "1440366495.000333",
+    "id": "23tr1838",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "nexus 7 is 1920*1200 so  a ratio of 1.6",
+    "ts": "1440366534.000334",
+    "id": "23tr1839",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "hm, doesn't explain the Nexus 5 tho",
+    "ts": "1440366587.000335",
+    "id": "23tr1840",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "googling further, turns out, you know that already (found your SO question :smile: )",
+    "ts": "1440366648.000336",
+    "id": "23tr1841",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "haha",
+    "ts": "1440366662.000337",
+    "id": "23tr1842",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "so meta",
+    "ts": "1440366664.000338",
+    "id": "23tr1843",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "sits in the corner",
+    "subtype": "me_message",
+    "user": "U04TK850N",
+    "ts": "1440366673.000339",
+    "id": "23tr1844",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "knowing parts of the framework code can be helpful sometimes :confused:",
+    "ts": "1440366710.000340",
+    "id": "23tr1845",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "indeed, I use grepcode daily to figure out all the wtfs",
+    "ts": "1440366730.000341",
+    "id": "23tr1846",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "thats one thing I hate about the play services stuff because its all a black box",
+    "ts": "1440366741.000342",
+    "id": "23tr1847",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "the amount of crashes we get from it :confused:",
+    "ts": "1440366754.000343",
+    "id": "23tr1848",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "/shrug",
+    "edited": {
+      "user": "U055GGAHS",
+      "ts": "1440366783.000000"
+    },
+    "ts": "1440366767.000344",
+    "id": "23tr1849",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "¯\\_(ツ)_/¯",
+    "ts": "1440366775.000345",
+    "id": "23tr1850",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "damn",
+    "ts": "1440366785.000347",
+    "id": "23tr1851",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "lol",
+    "ts": "1440366789.000348",
+    "id": "23tr1852",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "¯\\_(ツ)_/¯",
+    "ts": "1440366789.000349",
+    "id": "23tr1853",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I did android modding for a while",
+    "ts": "1440366814.000350",
+    "id": "23tr1854",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "that's where that comes from",
+    "ts": "1440366821.000351",
+    "id": "23tr1855",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U094L59R7",
+    "text": "<@U04TK850N>: thanks — I figured that out after quite a while… coming from iOS, I was just in the mindset anything &gt; 4:3 would be long but now it is making more sense",
+    "edited": {
+      "user": "U094L59R7",
+      "ts": "1440369227.000000"
+    },
+    "ts": "1440369202.000352",
+    "id": "23tr1856",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U094L59R7",
+    "text": "I’m going to have to add branch programatically on approximate screen ratios like I am on my iOS version which is fine which is fine in the end… just confusing at first",
+    "ts": "1440369290.000355",
+    "id": "23tr1857",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

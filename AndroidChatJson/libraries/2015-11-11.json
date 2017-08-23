@@ -1,0 +1,789 @@
+[
+  {
+    "user": "U04UBTWEE",
+    "text": "<@U091EBYSU>: can storIO / sqlite observe changes on a row and update my rx.subscriber ?",
+    "ts": "1447232003.000032",
+    "id": "11li2573",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "<@U04UBTWEE>: StorIO observes changes per table/Uri",
+    "ts": "1447233478.000033",
+    "id": "11li2574",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UBTWEE",
+    "text": "cool. after one update do i just call subscriber.unsubscribe() to stop updates?",
+    "ts": "1447233513.000034",
+    "id": "11li2575",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UBTWEE",
+    "text": "<@U091EBYSU>: hey!!!",
+    "ts": "1447236564.000035",
+    "id": "11li2576",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UBTWEE",
+    "text": "<@U091EBYSU>: im joining two tables and returning a composite object. The compiler is complaining `Error:(9, 19) error: Please annotate class CommentUser with StorIOSQLiteType` what must i do?",
+    "ts": "1447236794.000036",
+    "id": "11li2577",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D0AFX1B",
+    "text": "anyone here who worked with arca library?",
+    "ts": "1447237005.000037",
+    "id": "11li2578",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "<@U04UBTWEE>: \n\n&gt;cool. after one update do i just call subscriber.unsubscribe() to stop updates?\n\nYou can use  `take(1)` or `first()` to take only first result!\n\n`storIOSQLite.get()....createObservable().take(1)`",
+    "ts": "1447237654.000038",
+    "id": "11li2579",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UBTWEE",
+    "text": "<@U091EBYSU>: but will `first()` keep firing the updates in the background but never getting thru to the subscriber?",
+    "ts": "1447237710.000039",
+    "id": "11li2580",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UBTWEE",
+    "text": "kind of like a filter?",
+    "ts": "1447237717.000040",
+    "id": "11li2581",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "<@U04UBTWEE>: nope, not like `filter`, it takes one result and unsubscribes from the `Observable`",
+    "ts": "1447237743.000041",
+    "id": "11li2582",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UBTWEE",
+    "text": "nice",
+    "ts": "1447237748.000042",
+    "id": "11li2583",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UBTWEE",
+    "text": "what should i do about my composite object compiler issue ^?",
+    "ts": "1447237770.000043",
+    "id": "11li2584",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UBTWEE",
+    "text": "I did annotate it and put some bogus table name in the value",
+    "ts": "1447237793.000044",
+    "id": "11li2585",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UBTWEE",
+    "text": "feels incorrect",
+    "ts": "1447237803.000045",
+    "id": "11li2586",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UBTWEE",
+    "text": "i created a GetResolver and used that.. but that was the last issue",
+    "ts": "1447237829.000046",
+    "id": "11li2587",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "Composite objects are not supported by annotation processor",
+    "ts": "1447237871.000047",
+    "id": "11li2588",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UBTWEE",
+    "text": "oh right, ill strip all the annotations then",
+    "ts": "1447237894.000048",
+    "id": "11li2589",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "Yep! Correct decision :simple_smile:",
+    "ts": "1447237905.000049",
+    "id": "11li2590",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UBTWEE",
+    "text": "if it’s not an entity, then *what* is it….",
+    "ts": "1447237919.000050",
+    "id": "11li2591",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "I mean, composite objects are so custom from usage to usage that we could not provide general solution for them",
+    "ts": "1447237931.000051",
+    "id": "11li2592",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UBTWEE",
+    "text": "thinking of organising them into another package",
+    "ts": "1447237936.000052",
+    "id": "11li2593",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "as you wish, anyway you can do any kind of custom behavior via own resolvers for operations!",
+    "ts": "1447237969.000053",
+    "id": "11li2594",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UBTWEE",
+    "text": "<@U091EBYSU>: what sorts of things can u do in the  `performGet` hook in `DefaultGetResolver`",
+    "ts": "1447238107.000054",
+    "id": "11li2595",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UBTWEE",
+    "text": "seems to be pass thru to some internal storio method",
+    "ts": "1447238154.000055",
+    "id": "11li2596",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UBTWEE",
+    "text": "adding things to the query?",
+    "ts": "1447238171.000056",
+    "id": "11li2597",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UBTWEE",
+    "text": "<@U091EBYSU>: and how can i write my SQL join query without it being a long concatenation of different TABLE.COLUMN_NAME references?",
+    "ts": "1447238296.000057",
+    "id": "11li2598",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D0AFX1B",
+    "text": "Can someone help me with getting a CursorAdapter from arca library working with a recyclerView?",
+    "ts": "1447238607.000058",
+    "id": "11li2599",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "<@U04UBTWEE> I'm on lunch, will answer in an hour, sorry :simple_smile:",
+    "edited": {
+      "user": "U091EBYSU",
+      "ts": "1447240808.000000"
+    },
+    "ts": "1447239536.000059",
+    "id": "11li2600",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "<@U04UBTWEE>: I'm back, in `performGet` you can do any things you want,  just return  `cursor` as result",
+    "ts": "1447241312.000061",
+    "id": "11li2601",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "// in v2 we will also pass you `StorIO` instance to the methods, we realized that it's needed only after public v1 release so to keep compatibility we decided to do it in v2 <https://github.com/pushtorefresh/storio/issues/519>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "All Resolver&#39;s methods should receive instance of StorIO · Issue #519 · pushtorefresh/storio · GitHub",
+        "title_link": "https://github.com/pushtorefresh/storio/issues/519",
+        "text": "At the moment, users have to make some hacks to make it work…",
+        "fallback": "GitHub: All Resolver's methods should receive instance of StorIO · Issue #519 · pushtorefresh/storio",
+        "thumb_url": "https://avatars2.githubusercontent.com/u/967132?v=3&s=400",
+        "from_url": "https://github.com/pushtorefresh/storio/issues/519",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1447241399.000062",
+    "id": "11li2602",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UBTWEE",
+    "text": "nice",
+    "ts": "1447241447.000064",
+    "id": "11li2603",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UBTWEE",
+    "text": "<@U091EBYSU>: any advise on writing queries for join tables neatly?",
+    "ts": "1447241472.000065",
+    "id": "11li2604",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UBTWEE",
+    "text": "bonus if it uses the Table classes and columns!",
+    "ts": "1447241487.000066",
+    "id": "11li2605",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "<@U04UBTWEE>: just recommendation: use JOIN in SQL, joining data in sqlite is much faster than doing it manually in the app code",
+    "ts": "1447242084.000067",
+    "id": "11li2606",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "I mean, usually it's easier to join data in memory via custom code, but from my experience we usually ended rewriting it to SQL JOIN to improve performance",
+    "ts": "1447242142.000068",
+    "id": "11li2607",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "+1 for JOIN. Made the same experiences and am now using JOIN wherever possible",
+    "ts": "1447242537.000069",
+    "id": "11li2608",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U04UBTWEE>: if you are joining tables in a specific way very often consider making a `View`. Be careful with this though and use it only if you are sure you will use it often <http://www.w3schools.com/sql/sql_view.asp>",
+    "edited": {
+      "user": "U09T8SFG8",
+      "ts": "1447243537.000000"
+    },
+    "ts": "1447243530.000070",
+    "id": "11li2609",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07V5TJF4",
+    "text": "<@U04UBTWEE>: <https://gitter.im/ReactiveX/RxJava> is a great resource if you have RxJava specific questions",
+    "attachments": [
+      {
+        "title": "ReactiveX/RxJava",
+        "title_link": "https://gitter.im/ReactiveX/RxJava",
+        "text": "RxJava – Reactive Extensions for the JVM – a library for composing asynchronous and event-based programs using observable sequences for the Java VM.",
+        "fallback": "ReactiveX/RxJava",
+        "thumb_url": "https://avatars.githubusercontent.com/u/0",
+        "from_url": "https://gitter.im/ReactiveX/RxJava",
+        "thumb_width": 420,
+        "thumb_height": 420,
+        "id": 1
+      }
+    ],
+    "ts": "1447254483.000073",
+    "id": "11li2610",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07V5TJF4",
+    "text": "usually a good number of people hanging out in that Gitter room",
+    "ts": "1447254532.000075",
+    "id": "11li2611",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "RxJava 1.0.16! <https://github.com/ReactiveX/RxJava/releases/tag/v1.0.16>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "ReactiveX/RxJava",
+        "title_link": "https://github.com/ReactiveX/RxJava/releases/tag/v1.0.16",
+        "text": "RxJava – Reactive Extensions for the JVM – a library for composing asynchronous and event-based programs using observable sequences for the Java VM.",
+        "fallback": "GitHub: ReactiveX/RxJava",
+        "thumb_url": "https://avatars3.githubusercontent.com/u/6407041?v=3&s=400",
+        "from_url": "https://github.com/ReactiveX/RxJava/releases/tag/v1.0.16",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1447276257.000076",
+    "id": "11li2612",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UBTWEE",
+    "text": "<@U07V5TJF4>: ty ill check it out",
+    "ts": "1447288246.000078",
+    "id": "11li2613",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

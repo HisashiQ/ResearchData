@@ -1,0 +1,273 @@
+[
+  {
+    "user": "U04UBTWEE",
+    "text": "hi guys, so anonymous classes like `View.OnClickListeners` referencing views in the activity is probably causing view leaks. How can i avoid view leaks?",
+    "ts": "1447495396.000340",
+    "id": "14de16173",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UBTWEE",
+    "text": "In the listener, i need to update the TextView’s text.. so i call `textView.setText(“blah”)`..",
+    "ts": "1447496479.000341",
+    "id": "14de16174",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C175J8P",
+    "subtype": "channel_join",
+    "text": "<@U0C175J8P|bazted> has joined the channel",
+    "ts": "1447510288.000342",
+    "id": "14de16175",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E4A1MPA",
+    "text": "<@U04UBTWEE>: I don’t think that will leak the view if you use view’s listener :-?",
+    "ts": "1447513749.000343",
+    "id": "14de16176",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "it shouldn’t do that….",
+    "ts": "1447514075.000344",
+    "id": "14de16177",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "unless you’ve done something dumb in the listener",
+    "ts": "1447514088.000345",
+    "id": "14de16178",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "welcome <@U0C175J8P>",
+    "ts": "1447514134.000346",
+    "id": "14de16179",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C175J8P",
+    "text": "Thank you <@U0548MM6B>",
+    "ts": "1447514155.000347",
+    "id": "14de16180",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U04UBTWEE>: can you show your `onClickListener` code?",
+    "ts": "1447519206.000348",
+    "id": "14de16181",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "If your view click listener is defined by your activity it will not leak as your view and activity are already coupled by the activities context wrapper instance",
+    "ts": "1447520324.000349",
+    "id": "14de16182",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UBTWEE",
+    "text": "<@U0E4A1MPA>: <@U09T8SFG8> <@U0548MM6B> ```\n            contentContainerAnimator = contentContainerView.animate()\n                    .alpha(0f)\n                    .setDuration(10000)\n                    .setListener(new AnimatorListenerAdapter() {\n                        @Override\n                        public void onAnimationEnd(Animator animation) {\n                            titleTextView.setText(getResources().getString(R.string.start_title_2));\n                            contentTextView.setText(getResources().getString(R.string.start_content_2));\n                            primaryButton.setText(\"Specify Goals\");\n                            primaryButtonShouldBeginGoalSpecification = true;\n\n                            contentContainerView.animate()\n                                    .alpha(1f)\n                                    .setDuration(longAnimationDuration);\n                        }\n                    });```",
+    "ts": "1447540917.000350",
+    "id": "14de16183",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UBTWEE",
+    "text": "```LinearLayout contentContainerView;```",
+    "ts": "1447540950.000351",
+    "id": "14de16184",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UBTWEE",
+    "text": "I had a leak which was through the linear layout’s ViewPropertyAnimator",
+    "ts": "1447540969.000352",
+    "id": "14de16185",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UBTWEE",
+    "text": "I thought onClick works like listeners, as i have similar code",
+    "ts": "1447541011.000353",
+    "id": "14de16186",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053Q5XP2",
+    "text": "<@U04UBTWEE>: Try stopping all your animations in onDestroy.",
+    "ts": "1447565291.000354",
+    "id": "14de16187",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

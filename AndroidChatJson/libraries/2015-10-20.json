@@ -1,0 +1,275 @@
+[
+  {
+    "user": "U052AQM7J",
+    "subtype": "channel_join",
+    "text": "<@U052AQM7J|bastien> has joined the channel",
+    "ts": "1445342640.000501",
+    "id": "20li2128",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U052AQM7J",
+    "text": "Hello guys, I have a small question about Dagger2 usage : \n\nDo you think the following usecase is a good use of Dagger2 ?\nAt the start of the app, we get the user profile from the api, and store it as a local variable of the App, for some mystic reasons it can become null during the lifecycle of the app (I don't know why I just started working on this codebase few days ago and it's a big mess). To improve this, I would like to inject the user profile where I need it to be sure the previous system is not used anymore and my profile object is consistent between activities.\n\nThx",
+    "ts": "1445342824.000502",
+    "id": "20li2129",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "could you not persist that profile object in shared prefs or a database and then retrieve it from there?",
+    "ts": "1445343495.000503",
+    "id": "20li2130",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U052AQM7J",
+    "text": "why this solution solution instead of another one ?",
+    "ts": "1445344604.000504",
+    "id": "20li2131",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "well the risk with keeping it all in memory is that the app can be terminated at any time - which might explain the random nulls you’re getting",
+    "ts": "1445345076.000505",
+    "id": "20li2132",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "persisting it somewhere more permanent will get around that",
+    "ts": "1445345117.000506",
+    "id": "20li2133",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U052AQM7J",
+    "text": "I see,  but everytime the app restart I'll get again the profile and I was thinking to create my user profile in Dagger at this moment. With that I have a chance that it become null at a moment ?",
+    "ts": "1445346016.000507",
+    "id": "20li2134",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "if the user or the OS decides to terminate your app, it will become null",
+    "ts": "1445347197.000508",
+    "id": "20li2135",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "dagger won’t prevent that",
+    "ts": "1445347218.000509",
+    "id": "20li2136",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "&gt;for some mystic reasons it can become null",
+    "ts": "1445350940.000510",
+    "id": "20li2137",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "wat",
+    "ts": "1445350940.000511",
+    "id": "20li2138",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B9TKCRL",
+    "text": "you’d better find out why it become null at first\nwithout that, anything you do will become unneeded complexity",
+    "ts": "1445352060.000512",
+    "id": "20li2139",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "^",
+    "ts": "1445365906.000513",
+    "id": "20li2140",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CRXNLLV",
+    "subtype": "channel_join",
+    "text": "<@U0CRXNLLV|iamtodor> has joined the channel",
+    "ts": "1445370231.000514",
+    "id": "20li2141",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CS68AR2",
+    "subtype": "channel_join",
+    "text": "<@U0CS68AR2|licuadolala> has joined the channel",
+    "ts": "1445380720.000515",
+    "id": "20li2142",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

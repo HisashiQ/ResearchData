@@ -1,0 +1,3237 @@
+[
+  {
+    "user": "U25NAS2P9",
+    "text": "Hey, has anyone made Glide to play gif only on click? Or somehow optimise gif memory usage? I'm writing small gallery like app which would load pictures from various imgur source, and some pictures can be gifs. At first tested on powerful (4 cores, 2gb ram) emulator and it goes smoothly with loading 100+ gifs in recyclerview. But then I tried on shitty version emulator (1 core, 512 mb ram. And while it loads full screen of gifs, their framerate is terrible, So i thought perhaps I could do the thing other sites are doing - play gif only on click/long click, whatever. Or perhaps don't play it in the list, show some overlay that notifies it's a gif and only onclick maximize it to fullscreen and then play it?",
+    "edited": {
+      "user": "U25NAS2P9",
+      "ts": "1472715404.000000"
+    },
+    "ts": "1472715386.000635",
+    "id": "01de44645",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25NAS2P9",
+    "text": "Oh damn, this post is longer than I expected :smile:",
+    "ts": "1472715426.000637",
+    "id": "01de44646",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25NAS2P9",
+    "text": "I think I semi-solved it by changing cache strategy to                 .diskCacheStrategy(DiskCacheStrategy.ALL)",
+    "ts": "1472715722.000638",
+    "id": "01de44647",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25NAS2P9",
+    "text": "Will try to increase thread count as well probably",
+    "ts": "1472715731.000639",
+    "id": "01de44648",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "is there any reason why travis would fail on linting while my local build doesn’t?",
+    "ts": "1472717020.000640",
+    "id": "01de44649",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "running exactly the same commands",
+    "ts": "1472717028.000641",
+    "id": "01de44650",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "just default lint? how does it fail?",
+    "ts": "1472717134.000642",
+    "id": "01de44651",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "```\n1: Task failed with an exception.\n-----------\n* What went wrong:\nExecution failed for task ':AndroidNorthLib:lintDebug'.\n&gt; Lint found errors in the project; aborting build.\n  \n  Fix the issues identified by lint, or add the following to your build script to proceed with errors:\n  ...\n  android {\n      lintOptions {\n          abortOnError false\n      }\n  }\n  ...\n* Try:\nRun with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.\n==============================================================================\n2: Task failed with an exception.\n-----------\n* What went wrong:\nExecution failed for task ':AndroidSearchLib:lintDebug'.\n&gt; Lint found errors in the project; aborting build.\n  \n  Fix the issues identified by lint, or add the following to your build script to proceed with errors:\n  ...\n  android {\n      lintOptions {\n          abortOnError false\n      }\n  }\n  ...\n\n\n```",
+    "ts": "1472717224.000643",
+    "id": "01de44652",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "will run with info and debug flags",
+    "ts": "1472717233.000644",
+    "id": "01de44653",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "its just annoying af",
+    "ts": "1472717236.000645",
+    "id": "01de44654",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "because the fucking travis doesn’t show you the output.",
+    "ts": "1472717247.000646",
+    "id": "01de44655",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "weird",
+    "ts": "1472717294.000647",
+    "id": "01de44656",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "ok I know what to do",
+    "ts": "1472717458.000648",
+    "id": "01de44657",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I’ll have the next command cat the lint log :joy:",
+    "ts": "1472717480.000649",
+    "id": "01de44658",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "sounds fun :stuck_out_tongue:",
+    "ts": "1472717647.000650",
+    "id": "01de44659",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I just hope it doesn’t terminate before that.",
+    "ts": "1472717714.000651",
+    "id": "01de44660",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "it still makes no sense how it would use a different config unless you explicitly told it to",
+    "ts": "1472717937.000652",
+    "id": "01de44661",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "fuck do I know mate",
+    "ts": "1472718047.000653",
+    "id": "01de44662",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "ok that worked",
+    "ts": "1472719227.000654",
+    "id": "01de44663",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "```\nNewApi: Calling new methods on older versions\n../../../AndroidNorthLib: The SDK platform-tools version (23.0.1) is too old to check APIs compiled with API 24; please update\nNote: This issue has an associated quickfix operation in Android Studio/IntelliJ &amp; Eclipse/ADT Fix \nPriority: 6 / 10\nCategory: Correctness\nSeverity: Error\nExplanation: Calling new methods on older versions.\nThis check scans through all the Android API calls in the application and warns about any calls that are not available on all versions targeted by this application (according to its minimum SDK attribute in the manifest).\n\nIf you really want to use this API and don't need to support older devices just set the minSdkVersion in your build.gradle or AndroidManifest.xml files.\n\nIf your code is deliberately accessing newer APIs, and you have ensured (e.g. with conditional execution) that this code will only ever be called on a supported platform, then you can annotate your class or method with the @TargetApi annotation specifying the local minimum SDK to apply, such as @TargetApi(11), such that this check considers 11 rather than your manifest file's minimum SDK as the required API level.\n\nIf you are deliberately setting android: attributes in style definitions, make sure you place this in a values-vNN folder in order to avoid running into runtime conflicts on certain devices where manufacturers have added custom attributes whose ids conflict with the new ones on later platforms.\n\nSimilarly, you can use tools:targetApi=\"11\" in an XML file to indicate that the element will only be inflated in an adequate context.\n\nMore info:\n\nTo suppress this error, use the issue id \"NewApi\" as explained in the Suppressing Warnings and Errors section.\nDisabled Checks\n\n```",
+    "ts": "1472719254.000655",
+    "id": "01de44664",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "This should have definitelly popped up in your local build",
+    "ts": "1472719328.000656",
+    "id": "01de44665",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "did the support lib version change somehow in the ci?",
+    "ts": "1472719343.000657",
+    "id": "01de44666",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "or maybe the target api",
+    "ts": "1472719351.000658",
+    "id": "01de44667",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "nope.",
+    "ts": "1472719394.000659",
+    "id": "01de44668",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "only other reason is if travis somehow uses platform tools 23",
+    "ts": "1472719420.000660",
+    "id": "01de44669",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": ":s",
+    "ts": "1472719423.000661",
+    "id": "01de44670",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "that's what is probably happening",
+    "ts": "1472719438.000662",
+    "id": "01de44671",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "<https://github.com/travis-ci/travis-ci/issues/6193>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "Android: missing latest platform-tools 24 · Issue #6193 · travis-ci/travis-ci · GitHub",
+        "title_link": "https://github.com/travis-ci/travis-ci/issues/6193",
+        "text": "Android SDK has been updated with latest platform tools version 24. When running locally I was able to find them and install, but when running in Travis, platform-tools always points to 23.0.1. Com...",
+        "fallback": "GitHub: Android: missing latest platform-tools 24 · Issue #6193 · travis-ci/travis-ci",
+        "thumb_url": "https://avatars3.githubusercontent.com/u/1978015?v=3&s=400",
+        "from_url": "https://github.com/travis-ci/travis-ci/issues/6193",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "service_icon": "https://a.slack-edge.com/e8ef6/img/unfurl_icons/github.png",
+        "id": 1
+      }
+    ],
+    "ts": "1472719596.000663",
+    "id": "01de44672",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "You might need something like this in the yaml file\n```\nandroid:\n    components:\n        - platform-tools\n        - tools\n        - build-tools-23.0.3\n        - android-24\n```",
+    "ts": "1472719622.000665",
+    "id": "01de44673",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I can’t have build-tools-23.0.3",
+    "ts": "1472719661.000666",
+    "id": "01de44674",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "ok it's more complicated than that then",
+    "ts": "1472719664.000667",
+    "id": "01de44675",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "apparently you need tools twice",
+    "ts": "1472719674.000668",
+    "id": "01de44676",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "fml",
+    "ts": "1472719675.000669",
+    "id": "01de44677",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": ":smile:",
+    "ts": "1472719676.000670",
+    "id": "01de44678",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "we had travis disabled for a while on the epic we’re working on as it’s a major breaking rewrite",
+    "ts": "1472719733.000671",
+    "id": "01de44679",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "decided to enable it yesterday",
+    "ts": "1472719739.000672",
+    "id": "01de44680",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "and now it’s all gone to hell",
+    "ts": "1472719744.000673",
+    "id": "01de44681",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "this is why you always need CI/CD, kids.",
+    "ts": "1472719760.000674",
+    "id": "01de44682",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "leaving a tool out of the toolchain for a bit will always bring pain later",
+    "ts": "1472719828.000675",
+    "id": "01de44683",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": ":smile:",
+    "ts": "1472719829.000676",
+    "id": "01de44684",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "yep",
+    "ts": "1472719834.000677",
+    "id": "01de44685",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "fml",
+    "ts": "1472719837.000678",
+    "id": "01de44686",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "another day where I spend some 6 hours looking at the build progress and fiddling my thumbs.",
+    "ts": "1472719885.000679",
+    "id": "01de44687",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0H67LJUA",
+    "text": "This might be a difficult question to answer, but I have a Viewpager with 4 fragments. Whenever the fragment in position 2 enters the screen fully, I fire off a postrequest, fetching updated data and put it into pojos and perform changes via a recyclerview adapter.\nThe adapter handles 0 total items by displaying a row saying \"no items\", and for debug reasons handle the injected pojo list being null as a row with “something went wrong, press here to refresh” (this has never been needed/displayed in production though).\n\n 99/100 times this does exactly as expected, but every now and then, the adapter does not get assigned to the recyclerview. No caught/uncaught exceptions, no warnings. recyclerview is not null when this happens, I got no idea what is going on, and this seems very broad, but have anyone ever ran into something similar and know what is going on?",
+    "ts": "1472720569.000680",
+    "id": "01de44688",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "same device, or different devices?",
+    "ts": "1472721034.000681",
+    "id": "01de44689",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0H67LJUA",
+    "text": "both",
+    "ts": "1472721057.000682",
+    "id": "01de44690",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "could it be that 2 instances of the recyclerview exist at any given time?",
+    "ts": "1472721082.000683",
+    "id": "01de44691",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "log their hashcodes",
+    "ts": "1472721102.000684",
+    "id": "01de44692",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U0H67LJUA> how do you handle config changes?",
+    "ts": "1472721140.000685",
+    "id": "01de44693",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0H67LJUA",
+    "text": "Changing the adapter? I used to handle it internally in the adapter (notifyItemschanged) after getting a different dataset. But in the process of getting to the root of this, i create a new adapter every time. Both approaches have the same result.",
+    "ts": "1472721333.000686",
+    "id": "01de44694",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25NAS2P9",
+    "text": "Quick question - who should handle Recycler view item click? ViewHolder? Adapter in onBind? or?..",
+    "ts": "1472721343.000687",
+    "id": "01de44695",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25NAS2P9",
+    "text": "Or kind of both? Just found an answer that ViewHolder should catch onClick event and pass it through static interface that adapter will override in onBind? That seems reasonable",
+    "edited": {
+      "user": "U25NAS2P9",
+      "ts": "1472721510.000000"
+    },
+    "ts": "1472721455.000688",
+    "id": "01de44696",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0H67LJUA",
+    "text": "Thats odd, managed to get the bug to happen, hash value of recyclerview is 91107(..), destroy the fragment, fragment is recreated, recyclerview hash is still 91107(,,), normally it changes. The recycler is not used outside of this class, I don’t pass it anywhere or otherwise keep it around when destroyed.",
+    "edited": {
+      "user": "U0H67LJUA",
+      "ts": "1472722267.000000"
+    },
+    "ts": "1472721979.000690",
+    "id": "01de44697",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U1T13H6S3|thehunter> uploaded a file: <https://androidchat.slack.com/files/thehunter/F276Q69B6/build_error_log.txt|build error log> and commented: what this error really meant",
+    "file": {
+      "id": "F276Q69B6",
+      "created": 1472722277,
+      "timestamp": 1472722277,
+      "name": "build_error_log.txt",
+      "title": "build error log",
+      "mimetype": "text/plain",
+      "filetype": "text",
+      "pretty_type": "Plain Text",
+      "user": "U1T13H6S3",
+      "editable": true,
+      "size": 285,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F276Q69B6/build_error_log.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F276Q69B6/download/build_error_log.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/thehunter/F276Q69B6/build_error_log.txt",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F276Q69B6-38e047aa07",
+      "edit_link": "https://androidchat.slack.com/files/thehunter/F276Q69B6/build_error_log.txt/edit",
+      "preview": "Error:Execution failed for task ':app:processFlav_devDebugResources'.\r\n> com.android.ide.common.process.ProcessException: org.gradle.process.internal.ExecException: Process 'command '/Users/hafsalrahman/Library/Android/sdk/build-tools/23.0.3/aapt'' finished with non-zero exit value wj",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>Error:Execution failed for task ':app:processFlav_devDebugResources'.</pre></div>\n<div><pre>&gt; com.android.ide.common.process.ProcessException: org.gradle.process.internal.ExecException: Process 'command '/Users/hafsalrahman/Library/Android/sdk/build-tools/23.0.3/aapt'' finished with non-zero exit value wj</pre></div>\n</div>\n</div>\n",
+      "lines": 2,
+      "lines_more": 0,
+      "preview_is_truncated": false,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 1,
+      "initial_comment": {
+        "id": "Fc2772NCP9",
+        "created": 1472722277,
+        "timestamp": 1472722277,
+        "user": "U1T13H6S3",
+        "is_intro": true,
+        "comment": "what this error really meant",
+        "channel": ""
+      }
+    },
+    "user": "U1T13H6S3",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U1T13H6S3|thehunter>",
+    "bot_id": null,
+    "ts": "1472722277.000692",
+    "id": "01de44698",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "<@U25NAS2P9> I usually have it in the viewholder with an interface",
+    "ts": "1472722652.000693",
+    "id": "01de44699",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25NAS2P9",
+    "text": "<@U1LJG0Y03> Yeah that's what I just did :smiley:",
+    "ts": "1472722808.000694",
+    "id": "01de44700",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25NAS2P9",
+    "text": "Another question tho - I have 2 fragments list and details, and I want to navigate from list to details and going back to list without needing to recreate it fully, how do i properly save its instance? Will addToBackStack be enough?",
+    "ts": "1472722832.000695",
+    "id": "01de44701",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Yep",
+    "ts": "1472722901.000696",
+    "id": "01de44702",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Then just popBackStack",
+    "ts": "1472722906.000697",
+    "id": "01de44703",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25NAS2P9",
+    "text": "thanks",
+    "ts": "1472723019.000698",
+    "id": "01de44704",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U276XTJM6",
+    "text": "<@U276XTJM6|nesterchung> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1472723305.000699",
+    "id": "01de44705",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U277ESHK9",
+    "text": "<@U277ESHK9|stevewestgarth> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1472724846.000700",
+    "id": "01de44706",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U277ESHK9",
+    "text": "This may be of interest <http://codemobile.co.uk> - taking place next April at the University of Chester",
+    "attachments": [
+      {
+        "service_name": "CodeMobile",
+        "title": "CodeMobile iOS and Android Developer Conference - CodeMobile",
+        "title_link": "http://codemobile.co.uk",
+        "text": "CodeMobile is a UK developer conference that has been created by developers who love creating apps in the mobile space. Its an opportunity to network, share ideas and to provide an opportunity for developers to collaborate. The conference has 2 tracks, one focussed on iOS development, the other on Android.",
+        "fallback": "CodeMobile: CodeMobile iOS and Android Developer Conference - CodeMobile",
+        "from_url": "http://codemobile.co.uk",
+        "id": 1
+      }
+    ],
+    "ts": "1472725064.000701",
+    "id": "01de44707",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<@U277ESHK9> it sure is, I’ve had that CFP tab open for a while now",
+    "ts": "1472725223.000703",
+    "id": "01de44708",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I’m speaking there ^^ :slightly_smiling_face:",
+    "ts": "1472725242.000704",
+    "id": "01de44709",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U277ESHK9",
+    "text": "To be far Zan your talk sound ace",
+    "ts": "1472725300.000705",
+    "id": "01de44710",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U277ESHK9",
+    "text": "<http://www.codemobile.co.uk/speaker/zan-markan/>",
+    "attachments": [
+      {
+        "service_name": "CodeMobile",
+        "title": "Zan Markan - CodeMobile",
+        "title_link": "http://www.codemobile.co.uk/speaker/zan-markan/",
+        "text": "Space Cowboy. TDD Fangirl. Speaker. Mobile Lead @mandsdigital. Mr Hopsurfer @Kraftologyapp. Petrolhead. Immigrant.",
+        "fallback": "CodeMobile: Zan Markan - CodeMobile",
+        "thumb_url": "http://www.codemobile.co.uk/wp-content/uploads/2016/08/gsOy-jei.jpg",
+        "from_url": "http://www.codemobile.co.uk/speaker/zan-markan/",
+        "thumb_width": 512,
+        "thumb_height": 512,
+        "id": 1
+      }
+    ],
+    "ts": "1472725302.000706",
+    "id": "01de44711",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "yay :smile:",
+    "ts": "1472725369.000708",
+    "id": "01de44712",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "lol dat bio\n&gt;Space Cowboy. TDD Fangirl. Speaker. Mobile Lead @mandsdigital. Mr Hopsurfer @Kraftologyapp. Petrolhead. Immigrant.",
+    "ts": "1472725371.000709",
+    "id": "01de44713",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "you should totes send a talk proposal <@U0548MM6B>",
+    "ts": "1472725507.000710",
+    "id": "01de44714",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "also I visited chester on saturday and it’s lovely",
+    "ts": "1472725525.000711",
+    "id": "01de44715",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U277ESHK9",
+    "text": "Its a brilliant city - why were you here Zan?",
+    "ts": "1472725539.000712",
+    "id": "01de44716",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "imma do it",
+    "ts": "1472725545.000713",
+    "id": "01de44717",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "just decided to get out of london for for the bank holiday - went to chester, liverpool &amp; manchester",
+    "ts": "1472725575.000714",
+    "id": "01de44718",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "If you have time either side of the conference come visit Liverpool",
+    "ts": "1472725608.000715",
+    "id": "01de44719",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "I can suggest some nice places to go :slightly_smiling_face:",
+    "ts": "1472725617.000716",
+    "id": "01de44720",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "liverpool is nice yeah",
+    "ts": "1472725630.000717",
+    "id": "01de44721",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "especially after dark :smile:",
+    "ts": "1472725642.000718",
+    "id": "01de44722",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U277ESHK9",
+    "text": "the Matthew Street Festival is always ace",
+    "ts": "1472725654.000719",
+    "id": "01de44723",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U277ESHK9",
+    "text": "did that just happen over bank holiday weekend?",
+    "ts": "1472725662.000720",
+    "id": "01de44724",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Or if the team I'm on end up going then we can just show you about :slightly_smiling_face:",
+    "ts": "1472725688.000721",
+    "id": "01de44725",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Yeah, it's not on anymore though",
+    "ts": "1472725702.000722",
+    "id": "01de44726",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Been replaced with LIMF",
+    "ts": "1472725710.000723",
+    "id": "01de44727",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U277ESHK9",
+    "text": "thats a shame",
+    "ts": "1472725796.000724",
+    "id": "01de44728",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U277ESHK9",
+    "text": "to be fair if people want a trip to Liverpool the Wednesday night of CodeMobile doesn’t have a plan - it would be easy to set up a mini trip",
+    "ts": "1472725839.000725",
+    "id": "01de44729",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Nah, LIMF is pretty good tbh",
+    "ts": "1472725850.000726",
+    "id": "01de44730",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U277ESHK9",
+    "text": "maybe I need to go ^^",
+    "ts": "1472725861.000727",
+    "id": "01de44731",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "It's moved to Sefton Park and is larger",
+    "ts": "1472725867.000728",
+    "id": "01de44732",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Get some decent headliners too :slightly_smiling_face:",
+    "ts": "1472725895.000729",
+    "id": "01de44733",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "But yeah, if that's the last time you came to Liverpool then there's loads of new things since then",
+    "ts": "1472725915.000730",
+    "id": "01de44734",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Entire areas of the city have been built",
+    "ts": "1472725942.000731",
+    "id": "01de44735",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "oh god the construction works….",
+    "ts": "1472725955.000732",
+    "id": "01de44736",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "we stayed near the central station and it was terrible getting there",
+    "ts": "1472725988.000733",
+    "id": "01de44737",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Yeah?",
+    "ts": "1472725998.000734",
+    "id": "01de44738",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "yeah - the road to the hotel was blocked",
+    "ts": "1472726010.000735",
+    "id": "01de44739",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "so we had to go around",
+    "ts": "1472726028.000736",
+    "id": "01de44740",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Ah yeah, the one way system is terribad",
+    "ts": "1472726038.000737",
+    "id": "01de44741",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "and then I had to go back again to park in the garage",
+    "ts": "1472726039.000738",
+    "id": "01de44742",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "which was the way we came in",
+    "ts": "1472726048.000739",
+    "id": "01de44743",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Guessing you stayed on Hanover Street?",
+    "ts": "1472726074.000740",
+    "id": "01de44744",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "hmmmm not sure the street name - the hotel was called adagio aparthotel",
+    "ts": "1472726103.000741",
+    "id": "01de44745",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "fairly central",
+    "ts": "1472726108.000742",
+    "id": "01de44746",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Yep",
+    "ts": "1472726111.000743",
+    "id": "01de44747",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Right next to Central on Hanover Street :slightly_smiling_face:",
+    "ts": "1472726117.000744",
+    "id": "01de44748",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Near the Adelphi",
+    "ts": "1472726120.000745",
+    "id": "01de44749",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Right, brb, team meeting",
+    "ts": "1472726123.000746",
+    "id": "01de44750",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U053PPGDC> good to know you're a fangirl",
+    "ts": "1472729042.000747",
+    "id": "01de44751",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": ":upside_down_face:",
+    "ts": "1472730551.000748",
+    "id": "01de44752",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I’m seeing something very weird while doing something very easy",
+    "ts": "1472737160.000749",
+    "id": "01de44753",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "```\n        Observable.timer(200, TimeUnit.MILLISECONDS)\n                .take(15)\n                .count()\n                .subscribeOn(<http://Schedulers.io|Schedulers.io>())\n                .observeOn(AndroidSchedulers.mainThread())\n                .subscribe({ int -&gt; Timber.e(\"Count $int\") },\n                        { error -&gt; Timber.e(error.message) },\n                        { Timber.e(\"I am complete\") })\n```",
+    "edited": {
+      "user": "U0K1ALDQE",
+      "ts": "1472737188.000000"
+    },
+    "ts": "1472737171.000750",
+    "id": "01de44754",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Am I missing something? After 1 emit I receive onComplete",
+    "ts": "1472737211.000752",
+    "id": "01de44755",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I think you need a flatmap so that count doesn’t complete the stream",
+    "ts": "1472737396.000753",
+    "id": "01de44756",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Oh shit lol count is closing my stream &gt;&lt;",
+    "ts": "1472737546.000754",
+    "id": "01de44757",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Sec lemme try that",
+    "ts": "1472737562.000755",
+    "id": "01de44758",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Hmm nope, same problem without count",
+    "edited": {
+      "user": "U0K1ALDQE",
+      "ts": "1472737588.000000"
+    },
+    "ts": "1472737579.000756",
+    "id": "01de44759",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "take doesn’t play well with timer it seems :disappointed:",
+    "ts": "1472737601.000758",
+    "id": "01de44760",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I just need a list of x items, with y delay between every item.",
+    "ts": "1472737658.000759",
+    "id": "01de44761",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "But when I used flatmap -&gt; delay I never received onComplete",
+    "ts": "1472737670.000760",
+    "id": "01de44762",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "oh I dont think timer is what you want",
+    "ts": "1472737718.000761",
+    "id": "01de44763",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "did you mean to use repeat?",
+    "ts": "1472737723.000762",
+    "id": "01de44764",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "&gt;The Timer operator creates an Observable that emits one particular item after a span of time that you specify.",
+    "edited": {
+      "user": "U055GGAHS",
+      "ts": "1472737749.000000"
+    },
+    "ts": "1472737742.000763",
+    "id": "01de44765",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "I think you want Interval",
+    "ts": "1472737781.000765",
+    "id": "01de44766",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "&gt;The Interval operator returns an Observable that emits an infinite sequence of ascending integers, with a constant interval of time of your choosing between emissions.",
+    "edited": {
+      "user": "U0548MM6B",
+      "ts": "1472737790.000000"
+    },
+    "ts": "1472737786.000766",
+    "id": "01de44767",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "sorry yes interval not repeat",
+    "ts": "1472737800.000768",
+    "id": "01de44768",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<@U0548MM6B> :taco:",
+    "ts": "1472737834.000769",
+    "id": "01de44769",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "yes",
+    "ts": "1472737852.000770",
+    "id": "01de44770",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "lol interval instead of timer! haha",
+    "ts": "1472737862.000771",
+    "id": "01de44771",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": ":coffee: break and thanks <@U0548MM6B> :taco:",
+    "ts": "1472737875.000772",
+    "id": "01de44772",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "yaay tacos",
+    "ts": "1472738084.000773",
+    "id": "01de44773",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U277WVCUT",
+    "text": "<@U277WVCUT|muthuraj> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1472738148.000774",
+    "id": "01de44774",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U279ARADA",
+    "text": "<@U279ARADA|rohithskrishnan> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1472738414.000775",
+    "id": "01de44775",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Yeah that timer thing is poorly named IMO",
+    "ts": "1472739865.000776",
+    "id": "01de44776",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "when you think of timer you think `*.util.Timer`",
+    "edited": {
+      "user": "U08GFT5V5",
+      "ts": "1472739890.000000"
+    },
+    "ts": "1472739882.000777",
+    "id": "01de44777",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1QFDUASV",
+    "text": "Yo, are we allowed to embed google search in our applications?",
+    "ts": "1472742128.000779",
+    "id": "01de44778",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1QFDUASV",
+    "text": "where the helpful peeps at?",
+    "ts": "1472748482.000780",
+    "id": "01de44779",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U27C0KKHU",
+    "text": "<@U27C0KKHU|f-dada> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1472749627.000781",
+    "id": "01de44780",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U277WVCUT",
+    "text": "I’m using data binding (in android studio 2.2 beta 3). If I change an ID of a view or add id to a view, the corresponding field in data binding class is not generated on the fly. I need to rebuild to force it to generate the fields. Anyone experience this?",
+    "ts": "1472749754.000782",
+    "id": "01de44781",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1QFDUASV",
+    "text": "harambe didn't die for this",
+    "ts": "1472749853.000783",
+    "id": "01de44782",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1QFDUASV",
+    "text": "^i'm sorry, please don't boot me",
+    "ts": "1472749869.000784",
+    "id": "01de44783",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U1QFDUASV> Don’t cross post",
+    "ts": "1472749941.000785",
+    "id": "01de44784",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "If no one responds it means that no one knows",
+    "ts": "1472749955.000786",
+    "id": "01de44785",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "It’s good internet etiquette to leave questions alone if you don’t know the answer, rather than pollute the thread with unhelpful comments",
+    "ts": "1472750006.000787",
+    "id": "01de44786",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U277WVCUT> Databinding is done through code generation",
+    "ts": "1472750044.000788",
+    "id": "01de44787",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1QFDUASV",
+    "text": "<@U08GFT5V5> true mate. My apologies",
+    "ts": "1472750045.000789",
+    "id": "01de44788",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "it means that your project isn’t being built automatically",
+    "ts": "1472750058.000790",
+    "id": "01de44789",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "might be studio just acting funny",
+    "ts": "1472750075.000791",
+    "id": "01de44790",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "did you try restarting the IDE?",
+    "ts": "1472750082.000792",
+    "id": "01de44791",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U277WVCUT",
+    "text": "yeah",
+    "ts": "1472750087.000793",
+    "id": "01de44792",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U277WVCUT",
+    "text": "i think the problem is because of beta",
+    "ts": "1472750099.000794",
+    "id": "01de44793",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U277WVCUT",
+    "text": "stable version worked well",
+    "ts": "1472750120.000795",
+    "id": "01de44794",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "I sometimes have that issue with dagger or kapt",
+    "ts": "1472750126.000796",
+    "id": "01de44795",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "i’m not on beta channel though...",
+    "ts": "1472750140.000797",
+    "id": "01de44796",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Might be worth pointing out that’s what you get for using unfinished software :smirk:",
+    "ts": "1472750172.000798",
+    "id": "01de44797",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "#NeverUpdate",
+    "ts": "1472750176.000799",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U277WVCUT"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "01de44798",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U27C6FK36",
+    "text": "<@U27C6FK36|yssimme> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1472750778.000800",
+    "id": "01de44799",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25CTHVN0",
+    "text": "Hey Guys Hope you all are doing well ??\nI have CustomListview in my app With more than one textviews, I want particular listview row item  on click.\nfor that i have created POJO class, AdapterClass as well as  I have also use OnItemClick() \nBut in toast i am getting the last item data.\nAnyone can guide me?",
+    "ts": "1472752225.000801",
+    "id": "01de44800",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U27CQ3NNL",
+    "text": "<@U27CQ3NNL|burakozhan> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1472752736.000802",
+    "id": "01de44801",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U20R4PBHS",
+    "text": "I have horizontal recycler view. And there is a button in each view item and when I click on that it will switch to another view. But the problem is when I am clicking, the view is switching and the recycler view is automatically scrolling back to the first position. How to be there even when the view is switched? ",
+    "ts": "1472753725.000803",
+    "id": "01de44802",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U20R4PBHS",
+    "text": "Any help will be appreciated ",
+    "ts": "1472753735.000804",
+    "id": "01de44803",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R0SREBU",
+    "text": "does anyone have some tips on how to make a TextInputLayout NOT look like this for Jellybean? <http://www.last-child.com/wp-content/uploads/2015/10/android-input-300x89.png>",
+    "attachments": [
+      {
+        "fallback": "300x89px image",
+        "image_url": "http://www.last-child.com/wp-content/uploads/2015/10/android-input-300x89.png",
+        "image_width": 300,
+        "image_height": 89,
+        "image_bytes": 3132,
+        "from_url": "http://www.last-child.com/wp-content/uploads/2015/10/android-input-300x89.png",
+        "id": 1
+      }
+    ],
+    "ts": "1472754211.000805",
+    "id": "01de44804",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "When wiring up analytics for platforms such as Answers, Flurry, MixPanel and Google Analytics, what naming conventions do you use for your Analytics Events? Is there some kind of format that works well across multiple Analytics platforms?",
+    "ts": "1472754332.000807",
+    "id": "01de44805",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U27DXU1CM",
+    "text": "<@U27DXU1CM|barrett.fuhrmann> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1472757453.000808",
+    "id": "01de44806",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U27EPH5C0",
+    "text": "<@U27EPH5C0|dafina> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1472762220.000809",
+    "id": "01de44807",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U27F1PGB0",
+    "text": "<@U27F1PGB0|davidru85> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1472764069.000810",
+    "id": "01de44808",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "<https://sites.google.com/a/android.com/tools/recent/androidstudio22rcisnowavailable|Android Studio 2.2 RC is now available>\nWe've just released <https://sites.google.com/a/android.com/tools/download/studio/builds/2-2-rc|Android Studio 2.2 RC> to the canary channel. If all looks good we'll promote it to the beta channel in a couple of days. For those users who are trying Android Studio 2.2 for the first time. We recommend reviewing our &lt;a...",
+    "username": "Posts of Recent Changes",
+    "icons": {
+      "image_36": "https://a.slack-edge.com/66f9/img/services/rss_36.png",
+      "image_48": "https://a.slack-edge.com/66f9/img/services/rss_48.png",
+      "image_72": "https://a.slack-edge.com/205a/img/services/rss_72.png"
+    },
+    "bot_id": "B062SSUPJ",
+    "attachments": [
+      {
+        "title": "Android Studio 2.2 RC is now available - Android Studio Project Site",
+        "title_link": "https://sites.google.com/a/android.com/tools/recent/androidstudio22rcisnowavailable",
+        "text": "Android tools project information site",
+        "fallback": "Android Studio 2.2 RC is now available - Android Studio Project Site",
+        "from_url": "https://sites.google.com/a/android.com/tools/recent/androidstudio22rcisnowavailable",
+        "thumb_url": "https://sites.google.com/a/android.com/tools/_/rsrc/1460493325829/config/customLogo.gif?revision=1",
+        "thumb_width": 100,
+        "thumb_height": 100,
+        "service_icon": "https://ssl.gstatic.com/sites/p/78e443/system/app/images/apple-touch-icon.png",
+        "service_name": "sites.google.com",
+        "id": 1
+      },
+      {
+        "title": "Android Studio 2.2 RC - Android Studio Project Site",
+        "title_link": "https://sites.google.com/a/android.com/tools/download/studio/builds/2-2-rc",
+        "text": "Android tools project information site",
+        "fallback": "Android Studio 2.2 RC - Android Studio Project Site",
+        "from_url": "https://sites.google.com/a/android.com/tools/download/studio/builds/2-2-rc",
+        "thumb_url": "https://sites.google.com/a/android.com/tools/_/rsrc/1460493325829/config/customLogo.gif?revision=1",
+        "thumb_width": 100,
+        "thumb_height": 100,
+        "service_icon": "https://ssl.gstatic.com/sites/p/78e443/system/app/images/apple-touch-icon.png",
+        "service_name": "sites.google.com",
+        "id": 2
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1472774771.000811",
+    "id": "01de44809",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "RC to canary? shouldn’t RC be you know.. beta?",
+    "ts": "1472775959.000813",
+    "id": "01de44810",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Soon :tm: ",
+    "ts": "1472776373.000814",
+    "id": "01de44811",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U27JMDPBK",
+    "text": "<@U27JMDPBK|mitchryanjusay> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1472796394.000815",
+    "id": "01de44812",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U27K1NCLA",
+    "text": "<@U27K1NCLA|bnybinny> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1472799151.000816",
+    "id": "01de44813",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

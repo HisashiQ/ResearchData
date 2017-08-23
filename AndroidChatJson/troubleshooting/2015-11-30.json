@@ -1,0 +1,820 @@
+[
+  {
+    "user": "U0DC95VCP",
+    "text": "Hi all… so I’m running into a weird QA-generated issue I was wondering if I could get some input on. I have an Activity that is using a ViewPager to host different fragments, and the ActionMode option for showing unique action modes depending on the page you are currently on. That works great, but, if the user then goes into settings and changes the language for the device and then goes back to the app - the actionmode and fragments seem to be disconnected…ie I cannot dismiss the actionmode and create a new one when moving between pages. The only fix is to kill the app and start over.",
+    "ts": "1448903441.000138",
+    "id": "30tr3111",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "I should say the actionmode gets disconnected from the activity…I can no longer control it",
+    "ts": "1448903484.000139",
+    "id": "30tr3112",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "Any thoughts?",
+    "ts": "1448903501.000140",
+    "id": "30tr3113",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Changing language is a configuration change. It goes through the same lifecycle as for example rotation ",
+    "ts": "1448903572.000141",
+    "id": "30tr3114",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "So does it work with rotation? ",
+    "ts": "1448903580.000142",
+    "id": "30tr3115",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "hrm…let me double-check",
+    "ts": "1448903901.000143",
+    "id": "30tr3116",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "It works, but we actually prevent the activity from rebuilding on orientation or screenSize change",
+    "ts": "1448904124.000144",
+    "id": "30tr3117",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "so maybe I should just add “locale” to that list?",
+    "ts": "1448904145.000145",
+    "id": "30tr3118",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "oh but wait, if i did that then the locale changes wouldn’t apply ;?",
+    "ts": "1448904222.000146",
+    "id": "30tr3119",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "so probably the answer is to figure out how to handle it in onConfigurationChanged()",
+    "ts": "1448904246.000147",
+    "id": "30tr3120",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Well, that Manifest.xml configChanges thing is always quickly used as hack, but yes you should properly handle config changes then :) you still might want to try the addition just to make sure this is the actual issue ",
+    "ts": "1448904403.000148",
+    "id": "30tr3121",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "cool…thank you <@U04TK850N>",
+    "ts": "1448904421.000149",
+    "id": "30tr3122",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "np :) ",
+    "ts": "1448904442.000150",
+    "id": "30tr3123",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "One thing I’ve also noticed with this issue is that the Fragments in the ViewPager also become detached from the Activity. In the fragments I do a call to getActivity() to do some stuff, and after a language change this returns null. Any thoughts there?",
+    "ts": "1448904541.000151",
+    "id": "30tr3124",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Same issue, the activity is torn down and built up again just like on rotation. The fragments get detached in that process but if not handled properly they won't magically re-attach",
+    "ts": "1448904679.000152",
+    "id": "30tr3125",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Activity with viewpager and fragments is one of the worst things to handle config changes for :/ ",
+    "ts": "1448904703.000153",
+    "id": "30tr3126",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "yeah, no kidding...",
+    "ts": "1448904729.000154",
+    "id": "30tr3127",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "this has been crazy to try and troubleshoot",
+    "ts": "1448904736.000155",
+    "id": "30tr3128",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Dealing with the same issue at the moment but it only shows when putting the display into standby and turning it on again ",
+    "edited": {
+      "user": "U04TK850N",
+      "ts": "1448904827.000000"
+    },
+    "ts": "1448904784.000156",
+    "id": "30tr3129",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "¯\\_(ツ)_/¯",
+    "ts": "1448904793.000157",
+    "id": "30tr3130",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "oy ve…lol. Yeah I had a few of those to clean up. This is a massive commercial application with so many moving parts.",
+    "ts": "1448904821.000158",
+    "id": "30tr3131",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Same here ",
+    "ts": "1448904840.000160",
+    "id": "30tr3132",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "oddly, adding “locale” to the list of configChanges we will handle on our own does not help the issue. That worries me.",
+    "ts": "1448904918.000161",
+    "id": "30tr3133",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Hmm, hard to say then ",
+    "ts": "1448905002.000162",
+    "id": "30tr3134",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "then again, I am testing on an Android 6.0 device. I noticed the language changes did actually apply to the activity - that would tell me the configuration change happened regardless of my settings. maybe a bug in M?",
+    "edited": {
+      "user": "U0DC95VCP",
+      "ts": "1448905078.000000"
+    },
+    "ts": "1448905072.000163",
+    "id": "30tr3135",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "I’ll try a different device.",
+    "ts": "1448905085.000165",
+    "id": "30tr3136",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "I just want to make sure this is actually the issue before I go re-coding a bunch of stuff.",
+    "ts": "1448905113.000166",
+    "id": "30tr3137",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Maybe someone else has a different idea",
+    "ts": "1448905183.000167",
+    "id": "30tr3138",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "You could log entries to the lifecycle methods to see which get called so you know exactly what happens ",
+    "ts": "1448905205.000168",
+    "id": "30tr3139",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "Yeah I’ll try that as well",
+    "ts": "1448905484.000169",
+    "id": "30tr3140",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "thanks <@U04TK850N>",
+    "ts": "1448905490.000170",
+    "id": "30tr3141",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "Ok, back to the changing language scenario. I was able to work my way around that and all is well again in the application (well, at least it no longer crashes). Now on to the original issue that caused the previous issue to be found: ActionMode won’t clear after a language change. So my ViewPager has four pages — each containing a single Fragment with their own ActionMode settings. I finish actionMode for the current page when a new page is in the process of being selected, and then start ActionMode for the new page.  This all works great, BUT, if you leave the app and change the language on the device and come back, then I can no longer clear ActionMode programmatically. All my code thinks ActionMode is cleared, but on the screen…the contextual menu is still visible. Any ideas?",
+    "ts": "1448921571.000173",
+    "id": "30tr3142",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "the viewpager might be instantiating a new instance of the fragment, but you're changing values on the old instance to which you're holding a reference <@U0DC95VCP>",
+    "ts": "1448923107.000174",
+    "id": "30tr3143",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "er, i think i meant the view of your fragment is getting recreated",
+    "ts": "1448923261.000175",
+    "id": "30tr3144",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "but you might be holding references to stuff in the old view which is no longer visible",
+    "ts": "1448923284.000176",
+    "id": "30tr3145",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i'm not intimately familiar with actionmode but i was having the same problem with viewpager the other day when i was binding views when the fragment is created, but not unbinding them after the view was destroyed",
+    "ts": "1448923749.000177",
+    "id": "30tr3146",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "<@U0546QERR>: Thanks for the response…I’ll dig into the viewpager some more!",
+    "ts": "1448923846.000178",
+    "id": "30tr3147",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "<@U0546QERR>: How did you handle unbinding the view pager from the fragments? I’m curious about implementation…",
+    "ts": "1448925285.000179",
+    "id": "30tr3148",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "well if you bind your views in onCreateView manually, or use ButterKnife.bind() or something, it should be fine",
+    "ts": "1448925318.000180",
+    "id": "30tr3149",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "but I was using kotterknife which works differently and doesn't rebind on each creation of the view",
+    "ts": "1448925336.000181",
+    "id": "30tr3150",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "so in onDestroyView i had to set the references i was holding to different view objects to null",
+    "ts": "1448925382.000182",
+    "id": "30tr3151",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "might not be your exact problem but the effects you're seeing (code triggering but nothing happening in the UI) sound exactly the same",
+    "ts": "1448925427.000183",
+    "id": "30tr3152",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "ok - thanks",
+    "ts": "1448925444.000184",
+    "id": "30tr3153",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "no probs, if you can't figure it out it might help to post a little code around your ActionMode stuff",
+    "ts": "1448925514.000185",
+    "id": "30tr3154",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "sweet. thanks",
+    "ts": "1448925538.000186",
+    "id": "30tr3155",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

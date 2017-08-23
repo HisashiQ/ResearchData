@@ -1,0 +1,572 @@
+[
+  {
+    "user": "U176JJ86L",
+    "subtype": "channel_join",
+    "text": "<@U176JJ86L|distinctlines> has joined the channel",
+    "ts": "1462786796.000383",
+    "id": "09be4641",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U176JJ86L",
+    "text": "Hey guys I am creating a dietary app that displays thousands of foods that you can eat on the diet and cannot eat. I currently have a CSV file that is read and put into an array list which is passed to my adapter, then displayed in recycler view is this efficient way of getting the data? Thank you",
+    "ts": "1462787233.000384",
+    "id": "09be4642",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U176JJ86L",
+    "text": "BTW the data isn't bring modified",
+    "ts": "1462787243.000385",
+    "id": "09be4643",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "I think it will be better if you first put the whole CSV into the DB and then load data from DB with proper limit.",
+    "ts": "1462788127.000386",
+    "id": "09be4644",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "if you load the CSV into Arraylist that means you load the whole 1000's of data into array eventhough you only need to show first 50 so data",
+    "ts": "1462788161.000387",
+    "id": "09be4645",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U176JJ86L",
+    "text": "<@U0XCFE6AH>: doesn't all the data that you wish to pass into the recycler view adapter need to be done when creating it? ",
+    "ts": "1462788844.000388",
+    "id": "09be4646",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "well I think should maintain some logic for paging instead dumping all data",
+    "ts": "1462788921.000389",
+    "id": "09be4647",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "like as you scroll down load more data from db etc",
+    "ts": "1462788936.000390",
+    "id": "09be4648",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U176JJ86L",
+    "text": "Yeah I see what you mean",
+    "ts": "1462788946.000391",
+    "id": "09be4649",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "and you can update the adapter as new data added",
+    "ts": "1462788975.000392",
+    "id": "09be4650",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U176JJ86L",
+    "text": "Is there any specific method from the recycler view adapter that could aid in doing that?",
+    "ts": "1462788984.000393",
+    "id": "09be4651",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U176JJ86L",
+    "text": "Or would I have to create the method/logic myself?",
+    "ts": "1462789001.000394",
+    "id": "09be4652",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "search for endless list with RecyclerView you will have lots of examples",
+    "ts": "1462789233.000395",
+    "id": "09be4653",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "<https://medium.com/@etiennelawlor/pagination-with-recyclerview-1cb7e66a502b#.hb5b42mqx>",
+    "attachments": [
+      {
+        "service_name": "Medium",
+        "title": "Pagination with RecyclerView",
+        "title_link": "https://medium.com/@etiennelawlor/pagination-with-recyclerview-1cb7e66a502b#.hb5b42mqx",
+        "text": "Almost every API we encounter as developers requires you to handle pagination. When querying an API for some resource in…",
+        "fallback": "Medium: Pagination with RecyclerView",
+        "image_url": "https://cdn-images-1.medium.com/max/1200/1*wOuuA81q7TWTYlLeTw-KRg.png",
+        "fields": [
+          {
+            "title": "Reading time",
+            "value": "3 mins",
+            "short": true
+          }
+        ],
+        "ts": 1444949368,
+        "from_url": "https://medium.com/@etiennelawlor/pagination-with-recyclerview-1cb7e66a502b#.hb5b42mqx",
+        "image_width": 139,
+        "image_height": 250,
+        "image_bytes": 90992,
+        "id": 1
+      }
+    ],
+    "ts": "1462789276.000396",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U176JJ86L"
+        ],
+        "count": 2
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "09be4654",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U176JJ86L",
+    "text": "<@U0XCFE6AH>: thanks a lot for the help will read up on it. Thanks again",
+    "ts": "1462789372.000398",
+    "id": "09be4655",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "<@U0N7D6F50>:  give me a taco",
+    "ts": "1462789466.000399",
+    "id": "09be4656",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N7D6F50",
+    "text": "Sounds like <@U0XCFE6AH> is hungry. Upvotes = taco.",
+    "bot_id": "B0N7DNUT0",
+    "ts": "1462789467.000400",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "09be4657",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N7D6F50",
+    "text": "<@U0XCFE6AH>: Sorry, no taco for you!",
+    "ts": "1462789528.000401",
+    "id": "09be4658",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U176JJ86L",
+    "text": ":taco: ",
+    "ts": "1462789541.000402",
+    "id": "09be4659",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U176JJ86L",
+    "text": "<@U0XCFE6AH>: :taco: ",
+    "ts": "1462789554.000403",
+    "id": "09be4660",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "hahah thanks.",
+    "ts": "1462789629.000404",
+    "id": "09be4661",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LQTK6G2",
+    "inviter": "U0XCFE6AH",
+    "subtype": "channel_join",
+    "text": "<@U0LQTK6G2|heytaco> has joined the channel",
+    "ts": "1462791555.000405",
+    "id": "09be4662",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U17730SG6",
+    "subtype": "channel_join",
+    "text": "<@U17730SG6|veradiego31> has joined the channel",
+    "ts": "1462794082.000406",
+    "id": "09be4663",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U178FMZ96",
+    "subtype": "channel_join",
+    "text": "<@U178FMZ96|brzi_subasa> has joined the channel",
+    "ts": "1462803289.000407",
+    "id": "09be4664",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U17ABNLDQ",
+    "subtype": "channel_join",
+    "text": "<@U17ABNLDQ|moggytech> has joined the channel",
+    "ts": "1462811429.000408",
+    "id": "09be4665",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16QHCX2N",
+    "subtype": "channel_leave",
+    "text": "<@U16QHCX2N|androidexpert> has left the channel",
+    "ts": "1462827529.000409",
+    "id": "09be4666",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U17FADPNE",
+    "subtype": "channel_join",
+    "text": "<@U17FADPNE|jordanarseno> has joined the channel",
+    "ts": "1462850706.000410",
+    "id": "09be4667",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U17FE94MU",
+    "subtype": "channel_join",
+    "text": "<@U17FE94MU|sonbn.225> has joined the channel",
+    "ts": "1462861524.000411",
+    "id": "09be4668",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

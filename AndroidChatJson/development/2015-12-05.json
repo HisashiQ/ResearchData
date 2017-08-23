@@ -1,0 +1,236 @@
+[
+  {
+    "user": "U0CLPJW7N",
+    "text": "Looking for best practices on storing an account password in AccountManager.\nHow do we encrypt this before storing in the first place? Is it better to have our server send us back an encrypted password? Or is it ok to encrypt client side before storing in AccountManager?",
+    "ts": "1449325917.002066",
+    "id": "05de17735",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CLPJW7N",
+    "text": "Any insights much appreciated",
+    "ts": "1449325930.002067",
+    "id": "05de17736",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U0CLPJW7N>: why do you need a password stored is the first question you need to ask yourself.",
+    "ts": "1449326217.002068",
+    "id": "05de17737",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "If you can let the user login and get a token from the server that you can use to login in the future, you should do that instead.",
+    "ts": "1449326237.002069",
+    "id": "05de17738",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "Yes, under no circumstance should you try to save a password on the client in a way that can be reversed. Use tokens that expire.",
+    "ts": "1449326425.002070",
+    "id": "05de17739",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "Aka use oauth",
+    "ts": "1449326435.002071",
+    "id": "05de17740",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CLPJW7N",
+    "text": "ok so reauthentication once the token has expired would always require the user to login again then?",
+    "ts": "1449327943.002072",
+    "id": "05de17741",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CLPJW7N",
+    "text": "any idea how Google manages this (since I don't recall having to login other than the first time we add a google account)?",
+    "ts": "1449328036.002073",
+    "id": "05de17742",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U0CLPJW7N>: token expiry is up to the implementation, mostly",
+    "ts": "1449328401.002074",
+    "id": "05de17743",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CLPJW7N",
+    "text": "do you mean Google gives back a token that never expires?",
+    "ts": "1449328480.002075",
+    "id": "05de17744",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "I don't know",
+    "ts": "1449328647.002076",
+    "id": "05de17745",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054AD9CZ",
+    "text": "<@U0546QERR>: the addQueryParameter method is not available in the Request newBuilder, but it is in the HttpUrl newBuilder",
+    "ts": "1449330262.002077",
+    "id": "05de17746",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054AD9CZ",
+    "text": "Turns out it wasn't the Interceptor not working, but Retrofit ignoring part of the url",
+    "ts": "1449331209.002078",
+    "id": "05de17747",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

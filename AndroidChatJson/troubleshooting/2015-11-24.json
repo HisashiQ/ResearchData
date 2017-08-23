@@ -1,0 +1,203 @@
+[
+  {
+    "user": "U08KKN48P",
+    "text": "Hey Guys. I wanted to build my project with proguard enabled but i get the following error: trouble processing `javax/xml/namespace/QName.class` when performing the task `transformClassesWithDexForPlaystoreRelease`… any solutions on this. i am using the gradle-plugin 1.5.0",
+    "ts": "1448356732.000071",
+    "id": "24tr3045",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "try running gradle with `-s` to get a stacktrace of where exactly it fails",
+    "ts": "1448357001.000072",
+    "id": "24tr3046",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KKN48P",
+    "text": "'10:43:55.831 [ERROR] [com.android.build.gradle.internal.ApplicationTaskManager]\ntrouble processing \"javax/xml/namespace/QName.class\":\n\nIll-advised or mistaken usage of a core class (java.* or javax.*)\nwhen not building a core library.'",
+    "ts": "1448358570.000073",
+    "id": "24tr3047",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KKN48P",
+    "text": "no idea what this means… :disappointed:",
+    "ts": "1448358615.000074",
+    "id": "24tr3048",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "You have somehow included a core library jar in your build",
+    "ts": "1448359125.000075",
+    "id": "24tr3049",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Check your module settings to see if the SDK is set correctly and check your dependencies",
+    "ts": "1448359150.000076",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U08KKN48P"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "24tr3050",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F668B45",
+    "subtype": "channel_join",
+    "text": "<@U0F668B45|antoine.genevriez> has joined the channel",
+    "ts": "1448360281.000077",
+    "id": "24tr3051",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KKN48P",
+    "text": "thanks it was simple xml. i had to exclude a few things",
+    "ts": "1448361939.000078",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U04TK850N"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "24tr3052",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0EG5RUBY",
+    "subtype": "channel_join",
+    "text": "<@U0EG5RUBY|artemiy> has joined the channel",
+    "ts": "1448384889.000079",
+    "id": "24tr3053",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F7V9DPD",
+    "subtype": "channel_join",
+    "text": "<@U0F7V9DPD|equinox> has joined the channel",
+    "ts": "1448404262.000080",
+    "id": "24tr3054",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

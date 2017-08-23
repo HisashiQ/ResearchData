@@ -1,0 +1,334 @@
+[
+  {
+    "user": "U09T8SFG8",
+    "text": "Is there any way to create a unit test run configuration for running all tests regardless of build variant in Android Studio? I am getting tired of running the `test` gradle task",
+    "ts": "1462534603.000080",
+    "id": "06te1138",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U10J3LB6D",
+    "text": "Have you tried test suites, <http://developer.android.com/reference/junit/framework/TestSuite.html>",
+    "ts": "1462535026.000081",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "06te1139",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I don't think test suites are for that purpose, they are more to group tests together but not from different variants. After some tinkering it seems that a JUnit Run Configuration is bound to the currently selected variant no matter what. So it is necessary to run the gradle task `test --rerun-tasks`",
+    "edited": {
+      "user": "U09T8SFG8",
+      "ts": "1462536400.000000"
+    },
+    "ts": "1462536385.000082",
+    "id": "06te1140",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U10J3LB6D",
+    "text": "different variants == different app flavor ? <@U09T8SFG8>",
+    "edited": {
+      "user": "U10J3LB6D",
+      "ts": "1462543273.000000"
+    },
+    "ts": "1462543261.000084",
+    "id": "06te1141",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "yeah, for now I have just a debug and a release variant. `./gradlew test` will basically do `./ gradlew testDebug testRelease` and that is what I want but the issue is that the output is awful. Making a JUnit Run Configuration makes everything pretty and clear on what failed but it depends on which variant is currently selected",
+    "edited": {
+      "user": "U09T8SFG8",
+      "ts": "1462543424.000000"
+    },
+    "ts": "1462543401.000086",
+    "id": "06te1142",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U10J3LB6D",
+    "text": "I don’t have any idea now :disappointed:, if found a way, kindly share it here.",
+    "ts": "1462543555.000088",
+    "id": "06te1143",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "An idea that I have is to create two separate JUnit Run Configurations and make one depend to the other. I will try to see if something like that could work later",
+    "ts": "1462543643.000089",
+    "id": "06te1144",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "Is there any cleaner way to test that a couple of class' public methods were called after invoking a certain public method? I basically want to make sure that in the class under test a couple of its public methods were definitely invoked. Right now I do it like so",
+    "edited": {
+      "user": "U09T8SFG8",
+      "ts": "1462546759.000000"
+    },
+    "ts": "1462546490.000090",
+    "id": "06te1145",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U09T8SFG8|aki> uploaded a file: <https://androidchat.slack.com/files/aki/F16P3JUEA/Untitled.java|Untitled>",
+    "file": {
+      "id": "F16P3JUEA",
+      "created": 1462546508,
+      "timestamp": 1462546508,
+      "name": "Untitled.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U09T8SFG8",
+      "editable": true,
+      "size": 727,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F16P3JUEA/Untitled.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F16P3JUEA/download/Untitled.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/aki/F16P3JUEA/Untitled.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F16P3JUEA-3ec06f4388",
+      "edit_link": "https://androidchat.slack.com/files/aki/F16P3JUEA/Untitled.java/edit",
+      "preview": "@Test\r\npublic void insertOrUpdate_withUnSuccessfulInsert_updates() {\r\n\tdatabaseFacade = spy(databaseFacade);\r\n\twhen(databaseFacade.insertOrThrow(tableName, contentValues)).thenThrow(SQLiteException.class);\r\n\tfinal String columnId = \"1\";\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-meta\">@Test</span></pre></div>\n<div><pre><span class=\"cm-keyword\">public</span> <span class=\"cm-variable-3\">void</span> <span class=\"cm-def\">insertOrUpdate_withUnSuccessfulInsert_updates</span>() {</pre></div>\n<div><pre>\t<span class=\"cm-variable\">databaseFacade</span> <span class=\"cm-operator\">=</span> <span class=\"cm-variable\">spy</span>(<span class=\"cm-variable\">databaseFacade</span>);</pre></div>\n<div><pre>\t<span class=\"cm-variable\">when</span>(<span class=\"cm-variable\">databaseFacade</span>.<span class=\"cm-variable\">insertOrThrow</span>(<span class=\"cm-variable\">tableName</span>, <span class=\"cm-variable\">contentValues</span>)).<span class=\"cm-variable\">thenThrow</span>(<span class=\"cm-variable\">SQLiteException</span>.<span class=\"cm-keyword\">class</span>);</pre></div>\n<div><pre>\t<span class=\"cm-keyword\">final</span> <span class=\"cm-variable-3\">String</span> <span class=\"cm-variable\">columnId</span> <span class=\"cm-operator\">=</span> <span class=\"cm-string\">&quot;1&quot;</span>;</pre></div>\n</div>\n</div>\n",
+      "lines": 14,
+      "lines_more": 9,
+      "preview_is_truncated": null,
+      "channels": [
+        "C0D6DUW8L"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U09T8SFG8",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U09T8SFG8|aki>",
+    "bot_id": null,
+    "ts": "1462546510.000091",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "06te1146",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "`databaseFacade` is the class under test that is why I `spy` it",
+    "ts": "1462546548.000092",
+    "id": "06te1147",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "after calling `databaseFacade.insertOrUpdate()` the two methods that must be called are `databaseFacade.insertOrThrow()` and `databaseFacade.updateOrThrow()`",
+    "edited": {
+      "user": "U09T8SFG8",
+      "ts": "1462546618.000000"
+    },
+    "ts": "1462546610.000093",
+    "id": "06te1148",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "The boilerplate that bothers me is that I have to reset the spy and that I also have to add `databaseFacade.insertOrUpdate()` in my verfications",
+    "ts": "1462546667.000095",
+    "id": "06te1149",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16QYKG59",
+    "subtype": "channel_join",
+    "text": "<@U16QYKG59|mpa> has joined the channel",
+    "ts": "1462565263.000098",
+    "id": "06te1150",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

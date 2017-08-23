@@ -1,0 +1,20 @@
+[
+  {
+    "user": "U0Q5FEWTH",
+    "text": "i’ve got a weird one here. be sure to dm me or mention me if you know of a better way to do this. here’s the setup, followed by my solution.\n1) i’m using Firebase. I know there’s some opinion against using this, but for me, right now, it’s FOL.\n2) when i use `getValue(class)` it works for all my models except it throws the `No setter/field for UID` warning when i’m trying to parse a map of objects.\n3) my data class extends HashMap&lt;String, MySingleObject&gt;\n\n*Data in Firebase*\n```\n{\n  path: {\n    UID1 : {\n      prop1: “data”\n    },\n    UID2: {\n      prop1: “data”\n    }\n  }\n}\n```\n\nPath should be parsed properly into:\n```\ndata class MySingleObject(var prop1: String = “”)\n\nclass MySingleObjectMap: HashMap&lt;String, MySingleObject&gt;\n// here String represents the key or UID\n```\n\nTo get rid of the thrown warning and get the data populated I’ve had to do this, but i still have to cast the field using `as MySingleObjectMap` though I realize I could expose the backer and use `@Exclude` on the getter/setter to get casting.\n```\nprivate var _path: MySingleObjectMap = MySingleObjectMap()\nvar path: Map&lt;String, MySingleObject&gt;\n    set(value) = _path.putAll(value)\n    get() = _path\n```",
+    "ts": "1472442619.000002",
+    "id": "28ko2315",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

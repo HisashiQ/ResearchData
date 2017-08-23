@@ -1,0 +1,1215 @@
+[
+  {
+    "user": "U1LE6QAE7",
+    "subtype": "channel_join",
+    "text": "<@U1LE6QAE7|almogbaku> has joined the channel",
+    "ts": "1467015373.000777",
+    "id": "27be6147",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LFM9N94",
+    "subtype": "channel_join",
+    "text": "<@U1LFM9N94|alan_u16> has joined the channel",
+    "ts": "1467016997.000778",
+    "id": "27be6148",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LH83Z8X",
+    "subtype": "channel_join",
+    "text": "<@U1LH83Z8X|thearkh> has joined the channel",
+    "ts": "1467028942.000779",
+    "id": "27be6149",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "subtype": "channel_join",
+    "text": "<@U1LJG0Y03|contract16> has joined the channel",
+    "ts": "1467044018.000780",
+    "id": "27be6150",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJRDN0K",
+    "subtype": "channel_join",
+    "text": "<@U1LJRDN0K|victorldavila> has joined the channel",
+    "ts": "1467045481.000781",
+    "id": "27be6151",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLGB8AE",
+    "text": "Hi, I’m really new to Android, and I’m currently trying to implement a settings page. I’ve been reading documentation, but it still is pretty confusing because I still don’t really understand Android event listeners that well. I was wondering if anyone can help me with my code and figure out why my Settings aren’t working.",
+    "ts": "1467049468.000782",
+    "id": "27be6152",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLGB8AE",
+    "text": "``` public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {\n\n\n        String summary = \"\";\n\n        boolean checked = false;\n        if (key.equals(KEY_PREF_DEMO_MODE)) {\n            demoModeChanged = true;\n            if (sharedPreferences.getBoolean(KEY_PREF_DEMO_MODE, true)) {\n                publisherIdPref.setText(getString(R.string.real_publisher_id));\n            } else {\n                publisherIdPref.setText(getString(R.string.default_publisher_id));\n            }\n\n        } else if (key.equals(getString(R.string.publisher_id))) {\n            summary = sharedPreferences.getString(key, getString(R.string.default_publisher_id));\n            bindPreferenceSummaryToValue(findPreference(getString(R.string.publisher_id)));\n        } else if (key.equals(getString(R.string.preview_id))) {\n            summary = sharedPreferences.getString(key, getString(R.string.default_preview_id));\n            bindPreferenceSummaryToValue(findPreference(getString(R.string.preview_id)));\n        } else if (key.equals(getString(R.string.content_name))) {\n            summary = sharedPreferences.getString(key, getString(R.string.default_content_name));\n            bindPreferenceSummaryToValue(findPreference(getString(R.string.content_name)));\n        } else if (key.equals(getString(R.string.content_name_toggle))) {\n            checked = sharedPreferences.getBoolean(key, false);\n            hideOrShowContentName(checked);\n        } else if (key.equals(getString(R.string.zip_code))) {\n            summary = sharedPreferences.getString(key, getString(R.string.default_zip_code));\n        } else if (key.equals(getString(R.string.zip_code_toggle))) {\n            checked = sharedPreferences.getBoolean(key, false);\n            hideOrShowZipCode(checked);\n        }\n    } ```",
+    "ts": "1467049518.000785",
+    "id": "27be6153",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLGB8AE",
+    "text": "this is my current onSharedPreferenceChanged code",
+    "ts": "1467049532.000786",
+    "id": "27be6154",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLGB8AE",
+    "text": "but the first part, the switch KEY_PREF_DEMO_MODE, is not even working, and none of the other ones are working either in terms of showing up correctly on the screen after I change it (the summary)",
+    "ts": "1467049570.000787",
+    "id": "27be6155",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLGB8AE",
+    "text": "it probably has something to do with the onSharedPreferenceChangeListener, but I have no idea where to define it / use it",
+    "ts": "1467049779.000788",
+    "id": "27be6156",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LMJC7DG",
+    "subtype": "channel_join",
+    "text": "<@U1LMJC7DG|qushay> has joined the channel",
+    "ts": "1467051004.000789",
+    "id": "27be6157",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0BQ32NP5",
+    "text": "<@U1HLGB8AE>, have you set breakpoints in Android Studio, run your app in Debug mode, and step through your code to see what is or is not happening?  Also, this StackOveflow question may be of help: <http://stackoverflow.com/questions/4997907/how-to-detect-if-changes-were-made-in-the-preferences>",
+    "attachments": [
+      {
+        "title": "How to detect if changes were made in the preferences?",
+        "title_link": "http://stackoverflow.com/questions/4997907/how-to-detect-if-changes-were-made-in-the-preferences",
+        "text": "I have a class that extends PreferenceActivity and shows the preference screen of my app. Is it possible to check if any changes were made to the preferences?This helps...<http://developer.andro>...",
+        "fallback": "How to detect if changes were made in the preferences?",
+        "thumb_url": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/questions/4997907/how-to-detect-if-changes-were-made-in-the-preferences",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "service_icon": "http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d",
+        "service_name": "stackoverflow.com",
+        "id": 1
+      }
+    ],
+    "edited": {
+      "user": "U0BQ32NP5",
+      "ts": "1467055374.000000"
+    },
+    "ts": "1467055342.000792",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "27be6158",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LPA00G1",
+    "subtype": "channel_join",
+    "text": "<@U1LPA00G1|feliperrm> has joined the channel",
+    "ts": "1467061679.000795",
+    "id": "27be6159",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "Got a question about loading images retrieve from the server quickly. I’m currently using Glide library to load my images from the server into the imageview. The speed is reasonable, however, I notice there are certain apps that load/display images really quickly, and many of it, almost instantaneous (ex. instagram). I know the question is rather vague, but just curious if any of you have tried something or have tips that speeds up the loading/display of image. Thanks!",
+    "edited": {
+      "user": "U0LETFK18",
+      "ts": "1467085814.000000"
+    },
+    "ts": "1467084948.000796",
+    "id": "27be6160",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "server speed, caching, reducing the size of the images on your server, and webp compression perhaps?",
+    "ts": "1467086121.000798",
+    "id": "27be6161",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "<@U054A24ET>: caching will only help for subsequent loading. When you mentioned about `reducing the size of the images on your server`, how do you go about that? For instance, the image is 1000px x 1000px, just resize it to 100px x 100 px ?",
+    "ts": "1467088106.000799",
+    "id": "27be6162",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "what i had my backend guy do was to give me 3 sizes for each image: small medium and large",
+    "ts": "1467088169.000800",
+    "id": "27be6163",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL9UB7B",
+    "text": "<@U0LETFK18>: prefetching is a good way to do it, if you can predict what they want",
+    "ts": "1467088179.000801",
+    "id": "27be6164",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "depending on the device that the app is installed on, request the appropriate size",
+    "ts": "1467088186.000802",
+    "id": "27be6165",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "<@U054A24ET>: Currently, I’m doing that as well, having small medium and large",
+    "edited": {
+      "user": "U0LETFK18",
+      "ts": "1467088229.000000"
+    },
+    "ts": "1467088216.000803",
+    "id": "27be6166",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL9UB7B",
+    "text": "i've also seen apps do lower res version so it populates quickly and replaces them with higher res",
+    "ts": "1467088217.000804",
+    "id": "27be6167",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "yea i think glide has functionality for loading a low res image first",
+    "ts": "1467088233.000806",
+    "id": "27be6168",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "using callback? upon success load the higher res?",
+    "edited": {
+      "user": "U0LETFK18",
+      "ts": "1467088276.000000"
+    },
+    "ts": "1467088268.000807",
+    "id": "27be6169",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LRL7HF1",
+    "subtype": "channel_join",
+    "text": "<@U1LRL7HF1|rcunning> has joined the channel",
+    "ts": "1467088332.000809",
+    "id": "27be6170",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL9UB7B",
+    "text": "i'm not sure on exact implementation details cuz i never used it, but that's one way.",
+    "ts": "1467088336.000810",
+    "id": "27be6171",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL9UB7B",
+    "text": "you have to be careful with that method tho, because it can burn a lot of user data",
+    "ts": "1467088355.000811",
+    "id": "27be6172",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "<https://futurestud.io/blog/glide-thumbnails>",
+    "ts": "1467088397.000812",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U1HL9UB7B",
+          "U10J3LB6D"
+        ],
+        "count": 3
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "27be6173",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL9UB7B",
+    "text": "if you can make educated guesses about which pictures the user is going to want/need, prefetching them in the background while on wifi - even if the app isn't open - can also be a good option",
+    "ts": "1467088405.000813",
+    "id": "27be6174",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "<@U054A24ET>: ya, looked into that. Pretty neat.",
+    "ts": "1467088455.000814",
+    "id": "27be6175",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL9UB7B",
+    "text": "first sentence is very important tho",
+    "ts": "1467088466.000815",
+    "id": "27be6176",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL9UB7B",
+    "text": "&gt; Before you go on to optimize with thumbnails, make sure you understood and exhausted all options for caching and request priorities.",
+    "ts": "1467088474.000816",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U0LETFK18"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "27be6177",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "<@U1HL9UB7B>: Unfortunately, I don’t think i can guess. Since the part where I’m trying to load the images fast is when user perform a search",
+    "ts": "1467088497.000817",
+    "id": "27be6178",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "Looking at instagram, the images load really really quickly upon search",
+    "ts": "1467088512.000818",
+    "id": "27be6179",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "i think most of that is the server and the user's connection quality",
+    "ts": "1467088547.000819",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U0LETFK18",
+          "U1HL9UB7B"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "27be6180",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL9UB7B",
+    "text": "that's usually a big part of it",
+    "ts": "1467088557.000820",
+    "id": "27be6181",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL9UB7B",
+    "text": "do you actually have NFRs for this?",
+    "ts": "1467088586.000821",
+    "id": "27be6182",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "nope, just loading the image upon search",
+    "ts": "1467088631.000822",
+    "id": "27be6183",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL9UB7B",
+    "text": "you know what NFRs are right?",
+    "ts": "1467088664.000823",
+    "id": "27be6184",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL9UB7B",
+    "text": "i'm just making sure we are on the same page",
+    "ts": "1467088687.000824",
+    "id": "27be6185",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL9UB7B",
+    "text": "if you don't actually have an NFR for it, i would postpone optimizations until they are a problem or you have an NFR",
+    "ts": "1467088708.000825",
+    "id": "27be6186",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "sorry, just to be on the same page, what’s your meaning for NFR?",
+    "edited": {
+      "user": "U0LETFK18",
+      "ts": "1467088775.000000"
+    },
+    "ts": "1467088767.000826",
+    "id": "27be6187",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL9UB7B",
+    "text": "non-functional requirement",
+    "ts": "1467088792.000828",
+    "id": "27be6188",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "ok then we’re on the same page",
+    "ts": "1467088800.000829",
+    "id": "27be6189",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "=]",
+    "ts": "1467088801.000830",
+    "id": "27be6190",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL9UB7B",
+    "text": "good",
+    "ts": "1467088804.000831",
+    "id": "27be6191",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL9UB7B",
+    "text": "if you don't have a specific requirement to make it load something in a specific number of milliseconds or seconds, just put it off for now",
+    "ts": "1467088834.000832",
+    "id": "27be6192",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL9UB7B",
+    "text": "unless you know it's a problem, it's premature optimization",
+    "ts": "1467088847.000833",
+    "id": "27be6193",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "nah, it’s not really a requirement. Just looking at other apps and comparing, and wondered how it’s done, or anything that I’m not",
+    "ts": "1467088914.000834",
+    "id": "27be6194",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": ":smile:",
+    "ts": "1467088922.000835",
+    "id": "27be6195",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL9UB7B",
+    "text": ":slightly_smiling_face:",
+    "ts": "1467088942.000836",
+    "id": "27be6196",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL9UB7B",
+    "text": "my biggest rule of thumb is \"order of precedence: make it work, make it pretty, make it fast\"",
+    "ts": "1467088979.000837",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U0LETFK18"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "27be6197",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "Agree with that. It’s working fine, and working as it should, just it’ll be nice if it’s super fast. Weeee~",
+    "ts": "1467089057.000838",
+    "id": "27be6198",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL9UB7B",
+    "text": "did you ever watch reto meier's making apps magic talks from google i/o?",
+    "ts": "1467089123.000839",
+    "id": "27be6199",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "nope",
+    "ts": "1467089320.000840",
+    "id": "27be6200",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "will probably check it out. Thanks!",
+    "ts": "1467089352.000841",
+    "id": "27be6201",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL9UB7B",
+    "text": "it's a couple years old, but it's pretty good",
+    "ts": "1467089463.000842",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U0LETFK18"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "27be6202",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL9UB7B",
+    "text": "<https://www.youtube.com/watch?v=GcNNx2zdXN4>",
+    "attachments": [
+      {
+        "service_name": "YouTube",
+        "service_url": "https://www.youtube.com/",
+        "title": "Google I/O 2013 - Android Protips 3: Making Apps Work Like Magic",
+        "title_link": "https://www.youtube.com/watch?v=GcNNx2zdXN4",
+        "author_name": "Google Developers",
+        "author_link": "https://www.youtube.com/user/GoogleDevelopers",
+        "thumb_url": "https://i.ytimg.com/vi/GcNNx2zdXN4/hqdefault.jpg",
+        "thumb_width": 480,
+        "thumb_height": 360,
+        "fallback": "YouTube Video: Google I/O 2013 - Android Protips 3: Making Apps Work Like Magic",
+        "video_html": "<iframe width=\"400\" height=\"225\" src=\"https://www.youtube.com/embed/GcNNx2zdXN4?feature=oembed&autoplay=1&iv_load_policy=3\" frameborder=\"0\" allowfullscreen></iframe>",
+        "video_html_width": 400,
+        "video_html_height": 225,
+        "from_url": "https://www.youtube.com/watch?v=GcNNx2zdXN4",
+        "service_icon": "https://a.slack-edge.com/2089/img/unfurl_icons/youtube.png",
+        "id": 1
+      }
+    ],
+    "ts": "1467089475.000843",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U054A24ET"
+        ],
+        "count": 2
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "27be6203",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "saw him in the other android videos, but not this. Thanks!",
+    "ts": "1467089501.000845",
+    "id": "27be6204",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL9UB7B",
+    "text": "np. good luck",
+    "ts": "1467089512.000846",
+    "id": "27be6205",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

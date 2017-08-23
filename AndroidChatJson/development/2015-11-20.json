@@ -1,0 +1,1524 @@
+[
+  {
+    "user": "U0F06LDC7",
+    "subtype": "channel_join",
+    "text": "<@U0F06LDC7|ruwinmike> has joined the channel",
+    "ts": "1448023806.001019",
+    "id": "20de16789",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "So I need to put about 2MB of organized text data into my app. What's the best practice to do that? I'm thinking about creating SQLite database on PC, put it into \"assets\" folder and then just read it on the device, maybe also copy it into local SQLite storage on the first launch of app. Your thoughts?",
+    "ts": "1448026260.001020",
+    "id": "20de16790",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "one of our apps uses this approach as well",
+    "ts": "1448026389.001021",
+    "id": "20de16791",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "we parse some MB of CSV on first start",
+    "ts": "1448026428.001022",
+    "id": "20de16792",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "<@U053PPGDC>: do you copy it into local SQLite or just read it from the \"assets\"?",
+    "ts": "1448026442.001023",
+    "id": "20de16793",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I think it’s just in the assets",
+    "ts": "1448026475.001024",
+    "id": "20de16794",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "ok, thanks!",
+    "ts": "1448026880.001025",
+    "id": "20de16795",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I can look at the codez if you wish",
+    "ts": "1448027077.001026",
+    "id": "20de16796",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "It's not necessary, I think I'll go with this solution",
+    "ts": "1448027260.001027",
+    "id": "20de16797",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F06EX8D",
+    "subtype": "channel_join",
+    "text": "<@U0F06EX8D|slow_ninja> has joined the channel",
+    "ts": "1448028353.001028",
+    "id": "20de16798",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U0830HE7P>: you put the database filled up with your data in the assets folder and then you use SqliteAssetHelper to automatically copy it to the phone's correct db path. <https://github.com/jgilfelt/android-sqlite-asset-helper>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "jgilfelt/android-sqlite-asset-helper",
+        "title_link": "https://github.com/jgilfelt/android-sqlite-asset-helper",
+        "text": "android-sqlite-asset-helper - An Android helper class to manage database creation and version management using an application's raw asset files",
+        "fallback": "GitHub: jgilfelt/android-sqlite-asset-helper",
+        "thumb_url": "https://avatars3.githubusercontent.com/u/175697?v=3&s=400",
+        "from_url": "https://github.com/jgilfelt/android-sqlite-asset-helper",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1448028516.001029",
+    "id": "20de16799",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I've done this in two apps thus far and it works fine, it just feels dirty to do",
+    "ts": "1448028533.001031",
+    "id": "20de16800",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "<@U09T8SFG8> thanks, it seems exactly what I need",
+    "ts": "1448030189.001032",
+    "id": "20de16801",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "Anyone knows how to bring a ProgressDialog in front of a DialogFragment?",
+    "ts": "1448031285.001033",
+    "id": "20de16802",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8P42SC",
+    "text": "sounds ugly :upside_down_face:",
+    "ts": "1448031520.001034",
+    "id": "20de16803",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "wtf are you doing <@U0548MM6B>",
+    "ts": "1448031538.001035",
+    "id": "20de16804",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "do you work for samsung or facebook ?",
+    "ts": "1448031546.001036",
+    "id": "20de16805",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "don’t ask dude",
+    "ts": "1448031558.001037",
+    "id": "20de16806",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "just… don't",
+    "ts": "1448031561.001038",
+    "id": "20de16807",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": ":confused:",
+    "ts": "1448031563.001039",
+    "id": "20de16808",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "I’m on the edge of my nerves with this other guy",
+    "ts": "1448031568.001040",
+    "id": "20de16809",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0EQ6UWUQ",
+    "text": "he'd have to kill you if he told you",
+    "ts": "1448031572.001041",
+    "id": "20de16810",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "haha",
+    "ts": "1448031574.001042",
+    "id": "20de16811",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "like literally might smash a beer bottle over his head",
+    "ts": "1448031578.001043",
+    "id": "20de16812",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": ":heart: peace :peace_symbol:",
+    "ts": "1448031590.001044",
+    "id": "20de16813",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8P42SC",
+    "text": "peace and dialogfragments :relaxed:",
+    "ts": "1448031605.001045",
+    "id": "20de16814",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0EQ6UWUQ",
+    "text": "lmao",
+    "ts": "1448031610.001046",
+    "id": "20de16815",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "and progressdialog on the top of that",
+    "ts": "1448031617.001047",
+    "id": "20de16816",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "yo, dawg, I herd you like dialogs, so I put a dialog in your dialog",
+    "ts": "1448031625.001048",
+    "reactions": [
+      {
+        "name": "joy",
+        "users": [
+          "U051G3BC3",
+          "U0548MM6B"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "20de16817",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "Whats the other guy's name.  I know a guy with a particular set of skills ...",
+    "ts": "1448031635.001049",
+    "reactions": [
+      {
+        "name": "heart",
+        "users": [
+          "U0548MM6B"
+        ],
+        "count": 1
+      },
+      {
+        "name": "cop",
+        "users": [
+          "U051G3BC3"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "20de16818",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0EQ6UWUQ",
+    "text": "must be a very communicative person",
+    "ts": "1448031640.001050",
+    "id": "20de16819",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": ":joy:",
+    "ts": "1448031642.001051",
+    "id": "20de16820",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "/giphy liam neeson",
+    "attachments": [
+      {
+        "fallback": "giphy: <http://giphy.com/gifs/lol-throwback-liam-neeson-3k09RuvtYq6Aw>",
+        "image_url": "http://media.giphy.com/media/3k09RuvtYq6Aw/giphy-tumblr.gif",
+        "image_width": 250,
+        "image_height": 164,
+        "image_bytes": 792438,
+        "title": "liam neeson",
+        "id": 1,
+        "title_link": "http://giphy.com/gifs/lol-throwback-liam-neeson-3k09RuvtYq6Aw"
+      }
+    ],
+    "ts": "1448031676.001052",
+    "id": "20de16821",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "nice giphy",
+    "ts": "1448031680.001053",
+    "id": "20de16822",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "...",
+    "ts": "1448031682.001054",
+    "id": "20de16823",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "very nice, it takes skill to fail that one",
+    "ts": "1448031689.001055",
+    "id": "20de16824",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0EQ6UWUQ",
+    "text": "thats not the assassin you wanna hire :smile:",
+    "edited": {
+      "user": "U0EQ6UWUQ",
+      "ts": "1448031708.000000"
+    },
+    "ts": "1448031696.001056",
+    "id": "20de16825",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "dude is using a fucking DialogHelper.showDialog(context, int stringId);\nhe passes that stringId to a ProjectDialogFragment which then enters a giant switch in like a 5000 line class",
+    "ts": "1448031714.001058",
+    "id": "20de16826",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "and using that string Id displays a dialog",
+    "ts": "1448031722.001059",
+    "id": "20de16827",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "and I’m like",
+    "ts": "1448031726.001060",
+    "id": "20de16828",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "¯\\_(ツ)_/¯",
+    "ts": "1448031730.001061",
+    "id": "20de16829",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "&gt;Giphy could not match jackie chan wtf",
+    "ts": "1448031736.001062",
+    "id": "20de16830",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<http://www.quickmeme.com/img/f7/f71beaed2b2a0d18a081fe28448c68ec43cc052c8c1539addfdaeede78e59800.jpg>",
+    "attachments": [
+      {
+        "fallback": "625x396px image",
+        "image_url": "http://www.quickmeme.com/img/f7/f71beaed2b2a0d18a081fe28448c68ec43cc052c8c1539addfdaeede78e59800.jpg",
+        "image_width": 625,
+        "image_height": 396,
+        "image_bytes": 43486,
+        "from_url": "http://www.quickmeme.com/img/f7/f71beaed2b2a0d18a081fe28448c68ec43cc052c8c1539addfdaeede78e59800.jpg",
+        "id": 1
+      }
+    ],
+    "ts": "1448031751.001063",
+    "id": "20de16831",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "/giphy chan wtf",
+    "attachments": [
+      {
+        "fallback": "giphy: <http://giphy.com/gifs/leg-these-channing-GiR7z9nTqhntC>",
+        "image_url": "http://media4.giphy.com/media/GiR7z9nTqhntC/giphy.gif",
+        "image_width": 420,
+        "image_height": 175,
+        "image_bytes": 942043,
+        "title": "chan wtf",
+        "id": 1,
+        "title_link": "http://giphy.com/gifs/leg-these-channing-GiR7z9nTqhntC"
+      }
+    ],
+    "ts": "1448031752.001065",
+    "id": "20de16832",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "that counts",
+    "ts": "1448031761.001066",
+    "id": "20de16833",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0EQ6UWUQ",
+    "text": "<@U051G3BC3> 's timing was impeccable there",
+    "ts": "1448031761.001067",
+    "id": "20de16834",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "yep",
+    "ts": "1448031764.001068",
+    "id": "20de16835",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": ":sunglasses:",
+    "ts": "1448031766.001069",
+    "id": "20de16836",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "/giphy turtles",
+    "attachments": [
+      {
+        "fallback": "giphy: <http://giphy.com/gifs/bro-turtles-critters-PgcnMa0u9LT3i>",
+        "image_url": "http://media1.giphy.com/media/PgcnMa0u9LT3i/giphy.gif",
+        "image_width": 316,
+        "image_height": 178,
+        "image_bytes": 1942205,
+        "title": "turtles",
+        "id": 1,
+        "title_link": "http://giphy.com/gifs/bro-turtles-critters-PgcnMa0u9LT3i"
+      }
+    ],
+    "ts": "1448031793.001070",
+    "id": "20de16837",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "/giphy chan dafuq",
+    "attachments": [
+      {
+        "fallback": "giphy: <http://giphy.com/gifs/marvel-taylor-kitsch-gambit-eLIUAOXjR85XO>",
+        "image_url": "http://media1.giphy.com/media/eLIUAOXjR85XO/giphy.gif",
+        "image_width": 245,
+        "image_height": 132,
+        "image_bytes": 1714184,
+        "title": "chan dafuq",
+        "id": 1,
+        "title_link": "http://giphy.com/gifs/marvel-taylor-kitsch-gambit-eLIUAOXjR85XO"
+      }
+    ],
+    "ts": "1448031803.001071",
+    "id": "20de16838",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "not even close",
+    "ts": "1448031818.001072",
+    "id": "20de16839",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0EQ6UWUQ",
+    "text": "kinda gives away that poker face right",
+    "ts": "1448031826.001073",
+    "id": "20de16840",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "I guess he’s mad because that’s not the card he wanted, it gets me every time too",
+    "ts": "1448032020.001074",
+    "id": "20de16841",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Is that Gambit?",
+    "ts": "1448032136.001075",
+    "id": "20de16842",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "I don't see he is mad",
+    "ts": "1448032225.001076",
+    "id": "20de16843",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "just eyes burning",
+    "ts": "1448032231.001077",
+    "id": "20de16844",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "it is Gambit <@U08GFT5V5>",
+    "ts": "1448032311.001078",
+    "id": "20de16845",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "I didn’t know he was in the movies, I only recognized his ability :sweat_smile:",
+    "ts": "1448032363.001079",
+    "id": "20de16846",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "He is in one, I don’t recall which",
+    "ts": "1448033000.001080",
+    "id": "20de16847",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "anyway <#C04PLQMUM> :stuck_out_tongue:",
+    "ts": "1448033005.001081",
+    "id": "20de16848",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U06FFQX99",
+    "text": "Anyone know an awesome approach to offline cache using retrofit + okhttp? I've figured this thread ( <http://stackoverflow.com/questions/23429046/can-retrofit-with-okhttp-use-cache-data-when-offline> ) so far.",
+    "attachments": [
+      {
+        "title": "Can Retrofit with OKHttp use cache data when offline",
+        "title_link": "http://stackoverflow.com/questions/23429046/can-retrofit-with-okhttp-use-cache-data-when-offline",
+        "text": "I'm trying to use Retrofit &amp; OKHttp to cache HTTP responses. I fallowed this gist and, ended up with this code: File httpCacheDirectory = new File(context.getCacheDir(), \"responses\");",
+        "fallback": "Can Retrofit with OKHttp use cache data when offline",
+        "thumb_url": "http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/questions/23429046/can-retrofit-with-okhttp-use-cache-data-when-offline",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "id": 1
+      }
+    ],
+    "edited": {
+      "user": "U06FFQX99",
+      "ts": "1448050484.000000"
+    },
+    "ts": "1448050352.001082",
+    "id": "20de16849",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DB7PX9Q",
+    "text": "ya the answer is pretty close to what I have done before",
+    "ts": "1448050546.001085",
+    "id": "20de16850",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DB7PX9Q",
+    "text": "in fact there is an example in okhttp wiki <https://github.com/square/okhttp/wiki/Interceptors>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "square/okhttp",
+        "title_link": "https://github.com/square/okhttp/wiki/Interceptors",
+        "text": "okhttp - An HTTP+SPDY client for Android and Java applications.",
+        "fallback": "GitHub: square/okhttp",
+        "thumb_url": "https://avatars0.githubusercontent.com/u/82592?v=3&s=400",
+        "from_url": "https://github.com/square/okhttp/wiki/Interceptors",
+        "thumb_width": 234,
+        "thumb_height": 234,
+        "id": 1
+      }
+    ],
+    "ts": "1448050554.001086",
+    "id": "20de16851",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DB7PX9Q",
+    "text": "under \"Rewriting Responses\" it injects a cache control header",
+    "ts": "1448050570.001088",
+    "id": "20de16852",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DB7PX9Q",
+    "text": "but you should try to set it at your servers if possible",
+    "ts": "1448050591.001089",
+    "id": "20de16853",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "isn’t GSON suppose to ignore properties that aren’t in the type it’s converting to during parsing?",
+    "ts": "1448051567.001090",
+    "id": "20de16854",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "yeah if you don't have the field defined in your model class it should just skip over it",
+    "ts": "1448051874.001091",
+    "id": "20de16855",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U06FFQX99",
+    "text": "I’ll take a look at that. Thanks <@U0DB7PX9Q> !",
+    "ts": "1448051949.001092",
+    "id": "20de16856",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U0546QERR>: that’s what I thought, but it seems like it’s throwing a JsonSyntaxException since there’s extra fields at the end of the JSON that don’t match the model :confused:",
+    "ts": "1448052045.001093",
+    "id": "20de16857",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "are you sure the API isn't returning a value you're not expecting? for example reddit returns an empty string for a thread that has no replies instead of an empty array, so I need a deserializer to handle it",
+    "ts": "1448053216.001094",
+    "id": "20de16858",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U0546QERR>: False alarm. Had to tell the type adapter to skip it.",
+    "ts": "1448053647.001095",
+    "id": "20de16859",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "Exception stack trace could’ve been more helpful",
+    "ts": "1448053656.001096",
+    "id": "20de16860",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C5E9X2N",
+    "text": "hey guys…i know this is an android team",
+    "ts": "1448059675.001097",
+    "id": "20de16861",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C5E9X2N",
+    "text": "however i’d like to know if anyone here could talk about agile teams. i don’t care if its a pvt..",
+    "ts": "1448059741.001098",
+    "id": "20de16862",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETA9WHH",
+    "text": "what about?",
+    "ts": "1448059751.001099",
+    "id": "20de16863",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DTEGLJF",
+    "text": "<@U0C5E9X2N>: sure I’m agile",
+    "ts": "1448090000.001100",
+    "id": "20de16864",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I can talk agile as well",
+    "ts": "1448091819.001101",
+    "id": "20de16865",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

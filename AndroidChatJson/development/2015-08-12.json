@@ -1,0 +1,2439 @@
+[
+  {
+    "user": "U04TK850N",
+    "text": "Can I have a SSLSocketFactory that by default uses the system keystore but _additionally_ also accept one of my self signed certs?",
+    "ts": "1439372680.001770",
+    "id": "12de6341",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Eh. That’s a good question that I don’t know the answer to off the top of my head. Have you made any headway <@U04TK850N> ?",
+    "ts": "1439386118.001771",
+    "id": "12de6342",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "oh, sorry, meant to come back to this",
+    "ts": "1439386157.001772",
+    "id": "12de6343",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "hm :confused:",
+    "ts": "1439386431.001773",
+    "id": "12de6344",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I was assuming since you pass an array of TrustManager to the SSLContext you could just pass the default and your custom one. But docs say that only the first of each type will be used",
+    "ts": "1439386483.001774",
+    "id": "12de6345",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "So passing two X509TrustManagers will be useless",
+    "ts": "1439386494.001775",
+    "id": "12de6346",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "This article has a solution: <http://nelenkov.blogspot.de/2011/12/using-custom-certificate-trust-store-on.html>",
+    "ts": "1439387662.001776",
+    "id": "12de6347",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Haven’t tried it tho",
+    "ts": "1439387667.001777",
+    "id": "12de6348",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "<@U0542GLTE>: ^",
+    "ts": "1439387674.001778",
+    "id": "12de6349",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "TL;DR let your TrustManager call to the default SSL implementation and if that fails call your own",
+    "ts": "1439387713.001779",
+    "id": "12de6350",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "lol. Elegant as always",
+    "ts": "1439387770.001780",
+    "id": "12de6351",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": ":wink:",
+    "ts": "1439387863.001781",
+    "id": "12de6352",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08SSBSKT",
+    "text": "hi",
+    "ts": "1439393808.001782",
+    "id": "12de6353",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08SSBSKT",
+    "text": "some know how i can create a chart that every color inside have an interaction",
+    "ts": "1439393822.001783",
+    "id": "12de6354",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "what",
+    "ts": "1439393874.001784",
+    "id": "12de6355",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "What do you mean?",
+    "ts": "1439393874.001785",
+    "id": "12de6356",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "beat you to it <@U0542GLTE>",
+    "ts": "1439393881.001786",
+    "id": "12de6357",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "lol. Jerk",
+    "ts": "1439393884.001787",
+    "id": "12de6358",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "lol",
+    "ts": "1439393885.001788",
+    "id": "12de6359",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08SSBSKT",
+    "text": "i need to create a chart pie",
+    "ts": "1439393924.001789",
+    "id": "12de6360",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08SSBSKT",
+    "text": "but every color is like  a button",
+    "ts": "1439393966.001790",
+    "id": "12de6361",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08SSBSKT",
+    "text": "need a interaction when the user touch him",
+    "ts": "1439393972.001791",
+    "id": "12de6362",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "canvas then translate the touch coords to the data set",
+    "ts": "1439393997.001792",
+    "id": "12de6363",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "time to write a custom view",
+    "ts": "1439394002.001793",
+    "id": "12de6364",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "be careful as small slices can be impossible to touch",
+    "ts": "1439394006.001794",
+    "id": "12de6365",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "or find some lib that someone wrote that half does what you want and hack it til it does",
+    "ts": "1439394013.001795",
+    "reactions": [
+      {
+        "name": "ok_hand",
+        "users": [
+          "U0548MM6B"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "12de6366",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "given this you may want to look at existing charting libraries",
+    "ts": "1439394018.001796",
+    "id": "12de6367",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "graphs and charts are hard to make libs for",
+    "ts": "1439394020.001797",
+    "id": "12de6368",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "already tried",
+    "ts": "1439394023.001798",
+    "id": "12de6369",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "everyones needs are so different",
+    "ts": "1439394027.001799",
+    "id": "12de6370",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "so i gave up",
+    "ts": "1439394030.001800",
+    "id": "12de6371",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "moral of the story - this is a message of hope",
+    "ts": "1439394035.001801",
+    "id": "12de6372",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08SSBSKT",
+    "text": "need something like this",
+    "ts": "1439394035.001802",
+    "id": "12de6373",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08SSBSKT",
+    "text": "<http://www.mathwarehouse.com/pie-chart-pictures/picture-splitted-pie-chart2.jpg>",
+    "attachments": [
+      {
+        "fallback": "246x218px image",
+        "image_url": "http://www.mathwarehouse.com/pie-chart-pictures/picture-splitted-pie-chart2.jpg",
+        "image_width": 246,
+        "image_height": 218,
+        "image_bytes": 20526,
+        "from_url": "http://www.mathwarehouse.com/pie-chart-pictures/picture-splitted-pie-chart2.jpg",
+        "id": 1
+      }
+    ],
+    "ts": "1439394036.001803",
+    "id": "12de6374",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "give up",
+    "ts": "1439394036.001804",
+    "id": "12de6375",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<https://github.com/PhilJay/MPAndroidChart>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "PhilJay/MPAndroidChart",
+        "title_link": "https://github.com/PhilJay/MPAndroidChart",
+        "text": "MPAndroidChart - A powerful Android chart view / graph view library, supporting line- bar- pie- radar- bubble- and candlestick charts as well as scaling, dragging and animations.",
+        "fallback": "GitHub: PhilJay/MPAndroidChart",
+        "thumb_url": "https://avatars3.githubusercontent.com/u/6759734?v=3&s=400",
+        "from_url": "https://github.com/PhilJay/MPAndroidChart",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1439394051.001806",
+    "id": "12de6376",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "i think that one was the one that was well written",
+    "ts": "1439394057.001808",
+    "id": "12de6377",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "yeah it is",
+    "ts": "1439394088.001809",
+    "id": "12de6378",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08SSBSKT",
+    "text": "yeah i will need only one part to create something like the image i post",
+    "ts": "1439394095.001810",
+    "id": "12de6379",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I’ve written some charts from scratch to get the custom animations needed but it isn’t fun",
+    "ts": "1439394102.001811",
+    "id": "12de6380",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "well.. its fun but it takes a long time so your bossman is gonna get mad and thats not fun",
+    "ts": "1439394115.001812",
+    "id": "12de6381",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08SSBSKT",
+    "text": "ahahahah",
+    "ts": "1439394147.001813",
+    "id": "12de6382",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08SSBSKT",
+    "text": "i need to create a home menu",
+    "ts": "1439394153.001814",
+    "id": "12de6383",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08SSBSKT",
+    "text": "with that",
+    "ts": "1439394158.001815",
+    "id": "12de6384",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08SSBSKT",
+    "text": "a chart pie with 6 parts an every part start an activity",
+    "ts": "1439394210.001816",
+    "id": "12de6385",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "If it is static why not just use imagebuttons or something? ",
+    "ts": "1439394471.001817",
+    "id": "12de6386",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08SSBSKT",
+    "text": "is another option use an image and catch the touch coords",
+    "ts": "1439394499.001818",
+    "id": "12de6387",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08SSBSKT",
+    "text": "over the image",
+    "ts": "1439394509.001819",
+    "id": "12de6388",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08SSBSKT",
+    "text": "only i will think about the resolutions of the image for the majority of the phones",
+    "ts": "1439394544.001820",
+    "id": "12de6389",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "anyone here good with JS?",
+    "ts": "1439396554.001821",
+    "id": "12de6390",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "lol",
+    "ts": "1439396593.001822",
+    "id": "12de6391",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i made a fruitbot in JS",
+    "ts": "1439396593.001823",
+    "id": "12de6392",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "if that counts XD",
+    "ts": "1439396599.001824",
+    "id": "12de6393",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "you cute <@U0548MM6B>",
+    "ts": "1439396604.001825",
+    "id": "12de6394",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "fruitbot? :O",
+    "ts": "1439396614.001826",
+    "id": "12de6395",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<@U051G3BC3>: it’s a slang for Java :smile:",
+    "ts": "1439396627.001827",
+    "id": "12de6396",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "<http://www.fruitbots.com/> is usually the site",
+    "ts": "1439396673.001828",
+    "id": "12de6397",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "but it’s down",
+    "ts": "1439396677.001829",
+    "id": "12de6398",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "anyways, anyone knows how can I append to an object? \nlike I have utilities.session = save_session();\nand I want to do utilities.session = save_rest_of_session_data();\nbut without overwriting the first data",
+    "ts": "1439396685.001830",
+    "id": "12de6399",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "is the data an array?",
+    "ts": "1439396829.001831",
+    "id": "12de6400",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "arr.push()?",
+    "ts": "1439396832.001832",
+    "id": "12de6401",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "nope, it’s just an object",
+    "ts": "1439396844.001833",
+    "id": "12de6402",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "undefined error sorry <@U0548MM6B>",
+    "ts": "1439396847.001834",
+    "id": "12de6403",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "undefined has been my life for the last few weeks :heart:",
+    "ts": "1439396859.001835",
+    "id": "12de6404",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "You could use reflection across your getters.",
+    "ts": "1439396862.001836",
+    "id": "12de6405",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "damn I’m :troll: ing too much",
+    "ts": "1439396863.001837",
+    "id": "12de6406",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "undefined and SYNTAX ERROR LINE 1",
+    "ts": "1439396864.001838",
+    "id": "12de6407",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "But…. I probably wouldn’t recommend that.",
+    "ts": "1439396872.001839",
+    "id": "12de6408",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "what could go wrong.",
+    "ts": "1439396879.001840",
+    "id": "12de6409",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "lol",
+    "ts": "1439396882.001841",
+    "id": "12de6410",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "stop it quentin",
+    "ts": "1439396884.001842",
+    "id": "12de6411",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": ":smile:",
+    "ts": "1439396886.001843",
+    "id": "12de6412",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "not sure what you mean, from a high-level programming point of view, your object needs to know how to append items. like List in java",
+    "ts": "1439396932.001844",
+    "id": "12de6413",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "array knows how to do it in javascript",
+    "ts": "1439396942.001845",
+    "id": "12de6414",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "but if it’s just an object",
+    "ts": "1439396946.001846",
+    "id": "12de6415",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "eh yeah, but it’s not a list or array :confused:",
+    "ts": "1439396950.001847",
+    "id": "12de6416",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "and I can only write a “intermediate” code that is between me and the code that uses that object",
+    "edited": {
+      "user": "U0548MM6B",
+      "ts": "1439396985.000000"
+    },
+    "ts": "1439396957.001848",
+    "id": "12de6417",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "can’t change the object in source itself",
+    "ts": "1439397025.001850",
+    "id": "12de6418",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "<http://stackoverflow.com/questions/171251/how-can-i-merge-properties-of-two-javascript-objects-dynamically>",
+    "attachments": [
+      {
+        "title": "How can I merge properties of two JavaScript objects dynamically?",
+        "title_link": "http://stackoverflow.com/questions/171251/how-can-i-merge-properties-of-two-javascript-objects-dynamically",
+        "text": "I need to be able to merge two (very simple) JavaScript objects at runtime. For example I'd like to: var obj1 = { food: 'pizza', car: 'ford' } var obj2 = { animal: 'dog' } obj1.merge(obj2); //o...",
+        "fallback": "How can I merge properties of two JavaScript objects dynamically?",
+        "thumb_url": "http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon@2.png?v=ea71a5211a91&a",
+        "from_url": "http://stackoverflow.com/questions/171251/how-can-i-merge-properties-of-two-javascript-objects-dynamically",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "id": 1
+      }
+    ],
+    "ts": "1439397084.001851",
+    "id": "12de6419",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "?",
+    "ts": "1439397086.001853",
+    "id": "12de6420",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": ":boom: <@U0548MM6B> doesn’t know how to google",
+    "ts": "1439397125.001854",
+    "id": "12de6421",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "first hit for \"combine two objects javascript” haha",
+    "ts": "1439397184.001855",
+    "id": "12de6422",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<@U0546QERR>:  OH YASSS :heart: :heart:",
+    "ts": "1439397197.001856",
+    "id": "12de6423",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "if that’s what he wants anyway",
+    "ts": "1439397197.001857",
+    "id": "12de6424",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "must have used the wrong keywords",
+    "ts": "1439397206.001858",
+    "id": "12de6425",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "fruitbots is fun though, it’s just a game where you have to analyze a game board with different fruits and calculate the best moves to outscore other bots",
+    "ts": "1439397263.001859",
+    "id": "12de6426",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "tried to open it but their site don’t work",
+    "ts": "1439397279.001860",
+    "id": "12de6427",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "can use python, javascript, some other stuff",
+    "ts": "1439397282.001861",
+    "id": "12de6428",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "yeah it goes down",
+    "ts": "1439397288.001862",
+    "id": "12de6429",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "stop using bing god damnit",
+    "edited": {
+      "user": "U051G3BC3",
+      "ts": "1439397322.000000"
+    },
+    "ts": "1439397319.001863",
+    "id": "12de6430",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "what is bing?",
+    "ts": "1439397372.001865",
+    "id": "12de6431",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "I only ask jeeves",
+    "ts": "1439397375.001866",
+    "id": "12de6432",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "since altavista stopped working",
+    "ts": "1439397382.001867",
+    "id": "12de6433",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "aaaah think i saw fbots somewhere",
+    "ts": "1439397409.001868",
+    "id": "12de6434",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i learned about it from Scribd’s careers site, they used to encourage engineers to write a fruitbot to prove they don’t suck",
+    "ts": "1439397684.001869",
+    "id": "12de6435",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i spent like 3 weeks writing it and my resume went in the trash anyway haha",
+    "ts": "1439397716.001870",
+    "id": "12de6436",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "eh at least you learnt something :smile:",
+    "ts": "1439397785.001871",
+    "id": "12de6437",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "I need to get my “interview questions” game up, like hackerrank stuff",
+    "ts": "1439397821.001872",
+    "id": "12de6438",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "programming interview books are nice, i like doing algorithm stuff once in a while",
+    "ts": "1439399059.001873",
+    "id": "12de6439",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i should try some TopCoder competitions",
+    "ts": "1439399099.001874",
+    "id": "12de6440",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "might check out a book or two, I never had one of those \"here's a pen now reverse a binary tree and implement a knapsack solution in Go\" interviews",
+    "ts": "1439403458.001875",
+    "id": "12de6441",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "I had three and all were practical and based on some stuff I had on github and CV",
+    "ts": "1439403497.001876",
+    "id": "12de6442",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<@U0542GLTE>: likes the reverse a tree question :troll:",
+    "ts": "1439403550.001877",
+    "id": "12de6443",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "lol. So.",
+    "ts": "1439403568.001878",
+    "id": "12de6444",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "I like knowing if you know recursion",
+    "ts": "1439403577.001879",
+    "id": "12de6445",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "It",
+    "ts": "1439403587.001880",
+    "id": "12de6446",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "s four lines of code",
+    "ts": "1439403591.001881",
+    "id": "12de6447",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "well so is print numbers from 100 to 1 starting for(int i=1 :smile:",
+    "edited": {
+      "user": "U0548MM6B",
+      "ts": "1439403789.000000"
+    },
+    "ts": "1439403764.001882",
+    "id": "12de6448",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "the most code I wrote in an interview was fizzbuzz and a few SQL statements",
+    "ts": "1439403823.001884",
+    "id": "12de6449",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "hahaha. That’s also one of mine",
+    "ts": "1439403840.001885",
+    "id": "12de6450",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "so I should really sharpen up my interview book skills",
+    "ts": "1439403845.001886",
+    "id": "12de6451",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Did I tell you that?",
+    "ts": "1439403848.001887",
+    "id": "12de6452",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "yep, I remembered it because of kmatt's solution :smile:",
+    "ts": "1439403869.001888",
+    "id": "12de6453",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "hahaha.",
+    "ts": "1439403873.001889",
+    "id": "12de6454",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "We should get him in here at some point",
+    "ts": "1439403879.001890",
+    "id": "12de6455",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "is he still at GotChosen?",
+    "ts": "1439403937.001891",
+    "id": "12de6456",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "NotChosen*",
+    "ts": "1439403960.001892",
+    "id": "12de6457",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Nobody is at GotChosen lol",
+    "ts": "1439403979.001893",
+    "id": "12de6458",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "He is working at Disney",
+    "ts": "1439403989.001894",
+    "id": "12de6459",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "Disney? damn, they have apps?",
+    "ts": "1439404023.001895",
+    "id": "12de6460",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "several apps",
+    "ts": "1439404063.001896",
+    "id": "12de6461",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "do you want to build an app man?",
+    "ts": "1439404088.001897",
+    "id": "12de6462",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "oh yeah damn, they do own rights to tons of shit, when I think of them I think of disneyland",
+    "ts": "1439404105.001898",
+    "id": "12de6463",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<@U04U5KS3Z>:  for only 9.99 you get not just an app, but a set of knives",
+    "ts": "1439404123.001899",
+    "id": "12de6464",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "sounds like a bargain",
+    "ts": "1439404610.001900",
+    "id": "12de6465",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "pfft, I'd rip you off, you can get it for 5 bucks on fiverr",
+    "ts": "1439405160.001901",
+    "id": "12de6466",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U04TK850N>: doesn't OkHttp just add your checksum to it?",
+    "ts": "1439406055.001902",
+    "id": "12de6467",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "(Can't be bothered to read the followup like last time)",
+    "ts": "1439406069.001903",
+    "id": "12de6468",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0910C6SE",
+    "inviter": "U0542GLTE",
+    "subtype": "channel_join",
+    "text": "<@U0910C6SE|philosophicalhacker> has joined the channel",
+    "ts": "1439407220.001904",
+    "id": "12de6469",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "<@U061HDV96>: I'm not directly using OkHttp",
+    "ts": "1439408208.001905",
+    "id": "12de6470",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "nested #defines…. how is that even allowed",
+    "ts": "1439418499.001906",
+    "id": "12de6471",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "hate you c#",
+    "ts": "1439418524.001907",
+    "id": "12de6472",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

@@ -1,0 +1,1343 @@
+[
+  {
+    "user": "U061HDV96",
+    "text": "Does lateinit work with Realm?",
+    "ts": "1484329528.000019",
+    "id": "13ko3546",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "It better...",
+    "ts": "1484329542.000020",
+    "id": "13ko3547",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "From Java perspective `lateinit` is just a field with setter’s visibility",
+    "ts": "1484333163.000021",
+    "id": "13ko3548",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Any way to make kapt show what line is bad? I'm getting the error: `[ERROR] [system.err] error: @JsonField annotation can only be used on private fields if both getter and setter are present.` which I had a previous time",
+    "ts": "1484336261.000022",
+    "id": "13ko3549",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "But the file that it references is just the first Kotlin file it can find on the first line.",
+    "ts": "1484336275.000023",
+    "id": "13ko3550",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Enabling the stacktrace or debug info doesn't add anything useful.",
+    "ts": "1484336289.000024",
+    "id": "13ko3551",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I had something similar before but I forgot how I solved it.",
+    "ts": "1484336301.000025",
+    "id": "13ko3552",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Googling the error just says that --stacktrace will show me the info, but that's assuming I'm using apt.",
+    "ts": "1484336431.000026",
+    "id": "13ko3553",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "&gt; `lateinit` is just a field with setter’s visibility\nUm, what? `lateinit` is a non-nullable var which is null by default and which you must initialize yourself.",
+    "ts": "1484337005.000027",
+    "id": "13ko3554",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "yes",
+    "ts": "1484337741.000028",
+    "id": "13ko3555",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "<@U2M0WUZ7A> You missed this part:\n&gt; From Java perspective",
+    "ts": "1484338298.000029",
+    "id": "13ko3556",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "`lateinit` exists mainly for Java interop",
+    "ts": "1484338317.000030",
+    "id": "13ko3557",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "In Kotlin you can just use `Delegates.notNull()`",
+    "ts": "1484338353.000031",
+    "id": "13ko3558",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U0RGXBYUD> could you give an example of what it looks like in Java?",
+    "ts": "1484338466.000032",
+    "id": "13ko3559",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "Let’s say you have:\n`lateinit var string: String`\nThis property has a public setter so Kotlin will create a public field `string`, and a public getter/setter pair `getString()` and `setString()`",
+    "ts": "1484338556.000033",
+    "id": "13ko3560",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "A public field can be used by APT-powered libraries, such as Dagger",
+    "ts": "1484338616.000034",
+    "id": "13ko3561",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "Unfortunately it’s naming is really bad",
+    "ts": "1484338657.000035",
+    "id": "13ko3562",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "And what's the difference with no lateinit?",
+    "ts": "1484338660.000036",
+    "id": "13ko3563",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "That also generated the getters and setters doesn't it?",
+    "ts": "1484338679.000037",
+    "id": "13ko3564",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "The main difference is that the field becomes public",
+    "ts": "1484338683.000038",
+    "id": "13ko3565",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Isn't it public by default in Kotlin?",
+    "ts": "1484338698.000039",
+    "id": "13ko3566",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "Backing fields are always private in Kotlin",
+    "ts": "1484338709.000040",
+    "id": "13ko3567",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "Also you cannot initialize `lateinit var`",
+    "ts": "1484338732.000041",
+    "id": "13ko3568",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Wait, now you're talking about a backing field",
+    "edited": {
+      "user": "U061HDV96",
+      "ts": "1484338739.000000"
+    },
+    "ts": "1484338735.000042",
+    "id": "13ko3569",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "It’s initialized with `null` by default but Kotlin doesn’t support `null`-safe operators when working with such properties",
+    "ts": "1484338769.000044",
+    "id": "13ko3570",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "When I say field it’s always backing field :slightly_smiling_face:",
+    "ts": "1484338799.000045",
+    "id": "13ko3571",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "Kotlin doesn’t have fields",
+    "ts": "1484338805.000046",
+    "id": "13ko3572",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "It has properties",
+    "ts": "1484338811.000047",
+    "id": "13ko3573",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "So field is an implementation detail on JVM",
+    "ts": "1484338829.000048",
+    "id": "13ko3574",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I still don't get the difference though with no lateinit in Java :confused:",
+    "ts": "1484338836.000049",
+    "id": "13ko3575",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "OK, let’s assume you want to use Dagger",
+    "ts": "1484338868.000050",
+    "id": "13ko3576",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I'm also gonna join the kotlinlang slack again and perhaps get a solution to my kapt problem",
+    "ts": "1484338881.000051",
+    "id": "13ko3577",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "Dagger injects instances into fields",
+    "ts": "1484338892.000052",
+    "id": "13ko3578",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "But it’s implemented via APT and doesn’t use reflection so in general case it can set only public fields",
+    "ts": "1484338932.000053",
+    "id": "13ko3579",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "But when you declare a public property in Kotlin it’s backing field is private",
+    "edited": {
+      "user": "U0RGXBYUD",
+      "ts": "1484338955.000000"
+    },
+    "ts": "1484338949.000054",
+    "id": "13ko3580",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "That is it has a public getter, a public setter, and a private backing field",
+    "edited": {
+      "user": "U0RGXBYUD",
+      "ts": "1484338978.000000"
+    },
+    "ts": "1484338976.000056",
+    "id": "13ko3581",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "Long time ago it was a real problem ok Kotlin",
+    "ts": "1484338998.000058",
+    "id": "13ko3582",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "It was really hard to use Dagger with Kotlin, nearly impossible",
+    "ts": "1484339025.000059",
+    "id": "13ko3583",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "But then they added `lateinit`",
+    "ts": "1484339067.000060",
+    "id": "13ko3584",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "The main reason was to make backing fields publicly visible from Java",
+    "ts": "1484339089.000061",
+    "id": "13ko3585",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "So when you define a property as `lateinit` it’s backing field becomes public (actually it has visibility of the setter) and Dagger can inject an instance into this field",
+    "ts": "1484339139.000062",
+    "id": "13ko3586",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "And in Kotlin this field is used as non-nullable because semantically it is non-nullable",
+    "ts": "1484339189.000063",
+    "id": "13ko3587",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "But initially it’s initialized with `null`",
+    "ts": "1484339204.000064",
+    "id": "13ko3588",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "When accessing this field from Kotlin it checks if the field is not `null`",
+    "ts": "1484339231.000065",
+    "id": "13ko3589",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "<@U061HDV96> Is it clearer now?",
+    "ts": "1484339305.000066",
+    "id": "13ko3590",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Ya",
+    "ts": "1484339329.000067",
+    "id": "13ko3591",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I was just wondering about the nullability but then realised it was Java and not Kotlin",
+    "ts": "1484339348.000068",
+    "id": "13ko3592",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U0RGXBYUD> :taco:",
+    "ts": "1484339364.000069",
+    "id": "13ko3593",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "And now why it’s not really `lateinit` :slightly_smiling_face:",
+    "ts": "1484339392.000070",
+    "id": "13ko3594",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "You can easily change it’s value back to `null` from Java",
+    "ts": "1484339413.000071",
+    "id": "13ko3595",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "So Kotlin may see a non-`null` value and then `null` again",
+    "ts": "1484339424.000072",
+    "id": "13ko3596",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "Doesn’t really look like deferred initialization",
+    "ts": "1484339434.000073",
+    "id": "13ko3597",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "More detailed explanation here: <https://youtrack.jetbrains.com/issue/KT-10583>",
+    "attachments": [
+      {
+        "service_name": "YouTrack",
+        "title": "KT-10583: Consider adding unsafe modifier instead of lateinit",
+        "title_link": "https://youtrack.jetbrains.com/issue/KT-10583",
+        "text": "Problem statement Currently lateinit keyword in Kotlin covers two cases: deferred initialization of a property and exposing the backing field of a property. Both usecases have issues, which I'm g…",
+        "fallback": "YouTrack: KT-10583: Consider adding unsafe modifier instead of lateinit",
+        "from_url": "https://youtrack.jetbrains.com/issue/KT-10583",
+        "service_icon": "https://youtrack.jetbrains.com/_classpath/images/favicon.ico",
+        "id": 1
+      }
+    ],
+    "ts": "1484339516.000074",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "13ko3598",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "\"unsafe\" doesn't really convey the intentions",
+    "ts": "1484339625.000076",
+    "id": "13ko3599",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I didn't really read all of it though",
+    "ts": "1484339636.000077",
+    "id": "13ko3600",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Uggggh",
+    "ts": "1484340060.000078",
+    "id": "13ko3601",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "This is so frustrating",
+    "ts": "1484340064.000079",
+    "id": "13ko3602",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I have no clue where this error is coming from",
+    "ts": "1484340073.000080",
+    "id": "13ko3603",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Is it that hard to just tell me what annotation it is that is causing the problem? Jees",
+    "ts": "1484340084.000081",
+    "id": "13ko3604",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "/gif fuck it",
+    "ts": "1484340329.000082",
+    "id": "13ko3605",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "",
+    "bot_id": "B3Q3NH80H",
+    "attachments": [
+      {
+        "fallback": "<https://d13yacurqjgara.cloudfront.net/users/1092177/screenshots/2567008/just-fuck-it.gif>",
+        "image_url": "https://d13yacurqjgara.cloudfront.net/users/1092177/screenshots/2567008/just-fuck-it.gif",
+        "image_width": 800,
+        "image_height": 600,
+        "image_bytes": 1782373,
+        "is_animated": true,
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1484340329.000083",
+    "id": "13ko3606",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "/gif table flip",
+    "ts": "1484340334.000085",
+    "id": "13ko3607",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "",
+    "bot_id": "B3Q3NH80H",
+    "attachments": [
+      {
+        "fallback": "<http://67.media.tumblr.com/a59c99cda990a322c93b4ea13b1861da/tumblr_inline_mqhj1iqVts1qz4rgp.gif>",
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1484340334.000086",
+    "id": "13ko3608",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I'm gonna try to set Skyward Sword up on Dolphin emulator",
+    "ts": "1484340346.000088",
+    "id": "13ko3609",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I can't be bothered with Kotlin's daily problems",
+    "ts": "1484340357.000089",
+    "id": "13ko3610",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "<@U061HDV96> My assumption regarding your problem is that you’re applying `@JsonField` annotation to a `lateinit` property",
+    "ts": "1484340792.000090",
+    "id": "13ko3611",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "You can either make it non-`lateinit` or add `private set` to this property",
+    "ts": "1484340914.000091",
+    "id": "13ko3612",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I don't think that that's it because I had a couple lateinits before and those worked fine",
+    "ts": "1484341175.000092",
+    "id": "13ko3613",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I'll check tomorrow ",
+    "ts": "1484341180.000093",
+    "id": "13ko3614",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "At least that's what it says in the error message.",
+    "ts": "1484341629.000094",
+    "id": "13ko3615",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I'll give it a shot tomorrow",
+    "edited": {
+      "user": "U061HDV96",
+      "ts": "1484342878.000000"
+    },
+    "ts": "1484342873.000095",
+    "id": "13ko3616",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

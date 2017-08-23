@@ -1,0 +1,630 @@
+[
+  {
+    "user": "U061HDV96",
+    "text": "So I want to preload some information (API calls) before going to the activity where I currently get the information",
+    "ts": "1442671910.001350",
+    "id": "19de9804",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "So you don't see the loading spinner",
+    "ts": "1442671923.001351",
+    "id": "19de9805",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "What would be the best way to add that call but when moved away from the activity without it completing or completing after it, that I don't have to make a new one etc. ---&gt; How do I make it as efficient as possible?",
+    "ts": "1442671968.001352",
+    "id": "19de9806",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I have an idea how to do it, but I want some input first because my approach probably isn't the most easy to read in the code. I was actually thinking about Rx",
+    "ts": "1442672310.001353",
+    "id": "19de9807",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "that's what I would have thought",
+    "ts": "1442672341.001354",
+    "id": "19de9808",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Guess I should learn Rx then",
+    "ts": "1442672768.001355",
+    "id": "19de9809",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Can I have two Retrofit calls with the same name but different arguments?",
+    "edited": {
+      "user": "U04TK850N",
+      "ts": "1442672832.000000"
+    },
+    "ts": "1442672825.001356",
+    "id": "19de9810",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I don't know...",
+    "ts": "1442672889.001358",
+    "id": "19de9811",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I've always avoided it for now",
+    "ts": "1442672911.001359",
+    "id": "19de9812",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Haven't tried it",
+    "ts": "1442672913.001360",
+    "id": "19de9813",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "<@U04TK850N>: Java Compiler won’t allow you to do this :simple_smile:",
+    "ts": "1442672926.001361",
+    "id": "19de9814",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "huh",
+    "ts": "1442672954.001362",
+    "id": "19de9815",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "it’s not up to retrofit, it’s just a Java interface",
+    "ts": "1442672959.001363",
+    "id": "19de9816",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "```\n    @GET(\"get_block/{network}/{block_no}\")\n    Call&lt;Block&gt; getBlock(\n            @Path(\"network\") String network,\n            @Path(\"block_no\") Integer blockNumber\n    );\n\n    @GET(\"get_block/{network}/{blockhash}\")\n    Call&lt;Block&gt; getBlock(\n            @Path(\"network\") String network,\n            @Path(\"blockhash\") String blockHash\n    );\n```",
+    "ts": "1442672963.001364",
+    "id": "19de9817",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "so that will not work?",
+    "ts": "1442672968.001365",
+    "id": "19de9818",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "Two solutions: different names for methods or you can use dynamic query params",
+    "ts": "1442672969.001366",
+    "id": "19de9819",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "No, both methods have same name and arguments types",
+    "ts": "1442672996.001367",
+    "id": "19de9820",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "no they don't",
+    "ts": "1442673003.001368",
+    "id": "19de9821",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "Oh, sorry",
+    "ts": "1442673012.001369",
+    "id": "19de9822",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "it will work",
+    "ts": "1442673014.001370",
+    "id": "19de9823",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "didn’t notice `Integer` and `String` types",
+    "ts": "1442673026.001371",
+    "id": "19de9824",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "would be kinda surprised if it didn't :smile:",
+    "ts": "1442673028.001372",
+    "id": "19de9825",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": ":smile:",
+    "ts": "1442673030.001373",
+    "id": "19de9826",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "thx!",
+    "ts": "1442673034.001374",
+    "id": "19de9827",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B0C4656",
+    "subtype": "channel_join",
+    "text": "<@U0B0C4656|cielpy> has joined the channel",
+    "ts": "1442681576.001375",
+    "id": "19de9828",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "If I want to use retrofit services both with RxJava _and_ the callback interfaces, do I really have to copy all methods?",
+    "ts": "1442691089.001376",
+    "id": "19de9829",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I tried some seemingly hacky way now, but that just seems awfully wrong",
+    "ts": "1442691120.001377",
+    "id": "19de9830",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "<@U04TK850N> why not to have only Rx version? ",
+    "ts": "1442691738.001378",
+    "id": "19de9831",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I'm not comfortable enough with Rx yet :smile:",
+    "ts": "1442691756.001379",
+    "id": "19de9832",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "also, it feels like overkill for things that don't need any post-processing",
+    "ts": "1442691780.001380",
+    "id": "19de9833",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "use 2 services then?",
+    "ts": "1442692106.001381",
+    "id": "19de9834",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "meh, I should really just force me to learn Rx :smile:",
+    "ts": "1442692149.001382",
+    "id": "19de9835",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "got a problem? rx it",
+    "ts": "1442697331.001383",
+    "id": "19de9836",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "Now you have `Observable&lt;Problem&gt;` :troll:",
+    "ts": "1442697359.001384",
+    "reactions": [
+      {
+        "name": "trollface",
+        "users": [
+          "U04U5KS3Z",
+          "U04TK850N",
+          "U053MU86W"
+        ],
+        "count": 3
+      }
+    ],
+    "id": "19de9837",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

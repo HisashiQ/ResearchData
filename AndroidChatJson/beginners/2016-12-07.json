@@ -1,0 +1,1361 @@
+[
+  {
+    "user": "U37BP6E73",
+    "text": "I am trying to do a broadcastreceiver on a nonactivity, normal java class as the logic is not specific to just one activity... is this approach okay?",
+    "edited": {
+      "user": "U37BP6E73",
+      "ts": "1481098122.000000"
+    },
+    "ts": "1481098108.000164",
+    "id": "07be10684",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3AUW1ZGR",
+    "text": "<@U3AUW1ZGR|zmajeric> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481101471.000166",
+    "id": "07be10685",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3CAUAQ14",
+    "text": "<@U3CAUAQ14|laurie_scheepers> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481107519.000167",
+    "id": "07be10686",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3CMK67LN",
+    "text": "<@U3CMK67LN|sonminhtran1997> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481151746.000168",
+    "id": "07be10687",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "<@U3BH8D0KU> nope",
+    "ts": "1481157026.000169",
+    "id": "07be10688",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I think I really need a primer. All of sudden I can't seem to retain the state of my activity",
+    "ts": "1481157043.000170",
+    "id": "07be10689",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I thought I just save on onSavedInstance state and retrieve the bundle from onCreate but this happens when activity has been recreated after OS killed it.",
+    "ts": "1481157075.000171",
+    "id": "07be10690",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "They say save on onPause",
+    "ts": "1481157094.000172",
+    "id": "07be10691",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "But where will my bundle go?  How can I retrieve it?",
+    "ts": "1481157119.000173",
+    "id": "07be10692",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "they say persist it on SharedPreferences",
+    "ts": "1481157128.000174",
+    "id": "07be10693",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "<@U379MC1E0> if you just need to persist data through activity creation such as during the rotation of the device, onSavedInstanceState should be fine. you'll get the bundle back in onCreate",
+    "ts": "1481159464.000175",
+    "id": "07be10694",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "but if you're trying to persist through app restarts you'll need to save to shared preferences or something else persistent",
+    "edited": {
+      "user": "U0546QERR",
+      "ts": "1481159516.000000"
+    },
+    "ts": "1481159489.000176",
+    "id": "07be10695",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "right",
+    "ts": "1481160765.000178",
+    "id": "07be10696",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "but wait a sec",
+    "ts": "1481160769.000179",
+    "id": "07be10697",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I have some couple of strings",
+    "ts": "1481160774.000180",
+    "id": "07be10698",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "Activity A has some firstname and lastname",
+    "ts": "1481160786.000181",
+    "id": "07be10699",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "A launches Activity B (Activity consumes first name and last name)",
+    "ts": "1481160800.000182",
+    "id": "07be10700",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "there is a button in Activity B that will change first and last name",
+    "ts": "1481160812.000183",
+    "id": "07be10701",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "B passes those info to Activity C (Activity C shows this on its edit text fields)",
+    "ts": "1481160838.000184",
+    "id": "07be10702",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "From C I went back to B, in whatever way (Back, or up navigation)",
+    "ts": "1481160861.000185",
+    "id": "07be10703",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "B lost the info about firstname and lastname",
+    "ts": "1481160875.000186",
+    "id": "07be10704",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I need to retain them",
+    "ts": "1481160878.000187",
+    "id": "07be10705",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I am doing this on Activity not on Fragment though.",
+    "ts": "1481160887.000188",
+    "id": "07be10706",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I can't wrap my head around this thing. I felt so dumb.",
+    "ts": "1481160900.000189",
+    "id": "07be10707",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "If I launch again C from B, info on firstname and lastname already gone. C has nothing to show in edit text fields. I wish I could have designed it the other way but I have no other choice it really has to be A-&gt;B-&gt;C as requested.",
+    "ts": "1481160979.000190",
+    "id": "07be10708",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "also I don't rotate device. The app I am developing doesn't support that",
+    "ts": "1481161016.000191",
+    "id": "07be10709",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "if you modify the bundle you pass into activity C, it's not going to be automatically reflected in B. you'll have to pass the changed data back through `setResult` or something",
+    "edited": {
+      "user": "U0546QERR",
+      "ts": "1481161199.000000"
+    },
+    "ts": "1481161094.000192",
+    "id": "07be10710",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I see",
+    "ts": "1481161132.000193",
+    "id": "07be10711",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I'll buy that",
+    "ts": "1481161144.000194",
+    "id": "07be10712",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "<https://developer.android.com/guide/components/intents-filters.html>",
+    "attachments": [
+      {
+        "title": "    Intents and Intent Filters | Android Developers  ",
+        "title_link": "https://developer.android.com/guide/components/intents-filters.html",
+        "text": "An Intent is a messaging object you can use to request an action from another app component . Although intents facilitate communication between components in several ways, there are three fundamental use cases: An Activity represents a single screen in…",
+        "fallback": "    Intents and Intent Filters | Android Developers  ",
+        "from_url": "https://developer.android.com/guide/components/intents-filters.html",
+        "service_icon": "https://developer.android.com/favicon.ico",
+        "service_name": "developer.android.com",
+        "id": 1
+      }
+    ],
+    "ts": "1481161162.000195",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "07be10713",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "got it",
+    "ts": "1481161208.000198",
+    "id": "07be10714",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "my main goal here is not to persist any data",
+    "ts": "1481161216.000199",
+    "id": "07be10715",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "just UI",
+    "ts": "1481161218.000200",
+    "id": "07be10716",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "like, a button still checked when I come back it as oppose to not checked.",
+    "ts": "1481161247.000201",
+    "id": "07be10717",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "Thanks alot <@U0546QERR> ! It made sense to me now!",
+    "ts": "1481161582.000202",
+    "id": "07be10718",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "no probs. if you just want to persist UI state then `onSaveInstanceState` sounds like what you want",
+    "edited": {
+      "user": "U0546QERR",
+      "ts": "1481161671.000000"
+    },
+    "ts": "1481161659.000203",
+    "id": "07be10719",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "ok, I am really having  problem onSaveInstanceState, I am just navigating away from Activity B to C",
+    "ts": "1481161794.000205",
+    "id": "07be10720",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "When I comeback to B from C, the variables I need no longer there",
+    "ts": "1481161809.000206",
+    "id": "07be10721",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "onCreate(Bundle bundle) is always null",
+    "ts": "1481161818.000207",
+    "id": "07be10722",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I've read on SO that onCreate(Bundle bundle) will not be null",
+    "ts": "1481161853.000208",
+    "id": "07be10723",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "if my activity went back from the dead",
+    "ts": "1481161859.000209",
+    "id": "07be10724",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "Activity B has been recreated because for some reason OS killed it (just one case out of the many)",
+    "ts": "1481161885.000210",
+    "id": "07be10725",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "Maybe I'll just sent back what I sent. C returns back data to B, as I have logic for onActivityResult anyway :confused:",
+    "ts": "1481161926.000211",
+    "id": "07be10726",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "that's weird :thinking_face: seems like a fairly straightforward scenario but i'm not sure how that would be",
+    "ts": "1481162317.000212",
+    "id": "07be10727",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "as long as you're putting stuff into the bundle in onSaveInstanceState you should get it back if the activity is killed",
+    "ts": "1481162355.000213",
+    "id": "07be10728",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I believe my Activity B is not being killed as I read on SO. I am really confused though",
+    "ts": "1481162660.000214",
+    "id": "07be10729",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "is navigating away from B to C kills B?",
+    "ts": "1481162684.000215",
+    "id": "07be10730",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I think I'll add more detail",
+    "ts": "1481162723.000216",
+    "id": "07be10731",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "A contains 4 ViewPager (therefore 4 fragments)",
+    "ts": "1481162735.000217",
+    "id": "07be10732",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "Activity A comes from a splash screen resolving \"login\" info (e.g. firstname and lastname) when AccountManager has an info stored on it",
+    "ts": "1481162786.000218",
+    "id": "07be10733",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "Activity A receives this info from the serverl (I have POJO for the response)",
+    "ts": "1481162805.000219",
+    "id": "07be10734",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "Page 1 fragment is the profile page, there is a Edit Profile button there",
+    "ts": "1481162836.000220",
+    "id": "07be10735",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "Edit profile launches EditProfileActivity which presents button on what you want to change",
+    "ts": "1481162863.000221",
+    "id": "07be10736",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "Email, Password, Name",
+    "ts": "1481162868.000222",
+    "id": "07be10737",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2XDD1EC8",
+    "text": "I got a problem that it is showing another Icon on Notification that I didn't set to Notification.Builder. \ndoes anybody have same situation?",
+    "ts": "1481162872.000223",
+    "id": "07be10738",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I am focusing on Name now",
+    "ts": "1481162886.000224",
+    "id": "07be10739",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "This is now Activity B (EditProfileActivity) Activity C is the EditProfileForm configured for Name",
+    "ts": "1481162923.000225",
+    "id": "07be10740",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I think I'll look into this on Saturday this is wasting my time",
+    "ts": "1481163016.000226",
+    "id": "07be10741",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "<@U2XDD1EC8>",
+    "ts": "1481163318.000227",
+    "id": "07be10742",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I think this happened to me before",
+    "ts": "1481163325.000228",
+    "id": "07be10743",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "the first time it happened to me I just cleaned and build my project",
+    "ts": "1481163343.000229",
+    "id": "07be10744",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "the second time",
+    "ts": "1481163346.000230",
+    "id": "07be10745",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "if you use density folders",
+    "ts": "1481163351.000231",
+    "id": "07be10746",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "make sure the ic_notitication is \"THE SAME\" on all density folders. What happened on my end is that my ic_notification on hdpi folder is actually showing a different picture :confused:",
+    "ts": "1481163421.000232",
+    "id": "07be10747",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "so far this are the two gotchas I had before.",
+    "ts": "1481163441.000233",
+    "id": "07be10748",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2ZFHSDPU",
+    "text": "Is anyone familiar with using the Canvas class to draw 2d graphics? If so how can I save the 2d graphics on orientation change?",
+    "ts": "1481164401.000234",
+    "id": "07be10749",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "handle your own configuration change?",
+    "ts": "1481164439.000235",
+    "id": "07be10750",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2ZFHSDPU",
+    "text": "for example I'm making a slidey puzzle game and it scales off difficulty so rather than having 124890123 views to handle each difficulty size I just draw the entire game using a `onDraw(Canvas canvas)` type deal that draws all my buttons/background/numbers on buttons and I'm trying to handle saving those over orientation change",
+    "ts": "1481164603.000236",
+    "id": "07be10751",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2XDD1EC8",
+    "text": "<@U379MC1E0> thanks very much. :slightly_smiling_face: ",
+    "ts": "1481168622.000237",
+    "id": "07be10752",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2XDD1EC8",
+    "text": "<@U379MC1E0> i'll check it again. Thanks. ",
+    "ts": "1481168658.000238",
+    "id": "07be10753",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37BP6E73",
+    "text": "Hello <@U08GFT5V5> , I just want to thank you for your suggestion to have 2 way comm between activity and service through broadcast receivers and get rid of passing socket context in activities. I've also recently learned how to use GSON when parsing result.  :smile: <https://gist.github.com/arvi/10a875756d164ae4603e2549eb9d6a49>",
+    "ts": "1481169756.000239",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "07be10754",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2ZFHSDPU",
+    "text": "ty <@U08GFT5V5> I looked into it and got it working",
+    "ts": "1481178392.000240",
+    "id": "07be10755",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

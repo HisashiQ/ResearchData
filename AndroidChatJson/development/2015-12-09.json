@@ -1,0 +1,1771 @@
+[
+  {
+    "user": "U0B9TKCRL",
+    "text": "Hi guys, quick question: Which do you prefer when you implement RecyclerView/ListView's adapter?\n\n```\n// A\nList&lt;String&gt; dataSet = new ArrayList(Arrays.asList(\"a\", \"b\", \"c\"));\n\nFooAdapter adapter = new FooAdapter(dataSet);  // Adapter is extending RecyclerView.Adapter\n\ndataSet.add(\"d\"); // update via reference\ndataSet.add(\"e\");\n\nadapter.notifyDataSetChanged();\n```\n\n```\n// B\nList&lt;String&gt; dataSet = new ArrayList(Arrays.asList(\"a\", \"b\", \"c\"));\nBarAdapter adapter = new BarAdapter(); // Adapter is extending RecyclerView.Adapter\n\nadapter.addAll(dataSet); // update via adapter's method. notifyDataSetChanged is called inside the method\n\nadapter.add(\"d\");\nadapter.add(\"e\");\n```\n\nI prefere B, but many of my coworkers prefer A. So I want third opinion :simple_smile:",
+    "edited": {
+      "user": "U0B9TKCRL",
+      "ts": "1449651099.000000"
+    },
+    "ts": "1449649197.002211",
+    "id": "09de17866",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G4HQX7F",
+    "text": "If your adapter extends ArrayAdapter, I guess notifyDatasetChanged() might not be necessary in B.  It is called in the adapter's methods.\nAnyway, I prefer B when I use an Adapter extending ArrayAdapter as I believe it is the expected usage.",
+    "ts": "1449650238.002213",
+    "id": "09de17867",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B9TKCRL",
+    "text": "thx. in this case, FooAdapter and BarAdapter is extending RecyclerView.Adapter(or BaseAdapter",
+    "edited": {
+      "user": "U0B9TKCRL",
+      "ts": "1449650834.000000"
+    },
+    "ts": "1449650798.002215",
+    "id": "09de17868",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DB7PX9Q",
+    "text": "I also prefer B",
+    "ts": "1449650835.002217",
+    "id": "09de17869",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DB7PX9Q",
+    "text": "then you can also call notifyItemInserted() in the adapter's method",
+    "ts": "1449650848.002218",
+    "id": "09de17870",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DB7PX9Q",
+    "text": "instead of always using notifyDataSetChanged",
+    "ts": "1449650858.002219",
+    "id": "09de17871",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B9TKCRL",
+    "text": "okay updated the choice B",
+    "ts": "1449651110.002221",
+    "id": "09de17872",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "i prefer B too, keeping adapter logic within the adapter is cleaner imo",
+    "ts": "1449654877.002222",
+    "id": "09de17873",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "&gt;I tested the bottom right + icon issue. See if following explanation helps –\n&gt;1.       Add multiple scrips to your market watch screen so that it runs to multiple pages to force you to scroll.\n&gt;2.       Now scroll a bit (without the need of going to end of the list), you would notice that + icon is not visible.\n&gt;I noticed that when you slide up to view the other items in the vertical list then the + icon slides down to hide.\n \n&gt;We should keep that icon static, as it will be hard for our product team to train customers of such behavior.",
+    "ts": "1449657045.002223",
+    "id": "09de17874",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "the FAB hides the most important piece of data on each row, now bottom rows will not be visible",
+    "edited": {
+      "user": "U0B8R3VV4",
+      "ts": "1449657288.000000"
+    },
+    "ts": "1449657074.002224",
+    "id": "09de17875",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "can't decide who's more obtuse, our customir or their clients",
+    "ts": "1449657135.002225",
+    "id": "09de17876",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": ":facepalm:",
+    "ts": "1449657178.002226",
+    "id": "09de17877",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "You should make the data flow around the FAB now and see what they say :smile:",
+    "ts": "1449657550.002228",
+    "id": "09de17878",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "I made the fab 20% bigger",
+    "ts": "1449657759.002229",
+    "id": "09de17879",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "after commenting out the animation",
+    "ts": "1449657767.002230",
+    "id": "09de17880",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "lol",
+    "ts": "1449657772.002231",
+    "id": "09de17881",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "let's do some Pavlov shit here",
+    "ts": "1449657777.002232",
+    "id": "09de17882",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "make the fab match the screen",
+    "ts": "1449658180.002233",
+    "id": "09de17883",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "they can’t miss it then",
+    "ts": "1449658187.002234",
+    "id": "09de17884",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "wait afaik the usual behavior is if you scroll down, the icon hides, if you scroll up, it shows",
+    "ts": "1449658229.002235",
+    "id": "09de17885",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "thatsthejoke.jpg",
+    "ts": "1449659011.002236",
+    "id": "09de17886",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "eeeh",
+    "ts": "1449659090.002237",
+    "id": "09de17887",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "/giphy nervous laugh",
+    "attachments": [
+      {
+        "fallback": "giphy: <http://giphy.com/gifs/nervous-awkward-laughing-Cgn8igQPLz16g>",
+        "image_url": "http://media0.giphy.com/media/Cgn8igQPLz16g/giphy.gif",
+        "image_width": 500,
+        "image_height": 273,
+        "image_bytes": 843565,
+        "title": "nervous laugh",
+        "id": 1,
+        "title_link": "http://giphy.com/gifs/nervous-awkward-laughing-Cgn8igQPLz16g"
+      }
+    ],
+    "ts": "1449659093.002238",
+    "id": "09de17888",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "minute 20 of the meeting about it",
+    "ts": "1449663678.002239",
+    "id": "09de17889",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "our clients PM is taking Gmail as reference",
+    "ts": "1449663693.002240",
+    "id": "09de17890",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "ignoring the design",
+    "ts": "1449663697.002241",
+    "id": "09de17891",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "says customers will need training",
+    "ts": "1449663703.002242",
+    "id": "09de17892",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "and their product team can't provide it",
+    "ts": "1449663718.002243",
+    "id": "09de17893",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "sorry, this should be on hangout",
+    "ts": "1449663729.002244",
+    "id": "09de17894",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "says to move it up",
+    "ts": "1449663745.002245",
+    "id": "09de17895",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "so the user can peep behind it",
+    "ts": "1449663750.002246",
+    "id": "09de17896",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "if they want to see other rows, they move up and see it below the fab",
+    "ts": "1449663770.002247",
+    "id": "09de17897",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09UQHPQV",
+    "text": "Morning",
+    "ts": "1449664446.002248",
+    "id": "09de17898",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09UQHPQV",
+    "text": "Can we add our custom keyboard in third party application (facebook messager )?",
+    "ts": "1449664648.002249",
+    "id": "09de17899",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09UQHPQV",
+    "text": "Any help appreciate.",
+    "ts": "1449664669.002250",
+    "id": "09de17900",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<@U0B9TKCRL>: I would argue A is incorrect despite it working. Given the concept of ownership you are now passing of requirements of a the adapter onto your source data model. This isn’t a huge issue most of the time but imagine the situation where you need to change your data source from an ArrayList which works well in an adapter to a Queue or possible a Map. A switch to one of these other datatypes will end up forcing you to modify your adapter substantially just to support what should have been a completely unrelated change.",
+    "ts": "1449666694.002251",
+    "id": "09de17901",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B9TKCRL",
+    "text": "indeed. i said similar concern to coworkers,  but they keep writing same code:( ",
+    "ts": "1449667282.002252",
+    "id": "09de17902",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B9TKCRL",
+    "text": "maybe I should talk to them again with what I got from here ",
+    "ts": "1449667333.002253",
+    "id": "09de17903",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "It’s really a question of CS theory I suppose. Object Composition would summarize my argument for B. So if you want fancy words, slap them with that one",
+    "ts": "1449667408.002254",
+    "id": "09de17904",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<https://en.wikipedia.org/wiki/Object_composition>",
+    "ts": "1449667427.002255",
+    "id": "09de17905",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "basically you know for a fact that you need a fast access data model for updating views, that leaves you almost exclusively to use an array or an arraylist which we all know is really just a fancy array.",
+    "edited": {
+      "user": "U055GGAHS",
+      "ts": "1449667527.000000"
+    },
+    "ts": "1449667499.002256",
+    "id": "09de17906",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B9TKCRL",
+    "text": "thanks guys. your answers and suggestions really helped me",
+    "ts": "1449668748.002258",
+    "id": "09de17907",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C0HBLCE",
+    "text": "Hi, have you run into an issue with layout_alignBaseline=\"textviewid\" that depending on the os (I think lollipop vs pre lollipop) will align the view differently?",
+    "ts": "1449680757.002259",
+    "id": "09de17908",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C0HBLCE",
+    "text": "My case is: the textview has a fixed height (say 70dp). Aligning a button that way to this textview aligns it to the baseline of the text inside in lollipop (what I need) and to the bottom of the view in pre lollipop",
+    "ts": "1449680879.002260",
+    "id": "09de17909",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C0HBLCE",
+    "text": "Please let me know if you don't get what I'm trying to say",
+    "ts": "1449680963.002261",
+    "id": "09de17910",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Any other layout params that could affect the behavior? Baseline aligned views get positioned in a second layout pass and a first layout pass that positions other children of the layout might be positioned wrong that way. There is a bug on the issue tracker too ",
+    "edited": {
+      "user": "U04TK850N",
+      "ts": "1449683069.000000"
+    },
+    "ts": "1449683058.002262",
+    "id": "09de17911",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C0HBLCE",
+    "text": "Well the Textview has alignBottom to an imageview, that's the only thing I can see",
+    "ts": "1449684253.002264",
+    "id": "09de17912",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C0HBLCE",
+    "text": "Do you have the link to the issue? Thanks ",
+    "ts": "1449684301.002265",
+    "id": "09de17913",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C0HBLCE",
+    "text": "<@U04TK850N> ",
+    "ts": "1449684324.002266",
+    "id": "09de17914",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "<https://code.google.com/p/android/issues/detail?id=73697>",
+    "edited": {
+      "user": "U04TK850N",
+      "ts": "1449684366.000000"
+    },
+    "ts": "1449684359.002267",
+    "id": "09de17915",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "More tests for the god of tests!\n\n<http://artemzin.com/blog/test-expected-badpracticeexception/>",
+    "attachments": [
+      {
+        "service_name": "Android Hipster",
+        "title": "JUnit @Test excepted exception is a bad practice",
+        "title_link": "http://artemzin.com/blog/test-expected-badpracticeexception/",
+        "text": "Hello, dear reader. If you're familiar with JUnit 4 (please be familiar with it) you probably have seen or even used such form of expected exception check @Test(expected = SomeException.class). Let's see why it is a bad practice. Initial...",
+        "fallback": "Android Hipster: JUnit @Test excepted exception is a bad practice",
+        "ts": 1449626700,
+        "from_url": "http://artemzin.com/blog/test-expected-badpracticeexception/",
+        "id": 1
+      }
+    ],
+    "ts": "1449685727.002269",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U055GGAHS",
+          "U053PPGDC"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "09de17916",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "heh love seeing when my own personal conclusions are validated by others",
+    "ts": "1449685788.002271",
+    "reactions": [
+      {
+        "name": "smile_cat",
+        "users": [
+          "U091EBYSU"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "09de17917",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KK98UU",
+    "text": "<@U091EBYSU>: idk, seems like a lot more code for not much added benefit",
+    "ts": "1449689008.002272",
+    "id": "09de17918",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KK98UU",
+    "text": "#1 doesn’t really have anything to do with @Test(expected…)",
+    "ts": "1449689028.002273",
+    "id": "09de17919",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KK98UU",
+    "text": "also, testing the exception message seems fragile. (shouldn’t the message contain the user id too? :))",
+    "ts": "1449689103.002274",
+    "id": "09de17920",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "#1 agree but decided to mention",
+    "ts": "1449689111.002275",
+    "id": "09de17921",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G8VTVMH",
+    "subtype": "channel_join",
+    "text": "<@U0G8VTVMH|esfilho> has joined the channel",
+    "ts": "1449689139.002276",
+    "id": "09de17922",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KK98UU",
+    "text": "#1 is irrelevant to your point",
+    "ts": "1449689149.002277",
+    "id": "09de17923",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "ah yes didn’t see #4, kinda disagree with trying to test what should be the human readable piece",
+    "ts": "1449689150.002278",
+    "id": "09de17924",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "Actually, yes exception message will be much better if it would contain user ID. But it does not in the app I'm referring to ",
+    "ts": "1449689165.002279",
+    "id": "09de17925",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "I'll move #1 to bottom, thanks for the feedback! ",
+    "ts": "1449689192.002280",
+    "id": "09de17926",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KK98UU",
+    "text": "I would just remove it and rename the test method in your “bad” example, since it’s not really related to best practices for testing checked exceptions",
+    "ts": "1449689239.002281",
+    "id": "09de17927",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G8VTVMH",
+    "text": "Hello everyone, I could really use some help here: <http://stackoverflow.com/questions/34141033/retrofit-2-response-body-null-when-response-status-is-422-unprocessable-entit>",
+    "attachments": [
+      {
+        "title": "Retrofit 2 - Response body null when response status is 422 (unprocessable entity)",
+        "title_link": "http://stackoverflow.com/questions/34141033/retrofit-2-response-body-null-when-response-status-is-422-unprocessable-entit",
+        "text": "I'm using Retrofit to make a POST Request in my web server. However, I can't seem to get the response body when the response status is 422 (unprocessable entity). The response body is always nul...",
+        "fallback": "Retrofit 2 - Response body null when response status is 422 (unprocessable entity)",
+        "thumb_url": "http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/questions/34141033/retrofit-2-response-body-null-when-response-status-is-422-unprocessable-entit",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "id": 1
+      }
+    ],
+    "ts": "1449689239.002282",
+    "id": "09de17928",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G8VTVMH",
+    "text": "Thanks in advance :simple_smile:",
+    "ts": "1449689252.002284",
+    "id": "09de17929",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "<@U055GGAHS> main point of checking exception message is to check that exception was thrown in expected case",
+    "ts": "1449689260.002285",
+    "id": "09de17930",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "sure but I think it would be better to just have more exception classes vs relying on the inner message being correct",
+    "ts": "1449689285.002286",
+    "id": "09de17931",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KK98UU",
+    "text": "one other thing, I think `validate_shouldThrowWithCorrectMessageIfUserIdIsInvalid()` is a better method name if you are asserting on the error message",
+    "ts": "1449689286.002287",
+    "id": "09de17932",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "Imagine it'll check the user name first, initial test won't detect that ",
+    "ts": "1449689287.002288",
+    "id": "09de17933",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "<@U055GGAHS> sure, it's another possible solution too, but it's hardly scalable ",
+    "ts": "1449689426.002289",
+    "id": "09de17934",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "<@U08KK98UU> personally I don't think so, but if you wish — why not :) ",
+    "ts": "1449689459.002290",
+    "id": "09de17935",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I’m not sure i understand the argument there, its less scalable to have more exception classes vs testing for specific string error messages in exceptions?",
+    "ts": "1449689522.002291",
+    "id": "09de17936",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "really the source problem is that validation happens after the fact",
+    "ts": "1449689552.002292",
+    "id": "09de17937",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "the validation exception should be thrown on input and not at some later time forcing the exception to become responsible for conveying what exactly was the failure",
+    "ts": "1449689591.002293",
+    "id": "09de17938",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "but i know that is outside the scope of the article",
+    "ts": "1449689626.002294",
+    "id": "09de17939",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "Anyway, you're saying right things. A lot of exceptions is just harder to main, but it's good practice no doubt ",
+    "ts": "1449689978.002295",
+    "id": "09de17940",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G94E0QJ",
+    "subtype": "channel_join",
+    "text": "<@U0G94E0QJ|tangra> has joined the channel",
+    "ts": "1449692730.002296",
+    "id": "09de17941",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G94E0QJ",
+    "text": "Hey Guys and Girls! Any one has tried using the \"ActivityOptionsCompat.makeSceneTransitionAnimation\" and getting a transparent activity as a result? As soon as I make the         ActivityOptionsCompat options = null, the activity loads correctly.",
+    "ts": "1449693015.002297",
+    "id": "09de17942",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "I've been working on making my coding style more functional but I don't know if I'm going in the right direction... I think I have this class in a good place but I can't help but thinking I should get rid of these `Observable.create` somehow. I think I read somewhere that if you're creating your own Observables, you're probably doing something wrong :confused:",
+    "ts": "1449694789.002298",
+    "id": "09de17943",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0546QERR|damien5314> uploaded a file: <https://androidchat.slack.com/files/damien5314/F0G974PAT/oauth2_access_token_manager.java|OAuth2 access token manager>",
+    "file": {
+      "id": "F0G974PAT",
+      "created": 1449694825,
+      "timestamp": 1449694825,
+      "name": "OAuth2_access_token_manager.java",
+      "title": "OAuth2 access token manager",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U0546QERR",
+      "editable": true,
+      "size": 3631,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0G974PAT/oauth2_access_token_manager.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0G974PAT/download/oauth2_access_token_manager.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/damien5314/F0G974PAT/oauth2_access_token_manager.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0G974PAT-85b225d825",
+      "edit_link": "https://androidchat.slack.com/files/damien5314/F0G974PAT/oauth2_access_token_manager.java/edit",
+      "preview": "private Func1<AccessToken, Observable<AccessToken>> refreshUserAccessToken =\r\n        accessToken -> {\r\n            if (accessToken.secondsUntilExpiration() > EXPIRATION_THRESHOLD) {\r\n                return Observable.just(accessToken);\r\n            } else return refreshUserAccessToken(accessToken);\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-keyword\">private</span> <span class=\"cm-variable\">Func1</span><span class=\"cm-operator\">&lt;</span><span class=\"cm-variable\">AccessToken</span>, <span class=\"cm-variable\">Observable</span><span class=\"cm-operator\">&lt;</span><span class=\"cm-variable\">AccessToken</span><span class=\"cm-operator\">&gt;&gt;</span> <span class=\"cm-variable\">refreshUserAccessToken</span> <span class=\"cm-operator\">=</span></pre></div>\n<div><pre>        <span class=\"cm-variable\">accessToken</span> <span class=\"cm-operator\">-&gt;</span> {</pre></div>\n<div><pre>            <span class=\"cm-keyword\">if</span> (<span class=\"cm-variable\">accessToken</span>.<span class=\"cm-variable\">secondsUntilExpiration</span>() <span class=\"cm-operator\">&gt;</span> <span class=\"cm-variable\">EXPIRATION_THRESHOLD</span>) {</pre></div>\n<div><pre>                <span class=\"cm-keyword\">return</span> <span class=\"cm-variable\">Observable</span>.<span class=\"cm-variable\">just</span>(<span class=\"cm-variable\">accessToken</span>);</pre></div>\n<div><pre>            } <span class=\"cm-keyword\">else</span> <span class=\"cm-keyword\">return</span> <span class=\"cm-variable\">refreshUserAccessToken</span>(<span class=\"cm-variable\">accessToken</span>);</pre></div>\n</div>\n</div>\n",
+      "lines": 100,
+      "lines_more": 95,
+      "preview_is_truncated": null,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U0546QERR",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0546QERR|damien5314>",
+    "bot_id": null,
+    "ts": "1449694826.002299",
+    "id": "09de17944",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CHUGUDN",
+    "text": "does anyone use the android studio context/tasks feature w/ github?",
+    "ts": "1449694990.002300",
+    "id": "09de17945",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CHUGUDN",
+    "text": "I can’t figure out what goes into the api token slot",
+    "ts": "1449695007.002301",
+    "id": "09de17946",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0CHUGUDN|1mike12> uploaded a file: <https://androidchat.slack.com/files/1mike12/F0G94GXNX/pasted_image_at_2015_12_09_04_03_pm.png|what do>",
+    "file": {
+      "id": "F0G94GXNX",
+      "created": 1449695023,
+      "timestamp": 1449695023,
+      "name": "Pasted image at 2015_12_09 04_03 PM.png",
+      "title": "what do",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U0CHUGUDN",
+      "editable": false,
+      "size": 45214,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0G94GXNX/pasted_image_at_2015_12_09_04_03_pm.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0G94GXNX/download/pasted_image_at_2015_12_09_04_03_pm.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F0G94GXNX-b94ea8ea50/pasted_image_at_2015_12_09_04_03_pm_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F0G94GXNX-b94ea8ea50/pasted_image_at_2015_12_09_04_03_pm_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F0G94GXNX-b94ea8ea50/pasted_image_at_2015_12_09_04_03_pm_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 360,
+      "thumb_360_h": 298,
+      "thumb_480": "https://files.slack.com/files-tmb/T04PLNDMP-F0G94GXNX-b94ea8ea50/pasted_image_at_2015_12_09_04_03_pm_480.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_480_w": 480,
+      "thumb_480_h": 397,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F0G94GXNX-b94ea8ea50/pasted_image_at_2015_12_09_04_03_pm_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "image_exif_rotation": 1,
+      "original_w": 582,
+      "original_h": 481,
+      "permalink": "https://androidchat.slack.com/files/1mike12/F0G94GXNX/pasted_image_at_2015_12_09_04_03_pm.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0G94GXNX-f44758e32d",
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U0CHUGUDN",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0CHUGUDN|1mike12>",
+    "bot_id": null,
+    "ts": "1449695024.002302",
+    "id": "09de17947",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CHUGUDN",
+    "text": "I’ve tried my ssh.pub and ssh private",
+    "ts": "1449695036.002303",
+    "id": "09de17948",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "probably this? <https://github.com/settings/tokens>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "Build software better, together",
+        "title_link": "https://github.com/settings/tokens",
+        "text": "GitHub is where people build software. More than 11 million people use GitHub to discover, fork, and contribute to over 30 million projects.",
+        "fallback": "GitHub: Build software better, together",
+        "image_width": 1200,
+        "image_height": 1200,
+        "from_url": "https://github.com/settings/tokens",
+        "id": 1
+      }
+    ],
+    "ts": "1449695086.002304",
+    "id": "09de17949",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CHUGUDN",
+    "text": "<@U0546QERR>:  that was it! thanks",
+    "ts": "1449695214.002306",
+    "id": "09de17950",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08LHT588",
+    "subtype": "channel_join",
+    "text": "<@U08LHT588|krillsson> has joined the channel",
+    "ts": "1449697185.002307",
+    "id": "09de17951",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "<https://twittercommunity.com/t/fabric-initialization-issues-on-android-4-4-4/57785>",
+    "attachments": [
+      {
+        "service_name": "Twitter Developers",
+        "title": "Fabric initialization issues on Android 4.4.4",
+        "title_link": "https://twittercommunity.com/t/fabric-initialization-issues-on-android-4-4-4/57785",
+        "text": "I am getting this crash on initializing Fabric on Android 4.4.4 java.lang.NoClassDefFoundError: io.fabric.sdk.android.Fabric. It works fine on Android 6.0 . it crashes on the method call isInitialized() if (!Fabric.isInitialized()) { final Fabric fabric = new Fabric.Builder(this) .kits(new Crashlytics()) .debuggable(true) .build(); Fabric.with(fabric); }",
+        "fallback": "Twitter Developers: Fabric initialization issues on Android 4.4.4",
+        "from_url": "https://twittercommunity.com/t/fabric-initialization-issues-on-android-4-4-4/57785",
+        "id": 1
+      }
+    ],
+    "ts": "1449728896.002308",
+    "id": "09de17952",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

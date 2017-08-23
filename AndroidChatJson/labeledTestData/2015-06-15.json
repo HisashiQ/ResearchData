@@ -1,0 +1,299 @@
+[
+  {
+    "user": "U06BJPFD0",
+    "subtype": "channel_join",
+    "text": "<@U06BJPFD0|mramsden> has joined the channel",
+    "ts": "1434371921.000242",
+    "id": "15tr226",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "hey all, am I correct in my conclusion that there is no way to load AdMob banners asynchronously? I know it says in the documentation that this is against TOS (I think?) but it just seems against design protocol to block the UI thread with a network operation. and it's been making my app lag to hell :confused:",
+    "ts": "1434425117.000243",
+    "id": "15tr227",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "I'm trying to load banner ads every n items in a RecyclerView btw",
+    "ts": "1434425157.000244",
+    "id": "15tr228",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "I know people do that without blocking the UI thread, maybe it's a different service than admob",
+    "ts": "1434425399.000245",
+    "id": "15tr229",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "okay that sounds like native ads from mopub, I guess I should have compared services before trying ads",
+    "ts": "1434425560.000246",
+    "id": "15tr230",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<@U0546QERR>: well they definitely are no blocking the UI thread with networking as that would throw exceptions. If they are blocking the UI thread its for some other reason.",
+    "ts": "1434427883.000247",
+    "id": "15tr231",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "either way I would agree, you should find a different service",
+    "ts": "1434427893.000248",
+    "id": "15tr232",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "gotcha, yeah native ads in mopub look like the way to go. I just remember reading admob was more beginner-friendly so i defaulted to that",
+    "ts": "1434427931.000249",
+    "id": "15tr233",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "yeah I haven't used admob since 2.1 so I would be of no help there",
+    "ts": "1434427954.000250",
+    "id": "15tr234",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "the native ads plug right into an adapterview subclass, i'm sure someone's posted how to adapt it to recyclerview",
+    "ts": "1434428029.000251",
+    "id": "15tr235",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "basically exactly what i want",
+    "ts": "1434428037.000252",
+    "id": "15tr236",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "in recyclerview it is likely much easier to do",
+    "ts": "1434428182.000253",
+    "id": "15tr237",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<http://grepcode.com/file/repository.grepcode.com/java/ext/com.google.android/android/5.1.0_r1/android/support/v7/widget/RecyclerView.java#4420>",
+    "attachments": [
+      {
+        "text": "android.support.v7.widget.RecyclerView - A flexible view for providing a limited window into a large data set",
+        "fallback": "android.support.v7.widget.RecyclerView - A flexible view for providing a limited window into a large data set",
+        "from_url": "http://grepcode.com/file/repository.grepcode.com/java/ext/com.google.android/android/5.1.0_r1/android/support/v7/widget/RecyclerView.java#4420",
+        "id": 1
+      }
+    ],
+    "ts": "1434428184.000254",
+    "id": "15tr238",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "if you override that method in the adapter you can, based on position, identify the correct view to load",
+    "ts": "1434428209.000256",
+    "id": "15tr239",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "the internal recycler implementation will either move to instantiate the view view the createViewHolder method or move directly to the bindViewHolder method",
+    "ts": "1434428252.000257",
+    "id": "15tr240",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "oh yeah I already was doing that with my admob implementation, but i think mopub gives you a class that automatically injects the ads without having to add them into your adapter",
+    "ts": "1434428312.000258",
+    "id": "15tr241",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

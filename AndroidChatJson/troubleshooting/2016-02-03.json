@@ -1,0 +1,1205 @@
+[
+  {
+    "user": "U054A24ET",
+    "text": "hi guys, i need to perform some network calls in my android service",
+    "ts": "1454490520.000178",
+    "id": "03tr3664",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "im spawning a new thread to do this",
+    "ts": "1454490531.000179",
+    "id": "03tr3665",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "the service downloads stuff and saves it, and shows an ongoing notification while it's running",
+    "ts": "1454490613.000180",
+    "id": "03tr3666",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "the user can click cancel on the notification to stop the download",
+    "ts": "1454490621.000181",
+    "id": "03tr3667",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "is calling `interrupt()` on the thread sufficient to stop the thread cleanly?",
+    "edited": {
+      "user": "U054A24ET",
+      "ts": "1454490667.000000"
+    },
+    "ts": "1454490642.000182",
+    "id": "03tr3668",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "I don’t think it will be interrupted in many cases",
+    "ts": "1454491903.000184",
+    "id": "03tr3669",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C1FB3PF",
+    "text": "What API/library do you use for download?",
+    "ts": "1454491923.000185",
+    "id": "03tr3670",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Do you really need a new Thread in the Service?",
+    "ts": "1454492221.000186",
+    "id": "03tr3671",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "retrofit",
+    "ts": "1454492356.000187",
+    "id": "03tr3672",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "well if i use an IntentService there's no such problem, but if I use an IntentService I cannot figure out a way to cancel it if the user wants to",
+    "ts": "1454492392.000188",
+    "id": "03tr3673",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "im actually just downloading a potentially long json string and several images",
+    "ts": "1454492429.000189",
+    "id": "03tr3674",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053Q5XP2",
+    "text": "try lying to the user and just displaying “canceled” and throw away the result.",
+    "ts": "1454529778.000190",
+    "id": "03tr3675",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<@U054A24ET>: intentservices run on the main thread and should be handing off to a worker. So your worker can’t be cancelled?",
+    "ts": "1454530143.000191",
+    "id": "03tr3676",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<@U04TK850N>: threading in any service is always necessary. onHandleIntent in an IntentService is run on the main looper. In a base service you have onStartCommand which is the real root entry (called because of a call to startService()) of any service and is also on the  main looper",
+    "edited": {
+      "user": "U055GGAHS",
+      "ts": "1454530323.000000"
+    },
+    "ts": "1454530309.000192",
+    "id": "03tr3677",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "the better question, are you sure you need a service at all?",
+    "ts": "1454530352.000194",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U054A24ET"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "03tr3678",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "hm, I probably did my network access in an asynctask then :troll:",
+    "ts": "1454530366.000195",
+    "id": "03tr3679",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "services are useful for really long running tasks that need to be restarted with the same input data if the system decides they need to be killed to free resources",
+    "ts": "1454530375.000196",
+    "id": "03tr3680",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "alternately they are useful for IPC",
+    "ts": "1454530395.000197",
+    "id": "03tr3681",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "if this does not sound like it truly meets what you are trying to accomplish, simple threading may be a more logical and lighter choice",
+    "edited": {
+      "user": "U055GGAHS",
+      "ts": "1454530423.000000"
+    },
+    "ts": "1454530416.000198",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U054A24ET"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "03tr3682",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053Q5XP2",
+    "text": "You know how in fb messenger you can click the emoji button and it will replace the keyboard with an emoji keyboard while the buttons are still anchored to the bottom? Does anyone know how to keep it so stable while showing/hiding the keyboard? It always looks like it “jumps” for me because I can’t make my own view and the keyboard show/hide on the *exact* same frame.",
+    "ts": "1454533508.000200",
+    "id": "03tr3683",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A5KJJTA",
+    "text": "<http://stackoverflow.com/questions/35168890/mediarecorder-stop-is-not-working-while-trying-to-record-audio-from-livestream>",
+    "attachments": [
+      {
+        "title": "MediaRecorder.stop() is not working while trying to record audio from livestream",
+        "title_link": "http://stackoverflow.com/questions/35168890/mediarecorder-stop-is-not-working-while-trying-to-record-audio-from-livestream",
+        "text": "I am running through a query where am stuck little bit. I am trying to record live streaming audio using MediaRecorder but while calling stop function its showing an error \"illegal expression\".",
+        "fallback": "MediaRecorder.stop() is not working while trying to record audio from livestream",
+        "thumb_url": "http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/questions/35168890/mediarecorder-stop-is-not-working-while-trying-to-record-audio-from-livestream",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "id": 1
+      }
+    ],
+    "ts": "1454559367.000201",
+    "id": "03tr3684",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "<@U055GGAHS>: yeap, i cant find any examples for cancelling the worker thread; im new to services",
+    "ts": "1454559562.000203",
+    "id": "03tr3685",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "well what I was getting at is that cancelling a thread is up to you",
+    "ts": "1454559587.000204",
+    "id": "03tr3686",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "is this a networking task?",
+    "ts": "1454559595.000205",
+    "id": "03tr3687",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "yeap",
+    "ts": "1454559599.000206",
+    "id": "03tr3688",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "are you using a library for the networking?",
+    "ts": "1454559606.000207",
+    "id": "03tr3689",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "retrofit",
+    "ts": "1454559611.000208",
+    "id": "03tr3690",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "retrofit 1 or 2?",
+    "ts": "1454559617.000209",
+    "id": "03tr3691",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "not the beta 2",
+    "ts": "1454559619.000210",
+    "id": "03tr3692",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "retrofit 1",
+    "ts": "1454559621.000211",
+    "id": "03tr3693",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "oh well nothing you can do then",
+    "ts": "1454559664.000212",
+    "id": "03tr3694",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "retrofit didnt support cancelling in 2 because ¯\\_(ツ)_/¯",
+    "ts": "1454559677.000213",
+    "id": "03tr3695",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "ION had it all along but ION isn’t ‘cool’ so idk",
+    "ts": "1454559690.000214",
+    "id": "03tr3696",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I would recommend just trying to complete the request regardless",
+    "ts": "1454559714.000215",
+    "id": "03tr3697",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "work queues would be good here",
+    "ts": "1454559727.000216",
+    "id": "03tr3698",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "something like this may also be applicable but again you would be better off just attempting to complete whatever work was queued in hopes that later on you need the same data and you just happened to have already got it <http://stackoverflow.com/a/31603291/1286667>",
+    "attachments": [
+      {
+        "title": "Retrofit + Okhttp cancel operation not working",
+        "title_link": "http://stackoverflow.com/a/31603291/1286667",
+        "text": "I am using retrofit in my application like this final OkHttpClient okHttpClient = new OkHttpClient(); okHttpClient.interceptors().add(new YourInterceptor()); final OkClient okClient...",
+        "fallback": "Retrofit + Okhttp cancel operation not working",
+        "thumb_url": "http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/a/31603291/1286667",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "id": 1
+      }
+    ],
+    "edited": {
+      "user": "U055GGAHS",
+      "ts": "1454559808.000000"
+    },
+    "ts": "1454559797.000217",
+    "id": "03tr3699",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "ok thanks man",
+    "ts": "1454559820.000220",
+    "id": "03tr3700",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "As for services, just to make this clear.\n\nstartService(..) -&gt; | bridge internally in android  to service | service.onStart(…) -&gt; service.onStartCommand(..)",
+    "ts": "1454559868.000221",
+    "id": "03tr3701",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "this is all the same thread so you do not cancel a service",
+    "ts": "1454559877.000222",
+    "id": "03tr3702",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "this is for intentservice right?",
+    "ts": "1454559889.000223",
+    "id": "03tr3703",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "for any service",
+    "ts": "1454559894.000224",
+    "id": "03tr3704",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "services can be stopped by this is more related to cleaning up resources or terminating a separate service process than it related to stopping work",
+    "ts": "1454559920.000225",
+    "id": "03tr3705",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "all work done by a service should by contract be done on a ‘worker'",
+    "ts": "1454559934.000226",
+    "id": "03tr3706",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "aka a background thread",
+    "ts": "1454559939.000227",
+    "id": "03tr3707",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "this concept can be hard for new devs and the term service doesn’t help the matter as it somewhat implies its a background task",
+    "ts": "1454559967.000228",
+    "id": "03tr3708",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "err and yes onHandleIntent is on a worker thread",
+    "ts": "1454560015.000229",
+    "id": "03tr3709",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "but don’t use intentservices, they are pointless =P",
+    "ts": "1454560027.000230",
+    "id": "03tr3710",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<http://grepcode.com/file_/repo1.maven.org/maven2/org.robolectric/android-all/4.4_r1-robolectric-1/android/app/IntentService.java/?v=source>",
+    "ts": "1454560092.000231",
+    "id": "03tr3711",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "intentservice should have been more of a sample code than a ‘here use this’ implementation imo",
+    "ts": "1454560111.000232",
+    "id": "03tr3712",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I suppose it is useful for some specific cases but practically every service I have ever needed to create needed to handle N possible workloads sanely requiring me to think hard about how many threads would really be beneficial for processing and how they tie into the rest of what the application is doing.",
+    "ts": "1454560182.000233",
+    "id": "03tr3713",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "thanks for the insight <@U055GGAHS>",
+    "ts": "1454561949.000234",
+    "id": "03tr3714",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "let me go back to the roots and see if i REALLY need a service",
+    "ts": "1454562148.000235",
+    "id": "03tr3715",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "<@U0A5KJJTA>:",
+    "ts": "1454562601.000236",
+    "id": "03tr3716",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "outputfile = getFilesDir().getPath();",
+    "ts": "1454562603.000237",
+    "id": "03tr3717",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "you need to actually create the file",
+    "ts": "1454562620.000238",
+    "id": "03tr3718",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U054A24ET|squeeish> uploaded a file: <https://androidchat.slack.com/files/squeeish/F0L8KL97S/-.java|Untitled>",
+    "file": {
+      "id": "F0L8KL97S",
+      "created": 1454562856,
+      "timestamp": 1454562856,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U054A24ET",
+      "editable": true,
+      "size": 58,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0L8KL97S/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0L8KL97S/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/squeeish/F0L8KL97S/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0L8KL97S-1c03d6b560",
+      "edit_link": "https://androidchat.slack.com/files/squeeish/F0L8KL97S/-.java/edit",
+      "preview": "File file = new File(context.getFilesDir(), YOURFILENAME);",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-variable\">File</span> <span class=\"cm-variable\">file</span> <span class=\"cm-operator\">=</span> <span class=\"cm-keyword\">new</span> <span class=\"cm-variable\">File</span>(<span class=\"cm-variable\">context</span>.<span class=\"cm-variable\">getFilesDir</span>(), <span class=\"cm-variable\">YOURFILENAME</span>);</pre></div>\n</div>\n</div>\n",
+      "lines": 1,
+      "lines_more": 0,
+      "preview_is_truncated": null,
+      "channels": [
+        "C0565EVTD"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U054A24ET",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U054A24ET|squeeish>",
+    "bot_id": null,
+    "ts": "1454562856.000239",
+    "id": "03tr3719",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A5KJJTA",
+    "text": "ooo god did i missed that",
+    "ts": "1454563147.000240",
+    "id": "03tr3720",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "does it work now <@U0A5KJJTA>",
+    "ts": "1454565417.000241",
+    "id": "03tr3721",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A5KJJTA",
+    "text": "one doubt",
+    "ts": "1454566571.000242",
+    "id": "03tr3722",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A5KJJTA",
+    "text": "can u kindly give that exact method",
+    "ts": "1454566586.000243",
+    "id": "03tr3723",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A5KJJTA",
+    "text": "<@U054A24ET>:",
+    "ts": "1454566593.000244",
+    "id": "03tr3724",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

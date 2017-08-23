@@ -1,0 +1,220 @@
+[
+  {
+    "user": "U1UF1DWMN",
+    "text": "<@U1UF1DWMN|ashish> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1469265439.000188",
+    "id": "23be6718",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1UEMCFCK",
+    "text": "<@U1UEMCFCK|mubarakmohideen> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1469294436.000189",
+    "id": "23be6719",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1UEMCFCK",
+    "text": "which tool best for creating android app prototype ?",
+    "ts": "1469296244.000190",
+    "id": "23be6720",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0L71T98B",
+    "text": "to design UI or to develop",
+    "ts": "1469301426.000191",
+    "id": "23be6721",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0L71T98B",
+    "text": "first i think is Sketch and second one is Android Studio",
+    "ts": "1469301451.000192",
+    "id": "23be6722",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0L71T98B",
+    "text": "<@U1UEMCFCK>:  ^^",
+    "ts": "1469301796.000193",
+    "id": "23be6723",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "designers on my project use Sketch, it's pretty cool",
+    "ts": "1469301840.000194",
+    "id": "23be6724",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Ya Sketch, Material Design components are available for Sketch",
+    "ts": "1469301875.000195",
+    "id": "23be6725",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Everybody uses Sketch these days, Facebook, Dribble, Google all provide Sketch files before providing ai or other files.",
+    "ts": "1469301930.000196",
+    "id": "23be6726",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Iirc",
+    "ts": "1469301935.000197",
+    "id": "23be6727",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "Question about Mixpanel tracking duration of app being used. I basically start the timeEvent in onCreate method of my base activity, and stop the timeEvent in onDestroy method. However, by doing so, this method will be call when users navigate in my app, meaning from Activity A to Activity B, onDestroy will be called. This is not what I am trying to achieve. I wanna be able to see how long the app is being used, so the scenario is: user opens the app, the timeEvent is started, when user close the app (press home or kills the app), stop the timeEvent. Any ideas?",
+    "ts": "1469332290.000198",
+    "id": "23be6728",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "```    @Override\n    protected void onCreate(@Nullable Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n\n        mMixpanelAPI = MixpanelAPI.getInstance(this, this.getString(R.string.mixpanel_token));\n        mMixpanelAPI.track(\"App Opened\");\n        mMixpanelAPI.timeEvent(\"App Session\");\n\n    }\n\n    @Override\n    protected void onDestroy() {\n        super.onDestroy();\n        mMixpanelAPI.timeEvent(\"App Session\");\n    }\n```",
+    "ts": "1469332327.000199",
+    "id": "23be6729",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

@@ -1,0 +1,640 @@
+[
+  {
+    "user": "U3FRYA136",
+    "text": "<@U3FRYA136|emce> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481898821.000288",
+    "id": "16li8393",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Q5FEWTH",
+    "text": "anyone here familiar with firebase storage api?",
+    "ts": "1481900155.000289",
+    "id": "16li8394",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Q5FEWTH",
+    "text": "i’m wondering if i can prevent public access to the http url of an uploaded item. (in this case it’s an image)",
+    "ts": "1481900177.000290",
+    "id": "16li8395",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3F4S02CQ",
+    "text": "<@U3F4S02CQ|benlevy> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481906078.000291",
+    "id": "16li8396",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3CNGU56H",
+    "text": "<@U0546QERR> wow thanks for the great post, just saw it. I am using AndroidJSCore for my open source project because I’m building it as cross platform, and for iOS I already use JavascriptCore, so didn’t want to mess with a new framework just in case I run into headaches. I guess my biggest concern was maybe somehow any other js engine for Android would behave differently than JavascriptCore for iOS if I wasn’t using a direct port of JavascriptCore. But this maybe just a naive hypothesis. Was j2v8 consistent with iOS javascriptcore in this context? Would be super helpful to know, thanks :slightly_smiling_face:",
+    "ts": "1481912448.000292",
+    "id": "16li8397",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "we haven't noticed any differences in behavior so far :slightly_smiling_face:",
+    "ts": "1481912541.000293",
+    "id": "16li8398",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "if there are any differences they would become pretty apparent i think, we're in the process of implementing a feature that relies heavily on shared javascript that's fairly complex",
+    "edited": {
+      "user": "U0546QERR",
+      "ts": "1481912629.000000"
+    },
+    "ts": "1481912618.000294",
+    "id": "16li8399",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3CNGU56H",
+    "text": "Thanks! <@U0546QERR>, regarding: \"J2V8 includes pre-built binaries for the two most common CPU ABIs amongst Android devices, armeabi-v7a and x86” =&gt; I’m a newbie to Android so was wondering if I can assume these two would be good enough if I’m just developing an Android phone/tablet library",
+    "edited": {
+      "user": "U3CNGU56H",
+      "ts": "1481912721.000000"
+    },
+    "ts": "1481912686.000296",
+    "id": "16li8400",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i was no expert on CPU architectures, but from what we've gathered, when you upload an app to google play with native binaries, your app becomes available only to phones that support those ABIs",
+    "ts": "1481912837.000298",
+    "id": "16li8401",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "that said, the \"devices supported\" reported by google play when we added j2v8 didn't really go down much at all",
+    "ts": "1481912868.000299",
+    "id": "16li8402",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "why not just compile it for the other archs",
+    "ts": "1481912923.000300",
+    "id": "16li8403",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "the build before j2v8 says 12615 devices supported, the build with j2v8 says 12566 devices",
+    "ts": "1481912937.000301",
+    "id": "16li8404",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i've never compiled native code before ¯\\_(ツ)_/¯",
+    "ts": "1481912980.000302",
+    "id": "16li8405",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "guess i could have asked the library author though",
+    "ts": "1481912995.000303",
+    "id": "16li8406",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "but tl;dr if you include it in a library, those using your library would end up in the same scenario. i don't think it's that big of a deal though",
+    "ts": "1481913061.000304",
+    "id": "16li8407",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3CNGU56H",
+    "text": "Haha i guess i’m moving to j2v8! sorry 49 devices, we’ll miss you :slightly_smiling_face:",
+    "ts": "1481913069.000305",
+    "id": "16li8408",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i will be updating the post today with my findings from duktape btw. in short, duktape is way smaller and just as reliable as j2v8, but not as fast",
+    "ts": "1481913121.000306",
+    "id": "16li8409",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3CNGU56H",
+    "text": "<@U055GGAHS> in my case I’m working on a unique setup, which is kind of like a library but also a finished app that’s supposed to be easy enough for anyone to customize in seconds, so trying to avoid tricky steps as much as possible",
+    "ts": "1481913137.000307",
+    "id": "16li8410",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "so depending on your needs that might be an option as well",
+    "ts": "1481913143.000308",
+    "id": "16li8411",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3CNGU56H",
+    "text": "Yeah i was actually also considering duktape as well. that would be super helpful!",
+    "ts": "1481913158.000309",
+    "id": "16li8412",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "we'll still be sticking with j2v8 because our use case involves marshalling hundreds of models into JS and running an algorithm, so the speed is priority. but i might swap in duktape in a branch just to see how it'd fare",
+    "ts": "1481913230.000310",
+    "id": "16li8413",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3CNGU56H",
+    "text": "yeah please keep us posted on the blog post update! and thanks so much for spending time to do the research :slightly_smiling_face:",
+    "ts": "1481913306.000311",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U0546QERR"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "16li8414",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "<@U3CNGU56H> no probs :slightly_smiling_face: the post is updated",
+    "ts": "1481920505.000312",
+    "id": "16li8415",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K8T5YNT",
+    "text": "<https://github.com/jeancsanchez/JcPlayer>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "jeancsanchez/JcPlayer",
+        "title_link": "https://github.com/jeancsanchez/JcPlayer",
+        "text": "JcPlayer - :musical_note: A simple audio player for Android applications.",
+        "fallback": "GitHub: jeancsanchez/JcPlayer",
+        "thumb_url": "https://avatars0.githubusercontent.com/u/11152015?v=3&s=400",
+        "from_url": "https://github.com/jeancsanchez/JcPlayer",
+        "thumb_width": 256,
+        "thumb_height": 256,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1481920520.000313",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "16li8416",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3CNGU56H",
+    "text": "<@U0546QERR> thanks! reading now..",
+    "ts": "1481920545.000315",
+    "id": "16li8417",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3CNGU56H",
+    "text": "wow the small apk size for duktape is pretty impressive, although it still sounds like j2v8 is the way to go since it has nice balance of the size/performance",
+    "ts": "1481920704.000316",
+    "id": "16li8418",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "it really depends on your app. if your app is small and only running a couple lines of logic, duktape might be a good first solution to try, just because it would keep your APK size slimmed down",
+    "ts": "1481920806.000317",
+    "id": "16li8419",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "if you're running an algorithm over 100s/1000s of models though, and want it done fast, possibly on the UI thread where you can't afford to wait, j2v8 would probably be a significant improvement",
+    "ts": "1481920927.000318",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U3CNGU56H"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "16li8420",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3CNGU56H",
+    "text": "yeah that makes sense, i guess i gotta try both and see :slightly_smiling_face:",
+    "ts": "1481920992.000319",
+    "id": "16li8421",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3G06ASRY",
+    "text": "<@U3G06ASRY|vivi> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481922772.000320",
+    "id": "16li8422",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3G4V7HMJ",
+    "text": "<@U3G4V7HMJ|andrewh123> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481942900.000321",
+    "id": "16li8423",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3FBTRYJU",
+    "text": "<@U3FBTRYJU|maulik22995> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481958056.000322",
+    "id": "16li8424",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

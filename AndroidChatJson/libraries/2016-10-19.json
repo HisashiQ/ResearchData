@@ -1,0 +1,330 @@
+[
+  {
+    "user": "U2R7UCXMK",
+    "text": "<@U2R7UCXMK|quabebap> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476865984.000618",
+    "id": "19li7775",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2R9AFDBN",
+    "text": "<@U2R9AFDBN|augustomoraiskz> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476875480.000619",
+    "id": "19li7776",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RAXA0GY",
+    "text": "<@U2RAXA0GY|mghouse> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476883137.000620",
+    "id": "19li7777",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JPSG7HD",
+    "text": "For those who need a beautiful chart in their apps:\n<https://github.com/DmitriyZaitsev/RadarChartView>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "DmitriyZaitsev/RadarChartView",
+        "title_link": "https://github.com/DmitriyZaitsev/RadarChartView",
+        "text": "RadarChartView - Android view (widget) for rendering radial diagrams",
+        "fallback": "GitHub: DmitriyZaitsev/RadarChartView",
+        "thumb_url": "https://avatars3.githubusercontent.com/u/2178331?v=3&s=400",
+        "from_url": "https://github.com/DmitriyZaitsev/RadarChartView",
+        "thumb_width": 370,
+        "thumb_height": 370,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1476884501.000621",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U1ZRXQCGY"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "19li7778",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N7D6F50",
+    "text": "",
+    "bot_id": "B0N7DNUT0",
+    "attachments": [
+      {
+        "fallback": "DmitriyZaitsev/RadarChartView",
+        "text": "# Android view (widget) for rendering radial diagrams\n\n\n## Demo\n&lt;img src=\"/images/demo_01.gif\" height=\"524\" width=\"296\"&gt;&lt;img src=\"/images/demo_02.gif\" height=\"524\" width=\"296\"&gt;&lt;img src=\"/images/demo_03.gif\" height=\"524\" width=\"296\"&gt;\n\n## How to start\n\nFrom code\n```java\n// Prepare the data. We're going to show the top ten cheese producing U.S. states in 2013 (in 1,000 pounds)\nfinal Map&lt;String, Float&gt; axis = new LinkedHashMap&lt;&gt;(10);\naxis.put(\"CA\", 2312.895F);\naxis.put(\"ID\", 871.640F);\naxis.put(\"NY\", 751.280F);\naxis.put(\"NM\", 661.293F);\naxis.put(\"MN\", 661.293F);\naxis.put(\"PA\", 426.985F);\naxis.put(\"IA\", 267.249F);\naxis.put(\"OH\", 196.676F);\naxis.put(\"VT\", 127.346F);\n\n// Set your data to the view\nfinal RadarChartView chartView = (RadarChartView) findViewById(R.id.chartView);\nchartView.setAxis(axis);\n\nchartView.setAxisMax(2855.681F);         // set max value for the chart\nchartView.addOrReplace(\"WI\", 2855.681F); // add new axis\nchartView.addOrReplace(\"OH\", 281.59F);   // change the existing value\nchartView.setAutoSize(true);             // auto balance the chart\nchartView.setCirclesOnly(true);          // if you want circles instead of polygons\nchartView.setChartStyle(FILL);           // chart drawn with this style will be filled not stroked\n// ...\n// and many other attributes..\n```\n\nFrom XML\n```xml\n&lt;com.dzaitsev.android.widget.RadarChartView\n  android:id=\"@+id/radar_chart\"\n  android:layout_width=\"match_parent\"\n  android:layout_height=\"wrap_content\"\n  android:background=\"#fff\"\n  android:padding=\"30dp\"\n  app:axisColor=\"#22737b\"\n  app:axisMax=\"280\"\n  app:axisTick=\"75\"\n  app:axisWidth=\"1dp\"\n  app:chartColor=\"#C8FF4081\"\n  app:chartStyle=\"stroke\"\n  app:chartWidth=\"3dp\"\n  app:circlesOnly=\"false\"\n  app:endColor=\"#c3e3e5\"\n  app:startColor=\"#5f9ca1\"\n  app:textSize=\"12sp\" /&gt;\n```\n\n## Download\n\nGrab via Gradle:\n```groovy\n// add this repository to your project\nallprojects {\n  repositories {\n    // ...\n    maven { url '<https://dl.bintray.com/dmitriyzaitsev/maven>' }\n    // ...\n  }\n}\n```\n\n```groovy\ncompile 'com.dzaitsev.android.widget:radarchartview:0.1.0'\n```\n\nMaven:\n\n```xml\n&lt;dependency&gt;\n    &lt;groupId&gt;com.dzaitsev.android.widget&lt;/groupId&gt;\n    &lt;artifactId&gt;radarchartview&lt;/artifactId&gt;\n    &lt;version&gt;0.1.0&lt;/version&gt;\n&lt;/dependency&gt;\n```\n\n## License\n\n```\nCopyright 2016 Dmytro Zaitsev\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    <http://www.apache.org/licenses/LICENSE-2.0>\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n```",
+        "title": "DmitriyZaitsev/RadarChartView",
+        "id": 1,
+        "title_link": "https://github.com/DmitriyZaitsev/RadarChartView",
+        "color": "FFFFFF",
+        "fields": [
+          {
+            "title": "Open issues",
+            "value": "0",
+            "short": true
+          },
+          {
+            "title": "Languages",
+            "value": "Java",
+            "short": true
+          },
+          {
+            "title": "Contributors",
+            "value": "1",
+            "short": true
+          },
+          {
+            "title": "License",
+            "value": "Apache License 2.0",
+            "short": true
+          },
+          {
+            "title": "Commits",
+            "value": "41",
+            "short": true
+          },
+          {
+            "title": "Releases",
+            "value": "0",
+            "short": true
+          },
+          {
+            "title": "Branches",
+            "value": "1",
+            "short": true
+          }
+        ],
+        "mrkdwn_in": [
+          "title",
+          "text"
+        ]
+      }
+    ],
+    "ts": "1476884503.000623",
+    "id": "19li7779",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RC1QD8R",
+    "text": "<@U2RC1QD8R|marko> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476886055.000624",
+    "id": "19li7780",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "that looks pretty cool",
+    "ts": "1476886185.000625",
+    "id": "19li7781",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RCQDPAN",
+    "text": "<@U2RCQDPAN|oleksa.reshetnikov> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476887803.000626",
+    "id": "19li7782",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RGRM7QA",
+    "text": "<@U2RGRM7QA|rubenlaursen> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476901095.000628",
+    "id": "19li7783",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RKCC8H4",
+    "text": "<@U2RKCC8H4|tahaan> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476912639.000629",
+    "id": "19li7784",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RLERKBN",
+    "text": "<@U2RLERKBN|dlucci> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476919074.000630",
+    "id": "19li7785",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RN369B9",
+    "text": "<@U2RN369B9|sdev> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476927884.000631",
+    "id": "19li7786",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RPCD1F0",
+    "text": "<@U2RPCD1F0|ratan> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476943344.000632",
+    "id": "19li7787",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

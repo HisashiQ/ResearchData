@@ -1,0 +1,1346 @@
+[
+  {
+    "user": "U0Z248CVB",
+    "text": "Hello, guys. I have a parent fragment in which I have a nested fragment. When i go to another fragment and go back the nested fragment is not there. The instance of the nested fragment is != null but it’s not visible. Here is the code which I am using:",
+    "ts": "1479202055.000994",
+    "id": "15de50150",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0Z248CVB|vaklinzi> uploaded a file: <https://androidchat.slack.com/files/vaklinzi/F32J2UQ3D/Untitled.txt|Untitled>",
+    "file": {
+      "id": "F32J2UQ3D",
+      "created": 1479202070,
+      "timestamp": 1479202070,
+      "name": "Untitled.txt",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "text",
+      "pretty_type": "Plain Text",
+      "user": "U0Z248CVB",
+      "editable": true,
+      "size": 196,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F32J2UQ3D/Untitled.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F32J2UQ3D/download/Untitled.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/vaklinzi/F32J2UQ3D/Untitled.txt",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F32J2UQ3D-5b77e2b8ac",
+      "edit_link": "https://androidchat.slack.com/files/vaklinzi/F32J2UQ3D/Untitled.txt/edit",
+      "preview": "FragmentTransaction transaction = getFragmentManager().beginTransaction();\r\ntransaction.addToBackStack(CommunityFeedFragment.class.getName());\r\ntransaction.add(R.id.child_fragment, home).commit();",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>FragmentTransaction transaction = getFragmentManager().beginTransaction();</pre></div>\n<div><pre>transaction.addToBackStack(CommunityFeedFragment.class.getName());</pre></div>\n<div><pre>transaction.add(R.id.child_fragment, home).commit();</pre></div>\n</div>\n</div>\n",
+      "lines": 3,
+      "lines_more": 0,
+      "preview_is_truncated": false,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U0Z248CVB",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0Z248CVB|vaklinzi>",
+    "bot_id": null,
+    "ts": "1479202071.000995",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "15de50151",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "`getChildFragmentManager()`?",
+    "ts": "1479202150.000996",
+    "id": "15de50152",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Z248CVB",
+    "text": "for using getChildFragmentManager() I should change Fragments to be from support library and should make a lot of changes. Is this the only way?",
+    "edited": {
+      "user": "U0Z248CVB",
+      "ts": "1479202237.000000"
+    },
+    "ts": "1479202222.000997",
+    "id": "15de50153",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "No, as mentioned somewhere, there is another child fragment manager in support v13. But I don’t know it exactly, just seen somewhere.",
+    "ts": "1479202307.000999",
+    "id": "15de50154",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09UQHPQV",
+    "text": "keep track of your childFragment and don't forget to remove from the backstack.",
+    "ts": "1479204291.001000",
+    "id": "15de50155",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1SJP1V24",
+    "text": "Hi guys !\ndoes any one have worked on instagram image compression?\nhow does it achieve High quality image?",
+    "ts": "1479210116.001002",
+    "id": "15de50156",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "had a look through <https://engineering.instagram.com/tagged/android>",
+    "attachments": [
+      {
+        "service_name": "Instagram Engineering",
+        "title": "Android – Instagram Engineering",
+        "title_link": "https://engineering.instagram.com/tagged/android",
+        "text": "Read writing about Android in Instagram Engineering. Stories from the people who build @Instagram.",
+        "fallback": "Instagram Engineering: Android – Instagram Engineering",
+        "image_url": "https://d262ilb51hltx0.cloudfront.net/max/1200/1*CPgwLHR6jno_tOmF0--7eg.jpeg",
+        "from_url": "https://engineering.instagram.com/tagged/android",
+        "image_width": 250,
+        "image_height": 250,
+        "image_bytes": 52332,
+        "service_icon": "https://d262ilb51hltx0.cloudfront.net/proxy/1*Akq8aSfZqfW1fceMxKqBZA.png",
+        "id": 1
+      }
+    ],
+    "ts": "1479211292.001003",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "15de50157",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "found nothing that could help you",
+    "ts": "1479211299.001005",
+    "id": "15de50158",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "but you might find it an interesting read",
+    "ts": "1479211304.001006",
+    "id": "15de50159",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1SJP1V24",
+    "text": "Thanks for the link! I have read all of this blogs by instagram!",
+    "ts": "1479212079.001007",
+    "id": "15de50160",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1SJP1V24",
+    "text": "but didn't help!",
+    "ts": "1479212090.001008",
+    "id": "15de50161",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U324KH8TS",
+    "text": "<@U324KH8TS|kpaterson> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1479226646.001009",
+    "id": "15de50162",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Does anyone know of a way to get exif data for an image from a bytearray without saving the bytearray as an image on the file system first?",
+    "ts": "1479227758.001010",
+    "id": "15de50163",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<https://github.com/drewnoakes/metadata-extractor>\n\n<@U1LJG0Y03> you can pass a random access reader to one of its static methods I believe",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "drewnoakes/metadata-extractor",
+        "title_link": "https://github.com/drewnoakes/metadata-extractor",
+        "text": "metadata-extractor - Extracts Exif, IPTC, XMP, ICC and other metadata from image files",
+        "fallback": "GitHub: drewnoakes/metadata-extractor",
+        "thumb_url": "https://avatars3.githubusercontent.com/u/350947?v=3&s=400",
+        "from_url": "https://github.com/drewnoakes/metadata-extractor",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1479233358.001011",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "15de50164",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U32RZ04SF",
+    "text": "<@U32RZ04SF|akantor> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1479235679.001013",
+    "id": "15de50165",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U32TL6811",
+    "text": "<@U32TL6811|natalia> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1479241514.001014",
+    "id": "15de50166",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18E0PY49",
+    "text": "Why doesn't dagger make classes for commonTest classes ?",
+    "edited": {
+      "user": "U18E0PY49",
+      "ts": "1479243701.000000"
+    },
+    "ts": "1479243686.001015",
+    "id": "15de50167",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLABD1S",
+    "text": "I just finished the first version of my QuickDemo tool: <https://github.com/PSPDFKit-labs/QuickDemo>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "PSPDFKit-labs/QuickDemo",
+        "title_link": "https://github.com/PSPDFKit-labs/QuickDemo",
+        "text": "Android QuickDemo",
+        "fallback": "GitHub: PSPDFKit-labs/QuickDemo",
+        "thumb_url": "https://avatars3.githubusercontent.com/u/10983927?v=3&s=400",
+        "from_url": "https://github.com/PSPDFKit-labs/QuickDemo",
+        "thumb_width": 200,
+        "thumb_height": 200,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1479245988.001017",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "15de50168",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLABD1S",
+    "text": "Android demo mode controls (+ quick settings tile)",
+    "ts": "1479246002.001019",
+    "id": "15de50169",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLABD1S",
+    "text": "Feedback is very much welcome",
+    "ts": "1479246019.001020",
+    "id": "15de50170",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLABD1S",
+    "text": "A blog post about the details is nearly done and will follow soon",
+    "ts": "1479246039.001021",
+    "id": "15de50171",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "For background drawable assets (such as a full screen image for an activity or something) that you package with your apps, what dimensions do you have the image in hdpi?",
+    "ts": "1479248056.001022",
+    "id": "15de50172",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "<@U05473HHT> for ours we only package 3 versions, default drawable is 720 × 1280, drawable-large is 1536 × 2048, drawable-large-land is 2048 × 1536",
+    "ts": "1479248561.001023",
+    "id": "15de50173",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "can't really comment if that's best practice but it looks reasonable :neutral_face:",
+    "ts": "1479248582.001024",
+    "id": "15de50174",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "Hmm, that is much larger than I was expecting.",
+    "ts": "1479248606.001025",
+    "id": "15de50175",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "yeah even after compressing the PNG they take up a little over 1 MB in the apk",
+    "ts": "1479248674.001026",
+    "id": "15de50176",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "probably would be worth trying to optimize a little more",
+    "ts": "1479248681.001027",
+    "id": "15de50177",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "1 MB total*",
+    "ts": "1479248697.001028",
+    "id": "15de50178",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "I'm working with our designers to figure out how we can get these images optimized as our APK grew by ~8mb due to a bunch of new assets.",
+    "ts": "1479248824.001029",
+    "id": "15de50179",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i remember trying to export the design from sketch at a few different qualities and that's the size we thought looked best",
+    "ts": "1479248830.001030",
+    "id": "15de50180",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "without being too much of a hit on the APK",
+    "ts": "1479248845.001031",
+    "id": "15de50181",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "Seems like the dimensions we are using sound right... Most popular devices used by our users are Samsung S5/6 which at mdpi is 360x640 then just scale that up for hdpi, xhdpi, etc.",
+    "ts": "1479249016.001032",
+    "id": "15de50182",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "I think our APK grew so much because we have a bunch of background drawables in xxxhdpi which <https://developer.android.com/guide/practices/screens_support.html#qualifiers> mentions to only use xxxhdpi for the launcher icon.",
+    "edited": {
+      "user": "U05473HHT",
+      "ts": "1479249048.000000"
+    },
+    "ts": "1479249044.001033",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "15de50183",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U306KDC4F",
+    "text": "I'm having a problem i'm just not understanding at the moment",
+    "ts": "1479249605.001036",
+    "id": "15de50184",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U306KDC4F",
+    "text": "my unit tests are failing with a java.lang.verifyerror but only from the terminal not from the IDE",
+    "ts": "1479249629.001037",
+    "id": "15de50185",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U306KDC4F",
+    "text": "anyone come across this before?",
+    "ts": "1479249643.001038",
+    "id": "15de50186",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U32C0L5CH",
+    "text": "<@U32C0L5CH|timrijckaert> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1479250818.001039",
+    "id": "15de50187",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U306KDC4F> we need code, stacktraces and pics perhaps",
+    "ts": "1479253010.001040",
+    "id": "15de50188",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2CJ7PGSF",
+    "text": "also your bank details",
+    "ts": "1479253325.001041",
+    "id": "15de50189",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2CJ7PGSF",
+    "text": ":^)",
+    "ts": "1479253332.001042",
+    "id": "15de50190",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "&gt; The \"Project Structure\" dialog (PSD) in Android Studio aims at providing a graphical way to configure your Gradle-based Android projects (e.g. add dependencies, add/configure product flavors, etc.) freeing developers from learning the Android and Gradle DSLs.\n&gt; To achieve this goal, the PSD needs to read and write build.gradle files reliably. We have developed a new, advanced parser for build.gradle files that understands all the variations in the Android and Gradle DSLs. Unfortunately, it doesn't understand Groovy scripting, limiting the usefulness of the PSD.",
+    "ts": "1479258117.001043",
+    "id": "15de50191",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "via <https://plus.google.com/+AlexRuiz/posts/AtKW5oRaZQy>",
+    "attachments": [
+      {
+        "title": "Greetings. Alex from Android Studio team here. I have a 1-question form asking…",
+        "title_link": "https://plus.google.com/+AlexRuiz/posts/AtKW5oRaZQy",
+        "text": "Greetings. Alex from Android Studio team here. I have a 1-question form asking why you are using Groovy scripting in build.gradle files, to help us make… - Alex Ruiz - Google+",
+        "fallback": "Greetings. Alex from Android Studio team here. I have a 1-question form asking…",
+        "from_url": "https://plus.google.com/+AlexRuiz/posts/AtKW5oRaZQy",
+        "service_icon": "https://ssl.gstatic.com/images/branding/product/ico/google_plus_alldp.ico",
+        "service_name": "plus.google.com",
+        "id": 1
+      }
+    ],
+    "ts": "1479258139.001044",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "15de50192",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U306KDC4F",
+    "text": "yeah fair enough, i just turned bytecode verification off it's got to be robolectric or something doing it",
+    "ts": "1479259194.001046",
+    "id": "15de50193",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U306KDC4F",
+    "text": "one thing i'd like to know is why android studio bundles its own jdk and how you can use the same jdk in terminal with gradlew",
+    "ts": "1479259219.001047",
+    "id": "15de50194",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2BQQ068P",
+    "text": "anybody here using Realm instead of SQlite?",
+    "ts": "1479265313.001048",
+    "id": "15de50195",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U32E62DBK",
+    "text": "<@U32E62DBK|misha> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1479265325.001049",
+    "id": "15de50196",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "<@U2BQQ068P> I am in the past",
+    "ts": "1479265611.001050",
+    "id": "15de50197",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "I'm using an RxBus implementation based on the blog post.  <http://blog.kaush.co/2014/12/24/implementing-an-event-bus-with-rxjava-rxbus/> … .  How do u handle sticky events? The example i had in mind is Activity A starts Activity B. B posts to the bus and A should respond to the event when visible.",
+    "attachments": [
+      {
+        "title": "Implementing an Event Bus With RxJava - RxBus",
+        "title_link": "http://blog.kaush.co/2014/12/24/implementing-an-event-bus-with-rxjava-rxbus/",
+        "text": "Originally posted this article on the Wedding Party tech blog.",
+        "fallback": "Implementing an Event Bus With RxJava - RxBus",
+        "from_url": "http://blog.kaush.co/2014/12/24/implementing-an-event-bus-with-rxjava-rxbus/",
+        "service_icon": "http://kaush.co/favicon.ico",
+        "service_name": "blog.kaush.co",
+        "id": 1
+      }
+    ],
+    "edited": {
+      "user": "U0A1BE7KQ",
+      "ts": "1479266053.000000"
+    },
+    "ts": "1479265845.001051",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "15de50198",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0BBW096C",
+    "text": "1. Don’t use an event bus\n2. You could use a `BehaviourSubject` instead of a `PublishSubject`, but that would make all events ‘sticky'",
+    "ts": "1479268931.001054",
+    "id": "15de50199",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U306KDC4F",
+    "text": "why don't use an event bus?",
+    "ts": "1479270465.001055",
+    "id": "15de50200",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U306KDC4F",
+    "text": "curious",
+    "ts": "1479270471.001056",
+    "id": "15de50201",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U306KDC4F",
+    "text": "is that a general rule for you or just in this case?",
+    "ts": "1479270496.001057",
+    "id": "15de50202",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U337FMTFE",
+    "text": "<@U337FMTFE|coderspinoza> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1479271101.001058",
+    "id": "15de50203",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U337FMTFE",
+    "text": "I have a question regarding ActivityLifecycleCallbacks. Is it proper for libraries or SDKs to register their own ActivityLifecycleCallbacks after receiving the application instance as a parameter? I need to keep track of whether the application is in foreground and what the topmost activity is.",
+    "ts": "1479271411.001059",
+    "id": "15de50204",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "<@U0BBW096C>  so in Activity A which has a Fragment hosted in a FragmentManager i set up a Subscription in onViewCreated() of the Fragment\nthis Subscription receives the event but at that time the Fragment.isResumed() is false\ni dont want to try to update the UI in this Fragment when isResumed() is false",
+    "ts": "1479273513.001060",
+    "id": "15de50205",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "<@U337FMTFE> just be mindful about the fact that those callbacks run on the ui thread. So no expensive tasks there ",
+    "ts": "1479276542.001061",
+    "id": "15de50206",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U337FMTFE",
+    "text": "<@U04TK850N> Thanks for your confirmation :slightly_smiling_face: Just updating a reference in some of the callback methods!",
+    "ts": "1479279641.001062",
+    "id": "15de50207",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "<@U337FMTFE> You can also take a look at this library as reference :slightly_smiling_face: <https://github.com/soundcloud/lightcycle>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "soundcloud/lightcycle",
+        "title_link": "https://github.com/soundcloud/lightcycle",
+        "text": "lightcycle - LightCycle lets self-contained classes respond to Android’s lifecycle events",
+        "fallback": "GitHub: soundcloud/lightcycle",
+        "thumb_url": "https://avatars1.githubusercontent.com/u/21021?v=3&s=400",
+        "from_url": "https://github.com/soundcloud/lightcycle",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1479279873.001063",
+    "id": "15de50208",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Z248CVB",
+    "text": "Hello, guys. I have a NestedScrollView and a RecycleView inside it. When I go to one of the RecycleView’s item (Post Preview) and go back the NestedScrollView is scrolled to top. How I can prevent that?",
+    "ts": "1479282789.001065",
+    "id": "15de50209",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

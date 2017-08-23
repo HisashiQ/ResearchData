@@ -1,0 +1,292 @@
+[
+  {
+    "user": "U2QL3BX8S",
+    "text": "<@U2QL3BX8S|kackbip> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476775286.000606",
+    "id": "18li7764",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QNTAR8X",
+    "text": "<@U2QNTAR8X|mungorae> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476791182.000607",
+    "id": "18li7765",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K8T5YNT",
+    "text": "<https://github.com/jeancsanchez/PhotoViewSlider>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "jeancsanchez/PhotoViewSlider",
+        "title_link": "https://github.com/jeancsanchez/PhotoViewSlider",
+        "text": "PhotoViewSlider - :camera: A simple photo browser for Android applications.",
+        "fallback": "GitHub: jeancsanchez/PhotoViewSlider",
+        "thumb_url": "https://avatars0.githubusercontent.com/u/11152015?v=3&s=400",
+        "from_url": "https://github.com/jeancsanchez/PhotoViewSlider",
+        "thumb_width": 256,
+        "thumb_height": 256,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1476792674.000608",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "18li7766",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N7D6F50",
+    "text": "",
+    "bot_id": "B0N7DNUT0",
+    "attachments": [
+      {
+        "fallback": "jeancsanchez/PhotoViewSlider",
+        "text": "# PhotoViewSlider\n![Version](<https://img.shields.io/badge/version-1.2.0-green.svg>)\n[![Version](<https://img.shields.io/badge/Bintray-jeancsanchez-blue.svg>)](<https://bintray.com/jeancsanchez/maven/PhotoViewSlider>)\n&lt;br/&gt;\nA simple photo browser for Android applications.\n\n![alt tag]\n(<https://raw.githubusercontent.com/jeancsanchez/PhotoViewSlider/master/PhotoViewSlider.gif>)\n\n\n##Gradle Dependency\n```Gradle\ndependencies {\n    // ... other dependencies\n    compile 'io.github.jeancsanchez.photoviewslider:photoviewslider:1.2.0'\n}\n```\n\n##Maven\n```xml\n&lt;dependency&gt;\n  &lt;groupId&gt;io.github.jeancsanchez.photoviewslider&lt;/groupId&gt;\n  &lt;artifactId&gt;photoviewslider&lt;/artifactId&gt;\n  &lt;version&gt;1.2.0&lt;/version&gt;\n  &lt;type&gt;pom&lt;/type&gt;\n&lt;/dependency&gt;\n```\n\n\n##Getting Started\nYou only need  a PhotosViewSlider on your Layout Activity.\n```xml\n&lt;br.com.jeancsanchez.photoviewslider.PhotosViewSlider\n        android:id=\"@+id/photosViewSlider\"\n        android:layout_width=\"match_parent\"\n        android:layout_height=\"match_parent\"/&gt;\n```\n\n##Code Setup\n###Setup the view on your Activity\n```Java\nphotoViewSlider = (PhotosViewSlider) findViewById(R.id.photosViewSlider);\n```\n\n###Option 1: Set the urls on demand and initialize the photo view.\n```Java\nphotoViewSlider.setPhotoUrl(\"<http://awesomeimg.com.br>\", \"any description\");\nphotoViewSlider.setPhotoUrl(\"<http://awesomeimg.com.br>\");\nphotoViewSlider.initializePhotos();\n```\n\n###Option 2: Create a list of String urls, so initialize the photo view.\n```Java\nstringsList = new ArrayList&lt;&gt;();\n\nstringsList.add(\"<http://awesomeimg.com.br>\");\nstringsList.add(\"<http://awesomeimg.com.br>\");\nphotoViewSlider.initializePhotosUrls(stringsList);\n```\n\n###Option 3: Create a list of Photo objects and set the values to it, so initialize the photo view .\n```Java\nphotoList = new ArrayList&lt;&gt;();\n\nPhoto photo1 = new Photo();\nphoto1.setImage(\"<http://modmyi.com/attachments/forums/iphone-4-4s-new-skins-themes-launches/555329d1322802429-ice-cream-sandwich-android-4-0-a-android_ice_cream_sandwich_electronic_bytes.png>\");\nphoto1.setDescription(\"Android  Ice Cream Sandwich\");\n\nPhoto photo2 = new Photo();\nphoto2.setImage(\"<http://cdn.gigjets.com/wp-content/uploads/2012/10/Android-Jelly-Bean-Logo-Sort-Of.jpg>\");\nphoto2.setDescription(\"Android Jelly Bean\");\n\nphotoList.add(photo1);\nphotoList.add(photo2);\n\nphotoViewSlider.initializePhotos(photosList);\n```\n\n###Change transition animation (Optional)\n```java\nphotoViewSlider.setTechniqueAnimation(Techniques.BounceIn);\n```\n\n\n##TO DO LIST\n- [ ] Make the recycler view \"responsive\" \n\n##Thanks\n* [Picasso](<https://github.com/square/picasso>)\n* [Android View Animations] (<https://github.com/daimajia/AndroidViewAnimations>)\n",
+        "title": "jeancsanchez/PhotoViewSlider",
+        "id": 1,
+        "title_link": "https://github.com/jeancsanchez/PhotoViewSlider",
+        "color": "FFFFFF",
+        "fields": [
+          {
+            "title": "Open issues",
+            "value": "0",
+            "short": true
+          },
+          {
+            "title": "Languages",
+            "value": "Java",
+            "short": true
+          },
+          {
+            "title": "Contributors",
+            "value": "1",
+            "short": true
+          },
+          {
+            "title": "License",
+            "value": "Apache License 2.0",
+            "short": true
+          },
+          {
+            "title": "Commits",
+            "value": "35",
+            "short": true
+          },
+          {
+            "title": "Releases",
+            "value": "0",
+            "short": true
+          },
+          {
+            "title": "Branches",
+            "value": "2",
+            "short": true
+          }
+        ],
+        "mrkdwn_in": [
+          "title",
+          "text"
+        ]
+      }
+    ],
+    "ts": "1476792676.000610",
+    "id": "18li7767",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QSV3YDP",
+    "text": "<@U2QSV3YDP|gokhanarik> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476806650.000611",
+    "id": "18li7768",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QSHNWAG",
+    "text": "<@U2QSHNWAG|rex5630> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476807041.000612",
+    "id": "18li7769",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2R2UP1K6",
+    "text": "<@U2R2UP1K6|charlesmuchene> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476828116.000613",
+    "id": "18li7770",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2R5ZJ1C2",
+    "text": "<@U2R5ZJ1C2|mtebele> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476846768.000614",
+    "id": "18li7771",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2R5ZJ1C2",
+    "text": "<@U2R5ZJ1C2|mtebele> has left the channel",
+    "subtype": "channel_leave",
+    "ts": "1476847411.000615",
+    "id": "18li7772",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2R44BA4T",
+    "text": "<@U2R44BA4T|keshav> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476848077.000616",
+    "id": "18li7773",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2R681YHL",
+    "text": "<@U2R681YHL|angelaconnell> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476854674.000617",
+    "id": "18li7774",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

@@ -1,0 +1,485 @@
+[
+  {
+    "subtype": "pinned_item",
+    "user": "U1T1U3GR0",
+    "item_type": "C",
+    "attachments": [
+      {
+        "fallback": "[August 6th, 2016 6:43 PM] lawlorslaw: So i am aware of the guidelines for launcher icon sizes\n<http://iconhandbook.co.uk/reference/chart/android/>\nbut how come all of the launcher icons which are all circles are various sizes?\nwho is doing it right and who is doing it wrong?\nAlso what is the best tool to generate these icons? \nI am using Sketch but how come all of these circle launcher icons are different sizes?\nI just want to follow the guidelines and create the appropriate size icon but I'm not sure what that looks like. Every time I do my icon turns out pretty small.",
+        "ts": "1470534211.001916",
+        "author_subname": "lawlorslaw",
+        "channel_id": "C04NZAN54",
+        "channel_name": "development",
+        "is_msg_unfurl": true,
+        "text": "So i am aware of the guidelines for launcher icon sizes\n<http://iconhandbook.co.uk/reference/chart/android/>\nbut how come all of the launcher icons which are all circles are various sizes?\nwho is doing it right and who is doing it wrong?\nAlso what is the best tool to generate these icons? \nI am using Sketch but how come all of these circle launcher icons are different sizes?\nI just want to follow the guidelines and create the appropriate size icon but I'm not sure what that looks like. Every time I do my icon turns out pretty small.",
+        "author_name": "Etienne Lawlor",
+        "author_link": "https://androidchat.slack.com/team/lawlorslaw",
+        "author_icon": "https://secure.gravatar.com/avatar/6fc6e07b4af580b1424c082536570dd4.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0019-48.png",
+        "mrkdwn_in": [
+          "text"
+        ]
+      }
+    ],
+    "text": "<@U1T1U3GR0|mohanraj> pinned a message to this channel.",
+    "ts": "1470553456.001920",
+    "id": "07de41758",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RURMQ3E",
+    "text": "Example for those curious;\n\n```Java\ninterface Component\n{\n    fun inject(app: Application)\n\n    fun inject(mainActivity: MainActivity)\n    fun inject(mainActivityFragment: MainActivityFragment)\n\n    fun inject(dialogFragment: DialogFragment)\n}```",
+    "edited": {
+      "user": "U0RURMQ3E",
+      "ts": "1470562961.000000"
+    },
+    "ts": "1470562931.001923",
+    "id": "07de41759",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "Yes. You'd do this. Actually not as crazy as it looks. IDE will usually suggest generating these methods for you ",
+    "ts": "1470564190.001926",
+    "id": "07de41760",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "<@U0RURMQ3E>: ^",
+    "ts": "1470564206.001927",
+    "id": "07de41761",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RURMQ3E",
+    "text": "<@U1HM4MPLJ>: okay, cheers - as long as I’m not following the pattern incorrectly.",
+    "ts": "1470564238.001928",
+    "id": "07de41762",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "Oh you're fine :+1: ",
+    "ts": "1470564257.001929",
+    "reactions": [
+      {
+        "name": "grinning",
+        "users": [
+          "U0RURMQ3E"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "07de41763",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1WNJNL7M",
+    "text": "<@U0RURMQ3E>: For cleaning it up, we can have a separate class for all Fragment injections and make our Component interface Extend another interface or a separate Component and module for Fragments can be created too.",
+    "ts": "1470564573.001932",
+    "id": "07de41764",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RURMQ3E",
+    "text": "<@U1WNJNL7M>: ok, I think I kinda understood that... do you have example?",
+    "ts": "1470564668.001933",
+    "id": "07de41765",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1WNJNL7M",
+    "text": "You can create a separate `AppComponent` having the scope as `@Singleton` and create your custom narrower scopes like `@PerActivity` for Activities.. and then in you `ActivityComponent` you can have something like ``` public interface ActivityComponent extends FragmentInjector {\n    void inject(MainActivity activity);\n} ```",
+    "ts": "1470564840.001934",
+    "id": "07de41766",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1WNJNL7M",
+    "text": "FragmentInjector class can have… ``` public interface FragmentInjector {\n\n    void inject(MainFragment mainFragment);\n} ```",
+    "ts": "1470564872.001935",
+    "id": "07de41767",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1WNJNL7M",
+    "text": "Even if you don’t want to create custom scopes or anything you can just make your `Component` extend another interface separating out some of the injections.",
+    "ts": "1470564954.001936",
+    "id": "07de41768",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1WNJNL7M",
+    "text": "<@U0RURMQ3E>: ^",
+    "ts": "1470564980.001937",
+    "id": "07de41769",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RURMQ3E",
+    "text": "<@U1WNJNL7M>: makes sense, haven’t got to scoping yet - finding it hard to apply it to a real world use case. Looks like a good idea to abstract some of the injections, though!",
+    "ts": "1470565108.001938",
+    "id": "07de41770",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1WNJNL7M",
+    "text": "Yeah it looks hard at first, but gradually we pick it up. :thumbsup:",
+    "ts": "1470565164.001939",
+    "id": "07de41771",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RURMQ3E",
+    "text": "<@U1WNJNL7M>: thanks :slightly_smiling_face:",
+    "ts": "1470565192.001940",
+    "id": "07de41772",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1WNJNL7M",
+    "text": ":slightly_smiling_face:",
+    "ts": "1470565205.001941",
+    "id": "07de41773",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1Z0WA5S9",
+    "text": "<@U1Z0WA5S9|bloodcarter> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1470570989.001942",
+    "id": "07de41774",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1YUZE8H1",
+    "text": "<@U1YUZE8H1|will> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1470579664.001943",
+    "id": "07de41775",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1Z23GYRW",
+    "text": "<@U1Z23GYRW|danprado> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1470605788.001944",
+    "id": "07de41776",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1Z23GYRW",
+    "text": "Hey everyone. I’ve put an Android Challenge I was assigned to on GitHub as a sample project using MVP + RxJava + Dagger.",
+    "ts": "1470624365.001945",
+    "id": "07de41777",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1Z23GYRW",
+    "text": "<https://github.com/DanPrado/easyweather>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "DanPrado/easyweather",
+        "title_link": "https://github.com/DanPrado/easyweather",
+        "text": "easyweather - Sample Android project using MVP + RxJava + Dagger",
+        "fallback": "GitHub: DanPrado/easyweather",
+        "thumb_url": "https://avatars0.githubusercontent.com/u/11525443?v=3&s=400",
+        "from_url": "https://github.com/DanPrado/easyweather",
+        "thumb_width": 245,
+        "thumb_height": 245,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1470624368.001946",
+    "id": "07de41778",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1Z23GYRW",
+    "text": "I thought it would be cool to share it with you guys.",
+    "ts": "1470624379.001948",
+    "id": "07de41779",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1Z23GYRW",
+    "text": "Let me know what you think. Any feedback, suggestions, ideas and PRs are much appreciated. :slightly_smiling_face:",
+    "ts": "1470624402.001949",
+    "id": "07de41780",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1Z3GFR5W",
+    "text": "<@U1Z3GFR5W|dockusan> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1470630473.001950",
+    "id": "07de41781",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

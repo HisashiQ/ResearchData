@@ -1,0 +1,56 @@
+[
+  {
+    "user": "U09T8SFG8",
+    "text": "Anyone knows if it is possible to put a `@Category` on different parameters of `@Parameterized` in JUnit4? Basically I have let's say 3 different algorithms of the same interface and 3 different files with different sizes of data (small, medium and big) for them to act on. I want to be able to run all the 9 combinations together as well as specific combinations using `@Category`. \n\nFor example I will have each algorithm tagged with a Category with his name lets say `@Category(Algoirthm1Test.class)` and the small file tagged with `@Category(SmallDataTest.class)` and I will be able to run all tests with `@Category({Algorithm1Test.class, SmallDataTest.class})`",
+    "ts": "1449675196.000256",
+    "id": "09te452",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "Right now I have a base abstract class (so JUnit can ignore it) with every method being a combination, every algorithm extends that class, has the same methods annotated as `@Test` and calls the appropriated `super` methods which is ugly but the good thing is that I can categorize everything exactly as I need it.",
+    "ts": "1449675327.000257",
+    "id": "09te453",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I know that with `@Theories` I can run all the combinations but again I can't categorize them",
+    "ts": "1449675408.000258",
+    "id": "09te454",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

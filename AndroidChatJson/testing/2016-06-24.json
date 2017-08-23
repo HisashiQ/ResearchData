@@ -1,0 +1,128 @@
+[
+  {
+    "user": "U0KTPB91V",
+    "text": "somebody knows why robolectric fails with this: `Robolectric.buildActivity(DriverReceiptsActivity.class).create().get()`",
+    "ts": "1466783695.000065",
+    "id": "24te1495",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KTPB91V",
+    "text": "I ge this error: `java.lang.IllegalArgumentException: INTERNET permission is required.`",
+    "ts": "1466783705.000066",
+    "id": "24te1496",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U0KTPB91V>: have you given the manifest in your robolectric config?",
+    "ts": "1466785857.000067",
+    "id": "24te1497",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KTPB91V",
+    "text": "<@U09T8SFG8>: I try this:\n\n```\n@Config(constants = BuildConfig.class,\n    sdk = TestConfig.MIN_SDK_UNIT_TESTS,\n    manifest = \"app/src/main/AndroidManifest.xml\")\n@RunWith(RobolectricGradleTestRunner.class)\n```",
+    "ts": "1466786742.000068",
+    "id": "24te1498",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KTPB91V",
+    "text": "but doesn’t work",
+    "ts": "1466786746.000069",
+    "id": "24te1499",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KC373GX",
+    "text": "does the actual manifest even have internet permission?",
+    "ts": "1466787209.000070",
+    "id": "24te1500",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETA9WHH",
+    "text": "anyone using RecyclerViewActions with Espresso? i’m having trouble with the scrollTo actions. i’m properly matching the viewholder item and getting the correct index, but scrollTo and scrollToHolder stop short of bringing the item into view",
+    "ts": "1466810224.000071",
+    "id": "24te1501",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

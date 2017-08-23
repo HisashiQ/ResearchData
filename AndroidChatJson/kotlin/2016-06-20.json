@@ -1,0 +1,581 @@
+[
+  {
+    "user": "U08GFT5V5",
+    "text": "How do I turn Type? to Any",
+    "ts": "1466436860.000209",
+    "id": "20ko1828",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U08GFT5V5>: if (thing != null) thing as Any",
+    "ts": "1466436980.000210",
+    "id": "20ko1829",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "like that?",
+    "ts": "1466436984.000211",
+    "id": "20ko1830",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "So I ended up with this",
+    "ts": "1466437086.000212",
+    "id": "20ko1831",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "`user ?: user as User`",
+    "ts": "1466437088.000213",
+    "id": "20ko1832",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "This just seems stupid",
+    "ts": "1466437095.000214",
+    "id": "20ko1833",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL4NZK7",
+    "text": "isn't that Elvis operator only going to get hit if `user` is `null`?",
+    "ts": "1466437113.000215",
+    "id": "20ko1834",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL4NZK7",
+    "text": "so the cast will fail?",
+    "ts": "1466437119.000216",
+    "id": "20ko1835",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "good point",
+    "edited": {
+      "user": "U08GFT5V5",
+      "ts": "1466437194.000000"
+    },
+    "ts": "1466437191.000217",
+    "id": "20ko1836",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL4NZK7",
+    "text": "what exactly are you trying to do here?",
+    "ts": "1466437197.000219",
+    "id": "20ko1837",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "I’m trying to do this \n\n```\ndataToJson(user) //Type mismatch cannot convert from User? to Any\n```",
+    "ts": "1466437257.000220",
+    "id": "20ko1838",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL4NZK7",
+    "text": "that's just because `User?` is a nullable type and `Any` is not",
+    "ts": "1466437277.000221",
+    "id": "20ko1839",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL4NZK7",
+    "text": "```\nif (user != null) {\n    dataToJson(user)\n}\n```",
+    "ts": "1466437291.000222",
+    "id": "20ko1840",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL4NZK7",
+    "text": "inside the if, it's smart-casted to `User` which can be converted to `Any`",
+    "ts": "1466437307.000223",
+    "id": "20ko1841",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "I figured i could do it this way",
+    "ts": "1466437344.000224",
+    "id": "20ko1842",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "but i hoped that there was some magic syntax",
+    "ts": "1466437354.000225",
+    "id": "20ko1843",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL4NZK7",
+    "text": "I guess you could do `user?.let { dataToJson(it) }`",
+    "ts": "1466437431.000226",
+    "id": "20ko1844",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U1HL4NZK7>: :taco:",
+    "ts": "1466437532.000227",
+    "id": "20ko1845",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DFE339V",
+    "text": "Couldn’t `dataToJson` take `Any?`",
+    "ts": "1466437592.000228",
+    "id": "20ko1846",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DFE339V",
+    "text": "and do a null check internally",
+    "ts": "1466437599.000229",
+    "id": "20ko1847",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL4NZK7",
+    "text": "it could if you wanted to handle the null in the method, yeah",
+    "ts": "1466437603.000230",
+    "id": "20ko1848",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Trying to master Kotlin",
+    "ts": "1466437620.000231",
+    "id": "20ko1849",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Easy way out isn’t always the most interesting :smile:",
+    "ts": "1466437645.000232",
+    "id": "20ko1850",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL4NZK7",
+    "text": "yeah, the `?.let` construct is great for guarding against nulls. Especially if the object you're checking is the result of an expensive operation",
+    "ts": "1466437682.000233",
+    "id": "20ko1851",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL4NZK7",
+    "text": "```\nval user = api.getUser(\"foo\")\nif (user != null) {\n    user.getRepos()\n}\n```\n\nvs\n\n`api.getUser(\"foo\")?.let { it.getRepos() }`",
+    "ts": "1466437731.000234",
+    "id": "20ko1852",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL4NZK7",
+    "text": "`let` also returns a value so you could do: `val repos = api.getUser(\"foo\")?.let { it.getRepos() }`",
+    "ts": "1466437754.000235",
+    "id": "20ko1853",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL4NZK7",
+    "text": "This is a good guide on Standard.kt <http://beust.com/weblog/2015/10/30/exploring-the-kotlin-standard-library/>",
+    "ts": "1466437833.000236",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "20ko1854",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "^ Cedric Beust, the guy who wrote TestNG",
+    "ts": "1466437865.000237",
+    "id": "20ko1855",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL4NZK7",
+    "text": "He's also active in the Kotlin Slack",
+    "ts": "1466437946.000238",
+    "id": "20ko1856",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL4NZK7",
+    "text": "and is writing a Kotlin build tool called Kobalt",
+    "ts": "1466437957.000239",
+    "id": "20ko1857",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1JKXJJ11",
+    "subtype": "channel_join",
+    "text": "<@U1JKXJJ11|debug> has joined the channel",
+    "ts": "1466479513.000240",
+    "id": "20ko1858",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

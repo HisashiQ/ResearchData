@@ -1,0 +1,222 @@
+[
+  {
+    "user": "U0C175J8P",
+    "text": "Hello guys. I just faced a need to implement font singleton in Kotlin. What is the proper way to pass Context to it?  Or maybe how to create custom constructor for mInstance to pass application context instance? Or maybe you can  propose me better solution for such pattern?",
+    "ts": "1449650758.000240",
+    "id": "09ko471",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C0MQXEX",
+    "text": "<@U0C175J8P>: do you use DI in your project?",
+    "ts": "1449656999.000241",
+    "id": "09ko472",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C175J8P",
+    "text": "no, no dagger or any",
+    "ts": "1449657190.000242",
+    "id": "09ko473",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<@U0C175J8P>: I usually have an instance of a class that extends Application and I pass it around in such cases where a context is needed to avoid using activity context",
+    "ts": "1449657246.000243",
+    "id": "09ko474",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C175J8P",
+    "text": "got it",
+    "ts": "1449657265.000244",
+    "id": "09ko475",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C0MQXEX",
+    "text": "<@U0C175J8P>: i’ll recommend using dagger or other DI approach for dealing with Singletons",
+    "ts": "1449657298.000245",
+    "id": "09ko476",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C175J8P",
+    "text": "I was thinking about keeping it in Application class, but just would like to know a better approach. Thanks",
+    "ts": "1449657368.000246",
+    "id": "09ko477",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C175J8P",
+    "text": "Ok if I will introduce Dagger into mine application, so should I implement it as Component, right?",
+    "ts": "1449657446.000247",
+    "id": "09ko478",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "yeah using a DI is the best way here",
+    "ts": "1449657572.000248",
+    "id": "09ko479",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C0MQXEX",
+    "text": "It could be separate Component or you could provide it via Module\n```@Module\npublic class AppModule {\n    public final Application application;\n\n    public AppModule(Application application) {\n        this.application = application;\n    }\n\n    @Provides\n    @Singleton\n    FontHolder provideFontHolder(Application app) {\n        return new FontHolder(app);\n    }\n}```",
+    "edited": {
+      "user": "U0C0MQXEX",
+      "ts": "1449718773.000000"
+    },
+    "ts": "1449657672.000249",
+    "id": "09ko480",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "Should return FontHolder not Application",
+    "ts": "1449657963.000252",
+    "id": "09ko481",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0C175J8P",
+    "text": "Thank you guys very much",
+    "ts": "1449662648.000253",
+    "id": "09ko482",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

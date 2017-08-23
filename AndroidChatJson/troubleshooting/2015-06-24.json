@@ -1,0 +1,1474 @@
+[
+  {
+    "user": "U061HDV96",
+    "text": "So from a Notification I'm launching an Activity with extras. In that activity there is a `NavUtils.navigateUpFromSameTask(BlablabActivity.this);` and this is using singleTop. How do I make it so when it is navigated to with the Notification it can still go to parent activity? Using a Stackbuilder and adding the parent stack makes it loop infinitely and crashes because of OutOfMemory. I just need a way to tell it: this time you know the parent was loaded before so use singleTop behaviour, else load the parent activity again.",
+    "ts": "1435153864.000738",
+    "id": "24tr695",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "check isTaskRoot",
+    "ts": "1435154058.000739",
+    "id": "24tr696",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Thanks! Got it working",
+    "ts": "1435154402.000740",
+    "id": "24tr697",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "<@U0546QERR>: I successfully changed the text color of the tabs. However, my tab indicator is not showing, is yours?",
+    "ts": "1435158578.000741",
+    "id": "24tr698",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "did you set this? app:tabSelectedTextColor=\"@android:color/white\"",
+    "ts": "1435158738.000742",
+    "id": "24tr699",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "<@U0546QERR>: I have this \n&lt;android.support.design.widget.TabLayout\n        android:id=\"@+id/category_tabs\"\n        android:layout_width=\"match_parent\"\n        android:layout_height=\"wrap_content\"\n        app:tabMode=\"scrollable\"\n        app:tabTextColor=\"@color/primary_light\"\n        app:tabIndicatorColor=\"@color/white\"\n        app:tabSelectedTextColor=\"@color/white\"\n        app:tabBackground=\"@color/primary\"\n        /&gt;",
+    "edited": {
+      "user": "U053TJ508",
+      "ts": "1435158860.000000"
+    },
+    "ts": "1435158768.000743",
+    "id": "24tr700",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "tabIndicatorColor should be the little tiny bar below the selected tab right?",
+    "ts": "1435158807.000744",
+    "id": "24tr701",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "oh hmm, I didn’t set that, it actually defaulted to my accent color which I just went with",
+    "ts": "1435158873.000746",
+    "id": "24tr702",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "hmmm ill try changing my accent color haha",
+    "ts": "1435158905.000747",
+    "id": "24tr703",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "hmm that didnt work either.... this is annoying",
+    "ts": "1435160064.000748",
+    "id": "24tr704",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "its not even showing any indicator at all..",
+    "ts": "1435160084.000749",
+    "id": "24tr705",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U053TJ508>: tabIndicatorColor should do it. I had the same problem until I set tabIndicatorColor",
+    "ts": "1435163759.000750",
+    "id": "24tr706",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "<@U061HDV96>: hmm this is very strange.  I have that in the xml and it still does not work.",
+    "ts": "1435164054.000751",
+    "id": "24tr707",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "<@U053TJ508>: tabIndicatorColor doesn’t work even in the preview window in studio?",
+    "ts": "1435164342.000752",
+    "id": "24tr708",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "hmm i don’t think tools has a good preview for that view yet :disappointed:",
+    "ts": "1435164420.000753",
+    "id": "24tr709",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "<@U0546QERR>: There is no preview for it :disappointed:",
+    "ts": "1435164434.000754",
+    "id": "24tr710",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "did you try setting it programmatically? instead of through the xml layout",
+    "ts": "1435164652.000755",
+    "id": "24tr711",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "and, what API level is your test device?",
+    "ts": "1435164840.000756",
+    "id": "24tr712",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "ill try it programmatically. And i am on lollipop",
+    "ts": "1435164912.000757",
+    "id": "24tr713",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "like i said it defaulted to accent color for me on API 21, and when i override it through tabIndicatorColor i see the new color… not sure what’s going on for you :confused:",
+    "ts": "1435165106.000758",
+    "id": "24tr714",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "<https://developer.android.com/reference/android/support/design/widget/TabLayout.html>",
+    "ts": "1435165142.000759",
+    "id": "24tr715",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "I dont even see a method to change the indicator color here",
+    "ts": "1435165151.000760",
+    "id": "24tr716",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i should probably ask, what color are you seeing? white? or no color at all?",
+    "ts": "1435165193.000761",
+    "id": "24tr717",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "and yeah, that’s weird, i don’t see a method for it either",
+    "ts": "1435165238.000762",
+    "id": "24tr718",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "i am not seeing any color at all. The line does not even appear",
+    "ts": "1435165256.000763",
+    "id": "24tr719",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "hmm… does your apptheme inherit from Theme.AppCompat?",
+    "ts": "1435165336.000764",
+    "id": "24tr720",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "hmm i may be on to something",
+    "ts": "1435165464.000765",
+    "id": "24tr721",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "one sec",
+    "ts": "1435165507.000766",
+    "id": "24tr722",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "make sure you’re not setting the indicator color to the same color as your tabs too lol",
+    "ts": "1435165520.000767",
+    "id": "24tr723",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "I just did haaha",
+    "ts": "1435165560.000768",
+    "id": "24tr724",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "so here is what happens",
+    "ts": "1435165563.000769",
+    "id": "24tr725",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "When i delete app:tabBackground=\"@color/primary\" I can see the line and it is the accent color",
+    "ts": "1435165584.000770",
+    "id": "24tr726",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "however when i add it back in the xml, it dissapears",
+    "ts": "1435165597.000771",
+    "id": "24tr727",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "ohhhhhhh",
+    "ts": "1435165617.000772",
+    "id": "24tr728",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "use android:background",
+    "ts": "1435165631.000773",
+    "id": "24tr729",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i thought that’s what you said you were using yesterday",
+    "ts": "1435165643.000774",
+    "id": "24tr730",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "well, that worked! lol. thanks",
+    "ts": "1435165678.000775",
+    "id": "24tr731",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "ah you were doing it programmatically yesterday, i remember now",
+    "ts": "1435165688.000776",
+    "id": "24tr732",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "glad that’s solved, but really, it should be the other way around",
+    "ts": "1435165701.000777",
+    "id": "24tr733",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "it sounds like app:tabBackground was setting the background for the whole view and not just applying the color…. i thought that’s how android:background worked",
+    "ts": "1435165738.000778",
+    "id": "24tr734",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "it’s a similar side effect to setting android:background on a button, the button texture disappears",
+    "ts": "1435165839.000779",
+    "id": "24tr735",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "oh i see",
+    "ts": "1435165856.000780",
+    "id": "24tr736",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "How should i add space between cardviews which are in a recycleview? Right now, they are all just touching. Is there a way to add space?",
+    "ts": "1435167210.000781",
+    "id": "24tr737",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "Should i use padding, margins, etc? What should i do",
+    "ts": "1435167251.000782",
+    "id": "24tr738",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "<@U053TJ508>: You can, or a decorator. If I remember correctly, margin is added on Lollipop devices, but not older ones, maybe vise versa",
+    "ts": "1435167447.000783",
+    "id": "24tr739",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "<@U053TJ508>: I use android:layout_marginTop and layout_marginBottom on my CardView, and also had to apply card_view:cardUseCompatPadding to get it to look the same on older API levels",
+    "ts": "1435167653.000784",
+    "id": "24tr740",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "definitely try that cardUserCompatPadding if the spacing is larger on older APIs",
+    "ts": "1435167684.000785",
+    "id": "24tr741",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U053TJ508|garrettbt> uploaded a file: <https://androidchat.slack.com/files/garrettbt/F06PS4M6H/screenshot_2015-06-24-13-46-08.png|Spacing>",
+    "file": {
+      "id": "F06PS4M6H",
+      "created": 1435168004,
+      "timestamp": 1435168004,
+      "name": "Screenshot_2015-06-24-13-46-08.png",
+      "title": "Spacing",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U053TJ508",
+      "editable": false,
+      "size": 106415,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F06PS4M6H/screenshot_2015-06-24-13-46-08.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F06PS4M6H/download/screenshot_2015-06-24-13-46-08.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F06PS4M6H-fa28e974a6/screenshot_2015-06-24-13-46-08_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F06PS4M6H-fa28e974a6/screenshot_2015-06-24-13-46-08_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F06PS4M6H-fa28e974a6/screenshot_2015-06-24-13-46-08_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 203,
+      "thumb_360_h": 360,
+      "thumb_480": "https://files.slack.com/files-tmb/T04PLNDMP-F06PS4M6H-fa28e974a6/screenshot_2015-06-24-13-46-08_480.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_480_w": 270,
+      "thumb_480_h": 480,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F06PS4M6H-fa28e974a6/screenshot_2015-06-24-13-46-08_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720": "https://files.slack.com/files-tmb/T04PLNDMP-F06PS4M6H-fa28e974a6/screenshot_2015-06-24-13-46-08_720.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720_w": 405,
+      "thumb_720_h": 720,
+      "thumb_960": "https://files.slack.com/files-tmb/T04PLNDMP-F06PS4M6H-fa28e974a6/screenshot_2015-06-24-13-46-08_960.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_960_w": 540,
+      "thumb_960_h": 960,
+      "thumb_1024": "https://files.slack.com/files-tmb/T04PLNDMP-F06PS4M6H-fa28e974a6/screenshot_2015-06-24-13-46-08_1024.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_1024_w": 576,
+      "thumb_1024_h": 1024,
+      "image_exif_rotation": 1,
+      "original_w": 1080,
+      "original_h": 1920,
+      "permalink": "https://androidchat.slack.com/files/garrettbt/F06PS4M6H/screenshot_2015-06-24-13-46-08.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F06PS4M6H-583704d54b",
+      "channels": [
+        "C0565EVTD"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U053TJ508",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U053TJ508|garrettbt>",
+    "bot_id": null,
+    "ts": "1435168010.000786",
+    "id": "24tr742",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "I feel like the spacing is a little weird? ",
+    "ts": "1435168031.000787",
+    "id": "24tr743",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "For the tabs and spinner",
+    "ts": "1435168057.000788",
+    "id": "24tr744",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "yeah that Argentina view looks a little weird, dunno about the spacing. i would just try to follow the material spec to start",
+    "ts": "1435168171.000789",
+    "id": "24tr745",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "yeah try half",
+    "ts": "1435168320.000790",
+    "id": "24tr746",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "and less rounded",
+    "ts": "1435168322.000791",
+    "id": "24tr747",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "<@U0548MM6B> half as in  halve the space between the cards?",
+    "ts": "1435168851.000792",
+    "id": "24tr748",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "yep",
+    "ts": "1435168857.000793",
+    "id": "24tr749",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "what is this, like 32 dp?",
+    "ts": "1435168872.000794",
+    "id": "24tr750",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "I think I had it 10dp",
+    "ts": "1435168885.000795",
+    "id": "24tr751",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "so 20 together? don’t see the screen in full res",
+    "ts": "1435168924.000796",
+    "id": "24tr752",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "and if you’re going material, it’s base 2, not 10",
+    "ts": "1435168942.000797",
+    "id": "24tr753",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "Ah I see. Okay",
+    "ts": "1435168954.000798",
+    "id": "24tr754",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "I'll try 6 haha",
+    "ts": "1435168967.000799",
+    "id": "24tr755",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "Or 4",
+    "ts": "1435169062.000800",
+    "id": "24tr756",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "Lol",
+    "ts": "1435169063.000801",
+    "id": "24tr757",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "4 or 8",
+    "ts": "1435169121.000802",
+    "id": "24tr758",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "It seems using cardusecompatpadding automatically does spacing?",
+    "ts": "1435169561.000803",
+    "id": "24tr759",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "hmm actually yeah i just realized i had set my margins to 0dp :x",
+    "ts": "1435169833.000804",
+    "id": "24tr760",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i’m just letting that attribute do it all right now",
+    "ts": "1435169844.000805",
+    "id": "24tr761",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i don’t know if i’d recommend that though",
+    "ts": "1435169862.000806",
+    "id": "24tr762",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "Eh I guess I'll keep it for now",
+    "ts": "1435169931.000807",
+    "id": "24tr763",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "when i applied only margin, it would look way stretched on lower APIs, then i read some SO answer that said to use the compat attribute and it looks fine for me",
+    "ts": "1435170016.000808",
+    "id": "24tr764",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "will iterate on that if i find an issue, otherwise screw it",
+    "ts": "1435170046.000809",
+    "id": "24tr765",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Currently using the AlarmManager I can schedule Notifications. The small problem is that I pass the Notification pendingIntent and so when that notification is shown at the specified time, the notification shows when it was created instead of when it was shown on the screen.",
+    "ts": "1435176139.000810",
+    "id": "24tr766",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Is there a simple way of changing that time/date?",
+    "edited": {
+      "user": "U061HDV96",
+      "ts": "1435176158.000000"
+    },
+    "ts": "1435176156.000811",
+    "id": "24tr767",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "hm, you could instead have the pendingintent call back into the app and in that receiver create the notification on demand?",
+    "ts": "1435177542.000813",
+    "id": "24tr768",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Not sure, I have yet to use timed notifications",
+    "ts": "1435177559.000814",
+    "id": "24tr769",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "brb",
+    "ts": "1435177578.000815",
+    "id": "24tr770",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054AD9CZ",
+    "text": "I have an interesting problem. One of my layouts has a FAB inside a CoordinatorLayout. That whole layout is displayed in a Fragment in a ViewPager. The layout with the ViewPager is also in a CoordinatorLayout. The problem is, the FAB is partially off of the bottom of the screen. My initial thoughts what that it was the Coordintor inside another Coordintor, but changing the Fragment layout to a RelativeLayout had the same result. Has anyone else had this issue?",
+    "ts": "1435207539.000816",
+    "id": "24tr771",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054AD9CZ",
+    "text": "Looks like it's actually one of the CoordinatorLayouts going below the screen",
+    "ts": "1435212457.000817",
+    "id": "24tr772",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

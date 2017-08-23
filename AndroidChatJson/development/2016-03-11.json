@@ -1,0 +1,3903 @@
+[
+  {
+    "user": "U0JBN2DV2",
+    "text": "<@U0ESBF4AV>:  thanks man :simple_smile:",
+    "ts": "1457683212.003752",
+    "id": "11de27521",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBN2DV2",
+    "text": "hey everyone :simple_smile: , anyone can help me in converting this `swift` code into `java` ?   ```    \n    func getNumberOfDaysInMonthWithoutSundays (month : Int , Year : Int) -&gt; Int{\n        \n        let dateComponents = NSDateComponents()\n        dateComponents.year = Year\n        dateComponents.month = month\n        \n        let calendar = NSCalendar.currentCalendar()\n        let date = calendar.dateFromComponents(dateComponents)!\n        \n        let range = calendar.rangeOfUnit(.Day, inUnit: .Month, forDate: date)\n        \n        let numDays = range.length\n        \n        // New code starts here:\n        \n        var numberOfSundays = 0\n        \n        let dateFormatter = NSDateFormatter()\n        \n        for day in 1...numDays {\n            \n            dateComponents.day = day\n            \n            let date = calendar.dateFromComponents(dateComponents)!\n            dateFormatter.dateFormat = \"EEEE\"\n            let dayOfWeek = dateFormatter.stringFromDate(date) // Get day of week\n            \n            if dayOfWeek == \"Sunday\" { // Check if it's a Sunday\n                numberOfSundays += 1\n            }\n        }\n        \n        return numDays - numberOfSundays\n    }```",
+    "edited": {
+      "user": "U0JBN2DV2",
+      "ts": "1457683739.000000"
+    },
+    "ts": "1457683530.003753",
+    "id": "11de27522",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBN2DV2",
+    "text": "well its counting dates of a given month then subtracting the number of sundays from the counted days of month",
+    "ts": "1457683571.003754",
+    "id": "11de27523",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "`if dayOfWeek == \"Sunday“` that’s totally locale unaware tho",
+    "ts": "1457683605.003755",
+    "id": "11de27524",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Also the method name doesn’t fit what it does, no?",
+    "ts": "1457683642.003756",
+    "id": "11de27525",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Do you want the number of sundays, or the number of not-sundays?",
+    "ts": "1457683655.003757",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U0JBN2DV2"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11de27526",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBN2DV2",
+    "text": "yeah name is not making sense",
+    "ts": "1457683709.003758",
+    "id": "11de27527",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBN2DV2",
+    "text": "1 minute",
+    "ts": "1457683713.003759",
+    "id": "11de27528",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBN2DV2",
+    "text": "hey <@U04TK850N>  :) ` locale unaware` can you please explain what you mean ?",
+    "ts": "1457683780.003761",
+    "id": "11de27529",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Well, if the user sets their language to Spanish, then your check will fail, no?",
+    "ts": "1457683801.003762",
+    "id": "11de27530",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBN2DV2",
+    "text": ":sweat_smile: oh man you're right",
+    "ts": "1457683829.003763",
+    "id": "11de27531",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBN2DV2",
+    "text": "didnt thought like that",
+    "ts": "1457683836.003764",
+    "id": "11de27532",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBN2DV2",
+    "text": "so do we have any universal names or any method which will help here ?",
+    "ts": "1457683875.003765",
+    "id": "11de27533",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "you can skip the whole NSCalendar thing and use: <https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSDateComponents_Class/#//apple_ref/occ/instp/NSDateComponents/weekday>",
+    "attachments": [
+      {
+        "title": "NSDateComponents Class Reference",
+        "title_link": "https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSDateComponents_Class/#//apple_ref/occ/instp/NSDateComponents/weekday",
+        "text": "Describes the components of a date.",
+        "fallback": "NSDateComponents Class Reference",
+        "from_url": "https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSDateComponents_Class/#//apple_ref/occ/instp/NSDateComponents/weekday",
+        "id": 1
+      }
+    ],
+    "ts": "1457684063.003766",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "+1",
+        "users": [
+          "U0JBN2DV2"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11de27534",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "But then again keep in mind that there are other calendar formats",
+    "ts": "1457684086.003768",
+    "id": "11de27535",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBN2DV2",
+    "text": "okay let me check this :simple_smile: <@U04TK850N>  thanks",
+    "ts": "1457684176.003769",
+    "id": "11de27536",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "and for Java you get convinience constants: <http://stackoverflow.com/a/9909484/1902129>",
+    "attachments": [
+      {
+        "title": "How can I find Saturdays and Sundays in A given month?",
+        "title_link": "http://stackoverflow.com/a/9909484/1902129",
+        "text": "I want find all Saturdays and Sundays in A given month. How can I do so?",
+        "fallback": "How can I find Saturdays and Sundays in A given month?",
+        "thumb_url": "http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/a/9909484/1902129",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "id": 1
+      }
+    ],
+    "ts": "1457684213.003770",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "+1",
+        "users": [
+          "U0JBN2DV2"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11de27537",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBN2DV2",
+    "text": "okay :simple_smile:",
+    "ts": "1457684243.003772",
+    "id": "11de27538",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0S3AK6SY",
+    "subtype": "channel_join",
+    "text": "<@U0S3AK6SY|tmrocha89> has joined the channel",
+    "ts": "1457684327.003773",
+    "id": "11de27539",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "oooh on N you can actually change display DPI settings",
+    "ts": "1457687596.003774",
+    "id": "11de27540",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054AD9CZ",
+    "text": "I'm trying to grok Dagger 2 for my new project, am I doing it right so far?",
+    "ts": "1457688204.003775",
+    "id": "11de27541",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U054AD9CZ|cr5315> uploaded a file: <https://androidchat.slack.com/files/cr5315/F0S46FFKJ/-.java|Untitled>",
+    "file": {
+      "id": "F0S46FFKJ",
+      "created": 1457688210,
+      "timestamp": 1457688210,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U054AD9CZ",
+      "editable": true,
+      "size": 588,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0S46FFKJ/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0S46FFKJ/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/cr5315/F0S46FFKJ/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0S46FFKJ-470221ce40",
+      "edit_link": "https://androidchat.slack.com/files/cr5315/F0S46FFKJ/-.java/edit",
+      "preview": "@Module\r\npublic class FirebaseModule {\r\n    private final String FIREBASE_URL_DEVELOPMENT = \"https://soundsync-dev.firebaseio.com/\";\r\n    private final String FIREBASE_URL_PRODUCTION = \"https://soundsync.firebaseio.com/\";\r\n\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-meta\">@Module</span></pre></div>\n<div><pre><span class=\"cm-keyword\">public</span> <span class=\"cm-keyword\">class</span> <span class=\"cm-def\">FirebaseModule</span> {</pre></div>\n<div><pre>    <span class=\"cm-keyword\">private</span> <span class=\"cm-keyword\">final</span> <span class=\"cm-variable-3\">String</span> <span class=\"cm-variable\">FIREBASE_URL_DEVELOPMENT</span> <span class=\"cm-operator\">=</span> <span class=\"cm-string\">&quot;https://soundsync-dev.firebaseio.com/&quot;</span>;</pre></div>\n<div><pre>    <span class=\"cm-keyword\">private</span> <span class=\"cm-keyword\">final</span> <span class=\"cm-variable-3\">String</span> <span class=\"cm-variable\">FIREBASE_URL_PRODUCTION</span> <span class=\"cm-operator\">=</span> <span class=\"cm-string\">&quot;https://soundsync.firebaseio.com/&quot;</span>;</pre></div>\n<div><pre>&#8203;</pre></div>\n</div>\n</div>\n",
+      "lines": 21,
+      "lines_more": 16,
+      "preview_is_truncated": null,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U054AD9CZ",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U054AD9CZ|cr5315>",
+    "bot_id": null,
+    "ts": "1457688210.003776",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11de27542",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0BHNKRDE",
+    "text": "Hit everybody!",
+    "ts": "1457689676.003777",
+    "id": "11de27543",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0BHNKRDE",
+    "text": "Is there any library",
+    "ts": "1457689689.003778",
+    "id": "11de27544",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0BHNKRDE",
+    "text": "to crop image",
+    "ts": "1457689692.003779",
+    "id": "11de27545",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0BHNKRDE",
+    "text": "with functions: crop, rotate, take a picture from camerea",
+    "ts": "1457689716.003780",
+    "id": "11de27546",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0BHNKRDE",
+    "text": "take picture from galery",
+    "ts": "1457689722.003781",
+    "id": "11de27547",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N4RS70W",
+    "text": "there is one image library, it might be helpfull take a look at : aviary",
+    "ts": "1457690345.003782",
+    "id": "11de27548",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "<https://github.com/lyft/scissors>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "lyft/scissors",
+        "title_link": "https://github.com/lyft/scissors",
+        "text": "scissors - :scissors: Android image cropping library",
+        "fallback": "GitHub: lyft/scissors",
+        "thumb_url": "https://avatars0.githubusercontent.com/u/4269340?v=3&s=400",
+        "from_url": "https://github.com/lyft/scissors",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1457690365.003783",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U0NHWCT18"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "11de27549",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E2LR73N",
+    "text": "<@U053PPGDC>: About your adb problem, It’s maybe because your current binary is not compatible with the one we bundled with genymotion. You should set your current Android SDK path on the Genymotion settings",
+    "ts": "1457692008.003785",
+    "id": "11de27550",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "<@U0E2LR73N>: thanks :simple_smile: Must have forgotten to point it to my regular sdk location when I switched to the new computer",
+    "ts": "1457692482.003786",
+    "id": "11de27551",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0S4WQT38",
+    "subtype": "channel_join",
+    "text": "<@U0S4WQT38|habib> has joined the channel",
+    "ts": "1457699717.003787",
+    "id": "11de27552",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0S5N4YTA",
+    "subtype": "channel_join",
+    "text": "<@U0S5N4YTA|patrm> has joined the channel",
+    "ts": "1457703929.003788",
+    "id": "11de27553",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBN2DV2",
+    "text": "good morning y'all  :simple_smile: ,  anybody knows any good sources from there  i can learn android UI design , Layout design etc :simple_smile: ???",
+    "ts": "1457704638.003789",
+    "id": "11de27554",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "well google’s got the whole material design guidelines",
+    "ts": "1457706182.003790",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U0JBN2DV2",
+          "U0ESV118E",
+          "U08GFT5V5"
+        ],
+        "count": 3
+      }
+    ],
+    "id": "11de27555",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "<https://www.google.com/design/spec/material-design/introduction.html>",
+    "attachments": [
+      {
+        "service_name": "Google design guidelines",
+        "title": "Introduction - Material design - Google design guidelines",
+        "title_link": "https://www.google.com/design/spec/material-design/introduction.html",
+        "fallback": "Google design guidelines: Introduction - Material design - Google design guidelines",
+        "image_url": "https://material-design.storage.googleapis.com/publish/material_v_4/social.png",
+        "from_url": "https://www.google.com/design/spec/material-design/introduction.html",
+        "image_width": 465,
+        "image_height": 250,
+        "image_bytes": 14110,
+        "id": 1
+      }
+    ],
+    "ts": "1457706201.003791",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U08GFT5V5"
+        ],
+        "count": 2
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11de27556",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "There’s also this course by google - <https://www.udacity.com/course/material-design-for-android-developers--ud862>",
+    "attachments": [
+      {
+        "title": "Material Design for Android Developers",
+        "title_link": "https://www.udacity.com/course/material-design-for-android-developers--ud862",
+        "text": "Learn and apply the material design principles that define Android's visual language to your apps.",
+        "fallback": "Material Design for Android Developers",
+        "image_url": "https://endor-dev.s3-us-west-2.amazonaws.com/sites/566671d2495b2d0018000000/content_entry566671f8495b2d0018000027/5666722a495b2d00180000fc/files/ud862_screenshot.jpg?1455244024",
+        "from_url": "https://www.udacity.com/course/material-design-for-android-developers--ud862",
+        "image_width": 407,
+        "image_height": 250,
+        "image_bytes": 523205,
+        "id": 1
+      }
+    ],
+    "ts": "1457706370.003793",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U055GGAHS"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "11de27557",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "the udacity courses are free (except for the nano degree) and are quite expansive",
+    "ts": "1457706431.003795",
+    "id": "11de27558",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I would recommend you start there",
+    "ts": "1457706435.003796",
+    "id": "11de27559",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "oh yeah forgot that one :simple_smile:",
+    "ts": "1457706441.003797",
+    "id": "11de27560",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBN2DV2",
+    "text": ":+1: okay thanks a lot guys :innocent: <@U055GGAHS>  , <@U053PPGDC> <@U04U5KS3Z>",
+    "ts": "1457706657.003798",
+    "id": "11de27561",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESV118E",
+    "text": "Anyone know if udacity offers any discounts for fulltime students?",
+    "ts": "1457707001.003799",
+    "id": "11de27562",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "for the nanodegree?",
+    "ts": "1457707079.003800",
+    "id": "11de27563",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I think their big discount is that if you finish it quickly you get half of whatever it cost back",
+    "ts": "1457707103.003801",
+    "id": "11de27564",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "it’s a lot of material but if you work at it, I dont think it should take longer than 3 or 4 months for most people",
+    "ts": "1457707131.003802",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U0ESV118E"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11de27565",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0S6FLSMP",
+    "subtype": "channel_join",
+    "text": "<@U0S6FLSMP|santa> has joined the channel",
+    "ts": "1457709485.003803",
+    "id": "11de27566",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0S6RQ823",
+    "subtype": "channel_join",
+    "text": "<@U0S6RQ823|duythanhvn> has joined the channel",
+    "ts": "1457712222.003806",
+    "id": "11de27567",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0S79P99Q",
+    "subtype": "channel_join",
+    "text": "<@U0S79P99Q|stevewarren> has joined the channel",
+    "ts": "1457713464.003808",
+    "id": "11de27568",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "I just freed up 5GB of space by deleting old Android Studio settings folders",
+    "ts": "1457714910.003809",
+    "id": "11de27569",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KTPB91V",
+    "text": "I want to tap a view holder in a recycler view and make it fullscreen, the view holder has a google map view, somebody knows some tutorial or something to achieve this?",
+    "ts": "1457715007.003810",
+    "id": "11de27570",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N4RS70W",
+    "text": "getting null on  mView and requestManager ContactListPresenter: ```@Inject\n    protected ContactListFragment mView;\n    @Inject\n    protected RequestManager requestManager;``` ContactListPresenterModule: ```ContactListFragment mView;\n\n    public ContactListPresenterModule(ContactListFragment view) {\n        mView = view;\n    }\n\n    @Provides\n    public ContactListFragment providesContactListFragment() {\n        return mView;\n    }\n\n    @Provides\n    public ContactListPresenter providesContactListPresenter() {\n        return new ContactListPresenter();\n    }```\n\nPresenterContactlistComponent: ```@Component(modules = {ContactListPresenterModule.class, ApiModule.class})\n@Singleton\npublic interface PresenterContactListComponent {\n    void inject(ContactListFragment fragment);\n}``` ApiModule: ```@Provides\n    @Singleton\n    public RequestManager provideRequestManager(Service service) {\n        return new RequestManager(service);\n    }```",
+    "ts": "1457715195.003811",
+    "id": "11de27571",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U0N4RS70W>:  Don't you still need to bind your view to your presenter in some way? For example you should have something like `return new ContactListPresenter(mView);`",
+    "edited": {
+      "user": "U09T8SFG8",
+      "ts": "1457715467.000000"
+    },
+    "ts": "1457715404.003812",
+    "id": "11de27572",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N4RS70W",
+    "text": "well that’s what i do at the first time, the thing is i would not use @Inject for mView then, and also how to proceed with requestManager ?",
+    "ts": "1457715509.003815",
+    "id": "11de27573",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N4RS70W",
+    "text": "i was expecting somehow that putting inject in mView woud call ```@Provides\n    public ContactListFragment providesContactListFragment() {\n        return mView;\n    }```",
+    "ts": "1457715574.003816",
+    "id": "11de27574",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "Since you are using Dagger 2, the debugger should be quite helpful in seeing what has not been initialized",
+    "ts": "1457715579.003817",
+    "id": "11de27575",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "You still need to do the actual injection with your component",
+    "ts": "1457715598.003818",
+    "id": "11de27576",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N4RS70W",
+    "text": "sorry what do you mean ?",
+    "ts": "1457715630.003819",
+    "id": "11de27577",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "you should do something like `PresenterContactlistComponent.inject(yourPresenterHere)`",
+    "ts": "1457715719.003820",
+    "id": "11de27578",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N4RS70W",
+    "text": "already done that on my fragment",
+    "ts": "1457715752.003821",
+    "id": "11de27579",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N4RS70W",
+    "text": "```PresenterContactListComponent presenter = DaggerPresenterContactListComponent.builder()\n                .apiModule(new ApiModule())\n                .contactListPresenterModule(new ContactListPresenterModule(this))\n                .build();\n        presenter.inject(this)```",
+    "ts": "1457715754.003822",
+    "id": "11de27580",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N4RS70W",
+    "text": "when debuggin the problem i find is ```providesContactListFragment()``` is never called",
+    "ts": "1457715828.003823",
+    "id": "11de27581",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "Do you have in your Fragment a field like:",
+    "ts": "1457715878.003824",
+    "id": "11de27582",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "`@Inject`\n `protected ContactListPresenter presenter;`",
+    "ts": "1457715898.003825",
+    "id": "11de27583",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N4RS70W",
+    "text": "i do ```@Inject\n    protected ContactListPresenter mContactListPresenter;```",
+    "ts": "1457715920.003826",
+    "id": "11de27584",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N4RS70W",
+    "text": "in fact the presenter is being generated and the method ```public ContactListPresenter providesContactListPresenter() ``` is called",
+    "ts": "1457715940.003827",
+    "id": "11de27585",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N4RS70W",
+    "text": "what is not being injected are the fields inside the presenter",
+    "ts": "1457715952.003828",
+    "id": "11de27586",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "sorry I read wrong",
+    "ts": "1457715955.003829",
+    "id": "11de27587",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "So if I understand correctly, your presenter holds the view and the api and none of them is initialized",
+    "ts": "1457716001.003830",
+    "id": "11de27588",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N4RS70W",
+    "text": "exactly",
+    "ts": "1457716010.003831",
+    "id": "11de27589",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I suppose you are not doing constructor injection in your presenter but field injection",
+    "ts": "1457716075.003832",
+    "id": "11de27590",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N4RS70W",
+    "text": "ContactListFragment: ```@Inject\n    protected ContactListPresenter mContactListPresenter;``` this is ok, presenter is generated.\n\nContactListPresenter: ```@Inject\n    protected ContactListFragment mView;\n    @Inject\n    protected RequestManager requestManager;``` this is not generated",
+    "ts": "1457716090.003833",
+    "id": "11de27591",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N4RS70W",
+    "text": "i’m doing field injection exactly",
+    "ts": "1457716103.003834",
+    "id": "11de27592",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N4RS70W",
+    "text": "is it wrong ?",
+    "ts": "1457716106.003835",
+    "id": "11de27593",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "Do contructor injection for the presenter",
+    "ts": "1457716116.003836",
+    "id": "11de27594",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N4RS70W",
+    "text": "but the constructor will have as field the RequestManager ?",
+    "ts": "1457716138.003837",
+    "id": "11de27595",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "yes",
+    "ts": "1457716149.003838",
+    "id": "11de27596",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N4RS70W",
+    "text": "ok so: ```@Inject\n    public ContactListPresenter(ContactListFragment mView, RequestManager requestManager) {\n        this.mView = mView;\n        this.requestManager = requestManager;\n    }```",
+    "ts": "1457716213.003839",
+    "id": "11de27597",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N4RS70W",
+    "text": "and how will this be then: ```@Provides\n    public ContactListPresenter providesContactListPresenter() {\n        return new ContactListPresenter();\n    }```",
+    "ts": "1457716235.003840",
+    "id": "11de27598",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N4RS70W",
+    "text": "i do have a field called mView in the module, but no for the RequestManager, since it is in another module",
+    "ts": "1457716265.003841",
+    "id": "11de27599",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N4RS70W",
+    "text": "passing the requestManager in the constructor looks terrible also",
+    "ts": "1457716326.003842",
+    "id": "11de27600",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "since you do this `@Component(modules = {ContactListPresenterModule.class, ApiModule.class})`",
+    "ts": "1457716446.003843",
+    "id": "11de27601",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "then it should work, it will resolve both the view and the requestManager from the other two modules",
+    "ts": "1457716465.003844",
+    "id": "11de27602",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "But if I'm honest with you, you probably don't want to pass the view in the contrustor at all. You should bind and unbind from it on demand",
+    "ts": "1457716547.003845",
+    "id": "11de27603",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "so `public void bindView(ContactListFragment view)` and `public void unbindView(ContactListFragment view)`",
+    "ts": "1457716582.003846",
+    "id": "11de27604",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N4RS70W",
+    "text": "oh so if i do constructor injection i dont need ```providesContactListPresenter``` didn’t know that, that was the trick",
+    "ts": "1457716798.003847",
+    "id": "11de27605",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N4RS70W",
+    "text": "yes will use bind, thanks, i was just migrating an old project to use dagger2, just for getting use to it",
+    "ts": "1457716850.003848",
+    "id": "11de27606",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "No you should need the provides method still",
+    "ts": "1457716982.003849",
+    "id": "11de27607",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N4RS70W",
+    "text": "mmmm i took it out and it’s working fine",
+    "ts": "1457717078.003850",
+    "id": "11de27608",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N4RS70W",
+    "text": "if i would need it then i would need to do something like this ```@Provides\n    public ContactListPresenter providesContactListPresenter() {\n        return new ContactListPresenter(mView, requestManager);\n    }``` and i don’t have requestManager there",
+    "ts": "1457717112.003851",
+    "id": "11de27609",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0J3AKMPS",
+    "text": "how to fetch lyrics and load it ?",
+    "ts": "1457718088.003852",
+    "id": "11de27610",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0J3AKMPS",
+    "text": "any guide ?",
+    "ts": "1457718095.003853",
+    "id": "11de27611",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U0J3AKMPS>: you need to find an API that can provide you with such lyrics as a first step",
+    "ts": "1457718350.003854",
+    "id": "11de27612",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R75CWCT",
+    "text": "<https://www.publicapis.com/search?keyword=lyrics>",
+    "attachments": [
+      {
+        "service_name": "PublicAPIs",
+        "title": "PublicAPIs | Directory of public APIs for web and mobile",
+        "title_link": "https://www.publicapis.com/search?keyword=lyrics",
+        "text": "Search thousands of APIs that you can use to save time and money by using software components to quickly create and deliver an application on any platform (Mobile, Web, etc).",
+        "fallback": "PublicAPIs: PublicAPIs | Directory of public APIs for web and mobile",
+        "thumb_url": "http://www.publicapis.com/images/logo.png",
+        "from_url": "https://www.publicapis.com/search?keyword=lyrics",
+        "thumb_width": 300,
+        "thumb_height": 300,
+        "id": 1
+      }
+    ],
+    "ts": "1457721333.003855",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11de27613",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Q5FEWTH",
+    "text": "<@U0N4RS70W> have you fixed your issue? i think your injected fields have to be public or at least package local, you’ve got them protected.",
+    "ts": "1457721783.003857",
+    "id": "11de27614",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N4RS70W",
+    "text": "yes i did !, issue was injecting as a field instead on the constructor",
+    "ts": "1457721817.003858",
+    "id": "11de27615",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Q5FEWTH",
+    "text": "you should be able to inject on field though.",
+    "ts": "1457721869.003859",
+    "id": "11de27616",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N4RS70W",
+    "text": "mm not sure why wasn’t working, but don’t think is a protected issue, since the injection for the presenter is as protected and working fine",
+    "ts": "1457721907.003860",
+    "id": "11de27617",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Q5FEWTH",
+    "text": "yeah, i see that now. interesting. glad you got it working though.",
+    "ts": "1457721937.003861",
+    "id": "11de27618",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N4RS70W",
+    "text": "yes thanks !",
+    "ts": "1457722031.003862",
+    "id": "11de27619",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RKMQ810",
+    "text": "Where can I go to find out what is new in version 24.0.0-alpha1 of the support libraries?",
+    "ts": "1457722582.003863",
+    "id": "11de27620",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "sdk manager, as usual?",
+    "ts": "1457722667.003864",
+    "id": "11de27621",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "oh, 24",
+    "ts": "1457722710.003865",
+    "id": "11de27622",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I only see 23.2.1",
+    "ts": "1457722770.003866",
+    "id": "11de27623",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RKMQ810",
+    "text": "In Android Studio, I'm seeing a message in my build.gradle informing me that a newer version is available, 24.0.0-alpha1",
+    "ts": "1457723518.003867",
+    "id": "11de27624",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U0RKMQ810>: that’s if you’re targeting N",
+    "ts": "1457723610.003868",
+    "reactions": [
+      {
+        "name": "nutella",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11de27625",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "use 23.2.1 otherwise",
+    "ts": "1457723619.003869",
+    "id": "11de27626",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "in fact, 23.2.1 has fixes 24.x does not",
+    "ts": "1457723647.003870",
+    "id": "11de27627",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RKMQ810",
+    "text": "Ok, thanks",
+    "edited": {
+      "user": "U0RKMQ810",
+      "ts": "1457723701.000000"
+    },
+    "ts": "1457723690.003871",
+    "id": "11de27628",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RHYQXFS",
+    "text": "Hi!",
+    "ts": "1457727644.003873",
+    "id": "11de27629",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RHYQXFS",
+    "text": "Have you ever use ffmpeg library in your projects ?",
+    "ts": "1457727671.003874",
+    "id": "11de27630",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KTPB91V",
+    "text": "somebody knows how to add a `Set` to a `Bundle`?",
+    "ts": "1457727868.003875",
+    "id": "11de27631",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Most of the Set implementations implement Serializable, so putSerializable() will work",
+    "ts": "1457727960.003876",
+    "id": "11de27632",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "looks like actually all the Java defaults sets do",
+    "ts": "1457728040.003877",
+    "id": "11de27633",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R5QDE48",
+    "text": "hi guys, what is the best alternative to admob?",
+    "ts": "1457730294.003878",
+    "id": "11de27634",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Does anyone have experience with this? <https://github.com/ribot/android-boilerplate>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "ribot/android-boilerplate",
+        "title_link": "https://github.com/ribot/android-boilerplate",
+        "text": "android-boilerplate - Android boilerplate app that showcases architecture and libraries used at ribot",
+        "fallback": "GitHub: ribot/android-boilerplate",
+        "thumb_url": "https://avatars3.githubusercontent.com/u/26924?v=3&s=400",
+        "from_url": "https://github.com/ribot/android-boilerplate",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1457732116.003879",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11de27635",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0SA3AZ45",
+    "subtype": "channel_join",
+    "text": "<@U0SA3AZ45|stevezeidner> has joined the channel",
+    "ts": "1457733930.003881",
+    "id": "11de27636",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "is anyone running into this issue\n<http://stackoverflow.com/questions/35928580/android-n-requires-the-ide-to-be-running-with-java-1-8-or-later?rq=1>",
+    "attachments": [
+      {
+        "title": "Android N requires the IDE to be running with Java 1.8 or later?",
+        "title_link": "http://stackoverflow.com/questions/35928580/android-n-requires-the-ide-to-be-running-with-java-1-8-or-later?rq=1",
+        "text": "My XML layout is not rendering with this error message. I am already using Java 8. Also using latest build tools in Gradle. android { compileSdkVersion 'android-N' buildToolsVersion 24....",
+        "fallback": "Android N requires the IDE to be running with Java 1.8 or later?",
+        "thumb_url": "http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/questions/35928580/android-n-requires-the-ide-to-be-running-with-java-1-8-or-later?rq=1",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "id": 1
+      }
+    ],
+    "ts": "1457740991.003882",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11de27637",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "after updating to the latest version of android studio and updating the support library version to 23.2.1 ?",
+    "ts": "1457741005.003884",
+    "id": "11de27638",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<@U0A1BE7KQ>: not in XML editor, but in preview - above the device you’ll see android icon with N, click on it and choose 23",
+    "ts": "1457741119.003885",
+    "reactions": [
+      {
+        "name": "nutella",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "+1",
+        "users": [
+          "U0A1BE7KQ"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11de27639",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "or lower",
+    "ts": "1457741121.003886",
+    "id": "11de27640",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0548MM6B|bluecup> uploaded a file: <https://androidchat.slack.com/files/bluecup/F0SAH9BFW/screen_shot_2016-03-12_at_01.05.39.png|Screen Shot 2016-03-12 at 01.05.39.png> and commented: here, where it says N in the first icon row",
+    "file": {
+      "id": "F0SAH9BFW",
+      "created": 1457741169,
+      "timestamp": 1457741169,
+      "name": "Screen Shot 2016-03-12 at 01.05.39.png",
+      "title": "Screen Shot 2016-03-12 at 01.05.39.png",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U0548MM6B",
+      "editable": false,
+      "size": 19425,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0SAH9BFW/screen_shot_2016-03-12_at_01.05.39.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0SAH9BFW/download/screen_shot_2016-03-12_at_01.05.39.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F0SAH9BFW-15d1413458/screen_shot_2016-03-12_at_01.05.39_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F0SAH9BFW-15d1413458/screen_shot_2016-03-12_at_01.05.39_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F0SAH9BFW-15d1413458/screen_shot_2016-03-12_at_01.05.39_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 360,
+      "thumb_360_h": 139,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F0SAH9BFW-15d1413458/screen_shot_2016-03-12_at_01.05.39_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "image_exif_rotation": 1,
+      "original_w": 456,
+      "original_h": 176,
+      "permalink": "https://androidchat.slack.com/files/bluecup/F0SAH9BFW/screen_shot_2016-03-12_at_01.05.39.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0SAH9BFW-185a71f815",
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 1,
+      "initial_comment": {
+        "id": "Fc0SAH9PRS",
+        "created": 1457741169,
+        "timestamp": 1457741169,
+        "user": "U0548MM6B",
+        "is_intro": true,
+        "comment": "here, where it says N in the first icon row",
+        "channel": ""
+      }
+    },
+    "user": "U0548MM6B",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0548MM6B|bluecup>",
+    "bot_id": null,
+    "ts": "1457741170.003887",
+    "reactions": [
+      {
+        "name": "nutella",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11de27641",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "oh sweet",
+    "ts": "1457741185.003888",
+    "id": "11de27642",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "thanks <@U0548MM6B>",
+    "edited": {
+      "user": "U0A1BE7KQ",
+      "ts": "1457741276.000000"
+    },
+    "ts": "1457741186.003889",
+    "id": "11de27643",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "maybe you can answer that StackOverflow question",
+    "ts": "1457741223.003890",
+    "id": "11de27644",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "i will upvote your answer",
+    "ts": "1457741229.003891",
+    "id": "11de27645",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "done :simple_smile:",
+    "ts": "1457741466.003893",
+    "id": "11de27646",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBN2DV2",
+    "text": "aeeey everyone :simple_smile: ,  so is it like if we target api level 15+ then we don't have any possibilities to use `Material Design` 0n  -21 levels ???",
+    "edited": {
+      "user": "U0JBN2DV2",
+      "ts": "1457752947.000000"
+    },
+    "ts": "1457752928.003894",
+    "id": "11de27647",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "appcompat backports material design to earlier API levels",
+    "ts": "1457753221.003896",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U0JBN2DV2"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11de27648",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBN2DV2",
+    "text": "hey <@U0546QERR>  it means it'll work on api 15+ too ?",
+    "ts": "1457755301.003897",
+    "id": "11de27649",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "yes",
+    "edited": {
+      "user": "U0546QERR",
+      "ts": "1457755876.000000"
+    },
+    "ts": "1457755873.003898",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U0JBN2DV2"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11de27650",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBN2DV2",
+    "text": "anyone can tell whats wrong here ? am trying to get an imageView with rounded corners ```&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?&gt;\n&lt;shape xmlns:android=\"http://schemas.android.com/apk/res/android\"&gt;\n    &lt;solid android:color=\"#FFFFFF\"/&gt;\n    &lt;stroke android:width=\"3dip\" android:color=\"#B1BCBE\" /&gt;\n    &lt;corners android:radius=\"10dip\"/&gt;\n    &lt;padding android:left=\"0dip\" android:top=\"0dip\" android:right=\"0dip\" android:bottom=\"0dip\" /&gt;\n&lt;/shape&gt;```  and its working as expected unless i assign an image to it ???",
+    "ts": "1457757526.003900",
+    "id": "11de27651",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0JBN2DV2|mrbillionbucks> uploaded a file: <https://androidchat.slack.com/files/mrbillionbucks/F0SBFQW80/screen_shot_2016-03-12_at_10.06.26_am.png|Screen Shot 2016-03-12 at 10.06.26 AM.png>",
+    "file": {
+      "id": "F0SBFQW80",
+      "created": 1457757576,
+      "timestamp": 1457757576,
+      "name": "Screen Shot 2016-03-12 at 10.06.26 AM.png",
+      "title": "Screen Shot 2016-03-12 at 10.06.26 AM.png",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U0JBN2DV2",
+      "editable": false,
+      "size": 181533,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0SBFQW80/screen_shot_2016-03-12_at_10.06.26_am.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0SBFQW80/download/screen_shot_2016-03-12_at_10.06.26_am.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F0SBFQW80-ab442981bf/screen_shot_2016-03-12_at_10.06.26_am_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F0SBFQW80-ab442981bf/screen_shot_2016-03-12_at_10.06.26_am_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F0SBFQW80-ab442981bf/screen_shot_2016-03-12_at_10.06.26_am_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 360,
+      "thumb_360_h": 225,
+      "thumb_480": "https://files.slack.com/files-tmb/T04PLNDMP-F0SBFQW80-ab442981bf/screen_shot_2016-03-12_at_10.06.26_am_480.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_480_w": 480,
+      "thumb_480_h": 300,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F0SBFQW80-ab442981bf/screen_shot_2016-03-12_at_10.06.26_am_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720": "https://files.slack.com/files-tmb/T04PLNDMP-F0SBFQW80-ab442981bf/screen_shot_2016-03-12_at_10.06.26_am_720.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720_w": 720,
+      "thumb_720_h": 450,
+      "thumb_960": "https://files.slack.com/files-tmb/T04PLNDMP-F0SBFQW80-ab442981bf/screen_shot_2016-03-12_at_10.06.26_am_960.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_960_w": 960,
+      "thumb_960_h": 600,
+      "thumb_1024": "https://files.slack.com/files-tmb/T04PLNDMP-F0SBFQW80-ab442981bf/screen_shot_2016-03-12_at_10.06.26_am_1024.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_1024_w": 1024,
+      "thumb_1024_h": 640,
+      "image_exif_rotation": 1,
+      "original_w": 1280,
+      "original_h": 800,
+      "permalink": "https://androidchat.slack.com/files/mrbillionbucks/F0SBFQW80/screen_shot_2016-03-12_at_10.06.26_am.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0SBFQW80-928f7d8747",
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U0JBN2DV2",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0JBN2DV2|mrbillionbucks>",
+    "bot_id": null,
+    "ts": "1457757578.003901",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11de27652",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBN2DV2",
+    "text": "my imageView with rounded corners :point_up_2:",
+    "ts": "1457757588.003902",
+    "id": "11de27653",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0JBN2DV2|mrbillionbucks> uploaded a file: <https://androidchat.slack.com/files/mrbillionbucks/F0SBFRM1N/screen_shot_2016-03-12_at_10.06.39_am.png|Screen Shot 2016-03-12 at 10.06.39 AM.png>",
+    "file": {
+      "id": "F0SBFRM1N",
+      "created": 1457757612,
+      "timestamp": 1457757612,
+      "name": "Screen Shot 2016-03-12 at 10.06.39 AM.png",
+      "title": "Screen Shot 2016-03-12 at 10.06.39 AM.png",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U0JBN2DV2",
+      "editable": false,
+      "size": 462250,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0SBFRM1N/screen_shot_2016-03-12_at_10.06.39_am.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0SBFRM1N/download/screen_shot_2016-03-12_at_10.06.39_am.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F0SBFRM1N-fa1fded19e/screen_shot_2016-03-12_at_10.06.39_am_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F0SBFRM1N-fa1fded19e/screen_shot_2016-03-12_at_10.06.39_am_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F0SBFRM1N-fa1fded19e/screen_shot_2016-03-12_at_10.06.39_am_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 360,
+      "thumb_360_h": 225,
+      "thumb_480": "https://files.slack.com/files-tmb/T04PLNDMP-F0SBFRM1N-fa1fded19e/screen_shot_2016-03-12_at_10.06.39_am_480.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_480_w": 480,
+      "thumb_480_h": 300,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F0SBFRM1N-fa1fded19e/screen_shot_2016-03-12_at_10.06.39_am_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720": "https://files.slack.com/files-tmb/T04PLNDMP-F0SBFRM1N-fa1fded19e/screen_shot_2016-03-12_at_10.06.39_am_720.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720_w": 720,
+      "thumb_720_h": 450,
+      "thumb_960": "https://files.slack.com/files-tmb/T04PLNDMP-F0SBFRM1N-fa1fded19e/screen_shot_2016-03-12_at_10.06.39_am_960.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_960_w": 960,
+      "thumb_960_h": 600,
+      "thumb_1024": "https://files.slack.com/files-tmb/T04PLNDMP-F0SBFRM1N-fa1fded19e/screen_shot_2016-03-12_at_10.06.39_am_1024.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_1024_w": 1024,
+      "thumb_1024_h": 640,
+      "image_exif_rotation": 1,
+      "original_w": 1280,
+      "original_h": 800,
+      "permalink": "https://androidchat.slack.com/files/mrbillionbucks/F0SBFRM1N/screen_shot_2016-03-12_at_10.06.39_am.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0SBFRM1N-8ef277afff",
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U0JBN2DV2",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0JBN2DV2|mrbillionbucks>",
+    "bot_id": null,
+    "ts": "1457757615.003903",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11de27654",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBN2DV2",
+    "text": "after adding image , its overlapping :point_up_2:",
+    "ts": "1457757628.003904",
+    "id": "11de27655",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "<https://sites.google.com/a/android.com/tools/recent/emulator20previewreleasenotes-1|Emulator 2.0 Preview Release Notes>\n&lt;a name=\"TOC-25.0.10\"&gt;&lt;/a&gt;25.0.10Change multitouch from Alt to Ctrl (Cmd on OSX) (<http://b.android.com/202934|b.android.com/202934>)Improve GLES performanceRename \"Grab screen focus with mouse\" to \"Send keyboard shortcuts to\"Clarify keyboard shortcut settings (<http://b.android.com/202934|b.android.com/202934>)Fix segfault on startup when GPU info badly parses (<http://b.android.com/202879|b.android.com/202879>)[Windows/OSX] confirm installed HAXM is 6.0+ (<http://b.android.com/202285|b.android.com/202285>)Ensure that the extended window is fully visible (<http://b.android.com/202414|b.android.com/202414>)[OSX] Change the menu bar and...",
+    "username": "Posts of Recent Changes",
+    "icons": {
+      "image_36": "https://slack.global.ssl.fastly.net/66f9/img/services/rss_36.png",
+      "image_48": "https://slack.global.ssl.fastly.net/66f9/img/services/rss_48.png",
+      "image_72": "https://slack.global.ssl.fastly.net/205a/img/services/rss_72.png"
+    },
+    "bot_id": "B062SSUPJ",
+    "subtype": "bot_message",
+    "ts": "1457761270.003905",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11de27656",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "How do I get the action bar for an AppCompactActivity.. I’m trying to hide with `getSupportActionBar().hide();` or `getActionBar().hide();` in a scroll listener but it keeps throwing a null pointer exception..",
+    "ts": "1457764333.003906",
+    "id": "11de27657",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "does your theme extend noActionBar?",
+    "ts": "1457764606.003907",
+    "id": "11de27658",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "<@U054A24ET>: nope :disappointed: \n\n```\n&lt;?xml version=\"1.0\" encoding=\"utf-8\"?&gt;\n&lt;manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    package=\"com.fayimora.mycontacts\"&gt;\n\n    &lt;application\n        android:allowBackup=\"true\"\n        android:icon=\"@mipmap/ic_launcher\"\n        android:label=\"@string/app_name\"\n        android:supportsRtl=\"true\"\n        android:theme=\"@style/AppTheme\"&gt;\n        &lt;activity android:name=\".ContactListActivity\"&gt;\n            &lt;intent-filter&gt;\n                &lt;action android:name=\"android.intent.action.MAIN\" /&gt;\n\n                &lt;category android:name=\"android.intent.category.LAUNCHER\" /&gt;\n            &lt;/intent-filter&gt;\n        &lt;/activity&gt;\n    &lt;/application&gt;\n\n&lt;/manifest&gt;\n```",
+    "ts": "1457764635.003908",
+    "id": "11de27659",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "did you add a toolbar in your activity layout and set it as the actionbar?",
+    "ts": "1457764691.003909",
+    "id": "11de27660",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "oh no I didn’t",
+    "ts": "1457764706.003910",
+    "id": "11de27661",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "but a toolbar is appearing all the same?",
+    "ts": "1457764716.003911",
+    "id": "11de27662",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "So i have to manually create a toolbar?",
+    "ts": "1457764728.003912",
+    "id": "11de27663",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0F2AP42X|fayi> uploaded a file: <https://androidchat.slack.com/files/fayi/F0SA052JF/screenshot_2016-03-12_06.39.00.png|Screenshot 2016-03-12 06.39.00.png> and commented: I’d say yes unless i’m confusing a toolbar for something else",
+    "file": {
+      "id": "F0SA052JF",
+      "created": 1457764771,
+      "timestamp": 1457764771,
+      "name": "Screenshot 2016-03-12 06.39.00.png",
+      "title": "Screenshot 2016-03-12 06.39.00.png",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U0F2AP42X",
+      "editable": false,
+      "size": 455013,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0SA052JF/screenshot_2016-03-12_06.39.00.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0SA052JF/download/screenshot_2016-03-12_06.39.00.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F0SA052JF-e2c378134c/screenshot_2016-03-12_06.39.00_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F0SA052JF-e2c378134c/screenshot_2016-03-12_06.39.00_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F0SA052JF-e2c378134c/screenshot_2016-03-12_06.39.00_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 216,
+      "thumb_360_h": 360,
+      "thumb_480": "https://files.slack.com/files-tmb/T04PLNDMP-F0SA052JF-e2c378134c/screenshot_2016-03-12_06.39.00_480.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_480_w": 288,
+      "thumb_480_h": 480,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F0SA052JF-e2c378134c/screenshot_2016-03-12_06.39.00_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720": "https://files.slack.com/files-tmb/T04PLNDMP-F0SA052JF-e2c378134c/screenshot_2016-03-12_06.39.00_720.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720_w": 431,
+      "thumb_720_h": 720,
+      "thumb_960": "https://files.slack.com/files-tmb/T04PLNDMP-F0SA052JF-e2c378134c/screenshot_2016-03-12_06.39.00_960.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_960_w": 575,
+      "thumb_960_h": 960,
+      "thumb_1024": "https://files.slack.com/files-tmb/T04PLNDMP-F0SA052JF-e2c378134c/screenshot_2016-03-12_06.39.00_1024.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_1024_w": 614,
+      "thumb_1024_h": 1024,
+      "image_exif_rotation": 1,
+      "original_w": 1262,
+      "original_h": 2106,
+      "permalink": "https://androidchat.slack.com/files/fayi/F0SA052JF/screenshot_2016-03-12_06.39.00.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0SA052JF-7049c017a4",
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 1,
+      "initial_comment": {
+        "id": "Fc0SBFTVHB",
+        "created": 1457764771,
+        "timestamp": 1457764771,
+        "user": "U0F2AP42X",
+        "is_intro": true,
+        "comment": "I’d say yes unless i’m confusing a toolbar for something else",
+        "channel": ""
+      }
+    },
+    "user": "U0F2AP42X",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0F2AP42X|fayi>",
+    "bot_id": null,
+    "ts": "1457764775.003913",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11de27664",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "<@U054A24ET>:",
+    "ts": "1457764779.003914",
+    "id": "11de27665",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "ok... so your AppTheme's parent is probably something like this &lt;style name=\"AppTheme\" parent=\"Theme.AppCompat.Light.DarkActionBar\"&gt;",
+    "ts": "1457764863.003915",
+    "id": "11de27666",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "yes correct `    &lt;style name=\"AppTheme\" parent=\"Theme.AppCompat.Light.DarkActionBar”&gt;...`",
+    "ts": "1457764939.003916",
+    "id": "11de27667",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "follow the steps here: <http://javatechig.com/android/android-lollipop-toolbar-example>",
+    "attachments": [
+      {
+        "service_name": "Javatechig - Resources for developers",
+        "title": "Android Lollipop Toolbar Example | Java Techig",
+        "title_link": "http://javatechig.com/android/android-lollipop-toolbar-example",
+        "text": "Toolbar is introduced in Android Lollipop replaces ActionBar provides tons customization. This tutorial explains android Toolbar example with source code sample",
+        "fallback": "Javatechig - Resources for developers: Android Lollipop Toolbar Example | Java Techig",
+        "thumb_url": "http://javatechig.com/wp-content/uploads/2015/01/Android-Tutorials.jpg",
+        "ts": 1422211474,
+        "from_url": "http://javatechig.com/android/android-lollipop-toolbar-example",
+        "thumb_width": 370,
+        "thumb_height": 200,
+        "id": 1
+      }
+    ],
+    "ts": "1457764946.003917",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11de27668",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "then u can interact with the toolbar more easily",
+    "ts": "1457764957.003919",
+    "id": "11de27669",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "in fact if you intend to hide the toolbar forever, you can just \n\n &lt;style name=\"AppTheme\" parent=\"Theme.AppCompat\"&gt;\n        &lt;item name=\"android:windowNoTitle\"&gt;true&lt;/item&gt;\n        &lt;item name=\"windowActionBar\"&gt;false&lt;/item&gt;\n    &lt;/style&gt;",
+    "ts": "1457764984.003920",
+    "id": "11de27670",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "nice.. i want to hide and show as a list is scrolled",
+    "ts": "1457765012.003921",
+    "id": "11de27671",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "i might be wrong though, im extremely misinformed when it comes to styles and overriding styles",
+    "ts": "1457765036.003922",
+    "id": "11de27672",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "try it out and see if it works for you",
+    "ts": "1457765044.003923",
+    "id": "11de27673",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": ":+1:",
+    "ts": "1457765090.003924",
+    "id": "11de27674",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "<@U054A24ET>: i’m getting this \n\n```\njava.lang.RuntimeException: Unable to start activity ComponentInfo{com.fayimora.mycontacts/com.fayimora.mycontacts.ContactListActivity}: java.lang.IllegalArgumentException: AppCompat does not support the current theme features: { windowActionBar: false, windowActionBarOverlay: false, android:windowIsFloating: false, windowActionModeOverlay: false, windowNoTitle: false }\n```",
+    "edited": {
+      "user": "U0F2AP42X",
+      "ts": "1457765913.000000"
+    },
+    "ts": "1457765881.003925",
+    "id": "11de27675",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "Ur activity is probably extending the wrong class ",
+    "ts": "1457765946.003928",
+    "id": "11de27676",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "It should be appcompat something something ",
+    "ts": "1457765957.003929",
+    "id": "11de27677",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "`public class ContactListActivity extends AppCompatActivity {…}`",
+    "ts": "1457765969.003930",
+    "id": "11de27678",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "`import android.support.v7.app.AppCompatActivity;`",
+    "ts": "1457765984.003931",
+    "id": "11de27679",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0F2AP42X|fayi> uploaded a file: <https://androidchat.slack.com/files/fayi/F0SB96P0W/screenshot_2016-03-12_07.04.17.png|Screenshot 2016-03-12 07.04.17.png> and commented: <@U054A24ET>: so i fixed that but changing the theme to   NoActionBar. However, my UI now looks like this. Can probably fix that with some hight/padding manipulation",
+    "file": {
+      "id": "F0SB96P0W",
+      "created": 1457766388,
+      "timestamp": 1457766388,
+      "name": "Screenshot 2016-03-12 07.04.17.png",
+      "title": "Screenshot 2016-03-12 07.04.17.png",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U0F2AP42X",
+      "editable": false,
+      "size": 140906,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0SB96P0W/screenshot_2016-03-12_07.04.17.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0SB96P0W/download/screenshot_2016-03-12_07.04.17.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F0SB96P0W-eb39a23e45/screenshot_2016-03-12_07.04.17_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F0SB96P0W-eb39a23e45/screenshot_2016-03-12_07.04.17_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F0SB96P0W-eb39a23e45/screenshot_2016-03-12_07.04.17_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 360,
+      "thumb_360_h": 178,
+      "thumb_480": "https://files.slack.com/files-tmb/T04PLNDMP-F0SB96P0W-eb39a23e45/screenshot_2016-03-12_07.04.17_480.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_480_w": 480,
+      "thumb_480_h": 237,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F0SB96P0W-eb39a23e45/screenshot_2016-03-12_07.04.17_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720": "https://files.slack.com/files-tmb/T04PLNDMP-F0SB96P0W-eb39a23e45/screenshot_2016-03-12_07.04.17_720.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720_w": 720,
+      "thumb_720_h": 356,
+      "thumb_960": "https://files.slack.com/files-tmb/T04PLNDMP-F0SB96P0W-eb39a23e45/screenshot_2016-03-12_07.04.17_960.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_960_w": 960,
+      "thumb_960_h": 475,
+      "thumb_1024": "https://files.slack.com/files-tmb/T04PLNDMP-F0SB96P0W-eb39a23e45/screenshot_2016-03-12_07.04.17_1024.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_1024_w": 1024,
+      "thumb_1024_h": 506,
+      "image_exif_rotation": 1,
+      "original_w": 1270,
+      "original_h": 628,
+      "permalink": "https://androidchat.slack.com/files/fayi/F0SB96P0W/screenshot_2016-03-12_07.04.17.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0SB96P0W-16e3c57817",
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 1,
+      "initial_comment": {
+        "id": "Fc0SA0V5QT",
+        "created": 1457766388,
+        "timestamp": 1457766388,
+        "user": "U0F2AP42X",
+        "is_intro": true,
+        "comment": "<@U054A24ET>: so i fixed that but changing the theme to   NoActionBar. However, my UI now looks like this. Can probably fix that with some hight/padding manipulation",
+        "channel": ""
+      }
+    },
+    "user": "U0F2AP42X",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0F2AP42X|fayi>",
+    "bot_id": null,
+    "ts": "1457766391.003932",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "11de27680",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0J3AKMPS",
+    "text": "Caused by: java.lang.OutOfMemoryError: Failed to allocate a 5817756 byte allocation with 1211930 free bytes and 1183KB until OOM",
+    "ts": "1457766711.003933",
+    "id": "11de27681",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0J3AKMPS",
+    "text": "how to fix this type of bugs ?",
+    "ts": "1457766722.003934",
+    "id": "11de27682",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0SBGTJCV",
+    "subtype": "channel_join",
+    "text": "<@U0SBGTJCV|jellycrusher> has joined the channel",
+    "ts": "1457766724.003935",
+    "id": "11de27683",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0J3AKMPS",
+    "text": "its due to ImageView",
+    "ts": "1457766733.003936",
+    "id": "11de27684",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "<@U0F2AP42X> probably just need to set layout_below on ur recyclerview ",
+    "ts": "1457766919.003937",
+    "id": "11de27685",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "<@U0J3AKMPS> ur image is probably too big... It's best to use a library like glide or Picasso to load ur images ",
+    "ts": "1457766994.003938",
+    "id": "11de27686",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0J3AKMPS",
+    "text": "ok thanks",
+    "ts": "1457767027.003939",
+    "id": "11de27687",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0SBHDDUP",
+    "subtype": "channel_join",
+    "text": "<@U0SBHDDUP|zerodivisi0n> has joined the channel",
+    "ts": "1457768207.003940",
+    "id": "11de27688",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

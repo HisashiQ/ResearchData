@@ -1,0 +1,382 @@
+[
+  {
+    "user": "U050NGM50",
+    "subtype": "channel_join",
+    "text": "<@U050NGM50|rania> has joined the channel",
+    "ts": "1434709510.000338",
+    "id": "19tr315",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Alright, so in the beginning of my app I'm asking them to accept the terms and conditions. A simple AlertDialog etc. The onDismissListener checks whether a SharedPreference has been set which is set when the user clicks accept, else it will open the AlertDialog again.",
+    "ts": "1434736641.000339",
+    "id": "19tr316",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Somehow it doesn't detect it the first time, I'm using the async apply for applying the changes, but commit doesn't seem to behave any differently. And when I log the checks, it says they're all true which means it shouldn't show it..",
+    "ts": "1434736696.000340",
+    "id": "19tr317",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Does anyone know what the problem could be?",
+    "ts": "1434736705.000341",
+    "id": "19tr318",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "which lifecycle callback are you using to show the dialog initially? i’m guessing that’s where it’s getting shown again",
+    "ts": "1434736883.000342",
+    "id": "19tr319",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "not in your onDismiss",
+    "ts": "1434736891.000343",
+    "id": "19tr320",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "speaking of commit vs apply though, i’ve wondered how reading from the value works if you try reading before it’s fully committed. i’ve suspected bugs around that before but i’ve never had a situation where i read the old value",
+    "ts": "1434736996.000344",
+    "id": "19tr321",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "It uses the latest one when you edit it says in the docs",
+    "ts": "1434737022.000345",
+    "id": "19tr322",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "so the async part is really the writing to disk",
+    "ts": "1434737038.000346",
+    "id": "19tr323",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "that’s cool",
+    "ts": "1434737045.000347",
+    "id": "19tr324",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Yes",
+    "ts": "1434737047.000348",
+    "id": "19tr325",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "About the life cycle, it's being called in the onCreate and then again in the dismiss listener itself ",
+    "ts": "1434737076.000349",
+    "id": "19tr326",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "But don't the previous ones get dismissed already?",
+    "ts": "1434737103.000350",
+    "id": "19tr327",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "hmm, onCreate should be fine, i was thinking maybe you were trying onResume which might get called once your dialog is dismissed",
+    "ts": "1434737211.000351",
+    "id": "19tr328",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "no idea without being able to step through your code :disappointed:",
+    "ts": "1434737229.000352",
+    "id": "19tr329",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I am calling it in onResume, but I check there whether it has been edited ",
+    "ts": "1434738971.000353",
+    "id": "19tr330",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "(having dinner atm)",
+    "ts": "1434738980.000354",
+    "id": "19tr331",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I fixed it by adding a variable checking whether it is currently being shown",
+    "ts": "1434742606.000355",
+    "id": "19tr332",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "dialogs have a built-in method for that don’t they?",
+    "ts": "1434746274.000356",
+    "id": "19tr333",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "Q",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i dunno, sounds like a weird bug",
+    "ts": "1434746313.000357",
+    "id": "19tr334",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U06K01PDW",
+    "subtype": "channel_join",
+    "text": "<@U06K01PDW|p--> has joined the channel",
+    "ts": "1434760510.000358",
+    "id": "19tr335",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

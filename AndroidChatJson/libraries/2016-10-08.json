@@ -1,0 +1,281 @@
+[
+  {
+    "user": "U2M0XRF45",
+    "text": "<@U2M0XRF45|littlejiams> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1475916758.000492",
+    "id": "08li7657",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "<@U2M0WUZ7A|miha-x64> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1475921043.000493",
+    "id": "08li7658",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "Dear Android community, what do you think about Rx? Is it laconic or verbose, self-explaining or intricated, lightweight or heavyweight? Is it convenient in Android environment? Is it suitable for DEX format?",
+    "ts": "1475924346.000494",
+    "id": "08li7659",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "I don’t understand what dex has to do with anything",
+    "ts": "1475924769.000495",
+    "id": "08li7660",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "If you need async, use it",
+    "ts": "1475924776.000496",
+    "id": "08li7661",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "it’s a better alternative to stuff async tasks and messy handlers",
+    "ts": "1475924830.000497",
+    "id": "08li7662",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "Dex has to deal with all we write. When you write `.filter(r -&gt; r != null)`, thank to Retrolambda, you add 5-6 methods to DEX. With AppCompat, Rx and GMS it's very easy to reach MultiDex.\nAsyncTasks are messy, 100%. Services are verbose. And isn't it messy to write `.subscribeOn(<http://Schedulers.io|Schedulers.io>()).observerOn(AndroidSchedulers.mainThread())` and add your subscription to CompositeSubscription each time?\n\nI'm not trying to start a holy war, I'm just trying to figure out what do people think.",
+    "ts": "1475925504.000498",
+    "id": "08li7663",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "I take it you didn’t read the manual for retrolambda or RxAndroid",
+    "edited": {
+      "user": "U08GFT5V5",
+      "ts": "1475925646.000000"
+    },
+    "ts": "1475925638.000499",
+    "id": "08li7664",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "you are comparing apples to oranges…",
+    "ts": "1475925674.000501",
+    "id": "08li7665",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U2M0WUZ7A> at the end of the day what matters is to find the most efficient way to deliver features and have a maintainable code base. Rx helps a lot with that as long as you take the time to learn it. As for MultiDex, I prefer enabling multidex than decreasing my performance, because decreasing it means less features/hour. Also Rx makes a way more maintainable code base.",
+    "ts": "1475928004.000503",
+    "id": "08li7666",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "<@U09T8SFG8>, do you support pre-lollipop devices?\nI've jumped in a MultiDex project a month ago. App works satisfactory on ART devices, but starts very slow on Dalvik ones.",
+    "ts": "1475929012.000504",
+    "id": "08li7667",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U2M0WUZ7A> API 17+ , I haven't seen any major slowdowns",
+    "ts": "1475929050.000505",
+    "id": "08li7668",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M223RK9",
+    "text": "<@U2M223RK9|derekmatzen> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1475935753.000506",
+    "id": "08li7669",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0921GB",
+    "text": "<@U2M0921GB|raman> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1475935778.000507",
+    "id": "08li7670",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0W4ZL3",
+    "text": "<@U2M0W4ZL3|bridou_n> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1475945965.000508",
+    "id": "08li7671",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

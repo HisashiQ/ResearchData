@@ -1,0 +1,1447 @@
+[
+  {
+    "user": "U0QJ0SARE",
+    "subtype": "channel_join",
+    "text": "<@U0QJ0SARE|haaja> has joined the channel",
+    "ts": "1457168944.002908",
+    "id": "05de26740",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JTJ3PL4",
+    "text": "<@U0J3AKMPS>: yeah np. firstly, apologies. you came in asking about a NPE and we suggested you learn some new library. For the NPE, the resize code looks fine, but the Bitmap being passed in is null, so you’d have to check the code outside of the resizeImage() method and see where the bitmap is coming from. perhaps you’re getting the bitmap from a file that doesn’t exist, or was deleted at some point",
+    "ts": "1457169555.002909",
+    "id": "05de26741",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JTJ3PL4",
+    "text": "as for Picasso, probably the best place to start actually would be the documentation on the main page (<http://square.github.io/picasso/>), but I can describe a bit about what its offering and the basic use cases",
+    "attachments": [
+      {
+        "title": "Picasso",
+        "title_link": "http://square.github.io/picasso/",
+        "text": "A powerful image downloading and caching library for Android",
+        "fallback": "Picasso",
+        "from_url": "http://square.github.io/picasso/",
+        "id": 1
+      }
+    ],
+    "ts": "1457169624.002910",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "05de26742",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JTJ3PL4",
+    "text": "picasso is a framework for downloading, caching, and loading images. generally the syntax looks something like: Picasso.with(context).load(imageUrl).into(imageView);",
+    "ts": "1457169688.002912",
+    "id": "05de26743",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JTJ3PL4",
+    "text": "this is going to start an asynchronous running job to download the image, save it to disk, load it into memory, and then put it in the imageview",
+    "ts": "1457169729.002913",
+    "id": "05de26744",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JTJ3PL4",
+    "text": "the disk and memory caching part is cool, because it means the next time you try to get the image, if the image is in either of the caches it will load faster",
+    "ts": "1457169781.002914",
+    "id": "05de26745",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JTJ3PL4",
+    "text": "It also provides resizing, so if you’d like to resize the image to say 50x50, you can make a call like:",
+    "ts": "1457169910.002915",
+    "id": "05de26746",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0JTJ3PL4|jeran> uploaded a file: <https://androidchat.slack.com/files/jeran/F0QJ2SLBS/-.java|Untitled>",
+    "file": {
+      "id": "F0QJ2SLBS",
+      "created": 1457169937,
+      "timestamp": 1457169937,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U0JTJ3PL4",
+      "editable": true,
+      "size": 68,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0QJ2SLBS/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0QJ2SLBS/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/jeran/F0QJ2SLBS/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0QJ2SLBS-5beb85d927",
+      "edit_link": "https://androidchat.slack.com/files/jeran/F0QJ2SLBS/-.java/edit",
+      "preview": "Picasso.with(context).load(imageUrl).resize(50, 50).into(imageView);",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-variable\">Picasso</span>.<span class=\"cm-variable\">with</span>(<span class=\"cm-variable\">context</span>).<span class=\"cm-variable\">load</span>(<span class=\"cm-variable\">imageUrl</span>).<span class=\"cm-variable\">resize</span>(<span class=\"cm-number\">50</span>, <span class=\"cm-number\">50</span>).<span class=\"cm-variable\">into</span>(<span class=\"cm-variable\">imageView</span>);</pre></div>\n</div>\n</div>\n",
+      "lines": 1,
+      "lines_more": 0,
+      "preview_is_truncated": null,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U0JTJ3PL4",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0JTJ3PL4|jeran>",
+    "bot_id": null,
+    "ts": "1457169937.002916",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "05de26747",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JTJ3PL4",
+    "text": "finally, for transformations like a blurring effect, you can create a custom transformation. For Picasso, this means implementing the com.squareup.picasso.Transformation interface, which requires you to implement the Bitmap transform(Bitmap source) method",
+    "ts": "1457170133.002917",
+    "id": "05de26748",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JTJ3PL4",
+    "text": "then call the transform method with an instance of your Transformation implementation",
+    "ts": "1457170418.002918",
+    "id": "05de26749",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0JTJ3PL4|jeran> uploaded a file: <https://androidchat.slack.com/files/jeran/F0QJ3MJDD/-.java|Untitled>",
+    "file": {
+      "id": "F0QJ3MJDD",
+      "created": 1457170467,
+      "timestamp": 1457170467,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U0JTJ3PL4",
+      "editable": true,
+      "size": 104,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0QJ3MJDD/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0QJ3MJDD/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/jeran/F0QJ3MJDD/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0QJ3MJDD-5cb72560ad",
+      "edit_link": "https://androidchat.slack.com/files/jeran/F0QJ3MJDD/-.java/edit",
+      "preview": "Picasso.with(context).load(imageUrl).transform(new BlurTransformation()).resize(50, 50).into(imageView);",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-variable\">Picasso</span>.<span class=\"cm-variable\">with</span>(<span class=\"cm-variable\">context</span>).<span class=\"cm-variable\">load</span>(<span class=\"cm-variable\">imageUrl</span>).<span class=\"cm-variable\">transform</span>(<span class=\"cm-keyword\">new</span> <span class=\"cm-variable\">BlurTransformation</span>()).<span class=\"cm-variable\">resize</span>(<span class=\"cm-number\">50</span>, <span class=\"cm-number\">50</span>).<span class=\"cm-variable\">into</span>(<span class=\"cm-variable\">imageView</span>);</pre></div>\n</div>\n</div>\n",
+      "lines": 1,
+      "lines_more": 0,
+      "preview_is_truncated": null,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U0JTJ3PL4",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0JTJ3PL4|jeran>",
+    "bot_id": null,
+    "ts": "1457170467.002919",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "05de26750",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0J3AKMPS",
+    "text": "thanks jeran...if u don't mind can u help with teamviewer regarding this ?",
+    "ts": "1457170629.002920",
+    "id": "05de26751",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KU8TDV2",
+    "text": "hi guys, i now have *fragment A* that contains *fragment B* as a child, later on I replace *fragment B* by *fragment C* and also add it to back stack, now I press the back button, the app will go back to *fragment B* from *fragment C*, is there any way to inform the *fragment B* that i've just gone back to it?",
+    "ts": "1457170663.002921",
+    "id": "05de26752",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KU8TDV2",
+    "text": "i've tried to catch in the onResume but it didn't work",
+    "ts": "1457170694.002922",
+    "id": "05de26753",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KU8TDV2",
+    "text": ":confused:",
+    "ts": "1457170696.002923",
+    "id": "05de26754",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JTJ3PL4",
+    "text": "<@U0J3AKMPS>: sry im not in a good place to video call, we can move this to a direct message if you want to go into a bit more detail",
+    "ts": "1457170767.002924",
+    "id": "05de26755",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "If I’m to make a library that contains both frontend and backend code, that then needs to call back to the calling app, what would be the nicest/most elegant way to do it?",
+    "ts": "1457171184.002925",
+    "id": "05de26756",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "stick an activity in that lib and just call startActivityForResult in calling app?",
+    "ts": "1457171232.002926",
+    "id": "05de26757",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "trying to wrap that further?",
+    "ts": "1457171251.002927",
+    "id": "05de26758",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0QJAPZ43",
+    "subtype": "channel_join",
+    "text": "<@U0QJAPZ43|lutsia> has joined the channel",
+    "ts": "1457182003.002928",
+    "id": "05de26759",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0QJDBAU8",
+    "subtype": "channel_join",
+    "text": "<@U0QJDBAU8|arne> has joined the channel",
+    "ts": "1457182425.002929",
+    "id": "05de26760",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0J3AKMPS",
+    "text": "free lyrics api ?",
+    "ts": "1457186199.002930",
+    "id": "05de26761",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0J3AKMPS",
+    "text": "site ?",
+    "ts": "1457186204.002931",
+    "id": "05de26762",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0QJKLAMQ",
+    "subtype": "channel_join",
+    "text": "<@U0QJKLAMQ|nickjohnsonhill> has joined the channel",
+    "ts": "1457188361.002932",
+    "id": "05de26763",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0QJM32KC",
+    "subtype": "channel_join",
+    "text": "<@U0QJM32KC|vdomas> has joined the channel",
+    "ts": "1457189566.002933",
+    "id": "05de26764",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "can i use java 8 with android? i have my sdk set to 8 but i cant access the java 8 features somehow",
+    "ts": "1457191896.002934",
+    "id": "05de26765",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "No, you can't",
+    "ts": "1457191922.002935",
+    "id": "05de26766",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "<@U0F2AP42X> take a look at retrolambda if you want easy access to lambdas in android :simple_smile: <https://github.com/evant/gradle-retrolambda>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "evant/gradle-retrolambda",
+        "title_link": "https://github.com/evant/gradle-retrolambda",
+        "text": "gradle-retrolambda - A gradle plugin for getting java lambda support in java 6, 7 and android",
+        "fallback": "GitHub: evant/gradle-retrolambda",
+        "thumb_url": "https://avatars1.githubusercontent.com/u/628930?v=3&s=400",
+        "from_url": "https://github.com/evant/gradle-retrolambda",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1457192052.002936",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "05de26767",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "it's only a piece of java 8 but i can't go without it now",
+    "ts": "1457192090.002938",
+    "id": "05de26768",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Better fix",
+    "ts": "1457192093.002939",
+    "id": "05de26769",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "?@damien5314:  thanks, any such libraries for Streams",
+    "ts": "1457192094.002940",
+    "id": "05de26770",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Use Kotlin",
+    "ts": "1457192098.002941",
+    "id": "05de26771",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "kotlin!",
+    "ts": "1457192101.002942",
+    "id": "05de26772",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "Hmm",
+    "ts": "1457192107.002943",
+    "id": "05de26773",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "All your problems will just be magically replaced with new/more interesting problems",
+    "ts": "1457192126.002944",
+    "id": "05de26774",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "haha",
+    "ts": "1457192133.002945",
+    "id": "05de26775",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "wish i could use Scala",
+    "ts": "1457192140.002946",
+    "id": "05de26776",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "kotlin is a jvm-based language like scala i think",
+    "ts": "1457192235.002947",
+    "id": "05de26777",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "you can use Scala, pretty sure",
+    "ts": "1457192249.002948",
+    "id": "05de26778",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "wouldn't be surprised",
+    "ts": "1457192268.002949",
+    "id": "05de26779",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I've replaced gradle with sbt in a project before :smile:",
+    "ts": "1457192271.002950",
+    "id": "05de26780",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "was it to see which one is slower <@U04TK850N> ?",
+    "ts": "1457193608.002951",
+    "id": "05de26781",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "<@U053PPGDC>: Nope, I tested this, before instant run was a thing: <https://github.com/pfn/protify>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "pfn/protify",
+        "title_link": "https://github.com/pfn/protify",
+        "text": "protify - Live-coding and hot-deploy for Android",
+        "fallback": "GitHub: pfn/protify",
+        "thumb_url": "https://avatars2.githubusercontent.com/u/512197?v=3&s=400",
+        "from_url": "https://github.com/pfn/protify",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1457193748.002952",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "05de26782",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "Ah cool",
+    "ts": "1457193856.002954",
+    "id": "05de26783",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D2FJ3UN",
+    "text": "<@U0546QERR>: retrolambda contains not only lambdas from java8, but also some sweet stuff like default methods in interfaces, method references and others",
+    "ts": "1457198338.002955",
+    "id": "05de26784",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D2FJ3UN",
+    "text": "many features except streams api))",
+    "ts": "1457198386.002956",
+    "id": "05de26785",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D2FJ3UN",
+    "text": "also rxjava could replace streams api in some cases",
+    "ts": "1457198445.002957",
+    "id": "05de26786",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D2FJ3UN",
+    "text": "and it is very powerful in couple with retrolambda",
+    "ts": "1457198521.002958",
+    "id": "05de26787",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "not sure why i didn't think of rxjava :sweat:",
+    "ts": "1457200701.002959",
+    "id": "05de26788",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "that is also an excellent option without needing to go all the way in with kotlin",
+    "ts": "1457200717.002960",
+    "id": "05de26789",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "but rxjava with regular java7 is just an anonymous class party",
+    "ts": "1457202783.002961",
+    "id": "05de26790",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D2FJ3UN",
+    "text": "shhh guys might doesn’t know))",
+    "ts": "1457203131.002962",
+    "id": "05de26791",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D2FJ3UN",
+    "text": "nope actually it anonymous class party in generated code but in your src this is native lambda",
+    "ts": "1457203218.002963",
+    "id": "05de26792",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0QK9EQU9",
+    "subtype": "channel_join",
+    "text": "<@U0QK9EQU9|rishal> has joined the channel",
+    "ts": "1457204044.002964",
+    "id": "05de26793",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "isn't that essentially what java does though? it's just shorthand syntactic sugar",
+    "ts": "1457205790.002965",
+    "id": "05de26794",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "should all compile down to the same thing",
+    "ts": "1457205803.002966",
+    "id": "05de26795",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "java 8, i mean",
+    "ts": "1457205816.002967",
+    "id": "05de26796",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0QKG0EDC",
+    "subtype": "channel_join",
+    "text": "<@U0QKG0EDC|primaelq> has joined the channel",
+    "ts": "1457208745.002968",
+    "id": "05de26797",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "&gt; but rxjava with regular java7 is just an anonymous class party\nThis though…",
+    "ts": "1457209067.002969",
+    "id": "05de26798",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0QKEHH6Z",
+    "subtype": "channel_join",
+    "text": "<@U0QKEHH6Z|hongoloco> has joined the channel",
+    "ts": "1457210558.002970",
+    "id": "05de26799",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "hallo",
+    "ts": "1457210857.002971",
+    "id": "05de26800",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "anyone here with experience on domain modelling?",
+    "ts": "1457210872.002972",
+    "id": "05de26801",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "or with functional programming, like scala",
+    "ts": "1457211000.002973",
+    "id": "05de26802",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U0B8R3VV4>: I have a tiny bit experience with Scala but on Big Data with the Apache Spark framework",
+    "edited": {
+      "user": "U09T8SFG8",
+      "ts": "1457213173.000000"
+    },
+    "ts": "1457213160.002974",
+    "id": "05de26803",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0QL5H74J",
+    "subtype": "channel_join",
+    "text": "<@U0QL5H74J|ehernandezvilla> has joined the channel",
+    "ts": "1457231053.002976",
+    "id": "05de26804",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0PGWV083",
+    "text": "Hi guys, trying to replicate facebook login without using fragment",
+    "ts": "1457250543.002977",
+    "id": "05de26805",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0PGWV083",
+    "text": "However, the app is crashing when a new activity is called via intent",
+    "ts": "1457250585.002978",
+    "id": "05de26806",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0PGWV083",
+    "text": "The intent has been called in FacebookCallback, OnSuccess method. any idea what is here doing mess up ?",
+    "ts": "1457250999.002979",
+    "id": "05de26807",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

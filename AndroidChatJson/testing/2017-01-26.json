@@ -1,0 +1,183 @@
+[
+  {
+    "user": "U3U22BN58",
+    "text": "<@U3U22BN58|kai.puth> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1485421840.000082",
+    "id": "26te2909",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3U22BN58",
+    "text": "Hi. I want to write a UI test for a login to a remote server. Is there a convenient way to do this without \"peeking under the hood\"?",
+    "ts": "1485421977.000083",
+    "id": "26te2910",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "check out Espresso",
+    "ts": "1485422194.000084",
+    "id": "26te2911",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3U22BN58",
+    "text": "As I see it, Espresso offers only _IdlingResource_ as a solution. And _IdlingResource_ does not operate on the UI. I'd prefer to do something akin to Selenium: `WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.id(\"someid\")));`",
+    "ts": "1485440770.000085",
+    "id": "26te2912",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "yeah - espresso is a bit more lower level than this, but it’s fast because of that.",
+    "ts": "1485440894.000086",
+    "id": "26te2913",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "Does anyone know if there is a way to test a RecyclerView with Espresso where I can have it scroll to a row based on a text value instead of position? Or find the position of the item so that I can then pass position that to the RecyclerViewActions?",
+    "ts": "1485467228.000087",
+    "id": "26te2914",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "It's tricky, but doable. You need to find a way to \"describe\" an individual item in it",
+    "ts": "1485494654.000088",
+    "id": "26te2915",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "Or",
+    "ts": "1485494718.000089",
+    "id": "26te2916",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "Control the data that comes into your test, and recyclerview and you'll know what item to click on",
+    "ts": "1485494771.000090",
+    "id": "26te2917",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "The second option is better, as it's more deterministic ",
+    "ts": "1485494829.000091",
+    "id": "26te2918",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

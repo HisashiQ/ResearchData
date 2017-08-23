@@ -1,0 +1,569 @@
+[
+  {
+    "user": "U0KC373GX",
+    "text": "hey! I’m trying to test some stuff under an activity’s lifecycle. I’ve read pretty much every dagger 2 + robolectric + yada yada article out there but I’m still stuck. \n\nI’m trying to inject my mock object into the test, but for some reason my unit test keeps injecting the real module. can anyone point me to the right direction?\n\n<https://github.com/ecgreb/dagger-2-testing-demo> is what I’m currently trying to follow.",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "ecgreb/dagger-2-testing-demo",
+        "title_link": "https://github.com/ecgreb/dagger-2-testing-demo",
+        "text": "dagger-2-testing-demo - Sample Android application using Dagger 2, Robolectric, and Mockito",
+        "fallback": "GitHub: ecgreb/dagger-2-testing-demo",
+        "thumb_url": "https://avatars3.githubusercontent.com/u/464123?v=3&s=400",
+        "from_url": "https://github.com/ecgreb/dagger-2-testing-demo",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1464604347.000314",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "30te1359",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U0KC373GX>: what are you trying to test exactly? Are you trying to mock your presenter in your activity for example? ",
+    "ts": "1464617753.000316",
+    "id": "30te1360",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KC373GX",
+    "text": "<@U09T8SFG8>: I’m trying to test if my activity’s lifecycle methods fire up the appropriate stuff. for context, I’m mocking a MediaPlayer object. I was trying to see if my activity’s onResume fires up myMediaPlayer.start(), etc etc.",
+    "ts": "1464626261.000317",
+    "id": "30te1361",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KC373GX",
+    "text": "would there be a separate package for dagger and testing?",
+    "ts": "1464627141.000318",
+    "id": "30te1362",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KC373GX",
+    "text": "i’m baffled as my DaggerTestApplication isn’t even getting generated",
+    "ts": "1464627169.000319",
+    "id": "30te1363",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U0KC373GX>: tbh with you I wouldn't test that. In general I don't test activity lifecycle stuff through unit testing but through end-to-end tests. If you really want to unit test it, then yes mocking it and verifying the method calls would be the way to do it. With dagger all you would have to do would be to supply a replacement module with your mocks during the component creation",
+    "ts": "1464627184.000320",
+    "id": "30te1364",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KC373GX",
+    "text": "yeah…….",
+    "ts": "1464627201.000321",
+    "id": "30te1365",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "if you want to inject your mocks at the application component level then you need to supply a method in your app class which would provide the app component",
+    "ts": "1464627230.000322",
+    "id": "30te1366",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "what you do then is you extend your app class, override that component provider method and replace your module dependencies there",
+    "ts": "1464627260.000323",
+    "id": "30te1367",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I'll give an example give me a sec",
+    "ts": "1464627269.000324",
+    "id": "30te1368",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KC373GX",
+    "text": ":+1:",
+    "ts": "1464627480.000325",
+    "id": "30te1369",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KC373GX",
+    "text": "that is also my understanding (most examples online do this)",
+    "ts": "1464627493.000326",
+    "id": "30te1370",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U09T8SFG8|aki> shared a file: <https://androidchat.slack.com/files/aki/F1CPH3604/Dagger_2_test_dependencies_override|Dagger 2 test dependencies override>",
+    "file": {
+      "id": "F1CPH3604",
+      "created": 1464627683,
+      "timestamp": 1464627860,
+      "name": "Dagger_2_test_dependencies_override",
+      "title": "Dagger 2 test dependencies override",
+      "mimetype": "text/plain",
+      "filetype": "space",
+      "pretty_type": "Post",
+      "user": "U09T8SFG8",
+      "editable": true,
+      "size": 2939,
+      "mode": "space",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F1CPH3604/Dagger_2_test_dependencies_override?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F1CPH3604/download/Dagger_2_test_dependencies_override?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/aki/F1CPH3604/Dagger_2_test_dependencies_override",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F1CPH3604-ed4a98cd84",
+      "preview": "<document><p>You have your app class</p><pre>public class MyApp extends Application {\n\tprivate ApplicationComponent applicationComponent;\n\n\tpublic static MyApp get(Context context) {</pre></document>",
+      "updated": 1464627860,
+      "editor": "U09T8SFG8",
+      "last_editor": "U09T8SFG8",
+      "state": "locked",
+      "channels": [
+        "C0D6DUW8L"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U09T8SFG8",
+    "upload": false,
+    "display_as_bot": false,
+    "username": "<@U09T8SFG8|aki>",
+    "bot_id": null,
+    "ts": "1464627824.000327",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "30te1371",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U0KC373GX>:",
+    "ts": "1464627830.000328",
+    "id": "30te1372",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KC373GX",
+    "text": "looking",
+    "ts": "1464627834.000329",
+    "id": "30te1373",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "then for your integration, functional, end-to-end or acceptance tests to use it, you can either supply it in the Robolectric config (with a custom test runner) or supply your own custom test runner and supply it through there",
+    "ts": "1464627954.000330",
+    "id": "30te1374",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KC373GX",
+    "text": "^ I think that’s what I’m missing. but I thought I could just easily just switch my MyAppTest on\n \n`@RunWith(RobolectricGradleTestRunner.class)`\n`@Config(constants = BuildConfig.class, sdk = 21, application = MyAppTest)`",
+    "edited": {
+      "user": "U0KC373GX",
+      "ts": "1464628119.000000"
+    },
+    "ts": "1464628094.000331",
+    "id": "30te1375",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "Didn't know about that annotation. I don't really use Robolectric tbh",
+    "ts": "1464628143.000335",
+    "id": "30te1376",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KC373GX",
+    "text": "i might be wrong to start with.. testing all of this lifecycle stuff in a unit test really doesn’t sound like a good thing",
+    "ts": "1464628364.000336",
+    "id": "30te1377",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KC373GX",
+    "text": "my argument against doing this as a functional test is that my MediaPlayer object plays background music, and not anything that shows up on the UI",
+    "ts": "1464628411.000337",
+    "id": "30te1378",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "functional testing is not entirely about ui",
+    "ts": "1464628567.000338",
+    "id": "30te1379",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "in general it is to test that things work as intended",
+    "ts": "1464628578.000339",
+    "id": "30te1380",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KC373GX",
+    "text": "(and that it takes too long)",
+    "ts": "1464628978.000340",
+    "id": "30te1381",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "well yeah every company pretty much has its own definition",
+    "ts": "1464629241.000341",
+    "id": "30te1382",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "For my personal projects I do unit tests (JVM only), integration tests (Android and JVM) and end-to-end tests (Android)",
+    "edited": {
+      "user": "U09T8SFG8",
+      "ts": "1464629295.000000"
+    },
+    "ts": "1464629289.000342",
+    "id": "30te1383",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KC373GX",
+    "text": "well, I spent 2 days troubleshooting this testing issue.. but i guess it’s all good since my end to end tests have me covered :slightly_smiling_face:",
+    "ts": "1464630527.000344",
+    "id": "30te1384",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

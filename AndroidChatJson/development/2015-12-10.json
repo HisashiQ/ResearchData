@@ -1,0 +1,1813 @@
+[
+  {
+    "user": "U0D8P42SC",
+    "text": "are you using multidex by chance?",
+    "ts": "1449734529.002310",
+    "id": "10de17953",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0GABV8Q2",
+    "subtype": "channel_join",
+    "text": "<@U0GABV8Q2|christophecvb> has joined the channel",
+    "ts": "1449737361.002311",
+    "id": "10de17954",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "yes <@U0D8P42SC> im using multidex",
+    "edited": {
+      "user": "U0A1BE7KQ",
+      "ts": "1449737828.000000"
+    },
+    "ts": "1449737818.002312",
+    "id": "10de17955",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "so i have multidex setup\nand didnt have issues in the past\nbut all of a sudden this issue started cropping up\nin my class that extends Application\n \n@Override\n   protected void attachBaseContext(Context base) {\n       super.attachBaseContext(base);\n       MultiDex.install(this);\n   }\n\ni set up multidex like that\n\nthen in build.gradle\nandroid {\n  defaultConfig {\n       // Enabling multidex support.\n       multiDexEnabled true\n   }\n}\n\ndependencies {\n   compile 'com.android.support:multidex:1.0.1’\n}\n\n<@U0D8P42SC> I didnt have issues before with Fabric on Android 4.4.4(edited)\nbut suddenly the app starts crashing now when trying to initialize Fabric on Android 4.4.4",
+    "ts": "1449737909.002314",
+    "id": "10de17956",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8P42SC",
+    "text": "<@U0A1BE7KQ>: Possibly a problem with ProGuard if you're using it. If not, is / are the device(s) on which the crashes happen Samsungs?",
+    "ts": "1449740324.002315",
+    "id": "10de17957",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8P42SC",
+    "text": "I mean, *only* Samsung?",
+    "ts": "1449740334.002316",
+    "id": "10de17958",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "im not using proguard",
+    "ts": "1449740348.002317",
+    "id": "10de17959",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "i am using Genymotion",
+    "ts": "1449740355.002318",
+    "id": "10de17960",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "and i setup a Samsung galaxy s5 device",
+    "ts": "1449740368.002319",
+    "id": "10de17961",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "that has Android 4.4.4",
+    "ts": "1449740382.002320",
+    "id": "10de17962",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "i will try to create some other pre lollipop devices in Genymotion to see if it crashes on those as well",
+    "ts": "1449740406.002321",
+    "id": "10de17963",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8P42SC",
+    "text": "Mh, there is one problem with Samsung devices and multidex that comes to my mind: <http://stackoverflow.com/questions/29007309/class-cast-exception-to-same-class-on-android>",
+    "attachments": [
+      {
+        "title": "Class cast exception to same class on Android",
+        "title_link": "http://stackoverflow.com/questions/29007309/class-cast-exception-to-same-class-on-android",
+        "text": "I'm having a strange problem with ClassCastException on Android. One class cannot be casted to the same class: java.lang.RuntimeException: Unable to start activity ComponentInfo:",
+        "fallback": "Class cast exception to same class on Android",
+        "thumb_url": "http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/questions/29007309/class-cast-exception-to-same-class-on-android",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "id": 1
+      }
+    ],
+    "ts": "1449740430.002322",
+    "id": "10de17964",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8P42SC",
+    "text": "Another thing is, I experienced pretty much the same problem with some other library (HockeyApp or whatever). Only appeared on Android 4.x. I never really found out what actually caused it, but I found out that this only happened when the apk was built on my computer",
+    "ts": "1449740494.002324",
+    "id": "10de17965",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "Samsung seems to always be messing things up",
+    "ts": "1449740495.002325",
+    "id": "10de17966",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8P42SC",
+    "text": "they are",
+    "ts": "1449740499.002326",
+    "id": "10de17967",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8P42SC",
+    "text": "I'd try building on another PC or on a CI server, see if that helps",
+    "ts": "1449740522.002327",
+    "id": "10de17968",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "it also crashes on a Google Nexus 4",
+    "ts": "1449740587.002328",
+    "id": "10de17969",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "with android 4.4.4 on it",
+    "ts": "1449740596.002329",
+    "id": "10de17970",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "let me try a different O.S. version",
+    "ts": "1449740606.002330",
+    "id": "10de17971",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Any idea why the App Permissions screen for my app would show Contacts even tho I don’t have READ_CONTACTS or WRITE_CONTACTS in my manifest? I’m not using runtime permissions yet.",
+    "ts": "1449741014.002331",
+    "id": "10de17972",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0FQL2QCV",
+    "text": "hi, I’ve just noticed this persisten hint and it’s pretty cool. Is it already implemented somehow or should we implement our own view?\n<https://www.google.com/design/spec/components/text-fields.html#text-fields-required-fields>",
+    "attachments": [
+      {
+        "service_name": "Google design guidelines",
+        "title": "Text fields - Components - Google design guidelines",
+        "title_link": "https://www.google.com/design/spec/components/text-fields.html#text-fields-required-fields",
+        "fallback": "Google design guidelines: Text fields - Components - Google design guidelines",
+        "image_url": "https://material-design.storage.googleapis.com/publish/material_v_4/social.png",
+        "from_url": "https://www.google.com/design/spec/components/text-fields.html#text-fields-required-fields",
+        "image_width": 465,
+        "image_height": 250,
+        "image_bytes": 14110,
+        "id": 1
+      }
+    ],
+    "ts": "1449741089.002332",
+    "id": "10de17973",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8P42SC",
+    "text": "<@U0FQL2QCV>: <http://developer.android.com/reference/android/support/design/widget/TextInputLayout.html>",
+    "ts": "1449741392.002334",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U0FQL2QCV"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "10de17974",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0FQL2QCV",
+    "text": "thanks <@U0D8P42SC> ! I was searching for persistent hint and it’s not in that description.  I’ll try it for sure!",
+    "ts": "1449741555.002335",
+    "id": "10de17975",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KSPCLF",
+    "text": "I want to record the screen of a virtual device running one of my apps, but the \"Record screen\" button is grey and unclickable. Does anyone know how I can enable it?",
+    "ts": "1449743084.002336",
+    "id": "10de17976",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0GAHFZDZ",
+    "subtype": "channel_join",
+    "text": "<@U0GAHFZDZ|andy> has joined the channel",
+    "ts": "1449743840.002337",
+    "id": "10de17977",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0GAGNACC",
+    "subtype": "channel_join",
+    "text": "<@U0GAGNACC|klevi> has joined the channel",
+    "ts": "1449745732.002340",
+    "id": "10de17978",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0GARV0NT",
+    "subtype": "channel_join",
+    "text": "<@U0GARV0NT|farukcankaya> has joined the channel",
+    "ts": "1449749752.002341",
+    "id": "10de17979",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G8VTVMH",
+    "text": "hello!! does anyone know a good doc/tutorial about making POST requests in RESTful APIs?",
+    "ts": "1449752442.002342",
+    "id": "10de17980",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "<http://square.github.io/retrofit/>",
+    "attachments": [
+      {
+        "text": "A type-safe HTTP client for Android and Java",
+        "fallback": "A type-safe HTTP client for Android and Java",
+        "from_url": "http://square.github.io/retrofit/",
+        "id": 1
+      }
+    ],
+    "ts": "1449752627.002343",
+    "id": "10de17981",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "works for 99% of cases",
+    "ts": "1449752638.002345",
+    "id": "10de17982",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "and does so brilliantly",
+    "ts": "1449752648.002346",
+    "id": "10de17983",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G8VTVMH",
+    "text": "I’m using retrofit, but there’s a problem with my POST request",
+    "ts": "1449753441.002347",
+    "id": "10de17984",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G8VTVMH",
+    "text": "I posted in stack overflow: <http://stackoverflow.com/questions/34141033/retrofit-2-response-body-null-when-response-status-is-422-unprocessable-entit>",
+    "attachments": [
+      {
+        "title": "Retrofit 2 - Response body null when response status is 422 (unprocessable entity)",
+        "title_link": "http://stackoverflow.com/questions/34141033/retrofit-2-response-body-null-when-response-status-is-422-unprocessable-entit",
+        "text": "I'm using Retrofit to make a POST Request in my web server. However, I can't seem to get the response body when the response status is 422 (unprocessable entity). The response body is always nul...",
+        "fallback": "Retrofit 2 - Response body null when response status is 422 (unprocessable entity)",
+        "thumb_url": "http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/questions/34141033/retrofit-2-response-body-null-when-response-status-is-422-unprocessable-entit",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "id": 1
+      }
+    ],
+    "ts": "1449753469.002348",
+    "id": "10de17985",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G8VTVMH",
+    "text": "I’m not able to get the body when return is 422 using retrofit",
+    "ts": "1449753592.002350",
+    "id": "10de17986",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G8VTVMH",
+    "text": "can u help me?",
+    "ts": "1449753686.002351",
+    "id": "10de17987",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A8QLJFJ",
+    "text": "But if you get a 4xx the body should be null?",
+    "ts": "1449753736.002352",
+    "id": "10de17988",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A8QLJFJ",
+    "text": "What are you expecting it to return?",
+    "ts": "1449753748.002353",
+    "id": "10de17989",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G8VTVMH",
+    "text": "the errors",
+    "ts": "1449753761.002354",
+    "id": "10de17990",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G8VTVMH",
+    "text": "for example",
+    "ts": "1449753768.002355",
+    "id": "10de17991",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A8QLJFJ",
+    "text": "oh",
+    "ts": "1449753776.002356",
+    "id": "10de17992",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G8VTVMH",
+    "text": "I need to post users phone, if the phone isnt formatted the way my server needs",
+    "ts": "1449753796.002357",
+    "id": "10de17993",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G8VTVMH",
+    "text": "it returns an array with the errors",
+    "ts": "1449753804.002358",
+    "id": "10de17994",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G8VTVMH",
+    "text": "I dont validate stuff in the front end (app)",
+    "ts": "1449753834.002359",
+    "id": "10de17995",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A8QLJFJ",
+    "text": "Ah",
+    "ts": "1449753848.002360",
+    "id": "10de17996",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G8VTVMH",
+    "text": "I use the same JSON in Postman to test the request and it returns the errors perfectly",
+    "edited": {
+      "user": "U0G8VTVMH",
+      "ts": "1449753925.000000"
+    },
+    "ts": "1449753896.002361",
+    "id": "10de17997",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G94E0QJ",
+    "text": "<@U0G8VTVMH>: you may need to map the error structure in ur failure callback",
+    "ts": "1449755250.002363",
+    "id": "10de17998",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G94E0QJ",
+    "text": "then:                             RestError body = (RestError) error.getBodyAs(RestError.class);",
+    "ts": "1449755255.002364",
+    "id": "10de17999",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G94E0QJ",
+    "text": "exmple",
+    "ts": "1449755262.002365",
+    "id": "10de18000",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G94E0QJ",
+    "text": "if not u can try to see what is in it:                             String json = new String(((TypedByteArray) error.getResponse().getBody()).getBytes());",
+    "ts": "1449755277.002366",
+    "id": "10de18001",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G8VTVMH",
+    "text": "<@U0G94E0QJ> I’ll try that",
+    "edited": {
+      "user": "U0G8VTVMH",
+      "ts": "1449755578.000000"
+    },
+    "ts": "1449755565.002367",
+    "id": "10de18002",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055JANKU",
+    "text": "<@U0G8VTVMH>: retrofit 2, right? then use `response.errorBody()`",
+    "ts": "1449757413.002369",
+    "id": "10de18003",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "I am running into an issue that seems to be specific to Multidex.  I had multidex setup in the past and it was working for awhile but now its crashing on pre-lollipop devices.  It crashes at runtime with this error\nNoClassDefFoundError\n\nSo i tried setting the multiDexKeepProguard in build.gradle\ndefaultConfig {\n multiDexKeepProguard file('multidex-keep.txt')\n}\n\nThen I created some keep rules there\n# multidex-keep.txt\n-keep class io.fabric.sdk.android.** { *; }\n-keep class timber.log.** { *; }\n-keep class com.facebook.FacebookSdk\n-keep class com.path.android.jobqueue.JobManager\n\nThe first rules seem to resolve the ​*NoClassDefFoundError*​ for Fabric and Timber.  But when that error showed up for the Facebook SDK or the JobSchedulerAPI these rules did not fix that error.",
+    "ts": "1449762240.002370",
+    "id": "10de18004",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G8VTVMH",
+    "text": "<@U055JANKU>: Yeah, I’m using retrofit 2… I tried to get the errorBody() but I couldn’t understand",
+    "ts": "1449763827.002371",
+    "id": "10de18005",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G8VTVMH",
+    "text": "Should I try errorBody().string()?",
+    "ts": "1449763850.002372",
+    "id": "10de18006",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055JANKU",
+    "text": "<@U0G8VTVMH>: That’ll give you the string.",
+    "edited": {
+      "user": "U055JANKU",
+      "ts": "1449764020.000000"
+    },
+    "ts": "1449763916.002373",
+    "id": "10de18007",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055JANKU",
+    "text": "Guess you want the object?",
+    "ts": "1449763955.002374",
+    "id": "10de18008",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G8VTVMH",
+    "text": "<@U055JANKU>: Yea, I wanted to parse the response JSON",
+    "ts": "1449764214.002376",
+    "id": "10de18009",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "You shouldn’t be parsing JSON with Retrofit",
+    "ts": "1449764282.002377",
+    "id": "10de18010",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Literally designed to do all of that for you",
+    "ts": "1449764290.002378",
+    "id": "10de18011",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055JANKU",
+    "text": "The errorBody is always a string or stream. You have a way to not do it yourself?",
+    "ts": "1449764326.002379",
+    "id": "10de18012",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055JANKU",
+    "text": "errorBody() -&gt; Gson -&gt; Object :tada:",
+    "ts": "1449764420.002380",
+    "id": "10de18013",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G8VTVMH",
+    "text": "is there a JSON API converter?",
+    "ts": "1449765805.002381",
+    "id": "10de18014",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "JSON API converter? huh?",
+    "ts": "1449765837.002382",
+    "id": "10de18015",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "you thinking of Gson maybe?",
+    "ts": "1449765843.002383",
+    "id": "10de18016",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G8VTVMH",
+    "text": "as far as I understand retrofit, I need a converter, right?",
+    "ts": "1449765948.002384",
+    "id": "10de18017",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G8VTVMH",
+    "text": "My web server is using JSON API style",
+    "ts": "1449765979.002385",
+    "id": "10de18018",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G8VTVMH",
+    "text": "<http://jsonapi.org/>",
+    "ts": "1449765980.002386",
+    "id": "10de18019",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "you can convert the JSON data structure using Gson for example",
+    "ts": "1449766191.002387",
+    "id": "10de18020",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "it’s the most popular converter",
+    "ts": "1449766197.002388",
+    "id": "10de18021",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "Retrofit 1 does it automatically",
+    "ts": "1449766204.002389",
+    "id": "10de18022",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "Use GSON, add the converter to Retrofit and use this for figuring out your POJO <http://www.jsonschema2pojo.org/>",
+    "attachments": [
+      {
+        "text": "Generate Plain Old Java Objects from JSON or JSON-Schema.",
+        "fallback": "Generate Plain Old Java Objects from JSON or JSON-Schema.",
+        "from_url": "http://www.jsonschema2pojo.org/",
+        "id": 1
+      }
+    ],
+    "ts": "1449766208.002390",
+    "id": "10de18023",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "Retrofit 2 needs a converter",
+    "ts": "1449766211.002392",
+    "id": "10de18024",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "jsonschema2pojo is nice but last I used it, they give you back a .jar",
+    "ts": "1449768918.002393",
+    "id": "10de18025",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "so I usually just end up copy pasting from the preview which is kinda annoying lol",
+    "ts": "1449768938.002394",
+    "id": "10de18026",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "there was a IntelliJ plugin",
+    "ts": "1449770201.002395",
+    "id": "10de18027",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "sadly not updated for 15",
+    "ts": "1449770205.002396",
+    "id": "10de18028",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "<https://github.com/izumin5210/Droidux>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "izumin5210/Droidux",
+        "title_link": "https://github.com/izumin5210/Droidux",
+        "text": "Droidux - \"Predictable state container\" implementation, inspired by Redux.",
+        "fallback": "GitHub: izumin5210/Droidux",
+        "thumb_url": "https://avatars0.githubusercontent.com/u/2010175?v=3&s=400",
+        "from_url": "https://github.com/izumin5210/Droidux",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1449770211.002397",
+    "id": "10de18029",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "web architectures into android, I’m curious about reading it this weekend",
+    "ts": "1449770232.002399",
+    "id": "10de18030",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "the fact that it is based on immutable state means it probably works pretty well at the cost of constantly creating and destroying objects in some situations",
+    "ts": "1449770369.002400",
+    "id": "10de18031",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0GBMLRPS",
+    "subtype": "channel_join",
+    "text": "<@U0GBMLRPS|oliveiradev> has joined the channel",
+    "ts": "1449770560.002401",
+    "id": "10de18032",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "<https://sites.google.com/a/android.com/tools/recent/androidstudio20preview3available|Android Studio 2.0 Preview 3 Available>\nWe've just pushed Android Studio 2.0 Preview 3 to the canary channel. This build contains a large number of bug fixes, along with the following notable changes: A new lint check which looks at switch statements used in concert with @IntDef integers, and makes sure that all constants from the @IntDef are handled:<https://sites.google.com/a/android.com/tools/recent/androidstudio20preview3available/switch.png?attredirects=0>Note that there is a quickfix for adding...",
+    "username": "Posts of Recent Changes",
+    "icons": {
+      "image_36": "https://slack.global.ssl.fastly.net/66f9/img/services/rss_36.png",
+      "image_48": "https://slack.global.ssl.fastly.net/66f9/img/services/rss_48.png",
+      "image_72": "https://slack.global.ssl.fastly.net/205a/img/services/rss_72.png"
+    },
+    "bot_id": "B062SSUPJ",
+    "attachments": [
+      {
+        "title": "Android Studio 2.0 Preview 3 Available - Android Tools Project Site",
+        "title_link": "https://sites.google.com/a/android.com/tools/recent/androidstudio20preview3available",
+        "text": "Android tools project information site",
+        "fallback": "Android Studio 2.0 Preview 3 Available - Android Tools Project Site",
+        "image_url": "https://sites.google.com/a/android.com/tools/_/rsrc/1449783005081/recent/androidstudio20preview3available/switch.png",
+        "from_url": "https://sites.google.com/a/android.com/tools/recent/androidstudio20preview3available",
+        "image_width": 491,
+        "image_height": 250,
+        "image_bytes": 51538,
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1449783069.002402",
+    "id": "10de18033",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<http://android-developers.blogspot.com/2015/12/android-studio-20-preview-android.html?linkId=19484755>",
+    "ts": "1449783766.002404",
+    "id": "10de18034",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "/giphy spits coffee",
+    "attachments": [
+      {
+        "fallback": "giphy: <http://giphy.com/gifs/robert-downey-jr-coffee-bzDz1Y8QgiTtK>",
+        "image_url": "http://media3.giphy.com/media/bzDz1Y8QgiTtK/giphy.gif",
+        "image_width": 500,
+        "image_height": 313,
+        "image_bytes": 449311,
+        "title": "spits coffee",
+        "id": 1,
+        "title_link": "http://giphy.com/gifs/robert-downey-jr-coffee-bzDz1Y8QgiTtK"
+      }
+    ],
+    "ts": "1449786560.002405",
+    "id": "10de18035",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "GUYS",
+    "ts": "1449786562.002406",
+    "id": "10de18036",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "&gt;An early preview of the new Android Emulator is now available to try out",
+    "ts": "1449786566.002407",
+    "id": "10de18037",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U0548MM6B>: well yeah, I was waiting for someone to notice",
+    "ts": "1449787088.002408",
+    "id": "10de18038",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<@U053LEHJN>: eh I just read the description and thought it was just fixes",
+    "ts": "1449787134.002409",
+    "id": "10de18039",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "ah",
+    "ts": "1449787177.002410",
+    "id": "10de18040",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "updating now to try it",
+    "ts": "1449787208.002411",
+    "id": "10de18041",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "#hype",
+    "ts": "1449787212.002412",
+    "id": "10de18042",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "<https://sites.google.com/a/android.com/tools/recent/androidstudio20preview3available|Android Studio 2.0 Preview 3 Available>\nWe've just pushed Android Studio 2.0 Preview 3 to the canary channel. This build contains a large number of bug fixes, along with the following notable changes: A new lint check which looks at switch statements used in concert with @IntDef integers, and makes sure that all constants from the @IntDef are handled:<https://sites.google.com/a/android.com/tools/recent/androidstudio20preview3available/switch.png?attredirects=0>Note that there is a quickfix for adding...",
+    "username": "Posts of Recent Changes",
+    "icons": {
+      "image_36": "https://slack.global.ssl.fastly.net/66f9/img/services/rss_36.png",
+      "image_48": "https://slack.global.ssl.fastly.net/66f9/img/services/rss_48.png",
+      "image_72": "https://slack.global.ssl.fastly.net/205a/img/services/rss_72.png"
+    },
+    "bot_id": "B062SSUPJ",
+    "attachments": [
+      {
+        "title": "Android Studio 2.0 Preview 3 Available - Android Tools Project Site",
+        "title_link": "https://sites.google.com/a/android.com/tools/recent/androidstudio20preview3available",
+        "text": "Android tools project information site",
+        "fallback": "Android Studio 2.0 Preview 3 Available - Android Tools Project Site",
+        "image_url": "https://sites.google.com/a/android.com/tools/_/rsrc/1449783005081/recent/androidstudio20preview3available/switch.png",
+        "from_url": "https://sites.google.com/a/android.com/tools/recent/androidstudio20preview3available",
+        "image_width": 491,
+        "image_height": 250,
+        "image_bytes": 51538,
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1449802271.002417",
+    "id": "10de18043",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G47NBQV",
+    "subtype": "channel_join",
+    "text": "<@U0G47NBQV|meymeynard> has joined the channel",
+    "ts": "1449818622.002419",
+    "id": "10de18044",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

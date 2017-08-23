@@ -1,0 +1,1859 @@
+[
+  {
+    "user": "U39P7U6EP",
+    "text": "ButterKnife removes all the unnecessary casting in your code (because it auto-casts it to whatever field type you put it on), so it actually makes your code more maintainable.",
+    "ts": "1481013894.000061",
+    "id": "06be10602",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "Retrolambda makes your code shorter whenever you use anonymous interface implementations, 1 line instead of 5 (which means it's much easier to read and ignore unnecessary boilerplate)",
+    "ts": "1481013971.000062",
+    "id": "06be10603",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37BP6E73",
+    "text": "hello, is it possible to trigger broadcast receiver from service to activity `onStartCommand` of service? Currently, I was only able to setup a `LocalBroadcastManager` and a Broadcast Receiver in the service that is triggered by a call from Activity for it to work e.g on my  `appBackgroundService.testLocalBroadcastManager()` after a button is clicked.",
+    "edited": {
+      "user": "U37BP6E73",
+      "ts": "1481015152.000000"
+    },
+    "ts": "1481014978.000063",
+    "id": "06be10604",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37BP6E73",
+    "text": "When I try to call the same method in the service on startup e.g `testLocalBroadcastManager()`... it is not triggering the function on the onReceive method on the `Activity` class",
+    "edited": {
+      "user": "U37BP6E73",
+      "ts": "1481015227.000000"
+    },
+    "ts": "1481015214.000066",
+    "id": "06be10605",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Are you sure the Activity is registered to receive the broadcast before you send it?",
+    "ts": "1481015253.000068",
+    "id": "06be10606",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37BP6E73",
+    "text": "yep, here is my gist: <https://gist.github.com/arvi/fdd6859be8cbfd820f9ba15045583c9a>",
+    "ts": "1481016523.000072",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "06be10607",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Try sending the broadcast in the onBind callback",
+    "ts": "1481017175.000073",
+    "reactions": [
+      {
+        "name": "grin",
+        "users": [
+          "U37BP6E73"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "06be10608",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37BP6E73",
+    "text": "Daaaaaamn! Thanks a lot! Putting it on onBind worked for me :smile:",
+    "ts": "1481017452.000074",
+    "id": "06be10609",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Remember, currency over here is tacos and nutella :thumbsup:",
+    "ts": "1481017496.000075",
+    "reactions": [
+      {
+        "name": "sweat_smile",
+        "users": [
+          "U37BP6E73"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "06be10610",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3BPZ1JHL",
+    "text": "<@U3BPZ1JHL|mahi_gohel> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481019186.000076",
+    "id": "06be10611",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37BP6E73",
+    "text": "I just read that BroadcastReceivers run on UI thread unless specified (<http://stackoverflow.com/a/5676888/2098493>). Is this also true for LocalBroadcastManager?",
+    "attachments": [
+      {
+        "title": "Does BroadcastReceiver.onReceive always run in the UI thread?",
+        "title_link": "http://stackoverflow.com/a/5676888/2098493",
+        "text": "in my App, I create a custom BroadcastReceiver and register it to my Context manually via Context.registerReceiver. I also have an AsyncTask that dispatches notifier-Intents via Context.sendBroadca...",
+        "fallback": "Does BroadcastReceiver.onReceive always run in the UI thread?",
+        "thumb_url": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/a/5676888/2098493",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "service_icon": "http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d",
+        "service_name": "stackoverflow.com",
+        "id": 1
+      }
+    ],
+    "ts": "1481019352.000077",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "06be10612",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "Yes.",
+    "ts": "1481019373.000079",
+    "id": "06be10613",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37BP6E73",
+    "text": "Thanks <@U2M0WUZ7A> ... I'm currently confused if I should use EventBus or LocalBroadcastManager to communicate between Service to Activity, Service to Non-activity class and vice-versa.",
+    "ts": "1481019435.000080",
+    "id": "06be10614",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "you can also try `bindService`",
+    "edited": {
+      "user": "U2M0WUZ7A",
+      "ts": "1481019466.000000"
+    },
+    "ts": "1481019460.000081",
+    "id": "06be10615",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37BP6E73",
+    "text": "I've tried `bindService` also. I've been reading a lot about RxJava but using it would require me to rewrite a lot of code... so I'm deciding between eventbus and localbroadcastmanager. :smile:",
+    "ts": "1481019613.000083",
+    "id": "06be10616",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "You can also try my experimental library built on top of local broadcasts.\n<https://github.com/Miha-x64/Decouplex/>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "Miha-x64/Decouplex",
+        "title_link": "https://github.com/Miha-x64/Decouplex/",
+        "text": "Decouplex - Decoupled executor — the easiest &amp; type-safe way to run code in Android service",
+        "fallback": "GitHub: Miha-x64/Decouplex",
+        "thumb_url": "https://avatars3.githubusercontent.com/u/14016119?v=3&s=400",
+        "from_url": "https://github.com/Miha-x64/Decouplex/",
+        "thumb_width": 420,
+        "thumb_height": 420,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1481019721.000084",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "06be10617",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37BP6E73",
+    "text": "<@U2M0WUZ7A>  thanks I'll check it out.",
+    "ts": "1481019812.000086",
+    "id": "06be10618",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3B789PC5",
+    "text": "<@U3B789PC5|rahulp> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481022872.000087",
+    "id": "06be10619",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U22E97HR9",
+    "text": "what is the goal of \"onUpgrade\" method for sqlLite ?",
+    "ts": "1481023013.000088",
+    "id": "06be10620",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U36QUQ2GK",
+    "text": "make migration of DB when you change version. For example if you add new column to the table you want to do sth when user update the app with old db to new one.",
+    "ts": "1481023232.000089",
+    "id": "06be10621",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U22E97HR9",
+    "text": "thanks !",
+    "ts": "1481023304.000090",
+    "id": "06be10622",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U22E97HR9",
+    "text": "how can i do migration ?",
+    "ts": "1481023314.000091",
+    "id": "06be10623",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U22E97HR9",
+    "text": "i find this site",
+    "ts": "1481023380.000092",
+    "id": "06be10624",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U22E97HR9",
+    "text": "<https://thebhwgroup.com/blog/how-android-sqlite-onupgrade>",
+    "attachments": [
+      {
+        "service_name": "The BHW Group",
+        "title": "How To Android SQLite onUpgrade() | BHW Blog",
+        "title_link": "https://thebhwgroup.com/blog/how-android-sqlite-onupgrade",
+        "text": "Many Android SQLite tutorials are incomplete or could cause your app to crash! This guide will show you the proper way to implement onUpgrade().",
+        "fallback": "The BHW Group: How To Android SQLite onUpgrade() | BHW Blog",
+        "image_url": "https://thebhwgroup.com/sites/default/images/android-logo.jpg",
+        "ts": 1430802000,
+        "from_url": "https://thebhwgroup.com/blog/how-android-sqlite-onupgrade",
+        "image_width": 250,
+        "image_height": 250,
+        "image_bytes": 16849,
+        "service_icon": "https://thebhwgroup.com/images/apple-touch-icon-180x180.png",
+        "id": 1
+      }
+    ],
+    "ts": "1481023380.000093",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "06be10625",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U36QUQ2GK",
+    "text": "it's example but in pure sqlite",
+    "ts": "1481023459.000095",
+    "id": "06be10626",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U36QUQ2GK",
+    "text": "take a look at some ORM's",
+    "ts": "1481023480.000096",
+    "id": "06be10627",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U36QUQ2GK",
+    "text": "like greenDAO or requery etc",
+    "ts": "1481023488.000097",
+    "id": "06be10628",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U36QUQ2GK",
+    "text": "in every ORM you'll have information how to do migration",
+    "ts": "1481023508.000098",
+    "id": "06be10629",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "btw, you can abuse the way a `switch` statement works to have DB upgrades without much boilerplate",
+    "ts": "1481028008.000099",
+    "id": "06be10630",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3B8K35B7",
+    "text": "<@U3B8K35B7|klestoff> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481030076.000100",
+    "id": "06be10631",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3AEMLEEL",
+    "text": "<@U3AEMLEEL|elliotalderson21> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481030117.000101",
+    "id": "06be10632",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U22E97HR9> this one is good <http://stackoverflow.com/documentation/android/871/sqlite/3253/onupgrade-method#t=201612061327345412596>",
+    "attachments": [
+      {
+        "title": "SQLite - Android",
+        "title_link": "http://stackoverflow.com/documentation/android/871/sqlite/3253/onupgrade-method#t=201612061327345412596",
+        "text": "Q&amp;A for professional and enthusiast programmers",
+        "fallback": "SQLite - Android",
+        "thumb_url": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/documentation/android/871/sqlite/3253/onupgrade-method#t=201612061327345412596",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "service_icon": "http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d",
+        "service_name": "stackoverflow.com",
+        "id": 1
+      }
+    ],
+    "ts": "1481030870.000102",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "06be10633",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "I follow solution #3 in this post for database migrations - <https://riggaroo.co.za/android-sqlite-database-use-onupgrade-correctly/>",
+    "attachments": [
+      {
+        "service_name": "Riggaroo",
+        "title": "Android SQLite Database - How to use onUpgrade() correctly - Riggaroo",
+        "title_link": "https://riggaroo.co.za/android-sqlite-database-use-onupgrade-correctly/",
+        "text": "After reading this blog post (and a few others) on how to use the onUpgrade() method for your Android SQLite Database, I thought I should share my experience about how to correctly upgrade your database. It will also be beneficial to highlight why the final solution listed in that blog post would also fail at some point for some scenarios. … Continue reading Android SQLite Database – How to use onUpgrade() correctly",
+        "fallback": "Riggaroo: Android SQLite Database - How to use onUpgrade() correctly - Riggaroo",
+        "thumb_url": "http://riggaroo.co.za/wp-content/uploads/2015/09/android1.png",
+        "ts": 1451768157,
+        "from_url": "https://riggaroo.co.za/android-sqlite-database-use-onupgrade-correctly/",
+        "thumb_width": 1200,
+        "thumb_height": 800,
+        "service_icon": "https://i0.wp.com/riggaroo.co.za/wp-content/uploads/2016/02/cropped-rebecca_franks.png?fit=180%2C180&#038;ssl=1",
+        "id": 1
+      }
+    ],
+    "ts": "1481035131.000104",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "06be10634",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "once again, gotta pimp my library… it makes migrating tables pretty straightforward: <https://github.com/jasonwyatt/squeaky-android> (cc: <@U22E97HR9>)",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "jasonwyatt/Squeaky-Android",
+        "title_link": "https://github.com/jasonwyatt/squeaky-android",
+        "text": "Squeaky-Android - Appropriately lightweight database creations and migrations with SQLite on Android",
+        "fallback": "GitHub: jasonwyatt/Squeaky-Android",
+        "thumb_url": "https://avatars2.githubusercontent.com/u/135470?v=3&s=400",
+        "from_url": "https://github.com/jasonwyatt/squeaky-android",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "edited": {
+      "user": "U16GF1B0F",
+      "ts": "1481036741.000000"
+    },
+    "ts": "1481036697.000106",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "06be10635",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "in short: each table is versioned, and when you prepare your db connection, it will compare the current version of the table as defined by the table class against what it sees in its own `versions` table… and will call your table class’s migration method to perform the migrations",
+    "ts": "1481036850.000109",
+    "id": "06be10636",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "i think it makes more sense to version at the table level than versioning the whole database",
+    "ts": "1481036887.000110",
+    "id": "06be10637",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3AJE50MP",
+    "text": "<@U3AJE50MP|brad-nashville> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481041823.000111",
+    "id": "06be10638",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U200KUU56",
+    "text": "Hi guys, I made an app one year ago, and it sucks (it was my first app). I wish to recreate it from scratch using  good patterns. But I don't want something overly complicated (I checked ribot boilerplate, it contains too much things !)",
+    "ts": "1481045018.000112",
+    "id": "06be10639",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U200KUU56",
+    "text": "Is the android boilerplate from google a good way to start my app ? (<https://github.com/googlesamples/android-architecture>)",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "googlesamples/android-architecture",
+        "title_link": "https://github.com/googlesamples/android-architecture",
+        "text": "android-architecture - A collection of samples to discuss and showcase different architectural tools and patterns for Android apps.",
+        "fallback": "GitHub: googlesamples/android-architecture",
+        "thumb_url": "https://avatars1.githubusercontent.com/u/7378196?v=3&s=400",
+        "from_url": "https://github.com/googlesamples/android-architecture",
+        "thumb_width": 200,
+        "thumb_height": 200,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1481045049.000113",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "06be10640",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U200KUU56",
+    "text": "I plan to start with the mvp-dagger version, then add what I need over time (like Rxjava, or an event bus)",
+    "ts": "1481045100.000115",
+    "id": "06be10641",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLABD1S",
+    "text": "I’d start with a DI framework like dagger as this alleviates many of the structural problems and thus poor testability caused by activities and fragments.",
+    "ts": "1481054739.000116",
+    "id": "06be10642",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLABD1S",
+    "text": "You can immediately start with an MVP architecture (but don’t really need to) – try to keep it simple, as such architectures tend to quickly blow up your app adding a lot of “management code”.",
+    "edited": {
+      "user": "U1HLABD1S",
+      "ts": "1481054868.000000"
+    },
+    "ts": "1481054802.000117",
+    "id": "06be10643",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLABD1S",
+    "text": "For a small app, that might be an overkill that I personally would not justify.",
+    "ts": "1481054815.000118",
+    "id": "06be10644",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U200KUU56",
+    "text": "Well I want to progress too, so even if there is a small overhead, doing MVP could still teach me a lot I think",
+    "ts": "1481055070.000120",
+    "id": "06be10645",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U200KUU56",
+    "text": "I tried to use the 'Injection' part of ribot boilerplate but I fear this is too advanced for me, is there a 'simple' Dagger tutorial out there ?",
+    "ts": "1481055156.000121",
+    "id": "06be10646",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3C33NAES",
+    "text": "<@U3C33NAES|bala_android> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481055311.000122",
+    "id": "06be10647",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLABD1S",
+    "text": "Ah, I think since Dagger 2 there isn’t anymore :stuck_out_tongue:",
+    "ts": "1481055344.000123",
+    "id": "06be10648",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLABD1S",
+    "text": "Haven’t read into that topic recently though, I’m pretty sure you can find good stuff in the <http://androidweekly.net|androidweekly.net> archives",
+    "ts": "1481055377.000124",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "06be10649",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U200KUU56",
+    "text": "well I meant a Dagger2 tutorial !",
+    "ts": "1481055405.000125",
+    "id": "06be10650",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U200KUU56",
+    "text": "sorry",
+    "ts": "1481055408.000126",
+    "id": "06be10651",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLABD1S",
+    "text": "Yeah, I now. I meant, Dagger 1 was way simpler to begin with. Dagger 2 is a bit more complicated, but faster and safer, so that was a trade off.",
+    "ts": "1481055440.000127",
+    "id": "06be10652",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLABD1S",
+    "text": "It’s not that complicated, just not as convenient as it was before IMO",
+    "ts": "1481055449.000128",
+    "id": "06be10653",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U200KUU56",
+    "text": "oh OK I understand !",
+    "ts": "1481055483.000129",
+    "id": "06be10654",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLABD1S",
+    "text": "Look here: <https://medium.com/di-101/di-101-part-1-81896c2858a0#.rmqii9xpa>",
+    "attachments": [
+      {
+        "service_name": "Medium",
+        "title": "DI 101 — Part 1 – DI 101",
+        "title_link": "https://medium.com/di-101/di-101-part-1-81896c2858a0#.rmqii9xpa",
+        "text": "Dependency Injection for the Android platform",
+        "fallback": "Medium: DI 101 — Part 1 – DI 101",
+        "image_url": "https://d262ilb51hltx0.cloudfront.net/max/1200/1*YWlAzAY20KLLGIyyD_mzZw.png",
+        "fields": [
+          {
+            "title": "Reading time",
+            "value": "4 min read",
+            "short": true
+          }
+        ],
+        "ts": 1471359662,
+        "from_url": "https://medium.com/di-101/di-101-part-1-81896c2858a0#.rmqii9xpa",
+        "image_width": 444,
+        "image_height": 250,
+        "image_bytes": 1088955,
+        "service_icon": "https://d262ilb51hltx0.cloudfront.net/fit/c/152/152/1*ypHqqVQeyB5J8dlaNBUX7Q.png",
+        "id": 1
+      }
+    ],
+    "ts": "1481055512.000130",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "06be10655",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLABD1S",
+    "text": "It’s a three part article for DI with dagger 2",
+    "ts": "1481055521.000132",
+    "id": "06be10656",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLABD1S",
+    "text": "Might be interesting for you",
+    "ts": "1481055536.000133",
+    "id": "06be10657",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U200KUU56",
+    "text": "Thanks a lot ! :slightly_smiling_face:",
+    "ts": "1481055543.000134",
+    "reactions": [
+      {
+        "name": "raised_hands",
+        "users": [
+          "U1HLABD1S"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "06be10658",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLABD1S",
+    "text": "Just pulled it from the AndroidWeekly archive",
+    "ts": "1481055545.000135",
+    "id": "06be10659",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "Interesting, I've had the opposite experience... Dagger 1 was too complicated for me to understand but Dagger 2 just made sense.",
+    "ts": "1481056688.000136",
+    "id": "06be10660",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3BCCQGKV",
+    "text": "<@U3BCCQGKV|siddiqnx> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481062183.000137",
+    "id": "06be10661",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3BH8D0KU",
+    "text": "<@U3BH8D0KU|muhilan> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481081274.000138",
+    "id": "06be10662",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3BH8D0KU",
+    "text": "Hello Guys.. Im getting error in socket client code. Can anyone please help me to fix it",
+    "ts": "1481081537.000139",
+    "id": "06be10663",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "This is so confusing",
+    "ts": "1481087502.000140",
+    "id": "06be10664",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I have activity A",
+    "ts": "1481087505.000141",
+    "id": "06be10665",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "with a ViewPager and Fragments",
+    "ts": "1481087513.000142",
+    "id": "06be10666",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I am using MVP so there is a View class",
+    "ts": "1481087522.000143",
+    "id": "06be10667",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I pressed a certain button in one o fthe Fragments in ViewPager that launches Activity B",
+    "ts": "1481087544.000144",
+    "id": "06be10668",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "activity A onSaveInstanceState is called, I saved my data here",
+    "ts": "1481087559.000145",
+    "id": "06be10669",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I pressed the back button in B, thus, returning me to Activity A",
+    "ts": "1481087574.000146",
+    "id": "06be10670",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "Activity A onCreate(Bundle savedInstanceState) is always null. Where the fuck my bundle go? How can I retrieve it back!?",
+    "ts": "1481087598.000147",
+    "id": "06be10671",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3BH8D0KU",
+    "text": "<@U379MC1E0>  : Have you used intent in Activity?",
+    "ts": "1481088147.000148",
+    "id": "06be10672",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "yes",
+    "ts": "1481088172.000149",
+    "id": "06be10673",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "how can I launch an activity if I didn't use an intent?",
+    "ts": "1481088188.000150",
+    "id": "06be10674",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "Maybe I should point out",
+    "ts": "1481088228.000151",
+    "id": "06be10675",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I am pressing the up navigation (the arrow point to left on the Toolbar)",
+    "ts": "1481088244.000152",
+    "id": "06be10676",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "<http://stackoverflow.com/questions/22453417/android-savedinstancestate-always-null>",
+    "attachments": [
+      {
+        "title": "android savedInstanceState always null",
+        "title_link": "http://stackoverflow.com/questions/22453417/android-savedinstancestate-always-null",
+        "text": "I have the following situation: Activity A starts activity BActivity A calls onPause, onSaveInstanceState and onStop methods.On activity B I press the \"UP button\" on the action barActivity A fi...",
+        "fallback": "android savedInstanceState always null",
+        "thumb_url": "https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded",
+        "from_url": "http://stackoverflow.com/questions/22453417/android-savedinstancestate-always-null",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "service_icon": "https://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d",
+        "service_name": "stackoverflow.com",
+        "id": 1
+      }
+    ],
+    "ts": "1481088246.000153",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "06be10677",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "it appears when I press the up navigation button, it recreates my activity. It doesn't make sense to me. I think I missed this one horribly.",
+    "ts": "1481088296.000155",
+    "id": "06be10678",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3BH8D0KU",
+    "text": "<@U379MC1E0> : have you used finish(); after start the intent?",
+    "ts": "1481089596.000156",
+    "id": "06be10679",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3C8K7HV4",
+    "text": "<@U3C8K7HV4|goldman> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481090461.000157",
+    "id": "06be10680",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3C8U84UE",
+    "text": "<@U3C8U84UE|rodrigo_sosa> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481093449.000160",
+    "id": "06be10681",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3AT2Q680",
+    "text": "<@U3AT2Q680|nillerr> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481094306.000161",
+    "id": "06be10682",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "<@U3C8K7HV4> I’m sorry but I had to remove your ad as this is certainly the wrong channel. Also this is a discussion group and not an advertisment plattform. If you would like to re-post this, let me know then I can point you to a better suited channel...",
+    "ts": "1481097365.000163",
+    "id": "06be10683",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

@@ -1,0 +1,1870 @@
+[
+  {
+    "user": "U053LEHJN",
+    "text": "<@U0A0S0WG0>: don’t use textAllCaps for EditText, use inputType and then add an InputFilter like:\n`setFilters(new InputFilter[]{new InputFilter.AllCaps()})`",
+    "ts": "1445184077.002082",
+    "id": "18de13731",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "you shouldn’t use textAllCaps on TextView either, since it’s broken and destroys any Spans you have set on the text",
+    "edited": {
+      "user": "U053LEHJN",
+      "ts": "1445184162.000000"
+    },
+    "ts": "1445184124.002083",
+    "id": "18de13732",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "sooo stick with String.toUpperCase() (annoying, yes)",
+    "ts": "1445184140.002084",
+    "id": "18de13733",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "<@U053LEHJN>: good to know",
+    "ts": "1445184150.002085",
+    "id": "18de13734",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "i ended up switching to a TextInputLayout anyway and setting the hint with String.toUpperCase",
+    "ts": "1445184174.002087",
+    "id": "18de13735",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "someone should redo TextView",
+    "ts": "1445184236.002088",
+    "id": "18de13736",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "maybe they’ll have an intern do it",
+    "ts": "1445184246.002089",
+    "id": "18de13737",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "that... sounds like a monumental task",
+    "ts": "1445184247.002090",
+    "id": "18de13738",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "nah, Text.Layout does all the hard work",
+    "ts": "1445184269.002091",
+    "id": "18de13739",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "TextView just applies all the attributes, basically",
+    "ts": "1445184282.002092",
+    "id": "18de13740",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "just seems like a big task to comb through 10k lines of code",
+    "ts": "1445184455.002093",
+    "id": "18de13741",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "wtf, i have two textinputlayouts that are literally identical",
+    "ts": "1445184519.002094",
+    "id": "18de13742",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "and one of them the hint is visible and the other it isn't",
+    "ts": "1445184528.002095",
+    "id": "18de13743",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "post ‘em",
+    "ts": "1445184766.002096",
+    "id": "18de13744",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "figured it out, was something stupid",
+    "ts": "1445185967.002097",
+    "id": "18de13745",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "now im wrestling with styles",
+    "ts": "1445185974.002098",
+    "id": "18de13746",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "i swear to god, are EditText and TextView just completely fucking broken?",
+    "ts": "1445185985.002099",
+    "id": "18de13747",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "the more and more I worked on this current app, the more I realized that",
+    "ts": "1445185999.002100",
+    "id": "18de13748",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "given that EditText is like a 50 LoC overlay on TextView, yep :smile:",
+    "ts": "1445186012.002101",
+    "id": "18de13749",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "I mean, how fucking hard does it have to be to change the god damn color of the fucking underline in edittext",
+    "ts": "1445186035.002102",
+    "id": "18de13750",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "Also, is anyone else annoyed that there’s no easy way to know which theme attributes you need to specify for AppCompat vs for the platform vs for both?",
+    "ts": "1445186035.002103",
+    "id": "18de13751",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "like what the actual fuck",
+    "ts": "1445186038.002104",
+    "id": "18de13752",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "<@U053LEHJN>: yup",
+    "ts": "1445186053.002105",
+    "id": "18de13753",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U0A0S0WG0>: well on 5.0+ that’s easy",
+    "ts": "1445186055.002106",
+    "id": "18de13754",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "is it? because i've been pulling my hair out trying to find the attribute to override",
+    "ts": "1445186075.002107",
+    "id": "18de13755",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "The answer to \"Also, is anyone else annoyed\" in relation to android is always \"yes\"",
+    "ts": "1445186076.002108",
+    "id": "18de13756",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "it's an extension of Ugol's law :smile:",
+    "ts": "1445186092.002109",
+    "id": "18de13757",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U0A0S0WG0>: you could apply a theme overlay with colorAccent set to something else I think",
+    "ts": "1445186101.002110",
+    "id": "18de13758",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "tried that",
+    "ts": "1445186113.002111",
+    "id": "18de13759",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "it failed to do anything",
+    "ts": "1445186117.002112",
+    "id": "18de13760",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "oh",
+    "ts": "1445186123.002113",
+    "id": "18de13761",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "it went from not showing up at all",
+    "ts": "1445186125.002114",
+    "id": "18de13762",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "to black",
+    "ts": "1445186127.002115",
+    "id": "18de13763",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "colorControlNormal",
+    "ts": "1445186127.002116",
+    "id": "18de13764",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "also tried",
+    "ts": "1445186131.002117",
+    "id": "18de13765",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "colorControlActivated",
+    "ts": "1445186131.002118",
+    "id": "18de13766",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "also",
+    "ts": "1445186133.002119",
+    "id": "18de13767",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": ":disappointed:",
+    "ts": "1445186135.002120",
+    "id": "18de13768",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "haha",
+    "ts": "1445186135.002121",
+    "id": "18de13769",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "you found the same SO answer I did then :stuck_out_tongue:",
+    "ts": "1445186142.002122",
+    "id": "18de13770",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "yup",
+    "ts": "1445186148.002123",
+    "id": "18de13771",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<https://gist.github.com/seanKenkeremath/c945c39cdf92af138395>",
+    "ts": "1445186151.002124",
+    "id": "18de13772",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "something in there maybe?",
+    "ts": "1445186156.002125",
+    "id": "18de13773",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "so for the record",
+    "ts": "1445186179.002126",
+    "id": "18de13774",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "are you using AppCompat?",
+    "ts": "1445186180.002127",
+    "id": "18de13775",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "i'm targeting 21+",
+    "ts": "1445186183.002128",
+    "id": "18de13776",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "so im not really using AppCompat at all",
+    "ts": "1445186189.002129",
+    "id": "18de13777",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "ah",
+    "ts": "1445186191.002130",
+    "id": "18de13778",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "unless thats a mistake on my part",
+    "ts": "1445186195.002131",
+    "id": "18de13779",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "well my next point was moot then :stuck_out_tongue:",
+    "ts": "1445186199.002132",
+    "id": "18de13780",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "I was going to say, try using AppCompat’s EditText directly to see if that works",
+    "ts": "1445186215.002133",
+    "id": "18de13781",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "so before I set those attrs",
+    "ts": "1445186241.002134",
+    "id": "18de13782",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "the underline just didn't show up until I tapped the edittext",
+    "ts": "1445186252.002135",
+    "id": "18de13783",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "and when i did tap it, the underline was this shitty green color",
+    "ts": "1445186267.002136",
+    "id": "18de13784",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "is it some weird padding issue with TextInputLayout?",
+    "ts": "1445186274.002137",
+    "id": "18de13785",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "well",
+    "ts": "1445186282.002138",
+    "id": "18de13786",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "like, maybe set clipChildren and clipToPadding to false on it?",
+    "ts": "1445186285.002139",
+    "id": "18de13787",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "when i fucked with those attrs, it started showing up, but was black",
+    "ts": "1445186298.002140",
+    "id": "18de13788",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "maybe the attrs are resolving to 0? :simple_smile:",
+    "ts": "1445186319.002141",
+    "id": "18de13789",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "nah, in my style, the proper color swatch is showing up in the left rail",
+    "ts": "1445186343.002142",
+    "id": "18de13790",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "can you post your layout and desired colors? I’ll try it here",
+    "ts": "1445186358.002143",
+    "id": "18de13791",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "sure",
+    "ts": "1445186389.002144",
+    "id": "18de13792",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0A0S0WG0|jwhite> uploaded a file: <https://androidchat.slack.com/files/jwhite/F0CMDFSTH/layout.txt|layout.txt>",
+    "file": {
+      "id": "F0CMDFSTH",
+      "created": 1445186505,
+      "timestamp": 1445186505,
+      "name": "layout.txt",
+      "title": "layout.txt",
+      "mimetype": "text/plain",
+      "filetype": "text",
+      "pretty_type": "Plain Text",
+      "user": "U0A0S0WG0",
+      "editable": true,
+      "size": 3254,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0CMDFSTH/layout.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0CMDFSTH/download/layout.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/jwhite/F0CMDFSTH/layout.txt",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0CMDFSTH-8c6167f3b2",
+      "edit_link": "https://androidchat.slack.com/files/jwhite/F0CMDFSTH/layout.txt/edit",
+      "preview": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<android.support.percent.PercentRelativeLayout\r\n    xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    android:orientation=\"vertical\"\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</pre></div>\n<div><pre>&lt;android.support.percent.PercentRelativeLayout</pre></div>\n<div><pre>    xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</pre></div>\n<div><pre>    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;</pre></div>\n<div><pre>    android:orientation=&quot;vertical&quot;</pre></div>\n<div><pre></pre></div>\n</div>\n</div>\n",
+      "lines": 80,
+      "lines_more": 75,
+      "preview_is_truncated": true,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U0A0S0WG0",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0A0S0WG0|jwhite>",
+    "bot_id": null,
+    "ts": "1445186505.002145",
+    "id": "18de13793",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "&lt;color name=\"colorPrimary\"&gt;#93B0C4&lt;/color&gt;\n    &lt;color name=\"colorPrimaryLight\"&gt;#B3D4E2&lt;/color&gt;\n    &lt;color name=\"colorSecondary\"&gt;#4E3D41&lt;/color&gt;\n    &lt;color name=\"colorSecondaryLight\"&gt;#BCB9B3&lt;/color&gt;\n    &lt;color name=\"white\"&gt;#FFF&lt;/color&gt;\n    &lt;color name=\"black\"&gt;#000&lt;/color&gt;\n    &lt;color name=\"greyAlpha20\"&gt;#34000000&lt;/color&gt;",
+    "ts": "1445186546.002146",
+    "id": "18de13794",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "i was just attempting to set everything to colorPrimary currently",
+    "ts": "1445186558.002147",
+    "id": "18de13795",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U0A0S0WG0>: what is TypeFaceEditText?",
+    "ts": "1445187160.002148",
+    "id": "18de13796",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "oh",
+    "ts": "1445187193.002149",
+    "id": "18de13797",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U0A0S0WG0>: also you should use `maxLines=“1”` instead of `singleLine=“true”`",
+    "ts": "1445187201.002150",
+    "id": "18de13798",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "just an EditText that I can set the typeface on",
+    "ts": "1445187202.002151",
+    "id": "18de13799",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "singleLine automatically makes the view scrollable, which can cause issues",
+    "ts": "1445187219.002152",
+    "id": "18de13800",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "can I see the source of that view?",
+    "ts": "1445187231.002153",
+    "id": "18de13801",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "I WAS WONDERING WHY IT WAS SCROLLABLE",
+    "ts": "1445187231.002154",
+    "id": "18de13802",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "lol",
+    "ts": "1445187233.002155",
+    "id": "18de13803",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "package com.ethoslabs.ascent.widgets;\n\nimport android.content.Context;\nimport android.content.res.TypedArray;\nimport android.graphics.Typeface;\nimport android.util.AttributeSet;\nimport android.widget.EditText;\n\nimport com.ethoslabs.ascent.R;\n\n/**\n * Created by John on 10/10/2015.\n */\npublic class TypeFaceEditText extends EditText {\n\n    public TypeFaceEditText(Context context, AttributeSet attrs) {\n        super(context, attrs);\n        loadTypeface(context, attrs);\n    }\n\n    public TypeFaceEditText(Context context, AttributeSet attrs, int defStyleAttr) {\n        super(context, attrs, defStyleAttr);\n        loadTypeface(context, attrs);\n    }\n\n    private void loadTypeface(Context context, AttributeSet attrs) {\n        // used to view xml layouts within Android Studio\n        if (isInEditMode()) return;\n\n        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.TypeFaceTextView);\n        String typeface = a.getString(R.styleable.TypeFaceTextView_typeface);\n        if(typeface != null) {\n            this.setTypeface(Typeface.createFromAsset(context.getAssets(), \"fonts/\" + typeface));\n        }\n        a.recycle();\n    }\n}",
+    "ts": "1445187247.002156",
+    "id": "18de13804",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "yeah, that’s why it’s deprecated :stuck_out_tongue:",
+    "ts": "1445187250.002157",
+    "id": "18de13805",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "ok, so it’s not throwing away the theme or attributes or anything",
+    "ts": "1445187274.002158",
+    "id": "18de13806",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "TIL Design library requires AppCompat",
+    "ts": "1445187595.002159",
+    "id": "18de13807",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "hmm",
+    "ts": "1445187620.002160",
+    "id": "18de13808",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U0A0S0WG0>: so, interesting discovery",
+    "ts": "1445187816.002161",
+    "id": "18de13809",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "`&lt;color name=\"colorSecondary\"&gt;#4E3D41&lt;/color&gt;`",
+    "ts": "1445187828.002162",
+    "id": "18de13810",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "black EditText",
+    "ts": "1445187833.002163",
+    "id": "18de13811",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "`&lt;color name=\"colorSecondary”&gt;#FF3D41&lt;/color&gt;`",
+    "ts": "1445187840.002164",
+    "id": "18de13812",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "(100% the red component)",
+    "ts": "1445187845.002165",
+    "id": "18de13813",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "Red EditText",
+    "ts": "1445187850.002166",
+    "id": "18de13814",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "what the fuck?",
+    "ts": "1445187855.002167",
+    "id": "18de13815",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "lol",
+    "ts": "1445187856.002168",
+    "id": "18de13816",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "that makes a negative amount of sense",
+    "ts": "1445187875.002169",
+    "id": "18de13817",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "and 100%-ing the green component gives me a green EditText",
+    "ts": "1445187889.002170",
+    "id": "18de13818",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "that doesn’t making any sense. just none whatsoever",
+    "ts": "1445187997.002171",
+    "id": "18de13819",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "you know what",
+    "ts": "1445188053.002172",
+    "id": "18de13820",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "it is tinting it",
+    "ts": "1445188056.002173",
+    "id": "18de13821",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "it’s just that brown-ish color, so a brown over black doesn’t look much different",
+    "ts": "1445188083.002174",
+    "id": "18de13822",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "jesus christ why does it tint it and not just set the color?",
+    "ts": "1445188123.002175",
+    "id": "18de13823",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "if you make colorSecondary slightly lighter",
+    "ts": "1445188140.002176",
+    "id": "18de13824",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "like `#6e5d61`",
+    "ts": "1445188147.002177",
+    "id": "18de13825",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "it shows up better",
+    "ts": "1445188150.002178",
+    "id": "18de13826",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "kk",
+    "ts": "1445188156.002179",
+    "id": "18de13827",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "and it tints because that’s what it promises :stuck_out_tongue:",
+    "ts": "1445188160.002180",
+    "id": "18de13828",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "you could always use a custom EditText background",
+    "ts": "1445188173.002181",
+    "id": "18de13829",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "jesus I might end up doing that",
+    "ts": "1445188182.002182",
+    "id": "18de13830",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CMK7MMH",
+    "subtype": "channel_join",
+    "text": "<@U0CMK7MMH|emant> has joined the channel",
+    "ts": "1445207923.002183",
+    "id": "18de13831",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

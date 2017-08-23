@@ -1,0 +1,562 @@
+[
+  {
+    "user": "U09T8SFG8",
+    "text": "Any good talks/reads on integration tests? I am looking for best practices and such so I can give my tests a makeover",
+    "ts": "1461855179.000023",
+    "id": "28te1084",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "Btw as integration I mean non-ui end-to-end tests",
+    "ts": "1461855367.000024",
+    "id": "28te1085",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "<@U09T8SFG8>: can not say that I’m source of “best practices” but you can find several articles that cover different aspects of Integration testing in my blog <http://artemzin.com/blog/>",
+    "attachments": [
+      {
+        "title": "Android Hipster",
+        "title_link": "http://artemzin.com/blog/",
+        "text": "[Artem Zinnatullin](<https://twitter.com/artem_zin>)",
+        "fallback": "Android Hipster",
+        "image_url": "http://artemzin.com/blog/content/images/2015/09/2015-01-27-21-22-50-2.jpg",
+        "from_url": "http://artemzin.com/blog/",
+        "image_width": 333,
+        "image_height": 250,
+        "image_bytes": 552827,
+        "id": 1
+      }
+    ],
+    "ts": "1461858981.000025",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U04U5KS3Z",
+          "U09T8SFG8",
+          "U08GFT5V5",
+          "U13TW4FGX"
+        ],
+        "count": 5
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "28te1086",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U091EBYSU>: I am in fact already reading your blog so I was wondering if there are even more resources out there :stuck_out_tongue: . I am a bit knowledge hungry at the moment. Btw keep up the good work :wink:",
+    "ts": "1461859177.000027",
+    "id": "28te1087",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "oh, ok. Usually I test: JSON/etc serialization/parsing, http/etc interaction, other things covered by unit and functional tests",
+    "ts": "1461859282.000028",
+    "id": "28te1088",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "hahah was just about to suggest artem’s blog",
+    "ts": "1461859401.000029",
+    "id": "28te1089",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "yeah - plus obviously test the thing that breaks",
+    "ts": "1461859420.000030",
+    "id": "28te1090",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "if it’s breaking it’s a good indicator for lack of tests",
+    "ts": "1461859443.000031",
+    "id": "28te1091",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "but usually you should be able to cover it with unit tests",
+    "ts": "1461859460.000032",
+    "id": "28te1092",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "So I guess you mock all the \"leaves\" in your architecture like a Retrofit service and the database? My main issue is if a slow file system like a db would be mocked or not because if it is then I don't see how it would be tested.\n\nI always mock my db but I run into a wall since I can't test something like an accidentally missing question mark in my query",
+    "edited": {
+      "user": "U09T8SFG8",
+      "ts": "1461859744.000000"
+    },
+    "ts": "1461859722.000033",
+    "id": "28te1093",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "An option I've thought of is to use Robolectric to make sure mapping from an entity to a ContentValue is correct, but I really want to avoid Robolectric",
+    "ts": "1461859856.000035",
+    "id": "28te1094",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "Yup, I cover db with robolectric, forgot to mention that",
+    "ts": "1461860010.000036",
+    "id": "28te1095",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "basically I write test class per table where we put basic insert/update/query/delete tests + tests for higher level interaction with data from this table",
+    "ts": "1461860054.000037",
+    "id": "28te1096",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "that’s a cool approach",
+    "ts": "1461860147.000038",
+    "id": "28te1097",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "first decent reason to go robolectric I’ve heard of",
+    "ts": "1461860162.000039",
+    "id": "28te1098",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I see, so I guess Robolectric it is. I'm also thinking of swapping one of my caches with Andrroid's LRU cache so I guess I will use Robolectric there as well",
+    "ts": "1461860270.000040",
+    "id": "28te1099",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U091EBYSU>: :taco:",
+    "ts": "1461860301.000041",
+    "id": "28te1100",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "but I’d still recommend to not use Robolectric if possible for simple unit tests and use it only for integration tests",
+    "ts": "1461860473.000042",
+    "id": "28te1101",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "is UI testing framework comes under this testing or its totally different?",
+    "ts": "1461860648.000043",
+    "id": "28te1102",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "<@U0XCFE6AH>: I run ui tests on emulators/devices, so, no, I don’t use Robolectric for that",
+    "ts": "1461860786.000044",
+    "id": "28te1103",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "ok, I read the same thing somewhere that its better to do on device or emulator as that will saves lots of time..",
+    "ts": "1461860961.000045",
+    "id": "28te1104",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "thanks.",
+    "ts": "1461860966.000046",
+    "id": "28te1105",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETA9WHH",
+    "text": "i’ve found physical devices the most consistent for testing. fewer random crashes, closer to the end user environment as well",
+    "ts": "1461861034.000047",
+    "id": "28te1106",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "well, you can run ui tests under robolectric and this will be faster, I guess. But it’s a hard way.",
+    "ts": "1461861049.000048",
+    "id": "28te1107",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "<http://www.peterfriese.de/android-testing-with-robolectric/> actually I missread it",
+    "attachments": [
+      {
+        "title": "Android Testing with Robolectric - Peter Friese",
+        "title_link": "http://www.peterfriese.de/android-testing-with-robolectric/",
+        "text": "We all know testing is essential to verify the behaviour of the software you write. In the Android world with its huge variety of devices and OS …",
+        "fallback": "Android Testing with Robolectric - Peter Friese",
+        "from_url": "http://www.peterfriese.de/android-testing-with-robolectric/",
+        "id": 1
+      }
+    ],
+    "ts": "1461861062.000049",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "28te1108",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "the guy says that it will be faster..",
+    "ts": "1461861073.000051",
+    "id": "28te1109",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "<@U091EBYSU> turning into mr self promotion there",
+    "ts": "1461876459.000052",
+    "reactions": [
+      {
+        "name": "sweat_smile",
+        "users": [
+          "U091EBYSU",
+          "U0548MM6B"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "28te1110",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

@@ -1,0 +1,312 @@
+[
+  {
+    "user": "U0DQJQZ6D",
+    "text": "is it necessary to create a model manually in android?",
+    "ts": "1448359662.000178",
+    "id": "24be1513",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "What kind of model?",
+    "ts": "1448359968.000179",
+    "id": "24be1514",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DQJQZ6D",
+    "text": "ex: I have a table call `Student` with fields: `id, name, age, class, etc`, so do I need to create a model like this:",
+    "ts": "1448360153.000180",
+    "id": "24be1515",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DQJQZ6D",
+    "text": "```\npublic class Student implements Parcelable {\n    public int getId() {\n        return id;\n    }\n\n    public String getName() {\n        return title;\n    }\n...\n}\n```",
+    "edited": {
+      "user": "U0DQJQZ6D",
+      "ts": "1448360264.000000"
+    },
+    "ts": "1448360156.000181",
+    "id": "24be1516",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F668B45",
+    "subtype": "channel_join",
+    "text": "<@U0F668B45|antoine.genevriez> has joined the channel",
+    "ts": "1448360227.000182",
+    "id": "24be1517",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "If you want to have your model classes to be parcelable, then you can use something like AutoParcel",
+    "ts": "1448360278.000185",
+    "id": "24be1518",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "You can also try <https://github.com/pushtorefresh/storio> as an alternative for the tedious contentprovider/sqlite implementation stuff",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "pushtorefresh/storio",
+        "title_link": "https://github.com/pushtorefresh/storio",
+        "text": "storio - Beautiful API for SQLiteDatabase and ContentResolver",
+        "fallback": "GitHub: pushtorefresh/storio",
+        "thumb_url": "https://avatars3.githubusercontent.com/u/7294803?v=3&s=400",
+        "from_url": "https://github.com/pushtorefresh/storio",
+        "thumb_width": 420,
+        "thumb_height": 420,
+        "id": 1
+      }
+    ],
+    "ts": "1448360342.000186",
+    "id": "24be1519",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DQJQZ6D",
+    "text": "yes, just because I've completed the course in Udacity `Developing Android Apps` and haven't seen they created model there, so it made me confused",
+    "ts": "1448360437.000188",
+    "id": "24be1520",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DQJQZ6D",
+    "text": "thanks for your link",
+    "ts": "1448360447.000189",
+    "id": "24be1521",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "You don’t necessarily need model classes like this, but it can make your whole data layer a lot cleaner",
+    "ts": "1448360489.000190",
+    "id": "24be1522",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Which is something I’d always go for. Having to hack your data layer later due to some bad decisions at the start will lead to all kinds of issues",
+    "ts": "1448360525.000191",
+    "id": "24be1523",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "… says the one with 7 schema upgrades in 10 releases",
+    "ts": "1448360555.000192",
+    "id": "24be1524",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DQJQZ6D",
+    "text": "yes",
+    "ts": "1448360618.000193",
+    "id": "24be1525",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0EG5RUBY",
+    "subtype": "channel_join",
+    "text": "<@U0EG5RUBY|artemiy> has joined the channel",
+    "ts": "1448384837.000194",
+    "id": "24be1526",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F7V9DPD",
+    "subtype": "channel_join",
+    "text": "<@U0F7V9DPD|equinox> has joined the channel",
+    "ts": "1448404025.000195",
+    "id": "24be1527",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F8ETA3S",
+    "subtype": "channel_join",
+    "text": "<@U0F8ETA3S|anton> has joined the channel",
+    "ts": "1448423277.000196",
+    "id": "24be1528",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

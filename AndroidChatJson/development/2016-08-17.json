@@ -1,0 +1,3082 @@
+[
+  {
+    "user": "U053Q66UQ",
+    "text": "Hey everyone! Does anyone have a suggestion for solving the following issue:\nI am trying to update my gradle wrapper to 3.0. I do so by updating the distributionUrl in gradle-wrapper.properties to \"https\\://services.gradle.org/distributions/gradle-3.0-all.zip\". However, it keeps adding the 2.14.1 wrapper to my project, when I do a project sync. I have tried:\n - Invalidate cache / Restart\n - Delete \".gradle\"-folder\n - Remove all references to older distributions of Gradle in the \".gradle\"-folder in my user directory.\n\nNote that running \"gradlew wrapper\" actually did download Gradle 3.0 and add it to my user directory. Changing my gradle-wrapper.properties to anything else than 3.0 works fine :disappointed:",
+    "ts": "1471421938.003089",
+    "id": "17de42825",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I think the plugin doesn’t support gradle 3",
+    "ts": "1471422067.003090",
+    "id": "17de42826",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "android gradle plugin, that is",
+    "ts": "1471422075.003091",
+    "id": "17de42827",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2240R06R",
+    "text": "<@U2240R06R|divyanshu.dc> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1471422237.003092",
+    "id": "17de42828",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053Q66UQ",
+    "text": "The guys at Gradle actually have a sample project for Android with Kotlin: <https://github.com/gradle/gradle-script-kotlin/tree/7b82e2e70a3049fac43b9243881d689372afe6a9/samples/hello-android>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "gradle/gradle-script-kotlin",
+        "title_link": "https://github.com/gradle/gradle-script-kotlin/tree/7b82e2e70a3049fac43b9243881d689372afe6a9/samples/hello-android",
+        "text": "gradle-script-kotlin - Kotlin language support for Gradle build scripts",
+        "fallback": "GitHub: gradle/gradle-script-kotlin",
+        "thumb_url": "https://avatars3.githubusercontent.com/u/124156?v=3&s=400",
+        "from_url": "https://github.com/gradle/gradle-script-kotlin/tree/7b82e2e70a3049fac43b9243881d689372afe6a9/samples/hello-android",
+        "thumb_width": 200,
+        "thumb_height": 200,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1471422358.003093",
+    "id": "17de42829",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2240R06R",
+    "text": "I am working in an app with ORM and retrofit, I have model for ORM and same for retrofit callbacks, but i think this is redundant , as i have to convert one model to another when i am using in UI, it seems redundant , is this possible that i make only one model per app ? same for ORM and same for retrofit and others",
+    "ts": "1471422362.003095",
+    "id": "17de42830",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "I think you're using the term ORM wrong? You should just be able to save the model you get back from retrofit to an ORM...",
+    "ts": "1471422437.003096",
+    "id": "17de42831",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2240R06R",
+    "text": "you mean like i should asign the callback as the same model i am using for orm ?",
+    "ts": "1471422468.003097",
+    "id": "17de42832",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2240R06R",
+    "text": "but then there are problem like, json parsing, as json structure and my orm structure are both not exact equal",
+    "ts": "1471422500.003098",
+    "id": "17de42833",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2240R06R",
+    "text": "is using realm a sollution for this ?",
+    "ts": "1471422531.003099",
+    "id": "17de42834",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2240R06R",
+    "text": "??",
+    "ts": "1471423544.003100",
+    "id": "17de42835",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U053PPGDC> judging how well some functionality is tested. For example a small section saying how to judge the \"actual\" code coverage compared to the \"fake\" one from tools like Jacoco. I am sure you will put this in, but I'm mentioning it anyway.",
+    "ts": "1471423865.003101",
+    "id": "17de42836",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "You can even make this into its own blog post later on",
+    "edited": {
+      "user": "U09T8SFG8",
+      "ts": "1471423882.000000"
+    },
+    "ts": "1471423875.003102",
+    "id": "17de42837",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "there is no tests :smile:",
+    "ts": "1471423912.003104",
+    "id": "17de42838",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "app is currently just activities/fragments",
+    "ts": "1471423937.003105",
+    "id": "17de42839",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "+ models",
+    "ts": "1471423941.003106",
+    "id": "17de42840",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I trusted you again..........",
+    "ts": "1471423992.003107",
+    "id": "17de42841",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": ":smile:",
+    "ts": "1471423995.003108",
+    "id": "17de42842",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "In any case as a future blog post it could be a nice idea",
+    "ts": "1471424007.003109",
+    "id": "17de42843",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I haven't seen many tackling this issue. Most people get obsessed with the % from code coverage tools",
+    "ts": "1471424027.003110",
+    "id": "17de42844",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "yeah",
+    "ts": "1471424032.003111",
+    "id": "17de42845",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "basically a friend asked me a favour to look at the app he built and tell him what’s wrong with it",
+    "ts": "1471424053.003112",
+    "id": "17de42846",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "oh ok that's cool",
+    "ts": "1471424061.003113",
+    "id": "17de42847",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "then perhaps mention in a paragraph that it has no tests",
+    "edited": {
+      "user": "U09T8SFG8",
+      "ts": "1471424081.000000"
+    },
+    "ts": "1471424075.003114",
+    "id": "17de42848",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "yeah",
+    "ts": "1471424081.003115",
+    "id": "17de42849",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": ":slightly_smiling_face:",
+    "ts": "1471424082.003117",
+    "id": "17de42850",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I’m thinking adding stuff gradually to that same blogpost",
+    "ts": "1471424098.003118",
+    "id": "17de42851",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I would say it's better to do it in parts. Because people will rarely visit the same blogpost twice, also if it's too big some people won't read all of it",
+    "ts": "1471424144.003119",
+    "id": "17de42852",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "as a plus, this will make it seem that you are blogposting everyday",
+    "ts": "1471424168.003120",
+    "id": "17de42853",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": ":stuck_out_tongue:",
+    "ts": "1471424169.003121",
+    "id": "17de42854",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "haha",
+    "ts": "1471426619.003122",
+    "id": "17de42855",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "maybe",
+    "ts": "1471426621.003123",
+    "id": "17de42856",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "yeah defined parts/sections would be nice",
+    "ts": "1471426683.003124",
+    "id": "17de42857",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "i saw a similar medium post somewhere that did that and it was handy to navigate",
+    "ts": "1471426700.003125",
+    "id": "17de42858",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "&gt;but then there are problem like, json parsing, as json structure and my orm structure are both not exact equal\ncreate a typeadapter for that model for retrofit and parse it directly into your ORM model, or create an adapter class which will turn one into other <@U2240R06R>",
+    "edited": {
+      "user": "U0548MM6B",
+      "ts": "1471426915.000000"
+    },
+    "ts": "1471426846.003126",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U2240R06R"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "17de42859",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "is there any way to override the time taken to trigger long press?",
+    "ts": "1471427614.003128",
+    "id": "17de42860",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "i would like to shorten the time",
+    "ts": "1471427627.003129",
+    "id": "17de42861",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "i think via ontouch (it’s been a long time since ive done it)",
+    "edited": {
+      "user": "U04U5KS3Z",
+      "ts": "1471427694.000000"
+    },
+    "ts": "1471427679.003130",
+    "id": "17de42862",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "I am trying something for android map api, on marker long press",
+    "ts": "1471427879.003132",
+    "id": "17de42863",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "i tend to keep those at defaults to remain consistent across the phone",
+    "ts": "1471427941.003133",
+    "id": "17de42864",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "yeah, thats what we did..but the designer came back and told it should be like IOS",
+    "ts": "1471427972.003134",
+    "id": "17de42865",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "where they allowing marker to drag on longpress but the time is half of what we have on android",
+    "ts": "1471427998.003135",
+    "id": "17de42866",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U0XCFE6AH> tell the designer to do his job better and learn how to follow guidelines per platform",
+    "ts": "1471428121.003136",
+    "id": "17de42867",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "yup",
+    "ts": "1471428170.003137",
+    "id": "17de42868",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "it does not even make sense to have the same longpress for different platforms, is one of the users going to be switching between Android and iOS every hour or so? No he won't",
+    "ts": "1471428189.003138",
+    "id": "17de42869",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "again I found that its actually better user usability for our product basically",
+    "ts": "1471428194.003139",
+    "id": "17de42870",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "so i think if I can do it then better",
+    "ts": "1471428202.003140",
+    "id": "17de42871",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "yep, just gotta tell the designer that android users have different UX expectations to iOS",
+    "ts": "1471428972.003141",
+    "id": "17de42872",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1T13H6S3",
+    "text": "hey im trying to implement on leftSwipe menu appearing on RecyclerView item",
+    "ts": "1471430512.003142",
+    "id": "17de42873",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1T13H6S3",
+    "text": "anybody know an easy way to do that",
+    "ts": "1471430526.003143",
+    "id": "17de42874",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U10D1A7S4",
+    "text": "<@U10D1A7S4|funkyidol> has left the channel",
+    "subtype": "channel_leave",
+    "ts": "1471432172.003144",
+    "id": "17de42875",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U21R4GP5J",
+    "text": "Is there a way to reuse attrs?\nI have this:\n```\n&lt;attr name=\"font\" format=\"enum\"&gt;\n    &lt;enum name=\"gotham_book\" value=\"0\" /&gt;\n    &lt;enum name=\"gotham_medium\" value=\"1\" /&gt;\n&lt;/attr&gt;\n```\n\nI want to create two other attributes that are the exact same thing as the font attribute, but with different names. Do I have to do it manually?",
+    "ts": "1471432317.003145",
+    "id": "17de42876",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U10D1A7S4",
+    "text": "<@U10D1A7S4|funkyidol> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1471432607.003146",
+    "id": "17de42877",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U10D1A7S4",
+    "text": "Need help AndroidDevs!! I Can't seem to wrap my head around Unit testing with MVP architecture. Tried so many tutorial with jUnit &amp; Mockito. But not able to comprehend, [1]What to test [2]How to structure the test [3]How to write the test. Want to make testing part of my dev process now. Any recommendation on Books, Articles, Youtube videos would be highly appreciated. TIA",
+    "ts": "1471432612.003147",
+    "id": "17de42878",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1T13H6S3",
+    "text": "<@U10D1A7S4>: i’m looking for same",
+    "ts": "1471433174.003148",
+    "id": "17de42879",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1T13H6S3",
+    "text": ":joy:",
+    "ts": "1471433184.003149",
+    "id": "17de42880",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<@U1T13H6S3>:  -&gt; <#C0D6DUW8L>  :slightly_smiling_face:",
+    "ts": "1471433226.003150",
+    "id": "17de42881",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1T13H6S3",
+    "text": "wow",
+    "ts": "1471433248.003151",
+    "id": "17de42882",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1T13H6S3",
+    "text": "ty",
+    "ts": "1471433251.003152",
+    "id": "17de42883",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U225BD3SM",
+    "text": "<@U225BD3SM|mariosk> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1471436465.003153",
+    "id": "17de42884",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U224YEN12",
+    "text": "<@U224YEN12|enieber> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1471436817.003154",
+    "id": "17de42885",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1F6XGM6V",
+    "text": "Ugh the Note7 looks sooooooo good! Used it at a local Best Buy and oh man!!! (coming from a long-time Apple user)",
+    "ts": "1471439525.003155",
+    "id": "17de42886",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Has any1 else have problems before with supportFragmentManager setAnimations?",
+    "ts": "1471441616.003156",
+    "id": "17de42887",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I’m chaining methods and I’m chaining it before `replace` but it’s not doing anything",
+    "ts": "1471441634.003157",
+    "id": "17de42888",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I’m noticing the animation is happening on the view within my fragment and not on the fragment itself.",
+    "ts": "1471442031.003158",
+    "id": "17de42889",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I was expecting my fragment transition to be animated.",
+    "ts": "1471442053.003159",
+    "id": "17de42890",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "what hold the fragment?",
+    "ts": "1471442192.003160",
+    "id": "17de42891",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "I apply animation to Parent, well it depends whats your requirement basically, in my case I applied animation to parent so when new Fragement added or removed it animate..",
+    "ts": "1471442257.003161",
+    "id": "17de42892",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CT7JDN3",
+    "text": "Any good scientific library out there which I can integrate in my app ?",
+    "ts": "1471443440.003162",
+    "id": "17de42893",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1N5PJDTL",
+    "text": "<@U0CT7JDN3>: I’m not sure what you’re looking to do, but maybe jscience is what you’re looking for?\n\n<http://jscience.org/>",
+    "attachments": [
+      {
+        "title": "JScience",
+        "title_link": "http://jscience.org/",
+        "text": "The most comprehensive Java library for the scientific community.",
+        "fallback": "JScience",
+        "from_url": "http://jscience.org/",
+        "service_name": "jscience.org",
+        "id": 1
+      }
+    ],
+    "ts": "1471443541.003163",
+    "id": "17de42894",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "<@U2240R06R>: Sorry mate, got dragged into an all day meeting... You sort your issue?",
+    "ts": "1471443584.003165",
+    "id": "17de42895",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CT7JDN3",
+    "text": "I am looking for a scientific calculator. Sorry missed out on this very important keyword",
+    "ts": "1471443611.003166",
+    "id": "17de42896",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CT7JDN3",
+    "text": "Something like this -&gt; <http://4.bp.blogspot.com/-5AMIWeld8LM/VjBWNor90yI/AAAAAAAAJog/fPU1uh2SUeI/s1600/GATE%2B2016%2BVirtual%2BCalculator%2BAvailable%2BTo%2BPractise.png>",
+    "attachments": [
+      {
+        "fallback": "431x315px image",
+        "image_url": "http://4.bp.blogspot.com/-5AMIWeld8LM/VjBWNor90yI/AAAAAAAAJog/fPU1uh2SUeI/s1600/GATE%2B2016%2BVirtual%2BCalculator%2BAvailable%2BTo%2BPractise.png",
+        "image_width": 431,
+        "image_height": 315,
+        "image_bytes": 17851,
+        "from_url": "http://4.bp.blogspot.com/-5AMIWeld8LM/VjBWNor90yI/AAAAAAAAJog/fPU1uh2SUeI/s1600/GATE%2B2016%2BVirtual%2BCalculator%2BAvailable%2BTo%2BPractise.png",
+        "id": 1
+      }
+    ],
+    "ts": "1471443669.003167",
+    "id": "17de42897",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CT7JDN3",
+    "text": "<@U1N5PJDTL>: This ^",
+    "ts": "1471443715.003169",
+    "id": "17de42898",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2134Q70C",
+    "text": "Anybody here ever build a homescreen widget and deal with the crazy resizing in different launchers?",
+    "ts": "1471443831.003170",
+    "id": "17de42899",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1N5PJDTL",
+    "text": "<@U0CT7JDN3>: I’m not aware of a library that has the widget you want fully done, but you could probably use arity for the expression evaluating, and make the ui yourself\n\n<http://www.developerfusion.com/project/62854/arity/>",
+    "attachments": [
+      {
+        "title": "arity - Java project - developer Fusion",
+        "title_link": "http://www.developerfusion.com/project/62854/arity/",
+        "text": "Arity : Arithmetic Engine for Java",
+        "fallback": "arity - Java project - developer Fusion",
+        "from_url": "http://www.developerfusion.com/project/62854/arity/",
+        "service_icon": "http://www.developerfusion.com/favicon.ico",
+        "service_name": "developerfusion.com",
+        "id": 1
+      }
+    ],
+    "ts": "1471443909.003171",
+    "id": "17de42900",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18E0PY49",
+    "text": "<https://i.imgur.com/vWWqkxR.png> , anyone had this problem when trying to import esprresso contrib dependency ?",
+    "attachments": [
+      {
+        "fallback": "1194x88px image",
+        "image_url": "https://i.imgur.com/vWWqkxR.png",
+        "image_width": 1194,
+        "image_height": 88,
+        "image_bytes": 44414,
+        "from_url": "https://i.imgur.com/vWWqkxR.png",
+        "id": 1
+      }
+    ],
+    "ts": "1471445263.003173",
+    "id": "17de42901",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "yes",
+    "ts": "1471445288.003175",
+    "id": "17de42902",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "```\n    androidTestCompile(\"com.android.support.test.espresso:espresso-contrib:2.2.2\") {\n        exclude module: 'appcompat-v7'\n        exclude module: 'design'\n        exclude module: 'support-annotations'\n        exclude module: 'support-v4'\n        exclude module: 'support-v13'\n        exclude module: 'recyclerview-v7'\n    }\n```",
+    "ts": "1471445307.003176",
+    "id": "17de42903",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "that should help",
+    "ts": "1471445313.003177",
+    "id": "17de42904",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18E0PY49",
+    "text": "Seems now to work, big thanks !",
+    "ts": "1471445394.003178",
+    "id": "17de42905",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1ZPNP5Q9",
+    "text": "Anyone get rare crashes where their extras from a bundle are null? I see these crash reports from Fabric like once or twice a month, but can never diagnose them. Doing a null check would stop the crash, but then I’d have to finish() the activity asap since I need the data from the extras to continue..",
+    "ts": "1471447049.003179",
+    "id": "17de42906",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U1ZPNP5Q9>: does Fabric report this happening on a specific device?",
+    "ts": "1471447205.003180",
+    "id": "17de42907",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1ZPNP5Q9",
+    "text": "Happens on different devices",
+    "ts": "1471447288.003181",
+    "id": "17de42908",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "you can get null bundles if people are launching activities they shouldnt such as through custom launchers",
+    "ts": "1471447297.003182",
+    "id": "17de42909",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "are you certain these are crashes that happened in normal use cases is what I would question",
+    "ts": "1471447331.003183",
+    "id": "17de42910",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1ZPNP5Q9",
+    "text": "Unsure if it’s via a normal use-case, though it’d be difficult for them to start these activities without going through the “normal way\"",
+    "ts": "1471447386.003184",
+    "id": "17de42911",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "right i just mean some launchers ive seen expose all activities in an app",
+    "ts": "1471447411.003185",
+    "id": "17de42912",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "not saying its that just a possibility",
+    "ts": "1471447425.003186",
+    "id": "17de42913",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1ZPNP5Q9",
+    "text": "a large amount of the crashes come from the Motorola XT320 actually",
+    "ts": "1471447475.003187",
+    "id": "17de42914",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "OMG WAIT",
+    "ts": "1471447708.003188",
+    "id": "17de42915",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "XT320",
+    "ts": "1471447710.003189",
+    "id": "17de42916",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "I had a crash from a Batmobile XT320",
+    "ts": "1471447721.003190",
+    "id": "17de42917",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "might it be the same phone?",
+    "ts": "1471447730.003191",
+    "id": "17de42918",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "but nooo moto xt320 has 2.3 :thinking_face:",
+    "ts": "1471447753.003192",
+    "id": "17de42919",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U227J4E2W",
+    "text": "<@U227J4E2W|italoag> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1471447784.003193",
+    "id": "17de42920",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1ZPNP5Q9",
+    "text": "it’s running 4.3.1 according to fabric",
+    "ts": "1471448765.003194",
+    "id": "17de42921",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "must be another phone",
+    "ts": "1471448835.003195",
+    "id": "17de42922",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "it’s a mystery",
+    "ts": "1471448838.003196",
+    "id": "17de42923",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1ZPNP5Q9",
+    "text": "I also see “Full on Android Emulator” getting the same crash - also strange since there are maybe 100~ users on this app. I’d find it hard to believe people are running an emulator for it (it’s GPS intensive)",
+    "ts": "1471448839.003197",
+    "id": "17de42924",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1ZPNP5Q9",
+    "text": "Hard to tell the higher ups I can’t fix this crash that comes up every month or so =(",
+    "ts": "1471448856.003198",
+    "id": "17de42925",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K27U3ML",
+    "text": "I’ve seen it before on the emulator <@U1ZPNP5Q9>, it infrequently appears. I assumed it was some automated test google/someone was doing and ignored it",
+    "ts": "1471449239.003199",
+    "id": "17de42926",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U16GF1B0F|jasonwyatt> uploaded a file: <https://androidchat.slack.com/files/jasonwyatt/F228M4XFH/omg_i_think_i_did_it.mp4|omg i think i did it.mp4> and commented: Regarding my question yesterday about a custom NestedScrollingChild/Parent which reveals an initially-hidden view.",
+    "file": {
+      "id": "F228M4XFH",
+      "created": 1471452859,
+      "timestamp": 1471452859,
+      "name": "omg i think i did it.mp4",
+      "title": "omg i think i did it.mp4",
+      "mimetype": "video/mp4",
+      "filetype": "mp4",
+      "pretty_type": "MPEG 4 Video",
+      "user": "U16GF1B0F",
+      "editable": false,
+      "size": 4963167,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F228M4XFH/omg_i_think_i_did_it.mp4?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F228M4XFH/download/omg_i_think_i_did_it.mp4?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/jasonwyatt/F228M4XFH/omg_i_think_i_did_it.mp4",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F228M4XFH-85eb16ae05",
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 1,
+      "initial_comment": {
+        "id": "Fc228V201Y",
+        "created": 1471452859,
+        "timestamp": 1471452859,
+        "user": "U16GF1B0F",
+        "is_intro": true,
+        "comment": "Regarding my question yesterday about a custom NestedScrollingChild/Parent which reveals an initially-hidden view.",
+        "channel": ""
+      }
+    },
+    "user": "U16GF1B0F",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U16GF1B0F|jasonwyatt>",
+    "bot_id": null,
+    "ts": "1471452860.003200",
+    "id": "17de42927",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "/gif it’s happening",
+    "ts": "1471452862.003201",
+    "id": "17de42928",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "",
+    "bot_id": "B0GH4RVHU",
+    "attachments": [
+      {
+        "fallback": "<https://i.imgur.com/7drHiqrh.jpg>",
+        "image_url": "https://i.imgur.com/7drHiqrh.jpg",
+        "image_width": 312,
+        "image_height": 213,
+        "image_bytes": 19045,
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1471452862.003202",
+    "id": "17de42929",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U16GF1B0F>: :nutella: for the subliminal motivational passage",
+    "ts": "1471453331.003203",
+    "id": "17de42930",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "that stuff is major :key:",
+    "ts": "1471453342.003204",
+    "id": "17de42931",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "&gt; Well then get your shit together. Get it all together and put it in a backpack, all your shit, so it’s together … Take it to the shit store and sell it, or put it in a shit museum.",
+    "ts": "1471453417.003205",
+    "id": "17de42932",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": ":joy:",
+    "ts": "1471453422.003206",
+    "id": "17de42933",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "&lt;3 Rick and Morty",
+    "ts": "1471453437.003207",
+    "id": "17de42934",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0J3AKMPS",
+    "text": "is anyone tried to open fragment from pop up menu click ?",
+    "ts": "1471454632.003208",
+    "id": "17de42935",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U16GF1B0F>: looks cool! Use gfycat next time :slightly_smiling_face:",
+    "ts": "1471454686.003209",
+    "id": "17de42936",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Talking about gfycat, uploading is slow there though :disappointed:",
+    "ts": "1471454696.003210",
+    "id": "17de42937",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Me attempting a screenshot, I'm so good: <https://i.imgur.com/bcYpZcv.png>",
+    "attachments": [
+      {
+        "fallback": "1440x1265px image",
+        "image_url": "https://i.imgur.com/bcYpZcv.png",
+        "image_width": 1440,
+        "image_height": 1265,
+        "image_bytes": 156076,
+        "from_url": "https://i.imgur.com/bcYpZcv.png",
+        "id": 1
+      }
+    ],
+    "ts": "1471454731.003211",
+    "id": "17de42938",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "Look at all that overdraw ;)",
+    "ts": "1471454764.003213",
+    "id": "17de42939",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "That is not overdraw :stuck_out_tongue:",
+    "ts": "1471454774.003214",
+    "id": "17de42940",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "padding and margins?",
+    "ts": "1471454803.003215",
+    "id": "17de42941",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "not sure what that is indicating",
+    "ts": "1471454814.003216",
+    "id": "17de42942",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Funny enough, CMD+Shift+4 triggers that behaviour with the dev console open...",
+    "ts": "1471454817.003217",
+    "id": "17de42943",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U21R4GP5J",
+    "text": "margin is pink",
+    "ts": "1471454831.003218",
+    "id": "17de42944",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U055GGAHS>: yes, orange = margin, green = padding, and blue is content",
+    "edited": {
+      "user": "U061HDV96",
+      "ts": "1471454843.000000"
+    },
+    "ts": "1471454836.003219",
+    "id": "17de42945",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U21R4GP5J",
+    "text": "or",
+    "ts": "1471454836.003220",
+    "id": "17de42946",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U21R4GP5J",
+    "text": "i mean not pink",
+    "ts": "1471454842.003221",
+    "id": "17de42947",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "neat",
+    "ts": "1471454845.003223",
+    "id": "17de42948",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "this is in chrome?",
+    "ts": "1471454850.003224",
+    "id": "17de42949",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Safari, but also in Chrome. It's webkit",
+    "ts": "1471454858.003225",
+    "id": "17de42950",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "gotcha",
+    "ts": "1471454865.003226",
+    "id": "17de42951",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "that seems really useful",
+    "ts": "1471454869.003227",
+    "id": "17de42952",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Meh, you'd be surprised how messy it can be",
+    "ts": "1471454879.003228",
+    "id": "17de42953",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "For column-count stuff, it doesn't work at all",
+    "ts": "1471454890.003229",
+    "id": "17de42954",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "You see that it only managed to show the margins on the first 3 ingredient groups?",
+    "ts": "1471454907.003230",
+    "id": "17de42955",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "It thinks the others are below there even when they're not",
+    "ts": "1471454921.003231",
+    "id": "17de42956",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "continuing from my earlier question regarding the steps for a code review - do you guys think it’s beneficial to run a static analysis tool on an app you’re reviewing",
+    "ts": "1471456189.003232",
+    "id": "17de42957",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "apart from lint, you get that for free",
+    "ts": "1471456199.003233",
+    "id": "17de42958",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": ":slightly_smiling_face:",
+    "ts": "1471456201.003234",
+    "id": "17de42959",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "The static analysis services online I've tried so far don't offer anything more than what already exists: for Android that is Android Lint, for Python that is Coverage and flake8 for example.",
+    "ts": "1471456676.003235",
+    "id": "17de42960",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "So I prefer to use services that are exactly the way they are on your own PC.",
+    "ts": "1471456709.003236",
+    "id": "17de42961",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "hm ok",
+    "ts": "1471456800.003237",
+    "id": "17de42962",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I don’t use anything other than lint",
+    "ts": "1471456813.003238",
+    "id": "17de42963",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Hence why I designed Pulldog the way I did",
+    "edited": {
+      "user": "U061HDV96",
+      "ts": "1471457677.000000"
+    },
+    "ts": "1471457648.003239",
+    "id": "17de42964",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "No need to change your environment",
+    "ts": "1471457685.003241",
+    "id": "17de42965",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<https://developer.android.com/topic/libraries/support-library/revisions.html>",
+    "attachments": [
+      {
+        "title": "    Support Library Revision History | Android Developers  ",
+        "title_link": "https://developer.android.com/topic/libraries/support-library/revisions.html",
+        "text": "This page provides details about the Support Library package releases.",
+        "fallback": "    Support Library Revision History | Android Developers  ",
+        "from_url": "https://developer.android.com/topic/libraries/support-library/revisions.html",
+        "service_icon": "https://developer.android.com/favicon.ico",
+        "service_name": "developer.android.com",
+        "id": 1
+      }
+    ],
+    "ts": "1471463338.003242",
+    "id": "17de42966",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "So 24.2.0 - they split up support-v4 into several smaller modules to help reduce APK size",
+    "ts": "1471463353.003244",
+    "id": "17de42967",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "buuuut if you want `support-fragment` (which you should be using instead of framework Fragments), you have to include the rest as dependencies anyway",
+    "ts": "1471463383.003245",
+    "id": "17de42968",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "it seems like media-compat is the only thing you wouldn’t normally want",
+    "ts": "1471463452.003246",
+    "id": "17de42969",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "support-fragment obviously optional depending on how you manage your views",
+    "ts": "1471463468.003247",
+    "id": "17de42970",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "&gt;&gt;&gt;support-fragment\nBackports the fragment framework. This module has dependencies on support-compat, support-core-utils, support-core-ui, and support-media-compat.\n\n:troll:",
+    "edited": {
+      "user": "U04U5KS3Z",
+      "ts": "1471463613.000000"
+    },
+    "ts": "1471463606.003248",
+    "id": "17de42971",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U22D12C5C",
+    "text": "<@U22D12C5C|ganqzz> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1471479237.003250",
+    "id": "17de42972",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U22DZGYQY",
+    "text": "<@U22DZGYQY|akshayt> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1471489185.003251",
+    "id": "17de42973",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "<https://developer.android.com/reference/android/support/v7/widget/RecyclerView.OnFlingListener.html>",
+    "attachments": [
+      {
+        "title": "    RecyclerView.OnFlingListener | Android Developers  ",
+        "title_link": "https://developer.android.com/reference/android/support/v7/widget/RecyclerView.OnFlingListener.html",
+        "text": "None",
+        "fallback": "    RecyclerView.OnFlingListener | Android Developers  ",
+        "from_url": "https://developer.android.com/reference/android/support/v7/widget/RecyclerView.OnFlingListener.html",
+        "service_icon": "https://developer.android.com/favicon.ico",
+        "service_name": "developer.android.com",
+        "id": 1
+      }
+    ],
+    "ts": "1471497898.003252",
+    "id": "17de42974",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "death to viewpagers?",
+    "ts": "1471497902.003254",
+    "id": "17de42975",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "recycler views now snappy snappy",
+    "ts": "1471497910.003255",
+    "id": "17de42976",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "Looks like Android want to make RecyclerView as the all mighty thing",
+    "ts": "1471498018.003256",
+    "id": "17de42977",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "probably a good thing",
+    "ts": "1471498103.003257",
+    "id": "17de42978",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "which makes me think - there isn’t a nice way to assert that something exists in the recycler",
+    "ts": "1471498133.003258",
+    "id": "17de42979",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "like an element.",
+    "ts": "1471498141.003259",
+    "id": "17de42980",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "or a checkbox",
+    "ts": "1471498150.003260",
+    "id": "17de42981",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "surely we can do better",
+    "ts": "1471498171.003261",
+    "id": "17de42982",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "I don't think that can be used for general purpose so maybe it's better to build another one based on recyclerview",
+    "ts": "1471498268.003263",
+    "id": "17de42983",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U22F0K0JZ",
+    "text": "<@U22F0K0JZ|monica-labbao> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1471500774.003265",
+    "id": "17de42984",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

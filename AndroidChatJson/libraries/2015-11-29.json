@@ -1,0 +1,96 @@
+[
+  {
+    "user": "U04UBTWEE",
+    "text": "<@U055JANKU>: yep i’ve used it before, it’s quite nice.. including the mikepenz/materialize library as well which is a transitive dependency...",
+    "ts": "1448845460.000140",
+    "id": "29li2737",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054AD9CZ",
+    "text": "Might not be the right room for this, but what is a transitive dependency?",
+    "ts": "1448847366.000141",
+    "id": "29li2738",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U054AD9CZ>: a transitive dependency is a dependency of a dependency. Transitive meaning:\n&gt; (of a relation) such that, if it applies between successive members of a sequence, it must also apply between any two members taken in order. For instance, if A is larger than B, and B is larger than C, then A is larger than C.\nAfaik transitive dependencies are not included in your project by Gradle. So if dependency A in your project depends on dependency B, you cannot use B from your project unless you specifically ask Gradle to (see transitive dependencies Gradle ofc).",
+    "edited": {
+      "user": "U061HDV96",
+      "ts": "1448853136.000000"
+    },
+    "ts": "1448853053.000142",
+    "id": "29li2739",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "Correct but you can tell a dependency to include it's deps by doing { transitive true}",
+    "ts": "1448853975.000145",
+    "id": "29li2740",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "On the dep declaration. Really helpful for deps that have multiple but necessary dependencies",
+    "ts": "1448854003.000146",
+    "id": "29li2741",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

@@ -1,0 +1,60 @@
+[
+  {
+    "user": "U09T8SFG8",
+    "text": "I have some trouble adding facebook's Stetho to my app. I am getting a _UNEXPECTED TOP-LEVEL EXCEPTION_ from gradle the moment I do an assemble with Stetho in the dependencies. Specifically I get `com.android.dex.DexException: Multiple dex files define Ljavax/annotation/CheckForNull;`. The first thing I tried was to exclude the annotations api from stetho with:\n\n```\ncompile('com.facebook.stetho:stetho:1.3.1') {       \n    exclude module: 'javax.annotation-api'\n}\n```\n\nbut that did not work either. \nI am adding the _javax.annotation_ with `compile javax.annotation:javax.annotation-api:1.2`. Anyone has any ideas on what could be wrong?",
+    "edited": {
+      "user": "U09T8SFG8",
+      "ts": "1460888499.000000"
+    },
+    "ts": "1460888483.000002",
+    "id": "17tr4291",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I actually think it might have to do with _Stetho_ and _AutoParcel_ both depending on `com.google.code.findbugs:jsr305`",
+    "ts": "1460889618.000005",
+    "id": "17tr4292",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "That was it (sort of). I use `com.google.code.findbugs:annotations`, `com.github.frankiesardo:auto-parcel` and `com.facebook.stetho:stetho`. All three of them depend on `com.google.code.findbugs:jsr305` which caused the conflict. `exclude module: 'jsr305'` from either AutoParcel or Stetho fixes it",
+    "ts": "1460890020.000006",
+    "id": "17tr4293",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

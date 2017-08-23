@@ -1,0 +1,2225 @@
+[
+  {
+    "user": "U09T8SFG8",
+    "text": "In gradle, I have a module \"common\" with some files in \"src/main/resources\". I have two other modules \"A\" and \"B\" and I want my test resources to include the resources from the \"common\" module.\n\nI am currently doing it like this for \"A\" and \"B\":\n\n```\nsourceSets {\n    test {\n        resources.srcDir '../common/src/main/resources'\n    }\n}\n```\n\nIs there any better way to do this? I have already tried doing this <https://goo.gl/3h75gg> and this <https://goo.gl/zEm5Yi>",
+    "attachments": [
+      {
+        "title": "Gradle: common resource dependency for multiple java projects",
+        "title_link": "https://goo.gl/3h75gg",
+        "text": "I'm developing a multi-module project with gradle/intellij-idea, and here is the structure of my project home:project/ sub-project-1 /main/resources sub-project-2 /main/resources da...",
+        "fallback": "Gradle: common resource dependency for multiple java projects",
+        "thumb_url": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "https://goo.gl/3h75gg",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "service_icon": "http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d",
+        "service_name": "stackoverflow.com",
+        "id": 1
+      },
+      {
+        "title": "Gradle sub-project classes dependency",
+        "title_link": "https://goo.gl/zEm5Yi",
+        "text": "I've got several sub-projects in my gradle project:Project Common Consumer1 Consumer2 ..... ConsumerN My first - and main goal – is to include classes from Common project into",
+        "fallback": "Gradle sub-project classes dependency",
+        "thumb_url": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "https://goo.gl/zEm5Yi",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "service_icon": "http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d",
+        "service_name": "stackoverflow.com",
+        "id": 2
+      }
+    ],
+    "ts": "1476699461.003721",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "17de48266",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "doing it the same way",
+    "ts": "1476702164.003723",
+    "id": "17de48267",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "it's a bit hacky this way <@U0XCFE6AH> isn't it? My issue is that the moment that path changes everything will blow up",
+    "ts": "1476703758.003724",
+    "id": "17de48268",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "but I really can't get any of the `compile` ways to work",
+    "ts": "1476703774.003725",
+    "id": "17de48269",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "True I used it with my watch app",
+    "ts": "1476703798.003726",
+    "id": "17de48270",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "It will break my watch app if things changed",
+    "ts": "1476703815.003727",
+    "id": "17de48271",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "Hope someone else have better solution",
+    "ts": "1476703878.003728",
+    "id": "17de48272",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "Hi, from morning I am stuck in this youtube documentation, I need to use youtube DATA API v3 , for that I need a access token for oAuth, I am logging user with google signin  button but not getting access token",
+    "ts": "1476705390.003729",
+    "id": "17de48273",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "any one can help me with this please ? or guide me to some resources",
+    "ts": "1476705406.003730",
+    "id": "17de48274",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "freshly baked tacos in the way :taco:",
+    "ts": "1476705431.003731",
+    "id": "17de48275",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0MHZ10FN",
+    "text": "Is anyone using buddybuild and knows how to integrate codecov?",
+    "ts": "1476709763.003732",
+    "id": "17de48276",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "not sure you can do it with buddybuild since they don’t support reports yet",
+    "ts": "1476710671.003733",
+    "id": "17de48277",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "So I'm trying to run the java unit test that import scala class",
+    "ts": "1476710909.003734",
+    "id": "17de48278",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "in IDE there is no error but then when I try to run the test the compiler complain that it can't find the scala class",
+    "edited": {
+      "user": "U0ESBF4AV",
+      "ts": "1476710950.000000"
+    },
+    "ts": "1476710934.003735",
+    "id": "17de48279",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "anyone know why and how to solve this?",
+    "ts": "1476710961.003737",
+    "id": "17de48280",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1T13H6S3",
+    "text": "Multiline Edit Text align drawable at top left in android ui, how?",
+    "ts": "1476711245.003738",
+    "id": "17de48281",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "<@U1T13H6S3> place ImageView and EditText in a FrameLayout? :slightly_smiling_face:",
+    "ts": "1476711284.003739",
+    "id": "17de48282",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1T13H6S3",
+    "text": "<@U2M0WUZ7A> working, thanks",
+    "ts": "1476712053.003740",
+    "id": "17de48283",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0MHZ10FN",
+    "text": "<@U0548MM6B> i’m now that far that codecov wants to upload the generated report but it fails with:\n\n`Please provide the repository token to upload reports via -t :repository-token`\n\nis this what you meant?",
+    "ts": "1476714439.003741",
+    "id": "17de48284",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "it wants to upload the report to your github? never used codecov, but I know that for other tools you can’t manage to access your reports after build since buddybuild ain’t allowing it yet",
+    "ts": "1476714559.003742",
+    "id": "17de48285",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0MHZ10FN",
+    "text": "hmm okay",
+    "ts": "1476714573.003743",
+    "id": "17de48286",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0MHZ10FN",
+    "text": "i’ll explore further",
+    "ts": "1476714689.003744",
+    "id": "17de48287",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0MHZ10FN",
+    "text": "ok I made it work",
+    "ts": "1476715551.003745",
+    "id": "17de48288",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2EHF260Z",
+    "text": "Does anyone have some deeper experience with architecting an react native app? I would like to know some tips about networking as I find the provided fetch API from facebook not very scalable … I might be spoiled with clarity of code tho, when coming from reactive networking with retrofit :slightly_smiling_face: … I tried to find some other networking libraries that would make use of RxJS and provide something more pleasant but with no luck.. I don’t really like to use promises as they are just stripped down, non-composable Singles … After some googling, the only thing I found out is that for some — to me unknown — reason, React Native community just doesn’t take advantage of the Rx … \n\nDoes anyone have some insights on this ?",
+    "ts": "1476716397.003746",
+    "id": "17de48289",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2Q9MKZ55",
+    "text": "<@U2Q9MKZ55|quangvinh2080> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476717275.003747",
+    "id": "17de48290",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "anyone using NimbleDroid?",
+    "ts": "1476718167.003748",
+    "id": "17de48291",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "It says the method that hangs for 850ms which is like more than half of my startup time is an async retrofit call :thinking_face:",
+    "ts": "1476718375.003749",
+    "id": "17de48292",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "I use nimbledroid but haven't really dived deep into it.",
+    "ts": "1476718527.003750",
+    "id": "17de48293",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "does it also say your retrofit calls hang your UI thread?",
+    "ts": "1476718668.003751",
+    "id": "17de48294",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "Has anyone used Codacy? Looks like quite a cool product <https://www.codacy.com>",
+    "attachments": [
+      {
+        "title": "Home | Codacy",
+        "title_link": "https://www.codacy.com",
+        "text": "Codacy automates code reviews and monitors code quality over time. Static analysis, code coverage and metrics for Ruby, JavaScript, PHP, Scala, Java, Python, CoffeeScript and CSS.",
+        "fallback": "Home | Codacy",
+        "image_url": "https://www.codacy.com/landing-page-assets/images/og.png",
+        "from_url": "https://www.codacy.com",
+        "image_width": 476,
+        "image_height": 250,
+        "image_bytes": 46800,
+        "service_icon": "https://www.codacy.com/landing-page-assets/images/favicon.png",
+        "service_name": "codacy.com",
+        "id": 1
+      }
+    ],
+    "ts": "1476719612.003752",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "17de48295",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Has anyone managed to implement a `RealmRecyclerViewAdapter` with headers based on a value in the RealmObjects passed in?",
+    "ts": "1476720352.003754",
+    "id": "17de48296",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KKN48P",
+    "text": "Hi. Are there any examples for custom typeadapters for AutoValue Parcel, e.g. ArrayMap or SparseIntArray?",
+    "ts": "1476721310.003755",
+    "id": "17de48297",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "`ArrayMap` is an implementation of standard `java.util.Map` interface.\nThis may be interesting: <https://gist.github.com/chrisjenx/f059d1dd96b64586847a>",
+    "ts": "1476721774.003756",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "17de48298",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QBBBN4C",
+    "text": "<@U2QBBBN4C|iflista> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476724780.003757",
+    "id": "17de48299",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QD1RWMB",
+    "text": "<@U2QD1RWMB|robotburrito> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476729977.003758",
+    "id": "17de48300",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "should my app logo be a icon? it will be shown in the login fragment as and its width will be almost the screen width",
+    "ts": "1476729989.003759",
+    "id": "17de48301",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QELL9PZ",
+    "text": "<@U2QELL9PZ|willfong> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476735531.003760",
+    "id": "17de48302",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QFGRYG7",
+    "text": "<@U2QFGRYG7|toidiu> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476739266.003761",
+    "id": "17de48303",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "Just a quick survey, any of you guys ever heard of bouncer pattern?",
+    "ts": "1476749799.003762",
+    "id": "17de48304",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "No, but apparently I do use it",
+    "ts": "1476749877.003763",
+    "id": "17de48305",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "Ah nice",
+    "ts": "1476749941.003764",
+    "id": "17de48306",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I think it's a good idea to pass something like a \"should I raise an exception\" parameter to those functions",
+    "ts": "1476749943.003765",
+    "id": "17de48307",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "agreed",
+    "ts": "1476749951.003766",
+    "id": "17de48308",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Default set to true",
+    "ts": "1476749962.003767",
+    "id": "17de48309",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "It's just last year Swift introduced a new parameter called guard",
+    "ts": "1476749977.003768",
+    "id": "17de48310",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "it's basically like if without a bracket, just a bracket for else",
+    "ts": "1476750011.003769",
+    "id": "17de48311",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "```\nguard pointsCount &gt; 100 else { return }\n// do something\n```",
+    "ts": "1476750050.003770",
+    "id": "17de48312",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "and I think I want to do 5 minutes talk in next Tokyo Android meetup so just want to make sure it's not that widely known",
+    "ts": "1476750084.003771",
+    "id": "17de48313",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Ya, I see that in our iOS apps I think",
+    "ts": "1476750108.003772",
+    "id": "17de48314",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "And remember reading about it too",
+    "ts": "1476750121.003773",
+    "id": "17de48315",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Never used it though",
+    "ts": "1476750125.003774",
+    "id": "17de48316",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "But isn't the benefit just that you don't have to negate the if statement?",
+    "ts": "1476750155.003775",
+    "id": "17de48317",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "The real benefit is you can make your code flatter",
+    "ts": "1476750223.003776",
+    "id": "17de48318",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "and easier to read",
+    "ts": "1476750232.003777",
+    "id": "17de48319",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "you check every possible bad case, and then act accordingly",
+    "ts": "1476750261.003778",
+    "id": "17de48320",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Yes",
+    "ts": "1476750296.003779",
+    "id": "17de48321",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "It's something small, but definitely cool",
+    "ts": "1476750301.003780",
+    "id": "17de48322",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "agreed",
+    "ts": "1476750310.003781",
+    "id": "17de48323",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "but again in java it will be just a normal if with return haha",
+    "ts": "1476750322.003782",
+    "id": "17de48324",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Maybe we can convince kotlin to add this syntax? :slightly_smiling_face:",
+    "edited": {
+      "user": "U061HDV96",
+      "ts": "1476750360.000000"
+    },
+    "ts": "1476750358.003783",
+    "id": "17de48325",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Shouldn't it be relatively easy?",
+    "ts": "1476750375.003785",
+    "id": "17de48326",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "Yes I think it'll be a good idea if this can included in kotlin",
+    "ts": "1476750449.003786",
+    "id": "17de48327",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "especially if kotlin can also include inline declaration",
+    "ts": "1476750465.003787",
+    "id": "17de48328",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "to unwrap the optional",
+    "ts": "1476750474.003788",
+    "id": "17de48329",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "but again I don't know if it's already exist in kotlin or not",
+    "ts": "1476750484.003789",
+    "id": "17de48330",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "I mean something like this\n\n```\nfunc getRewards(points: Point?) -&gt; Reward? { // Got optional as a function parameter\n    guard let points = points else { return nil } // try to unwrap it, if points not exist, return nil\n    // at this point, points is not optional anymore\n}\n```",
+    "ts": "1476750622.003790",
+    "id": "17de48331",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QHEEGBX",
+    "text": "<@U2QHEEGBX|nesho> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476752399.003791",
+    "id": "17de48332",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QKJRNGZ",
+    "text": "<@U2QKJRNGZ|shacharz> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476772103.003792",
+    "id": "17de48333",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QKJRNGZ",
+    "text": "Hi guys, anyone knows whether there’s a way to move binary data from webview to native java (besides base64 enc/dev)?",
+    "ts": "1476772253.003793",
+    "id": "17de48334",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "As long as you know the path to that data you can just download or stream it",
+    "ts": "1476772388.003794",
+    "id": "17de48335",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QKJRNGZ",
+    "text": "what do you mean path? the data is inside webview, how can you access it from native?",
+    "ts": "1476772451.003795",
+    "id": "17de48336",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "Webview will display a web page right? web page will get the data from remote server, I mean that path",
+    "ts": "1476772567.003796",
+    "id": "17de48337",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "What kind of data btw?",
+    "ts": "1476772572.003797",
+    "id": "17de48338",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QKJRNGZ",
+    "text": "The data is not hosted on a remote server. Let’s say I’m creating the data inside webview, it’s uint8Array. And I want to move that back to the native app.",
+    "ts": "1476772650.003798",
+    "id": "17de48339",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "Hmmm, the only possible approach that I can think of is using javascript bridge",
+    "ts": "1476772689.003799",
+    "id": "17de48340",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QKJRNGZ",
+    "text": "what’s that?",
+    "ts": "1476772708.003800",
+    "id": "17de48341",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "Oh never heard of it?",
+    "ts": "1476772715.003801",
+    "id": "17de48342",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "you can create a javascript interface in your native android code (java/kotlin)",
+    "ts": "1476772734.003802",
+    "id": "17de48343",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "and declare your function inside the interface",
+    "ts": "1476772752.003803",
+    "id": "17de48344",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "and call the function from the webview via javascript",
+    "ts": "1476772764.003804",
+    "id": "17de48345",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QKJRNGZ",
+    "text": "Yea I know of that, but AFAIK you can only move string through those interfaces",
+    "ts": "1476772797.003805",
+    "id": "17de48346",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "<https://developer.android.com/guide/webapps/webview.html#BindingJavaScript>",
+    "attachments": [
+      {
+        "title": "    Building Web Apps in WebView | Android Developers  ",
+        "title_link": "https://developer.android.com/guide/webapps/webview.html#BindingJavaScript",
+        "text": "If you want to deliver a web application (or just a web page) as a part of a client application, you can do it using WebView. The WebView class is an extension of Android&amp;#39;s View class that allows you to display web pages as a part of your activity…",
+        "fallback": "    Building Web Apps in WebView | Android Developers  ",
+        "from_url": "https://developer.android.com/guide/webapps/webview.html#BindingJavaScript",
+        "service_icon": "https://developer.android.com/favicon.ico",
+        "service_name": "developer.android.com",
+        "id": 1
+      }
+    ],
+    "ts": "1476772863.003806",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "17de48347",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XJ96KPG",
+    "text": "Hello guys, do you know how to make Slack like navigation drawer?",
+    "ts": "1476772868.003808",
+    "id": "17de48348",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QKJRNGZ",
+    "text": "<@U0ESBF4AV> Yea I’m familiar with that. But it’s only for strings",
+    "ts": "1476772907.003809",
+    "id": "17de48349",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QKJRNGZ",
+    "text": "I have an arraybuffer/uint8array in webview",
+    "ts": "1476772939.003810",
+    "id": "17de48350",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "Hmmm I think it's also work with primitive types",
+    "ts": "1476772962.003811",
+    "id": "17de48351",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "but yes it won't work array",
+    "ts": "1476772977.003812",
+    "id": "17de48352",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "Any reason why you don't want to encode it into base64?",
+    "ts": "1476773000.003813",
+    "id": "17de48353",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QKJRNGZ",
+    "text": "It’s cpu intensive",
+    "ts": "1476773013.003814",
+    "id": "17de48354",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "Hmmmmm",
+    "ts": "1476773136.003815",
+    "id": "17de48355",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "another alternative is put a download listener into your webview",
+    "ts": "1476773147.003816",
+    "id": "17de48356",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QKJRNGZ",
+    "text": "Hmm, what’s that?",
+    "ts": "1476773189.003817",
+    "id": "17de48357",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "A download event listener",
+    "ts": "1476773314.003818",
+    "id": "17de48358",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "You can start an automatic download when the data creation is finished",
+    "ts": "1476773346.003819",
+    "id": "17de48359",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "but I don't think it's a good idea",
+    "ts": "1476773354.003820",
+    "id": "17de48360",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QKJRNGZ",
+    "text": "oh why not. I can create a blob url from the arrayBuffer and download it locally using xhr",
+    "ts": "1476773403.003821",
+    "id": "17de48361",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QKJRNGZ",
+    "text": "you think it’ll be less efficient?",
+    "ts": "1476773420.003822",
+    "id": "17de48362",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "Hmmm not sure",
+    "ts": "1476773439.003823",
+    "id": "17de48363",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "in terms of efficiency it can be better",
+    "ts": "1476773448.003824",
+    "id": "17de48364",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QKJRNGZ",
+    "text": "the download listener receives an event with the data whenever a download is finished inside a webview ?",
+    "ts": "1476773481.003825",
+    "id": "17de48365",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "whenever a download is started",
+    "ts": "1476773494.003826",
+    "id": "17de48366",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "or if you can create a blob url",
+    "ts": "1476773501.003827",
+    "id": "17de48367",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "you can just pass it via javascript interface",
+    "ts": "1476773515.003828",
+    "id": "17de48368",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "and then download it directly via native code",
+    "ts": "1476773524.003829",
+    "id": "17de48369",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "rather than the webview",
+    "ts": "1476773532.003830",
+    "id": "17de48370",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QKJRNGZ",
+    "text": "no, the blob url is only exposed to the webview sandbox itself",
+    "ts": "1476773566.003831",
+    "id": "17de48371",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "Ah yes sorry",
+    "ts": "1476773712.003832",
+    "id": "17de48372",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QKJRNGZ",
+    "text": "If it’s triggered only when a download is started the listener won’t have the data",
+    "ts": "1476773717.003833",
+    "id": "17de48373",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "because it's not connected to remote server",
+    "ts": "1476773720.003834",
+    "id": "17de48374",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "I forgot that part",
+    "ts": "1476773726.003835",
+    "id": "17de48375",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "There you go, a solution to try :slightly_smiling_face:",
+    "ts": "1476773748.003836",
+    "id": "17de48376",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QKJRNGZ",
+    "text": "But the listener receives the downloaded data?",
+    "ts": "1476773809.003837",
+    "id": "17de48377",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "Not directly",
+    "ts": "1476773895.003838",
+    "id": "17de48378",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "the download listener will get the url",
+    "ts": "1476773902.003839",
+    "id": "17de48379",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "and you will need to download it from there",
+    "ts": "1476773914.003840",
+    "id": "17de48380",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QKJRNGZ",
+    "text": "ah, but the url is just a local blob. So it won’t work",
+    "ts": "1476773927.003841",
+    "id": "17de48381",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

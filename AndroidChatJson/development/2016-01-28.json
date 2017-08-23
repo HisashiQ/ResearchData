@@ -1,0 +1,4197 @@
+[
+  {
+    "user": "U0K1ALDQE",
+    "text": "What would be the best way to show a progress spinner when a recyclerview is empty?",
+    "ts": "1453972349.000481",
+    "id": "28de21547",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Without toying with VISIBILITY.GONE, .VISIBLE, ...",
+    "ts": "1453972367.000482",
+    "id": "28de21548",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I was thinking something like\n```\nonBindView….{\n     if(list == null){\n         //show progressdialog\n      } else {\n         //populate ViewHolder\n      }\n}\n\nint getItemCount(){\n     return list != null ? list.size() : 1;\n}\n```",
+    "edited": {
+      "user": "U0K1ALDQE",
+      "ts": "1453972544.000000"
+    },
+    "ts": "1453972508.000483",
+    "id": "28de21549",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "But this solution still feels pretty sloppy to me.",
+    "ts": "1453972579.000487",
+    "id": "28de21550",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "I put a progress spinner behind the recyclerview",
+    "ts": "1453975197.000488",
+    "id": "28de21551",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "and do it your way by setting visibility",
+    "ts": "1453975215.000489",
+    "id": "28de21552",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Progress spinner? As in ProgressBar?",
+    "ts": "1453977076.000490",
+    "id": "28de21553",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I just ran in a horrible wall. I bump in examples for ProgressBar that were made for &lt;API16. Which is well… not the droids I was looking for.",
+    "ts": "1453977149.000491",
+    "id": "28de21554",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Also I can’t get the freakin thing to work",
+    "ts": "1453977282.000492",
+    "id": "28de21555",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "nvm :smile: Fixed it! Thanks <@U054A24ET>",
+    "ts": "1453977499.000493",
+    "id": "28de21556",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "Yea progressbar",
+    "ts": "1453977721.000494",
+    "id": "28de21557",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "I ran into theming issues.. Using progress bar libraries out there fixed it ",
+    "ts": "1453977743.000495",
+    "id": "28de21558",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Short version: Can’t use libraries in my current project..",
+    "ts": "1453977805.000496",
+    "id": "28de21559",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DRFMA87",
+    "text": "You can try setting the progressbar as the recycler footer",
+    "ts": "1453978115.000497",
+    "id": "28de21560",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I saw a solution that uses a different view type in the adapter to handle this. Basically you check if your dataset is empty and return a different view type. Then when you create/bind the views you just return your desired emptyView.",
+    "ts": "1453978271.000498",
+    "id": "28de21561",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "<@U04TK850N>: Isn’t the point of a recyclerview that you only create x views, and recycle them?",
+    "edited": {
+      "user": "U0K1ALDQE",
+      "ts": "1453978923.000000"
+    },
+    "ts": "1453978916.000499",
+    "id": "28de21562",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Well you would only create this viewtype once",
+    "ts": "1453978962.000501",
+    "id": "28de21563",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "So if I for example, have no data. And return getItemCount() 1. Then 1 view would get created, when I check if my dataset is empty. I could return a Progressbar.",
+    "ts": "1453978968.000502",
+    "id": "28de21564",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "I do that for headers, override getItemView type and return different holders for whatever fits your bucket",
+    "ts": "1453978971.000503",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U04U5KS3Z"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "28de21565",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "But when I get data, I’d again return 1 (lets say my data is set with 1 item now). No new view gets created",
+    "ts": "1453978992.000504",
+    "id": "28de21566",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Not for different view types",
+    "ts": "1453979009.000505",
+    "id": "28de21567",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Yes, with headers or footers it would work I guess.",
+    "ts": "1453979010.000506",
+    "id": "28de21568",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "but is the data at the position different?",
+    "ts": "1453979014.000507",
+    "id": "28de21569",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "if so, return a different viewtype",
+    "ts": "1453979020.000508",
+    "id": "28de21570",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "then inflate a different layout",
+    "ts": "1453979025.000509",
+    "id": "28de21571",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "create a different holder",
+    "ts": "1453979030.000510",
+    "id": "28de21572",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "and check whatever you get in onBind",
+    "ts": "1453979036.000511",
+    "id": "28de21573",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "you override getViewType, check if dataset.size == 0 and if so return VIEW_TYPE_EMTPY",
+    "ts": "1453979040.000512",
+    "id": "28de21574",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Ow right, getViewType.",
+    "ts": "1453979072.000513",
+    "id": "28de21575",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "You could argue that it’s not the task of an adapter to handle this, but I think it’s not bad",
+    "ts": "1453979090.000514",
+    "id": "28de21576",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Of course if you have many adapters you might want to abstract that out",
+    "ts": "1453979102.000515",
+    "id": "28de21577",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "What I currently got in place is just an recyclerview and a progress bar on top of it.",
+    "ts": "1453979119.000516",
+    "id": "28de21578",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Or use a different solution like an extended RecyclerView",
+    "ts": "1453979120.000517",
+    "id": "28de21579",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "When I get new data, I check it, disable the progressbar and pass it to the adapter",
+    "ts": "1453979140.000518",
+    "id": "28de21580",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I guess that is a valid solution too",
+    "ts": "1453979198.000519",
+    "id": "28de21581",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I’m going to think about the different solutions. I’m not sure what I like best yet. Thanks <@U04TK850N> &amp; <@U0548MM6B> for the input :simple_smile:",
+    "ts": "1453979266.000520",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U04TK850N"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "28de21582",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0FD0BTFD",
+    "text": "What’s your best pattern to mock Retrofit 2.0 client? I’m thinking about such a mock interceptor: \n<https://github.com/vapoyan/Mock-Response-In-Retrofit-2.0/blob/master/app%2Fsrc%2Fmain%2Fjava%2Fcom%2Fvavian%2Fmockretrofitrequests%2Frest%2Fservice%2FFakeInterceptor.java>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "vapoyan/Mock-Response-In-Retrofit-2.0",
+        "title_link": "https://github.com/vapoyan/Mock-Response-In-Retrofit-2.0/blob/master/app%2Fsrc%2Fmain%2Fjava%2Fcom%2Fvavian%2Fmockretrofitrequests%2Frest%2Fservice%2FFakeInterceptor.java",
+        "text": "Mock-Response-In-Retrofit-2.0 - This simple project will show how one can Mock Responses in Retrofit 2.0 and send fake (JSON) responses when application is in debug mode.",
+        "fallback": "GitHub: vapoyan/Mock-Response-In-Retrofit-2.0",
+        "thumb_url": "https://avatars2.githubusercontent.com/u/9637660?v=3&s=400",
+        "from_url": "https://github.com/vapoyan/Mock-Response-In-Retrofit-2.0/blob/master/app%2Fsrc%2Fmain%2Fjava%2Fcom%2Fvavian%2Fmockretrofitrequests%2Frest%2Fservice%2FFakeInterceptor.java",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1453980946.000521",
+    "id": "28de21583",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "Mockito for unit tests, MockWebServer for integration/functional",
+    "ts": "1453980987.000523",
+    "id": "28de21584",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0FD0BTFD",
+    "text": "I’m with espresso and mainly functional tests",
+    "ts": "1453981054.000524",
+    "id": "28de21585",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0FD0BTFD",
+    "text": "I’ll check MockWebServer, thanks",
+    "ts": "1453981119.000525",
+    "id": "28de21586",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DGFNV7G",
+    "text": "Speaking of which, has anyone encountered a “Test framework quit unexpectedly” issue lately with Espresso testing? Because it’s currently driving me nuts… I can run an identical test, from clean build on a device ten times and it’ll pass ~40% of the time.",
+    "ts": "1453983612.000526",
+    "id": "28de21587",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0DGFNV7G|noln> uploaded a file: <https://androidchat.slack.com/files/noln/F0KKV5KFX/flaky_testing_framework.txt|Flaky testing framework> and commented: This is always the culprit. Totally intermittent...",
+    "file": {
+      "id": "F0KKV5KFX",
+      "created": 1453983674,
+      "timestamp": 1453983674,
+      "name": "Flaky_testing_framework.txt",
+      "title": "Flaky testing framework",
+      "mimetype": "text/plain",
+      "filetype": "text",
+      "pretty_type": "Plain Text",
+      "user": "U0DGFNV7G",
+      "editable": true,
+      "size": 201,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0KKV5KFX/flaky_testing_framework.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0KKV5KFX/download/flaky_testing_framework.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/noln/F0KKV5KFX/flaky_testing_framework.txt",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0KKV5KFX-f0a76b091c",
+      "edit_link": "https://androidchat.slack.com/files/noln/F0KKV5KFX/flaky_testing_framework.txt/edit",
+      "preview": "MonitoringInstrumentation: No JSBridge.\r\n                                                                     java.lang.ClassNotFoundException: android.support.test.espresso.web.bridge.JavaScriptBridge",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>MonitoringInstrumentation: No JSBridge.</pre></div>\n<div><pre>                                                                     java.lang.ClassNotFoundException: android.support.test.espresso.web.bridge.JavaScriptBridge</pre></div>\n</div>\n</div>\n",
+      "lines": 2,
+      "lines_more": 0,
+      "preview_is_truncated": false,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 1,
+      "initial_comment": {
+        "id": "Fc0KKYV28J",
+        "created": 1453983674,
+        "timestamp": 1453983674,
+        "user": "U0DGFNV7G",
+        "is_intro": true,
+        "comment": "This is always the culprit. Totally intermittent...",
+        "channel": ""
+      }
+    },
+    "user": "U0DGFNV7G",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0DGFNV7G|noln>",
+    "bot_id": null,
+    "ts": "1453983675.000527",
+    "id": "28de21588",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "with AS 1.5 and latest stable release of everything I have constant issues with the debug bridge failing to connect now and yes I can run even a regular androidtestcase and it can arbitrarily fail at some point for errors unrelated to my testing or app.",
+    "ts": "1453986572.000528",
+    "id": "28de21589",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DGFNV7G",
+    "text": "I’m not alone then… Good to know, but not, you know, good...",
+    "ts": "1453987998.000529",
+    "id": "28de21590",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "Has anyone used any Linux terminal emulators on Windows? I am stuck on Windows at work and I have been using Babun for a bit over a year as a terminal emulator but I wanted to try something new.",
+    "ts": "1453988465.000530",
+    "id": "28de21591",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I’m having a lot of fun working on a project where I can’t use libraries...",
+    "ts": "1453990109.000531",
+    "id": "28de21592",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0K1ALDQE|simon.vergauwen> uploaded a file: <https://androidchat.slack.com/files/simon.vergauwen/F0KL7S3BJ/pasted_image_at_2016_01_28_03_08_pm.png|Any1 knows of a tutorial/example to achieve this?>",
+    "file": {
+      "id": "F0KL7S3BJ",
+      "created": 1453990128,
+      "timestamp": 1453990128,
+      "name": "Pasted image at 2016_01_28 03_08 PM.png",
+      "title": "Any1 knows of a tutorial/example to achieve this?",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U0K1ALDQE",
+      "editable": false,
+      "size": 27079,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0KL7S3BJ/pasted_image_at_2016_01_28_03_08_pm.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0KL7S3BJ/download/pasted_image_at_2016_01_28_03_08_pm.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F0KL7S3BJ-5576bb53f9/pasted_image_at_2016_01_28_03_08_pm_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F0KL7S3BJ-5576bb53f9/pasted_image_at_2016_01_28_03_08_pm_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F0KL7S3BJ-5576bb53f9/pasted_image_at_2016_01_28_03_08_pm_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 360,
+      "thumb_360_h": 256,
+      "thumb_480": "https://files.slack.com/files-tmb/T04PLNDMP-F0KL7S3BJ-5576bb53f9/pasted_image_at_2016_01_28_03_08_pm_480.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_480_w": 480,
+      "thumb_480_h": 341,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F0KL7S3BJ-5576bb53f9/pasted_image_at_2016_01_28_03_08_pm_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "image_exif_rotation": 1,
+      "original_w": 720,
+      "original_h": 512,
+      "permalink": "https://androidchat.slack.com/files/simon.vergauwen/F0KL7S3BJ/pasted_image_at_2016_01_28_03_08_pm.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0KL7S3BJ-7291b644d6",
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U0K1ALDQE",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0K1ALDQE|simon.vergauwen>",
+    "bot_id": null,
+    "ts": "1453990130.000532",
+    "id": "28de21593",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "you can’t even use open source libraries?",
+    "ts": "1453990168.000533",
+    "id": "28de21594",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "just copy their source?",
+    "ts": "1453990172.000534",
+    "id": "28de21595",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Nope",
+    "ts": "1453990244.000535",
+    "id": "28de21596",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Any lightweight library you know I can look at the code from?",
+    "ts": "1453990259.000536",
+    "id": "28de21597",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I’ve used futuresimple floating action menu before, but it has a lot of fucntionality I don’t need.",
+    "ts": "1453990280.000537",
+    "id": "28de21598",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "idk :confused:",
+    "ts": "1453990327.000538",
+    "id": "28de21599",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "take from futuresimples and substract the unnecessary?",
+    "ts": "1453990339.000539",
+    "id": "28de21600",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Hmm, would this be easier to implement?",
+    "ts": "1453990354.000540",
+    "id": "28de21601",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "<https://material-design.storage.googleapis.com/publish/material_v_4/material_ext_publish/0B8v7jImPsDi-TjBicTdvQjg4M1E/components-buttons-fab-transition_card_02.webm>",
+    "ts": "1453990355.000541",
+    "id": "28de21602",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I’m guessing a popmenu with some animation?",
+    "ts": "1453990365.000542",
+    "id": "28de21603",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Just write your own. It’s an animation. It’s not complicated at all.",
+    "ts": "1453990368.000543",
+    "id": "28de21604",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "what exactly is your argument against using apache 2 licensed libs? I have a feeling you are using the SDK.. apache 2.. using the app compat libs, apache 2, you are using junit hopefully.. apache 2",
+    "ts": "1453990412.000544",
+    "id": "28de21605",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "arbitrarily deciding other apache 2 libs cant be used sounds like someone that doesn’t know what they are talking about is making decisions",
+    "ts": "1453990436.000545",
+    "id": "28de21606",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "also im angry today so not meaning to be a dick",
+    "ts": "1453990446.000546",
+    "id": "28de21607",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Yeah, of course I’m doing testing :smile:",
+    "ts": "1453990447.000547",
+    "id": "28de21608",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "It’s for a SDK / demo app for learning purposes.",
+    "ts": "1453990494.000548",
+    "id": "28de21609",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "So we were asked to go as vanilla as possible.",
+    "ts": "1453990518.000549",
+    "id": "28de21610",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "that sounds like a place you absolutely want to use libraries",
+    "ts": "1453990530.000550",
+    "id": "28de21611",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "^",
+    "ts": "1453990535.000551",
+    "id": "28de21612",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "not saying use a library for everything but certain things should not be reinvented",
+    "ts": "1453990556.000552",
+    "id": "28de21613",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "So far I made everything fairly easy.",
+    "ts": "1453990560.000553",
+    "id": "28de21614",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I agree.",
+    "ts": "1453990564.000554",
+    "id": "28de21615",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I was just wondering, curious if there isn’t an easy solution",
+    "ts": "1453990594.000555",
+    "id": "28de21616",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "appcompat has a fab",
+    "ts": "1453990602.000556",
+    "id": "28de21617",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Because it’s sitting in Googles design guidelines like that.",
+    "ts": "1453990614.000557",
+    "id": "28de21618",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "you can create multiple instances of different sizes and then use view animations to throw them",
+    "ts": "1453990620.000558",
+    "id": "28de21619",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "But yet they don’t provide a way to do it",
+    "ts": "1453990622.000559",
+    "id": "28de21620",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "yeah they also dont provide a way to do a lot of what is in the material guidelines",
+    "ts": "1453990642.000560",
+    "id": "28de21621",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "That’s what my initial idea was <@U055GGAHS>",
+    "ts": "1453990645.000561",
+    "id": "28de21622",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "like try to make some of those tablet/large format device screens using coordinator layout, have fun ripping your hair out",
+    "ts": "1453990677.000562",
+    "id": "28de21623",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Hmm, I never had any problems with that so far.",
+    "ts": "1453990710.000563",
+    "id": "28de21624",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "And I almost always use coordinator layout",
+    "ts": "1453990731.000564",
+    "id": "28de21625",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Guess I’m bound to have some fun with them sooner than later then I guess :smile:",
+    "ts": "1453990769.000565",
+    "id": "28de21626",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I have a feeling I’m going to spend way to much time on these FAB things.",
+    "ts": "1453990865.000566",
+    "id": "28de21627",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<@U053LEHJN>: you stopped using realm, is that correct?",
+    "ts": "1454010948.000567",
+    "id": "28de21628",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U055GGAHS>: I only used it briefly to help on a project last January",
+    "ts": "1454010971.000568",
+    "id": "28de21629",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "what is your current ‘go to'",
+    "ts": "1454010981.000569",
+    "id": "28de21630",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "a work in progress :simple_smile:",
+    "ts": "1454010998.000570",
+    "id": "28de21631",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "but probably MapDB",
+    "ts": "1454011007.000571",
+    "id": "28de21632",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "or just write out to the filesystem",
+    "ts": "1454011020.000572",
+    "id": "28de21633",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "I dunno",
+    "ts": "1454011023.000573",
+    "id": "28de21634",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "MapDB just sucks when you need to use it in an adapter",
+    "ts": "1454011036.000574",
+    "id": "28de21635",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "I’m trying to create an interface that doesn’t care about the actual storage engine",
+    "ts": "1454011048.000575",
+    "id": "28de21636",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "based on treemaps/sets ?",
+    "ts": "1454011065.000576",
+    "id": "28de21637",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "perhaps",
+    "ts": "1454011074.000577",
+    "id": "28de21638",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I want to use realm but you still can’t make final fields and really for what I need I want immutable objects in this case as this data is going to be looked at on a lot of threads and I can’t just allow any of them to update objects whenever so I would have to write wrappers",
+    "ts": "1454011353.000578",
+    "id": "28de21639",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U055GGAHS>: do you prefer specifying models in Java or another format?",
+    "ts": "1454012040.000579",
+    "id": "28de21640",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "you mean like a proto format or something?",
+    "ts": "1454012082.000580",
+    "id": "28de21641",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "yeah, I'm just curious",
+    "ts": "1454012090.000581",
+    "id": "28de21642",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "im not against it as long as it is easy to wire up in gradle",
+    "ts": "1454012093.000582",
+    "id": "28de21643",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "which most are",
+    "ts": "1454012104.000583",
+    "id": "28de21644",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "we used flatbuffers in a recent project for example",
+    "ts": "1454012267.000584",
+    "id": "28de21645",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "yeah, ideally the solution would allow for hand-rolled Java models as well as something generated from another format",
+    "ts": "1454012391.000585",
+    "id": "28de21646",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "right, proto format",
+    "ts": "1454012608.000586",
+    "id": "28de21647",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "that basically permits encompassing anything while allowing customization that may be incompatible with certain proto implementations",
+    "ts": "1454012639.000587",
+    "id": "28de21648",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "yeah",
+    "ts": "1454012652.000588",
+    "id": "28de21649",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U055GGAHS>: have you ever considered backing your models with maps?",
+    "ts": "1454012682.000589",
+    "id": "28de21650",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "not really, I can’t think of any obvious benefits to doing that. Did you have something in mind?",
+    "ts": "1454012788.000590",
+    "id": "28de21651",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U055GGAHS>: well for example, the SoundCloud app does this and moves around PropertySet objects rather than explicit models",
+    "ts": "1454012815.000591",
+    "id": "28de21652",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "and ChangeSet objects when they want to update something",
+    "ts": "1454012823.000592",
+    "id": "28de21653",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "ah yeah so basically nosql documents",
+    "ts": "1454012843.000593",
+    "id": "28de21654",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "right, but it’s a type-safe map at least",
+    "ts": "1454012855.000594",
+    "id": "28de21655",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "how it he map type safe?",
+    "ts": "1454012884.000595",
+    "id": "28de21656",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "if you used Kotlin delegates you could access them like any other POJO but they’d be served by the backing map",
+    "ts": "1454012888.000596",
+    "id": "28de21657",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "because you access through getters/setters?",
+    "ts": "1454012891.000597",
+    "id": "28de21658",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "yeah",
+    "ts": "1454012905.000598",
+    "id": "28de21659",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U055GGAHS>: <http://stevewedig.com/2014/08/28/type-safe-heterogenous-containers-in-java/>",
+    "attachments": [
+      {
+        "service_name": "Steve Wedig&amp;#039;s Notes",
+        "service_url": "http://stevewedig.com",
+        "title": "Type Safe Heterogenous Containers in Java",
+        "title_link": "http://stevewedig.com/2014/08/28/type-safe-heterogenous-containers-in-java/",
+        "author_name": "Steve Wedig",
+        "author_link": "https://stevewedig.com/author/stevewedigwp/",
+        "thumb_url": "https://i1.wp.com/i.imgur.com/tbwO51U.jpg?fit=200%2C150",
+        "text": "As someone who has shifted from Python to Java, this article discusses two of the problems I’ve faced in Java that don’t exist in Python:\n\nJava’s type system cannot represent containers or maps with heterogenous value types. Python dicts can hold anything.\nJava’s methods lack named and optional parameters. These useful language features are provided by Python, Ruby, and C#.\n\nAs a response to these problems, this article presents a small library that makes them a bit less painful. We build on Effective Java’s item #29: consider typesafe heterogeneous containers. The library code is available at <https://github.com/stevewedig/blog> and is published to Maven for easy usage as a dependency. This is the second in a series of Java libraries I’m sharing on this blog (the first was Value Objects in Java &amp; Python).\nArticle Outline\n\nTwo problems with Java\nGet and cast: Heterogenous maps without type safety\nTypeMap: Effective Java’s type safe heterogenous map\nSymbol: A key with a value type parameter\nSymbolMap: An improved type safe heterogenous map\nSymbolBus: Heterogeneous event publishing/subscribing\nUsing SymbolMap for named and optional parameters\nSymbolFormat: Parsing &amp; writing SymbolMaps\nSymbolSchema: Validating the symbols in SymbolMaps\n\n\n1. Two problems with Java\nProblem 1. Java lacks containers and maps with heterogeneous values.\nAs expected, Java objects support fields with heterogeneous types. For example a Person object can have a “name” field of type String and an “age” field of type Integer. Logically the fields form a Map from field names (“name” and “age”) to field values of different types (a String and an Integer). Such a Map would contain heterogeneous value types. Despite this being a perfectly reasonable Map, Java’s type system does not support it.\nIn this contrived example you could (and should) just use a Person object, however in other circumstances heterogeneous maps are more convenient. Falling back to objects also doesn’t work when implementing reusable heterogeneous containers, because the set of keys is open. (Examples include Favorites in Effective Java item #29, and this article’s SymbolMap and SymbolBus.)\nA static type system can never represent all correct programs, so we should expect to bump up against this from time to time. However the lack of support for maps with heterogeneous value types is an inconvenient omission. They are a natural computational construct, and many namespaces contain heterogeneous values, including elemental namespaces such as parameters, scopes, object fields, etc.\nLater in the article we look at ways to outsmart the type system in order to implement type safe heterogeneous containers.\nProblem 2. Java lacks named and optional parameters\nNamed parameters (also called pass-by-name or keyword parameters) is a feature of Python Ruby, and C#, among other languages. When calling a function or method, named parameters give you the ability to specify a parameter’s value by name, instead of by position. This means you don’t have to remember the positional order of parameters, which frequently makes code easier to write, read, and refactor.\nOptional parameters (also called default arguments or parameters with default values) are another language feature. When defining a function you have the ability to provide a default value for a parameter. If a parameter has a default value, then that parameter becomes optional. If a caller doesn’t provide a value for that parameter, the default value will be used.\nNamed and optional parameters have synergy: if a method’s 3rd and 4th parameters have default values, then named parameters enable you to provide a value for the 4th parameter without providing one for the 3rd.\nHere’s what named and optional parameters look like in Python:\n# ======================================\n# defining a class\n# ======================================\n\nclass Article(object):\n\n    # published, author, and tags have default values\n    def __init__(self, url, title, published = Opt.absent, author = None, tags = frozenset()):\n        self.url = url\n        self.title = title\n        self.published = published\n        self.author = author\n        self.tags = tags\n\n# ======================================\n# creating instances\n# ======================================\n\n# providing all params by position\narticle1 = Article(\n    \"<http://url.com>\",\n    \"title\",\n    Opt(1408170918),\n    \"Bob\",\n    frozenset([\"software\"]),\n)\n\n# providing all params by name (order doesn't matter)\narticle2 = Article(\n    tags = frozenset([\"software\"]),\n    author = \"Bob\",\n    published = Opt(1408170918),\n    title = \"title\",\n    url = \"<http://url.com>\",\n)\n\n# param 1 by position, param 2 by name, params 3-5 using default values\narticle3 = Article(\"<http://url.com>\", title = \"title\")\n\n# param 1 &amp; 2 by position, param 4 by name, params 3 &amp; 5 using default values\narticle4 = Article(\"<http://url.com>\", \"title\", author = \"Bob\")\n\n# (Note that Opt can be imported from this library which is described here.)\nLater in the article we look at ways to mimic named and optional parameters in Java.\n2. Get and cast: Heterogeneous maps without type safety\nThe closest Java’s type system can get to map with heterogeneous value types is Map. Unfortunately Map.get() will return values of type Object, so we have to downcast them to their underlying types. This approach is demonstrated in TestGetAndCast. Instead of manually casting we use CastLib.get() which does it for us, with the convenience of generic method type inference.\nThis is nice and simple, but as shown in the test, the downcasts are not statically type safe. This isn’t the end of the world: dynamic typing works fine for Python, Ruby, Clojure, etc. However static types are a primary reason why I use Java, so it would be preferable to preserve this benefit. Fortunately we can outsmart the type system in order to implement type safe heterogeneous maps…\n3. TypeMap: Effective Java’s type safe heterogeneous map\n\n\nJoshua Bloch’s Effective Java should be read by every Java developer. Item #29 in the book is consider typesafe heterogenous containers. The idea is represented by this interface:\ninterface TypeMap {\n\n     void put(Class type, Value value);\n\n     Value get(Class type);\n}\nTypeMap provides a type safe mapping from type objects to heterogeneous values. The signature of put() ensures that values associated with a type object are instances of that type. This knowledge is reflected in the signature of get(): when we lookup by type object, we know that the returned value will be an instance of that type.\nTypeMapClass implements TypeMap which is demonstrated in TestTypeMap. Behind the scenes we wrap a Map",
+        "fallback": "Steve Wedig&amp;#039;s Notes Link: Type Safe Heterogenous Containers in&nbsp;Java",
+        "from_url": "http://stevewedig.com/2014/08/28/type-safe-heterogenous-containers-in-java/",
+        "thumb_width": 260,
+        "thumb_height": 327,
+        "id": 1
+      }
+    ],
+    "ts": "1454012909.000599",
+    "id": "28de21660",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "so I’ve been considering writing a “Retrofit for Models” library",
+    "ts": "1454012945.000601",
+    "id": "28de21661",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "where you write an interface that describes your model and you don’t have to worry about how it’s actually implemented",
+    "ts": "1454012972.000602",
+    "id": "28de21662",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "which is ideal, I think",
+    "ts": "1454012976.000603",
+    "id": "28de21663",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "only downside is the potential for overhead with virtual method calls",
+    "ts": "1454013050.000604",
+    "id": "28de21664",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "but hopefully between the source compilers and ART, that can be optimized out",
+    "ts": "1454013065.000605",
+    "id": "28de21665",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "im not very worried about the performance side if the usability is high",
+    "ts": "1454013145.000606",
+    "id": "28de21666",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "greendao makes a big deal about performance but that is kind of a bullshit metric",
+    "ts": "1454013158.000607",
+    "id": "28de21667",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U055GGAHS>: I have a hard time breaking out of my game engine/C developer mindset :simple_smile:",
+    "ts": "1454013173.000608",
+    "id": "28de21668",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "like ormlite is plenty fast, if your app is trying to manipulate 20000 records a second, your app is wrong",
+    "ts": "1454013178.000609",
+    "id": "28de21669",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "right",
+    "ts": "1454013186.000610",
+    "id": "28de21670",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "so if it does 20000 vs 30000 vs 70000000000 a second but the 20000 has the best api by far, im still using it",
+    "ts": "1454013209.000611",
+    "id": "28de21671",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "that’s what I liked about realm, getting  started is stupid easy plus the built in event bus on the models",
+    "ts": "1454013229.000612",
+    "id": "28de21672",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "yeah, but there’s so much not to like about Realm :stuck_out_tongue:",
+    "ts": "1454013241.000613",
+    "id": "28de21673",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "but its lacking in a few areas that for this data will be really important",
+    "ts": "1454013243.000614",
+    "id": "28de21674",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "though if performance is an issue, I suppose going native would be the approach",
+    "ts": "1454013362.000615",
+    "id": "28de21675",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "since that’s what Realm, et al. do",
+    "ts": "1454013370.000616",
+    "id": "28de21676",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "right",
+    "ts": "1454013391.000617",
+    "id": "28de21677",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "and if you’re generating native code, you could do some awesome stuff like optimizing away cache misses",
+    "ts": "1454013417.000618",
+    "id": "28de21678",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "okay so the gist of this article is that by using unchecked calls you can skip the casting",
+    "ts": "1454013597.000619",
+    "id": "28de21679",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "is that correct?",
+    "ts": "1454013606.000620",
+    "id": "28de21680",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KMHD43H",
+    "subtype": "channel_join",
+    "text": "<@U0KMHD43H|daholman> has joined the channel",
+    "ts": "1454015007.000621",
+    "id": "28de21681",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "great news folks",
+    "ts": "1454019011.000622",
+    "id": "28de21682",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<http://blog.parse.com/announcements/moving-on/>",
+    "attachments": [
+      {
+        "service_name": "Parse Blog",
+        "title": "Moving On",
+        "title_link": "http://blog.parse.com/announcements/moving-on/",
+        "text": "We have a difficult announcement to make. Beginning today we're winding down the Parse service, and Parse will be fully retired after a year-long period ending on January 28, 2017. We're proud that we've been able to help so many of you build great mobile apps, but we need to focus our resources elsewhere. We understand that this won't be an easy transition, and we're working hard to make this process as easy as possible. We are committed to maintaining the backend service during the sunset period, and are providing several tools to help migrate applications to other services. First, we're releasing a database migration tool that lets you migrate data from your Parse app to any MongoDB database. During this migration, the Parse API will continue to operate as usual based on your new database, so this can happen without downtime. Second, we're releasing the open source Parse Server, which lets you run most of the Parse API from your own Node.js server. Once you have your data in your",
+        "fallback": "Parse Blog: Moving On",
+        "thumb_url": "http://parse.com/images/og/default.jpg",
+        "ts": 1453984486,
+        "from_url": "http://blog.parse.com/announcements/moving-on/",
+        "thumb_width": 1200,
+        "thumb_height": 630,
+        "id": 1
+      }
+    ],
+    "ts": "1454019012.000623",
+    "id": "28de21683",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "parse is shutting down",
+    "ts": "1454019017.000625",
+    "id": "28de21684",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "and open sourcing their parse server",
+    "ts": "1454019021.000626",
+    "id": "28de21685",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "so everyone can self host it",
+    "ts": "1454019025.000627",
+    "id": "28de21686",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "it was good for fast building stuff tho the pricing sucked",
+    "ts": "1454019041.000628",
+    "id": "28de21687",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "so now the pricing is out of the question",
+    "ts": "1454019050.000629",
+    "id": "28de21688",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U0548MM6B>: so that's what happens when Facebook buys something",
+    "ts": "1454019094.000630",
+    "id": "28de21689",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "¯\\_(ツ)_/¯",
+    "ts": "1454019099.000631",
+    "id": "28de21690",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "it couldn’t handle their scale",
+    "ts": "1454019107.000632",
+    "id": "28de21691",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "so they had to shut it down",
+    "ts": "1454019111.000633",
+    "id": "28de21692",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "Google bought Firebase in response and they're cranking out new features",
+    "ts": "1454019111.000634",
+    "id": "28de21693",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "oh so google bought firebase?",
+    "ts": "1454019121.000635",
+    "id": "28de21694",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "yeah",
+    "ts": "1454019124.000636",
+    "id": "28de21695",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "that's why Firebase was a thing at I/O",
+    "ts": "1454019129.000637",
+    "id": "28de21696",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "and I was thinking “why are they posting all firebase tutorials\"",
+    "ts": "1454019130.000638",
+    "id": "28de21697",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "nice nice",
+    "ts": "1454019137.000639",
+    "id": "28de21698",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "Hope they don’t shutdown the site too",
+    "ts": "1454019463.000640",
+    "id": "28de21699",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "docs are there",
+    "ts": "1454019466.000641",
+    "id": "28de21700",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KACATSQ",
+    "text": "Parse shutdowns… WTF :confused:",
+    "ts": "1454019802.000642",
+    "id": "28de21701",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KACATSQ",
+    "text": "need to begin looking for alternative for push notifications",
+    "ts": "1454019819.000643",
+    "id": "28de21702",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04VA47NB",
+    "text": "YAY NO MORE PARSE",
+    "ts": "1454019865.000644",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U0DGFNV7G"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "28de21703",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "lol",
+    "ts": "1454019900.000645",
+    "id": "28de21704",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "i know what im gonna be doing in 2016 :confused:",
+    "ts": "1454020041.000646",
+    "id": "28de21705",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "lol",
+    "ts": "1454020042.000647",
+    "id": "28de21706",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "there will still be parse, but you’ll host it yourself if you want it",
+    "ts": "1454020053.000648",
+    "id": "28de21707",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04VA47NB",
+    "text": "/gif no",
+    "ts": "1454020090.000649",
+    "id": "28de21708",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "",
+    "bot_id": "B0GH4RVHU",
+    "attachments": [
+      {
+        "fallback": "<https://s3.amazonaws.com/rapgenius/tumblr_m96gtmOlPk1r6ni3ro1_500.gif>",
+        "image_url": "https://s3.amazonaws.com/rapgenius/tumblr_m96gtmOlPk1r6ni3ro1_500.gif",
+        "image_width": 450,
+        "image_height": 502,
+        "image_bytes": 24765,
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1454020090.000650",
+    "id": "28de21709",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": ":smile:",
+    "ts": "1454020168.000651",
+    "id": "28de21710",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Well they should've had a better business model",
+    "ts": "1454020906.000652",
+    "id": "28de21711",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Why is it stopping though?",
+    "ts": "1454020978.000653",
+    "id": "28de21712",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "no clue ¯\\_(ツ)_/¯",
+    "ts": "1454020995.000654",
+    "id": "28de21713",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0552GXEN",
+    "text": "This seems better though right?",
+    "ts": "1454021039.000655",
+    "id": "28de21714",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "yep pretty much",
+    "ts": "1454021046.000656",
+    "id": "28de21715",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "now we take the parse server and replicate the product :troll:",
+    "ts": "1454021055.000657",
+    "id": "28de21716",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0552GXEN",
+    "text": "A ton of R&amp;D and now I get it all for free",
+    "ts": "1454021056.000658",
+    "id": "28de21717",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "notifications and analytics are dying tho",
+    "ts": "1454021063.000659",
+    "id": "28de21718",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0552GXEN",
+    "text": "Yeah ha",
+    "ts": "1454021068.000660",
+    "id": "28de21719",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "so someone will need to replicate those",
+    "ts": "1454021071.000661",
+    "id": "28de21720",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0552GXEN",
+    "text": "That started with Flurry way back when mobile first got going",
+    "ts": "1454021087.000662",
+    "id": "28de21721",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0552GXEN",
+    "text": "Flurry sucks now",
+    "ts": "1454021092.000663",
+    "id": "28de21722",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "there’s so many analytics solutions",
+    "ts": "1454021154.000664",
+    "id": "28de21723",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Yup",
+    "ts": "1454021165.000665",
+    "id": "28de21724",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I don't like Parse, Firebase and whatever else you have",
+    "ts": "1454021177.000666",
+    "id": "28de21725",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "depends on what you’re doing",
+    "ts": "1454021222.000667",
+    "id": "28de21726",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0552GXEN",
+    "text": "Why is parse shutting down now though?",
+    "ts": "1454021777.000668",
+    "id": "28de21727",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0552GXEN",
+    "text": "Has anyone heard a reason",
+    "ts": "1454021783.000669",
+    "id": "28de21728",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "nope, no clue",
+    "ts": "1454021823.000670",
+    "id": "28de21729",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "seems out of the facebook blue",
+    "edited": {
+      "user": "U0548MM6B",
+      "ts": "1454021833.000000"
+    },
+    "ts": "1454021828.000671",
+    "id": "28de21730",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "don't think it was money making (At least last time i spoke to one of their guys at a meetup)",
+    "ts": "1454021927.000673",
+    "id": "28de21731",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0552GXEN",
+    "text": "interesting, too many people on the free level?",
+    "ts": "1454021945.000674",
+    "id": "28de21732",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0552GXEN",
+    "text": "Thats what is so interesting about all these new startups, just the other day one of my buddies who works for a company in san fran said that their startup was dissolving.",
+    "ts": "1454021988.000675",
+    "id": "28de21733",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<@U0552GXEN> more likely that a lot of free solutions exist so it's too few people on the pay level",
+    "ts": "1454021993.000676",
+    "id": "28de21734",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0552GXEN",
+    "text": "Yeah that makes sense",
+    "ts": "1454021999.000677",
+    "id": "28de21735",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "don’t think it was money, since I think they had paying customers and it cost a damn lot",
+    "ts": "1454022019.000678",
+    "id": "28de21736",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I doubt there free level incurred the bulk of the expense compared to the dev team and such",
+    "ts": "1454022022.000679",
+    "id": "28de21737",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "but the founder also left, didn’t he?",
+    "ts": "1454022044.000680",
+    "id": "28de21738",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<@U0552GXEN> yeah startups come and go like pixie dust. but worst part is most don’t even tell the team “hey we have 1 month runway left and then you’re all screwed\"",
+    "ts": "1454022076.000681",
+    "id": "28de21739",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "yeah",
+    "ts": "1454022121.000682",
+    "id": "28de21740",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "at least there's a year's heads up",
+    "ts": "1454022129.000683",
+    "id": "28de21741",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "I like how buffer is transparent",
+    "ts": "1454022194.000684",
+    "id": "28de21742",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "<http://blog.parse.com/?mkt_tok=3RkMMJWWfF9wsRonv6rPZKXonjHpfsX%2B7eorUKK%2BlMI%2F0ER3fOvrPUfGjI4ARMNiI%2BSLDwEYGJlv6SgFTbHGMblmy7gNUxU%3D>",
+    "attachments": [
+      {
+        "title": "Parse Blog",
+        "title_link": "http://blog.parse.com/?mkt_tok=3RkMMJWWfF9wsRonv6rPZKXonjHpfsX%2B7eorUKK%2BlMI%2F0ER3fOvrPUfGjI4ARMNiI%2BSLDwEYGJlv6SgFTbHGMblmy7gNUxU%3D",
+        "text": "The best place to stay up-to-date with the latest Parse news and events.",
+        "fallback": "Parse Blog",
+        "thumb_url": "http://parse.com/images/og/default.jpg",
+        "from_url": "http://blog.parse.com/?mkt_tok=3RkMMJWWfF9wsRonv6rPZKXonjHpfsX%2B7eorUKK%2BlMI%2F0ER3fOvrPUfGjI4ARMNiI%2BSLDwEYGJlv6SgFTbHGMblmy7gNUxU%3D",
+        "thumb_width": 1200,
+        "thumb_height": 630,
+        "id": 1
+      }
+    ],
+    "ts": "1454026772.000685",
+    "id": "28de21743",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "Parse decided to retire their service January next year :open_mouth:",
+    "ts": "1454026788.000687",
+    "id": "28de21744",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KN0DCPQ",
+    "subtype": "channel_join",
+    "text": "<@U0KN0DCPQ|rcbop> has joined the channel",
+    "ts": "1454026953.000688",
+    "id": "28de21745",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U01U4H",
+    "text": "Shame on facebook",
+    "ts": "1454027883.000689",
+    "id": "28de21746",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U01U4H",
+    "text": "they bought it to shut down….",
+    "ts": "1454027896.000690",
+    "id": "28de21747",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U01U4H",
+    "text": "it does not makes sense",
+    "ts": "1454027903.000691",
+    "id": "28de21748",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "I’ve hated parse forever, always thought it was a terrible idea to ever consider using a `ParseObject`. Extending  your own POJOs with a lib is not a good idea. So I am gleefully watching everyone freak out and enjoying every second of it",
+    "ts": "1454028760.000692",
+    "reactions": [
+      {
+        "name": "partyparrot",
+        "users": [
+          "U053LEHJN",
+          "U055GGAHS",
+          "U0KC373GX",
+          "U053Q5XP2",
+          "U04UCB0RU",
+          "U0DGFNV7G",
+          "U0H8X0T5E"
+        ],
+        "count": 7
+      }
+    ],
+    "id": "28de21749",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "uh, i’d hardly call it “buying it to shut it down\"",
+    "ts": "1454036190.000693",
+    "id": "28de21750",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "they ran it for almost 3 years",
+    "ts": "1454036204.000694",
+    "id": "28de21751",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "What's the appropriate amount of time to own something where people can claim that",
+    "ts": "1454036251.000695",
+    "id": "28de21752",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "Also since we don't know the contract details of the buyout, it's possible they agreed to fund them for a set time.",
+    "ts": "1454036278.000696",
+    "id": "28de21753",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053Q5XP2",
+    "text": "I’d like a real explanation. They claimed they were doubling or tripling in parse traffic every quarter.",
+    "ts": "1454036293.000697",
+    "id": "28de21754",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "Without more information it's not possible to make any claim",
+    "ts": "1454036294.000698",
+    "id": "28de21755",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D7FU083",
+    "text": "it’s possible to make any claim _on the world wide web_ :sparkles:",
+    "ts": "1454036326.000699",
+    "id": "28de21756",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "Also true",
+    "ts": "1454036573.000700",
+    "id": "28de21757",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "double/tripling traffic != doubling/tripling profit",
+    "ts": "1454036648.000701",
+    "id": "28de21758",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KC373GX",
+    "text": "…halp there’s so much logic in my activities",
+    "ts": "1454036946.000702",
+    "id": "28de21759",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CT7JDN3",
+    "text": "I was checking permissions of Uber, It still still asks for permissions at the time of installation.",
+    "ts": "1454043413.000703",
+    "id": "28de21760",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CT7JDN3",
+    "text": "in Marshmallow",
+    "ts": "1454043420.000704",
+    "id": "28de21761",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CT7JDN3",
+    "text": "So they haven’t adopted the new permissions model yet ?",
+    "edited": {
+      "user": "U0CT7JDN3",
+      "ts": "1454043468.000000"
+    },
+    "ts": "1454043452.000705",
+    "id": "28de21762",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "now im hesitating on building an app on firebase",
+    "ts": "1454045912.000707",
+    "id": "28de21763",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "google is also known for shutting down stuff out of the blue",
+    "ts": "1454045930.000708",
+    "id": "28de21764",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I would always hesitate about building stuff that relies heavily on hard-to-replace third party services :smile:",
+    "ts": "1454053054.000709",
+    "id": "28de21765",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "(At least for services like Parse or Firebase)",
+    "ts": "1454053085.000710",
+    "id": "28de21766",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

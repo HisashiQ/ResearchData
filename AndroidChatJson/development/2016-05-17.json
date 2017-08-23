@@ -1,0 +1,2869 @@
+[
+  {
+    "user": "U0HA5ABNW",
+    "text": "hello guys.. Could someone help me",
+    "ts": "1463469982.003759",
+    "id": "17de35440",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HA5ABNW",
+    "text": "with the memory leak",
+    "ts": "1463470021.003760",
+    "id": "17de35441",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HA5ABNW",
+    "text": "with a singleton class that i have created",
+    "ts": "1463470030.003761",
+    "id": "17de35442",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U19DK3ZQ9",
+    "text": "Could you post the code in a gist?",
+    "ts": "1463470470.003762",
+    "id": "17de35443",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HA5ABNW",
+    "text": "```  private static ABUtil util;\nprivate ABUtil(Context context) {\n        this.context = context;\n    }\n    public static ABUtil getInstance(Context context) {\n        if (util == null)\n            util = new ABUtil(context.getApplicationContext());\n\n\n        return util;\n    } ```",
+    "ts": "1463470564.003763",
+    "id": "17de35444",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HA5ABNW",
+    "text": "memory leak is coming in each local variable defined in the ABUtil class..",
+    "ts": "1463471455.003764",
+    "id": "17de35445",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U19DK3ZQ9",
+    "text": "<@U0HA5ABNW>  There are no members in the code you posted. ",
+    "ts": "1463474003.003765",
+    "id": "17de35446",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HA5ABNW",
+    "text": "i got the issue..",
+    "ts": "1463474032.003766",
+    "id": "17de35447",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HA5ABNW",
+    "text": "in this class there is a code to showprogress Dailog.. for which the activity instance is getting passed..",
+    "ts": "1463474061.003767",
+    "id": "17de35448",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HA5ABNW",
+    "text": "```public Activity activity;```",
+    "ts": "1463474088.003768",
+    "id": "17de35449",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HA5ABNW",
+    "text": "```  public void showProgressDialog(Activity act) ```",
+    "ts": "1463474118.003769",
+    "id": "17de35450",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HA5ABNW",
+    "text": "i have changed it to application context and working fine without a leak..",
+    "ts": "1463474149.003770",
+    "id": "17de35451",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U163T1S93",
+    "text": "<@U0HA5ABNW>: The problem is you keep the activity in a static class, so the GC can't claim it even when you no longer show it",
+    "ts": "1463474383.003771",
+    "id": "17de35452",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HA5ABNW",
+    "text": "yeah i got it lately.:stuck_out_tongue:",
+    "ts": "1463474424.003772",
+    "id": "17de35453",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U19DK3ZQ9",
+    "text": "I assume you hold on to the activity somewhere in the code which you didn't post.",
+    "ts": "1463474471.003773",
+    "id": "17de35454",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HA5ABNW",
+    "text": "yeah i removed it now..",
+    "ts": "1463474528.003774",
+    "id": "17de35455",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HA5ABNW",
+    "text": "thank you so much guys..",
+    "ts": "1463474539.003775",
+    "id": "17de35456",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U19EVDRK8",
+    "subtype": "channel_join",
+    "text": "<@U19EVDRK8|postflow> has joined the channel",
+    "ts": "1463481426.003776",
+    "id": "17de35457",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "I’ve just discovered Sonarqube and Sonarlint",
+    "ts": "1463483230.003777",
+    "id": "17de35458",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "does anyone use them?",
+    "ts": "1463483237.003778",
+    "id": "17de35459",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U19F1BKSQ",
+    "subtype": "channel_join",
+    "text": "<@U19F1BKSQ|mikewu> has joined the channel",
+    "ts": "1463484072.003779",
+    "id": "17de35460",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "Isn't it an aggregation of findbugs, pmd and such?",
+    "ts": "1463485220.003780",
+    "id": "17de35461",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I think I have it as a plugin in IntelliJ",
+    "ts": "1463485232.003781",
+    "id": "17de35462",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "I don’t know if it’s that or a separate thing altogether",
+    "ts": "1463485292.003782",
+    "id": "17de35463",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "yeah looks like it is",
+    "ts": "1463485323.003783",
+    "id": "17de35464",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<http://stackoverflow.com/questions/5479019/is-sonar-replacement-for-checkstyle-pmd-findbugs>",
+    "attachments": [
+      {
+        "title": "Is Sonar Replacement for Checkstyle, PMD, FindBugs?",
+        "title_link": "http://stackoverflow.com/questions/5479019/is-sonar-replacement-for-checkstyle-pmd-findbugs",
+        "text": "We are working on a web project from scratch and are looking at the following static code analysis tools.Conventions (Checkstyle)Bad practices (PMD) Potential bugs (FindBugs)The project is ...",
+        "fallback": "Is Sonar Replacement for Checkstyle, PMD, FindBugs?",
+        "thumb_url": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/questions/5479019/is-sonar-replacement-for-checkstyle-pmd-findbugs",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "id": 1
+      }
+    ],
+    "ts": "1463485324.003784",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "17de35465",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "pretty sweet",
+    "edited": {
+      "user": "U09T8SFG8",
+      "ts": "1463485331.000000"
+    },
+    "ts": "1463485327.003786",
+    "id": "17de35466",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "it contains history of all the results",
+    "ts": "1463485339.003788",
+    "id": "17de35467",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "I dont like the idea for sharing my private repo to any third party even for indexing..",
+    "edited": {
+      "user": "U0XCFE6AH",
+      "ts": "1463485433.000000"
+    },
+    "ts": "1463485421.003789",
+    "id": "17de35468",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "^ can you elaborate?",
+    "ts": "1463485496.003791",
+    "id": "17de35469",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "actually as of version 1.4 (now 5.5) it uses it's own native code analysis tools because the other ones were not well maintained. This looks like quite a good tool",
+    "ts": "1463485775.003792",
+    "id": "17de35470",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "it even has a `@Smell` annotation for code smells",
+    "ts": "1463485833.003793",
+    "id": "17de35471",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U19G4NPHV",
+    "subtype": "channel_join",
+    "text": "<@U19G4NPHV|rafaelnicolett> has joined the channel",
+    "ts": "1463491048.003794",
+    "id": "17de35472",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "<@U0XCFE6AH> can you elaborate, pleasE?",
+    "ts": "1463491481.003795",
+    "id": "17de35473",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "<@U0B8R3VV4>:   oh you asked me... well sonar asked for the Github access for your code base which my company basically will not allow to do.",
+    "ts": "1463491574.003796",
+    "id": "17de35474",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "its kind of code protection and security issue",
+    "ts": "1463491602.003797",
+    "id": "17de35475",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "I dont mind with the standalone plugin etc",
+    "ts": "1463491673.003798",
+    "id": "17de35476",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "okok, gotcha",
+    "ts": "1463491986.003799",
+    "id": "17de35477",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Any1 has experience with fastlane?",
+    "ts": "1463495588.003800",
+    "id": "17de35478",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "anything specific I only setup IOS",
+    "ts": "1463496056.003801",
+    "id": "17de35479",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I’m setting up fastlane for Android",
+    "ts": "1463496766.003802",
+    "id": "17de35480",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "But I’m seeing something random",
+    "ts": "1463496773.003803",
+    "id": "17de35481",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "custom lane works",
+    "ts": "1463496778.003804",
+    "id": "17de35482",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "but not in pipeline",
+    "ts": "1463496784.003805",
+    "id": "17de35483",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "`fastlane test`, `fastlane assemble`, `fastlane check`, `fastlane check` all works",
+    "ts": "1463496844.003806",
+    "id": "17de35484",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "when I run in a lane it fails assemble-&gt;test",
+    "ts": "1463496855.003807",
+    "id": "17de35485",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "for some random reason",
+    "ts": "1463496858.003808",
+    "id": "17de35486",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "well no idea sorry",
+    "ts": "1463496969.003809",
+    "id": "17de35487",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "trol i took `test` apart into `uitest` and `test` (unit)",
+    "ts": "1463497107.003810",
+    "id": "17de35488",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "and now it works",
+    "ts": "1463497108.003811",
+    "id": "17de35489",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "(If I don’t run unit tests) :no_mouth::gun:",
+    "ts": "1463497128.003812",
+    "id": "17de35490",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "worth making the stackoverflow post might help other",
+    "ts": "1463497261.003813",
+    "id": "17de35491",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "as i found very less support for fastlane when working for IOS",
+    "ts": "1463497273.003814",
+    "id": "17de35492",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "fastlane for iOS has plenty of resources and support",
+    "ts": "1463497668.003815",
+    "id": "17de35493",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "For android is almost non existent atm",
+    "ts": "1463497673.003816",
+    "id": "17de35494",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "I did 6 month ago at that point its was similar like android today",
+    "edited": {
+      "user": "U0XCFE6AH",
+      "ts": "1463497726.000000"
+    },
+    "ts": "1463497713.003817",
+    "id": "17de35495",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "<http://www.infoworld.com/article/3071173/application-development/gradle-embraces-kotlin-for-android-app-dev.html>",
+    "attachments": [
+      {
+        "service_name": "InfoWorld",
+        "title": "Gradle embraces Kotlin for Android app dev",
+        "title_link": "http://www.infoworld.com/article/3071173/application-development/gradle-embraces-kotlin-for-android-app-dev.html",
+        "text": "Developers can automate builds using the new JVM language",
+        "fallback": "InfoWorld: Gradle embraces Kotlin for Android app dev",
+        "image_url": "http://images.techhive.com/images/article/2015/09/android-apps-gears-productivity-100616482-primary.idge.jpg",
+        "from_url": "http://www.infoworld.com/article/3071173/application-development/gradle-embraces-kotlin-for-android-app-dev.html",
+        "image_width": 375,
+        "image_height": 250,
+        "image_bytes": 74885,
+        "id": 1
+      }
+    ],
+    "ts": "1463499836.003819",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "17de35496",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "anyone got a tl;dr;?",
+    "ts": "1463499853.003821",
+    "id": "17de35497",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "tldr they’re adding kotlin support",
+    "ts": "1463499884.003822",
+    "id": "17de35498",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "it’s shorter than I thought :slightly_smiling_face:",
+    "edited": {
+      "user": "U053PPGDC",
+      "ts": "1463500016.000000"
+    },
+    "ts": "1463500012.003823",
+    "id": "17de35499",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "cool",
+    "ts": "1463500020.003825",
+    "id": "17de35500",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "hate fucking groovy",
+    "ts": "1463500025.003826",
+    "id": "17de35501",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "booo booooo!",
+    "ts": "1463500622.003827",
+    "id": "17de35502",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "there is literally nothing groovy brings to the table :slightly_smiling_face:",
+    "ts": "1463500659.003828",
+    "id": "17de35503",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "well it did bring us a bot overlord",
+    "ts": "1463500714.003829",
+    "id": "17de35504",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U053PPGDC>: As a guy that loves testing",
+    "ts": "1463500716.003830",
+    "id": "17de35505",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Bow your head before groovy’s superior testing libs",
+    "ts": "1463500731.003831",
+    "id": "17de35506",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "just test in C#, best test libs there",
+    "ts": "1463500803.003832",
+    "id": "17de35507",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I really do wonder how Java managed to get subpar testing support even though it is the most enterprise language",
+    "ts": "1463500886.003833",
+    "id": "17de35508",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U09T8SFG8>: you assume that enterprises love to test",
+    "ts": "1463500981.003834",
+    "id": "17de35509",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "/gif hehe",
+    "ts": "1463500985.003835",
+    "id": "17de35510",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "",
+    "bot_id": "B0GH4RVHU",
+    "attachments": [
+      {
+        "fallback": "<http://49.media.tumblr.com/ec83e216becbafe3f05e9ec304ab48e9/tumblr_miy68pB9Pi1qiaxzfo1_400.gif>",
+        "image_url": "http://49.media.tumblr.com/ec83e216becbafe3f05e9ec304ab48e9/tumblr_miy68pB9Pi1qiaxzfo1_400.gif",
+        "image_width": 397,
+        "image_height": 319,
+        "image_bytes": 1775872,
+        "is_animated": true,
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1463500986.003836",
+    "id": "17de35511",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "it's more like that's where domain driven design started",
+    "ts": "1463501006.003837",
+    "id": "17de35512",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "and all the niceties",
+    "ts": "1463501012.003838",
+    "id": "17de35513",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "and clean architectures",
+    "ts": "1463501022.003839",
+    "id": "17de35514",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "\"write once, test never\" - i believe that was the java motto",
+    "ts": "1463501025.003840",
+    "id": "17de35515",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "C# came later and it still has better testing frameworks",
+    "ts": "1463501033.003841",
+    "id": "17de35516",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "they love AbstractFactoryAdapterFactoryImpls",
+    "ts": "1463501041.003842",
+    "id": "17de35517",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "But who will Factory the Factories?",
+    "ts": "1463501057.003843",
+    "id": "17de35518",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "AbstractFactoryFactoryFactory",
+    "edited": {
+      "user": "U053PPGDC",
+      "ts": "1463501077.000000"
+    },
+    "ts": "1463501065.003844",
+    "id": "17de35519",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "We should make an EnterpriseMvpSampleApp like the Enterprise FizzBuzz",
+    "ts": "1463501086.003846",
+    "id": "17de35520",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "make /r/androiddev go crazy",
+    "ts": "1463501097.003847",
+    "id": "17de35521",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N7D6F50",
+    "text": "For the lazy... <https://www.reddit.com/r/androiddev/|https://www.reddit.com/r/androiddev/>",
+    "bot_id": "B0N7DNUT0",
+    "attachments": [
+      {
+        "service_name": "reddit",
+        "title": "Developing Android Apps • /r/androiddev",
+        "title_link": "https://www.reddit.com/r/androiddev/",
+        "text": "News for Android developers with the who, what, where when and how of the Android community. Probably mostly the how. Here, you'll find: - News...",
+        "fallback": "reddit: Developing Android Apps • /r/androiddev",
+        "thumb_url": "https://www.redditstatic.com/icon.png",
+        "from_url": "https://www.reddit.com/r/androiddev/",
+        "thumb_width": 256,
+        "thumb_height": 256,
+        "id": 1
+      }
+    ],
+    "ts": "1463501097.003848",
+    "id": "17de35522",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "EnterpriseQualityCoding/FizzBuzzEnterpriseEdition",
+        "title_link": "https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition",
+        "text": "FizzBuzzEnterpriseEdition - FizzBuzz Enterprise Edition is a no-nonsense implementation of FizzBuzz made by serious businessmen for serious business purposes.",
+        "fallback": "GitHub: EnterpriseQualityCoding/FizzBuzzEnterpriseEdition",
+        "thumb_url": "https://avatars3.githubusercontent.com/u/5183851?v=3&s=400",
+        "from_url": "https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition",
+        "thumb_width": 420,
+        "thumb_height": 420,
+        "id": 1
+      }
+    ],
+    "ts": "1463501120.003850",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "17de35523",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "``` public class AbstractAdapterFactoryUsedDuringSingleContextWhileServerIsUnstableImpl implements AbstractAdapterFactoryUsedDuringSingleContextWhileServerIsUnstable { }```",
+    "ts": "1463501122.003852",
+    "id": "17de35524",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "just do a PR onto iosched refactoring everything",
+    "ts": "1463501156.003853",
+    "id": "17de35525",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "EnterpriseIosched",
+    "ts": "1463501170.003854",
+    "id": "17de35526",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "If Android were designed by the enterprise, the phone would only be a container for tomcat",
+    "ts": "1463501223.003855",
+    "id": "17de35527",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "apps would be servlets",
+    "ts": "1463501230.003856",
+    "id": "17de35528",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "still better than fragments",
+    "ts": "1463501241.003857",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U0N4RS70W"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "17de35529",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": ":joy:",
+    "ts": "1463501392.003858",
+    "id": "17de35530",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Ok so i’m sensing a trend here",
+    "ts": "1463501426.003859",
+    "id": "17de35531",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "You guys hate everything I like",
+    "ts": "1463501436.003860",
+    "id": "17de35532",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "or you like everything we hate :dizzy_face:",
+    "ts": "1463501458.003861",
+    "id": "17de35533",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Well at least we can all agree on one thing…",
+    "ts": "1463501480.003862",
+    "id": "17de35534",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "F*ck OEMs",
+    "ts": "1463501485.003863",
+    "id": "17de35535",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "<@U08GFT5V5> you are a hipster",
+    "ts": "1463501490.003864",
+    "id": "17de35536",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "we already established that",
+    "ts": "1463501497.003865",
+    "id": "17de35537",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I really like coding for Samsung devices",
+    "ts": "1463501509.003866",
+    "id": "17de35538",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "when they behave as according to android spec?",
+    "ts": "1463501532.003867",
+    "id": "17de35539",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U09T8SFG8>: say that with a straight face",
+    "ts": "1463501539.003868",
+    "id": "17de35540",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "i dare you",
+    "ts": "1463501542.003869",
+    "id": "17de35541",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "the for loops and if statements tend to be compatible",
+    "ts": "1463501545.003870",
+    "id": "17de35542",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I feel that it is a challenge and it advances my career in the right direction\n\nThe direction of suicide",
+    "ts": "1463501586.003871",
+    "id": "17de35543",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "we all end up there",
+    "ts": "1463501608.003872",
+    "id": "17de35544",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "Samsung is next blackberry just saying...",
+    "ts": "1463501638.003873",
+    "id": "17de35545",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U0XCFE6AH> wrong",
+    "ts": "1463501649.003874",
+    "id": "17de35546",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "btw guys you should try messing around with casting objects in S3 5.0",
+    "ts": "1463501650.003875",
+    "id": "17de35547",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "it’s the new sony",
+    "ts": "1463501652.003876",
+    "id": "17de35548",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "they randomly explode lol",
+    "ts": "1463501659.003877",
+    "id": "17de35549",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "just imagine how Android made all the mobile company out of business... Nokia, Sony, Blackberry... whoes next",
+    "ts": "1463501732.003878",
+    "id": "17de35550",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "ahem…apple….ahem",
+    "ts": "1463501800.003879",
+    "id": "17de35551",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "if apple hadn’t come around we’d still be rocking keyboards",
+    "ts": "1463501814.003880",
+    "id": "17de35552",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Keyboards were awesome",
+    "ts": "1463501900.003881",
+    "id": "17de35553",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "not this soft key stuff",
+    "ts": "1463501906.003882",
+    "id": "17de35554",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "i miss hardware keyboards",
+    "ts": "1463501936.003883",
+    "id": "17de35555",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "well I dont miss them at all...",
+    "ts": "1463502013.003884",
+    "id": "17de35556",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "as my first mobile was touch screen",
+    "ts": "1463502023.003885",
+    "id": "17de35557",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U0XCFE6AH> all the nice clickyness of your laptop",
+    "ts": "1463502075.003886",
+    "id": "17de35558",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "portability of your phone",
+    "ts": "1463502081.003887",
+    "id": "17de35559",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "I love the swipe keyboard",
+    "ts": "1463502103.003888",
+    "id": "17de35560",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "i could type and there was cool shortcuts",
+    "ts": "1463502119.003889",
+    "id": "17de35561",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "and nothing feels better than a good hardware interrupt",
+    "ts": "1463502129.003890",
+    "id": "17de35562",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04VA47NB",
+    "text": "Hey has anyone updated their support library to 23.2.1? And have used the AppCompatDrawableManager instead of TintManager?",
+    "ts": "1463505241.003891",
+    "id": "17de35563",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Z65RHPC",
+    "text": "What is the best library for encrypting the data on Android",
+    "ts": "1463508891.003892",
+    "id": "17de35564",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "out of this chat",
+    "ts": "1463509026.003893",
+    "id": "17de35565",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "take a look at <http://stackoverflow.com/questions/36988429/good-approach-of-using-isadded>, please",
+    "attachments": [
+      {
+        "title": "good approach of using isAdded()",
+        "title_link": "http://stackoverflow.com/questions/36988429/good-approach-of-using-isadded",
+        "text": "I use one Activity with bunch of fragments, inside fragments sometimes I’m usinggetResources()and getting Fragment not attached to Activity at",
+        "fallback": "good approach of using isAdded()",
+        "thumb_url": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/questions/36988429/good-approach-of-using-isadded",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "id": 1
+      }
+    ],
+    "ts": "1463510218.003894",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "17de35566",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "sounds like you are posting back changes constantly. You should be halting the callbacks when the fragment is removed then you dont need to check",
+    "ts": "1463510323.003896",
+    "id": "17de35567",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "so onPause, cancel your callbacks to the UI then you never need to perform the check because there’s no way it is not already added",
+    "ts": "1463510351.003897",
+    "id": "17de35568",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "yeah, I do that",
+    "ts": "1463510506.003898",
+    "id": "17de35569",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "but maybe problem is that I use my reference for a API call twice ?",
+    "ts": "1463510535.003899",
+    "id": "17de35570",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "if you start making calls in onResume and stop them in onPause, you can not possibly callback after removal",
+    "edited": {
+      "user": "U055GGAHS",
+      "ts": "1463510620.000000"
+    },
+    "ts": "1463510564.003900",
+    "id": "17de35571",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "so you are failing to remove a call",
+    "ts": "1463510571.003901",
+    "id": "17de35572",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "I have ```private APIRequest zipSearchRequest```",
+    "ts": "1463510577.003902",
+    "id": "17de35573",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "oh",
+    "ts": "1463510607.003903",
+    "id": "17de35574",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "first time I am using ```            zipSearchRequest = new GetAccountsByCityCodeRequest(mApplication, cityState,\n```",
+    "ts": "1463510625.003905",
+    "id": "17de35575",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "second time ```            zipSearchRequest = new PlacementGetByZipRequest(mApplication, searchTerm,\n```",
+    "ts": "1463510636.003906",
+    "id": "17de35576",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "there you go",
+    "ts": "1463510647.003907",
+    "id": "17de35577",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "```   @Override\n    public void onPause() {\n        super.onPause();\n\n        if (zipSearchRequest != null &amp;&amp; !zipSearchRequest.isCanceled()) {\n            zipSearchRequest.cancel();\n        }\n}\n```",
+    "ts": "1463510661.003908",
+    "id": "17de35578",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "because it is the new object, right ?",
+    "ts": "1463510672.003909",
+    "id": "17de35579",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "yes",
+    "ts": "1463510677.003910",
+    "id": "17de35580",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "wow, thank you very much :slightly_smiling_face:",
+    "ts": "1463510695.003911",
+    "id": "17de35581",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "you know I knew this stuff and understood, but you helped me to get an answer",
+    "ts": "1463510723.003912",
+    "id": "17de35582",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U19L5CA58",
+    "subtype": "channel_join",
+    "text": "<@U19L5CA58|mfbridges> has joined the channel",
+    "ts": "1463512734.003913",
+    "id": "17de35583",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "<@U055GGAHS>: I am just thinking about posted above example",
+    "ts": "1463513937.003914",
+    "id": "17de35584",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "I create second time zipSearchRequest, in generally I recreate this, so it should be the same object",
+    "ts": "1463513983.003915",
+    "id": "17de35585",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U19KU72AY",
+    "subtype": "channel_join",
+    "text": "<@U19KU72AY|devyellow> has joined the channel",
+    "ts": "1463514740.003916",
+    "id": "17de35586",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U19PGP6KU",
+    "subtype": "channel_join",
+    "text": "<@U19PGP6KU|wesleyhuyghe> has joined the channel",
+    "ts": "1463547960.003917",
+    "id": "17de35587",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11P75HMW",
+    "text": "I have a scenerio where I need to disable view pager swipe and show tutorial of the app. Before disabling the view pager, I used setUserVisibleHint() to know when the fragment is fully visible to user (bcos I need to show the tutorial on first item of recycler view, If I dont put in this method, only partial view (on the first element) is highlighted).Now a requirement came in to disable swipe. But after that, setUserVisibleHint() is called too early before the fragment is completely visible to user. I am struggling to fix this. Can someone help me out with this?",
+    "ts": "1463552446.003918",
+    "id": "17de35588",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

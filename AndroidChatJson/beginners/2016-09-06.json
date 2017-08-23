@@ -1,0 +1,1757 @@
+[
+  {
+    "user": "U28G809F1",
+    "text": "<@U28G809F1|shriharsh> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1473147363.000085",
+    "id": "06be7944",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1G221P2S",
+    "text": "Hey guys, needed some help with gcm. How do you work with multiple sources of push notifications in an app?",
+    "ts": "1473152422.000086",
+    "id": "06be7945",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1G221P2S",
+    "text": "as in one could be an implementation to allow the server to push notifications to the device and another could be a gcm receiver for an analytics tool, like Mixpanel in our case",
+    "ts": "1473152498.000087",
+    "id": "06be7946",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0NQ6CY8G",
+    "text": "<@U054A24ET> if the facebook app isn’t installed on the phone it fails",
+    "ts": "1473155100.000088",
+    "id": "06be7947",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "<@U0NQ6CY8G> \nFrom <https://developers.facebook.com/docs/sharing/android#triggering>\n`Share Dialog\n\nThe Share dialog switches to the native Facebook for Android app, then returns control to your app after a post is published. If the Facebook app is not installed it will automatically fallback to the web-based dialog.`",
+    "attachments": [
+      {
+        "service_name": "Facebook Developers",
+        "title": "Android - Sharing - Documentation - Facebook for Developers",
+        "title_link": "https://developers.facebook.com/docs/sharing/android#triggering",
+        "text": "Sharing. Guide assumes a developer will use the solution, already started designing their product, or is already implementing it.",
+        "fallback": "Facebook Developers: Android - Sharing - Documentation - Facebook for Developers",
+        "thumb_url": "https://static.xx.fbcdn.net/rsrc.php/v3/yb/r/nrpLiSINthw.png",
+        "from_url": "https://developers.facebook.com/docs/sharing/android#triggering",
+        "thumb_width": 1200,
+        "thumb_height": 630,
+        "service_icon": "https://static.xx.fbcdn.net/rsrc.php/yV/r/hzMapiNYYpW.ico",
+        "id": 1
+      }
+    ],
+    "ts": "1473157870.000089",
+    "id": "06be7948",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0NQ6CY8G",
+    "text": "<@U054A24ET>, I’m also using the ShareDialog, but if I uninstall the facebook app, the onError method here is called. Here’s my code onCreate\n```\nmCallbackManager = CallbackManager.Factory.create()\nshareDialog = ShareDialog(this)\nshareDialog?.registerCallback(mCallbackManager, object: FacebookCallback&lt;Sharer.Result&gt; {\n            override fun onCancel() {\n                val view = view ?: return\n                Snackbar.make(view, \"Sharing canceled\", Snackbar.LENGTH_SHORT).show()\n            }\n\n            override fun onError(error: FacebookException?) {\n                val view = view ?: return\n                Snackbar.make(view, \"Error sharing photo\", Snackbar.LENGTH_SHORT).show()\n            }\n\n            override fun onSuccess(result: Sharer.Result?) {\n                clearBackStack()\n            }\n        })\n```\nTo share to facebook\n```\nprivate fun shareToFb() {\n        val bmp = BitmapFactory.decodeResource(resources, R.drawable.mixed)\n        val imageToShare = SharePhoto.Builder().setBitmap(bmp).setCaption(binding.shareText.text.toString()).build()\n        val shareContent = SharePhotoContent.Builder().addPhoto(imageToShare).build()\n        shareDialog?.show(shareContent)\n    }\n```\nPlease what could be wrong?",
+    "ts": "1473158774.000091",
+    "id": "06be7949",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "That's iOS code right? This is an Android channel ",
+    "ts": "1473159430.000092",
+    "reactions": [
+      {
+        "name": "hankey",
+        "users": [
+          "U061HDV96"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "06be7950",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "<@U0NQ6CY8G> sorry can't help u ",
+    "ts": "1473159474.000093",
+    "id": "06be7951",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055JANKU",
+    "text": "no it’s kotlin :stuck_out_tongue:",
+    "ts": "1473159602.000094",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U061HDV96",
+          "U0NQ6CY8G",
+          "U08GFT5V5",
+          "U1HM4MPLJ",
+          "U0G47NBQV"
+        ],
+        "count": 5
+      }
+    ],
+    "id": "06be7952",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "oh i see, i still can't help you :smile:",
+    "ts": "1473171203.000095",
+    "id": "06be7953",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": "I’m having trouble finding a good way to send a POST request to a server from my app",
+    "ts": "1473179929.000096",
+    "id": "06be7954",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": "the Apache HttpClient library has been deprecated and the native Java tutorials all reference some function writeStream() without explaining what it is",
+    "ts": "1473179962.000097",
+    "id": "06be7955",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": "Has anyone used POST in their code before?",
+    "ts": "1473179974.000098",
+    "id": "06be7956",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "<@U26LDJJBU> Retrofit is p. much the default for most people",
+    "ts": "1473180063.000099",
+    "id": "06be7957",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": "Ah I see",
+    "ts": "1473180093.000100",
+    "id": "06be7958",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "if you're using RESTFul services, use Retrofit. General http operations you can use Okhttp",
+    "ts": "1473180099.000101",
+    "id": "06be7959",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": "All I need is a single post call. Seems crazy to use a whole library for that",
+    "ts": "1473180106.000102",
+    "id": "06be7960",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": "How do I install it",
+    "ts": "1473180109.000103",
+    "id": "06be7961",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "<https://square.github.io/retrofit/>",
+    "attachments": [
+      {
+        "title": "Retrofit",
+        "title_link": "https://square.github.io/retrofit/",
+        "text": "A type-safe HTTP client for Android and Java",
+        "fallback": "Retrofit",
+        "from_url": "https://square.github.io/retrofit/",
+        "service_name": "square.github.io",
+        "id": 1
+      }
+    ],
+    "ts": "1473180145.000104",
+    "id": "06be7962",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "<https://square.github.io/okhttp/>",
+    "attachments": [
+      {
+        "title": "OkHttp",
+        "title_link": "https://square.github.io/okhttp/",
+        "text": "An HTTP &amp; HTTP/2 client for Android and Java applications",
+        "fallback": "OkHttp",
+        "from_url": "https://square.github.io/okhttp/",
+        "service_name": "square.github.io",
+        "id": 1
+      }
+    ],
+    "ts": "1473180156.000106",
+    "id": "06be7963",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": "Ive never installed a library before",
+    "ts": "1473180157.000108",
+    "id": "06be7964",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": "What do I do with it lol",
+    "ts": "1473180163.000109",
+    "id": "06be7965",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "are you using gradle?",
+    "ts": "1473180163.000110",
+    "id": "06be7966",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": "I think?",
+    "ts": "1473180166.000111",
+    "id": "06be7967",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": "Im using Android Studio",
+    "ts": "1473180169.000112",
+    "id": "06be7968",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": "So I guess I have to right?",
+    "ts": "1473180173.000113",
+    "id": "06be7969",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "yeah if you're just starting up from the android documentation you'll be using gradle",
+    "ts": "1473180199.000114",
+    "id": "06be7970",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "if you have build.gradle files in your project",
+    "ts": "1473180206.000115",
+    "id": "06be7971",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "^",
+    "ts": "1473180212.000116",
+    "id": "06be7972",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U26LDJJBU|cj> uploaded a file: <https://androidchat.slack.com/files/cj/F28NADQ82/screen_shot_2016-09-06_at_12.43.35_pm.png|Screen Shot 2016-09-06 at 12.43.35 PM.png>",
+    "file": {
+      "id": "F28NADQ82",
+      "created": 1473180230,
+      "timestamp": 1473180230,
+      "name": "Screen Shot 2016-09-06 at 12.43.35 PM.png",
+      "title": "Screen Shot 2016-09-06 at 12.43.35 PM.png",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U26LDJJBU",
+      "editable": false,
+      "size": 24208,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F28NADQ82/screen_shot_2016-09-06_at_12.43.35_pm.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F28NADQ82/download/screen_shot_2016-09-06_at_12.43.35_pm.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F28NADQ82-3d9761b85f/screen_shot_2016-09-06_at_12.43.35_pm_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F28NADQ82-3d9761b85f/screen_shot_2016-09-06_at_12.43.35_pm_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F28NADQ82-3d9761b85f/screen_shot_2016-09-06_at_12.43.35_pm_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 360,
+      "thumb_360_h": 149,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F28NADQ82-3d9761b85f/screen_shot_2016-09-06_at_12.43.35_pm_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "image_exif_rotation": 1,
+      "original_w": 472,
+      "original_h": 196,
+      "permalink": "https://androidchat.slack.com/files/cj/F28NADQ82/screen_shot_2016-09-06_at_12.43.35_pm.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F28NADQ82-965143c3e4",
+      "channels": [
+        "C055MSDCM"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U26LDJJBU",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U26LDJJBU|cj>",
+    "bot_id": null,
+    "ts": "1473180231.000117",
+    "id": "06be7973",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": "looks like it :slightly_smiling_face:",
+    "ts": "1473180233.000118",
+    "id": "06be7974",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": "Now what",
+    "ts": "1473180245.000119",
+    "id": "06be7975",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "<@U26LDJJBU> This is a good place to start",
+    "ts": "1473180247.000120",
+    "id": "06be7976",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "<https://futurestud.io/blog/retrofit-getting-started-and-android-client>",
+    "attachments": [
+      {
+        "title": "Retrofit — Getting Started and Create an Android Client",
+        "title_link": "https://futurestud.io/blog/retrofit-getting-started-and-android-client",
+        "text": "Future Studio provides on-demand learning &amp; wants you to become a better Android (Retrofit, Gson, Glide) and Node.js/hapi.js developer!",
+        "fallback": "Retrofit — Getting Started and Create an Android Client",
+        "from_url": "https://futurestud.io/blog/retrofit-getting-started-and-android-client",
+        "service_icon": "https://futurestud.io/images/favicon.ico",
+        "service_name": "futurestud.io",
+        "id": 1
+      }
+    ],
+    "ts": "1473180249.000121",
+    "id": "06be7977",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Examples in there are from Retrofit 1.9 and Retrofit 2+",
+    "ts": "1473180275.000123",
+    "id": "06be7978",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "So just follow the Retrofit 2+ parts :slightly_smiling_face:",
+    "ts": "1473180285.000124",
+    "id": "06be7979",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": "If I add it as a dependency will Android Studio install it for me?",
+    "ts": "1473180290.000125",
+    "id": "06be7980",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Yes after you sync gradle",
+    "ts": "1473180307.000126",
+    "id": "06be7981",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": "Where is `pom.xml`?",
+    "ts": "1473180342.000127",
+    "id": "06be7982",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Ignore that",
+    "ts": "1473180357.000128",
+    "id": "06be7983",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": "oh so only the gradel object?",
+    "ts": "1473180369.000129",
+    "id": "06be7984",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Just build.gradle is what you're interested in",
+    "ts": "1473180372.000130",
+    "id": "06be7985",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Yes",
+    "ts": "1473180375.000131",
+    "id": "06be7986",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": "There’s two of them",
+    "ts": "1473180393.000132",
+    "id": "06be7987",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": "Module: app and Project: AppName",
+    "ts": "1473180412.000133",
+    "id": "06be7988",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "One of the is retrofit 1.9 and the other is retrofit 2",
+    "ts": "1473180414.000134",
+    "id": "06be7989",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Ah",
+    "ts": "1473180416.000135",
+    "id": "06be7990",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Module: app",
+    "ts": "1473180425.000136",
+    "id": "06be7991",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": "kk",
+    "ts": "1473180427.000137",
+    "id": "06be7992",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": "Looks like it’s installing. Thanks!!",
+    "ts": "1473180462.000138",
+    "id": "06be7993",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": ":slightly_smiling_face:",
+    "ts": "1473180467.000139",
+    "id": "06be7994",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Make sure to go through some of the tutorial so you know how it works properly",
+    "ts": "1473180483.000140",
+    "id": "06be7995",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "If you have any GET calls to the API, I'd recommend using Retrofit for those as wel",
+    "ts": "1473180503.000141",
+    "id": "06be7996",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": "These tutorials are a bit confusing",
+    "ts": "1473180649.000142",
+    "id": "06be7997",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": "Im super used to XMLHttpRequest and all of this seems like a lot of boilerplate",
+    "ts": "1473180665.000143",
+    "id": "06be7998",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": "I have a URL with some arguments in it as well as a JSON payload that serves as the authentication token",
+    "ts": "1473180688.000144",
+    "id": "06be7999",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": "What’s the simplest way to open a connection, post the payload, and close the connection?",
+    "ts": "1473180704.000145",
+    "id": "06be8000",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": "It doesn’t even need to be async",
+    "ts": "1473180711.000146",
+    "id": "06be8001",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "That's what something like Retrofit aims to simplify",
+    "ts": "1473180740.000147",
+    "id": "06be8002",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "(for REST calls)",
+    "ts": "1473180746.000148",
+    "id": "06be8003",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": "Im just having trouble finding the right code snippet to work off of",
+    "ts": "1473180806.000149",
+    "id": "06be8004",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": "Oh I just realized this is by SquareUp! I have an onsite interview there coming up :smile:",
+    "ts": "1473180858.000150",
+    "id": "06be8005",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U26LDJJBU> then you better know how to use Retrofit :wink:",
+    "ts": "1473181146.000151",
+    "id": "06be8006",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": "It’s not for Android development. I’m a frontend engineer. I just decided I wanted to write an app for fun",
+    "ts": "1473181175.000152",
+    "id": "06be8007",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": ":wink:",
+    "ts": "1473181179.000153",
+    "id": "06be8008",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Ah, it would still be a plus if you talked about Retrofit briefly",
+    "ts": "1473181222.000154",
+    "id": "06be8009",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "You can be sure almost any app uses Retrofit these days",
+    "ts": "1473181231.000155",
+    "id": "06be8010",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": "Very neat! I might if the someone I talk to is an android dev but usually only frontend engineers interview frontend candidates",
+    "ts": "1473181374.000156",
+    "id": "06be8011",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": "<@U061HDV96> Ran into some issues. I’m getting an Error 401 Unauthorized",
+    "ts": "1473182581.000157",
+    "id": "06be8012",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U26LDJJBU> that probably is because of the API you're using. Retrofit logs everything in logcat so you can see it. You should check with your API.",
+    "ts": "1473182643.000158",
+    "id": "06be8013",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": "I couldnt figure out Retrofit so I switched to OkHttp :stuck_out_tongue:",
+    "ts": "1473182666.000159",
+    "id": "06be8014",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": "And it’s not exactly an “API\"",
+    "ts": "1473182693.000160",
+    "id": "06be8015",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": "I’m trying to initiate an action in Google Voice",
+    "ts": "1473182707.000161",
+    "id": "06be8016",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": "Basically reverse engineering what I found in the browser implementation",
+    "ts": "1473182727.000162",
+    "id": "06be8017",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U26LDJJBU|cj> uploaded a file: <https://androidchat.slack.com/files/cj/F28NNNWFR/screen_shot_2016-09-06_at_1.25.41_pm.png|Screen Shot 2016-09-06 at 1.25.41 PM.png>",
+    "file": {
+      "id": "F28NNNWFR",
+      "created": 1473182836,
+      "timestamp": 1473182836,
+      "name": "Screen Shot 2016-09-06 at 1.25.41 PM.png",
+      "title": "Screen Shot 2016-09-06 at 1.25.41 PM.png",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U26LDJJBU",
+      "editable": false,
+      "size": 276258,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F28NNNWFR/screen_shot_2016-09-06_at_1.25.41_pm.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F28NNNWFR/download/screen_shot_2016-09-06_at_1.25.41_pm.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F28NNNWFR-846d840f44/screen_shot_2016-09-06_at_1.25.41_pm_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F28NNNWFR-846d840f44/screen_shot_2016-09-06_at_1.25.41_pm_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F28NNNWFR-846d840f44/screen_shot_2016-09-06_at_1.25.41_pm_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 360,
+      "thumb_360_h": 221,
+      "thumb_480": "https://files.slack.com/files-tmb/T04PLNDMP-F28NNNWFR-846d840f44/screen_shot_2016-09-06_at_1.25.41_pm_480.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_480_w": 480,
+      "thumb_480_h": 295,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F28NNNWFR-846d840f44/screen_shot_2016-09-06_at_1.25.41_pm_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720": "https://files.slack.com/files-tmb/T04PLNDMP-F28NNNWFR-846d840f44/screen_shot_2016-09-06_at_1.25.41_pm_720.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720_w": 720,
+      "thumb_720_h": 442,
+      "thumb_960": "https://files.slack.com/files-tmb/T04PLNDMP-F28NNNWFR-846d840f44/screen_shot_2016-09-06_at_1.25.41_pm_960.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_960_w": 960,
+      "thumb_960_h": 589,
+      "thumb_1024": "https://files.slack.com/files-tmb/T04PLNDMP-F28NNNWFR-846d840f44/screen_shot_2016-09-06_at_1.25.41_pm_1024.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_1024_w": 1024,
+      "thumb_1024_h": 629,
+      "image_exif_rotation": 1,
+      "original_w": 1854,
+      "original_h": 1138,
+      "permalink": "https://androidchat.slack.com/files/cj/F28NNNWFR/screen_shot_2016-09-06_at_1.25.41_pm.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F28NNNWFR-d483b8120f",
+      "channels": [
+        "C055MSDCM"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U26LDJJBU",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U26LDJJBU|cj>",
+    "bot_id": null,
+    "ts": "1473182840.000163",
+    "id": "06be8018",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": "I thought it would be as simple as sending a POST request to the properly formatted URL and throwing the “gvx” authentication token in the JSON payload",
+    "ts": "1473182867.000164",
+    "id": "06be8019",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U26LDJJBU",
+    "text": "Based on the network data in Chrome",
+    "ts": "1473182876.000165",
+    "id": "06be8020",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "they probably have some authentication headers with the request, not sure what that warning is \"provisional headers are shown\"",
+    "ts": "1473183708.000166",
+    "id": "06be8021",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "but then again i only know enough about networking to make my apps work :stuck_out_tongue:",
+    "ts": "1473183743.000167",
+    "id": "06be8022",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25CTHVN0",
+    "text": "Hey Guys , \ni am using CustomListview With mutiple textview for counting values in each row. \nBut don't know how to get the each value selected on particular rowitem in Listiview.",
+    "ts": "1473184967.000168",
+    "id": "06be8023",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U25CTHVN0> could you please post code and images?",
+    "ts": "1473187758.000169",
+    "id": "06be8024",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25CTHVN0",
+    "text": "<@U061HDV96> Yes let me post it.",
+    "ts": "1473219871.000170",
+    "id": "06be8025",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25CTHVN0",
+    "text": "<@U061HDV96>  I have done it. :slightly_smiling_face:",
+    "ts": "1473230184.000171",
+    "id": "06be8026",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0J3AKMPS",
+    "text": "hello\nI have view in my xml in which I used rotate(tilt) to some angle ...its good bt tilt edges are not smooth  any idea way to fix it ?",
+    "ts": "1473230196.000172",
+    "id": "06be8027",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0J3AKMPS|coolalien01> uploaded a file: <https://androidchat.slack.com/files/coolalien01/F28TAUJTD/-.java|Untitled>",
+    "file": {
+      "id": "F28TAUJTD",
+      "created": 1473230411,
+      "timestamp": 1473230411,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U0J3AKMPS",
+      "editable": true,
+      "size": 469,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F28TAUJTD/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F28TAUJTD/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/coolalien01/F28TAUJTD/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F28TAUJTD-a3391104f0",
+      "edit_link": "https://androidchat.slack.com/files/coolalien01/F28TAUJTD/-.java/edit",
+      "preview": "                <View\r\n                    android:id=\"@+id/tiltview\"\r\n                    android:layout_width=\"match_parent\"\r\n                    android:layout_height=\"match_parent\"\r\n                    android:layout_marginLeft=\"-50dp\"\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>                <span class=\"cm-operator\">&lt;</span><span class=\"cm-variable\">View</span></pre></div>\n<div><pre>                    <span class=\"cm-variable\">android</span>:<span class=\"cm-variable\">id</span><span class=\"cm-operator\">=</span><span class=\"cm-string\">&quot;@+id/tiltview&quot;</span></pre></div>\n<div><pre>                    <span class=\"cm-variable\">android</span>:<span class=\"cm-variable\">layout_width</span><span class=\"cm-operator\">=</span><span class=\"cm-string\">&quot;match_parent&quot;</span></pre></div>\n<div><pre>                    <span class=\"cm-variable\">android</span>:<span class=\"cm-variable\">layout_height</span><span class=\"cm-operator\">=</span><span class=\"cm-string\">&quot;match_parent&quot;</span></pre></div>\n<div><pre>                    <span class=\"cm-variable\">android</span>:<span class=\"cm-variable\">layout_marginLeft</span><span class=\"cm-operator\">=</span><span class=\"cm-string\">&quot;-50dp&quot;</span></pre></div>\n</div>\n</div>\n",
+      "lines": 9,
+      "lines_more": 4,
+      "preview_is_truncated": null,
+      "channels": [
+        "C055MSDCM"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U0J3AKMPS",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0J3AKMPS|coolalien01>",
+    "bot_id": null,
+    "ts": "1473230411.000173",
+    "id": "06be8028",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

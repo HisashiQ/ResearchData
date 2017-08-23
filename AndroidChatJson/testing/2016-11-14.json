@@ -1,0 +1,172 @@
+[
+  {
+    "user": "U16GF1B0F",
+    "text": "is there a way with mockito to mock out a `Pair&lt;String, String&gt;` without using Robolectric?",
+    "edited": {
+      "user": "U16GF1B0F",
+      "ts": "1479128975.000000"
+    },
+    "ts": "1479128972.000074",
+    "id": "14te2604",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "well, not mock a single pair",
+    "ts": "1479128983.000076",
+    "id": "14te2605",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "but to make it so my tested code returns mocked pairs rather than `STUB!!!`-ing",
+    "edited": {
+      "user": "U16GF1B0F",
+      "ts": "1479138146.000000"
+    },
+    "ts": "1479128993.000077",
+    "id": "14te2606",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U16GF1B0F> not really because (as far as I remember) `Pair` is part of the support library. I would instead write my own `Pair` and use that one since it's quite a common class to use. Then instead of mocking it I would create fakes of it since it makes tests more readables",
+    "ts": "1479138155.000079",
+    "id": "14te2607",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "word, that’s what I ended up doing",
+    "ts": "1479138176.000080",
+    "id": "14te2608",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "I was hoping there was a nice way to not have to do that",
+    "ts": "1479138189.000081",
+    "id": "14te2609",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "for common POJOs better to make your own, that is the life of an Android dev :stuck_out_tongue:",
+    "ts": "1479138200.000082",
+    "id": "14te2610",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "hopefully in the future they will provide non-stub functionality for POJOs",
+    "ts": "1479138242.000083",
+    "id": "14te2611",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "that would be amazing",
+    "ts": "1479138488.000084",
+    "id": "14te2612",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

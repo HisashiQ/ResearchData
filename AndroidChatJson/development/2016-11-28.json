@@ -1,0 +1,2502 @@
+[
+  {
+    "user": "U0XJ96KPG",
+    "text": "Hey guys! Do you know how to use one ViewHolder class in two adapters? I would like to make my code clean",
+    "ts": "1480321709.001949",
+    "id": "28de50987",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "put your ViewHolder outside your adapter?",
+    "ts": "1480321784.001950",
+    "id": "28de50988",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XJ96KPG",
+    "text": "Yeah, I need that exactly. But I do not know how to do that cause I have Butterknife binding",
+    "edited": {
+      "user": "U0XJ96KPG",
+      "ts": "1480321876.000000"
+    },
+    "ts": "1480321847.001951",
+    "id": "28de50989",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "You can bind your view inside your viewholder right?",
+    "ts": "1480321977.001954",
+    "id": "28de50990",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XJ96KPG",
+    "text": "Currently I am not doing that inside my viewholder.  I am do it here",
+    "ts": "1480322184.001955",
+    "id": "28de50991",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XJ96KPG",
+    "text": "@Override public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) { ... }",
+    "ts": "1480322200.001956",
+    "id": "28de50992",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "No, don't do that there",
+    "ts": "1480322227.001957",
+    "id": "28de50993",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "or it will be called everytime your view is displayed",
+    "ts": "1480322243.001958",
+    "id": "28de50994",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "The purpose of viewholder is to reuse the view, not initialize it everytime it displayed",
+    "ts": "1480322291.001959",
+    "id": "28de50995",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "you should do it in onCreateViewHolder, or better do it in your ViewHolder's constructor",
+    "ts": "1480322312.001960",
+    "id": "28de50996",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "butterknife can receive view as target too",
+    "ts": "1480322366.001961",
+    "id": "28de50997",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XJ96KPG",
+    "text": "Currently I am doing this:\n@Override public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {\n   MyViewHolder viewHolder = null;\n    Context context = parent.getContext();\n    LayoutInflater inflater = LayoutInflater.from(context);\n\n    switch (viewType) {\n      case SOLVEDVIEWHOLDER:\n        View requestWithReviewPhaseView =\n            inflater.inflate(R.layout.some_layout, parent, false);\n        viewHolder = new SolvedViewHolder(model);\n        break\n\n....",
+    "ts": "1480322437.001962",
+    "id": "28de50998",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XJ96KPG",
+    "text": "then in \n@Override public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {\n    // here we setup phase part of layout\n    Request request = list.get(position);\n    Phase lastPhase = request.getLastPhase();\n\n    switch (holder.getItemViewType()) {\n      case SOLVEDVIEWHOLDER:\n        SolvedViewHolder solvedViewHolder = (SolvedViewHolder) holder;\n        solvedViewHolder.configure(position, model, imageLoader, context);\n        solvedViewHolder.bind(onItemClickListener);\n        break;",
+    "ts": "1480322503.001963",
+    "id": "28de50999",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "Then where is your butterknife code?",
+    "ts": "1480322642.001964",
+    "id": "28de51000",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XJ96KPG",
+    "text": "public static class SolvedViewHolder extends MyViewHolder {\n    @BindView(R.id.some_image_view) ImageView someImageView;\n\n    public SolvedViewHolder(View view) {\n      super(view);\n      ButterKnife.bind(this, view);\n    }\n\n    public void configure(int position, MyModel myModel,\n  ImageLoader imageLoader, Context context) {\n      super.configure(position, myModel);\n    //set text and other\n\n    }\n\n  }",
+    "edited": {
+      "user": "U0XJ96KPG",
+      "ts": "1480322868.000000"
+    },
+    "ts": "1480322828.001965",
+    "id": "28de51001",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "Then you are doing it correct (in term of butterknife usage)",
+    "ts": "1480322861.001967",
+    "id": "28de51002",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "So why did you say you can't move it outside your adapter class because of butterknife?",
+    "edited": {
+      "user": "U0ESBF4AV",
+      "ts": "1480322907.000000"
+    },
+    "ts": "1480322893.001969",
+    "id": "28de51003",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XJ96KPG",
+    "text": "Because of this    \n    View requestWithReviewPhaseView =  inflater.inflate(R.layout.some_layout, parent, false);",
+    "ts": "1480322968.001971",
+    "id": "28de51004",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XJ96KPG",
+    "text": "I do it in onCreateViewHolder",
+    "ts": "1480322982.001972",
+    "id": "28de51005",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "<@U0XJ96KPG> If you hit the “+” on the left of your text input bar you can add code snippets that don’t clutter the chat as much  *and* have syntax highlighting :wink:",
+    "ts": "1480323075.001973",
+    "id": "28de51006",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XJ96KPG",
+    "text": "thank you",
+    "ts": "1480323112.001974",
+    "id": "28de51007",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U054A24ET|squeeish> uploaded a file: <https://androidchat.slack.com/files/squeeish/F36TXJLL9/-.java|Untitled> and commented: couldnt it be something like this?",
+    "file": {
+      "id": "F36TXJLL9",
+      "created": 1480324552,
+      "timestamp": 1480324552,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U054A24ET",
+      "editable": true,
+      "size": 1126,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F36TXJLL9/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F36TXJLL9/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/squeeish/F36TXJLL9/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F36TXJLL9-3ba7c58505",
+      "edit_link": "https://androidchat.slack.com/files/squeeish/F36TXJLL9/-.java/edit",
+      "preview": "@Override\r\npublic MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {\r\n \tif (viewType == VIEWTYPE_ONE) {\r\n \t\treturn new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(\r\n \t\t\tR.layout.layout_one, parent, false));\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-meta\">@Override</span></pre></div>\n<div><pre><span class=\"cm-keyword\">public</span> <span class=\"cm-variable\">MyViewHolder</span> <span class=\"cm-def\">onCreateViewHolder</span>(<span class=\"cm-variable\">ViewGroup</span> <span class=\"cm-variable\">parent</span>, <span class=\"cm-variable-3\">int</span> <span class=\"cm-variable\">viewType</span>) {</pre></div>\n<div><pre> \t<span class=\"cm-keyword\">if</span> (<span class=\"cm-variable\">viewType</span> <span class=\"cm-operator\">==</span> <span class=\"cm-variable\">VIEWTYPE_ONE</span>) {</pre></div>\n<div><pre> \t\t<span class=\"cm-keyword\">return</span> <span class=\"cm-keyword\">new</span> <span class=\"cm-variable\">ViewHolder</span>(<span class=\"cm-variable\">LayoutInflater</span>.<span class=\"cm-variable\">from</span>(<span class=\"cm-variable\">parent</span>.<span class=\"cm-variable\">getContext</span>()).<span class=\"cm-variable\">inflate</span>(</pre></div>\n<div><pre> \t\t\t<span class=\"cm-variable\">R</span>.<span class=\"cm-variable\">layout</span>.<span class=\"cm-variable\">layout_one</span>, <span class=\"cm-variable\">parent</span>, <span class=\"cm-atom\">false</span>));</pre></div>\n</div>\n</div>\n",
+      "lines": 36,
+      "lines_more": 31,
+      "preview_is_truncated": true,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 1,
+      "initial_comment": {
+        "id": "Fc37LXV3BP",
+        "created": 1480324552,
+        "timestamp": 1480324552,
+        "user": "U054A24ET",
+        "is_intro": true,
+        "comment": "couldnt it be something like this?",
+        "channel": ""
+      }
+    },
+    "user": "U054A24ET",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U054A24ET|squeeish>",
+    "bot_id": null,
+    "ts": "1480324552.001975",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "28de51008",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "excuse the formatting",
+    "ts": "1480324576.001976",
+    "id": "28de51009",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37JFBLFL",
+    "text": "<@U37JFBLFL|bh> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1480324904.001977",
+    "id": "28de51010",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XJ96KPG",
+    "text": "Hmm. aI am not sure about it.I still dont like the fact that layout of viewHolder is not in that class",
+    "ts": "1480324948.001978",
+    "id": "28de51011",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "<@U0XJ96KPG> it doesn`t matter because you will pass the view to Viewholder`s constructor",
+    "ts": "1480325048.001979",
+    "id": "28de51012",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XJ96KPG",
+    "text": "Are you sure? What if that view doesn't have butterknife binded views/ I will get null exception",
+    "ts": "1480325218.001980",
+    "id": "28de51013",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XJ96KPG",
+    "text": "Is it unsecure?",
+    "ts": "1480325233.001981",
+    "id": "28de51014",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "then you pass the wrong view",
+    "ts": "1480325301.001982",
+    "id": "28de51015",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "as simple as that",
+    "ts": "1480325315.001983",
+    "id": "28de51016",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "that`s the risk if you want to share a component",
+    "ts": "1480325328.001984",
+    "id": "28de51017",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "and if you are sharing a viewholder containing an optional view",
+    "ts": "1480325368.001985",
+    "id": "28de51018",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "you can use @Optional annotation",
+    "ts": "1480325379.001986",
+    "id": "28de51019",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XJ96KPG",
+    "text": "I understand , thank you so much! :slightly_smiling_face:",
+    "ts": "1480325432.001987",
+    "id": "28de51020",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "ah sorry  nullable is the correct one",
+    "ts": "1480325438.001988",
+    "id": "28de51021",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "optional is for binding methods",
+    "edited": {
+      "user": "U0ESBF4AV",
+      "ts": "1480326364.000000"
+    },
+    "ts": "1480325453.001989",
+    "id": "28de51022",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KU8TDV2",
+    "text": "hi guys, i have a simple animation as follow\n```\nthis.frame.animate()\n        .setDuration(5000)\n        .x(exitX)\n        .y(exitY)\n        .setListener(new AnimatorListenerAdapter() {\n          @Override\n          public void onAnimationEnd(Animator animation) {\n            if (isLeft) {\n              mFlingListener.onCardExited();\n              mFlingListener.leftExit(dataObject);\n            } else {\n              mFlingListener.onCardExited();\n              mFlingListener.rightExit(dataObject);\n            }\n            isAnimationRunning = false;\n          }\n        });\n```\nbut the animation is very laggy on android M",
+    "ts": "1480329546.001991",
+    "id": "28de51023",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KU8TDV2",
+    "text": "any clue to investigate this issue? :confused:",
+    "ts": "1480329564.001992",
+    "id": "28de51024",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KU8TDV2",
+    "text": "thanh you guys",
+    "ts": "1480329569.001993",
+    "id": "28de51025",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "Maybe you have some debug tools enabled or there is something heavy going on UI thread during this animation",
+    "ts": "1480331928.001994",
+    "id": "28de51026",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "seriously, how do i pin the preview window in android studio? the option seems to be gone",
+    "ts": "1480332462.001995",
+    "id": "28de51027",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U054A24ET|squeeish> uploaded a file: <https://androidchat.slack.com/files/squeeish/F38AF6BTR/screen_shot_2016-11-28_at_7.26.53_pm.png|Screen Shot 2016-11-28 at 7.26.53 PM.png>",
+    "file": {
+      "id": "F38AF6BTR",
+      "created": 1480332476,
+      "timestamp": 1480332476,
+      "name": "Screen Shot 2016-11-28 at 7.26.53 PM.png",
+      "title": "Screen Shot 2016-11-28 at 7.26.53 PM.png",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U054A24ET",
+      "editable": false,
+      "size": 71194,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F38AF6BTR/screen_shot_2016-11-28_at_7.26.53_pm.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F38AF6BTR/download/screen_shot_2016-11-28_at_7.26.53_pm.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F38AF6BTR-e5c5a64df2/screen_shot_2016-11-28_at_7.26.53_pm_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F38AF6BTR-e5c5a64df2/screen_shot_2016-11-28_at_7.26.53_pm_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F38AF6BTR-e5c5a64df2/screen_shot_2016-11-28_at_7.26.53_pm_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 360,
+      "thumb_360_h": 190,
+      "thumb_480": "https://files.slack.com/files-tmb/T04PLNDMP-F38AF6BTR-e5c5a64df2/screen_shot_2016-11-28_at_7.26.53_pm_480.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_480_w": 480,
+      "thumb_480_h": 254,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F38AF6BTR-e5c5a64df2/screen_shot_2016-11-28_at_7.26.53_pm_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720": "https://files.slack.com/files-tmb/T04PLNDMP-F38AF6BTR-e5c5a64df2/screen_shot_2016-11-28_at_7.26.53_pm_720.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720_w": 720,
+      "thumb_720_h": 381,
+      "image_exif_rotation": 1,
+      "original_w": 802,
+      "original_h": 424,
+      "permalink": "https://androidchat.slack.com/files/squeeish/F38AF6BTR/screen_shot_2016-11-28_at_7.26.53_pm.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F38AF6BTR-bb8361bce6",
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U054A24ET",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U054A24ET|squeeish>",
+    "bot_id": null,
+    "ts": "1480332477.001996",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "28de51028",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37NPGM8C",
+    "text": "<@U37NPGM8C|prash> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1480336275.001997",
+    "id": "28de51029",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "nevermind, got it. <http://stackoverflow.com/questions/30160081/no-docked-mode-option-in-preview-settings-in-android-studio-once-undocked>",
+    "attachments": [
+      {
+        "title": "No \"Docked Mode\" option in \"Preview\" settings in Android Studio once undocked",
+        "title_link": "http://stackoverflow.com/questions/30160081/no-docked-mode-option-in-preview-settings-in-android-studio-once-undocked",
+        "text": "Here is the Docked mode option for \"Preview\" window. I removed the docked mode i.e. undocked it. And here is what I got. There is no more \"Docked Mode\" option. Now I cannot properly work with des...",
+        "fallback": "No \"Docked Mode\" option in \"Preview\" settings in Android Studio once undocked",
+        "thumb_url": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/questions/30160081/no-docked-mode-option-in-preview-settings-in-android-studio-once-undocked",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "service_icon": "http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d",
+        "service_name": "stackoverflow.com",
+        "id": 1
+      }
+    ],
+    "ts": "1480336796.001998",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "28de51030",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CLC803W",
+    "text": "Who works with AlarmManager? How to schedule AlarmManager more then 60 sec on Android 5.1+?",
+    "ts": "1480337534.002000",
+    "id": "28de51031",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3712K57T",
+    "text": "<@U3712K57T|moonsweel> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1480339453.002001",
+    "id": "28de51032",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3727CXMF",
+    "text": "<@U3727CXMF|pkazmierczak> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1480344916.002002",
+    "id": "28de51033",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JTP76DS",
+    "text": "On 6+ I use setExactAndAllowWhileIdle and on 5+ I use setExact.",
+    "ts": "1480345180.002003",
+    "id": "28de51034",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Ok so I need advice",
+    "ts": "1480346580.002004",
+    "id": "28de51035",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "What's the most reasonable way to play MP4 videos with backwards compatibility down to api 16",
+    "edited": {
+      "user": "U08GFT5V5",
+      "ts": "1480346636.000000"
+    },
+    "ts": "1480346617.002005",
+    "id": "28de51036",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "exoplayer?",
+    "ts": "1480346756.002007",
+    "id": "28de51037",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "imho <https://github.com/google/ExoPlayer>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "google/ExoPlayer",
+        "title_link": "https://github.com/google/ExoPlayer",
+        "text": "ExoPlayer - An extensible media player for Android",
+        "fallback": "GitHub: google/ExoPlayer",
+        "thumb_url": "https://avatars2.githubusercontent.com/u/1342004?v=3&s=400",
+        "from_url": "https://github.com/google/ExoPlayer",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1480346768.002008",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U04U5KS3Z",
+          "U08GFT5V5",
+          "U0W3JFY57"
+        ],
+        "count": 4
+      }
+    ],
+    "id": "28de51038",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "^",
+    "ts": "1480346804.002010",
+    "id": "28de51039",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Thanks i'll look into it",
+    "ts": "1480347019.002011",
+    "id": "28de51040",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3697FDAN",
+    "text": "So",
+    "ts": "1480348605.002012",
+    "id": "28de51041",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3697FDAN",
+    "text": "I'm trying to add a padding inside my edittext which is inside an Textinputlayout",
+    "edited": {
+      "user": "U3697FDAN",
+      "ts": "1480348700.000000"
+    },
+    "ts": "1480348622.002013",
+    "id": "28de51042",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3697FDAN",
+    "text": "And it just simply does not work. Like. Doesn't work.",
+    "ts": "1480348632.002014",
+    "id": "28de51043",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3697FDAN",
+    "text": "I dig in inside the TextInputLayout and I find these:\n```// This is gross. There is an issue in the platform which affects container Drawables\n            // where the first drawable retrieved from resources will propagate any changes\n            // (like color filter) to all instances from the cache. We'll try to workaround it...````",
+    "ts": "1480348649.002015",
+    "id": "28de51044",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3697FDAN",
+    "text": "```// If we reach here then we just need to set a brand new instance of the Drawable\n                // as the background. This has the unfortunate side-effect of wiping out any\n                // user set padding, but I'd hope that use of custom padding on an EditText\n                // is limited.```",
+    "edited": {
+      "user": "U3697FDAN",
+      "ts": "1480348663.000000"
+    },
+    "ts": "1480348658.002016",
+    "id": "28de51045",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37SZ2ZJ8",
+    "text": "<@U37SZ2ZJ8|rajeev_india> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1480354431.002019",
+    "id": "28de51046",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37SZ2ZJ8",
+    "text": "hi, this is rajeev from india, i want that developer develop an android app for me just like whats app, anybody can do, if yes how much money he want tell me, please.",
+    "ts": "1480355124.002020",
+    "id": "28de51047",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "Developing such an app requires not only Android (or iOS, or desktop) developers, but also back-end developers / high-load engineers.",
+    "ts": "1480355453.002021",
+    "id": "28de51048",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37TK5DLM",
+    "text": "<@U37TK5DLM|prince2015999> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1480355505.002022",
+    "id": "28de51049",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U37SZ2ZJ8> one gazillion dollars and a beer",
+    "ts": "1480355509.002023",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U2M0WUZ7A"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "28de51050",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I also require to shake the hands of my customers before further discussion",
+    "ts": "1480355534.002024",
+    "id": "28de51051",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "So you'll have to come to Belgium",
+    "ts": "1480355538.002025",
+    "id": "28de51052",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N4RS70W",
+    "text": "lol",
+    "ts": "1480355629.002026",
+    "id": "28de51053",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "you might try <http://howmuchtomakeanapp.com/> to get some realistic expectations\n\nquickly plugging in what I would expect to be MVP features for a whatsapp competitor resulted in $45400 USD but I feel like that’s actually quite low and would expect more realistically a number around $100k+ and it would take at least 3 devs probably at least 3 months but probably more pushing out that $100k valuation",
+    "attachments": [
+      {
+        "title": "How Much to Make an App",
+        "title_link": "http://howmuchtomakeanapp.com/",
+        "text": "How much does an iPhone, iPad, or Android app cost to make? Find out in less than a minute.",
+        "fallback": "How Much to Make an App",
+        "image_url": "http://howmuchtomakeanapp.com/img/og.jpg",
+        "from_url": "http://howmuchtomakeanapp.com/",
+        "image_width": 476,
+        "image_height": 250,
+        "image_bytes": 37892,
+        "service_icon": "http://howmuchtomakeanapp.com/apple-touch-icon-144x144-precomposed.png",
+        "service_name": "howmuchtomakeanapp.com",
+        "id": 1
+      }
+    ],
+    "ts": "1480355695.002027",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U2M0WUZ7A"
+        ],
+        "count": 2
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "28de51054",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37TK5DLM",
+    "text": "Hi All am new to Android , Any good resources  suggestion",
+    "ts": "1480355718.002029",
+    "id": "28de51055",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U055GGAHS> but hiring me is ** 10 ** 10",
+    "ts": "1480355730.002030",
+    "id": "28de51056",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U37TK5DLM> checkout /r/androiddev and <#C055MSDCM|beginners>",
+    "ts": "1480355744.002031",
+    "id": "28de51057",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Where is <@U0N7D6F50> when you need him?",
+    "ts": "1480355761.002032",
+    "id": "28de51058",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<https://reddit.com/r/androiddev>",
+    "attachments": [
+      {
+        "service_name": "reddit",
+        "title": "Developing Android Apps • /r/androiddev",
+        "title_link": "https://reddit.com/r/androiddev",
+        "text": "News for Android developers with the who, what, where when and how of the Android community. Probably mostly the how. Here, you'll find: - News...",
+        "fallback": "reddit: Developing Android Apps • /r/androiddev",
+        "thumb_url": "https://www.redditstatic.com/icon.png",
+        "from_url": "https://reddit.com/r/androiddev",
+        "thumb_width": 256,
+        "thumb_height": 256,
+        "service_icon": "https://www.reddit.com/favicon.ico",
+        "id": 1
+      }
+    ],
+    "ts": "1480355768.002033",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "28de51059",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U37TK5DLM> read the wiki: <https://www.reddit.com/r/androiddev/wiki/index>",
+    "attachments": [
+      {
+        "title": "index - androiddev",
+        "title_link": "https://www.reddit.com/r/androiddev/wiki/index",
+        "text": "reddit: the front page of the internet",
+        "fallback": "index - androiddev",
+        "from_url": "https://www.reddit.com/r/androiddev/wiki/index",
+        "service_icon": "https://www.reddit.com/favicon.ico",
+        "service_name": "reddit.com",
+        "id": 1
+      }
+    ],
+    "ts": "1480355815.002035",
+    "id": "28de51060",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37TK5DLM",
+    "text": "Thanks <@U061HDV96>",
+    "ts": "1480355865.002037",
+    "id": "28de51061",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "anybody know how to diagnose `An anchor may not be changed after CoordinatorLayout measurement begins before layout is complete.`? The stack trace unfortunately doesn’t point to anything in my code...",
+    "ts": "1480356095.002038",
+    "id": "28de51062",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "ctrl-f anchor in your xml",
+    "ts": "1480356410.002039",
+    "id": "28de51063",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "the layout you’re anchoring your view to is probably obsolete, or has to be defined after the referenced view",
+    "ts": "1480356473.002040",
+    "id": "28de51064",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "well I do update anchors.. I do it within an AppBarLayout.onOffsetChanged listener.. and it only seems to cause a crash when I trigger the listener after a resume",
+    "ts": "1480356765.002041",
+    "id": "28de51065",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D7CAJF2",
+    "text": "guys btw anyone have shared link for latest android.vdi with playstore included",
+    "ts": "1480364623.002042",
+    "id": "28de51066",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D7CAJF2",
+    "text": "wanna easy import it on my vm",
+    "ts": "1480364681.002043",
+    "id": "28de51067",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U0D7CAJF2> can't you just download it via the SDK manager?",
+    "ts": "1480367001.002044",
+    "id": "28de51068",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37BP6E73",
+    "text": "<@U37BP6E73|arviio> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1480388922.002045",
+    "id": "28de51069",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "Hello",
+    "ts": "1480389144.002046",
+    "id": "28de51070",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "anyone using MVC pattern in Android",
+    "ts": "1480389157.002047",
+    "id": "28de51071",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "how do you go MVC when using Fragment -&gt; RecyclerView -&gt; Adapter views???",
+    "ts": "1480389174.002048",
+    "id": "28de51072",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "We generally use MVP",
+    "ts": "1480392990.002049",
+    "id": "28de51073",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "very close",
+    "ts": "1480392995.002050",
+    "id": "28de51074",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "your fragment + recycler view is your V",
+    "ts": "1480393013.002051",
+    "id": "28de51075",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "All the business logic goes into the P",
+    "ts": "1480393025.002052",
+    "id": "28de51076",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Your adapter should only do 1 thing",
+    "ts": "1480393035.002053",
+    "id": "28de51077",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Adapt M -&gt; RecyclerView",
+    "ts": "1480393048.002054",
+    "id": "28de51078",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "the implementation detail should go in the P",
+    "ts": "1480393061.002055",
+    "id": "28de51079",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D7CAJF2",
+    "text": "<@U061HDV96> yep but not including playstore and im little bit problem with drag and drop arm7 for install ps here",
+    "ts": "1480395859.002056",
+    "id": "28de51080",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0BHNKRDE",
+    "text": "hi all, Is there anyone who developed both Application and backen?",
+    "ts": "1480397924.002057",
+    "id": "28de51081",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0BHNKRDE",
+    "text": "which is better to use?",
+    "ts": "1480397958.002058",
+    "id": "28de51082",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1T13H6S3",
+    "text": "Cannot instantiate class android.support.v7.widget.SearchView, why am getting this:disappointed:",
+    "ts": "1480400342.002059",
+    "id": "28de51083",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U1T13H6S3|thehunter> uploaded a file: <https://androidchat.slack.com/files/thehunter/F37BUS8KS/-.java|Untitled>",
+    "file": {
+      "id": "F37BUS8KS",
+      "created": 1480400496,
+      "timestamp": 1480400496,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U1T13H6S3",
+      "editable": true,
+      "size": 1963,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F37BUS8KS/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F37BUS8KS/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/thehunter/F37BUS8KS/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F37BUS8KS-9dc0504efb",
+      "edit_link": "https://androidchat.slack.com/files/thehunter/F37BUS8KS/-.java/edit",
+      "preview": "DEPENDENCIES \r\n-----------------\r\n\r\n //ADD THESE LINES:\r\n    compile 'org.twitter4j:twitter4j-core:4.0.2'\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-variable\">DEPENDENCIES</span> </pre></div>\n<div><pre><span class=\"cm-operator\">-----------------</span></pre></div>\n<div><pre>&#8203;</pre></div>\n<div><pre> <span class=\"cm-comment\">//ADD THESE LINES:</span></pre></div>\n<div><pre>    <span class=\"cm-variable\">compile</span> <span class=\"cm-string\">'org.twitter4j:twitter4j-core:4.0.2'</span></pre></div>\n</div>\n</div>\n",
+      "lines": 43,
+      "lines_more": 38,
+      "preview_is_truncated": true,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U1T13H6S3",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U1T13H6S3|thehunter>",
+    "bot_id": null,
+    "ts": "1480400496.002060",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "28de51084",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37BP6E73",
+    "text": "have you checked this out? <http://stackoverflow.com/a/22255570/2098493>",
+    "attachments": [
+      {
+        "title": "Cannot instantiate class: android.support.v7.widget.SearchView",
+        "title_link": "http://stackoverflow.com/a/22255570/2098493",
+        "text": "I´m trying to use a SearchView for my Application. First i added appcompat to my project: compile \"com.android.support:appcompat-v7:19.0.1+\" secound i add this code to my menu:&lt;menu xmlns:a...",
+        "fallback": "Cannot instantiate class: android.support.v7.widget.SearchView",
+        "thumb_url": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/a/22255570/2098493",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "service_icon": "http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d",
+        "service_name": "stackoverflow.com",
+        "id": 1
+      }
+    ],
+    "ts": "1480400659.002061",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "28de51085",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37BP6E73",
+    "text": "<http://stackoverflow.com/a/26897408/2098493>",
+    "attachments": [
+      {
+        "title": "Cannot instantiate class android.support.v7.widget.SearchView",
+        "title_link": "http://stackoverflow.com/a/26897408/2098493",
+        "text": "Please somebody help me! I trying add appcompat search view to my project. Unsuccessfully. When I change android.support.v7.widget.SearchView to SearchView (API &gt; 10) everything's fine.This my me...",
+        "fallback": "Cannot instantiate class android.support.v7.widget.SearchView",
+        "thumb_url": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/a/26897408/2098493",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "service_icon": "http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d",
+        "service_name": "stackoverflow.com",
+        "id": 1
+      }
+    ],
+    "ts": "1480400730.002063",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "28de51086",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1T13H6S3",
+    "text": "I did, but doesn worked",
+    "attachments": [
+      {
+        "fallback": "[November 29th, 2016 10:24 AM] arviio: have you checked this out? <http://stackoverflow.com/a/22255570/2098493>",
+        "ts": "1480400659.002061",
+        "author_subname": "arviio",
+        "channel_id": "C04NZAN54",
+        "channel_name": "development",
+        "is_msg_unfurl": true,
+        "text": "have you checked this out? <http://stackoverflow.com/a/22255570/2098493>",
+        "author_name": "Arvi A",
+        "author_link": "https://androidchat.slack.com/team/arviio",
+        "author_icon": "https://avatars.slack-edge.com/2016-11-29/110192231253_12d0feccebe960a052dd_48.jpg",
+        "mrkdwn_in": [
+          "text"
+        ],
+        "color": "D0D0D0",
+        "from_url": "https://androidchat.slack.com/archives/development/p1480400659002061",
+        "is_share": true,
+        "footer": "Posted in #development"
+      }
+    ],
+    "ts": "1480400735.002065",
+    "id": "28de51087",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U1T13H6S3|thehunter> uploaded a file: <https://androidchat.slack.com/files/thehunter/F385T68LV/-.java|Untitled> and commented: my SearchView implementation in layout",
+    "file": {
+      "id": "F385T68LV",
+      "created": 1480400773,
+      "timestamp": 1480400773,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U1T13H6S3",
+      "editable": true,
+      "size": 298,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F385T68LV/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F385T68LV/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/thehunter/F385T68LV/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F385T68LV-46c9f89d79",
+      "edit_link": "https://androidchat.slack.com/files/thehunter/F385T68LV/-.java/edit",
+      "preview": " <android.support.v7.widget.SearchView\r\n            android:id=\"@+id/search\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"wrap_content\"\r\n\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre> <span class=\"cm-operator\">&lt;</span><span class=\"cm-variable\">android</span>.<span class=\"cm-variable\">support</span>.<span class=\"cm-variable\">v7</span>.<span class=\"cm-variable\">widget</span>.<span class=\"cm-variable\">SearchView</span></pre></div>\n<div><pre>            <span class=\"cm-variable\">android</span>:<span class=\"cm-variable\">id</span><span class=\"cm-operator\">=</span><span class=\"cm-string\">&quot;@+id/search&quot;</span></pre></div>\n<div><pre>            <span class=\"cm-variable\">android</span>:<span class=\"cm-variable\">layout_width</span><span class=\"cm-operator\">=</span><span class=\"cm-string\">&quot;match_parent&quot;</span></pre></div>\n<div><pre>            <span class=\"cm-variable\">android</span>:<span class=\"cm-variable\">layout_height</span><span class=\"cm-operator\">=</span><span class=\"cm-string\">&quot;wrap_content&quot;</span></pre></div>\n<div><pre>&#8203;</pre></div>\n</div>\n</div>\n",
+      "lines": 8,
+      "lines_more": 3,
+      "preview_is_truncated": false,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 1,
+      "initial_comment": {
+        "id": "Fc38PF5ZN3",
+        "created": 1480400773,
+        "timestamp": 1480400773,
+        "user": "U1T13H6S3",
+        "is_intro": true,
+        "comment": "my SearchView implementation in layout",
+        "channel": ""
+      }
+    },
+    "user": "U1T13H6S3",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U1T13H6S3|thehunter>",
+    "bot_id": null,
+    "ts": "1480400773.002066",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "28de51088",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "<@U1T13H6S3> Are you putting it in your menu or where?",
+    "ts": "1480401184.002067",
+    "id": "28de51089",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37BP6E73",
+    "text": "not really sure why :no_mouth:",
+    "ts": "1480401188.002068",
+    "id": "28de51090",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1T13H6S3",
+    "text": "<@U37BP6E73> , i added it in layout",
+    "edited": {
+      "user": "U1T13H6S3",
+      "ts": "1480401302.000000"
+    },
+    "ts": "1480401276.002069",
+    "id": "28de51091",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37BP6E73",
+    "text": "this might help <http://stackoverflow.com/a/33141693/2098493>... sorry can't help much.",
+    "attachments": [
+      {
+        "title": "Android SearchView does not work",
+        "title_link": "http://stackoverflow.com/a/33141693/2098493",
+        "text": "I tried to update all the libraries, but i still got errors. I am able to run the app on the simulator, but when I export the APK and run it on a real android device, the app is not working.",
+        "fallback": "Android SearchView does not work",
+        "thumb_url": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/a/33141693/2098493",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "service_icon": "http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d",
+        "service_name": "stackoverflow.com",
+        "id": 1
+      }
+    ],
+    "ts": "1480401347.002072",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "28de51092",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1T13H6S3",
+    "text": "lemme check ty",
+    "ts": "1480401393.002074",
+    "id": "28de51093",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

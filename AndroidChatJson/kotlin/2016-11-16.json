@@ -1,0 +1,371 @@
+[
+  {
+    "user": "U0K1ALDQE",
+    "text": "I’m having trouble with named injection into my presenters constructor.\nI just have the following `class XXXPresenter @Inject constructor(@Named(\"dependencyName\") dependency: DependencyClass)` but it’s not working\nWithout named it’s working fine, but for this particular injection I need named injection",
+    "ts": "1479300555.000148",
+    "id": "16ko3036",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "<@U0K1ALDQE> are you applying the same `@Named(\"dependencyName\")` on the `DependencyClass` class as well?",
+    "edited": {
+      "user": "U1HM4MPLJ",
+      "ts": "1479315973.000000"
+    },
+    "ts": "1479315955.000149",
+    "id": "16ko3037",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "At the provides method in my module? Yes, I am",
+    "ts": "1479317980.000151",
+    "id": "16ko3038",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U0K1ALDQE> what about in the Component?",
+    "ts": "1479318167.000152",
+    "id": "16ko3039",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I expose 1 type",
+    "ts": "1479318192.000153",
+    "id": "16ko3040",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "That should be 2 named onces?",
+    "ts": "1479318199.000154",
+    "id": "16ko3041",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "```\n@Component interface ColorComponent {\n  @Named(\"blue\") Color blueColor();\n  @Named(\"green\") Color greenColor();\n}\n```",
+    "edited": {
+      "user": "U053LEHJN",
+      "ts": "1479318617.000000"
+    },
+    "ts": "1479318252.000155",
+    "id": "16ko3042",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Hmm, I can’t remember ever doing that in Java before.",
+    "ts": "1479318368.000156",
+    "id": "16ko3043",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I’ll give it a try, but that’s the only thing I’m missing / haven’t tried yet.",
+    "ts": "1479318406.000157",
+    "id": "16ko3044",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Having a bad day.",
+    "ts": "1479318410.000158",
+    "id": "16ko3045",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U32C0L5CH",
+    "text": "<@U32C0L5CH|timrijckaert> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1479318428.000159",
+    "id": "16ko3046",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "By any chance, can’t tell me why do operators aren’t called in RxJava2 :joy:",
+    "ts": "1479318429.000160",
+    "id": "16ko3047",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I’ll let you know if it works",
+    "ts": "1479318594.000161",
+    "id": "16ko3048",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "sorry, `ColorComponent` should be an interface, not a class",
+    "ts": "1479318603.000162",
+    "id": "16ko3049",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Yeah I figured :smile:",
+    "ts": "1479318622.000164",
+    "id": "16ko3050",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "<@U053LEHJN> Added @Named to the Component but same problem. ",
+    "ts": "1479338725.000165",
+    "id": "16ko3051",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "hmm, weird",
+    "ts": "1479338874.000166",
+    "id": "16ko3052",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U0K1ALDQE> when you say not working, do you mean it's not compiling or just different behavior?",
+    "ts": "1479338903.000167",
+    "id": "16ko3053",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Not compiling.",
+    "ts": "1479338994.000168",
+    "id": "16ko3054",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "What compilation error re you getting <@U0K1ALDQE>",
+    "ts": "1479342718.000169",
+    "id": "16ko3055",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

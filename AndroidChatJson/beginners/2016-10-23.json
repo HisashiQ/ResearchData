@@ -1,0 +1,206 @@
+[
+  {
+    "user": "U061HDV96",
+    "text": "Well if you really don't have a token, then you have to ask for a login either way.",
+    "ts": "1477220765.002043",
+    "id": "23be9712",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RKCC8H4",
+    "text": "I suppose when the user does something that requires an update from / access to the server, the app should say \"Please login to continue\" is a warning pop-up with only an OK button.  The next Activity to open would then be the Login screen, and after that return to what the user was doing, restoring the activity to the state that it was in.",
+    "ts": "1477225231.002044",
+    "id": "23be9713",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Then do so",
+    "ts": "1477225336.002045",
+    "id": "23be9714",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "Got a question about Application (not Activity) lifecycle. Is there any class or methods that can be used to identify if the app is in foreground / background or terminated. Basically, it’s like AppDelegate class in iOS, where that class basically can detect when the app first launch, app goes to background, app returns to foreground and etc.. What’s the equivalent for Android? Thanks!!",
+    "edited": {
+      "user": "U0LETFK18",
+      "ts": "1477238570.000000"
+    },
+    "ts": "1477238565.002046",
+    "id": "23be9715",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U0LETFK18> you can get a list of processes and check its importance. More about importance and lifecycle here: <https://developer.android.com/guide/topics/processes/process-lifecycle.html>",
+    "attachments": [
+      {
+        "title": "    Processes and Application Life Cycle | Android Developers  ",
+        "title_link": "https://developer.android.com/guide/topics/processes/process-lifecycle.html",
+        "text": "In most cases, every Android application runs in its own Linux process. This process is created for the application when some of its code needs to be run, and will remain running until it is no longer needed and the system needs to reclaim its memory …",
+        "fallback": "    Processes and Application Life Cycle | Android Developers  ",
+        "from_url": "https://developer.android.com/guide/topics/processes/process-lifecycle.html",
+        "service_icon": "https://developer.android.com/favicon.ico",
+        "service_name": "developer.android.com",
+        "id": 1
+      }
+    ],
+    "ts": "1477240524.002048",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "23be9716",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "You can use the ActivityManager to get the running tasks (not getRunningAppProcesses as that will return other apps too).",
+    "ts": "1477240641.002050",
+    "id": "23be9717",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "There is getRunningTasks but that has been deprecated: <https://developer.android.com/reference/android/app/ActivityManager.html#getRunningTasks(int)>",
+    "attachments": [
+      {
+        "title": "    ActivityManager | Android Developers  ",
+        "title_link": "https://developer.android.com/reference/android/app/ActivityManager.html#getRunningTasks(int)",
+        "text": "None",
+        "fallback": "    ActivityManager | Android Developers  ",
+        "from_url": "https://developer.android.com/reference/android/app/ActivityManager.html#getRunningTasks(int)",
+        "service_icon": "https://developer.android.com/favicon.ico",
+        "service_name": "developer.android.com",
+        "id": 1
+      }
+    ],
+    "ts": "1477240650.002051",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "23be9718",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0J3AKMPS",
+    "text": "any library for textView Label ?",
+    "ts": "1477292188.002053",
+    "id": "23be9719",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

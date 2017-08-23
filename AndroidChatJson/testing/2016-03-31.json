@@ -1,0 +1,2497 @@
+[
+  {
+    "user": "U0546QERR",
+    "text": "for my API wrapper, does it make sense to make separate tests for\n* verifying the real service returns observables, but not subscribing to trigger the network call\n* verifying data returned from a mock service is properly deserialized (just returning json files through gson)\n* verifying the real service returns data (essentially the construction of the api call is correct)",
+    "ts": "1459451541.000128",
+    "id": "31te902",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "the last one would probably be too much of a pain in the ass (setting up a dev server for myself) but i think the first 2 sound good as a start",
+    "edited": {
+      "user": "U0546QERR",
+      "ts": "1459451620.000000"
+    },
+    "ts": "1459451608.000129",
+    "id": "31te903",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i really need someone to give me assignments writing tests because it's hard to decide what &amp; how to do things at first :x",
+    "ts": "1459451664.000131",
+    "id": "31te904",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "API wrapper? like a library?",
+    "ts": "1459451704.000132",
+    "id": "31te905",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "yes",
+    "ts": "1459451709.000133",
+    "id": "31te906",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "a library that has the retrofit interface and model objects",
+    "ts": "1459451740.000134",
+    "id": "31te907",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "essentially",
+    "ts": "1459451746.000135",
+    "id": "31te908",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "I’d do the second and and you use a MockWebServer for the third to test the path request - return",
+    "ts": "1459451748.000136",
+    "id": "31te909",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<@U053PPGDC> is the ol’ minister of wizardry and testing so he can provide you with a better answer",
+    "ts": "1459451779.000137",
+    "id": "31te910",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "how would a mock server verify the API owner didn't change something and screw me over though? i feel like i'd need to hit the real code",
+    "ts": "1459451837.000138",
+    "id": "31te911",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "oh that",
+    "ts": "1459451866.000139",
+    "id": "31te912",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "can you do an api test script?",
+    "edited": {
+      "user": "U0548MM6B",
+      "ts": "1459451912.000000"
+    },
+    "ts": "1459451874.000140",
+    "id": "31te913",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "I’ve written some ruby scripts to hit an API and test it before, way easier than doing it in your library tests",
+    "ts": "1459451898.000141",
+    "id": "31te914",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "but for my library tests wouldn't it just be substituting my local server URL for the production one?",
+    "ts": "1459451970.000143",
+    "id": "31te915",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i don't own the API but it's open source and i've set up an instance on a linux VM, just haven't figured out how to hit it from my host machine",
+    "ts": "1459452040.000144",
+    "id": "31te916",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "that part is probably lowest on my priority list anyway",
+    "ts": "1459452051.000145",
+    "id": "31te917",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "really not sure how to do that, haven’t tried doing that in android tests really. start an embedded server from the test maybe?",
+    "ts": "1459452283.000146",
+    "id": "31te918",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "really clueless there, have never booted my own server for testing purposes",
+    "ts": "1459452320.000147",
+    "id": "31te919",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "You can do it with that thingy in okhttp",
+    "ts": "1459452533.000148",
+    "id": "31te920",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "MockWebServer ",
+    "ts": "1459452543.000149",
+    "id": "31te921",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "Or something",
+    "ts": "1459452548.000150",
+    "id": "31te922",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "<@U0546QERR>: you shouldn't test other's code",
+    "ts": "1459452579.000151",
+    "id": "31te923",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "Saying that, if you want your app go be rock solid I'd write tests pinging the api and verifying response",
+    "ts": "1459452634.000152",
+    "id": "31te924",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "I assume this way he will know if the API changes and/or something goes wrong",
+    "ts": "1459452639.000153",
+    "id": "31te925",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "But that wpuld be outside the app",
+    "ts": "1459452645.000154",
+    "id": "31te926",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "yeah, that's true, good point",
+    "ts": "1459452657.000155",
+    "id": "31te927",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "A chronjob pinging the api would do the trick",
+    "ts": "1459452671.000156",
+    "id": "31te928",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "App should assume contract is steady",
+    "ts": "1459452683.000157",
+    "id": "31te929",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "We had morons change api before and that's how we solved it",
+    "ts": "1459452709.000158",
+    "id": "31te930",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i guess i was looking at it from a TDD perspective. write the test for the API call before i throw it into the library",
+    "ts": "1459452711.000159",
+    "id": "31te931",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "then after that i don't need the test",
+    "ts": "1459452738.000160",
+    "id": "31te932",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "we had the same, ruby script testing the API because the morons had accidents like “ooops we accidentally put beta into prod so everything is breaking” 2-3 times a month",
+    "ts": "1459452772.000161",
+    "id": "31te933",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "That",
+    "ts": "1459452783.000162",
+    "id": "31te934",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "if reddit changes the API on me they're screwing over way more apps than mine. that is, unless everyone starts using my wrapper &gt;_&gt;",
+    "ts": "1459452830.000163",
+    "id": "31te935",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "Haha",
+    "ts": "1459453142.000164",
+    "id": "31te936",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "That's why APIs should have versioning",
+    "ts": "1459453157.000165",
+    "id": "31te937",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "well, seems like i'm on the right track. thanks for the tips :simple_smile: will focus on testing the library code first and make sure my model and deserialization stuff is working",
+    "ts": "1459453261.000166",
+    "id": "31te938",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "and test the whole path, at least that’s how I’d do it",
+    "ts": "1459453288.000167",
+    "id": "31te939",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "my mock service extends the real service and uses the same gson instance. so i'm just using .json files and deserializing them instead of going through retrofit",
+    "ts": "1459453395.000168",
+    "id": "31te940",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "sorta like the last option in this post but it doesn't use a retrofit instance",
+    "ts": "1459453466.000169",
+    "id": "31te941",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "<http://mdswanson.com/blog/2014/02/24/integration-testing-rest-apis-for-android.html>",
+    "attachments": [
+      {
+        "title": "Matt Swanson - Integration Testing against REST APIs in Android",
+        "title_link": "http://mdswanson.com/blog/2014/02/24/integration-testing-rest-apis-for-android.html",
+        "text": "writing on software, book writeups and projects by a software engineer from Indianapolis",
+        "fallback": "Matt Swanson - Integration Testing against REST APIs in Android",
+        "from_url": "http://mdswanson.com/blog/2014/02/24/integration-testing-rest-apis-for-android.html",
+        "id": 1
+      }
+    ],
+    "ts": "1459453468.000170",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "31te942",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "Yep",
+    "ts": "1459453502.000172",
+    "id": "31te943",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "btw <@U053PPGDC> how’s the book going?",
+    "ts": "1459453546.000173",
+    "id": "31te944",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "decided to get a new job first before doing the book",
+    "ts": "1459453818.000174",
+    "id": "31te945",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "got the outline, as per my talk in amsterdam, but that’s pretty much it",
+    "ts": "1459453837.000175",
+    "id": "31te946",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "so… if skyscanner pans out, I can start on the book :wink:",
+    "ts": "1459453860.000176",
+    "id": "31te947",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "damn, we’ll have two book authors soon on this slack soon",
+    "ts": "1459453899.000177",
+    "id": "31te948",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "/gif we the best",
+    "ts": "1459453905.000178",
+    "id": "31te949",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "",
+    "bot_id": "B0GH4RVHU",
+    "attachments": [
+      {
+        "fallback": "<https://images.rapgenius.com/5833673d42c72dd12cb4078eb757c92f.500x274x12.gif>",
+        "image_url": "https://images.rapgenius.com/5833673d42c72dd12cb4078eb757c92f.500x274x12.gif",
+        "image_width": 500,
+        "image_height": 274,
+        "image_bytes": 975748,
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1459453905.000179",
+    "id": "31te950",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "pretty sure we already have more than that",
+    "ts": "1459453917.000180",
+    "id": "31te951",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": ":open_mouth:",
+    "ts": "1459453921.000181",
+    "id": "31te952",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "really?",
+    "ts": "1459453923.000182",
+    "id": "31te953",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "sure.",
+    "ts": "1459453927.000183",
+    "id": "31te954",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "you, blundell and who else? :open_mouth:",
+    "ts": "1459453932.000184",
+    "id": "31te955",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "well for starters, <@U060Q7J2Y> can basically publish a best of his blogposts :simple_smile:",
+    "ts": "1459453961.000185",
+    "id": "31te956",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "what i do",
+    "ts": "1459453969.000186",
+    "id": "31te957",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": ":joy:",
+    "ts": "1459453971.000187",
+    "id": "31te958",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "damn that was fast",
+    "ts": "1459453976.000188",
+    "id": "31te959",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "notifications bro",
+    "ts": "1459453983.000189",
+    "id": "31te960",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": ":batman:",
+    "ts": "1459453991.000190",
+    "id": "31te961",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "bill jillings is in here (big nerd ranch guide)",
+    "ts": "1459453994.000191",
+    "id": "31te962",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "see! plenty of authors already",
+    "ts": "1459454009.000192",
+    "id": "31te963",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "and bnr is a proper book, not that leanpub thing I’m doing",
+    "ts": "1459454025.000193",
+    "id": "31te964",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": ":open_mouth: damn, didn’t know that",
+    "ts": "1459454036.000194",
+    "id": "31te965",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "im sure we've written enough here to fill a book",
+    "ts": "1459454039.000195",
+    "id": "31te966",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "I don’t write books",
+    "ts": "1459454049.000196",
+    "id": "31te967",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "nothing useful mind you but still..",
+    "ts": "1459454052.000197",
+    "id": "31te968",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "I can barely write blog posts",
+    "ts": "1459454053.000198",
+    "id": "31te969",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "Tweets are more my style",
+    "ts": "1459454057.000199",
+    "id": "31te970",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "dude you have a blogpost for every single topic",
+    "ts": "1459454065.000200",
+    "id": "31te971",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<@U060Q7J2Y>: you just choose a bunch of posts and tweets and send it to an editor",
+    "ts": "1459454074.000201",
+    "id": "31te972",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "if it’s not on stack it’s on your blog",
+    "ts": "1459454075.000202",
+    "id": "31te973",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": ":joy:",
+    "ts": "1459454086.000203",
+    "id": "31te974",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "reddit posts too",
+    "ts": "1459454107.000204",
+    "id": "31te975",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i can't even sit down to write a blog post",
+    "ts": "1459454183.000205",
+    "id": "31te976",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "which sucks because i want to",
+    "ts": "1459454187.000206",
+    "id": "31te977",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "tried standing desks?",
+    "ts": "1459454245.000207",
+    "id": "31te978",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "i can do that",
+    "ts": "1459454248.000208",
+    "id": "31te979",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "one word a day",
+    "ts": "1459454250.000209",
+    "id": "31te980",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "or just do it like that game, where everyone in a circle adds a word, only knowing the previous single word",
+    "ts": "1459454298.000210",
+    "id": "31te981",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "repeat for n-weeks and voila",
+    "ts": "1459454312.000211",
+    "id": "31te982",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "book.",
+    "ts": "1459454317.000212",
+    "id": "31te983",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "it’s because you don’t use vim",
+    "ts": "1459454331.000213",
+    "id": "31te984",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "do it via pull requests",
+    "ts": "1459454332.000214",
+    "id": "31te985",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": ":troll:",
+    "ts": "1459454334.000215",
+    "id": "31te986",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "but get you too, writing posts is so hard. especially since I’m all like “nah everyone knows it already\"",
+    "ts": "1459454354.000216",
+    "id": "31te987",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "or encode it in blockchain",
+    "ts": "1459454356.000217",
+    "id": "31te988",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "I remember when I wanted to write an MVP post and was like “meh everyone wrote about it”. 1 year later and everyone is still writing bout it",
+    "ts": "1459454377.000218",
+    "id": "31te989",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "dude my best received blogpost was on how to use bash",
+    "ts": "1459454380.000219",
+    "id": "31te990",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": ":joy:",
+    "ts": "1459454384.000220",
+    "id": "31te991",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "there's always going to be noobs somewhere",
+    "ts": "1459454394.000221",
+    "id": "31te992",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "yep",
+    "ts": "1459454398.000222",
+    "id": "31te993",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "word",
+    "ts": "1459454401.000223",
+    "id": "31te994",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "heck im still reading up on rx stuff",
+    "ts": "1459454407.000224",
+    "id": "31te995",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "from new blogs",
+    "ts": "1459454412.000225",
+    "id": "31te996",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "that dan lew talk was top",
+    "ts": "1459454430.000226",
+    "id": "31te997",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "i got that queued up on chrome cast",
+    "ts": "1459454440.000227",
+    "id": "31te998",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "lol",
+    "ts": "1459454441.000228",
+    "id": "31te999",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "#nospoilers",
+    "ts": "1459454454.000229",
+    "id": "31te1000",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": ":stuck_out_tongue:",
+    "ts": "1459454455.000230",
+    "id": "31te1001",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "rx v superman",
+    "ts": "1459454477.000231",
+    "id": "31te1002",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "the one posted on slack few hours ago?",
+    "ts": "1459454481.000232",
+    "id": "31te1003",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "ye",
+    "ts": "1459454487.000233",
+    "id": "31te1004",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "yep from droidcon sf",
+    "ts": "1459454488.000234",
+    "id": "31te1005",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "care to drop a link so I can post it to my private sub",
+    "ts": "1459454489.000235",
+    "id": "31te1006",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "can’t find it",
+    "ts": "1459454491.000236",
+    "id": "31te1007",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "oh it’s in dev",
+    "ts": "1459454502.000237",
+    "id": "31te1008",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "<https://www.youtube.com/watch?v=QdmkXL7XikQ>",
+    "attachments": [
+      {
+        "service_name": "YouTube",
+        "service_url": "https://www.youtube.com/",
+        "title": "Common RxJava Mistakes",
+        "title_link": "https://www.youtube.com/watch?v=QdmkXL7XikQ",
+        "author_name": "touchlab",
+        "author_link": "https://www.youtube.com/channel/UC_LIW0OUdsRI21D0xnWkexw",
+        "thumb_url": "https://i.ytimg.com/vi/QdmkXL7XikQ/hqdefault.jpg",
+        "thumb_width": 480,
+        "thumb_height": 360,
+        "fallback": "YouTube Video: Common RxJava Mistakes",
+        "video_html": "<iframe width=\"400\" height=\"225\" src=\"https://www.youtube.com/embed/QdmkXL7XikQ?feature=oembed&autoplay=1&iv_load_policy=3\" frameborder=\"0\" allowfullscreen></iframe>",
+        "video_html_width": 400,
+        "video_html_height": 225,
+        "from_url": "https://www.youtube.com/watch?v=QdmkXL7XikQ",
+        "id": 1
+      }
+    ],
+    "ts": "1459454510.000238",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U0548MM6B"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "31te1009",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "one of top on /r/androiddev",
+    "ts": "1459454519.000240",
+    "id": "31te1010",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N7D6F50",
+    "text": "For the lazy... <https://www.reddit.com/r/androiddev/|https://www.reddit.com/r/androiddev/>",
+    "attachments": [
+      {
+        "service_name": "reddit",
+        "title": "Developing Android Apps • /r/androiddev",
+        "title_link": "https://www.reddit.com/r/androiddev/",
+        "text": "News for Android developers with the who, what, where when and how of the Android community. Probably mostly the how. Here, you'll find: - News...",
+        "fallback": "reddit: Developing Android Apps • /r/androiddev",
+        "thumb_url": "https://www.redditstatic.com/icon.png",
+        "from_url": "https://www.reddit.com/r/androiddev/",
+        "thumb_width": 256,
+        "thumb_height": 256,
+        "id": 1
+      }
+    ],
+    "ts": "1459454519.000241",
+    "id": "31te1011",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "oh didn’t open it",
+    "ts": "1459454540.000243",
+    "id": "31te1012",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<http://arstechnica.com/information-technology/2016/03/xamarin-now-free-in-visual-studio/>",
+    "attachments": [
+      {
+        "service_name": "Ars Technica",
+        "title": "Xamarin now free in Visual Studio",
+        "title_link": "http://arstechnica.com/information-technology/2016/03/xamarin-now-free-in-visual-studio/",
+        "text": "The Xamarin SDK is also being open sourced.",
+        "fallback": "Ars Technica: Xamarin now free in Visual Studio",
+        "image_url": "http://cdn.arstechnica.net/wp-content/uploads/2014/05/xamarin.jpg",
+        "image_width": 250,
+        "image_height": 250,
+        "from_url": "http://arstechnica.com/information-technology/2016/03/xamarin-now-free-in-visual-studio/",
+        "image_bytes": 85765,
+        "id": 1
+      }
+    ],
+    "ts": "1459454548.000244",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "31te1013",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "NOOOOOOOO",
+    "ts": "1459454551.000246",
+    "id": "31te1014",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "why",
+    "ts": "1459454586.000247",
+    "id": "31te1015",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I don’t mind it.",
+    "ts": "1459454604.000248",
+    "id": "31te1016",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "in my experience xamarin apps never end up working or looking good",
+    "ts": "1459454614.000249",
+    "id": "31te1017",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "this means more of them :confused:",
+    "ts": "1459454622.000250",
+    "id": "31te1018",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "tbh depends on what you need.",
+    "ts": "1459454625.000251",
+    "id": "31te1019",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I’d use xamarin if I had to build some internal corporate app that had to run all platforms",
+    "ts": "1459454649.000252",
+    "id": "31te1020",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "especially now w/ bottom tabs layout",
+    "ts": "1459454665.000253",
+    "id": "31te1021",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "well I think that’s their target market mostly",
+    "ts": "1459454675.000254",
+    "id": "31te1022",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "but this means that other companies that want to save money are gonna start using it",
+    "ts": "1459454688.000255",
+    "id": "31te1023",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "yes and crash and burn",
+    "ts": "1459454697.000256",
+    "id": "31te1024",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "it’s not like users will notice",
+    "ts": "1459454703.000257",
+    "id": "31te1025",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "and they already think development is a cheap process and don’t care about tech",
+    "ts": "1459454705.000258",
+    "id": "31te1026",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "it will be better than seeing phonegap apps, but still, haven’t seen an app written in xamarin that I wanted to use :confused:",
+    "ts": "1459454753.000259",
+    "id": "31te1027",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "all about react baby :troll:",
+    "ts": "1459454823.000260",
+    "id": "31te1028",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": ":smile:",
+    "ts": "1459454913.000261",
+    "id": "31te1029",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "all about react, bout react, no native",
+    "ts": "1459455015.000262",
+    "id": "31te1030",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "/gif all about that bass",
+    "ts": "1459455021.000263",
+    "id": "31te1031",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "",
+    "bot_id": "B0GH4RVHU",
+    "attachments": [
+      {
+        "fallback": "<http://38.media.tumblr.com/f7d639486ac1cf0597f6d1f5798d9144/tumblr_n72yd0UL971qd4z2ko3_500.gif>",
+        "image_url": "http://38.media.tumblr.com/f7d639486ac1cf0597f6d1f5798d9144/tumblr_n72yd0UL971qd4z2ko3_500.gif",
+        "image_width": 500,
+        "image_height": 500,
+        "image_bytes": 1009595,
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1459455021.000264",
+    "id": "31te1032",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

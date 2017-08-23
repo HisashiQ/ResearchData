@@ -1,0 +1,968 @@
+[
+  {
+    "user": "U04TK850N",
+    "text": "Hm, I have a LoaderManager in a Fragment. I call initLoader() in onResume() and construct tabs for a TabHost/ViewPager once the data returns. This works fine for device rotation for example, but when I turn the screen off and back on, it adds an additional tab and then crashes on the next interaction :confused:",
+    "ts": "1449652060.000229",
+    "id": "09tr3194",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "With `java.lang.IllegalStateException: Recursive entry to executePendingTransactions`",
+    "ts": "1449652086.000230",
+    "id": "09tr3195",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I’m just wondering why it works when entering onResume() from rotation but doesn’t when just turning the screen off and back on",
+    "ts": "1449652152.000231",
+    "id": "09tr3196",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I assume that on rotation my Activity/Fragment gets recreated which clears the tabs, but not on the screen off/on flow?",
+    "ts": "1449652186.000232",
+    "id": "09tr3197",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "But then, how to know?",
+    "ts": "1449652196.000233",
+    "id": "09tr3198",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "I’m using RxJava and facing a difficult problem",
+    "ts": "1449666512.000234",
+    "id": "09tr3199",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0DLPBRB5|thanh> uploaded a file: <https://androidchat.slack.com/files/thanh/F0G7ZE0NL/RxJava.java|RxJava>",
+    "file": {
+      "id": "F0G7ZE0NL",
+      "created": 1449666526,
+      "timestamp": 1449666526,
+      "name": "RxJava.java",
+      "title": "RxJava",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U0DLPBRB5",
+      "editable": true,
+      "size": 363,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0G7ZE0NL/RxJava.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0G7ZE0NL/download/RxJava.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/thanh/F0G7ZE0NL/RxJava.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0G7ZE0NL-8670a82df7",
+      "edit_link": "https://androidchat.slack.com/files/thanh/F0G7ZE0NL/RxJava.java/edit",
+      "preview": "Observable.just(filename) // directory name\n\t.map(filename -> File) // directory\n\t.flatMapIterable(file -> files) // all files in the directory\n\t.flatMap(file -> upload2Server()) // upload file to server\n\t.filter(response -> isSuccess()) // upload is success or not",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-variable\">Observable</span>.<span class=\"cm-variable\">just</span>(<span class=\"cm-variable\">filename</span>) <span class=\"cm-comment\">// directory name</span></pre></div>\n<div><pre>\t.<span class=\"cm-variable\">map</span>(<span class=\"cm-variable\">filename</span> <span class=\"cm-operator\">-&gt;</span> <span class=\"cm-variable\">File</span>) <span class=\"cm-comment\">// directory</span></pre></div>\n<div><pre>\t.<span class=\"cm-variable\">flatMapIterable</span>(<span class=\"cm-variable\">file</span> <span class=\"cm-operator\">-&gt;</span> <span class=\"cm-variable\">files</span>) <span class=\"cm-comment\">// all files in the directory</span></pre></div>\n<div><pre>\t.<span class=\"cm-variable\">flatMap</span>(<span class=\"cm-variable\">file</span> <span class=\"cm-operator\">-&gt;</span> <span class=\"cm-variable\">upload2Server</span>()) <span class=\"cm-comment\">// upload file to server</span></pre></div>\n<div><pre>\t.<span class=\"cm-variable\">filter</span>(<span class=\"cm-variable\">response</span> <span class=\"cm-operator\">-&gt;</span> <span class=\"cm-variable\">isSuccess</span>()) <span class=\"cm-comment\">// upload is success or not</span></pre></div>\n</div>\n</div>\n",
+      "lines": 6,
+      "lines_more": 1,
+      "preview_is_truncated": null,
+      "channels": [
+        "C0565EVTD"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U0DLPBRB5",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0DLPBRB5|thanh>",
+    "bot_id": null,
+    "ts": "1449666526.000235",
+    "id": "09tr3200",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "anyone have any ideal for this?",
+    "ts": "1449666547.000236",
+    "id": "09tr3201",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "Thanks",
+    "ts": "1449666548.000237",
+    "id": "09tr3202",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<@U04TK850N>:  if you are adding views, you should really be adding them in onCreate which guarantees they will only be created once. Configuration of the views should happen in onResume so it sounds like you would be best off to have two steps (init and config)",
+    "edited": {
+      "user": "U055GGAHS",
+      "ts": "1449667295.000000"
+    },
+    "ts": "1449667269.000238",
+    "id": "09tr3203",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "hm, I’d have to look into that. At the moment I have no idea how many and what kind of tabs/fragments I will add before the DB returns the data",
+    "ts": "1449670394.000240",
+    "id": "09tr3204",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "where my security pros at? I have a Cipher/decryption problem harrowing me right now",
+    "ts": "1449682676.000242",
+    "id": "09tr3205",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "I’ve been initializing a Cipher via `Cipher.getInstance(“RSA/ECB/PKCS1Padding”, “AndroidOpenSSL”);` and trying to encrypt and decrypt a set of data in 128  bit blocks",
+    "ts": "1449682811.000243",
+    "id": "09tr3206",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "However, in Android 6+, apparently you aren’t supposed to be using the `AndroidOpenSSL` Provider explicitly",
+    "ts": "1449682851.000244",
+    "id": "09tr3207",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "When I remove the provider though, I’m getting an `IOException: Error while finalizing Cipher`, which I believe is being caused by an  `IllegalBlockSizeException`",
+    "ts": "1449682925.000245",
+    "id": "09tr3208",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "From what I can tell, it’s encrypting just fine, but the decryption crashes. All of this works prior to Android 6 perfectly, while using the `AndroidOpenSSL` provider.",
+    "ts": "1449682977.000246",
+    "id": "09tr3209",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "any thoughts?",
+    "ts": "1449682986.000247",
+    "id": "09tr3210",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0A0S0WG0|jwhite> uploaded a file: <https://androidchat.slack.com/files/jwhite/F0G8PU2TA/stupid_security.java|Stupid Security> and commented: Crash happens on line 30.",
+    "file": {
+      "id": "F0G8PU2TA",
+      "created": 1449683068,
+      "timestamp": 1449683068,
+      "name": "Stupid_Security.java",
+      "title": "Stupid Security",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U0A0S0WG0",
+      "editable": true,
+      "size": 2091,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0G8PU2TA/stupid_security.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0G8PU2TA/download/stupid_security.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/jwhite/F0G8PU2TA/stupid_security.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0G8PU2TA-05914f819f",
+      "edit_link": "https://androidchat.slack.com/files/jwhite/F0G8PU2TA/stupid_security.java/edit",
+      "preview": "public byte[] readBytes(File encryptedFile) {\r\n        try {\r\n\r\n//            Cipher outCipher = Cipher.getInstance(AlgorithmName, \"AndroidOpenSSL\");\r\n            Cipher outCipher = Cipher.getInstance(AlgorithmName);\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-keyword\">public</span> <span class=\"cm-keyword\">byte</span>[] <span class=\"cm-variable\">readBytes</span>(<span class=\"cm-variable\">File</span> <span class=\"cm-variable\">encryptedFile</span>) {</pre></div>\n<div><pre>        <span class=\"cm-keyword\">try</span> {</pre></div>\n<div><pre>&#8203;</pre></div>\n<div><pre><span class=\"cm-comment\">//            Cipher outCipher = Cipher.getInstance(AlgorithmName, &quot;AndroidOpenSSL&quot;);</span></pre></div>\n<div><pre>            <span class=\"cm-variable\">Cipher</span> <span class=\"cm-variable\">outCipher</span> <span class=\"cm-operator\">=</span> <span class=\"cm-variable\">Cipher</span>.<span class=\"cm-variable\">getInstance</span>(<span class=\"cm-variable\">AlgorithmName</span>);</pre></div>\n</div>\n</div>\n",
+      "lines": 56,
+      "lines_more": 51,
+      "preview_is_truncated": null,
+      "channels": [
+        "C0565EVTD"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 1,
+      "initial_comment": {
+        "id": "Fc0G8PCS3H",
+        "created": 1449683068,
+        "timestamp": 1449683068,
+        "user": "U0A0S0WG0",
+        "is_intro": true,
+        "comment": "Crash happens on line 30.",
+        "channel": ""
+      }
+    },
+    "user": "U0A0S0WG0",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0A0S0WG0|jwhite>",
+    "bot_id": null,
+    "ts": "1449683069.000248",
+    "id": "09tr3211",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I'd actually need to run the code to say anything, but something doesn't feel right ",
+    "ts": "1449683222.000249",
+    "id": "09tr3212",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "what bit doesn’t feel right?",
+    "ts": "1449683408.000250",
+    "id": "09tr3213",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "let me check on a phone",
+    "ts": "1449683433.000251",
+    "id": "09tr3214",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "want me to just shoot over the whole class to you?",
+    "ts": "1449683465.000252",
+    "id": "09tr3215",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "that bit should be enough",
+    "ts": "1449683540.000253",
+    "id": "09tr3216",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "oh, maybe the encryption code wouuld help :smile:",
+    "ts": "1449683553.000254",
+    "id": "09tr3217",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "haha k",
+    "ts": "1449683557.000255",
+    "id": "09tr3218",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0A0S0WG0|jwhite> uploaded a file: <https://androidchat.slack.com/files/jwhite/F0G8Q8FFH/-.java|Untitled>",
+    "file": {
+      "id": "F0G8Q8FFH",
+      "created": 1449683610,
+      "timestamp": 1449683610,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U0A0S0WG0",
+      "editable": true,
+      "size": 2363,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0G8Q8FFH/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0G8Q8FFH/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/jwhite/F0G8Q8FFH/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0G8Q8FFH-c042d09346",
+      "edit_link": "https://androidchat.slack.com/files/jwhite/F0G8Q8FFH/-.java/edit",
+      "preview": "public void writeBytes(byte[] data, File outputFile) {\r\n        try {\r\n\r\n\t\t\t//BlockSize = 128\r\n            // Create Cipher to encode the data\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-keyword\">public</span> <span class=\"cm-keyword\">void</span> <span class=\"cm-variable\">writeBytes</span>(<span class=\"cm-keyword\">byte</span>[] <span class=\"cm-variable\">data</span>, <span class=\"cm-variable\">File</span> <span class=\"cm-variable\">outputFile</span>) {</pre></div>\n<div><pre>        <span class=\"cm-keyword\">try</span> {</pre></div>\n<div><pre>&#8203;</pre></div>\n<div><pre>\t\t\t<span class=\"cm-comment\">//BlockSize = 128</span></pre></div>\n<div><pre>            <span class=\"cm-comment\">// Create Cipher to encode the data</span></pre></div>\n</div>\n</div>\n",
+      "lines": 61,
+      "lines_more": 56,
+      "preview_is_truncated": null,
+      "channels": [
+        "C0565EVTD"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U0A0S0WG0",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0A0S0WG0|jwhite>",
+    "bot_id": null,
+    "ts": "1449683610.000256",
+    "id": "09tr3219",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "thx",
+    "ts": "1449683642.000257",
+    "id": "09tr3220",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "will poke at it",
+    "ts": "1449683646.000258",
+    "id": "09tr3221",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "appreciate it man",
+    "ts": "1449683653.000259",
+    "id": "09tr3222",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "you have been a lifesaver with some of this security stuff",
+    "ts": "1449683664.000260",
+    "id": "09tr3223",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I'll have to implement some more of it tomorrow :confused:",
+    "ts": "1449683695.000261",
+    "id": "09tr3224",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "luckily all standard this time, nothing custom",
+    "ts": "1449683705.000262",
+    "id": "09tr3225",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "wait wait",
+    "edited": {
+      "user": "U04TK850N",
+      "ts": "1449683935.000000"
+    },
+    "ts": "1449683931.000263",
+    "id": "09tr3226",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "`RSA/ECB/PKCS1Padding` &lt; Are you sure you want RSA?",
+    "edited": {
+      "user": "U04TK850N",
+      "ts": "1449683953.000000"
+    },
+    "ts": "1449683944.000265",
+    "id": "09tr3227",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "cause that is not a block cipher, you might want to use AES?",
+    "ts": "1449683969.000267",
+    "id": "09tr3228",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "yes, I’m pretty sure",
+    "ts": "1449684630.000268",
+    "id": "09tr3229",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "maybe not though?",
+    "ts": "1449684634.000269",
+    "id": "09tr3230",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "well, RSA would ignore the ECB for example cause it isn't a blockcipher",
+    "ts": "1449684693.000270",
+    "id": "09tr3231",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "you usually use RSA to encrypt the AES key",
+    "ts": "1449684704.000271",
+    "id": "09tr3232",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "hmm okay",
+    "ts": "1449684710.000272",
+    "id": "09tr3233",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "you mind if i message you in a little bit?",
+    "ts": "1449684716.000273",
+    "id": "09tr3234",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "i gotta step out for a while",
+    "ts": "1449684721.000274",
+    "id": "09tr3235",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "sure",
+    "ts": "1449684727.000275",
+    "id": "09tr3236",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "kk",
+    "ts": "1449684730.000276",
+    "id": "09tr3237",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "wow, AS even gives a warning about it for me",
+    "ts": "1449685219.000277",
+    "id": "09tr3238",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

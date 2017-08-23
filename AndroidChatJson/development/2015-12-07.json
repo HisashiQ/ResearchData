@@ -1,0 +1,1006 @@
+[
+  {
+    "user": "U0G2DE14P",
+    "subtype": "channel_join",
+    "text": "<@U0G2DE14P|steveappdev> has joined the channel",
+    "ts": "1449488245.002083",
+    "id": "07de17752",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G2VBAHF",
+    "subtype": "channel_join",
+    "text": "<@U0G2VBAHF|guillaume> has joined the channel",
+    "ts": "1449502744.002084",
+    "id": "07de17753",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G1UFLUC",
+    "text": "Ok, So regarding `RecyclerView` and `LinearLayoutManager` If I add something to my adapter it does something async. meaning I can’t check `findLastVisibleItemPosition()` directly after I added items.\nDo anyone know of a callback or something when I can check if the items I’ve added are visible for the `LinearLayoutManager `? (I haven’t looked into the source code yet)",
+    "ts": "1449509212.002085",
+    "id": "07de17754",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "I believe items are visible as soon as you notify the adapter that an Item was added or notify was changed, tho you can set an ItemAnimator that happens when Item is added.",
+    "ts": "1449509605.002086",
+    "id": "07de17755",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G1UFLUC",
+    "text": "<@U0548MM6B>: Nope, that is not true in my findings :disappointed: \nIf wait 10ms or something small for the call(findLastVisibleItemPosition()), it will return the correct value. \nSo something is happening async from when notify has been called to when the items are actually attached to the RecyclerView.",
+    "ts": "1449509929.002087",
+    "id": "07de17756",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "in iOS you have the ability to tweak the settings for a particular app in the Main Settings screen (ie - outside of the app itself). Is there a way to do that with Android? Provide a mechanism of changing base settings without having to open the app?",
+    "ts": "1449513235.002088",
+    "id": "07de17757",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "not really.. you could provide widgets that allow configuration of various features but that isn’t really what you are asking for",
+    "ts": "1449513297.002089",
+    "id": "07de17758",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "alternately you could provide a launcher icon directly to the settings activity but again that isn’t really what you are talking about",
+    "ts": "1449513341.002090",
+    "id": "07de17759",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "lol…yeah that’s what I suspected, thanks <@U055GGAHS> .",
+    "ts": "1449513383.002091",
+    "id": "07de17760",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "oh its worth noting that live wallpapers maybe the exception as the launcher actually directly launches the settings",
+    "ts": "1449513470.002092",
+    "id": "07de17761",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "(if settings are provided and also if you dont have one of those fucked up versions of touchwiz where they forgot to allow wallpapers to have the settings)",
+    "ts": "1449513511.002093",
+    "id": "07de17762",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "yeah for what the business is asking for, it would just make more sense to change the settings inside the app. I think they were just looking for a different place outside the app to direct users when needed.",
+    "ts": "1449513625.002094",
+    "id": "07de17763",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G1UFLUC",
+    "text": "<@U0DC95VCP>: That is an iOS concept and something I find confusing since that list becomes huge quickly. \nIn Android settings are inside the app of which it belongs.",
+    "ts": "1449514419.002095",
+    "id": "07de17764",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "<@U0G1UFLUC>: I agree completely",
+    "ts": "1449514442.002096",
+    "id": "07de17765",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "On HTC devices you can actually hook up your own activity into the system settings by providing some proprietary manifest meta data. But yeah just HTC ",
+    "ts": "1449516312.002097",
+    "id": "07de17766",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G1UFLUC",
+    "text": "<@U04TK850N>: Not sure why you would do that either way.",
+    "ts": "1449516381.002098",
+    "id": "07de17767",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G1UFLUC",
+    "text": "That is not the taught behavior to access settings on Android",
+    "edited": {
+      "user": "U0G1UFLUC",
+      "ts": "1449516413.000000"
+    },
+    "ts": "1449516407.002099",
+    "id": "07de17768",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<@U04TK850N>: good call I remember something about that now",
+    "ts": "1449516408.002100",
+    "id": "07de17769",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "you can access it via long press on the process in multi task right",
+    "ts": "1449516429.002102",
+    "id": "07de17770",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "or something like that",
+    "ts": "1449516434.002103",
+    "id": "07de17771",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "but yea.. app would have to be running or you go dig through several screens of settings",
+    "ts": "1449516455.002104",
+    "id": "07de17772",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "not very useful",
+    "ts": "1449516458.002105",
+    "id": "07de17773",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G1UFLUC",
+    "text": "Long press is something else I’m allergic too :simple_smile:",
+    "ts": "1449516469.002106",
+    "id": "07de17774",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "same",
+    "ts": "1449516506.002107",
+    "id": "07de17775",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETA9WHH",
+    "text": "long press is perfectly fine to include, but consider it an advanced user shortcut",
+    "ts": "1449516544.002108",
+    "id": "07de17776",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "```&lt;activity\n\t\t\tandroid:name=\"com.sensetoolbox.six.GateWay\"\n\t\t\tandroid:enabled=\"true\"\n\t\t\tandroid:excludeFromRecents=\"true\"\n\t\t\tandroid:theme=\"@style/Invisible\"\n\t\t\tandroid:icon=\"@drawable/ic_for_settings\" &gt;\n\t\t\t&lt;intent-filter&gt;\n\t\t\t\t&lt;action android:name=\"android.intent.action.MAIN\" /&gt;\n\t\t\t\t&lt;category android:name=\"com.htc.settings.category.PLUGIN_ENTRY\" /&gt;\n\t\t\t&lt;/intent-filter&gt;\n\t\t\t&lt;meta-data android:name=\"plugAnchorItem\" android:value=\"personalize\"/&gt;\n\t\t\t&lt;meta-data android:name=\"plugAnchorShift\" android:value=\"-1.0\"/&gt;\n\t\t\t&lt;meta-data android:name=\"plugLaunchType\" android:value=\"activity\"/&gt;\n\t\t\t&lt;meta-data android:name=\"plugLaunchTarget\" android:value=\"intent:#Intent;component=com.sensetoolbox.six/.MainActivity;end\"/&gt;\n\t\t&lt;/activity&gt;``` ",
+    "ts": "1449516556.002109",
+    "id": "07de17777",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "That's how you do it on HTC ",
+    "ts": "1449516569.002110",
+    "id": "07de17778",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "At least that worked on Sense 6 ",
+    "ts": "1449516629.002111",
+    "id": "07de17779",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G1UFLUC",
+    "text": "<@U0ETA9WHH>: I agree that it can be used as an advanced shortcut, but to many rely on it for various functionality or did at least.\nBasically no users find and/or use long press",
+    "ts": "1449516648.002112",
+    "id": "07de17780",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G1UFLUC",
+    "text": "HTCs market share is so little nowadays that it makes even less sense now :simple_smile:",
+    "edited": {
+      "user": "U0G1UFLUC",
+      "ts": "1449516696.000000"
+    },
+    "ts": "1449516683.002113",
+    "id": "07de17781",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Sadly true ",
+    "ts": "1449516709.002115",
+    "id": "07de17782",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "That app is HTC specific tho, just for reference ",
+    "ts": "1449516723.002116",
+    "id": "07de17783",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "That's why we did it ",
+    "ts": "1449516728.002117",
+    "id": "07de17784",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETA9WHH",
+    "text": "agreed, we’ve actually added in long press functionality to our app after seeing in analytics that users were trying to long press in a couple specific spots",
+    "ts": "1449516730.002118",
+    "id": "07de17785",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "&gt;&gt;HTCs market share is so little nowadays that it makes even less sense now :simple_smile:(edited)\n\nI see what you did there :wink:",
+    "edited": {
+      "user": "U04U5KS3Z",
+      "ts": "1449516787.000000"
+    },
+    "ts": "1449516775.002119",
+    "id": "07de17786",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G1UFLUC",
+    "text": "_*whistling*_ :wink:",
+    "edited": {
+      "user": "U0G1UFLUC",
+      "ts": "1449516836.000000"
+    },
+    "ts": "1449516829.002121",
+    "id": "07de17787",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G1UFLUC",
+    "text": "<@U0ETA9WHH>: Ah! I like that you did that :simple_smile:",
+    "ts": "1449516909.002123",
+    "id": "07de17788",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G1UFLUC",
+    "text": "That’s how we all should use analytics imho",
+    "ts": "1449516922.002124",
+    "id": "07de17789",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G3J9KK2",
+    "subtype": "channel_join",
+    "text": "<@U0G3J9KK2|taivokasper> has joined the channel",
+    "ts": "1449516961.002125",
+    "id": "07de17790",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G1UFLUC",
+    "text": "<@U04TK850N>: Yeah it’s pretty sad.",
+    "ts": "1449516963.002126",
+    "id": "07de17791",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G1UFLUC",
+    "text": "<@U0ETA9WHH>: What did the users want to long press on, if I may ask?",
+    "ts": "1449516986.002127",
+    "id": "07de17792",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "The screen :troll: ",
+    "ts": "1449517048.002128",
+    "id": "07de17793",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "shows himself out",
+    "subtype": "me_message",
+    "user": "U04TK850N",
+    "ts": "1449517065.002129",
+    "id": "07de17794",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETA9WHH",
+    "text": "items in a listadapter, basically events on their schedule",
+    "ts": "1449517145.002130",
+    "id": "07de17795",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ETA9WHH",
+    "text": "in this case, we tied long press to provide easy removal",
+    "ts": "1449517236.002131",
+    "id": "07de17796",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G1UFLUC",
+    "text": "That toggled checking items for ListView in Android. Not sure how true that is still.",
+    "ts": "1449517365.002132",
+    "id": "07de17797",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "<https://github.com/pakoito/RxTuples>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "pakoito/RxTuples",
+        "title_link": "https://github.com/pakoito/RxTuples",
+        "text": "RxTuples - Simple tuples to use with RxJava",
+        "fallback": "GitHub: pakoito/RxTuples",
+        "thumb_url": "https://avatars1.githubusercontent.com/u/514871?v=3&s=400",
+        "from_url": "https://github.com/pakoito/RxTuples",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1449525948.002133",
+    "id": "07de17798",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "need some review before sending to /r/androiddev",
+    "ts": "1449525957.002135",
+    "id": "07de17799",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "just an FYI",
+    "ts": "1449526366.002136",
+    "id": "07de17800",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<https://github.com/square/retrofit/issues/1069>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "Implicit Call cancels for SPDY/3 &amp; HTTP/2 connections can perform network I/O. · Issue #1069 · square/retrofit · GitHub",
+        "title_link": "https://github.com/square/retrofit/issues/1069",
+        "text": "java.lang.IllegalStateException: Fatal Exception thrown on Scheduler.Worker thread. at rx.internal.schedulers.ScheduledAction.run(ScheduledAction.java:62) at android.os.Hand...",
+        "fallback": "GitHub: Implicit Call cancels for SPDY/3 &amp; HTTP/2 connections can perform network I/O. · Issue #1069 · square/retrofit",
+        "thumb_url": "https://avatars2.githubusercontent.com/u/66577?v=3&s=400",
+        "from_url": "https://github.com/square/retrofit/issues/1069",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1449526367.002137",
+    "id": "07de17801",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "closed now",
+    "ts": "1449526372.002139",
+    "id": "07de17802",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G4JHERF",
+    "subtype": "channel_join",
+    "text": "<@U0G4JHERF|abhi> has joined the channel",
+    "ts": "1449551768.002140",
+    "id": "07de17803",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0G4HQX7F",
+    "subtype": "channel_join",
+    "text": "<@U0G4HQX7F|hkurokawa> has joined the channel",
+    "ts": "1449556559.002141",
+    "id": "07de17804",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

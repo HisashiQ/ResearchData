@@ -1,0 +1,146 @@
+[
+  {
+    "user": "U1F6XGM6V",
+    "text": "Any android devs wanting to collaborate on a currently iOS-only app let me know",
+    "ts": "1473532617.000287",
+    "id": "10co5085",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "```\n@module myProgram\n\nmain: (args: array(string)) -&gt; (\n  println \"hello, world!\\n\"\n)\n```",
+    "ts": "1473551974.000288",
+    "id": "10co5086",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "so I now have a C++ parser that takes that, and spits out:\n```\n1: IDENT(@module) . IDENT(myProgram) . EOL\n2: EOL\n3: IDENT(main) . COLON . LPAREN . IDENT(args) . COLON . IDENT(array) . LPAREN . IDENT(string) . RPAREN . RPAREN . ARROW . LPAREN . EOL\n4: IDENT(println) . IDENT(hello) . COMMA . IDENT(world) . IDENT(n) . EOL\n5: RPAREN . EOL\n6: EOL\n7: EOF . \n```",
+    "ts": "1473551996.000289",
+    "id": "10co5087",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "(as you can see, it doesn't recognize string literals yet)",
+    "ts": "1473552011.000290",
+    "id": "10co5088",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "```\n1: IDENT(@module) . IDENT(myProgram) . EOL\n2: EOL\n3: IDENT(main) . COLON . LPAREN . IDENT(args) . COLON . IDENT(array) . LPAREN . IDENT(string) . RPAREN . RPAREN . ARROW . LPAREN . EOL\n4: IDENT(println) . STR(\"hello, \\\" world!\\n\") . EOL\n5: RPAREN . EOL\n6: EOL\n7: EOF . \n```",
+    "ts": "1473552652.000291",
+    "id": "10co5089",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "and now it does, whoo",
+    "ts": "1473552656.000292",
+    "id": "10co5090",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "```\nParsing the following text:\n\n@module myProgram\n\nmain: (args: array(string)) -&gt; (\n  one: 1\n  pi: 3.14159\n  notFound: .404\n  weird: 10.10.1.1\n  ch: 'c'; qu: '\\''\n  println \"hello, \\\" world!\\n\"\n)\n\n\n1: IDENT(@module) . WS . IDENT(myProgram) . EOL\n2: EOL\n3: IDENT(main) . COLON . WS . LPAREN . IDENT(args) . COLON . WS . IDENT(array) . LPAREN . IDENT(string) . RPAREN . RPAREN . WS . ARROW . WS . LPAREN . EOL\n4: WS . IDENT(one) . COLON . WS . NUM(1) . EOL\n5: WS . IDENT(pi) . COLON . WS . NUM(3.14159) . EOL\n6: WS . IDENT(notFound) . COLON . WS . NUM(.404) . EOL\n7: WS . IDENT(weird) . COLON . WS . NUM(10.10) . NUM(.1) . NUM(.1) . EOL\n8: WS . IDENT(ch) . COLON . WS . CHAR('c') . SEMI . WS . IDENT(qu) . COLON . WS . CHAR('\\'') . EOL\n9: WS . IDENT(println) . WS . STR(\"hello, \\\" world!\\n\") . EOL\n10: RPAREN . EOL\n11: EOL\n12: EOF . \n```",
+    "ts": "1473560463.000293",
+    "id": "10co5091",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "hooray for zero keywords",
+    "ts": "1473560522.000294",
+    "id": "10co5092",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

@@ -1,0 +1,3840 @@
+[
+  {
+    "user": "U07EZA9ND",
+    "subtype": "channel_join",
+    "text": "<@U07EZA9ND|intelliot> has joined the channel",
+    "ts": "1436558026.001246",
+    "id": "10tr1175",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "did anyone try updating to AS 1.3 RC 1? i've been getting a bunch of obscure errors that aren't turning up much in google",
+    "ts": "1436577766.001247",
+    "id": "10tr1176",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U0546QERR>: I've been using it today",
+    "ts": "1436577789.001248",
+    "id": "10tr1177",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "previously I had downloaded the NDK separately but I switched to keeping it in the SDK folder like they put it when you download it through the IDE, I doubt that would cause any problems",
+    "ts": "1436577852.001249",
+    "id": "10tr1178",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "but it told me I had to switch to the experimental gradle plugin, 1.3.0-beta4 i guess?",
+    "ts": "1436577876.001250",
+    "id": "10tr1179",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "and after applying that I'm getting `Error:Execution failed for task ':app:compileDebugNdk'. &gt; com.android.ide.common.process.ProcessException: org.gradle.process.internal.ExecException: Process 'command '~\\Android SDK\\ndk-bundle\\ndk-build.cmd'' finished with non-zero exit value 1`",
+    "ts": "1436577898.001251",
+    "id": "10tr1180",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "No, there's a new experimental gradle plugin separate from 1.3",
+    "ts": "1436577916.001252",
+    "id": "10tr1181",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "what does your project's build.gradle look like?",
+    "ts": "1436577931.001253",
+    "id": "10tr1182",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "if you have it handy",
+    "ts": "1436577937.001254",
+    "id": "10tr1183",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "`classpath 'com.android.tools.build:gradle:1.3.0-beta4'` is what i tried",
+    "ts": "1436577964.001255",
+    "id": "10tr1184",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U0546QERR>: well I'm not using the experimental plugin, but docs for setting it up are here: <http://tools.android.com/tech-docs/new-build-system/gradle-experimental>",
+    "attachments": [
+      {
+        "title": "Experimental Plugin User Guide - Android Tools Project Site",
+        "title_link": "http://tools.android.com/tech-docs/new-build-system/gradle-experimental",
+        "text": "Android tools project information site",
+        "fallback": "Experimental Plugin User Guide - Android Tools Project Site",
+        "from_url": "http://tools.android.com/tech-docs/new-build-system/gradle-experimental",
+        "thumb_url": "http://www.google.com/a/cpanel/android.com/images/logo.gif?service=google_default",
+        "thumb_width": 143,
+        "thumb_height": 59,
+        "id": 1
+      }
+    ],
+    "ts": "1436577967.001256",
+    "id": "10tr1185",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "`classpath 'com.android.tools.build:gradle-experimental:0.1.0'`",
+    "ts": "1436577990.001258",
+    "id": "10tr1186",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "oh wait yeah i had tried that last night too",
+    "ts": "1436578004.001259",
+    "id": "10tr1187",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "lol @ this being experimental as if anything else right now is stable",
+    "ts": "1436578025.001260",
+    "id": "10tr1188",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "pretty much everything was late last night so it's kinda hazy but i'll give that other plugin a shot",
+    "ts": "1436578028.001261",
+    "id": "10tr1189",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "well the experimental plugin requires a rewrite of your build.gradle, essentially",
+    "ts": "1436578029.001262",
+    "id": "10tr1190",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "yeahhh i did all that",
+    "ts": "1436578036.001263",
+    "id": "10tr1191",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "love these blurry fucking lines they are drawing",
+    "ts": "1436578037.001264",
+    "id": "10tr1192",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "but i was getting a similar error",
+    "ts": "1436578042.001265",
+    "id": "10tr1193",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U055GGAHS>: agreed",
+    "ts": "1436578043.001266",
+    "id": "10tr1194",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i'll unstash my changes and try it again",
+    "ts": "1436578052.001267",
+    "id": "10tr1195",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "*shrug* I wouldn't use the NDK build system anyway",
+    "ts": "1436578088.001268",
+    "id": "10tr1196",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "omg that webpage",
+    "ts": "1436578307.001269",
+    "id": "10tr1197",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U055GGAHS|ian.shaun.thomas> uploaded a file: <https://androidchat.slack.com/files/ian.shaun.thomas/F07FHBNNP/-.txt|Untitled>",
+    "file": {
+      "id": "F07FHBNNP",
+      "created": 1436578319,
+      "timestamp": 1436578319,
+      "name": "-.txt",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "text",
+      "pretty_type": "Plain Text",
+      "user": "U055GGAHS",
+      "editable": true,
+      "size": 52,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F07FHBNNP/-.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F07FHBNNP/download/-.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/ian.shaun.thomas/F07FHBNNP/-.txt",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F07FHBNNP-a18ccc52c0",
+      "edit_link": "https://androidchat.slack.com/files/ian.shaun.thomas/F07FHBNNP/-.txt/edit",
+      "preview": "Current DSL Limitations that will hopefully go away:",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>Current DSL Limitations that will hopefully go away:</pre></div>\n</div>\n</div>\n",
+      "lines": 1,
+      "lines_more": 0,
+      "preview_is_truncated": false,
+      "channels": [
+        "C0565EVTD"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U055GGAHS",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U055GGAHS|ian.shaun.thomas>",
+    "bot_id": null,
+    "ts": "1436578319.001270",
+    "id": "10tr1198",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "seriously??",
+    "ts": "1436578321.001271",
+    "id": "10tr1199",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "'hopefully'",
+    "ts": "1436578326.001272",
+    "id": "10tr1200",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "they've clearly thought this through",
+    "ts": "1436578335.001273",
+    "id": "10tr1201",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "extensively",
+    "ts": "1436578338.001274",
+    "id": "10tr1202",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "are guys just smashing on the keyboard over there 'hopefully we fix the design problems'",
+    "ts": "1436578339.001275",
+    "id": "10tr1203",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "'i dunno we will see I guess'",
+    "ts": "1436578347.001276",
+    "id": "10tr1204",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I'm gonna side with <@U0542GLTE> on this one, they must have their interns working on the android build system",
+    "edited": {
+      "user": "U055GGAHS",
+      "ts": "1436578385.000000"
+    },
+    "ts": "1436578379.001277",
+    "id": "10tr1205",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Wut. ",
+    "ts": "1436578412.001279",
+    "id": "10tr1206",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "and im glad to see it is 'isMinifiyEnabled' now because everyone knows 'minifyEnabled' and 'runPrograurd' where failure attribute names",
+    "ts": "1436578449.001280",
+    "id": "10tr1207",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "gotta get those boolean flags perfect",
+    "ts": "1436578468.001281",
+    "id": "10tr1208",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "yeah i really wonder why that was a completely necessary change",
+    "ts": "1436578473.001282",
+    "id": "10tr1209",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "hell, couldn't they just make them both work? if they really wanted that name haha",
+    "ts": "1436578495.001283",
+    "id": "10tr1210",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "NDK is a bastard I learned today",
+    "ts": "1436578500.001284",
+    "id": "10tr1211",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "So much easier in eclipse, and I want to vomit for saying that",
+    "ts": "1436578518.001285",
+    "id": "10tr1212",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "dude get over it, eclipse was boss",
+    "ts": "1436578531.001286",
+    "id": "10tr1213",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "this is also another beast error i have been struggling with, after switching to that other plugin and making all of the build.gradle changes",
+    "ts": "1436578531.001287",
+    "id": "10tr1214",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "<http://pastebin.com/S9Z8nHZV>",
+    "attachments": [
+      {
+        "service_name": "Pastebin",
+        "title": "Error:Unable to load class 'com.android.build.gradle.BaseExtension'.  Possible c - Pastebin.com",
+        "title_link": "http://pastebin.com/S9Z8nHZV",
+        "fallback": "Pastebin: Error:Unable to load class 'com.android.build.gradle.BaseExtension'.  Possible c - Pastebin.com",
+        "image_url": "http://pastebin.com/i/fb2.jpg",
+        "from_url": "http://pastebin.com/S9Z8nHZV",
+        "image_width": 200,
+        "image_height": 200,
+        "image_bytes": 7901,
+        "id": 1
+      }
+    ],
+    "ts": "1436578532.001288",
+    "id": "10tr1215",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "intellij has better code stuff but android studio sacrificed having things that work so we can save a few key strokes",
+    "ts": "1436578555.001290",
+    "id": "10tr1216",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "there shouldn't be anything wrong with my JDK version and the second option didn't fix anything",
+    "ts": "1436578562.001291",
+    "id": "10tr1217",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I would much rather have the build system that didnt fuck me over weekly",
+    "ts": "1436578568.001292",
+    "id": "10tr1218",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Eclipse was boss. I didn't hate eclipse itself. I just hated the esthetics of eclipse. ",
+    "ts": "1436578569.001293",
+    "id": "10tr1219",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i disabled Hugo and Dexcount which were my only 3rd party plugins",
+    "ts": "1436578574.001294",
+    "id": "10tr1220",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Can you post your gradle file really quick?",
+    "ts": "1436578590.001295",
+    "id": "10tr1221",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "not to mention ant had these crazy documentation things",
+    "ts": "1436578602.001296",
+    "id": "10tr1222",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "who?",
+    "ts": "1436578619.001297",
+    "id": "10tr1223",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "<@U0546QERR>: gradle file if you can",
+    "ts": "1436578624.001298",
+    "id": "10tr1224",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "yeah one sec",
+    "ts": "1436578628.001299",
+    "id": "10tr1225",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "I'm watching soccer. But it's half time and Ian is an asshole and this is fresh in my mind since I did it today",
+    "ts": "1436578652.001300",
+    "id": "10tr1226",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "why am I an asshole",
+    "ts": "1436578664.001301",
+    "id": "10tr1227",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I didnt change the build tools then again, then again, then make an experimental version that says 'hopefully these changes work'",
+    "ts": "1436578690.001302",
+    "id": "10tr1228",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "<http://pastebin.com/ivT08qY4>",
+    "attachments": [
+      {
+        "service_name": "Pastebin",
+        "title": "[Groovy] // Top-level build file where you can add configuration options common to all su - Pastebin.com",
+        "title_link": "http://pastebin.com/ivT08qY4",
+        "fallback": "Pastebin: [Groovy] // Top-level build file where you can add configuration options common to all su - Pastebin.com",
+        "image_url": "http://pastebin.com/i/fb2.jpg",
+        "from_url": "http://pastebin.com/ivT08qY4",
+        "image_width": 200,
+        "image_height": 200,
+        "image_bytes": 7901,
+        "id": 1
+      }
+    ],
+    "ts": "1436578714.001303",
+    "id": "10tr1229",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "top is the project file and bottom is the module",
+    "ts": "1436578737.001305",
+    "id": "10tr1230",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "<@U055GGAHS>: cause you ping me at 9:30 on a Friday in the middle of a usa match. Lol",
+    "ts": "1436578762.001306",
+    "id": "10tr1231",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<@U0542GLTE>: my bad bro",
+    "ts": "1436578778.001307",
+    "id": "10tr1232",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "No but really, it's been one of those \"omg you write apps nights\"",
+    "ts": "1436578785.001308",
+    "id": "10tr1233",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<@U0542GLTE>: you should go watch soccer",
+    "ts": "1436578789.001309",
+    "id": "10tr1234",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Like everyone in this place has an idea",
+    "ts": "1436578797.001310",
+    "id": "10tr1235",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<@U0542GLTE>: you write apps?",
+    "ts": "1436578797.001311",
+    "id": "10tr1236",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Dick",
+    "ts": "1436578802.001312",
+    "id": "10tr1237",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Hold on. Looking at his gradle",
+    "ts": "1436578812.001313",
+    "id": "10tr1238",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i do notice this channel usually goes dead on friday nights haha",
+    "ts": "1436578832.001314",
+    "id": "10tr1239",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<@U0546QERR>: shouldnt min and target be different?",
+    "ts": "1436578836.001315",
+    "id": "10tr1240",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "are they not?",
+    "ts": "1436578847.001316",
+    "id": "10tr1241",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "minSdkVersion.apiLevel =\n targetSdkVersion.apiLevel =",
+    "ts": "1436578855.001317",
+    "id": "10tr1242",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "note they have equal signs now because why not",
+    "ts": "1436578867.001318",
+    "id": "10tr1243",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "lol",
+    "ts": "1436578871.001319",
+    "id": "10tr1244",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i guess i missed that, will try",
+    "ts": "1436578877.001320",
+    "id": "10tr1245",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Try that. Also are your local.properties file declarations correct?",
+    "ts": "1436578908.001321",
+    "id": "10tr1246",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I appreciate that compileSdkVersion does not use .apiLevel while target and min do because the google gradle team hates everyone",
+    "ts": "1436578910.001322",
+    "id": "10tr1247",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "the storeFile = file(xxx) line shouldn't have file(), i removed it",
+    "ts": "1436578929.001323",
+    "id": "10tr1248",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "but yes they were working before i upgraded",
+    "ts": "1436578938.001324",
+    "id": "10tr1249",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "You should have sdk.dir, and NDK.dir should be set. ",
+    "ts": "1436578942.001325",
+    "id": "10tr1250",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "K. ",
+    "ts": "1436578943.001326",
+    "id": "10tr1251",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "screw this error for not being specific at all, it doesn't even really say it's a problem with my build.gradle :disappointed:",
+    "ts": "1436578970.001327",
+    "id": "10tr1252",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "are you sure, all my scripts use things like 'storeFile file(\"../keystore.jks\")'",
+    "ts": "1436578976.001328",
+    "id": "10tr1253",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "how are you running gradle?",
+    "ts": "1436578996.001329",
+    "id": "10tr1254",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "oh wait, yeah that was right",
+    "ts": "1436578997.001330",
+    "id": "10tr1255",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "from AS or from console",
+    "ts": "1436579000.001331",
+    "id": "10tr1256",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "through the IDE",
+    "ts": "1436579001.001332",
+    "id": "10tr1257",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "yeah those are shit",
+    "ts": "1436579006.001333",
+    "id": "10tr1258",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "you need to use the console, just open it up in AS and do './gradlew check'",
+    "ts": "1436579019.001334",
+    "id": "10tr1259",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "you may need './gradlew check --stacktrace' to get a better message",
+    "ts": "1436579033.001335",
+    "id": "10tr1260",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "mmk",
+    "ts": "1436579042.001336",
+    "id": "10tr1261",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Fyi. I keep my NDK and SDK folders at the same level. ",
+    "ts": "1436579049.001337",
+    "id": "10tr1262",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Separate and not embedded. ",
+    "ts": "1436579058.001338",
+    "id": "10tr1263",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<@U0542GLTE>: how is soccer",
+    "ts": "1436579058.001339",
+    "id": "10tr1264",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<@U0542GLTE>: is it good?",
+    "ts": "1436579062.001340",
+    "id": "10tr1265",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "so did i, but they have you keep it in the NDK folder now",
+    "ts": "1436579066.001341",
+    "id": "10tr1266",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "This ref ",
+    "ts": "1436579069.001342",
+    "id": "10tr1267",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "waits to get blocked",
+    "subtype": "me_message",
+    "user": "U055GGAHS",
+    "ts": "1436579071.001343",
+    "id": "10tr1268",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Sucks. ",
+    "ts": "1436579073.001344",
+    "id": "10tr1269",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "SDK*",
+    "ts": "1436579083.001345",
+    "id": "10tr1270",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Someone is going to get hurt. ",
+    "ts": "1436579086.001346",
+    "id": "10tr1271",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Idk how much help I can be. I'm not using the experimental. I have the old school gradle NDK def methods in the file",
+    "ts": "1436579122.001347",
+    "id": "10tr1272",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "well looking at their docs on how to convert over it seems straightforward but knowing google... im sure this has some lies hidden in it",
+    "ts": "1436579171.001348",
+    "id": "10tr1273",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "gradlew might take some work, i'm using windows atm and it can't find stuff",
+    "ts": "1436579189.001349",
+    "id": "10tr1274",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "oh ok",
+    "ts": "1436579196.001350",
+    "id": "10tr1275",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "that's easy its just 'gradlew.bat' instead of './gradlew'",
+    "ts": "1436579208.001351",
+    "id": "10tr1276",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "With the NDK module flags",
+    "ts": "1436579214.001352",
+    "id": "10tr1277",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "yeah says Could not find or load main class org.gradle.wrapper.GradleWrapperMain",
+    "ts": "1436579231.001353",
+    "id": "10tr1278",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Whoa. ",
+    "ts": "1436579237.001354",
+    "id": "10tr1279",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "that's interesting",
+    "ts": "1436579243.001355",
+    "id": "10tr1280",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i actually was using a local gradle distribution before, 2.4",
+    "ts": "1436579245.001356",
+    "id": "10tr1281",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "then i switched to the wrapper to try to use 2.5 \"properly\"",
+    "ts": "1436579256.001357",
+    "id": "10tr1282",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "so that is java failing to start",
+    "ts": "1436579262.001358",
+    "id": "10tr1283",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "idk if it's proper, this is new to me",
+    "ts": "1436579263.001359",
+    "id": "10tr1284",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "sorry for bringing you down this rabbit hole lol",
+    "ts": "1436579291.001360",
+    "id": "10tr1285",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i should probably just wait until this NDK thing is more mature",
+    "ts": "1436579298.001361",
+    "id": "10tr1286",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "so your ./gradle/wrapper/gradlew-wrapper.properties looks like this:",
+    "ts": "1436579307.001362",
+    "id": "10tr1287",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U055GGAHS|ian.shaun.thomas> uploaded a file: <https://androidchat.slack.com/files/ian.shaun.thomas/F07FHBNR0/-.txt|Untitled>",
+    "file": {
+      "id": "F07FHBNR0",
+      "created": 1436579312,
+      "timestamp": 1436579312,
+      "name": "-.txt",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "text",
+      "pretty_type": "Plain Text",
+      "user": "U055GGAHS",
+      "editable": true,
+      "size": 234,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F07FHBNR0/-.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F07FHBNR0/download/-.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/ian.shaun.thomas/F07FHBNR0/-.txt",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F07FHBNR0-85782b69d8",
+      "edit_link": "https://androidchat.slack.com/files/ian.shaun.thomas/F07FHBNR0/-.txt/edit",
+      "preview": "#Wed Apr 10 15:27:10 PDT 2013\r\ndistributionBase=GRADLE_USER_HOME\r\ndistributionPath=wrapper/dists\r\nzipStoreBase=GRADLE_USER_HOME\r\nzipStorePath=wrapper/dists\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>#Wed Apr 10 15:27:10 PDT 2013</pre></div>\n<div><pre>distributionBase=GRADLE_USER_HOME</pre></div>\n<div><pre>distributionPath=wrapper/dists</pre></div>\n<div><pre>zipStoreBase=GRADLE_USER_HOME</pre></div>\n<div><pre>zipStorePath=wrapper/dists</pre></div>\n<div><pre></pre></div>\n</div>\n</div>\n",
+      "lines": 6,
+      "lines_more": 1,
+      "preview_is_truncated": false,
+      "channels": [
+        "C0565EVTD"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U055GGAHS",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U055GGAHS|ian.shaun.thomas>",
+    "bot_id": null,
+    "ts": "1436579312.001363",
+    "id": "10tr1288",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "yep precisely",
+    "ts": "1436579330.001364",
+    "id": "10tr1289",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "ohhh you know what lets go back",
+    "ts": "1436579335.001365",
+    "id": "10tr1290",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "did you say you dont have gradlew sitting next to gradlew.bat ?",
+    "ts": "1436579346.001366",
+    "id": "10tr1291",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i do have it",
+    "ts": "1436579372.001367",
+    "id": "10tr1292",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "one sec im on windows let me try getting 2.5",
+    "ts": "1436579411.001368",
+    "id": "10tr1293",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Eh. You have our attention now. Might as well start going down it",
+    "ts": "1436579419.001369",
+    "id": "10tr1294",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i only use NDK for obfuscation right now but i'm planning on integrating Bypass (markdown parsing library) and I wanted to mess around with the C support",
+    "ts": "1436579459.001370",
+    "id": "10tr1295",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "ugh windows path issues are the worst",
+    "ts": "1436579563.001371",
+    "id": "10tr1296",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "agreed",
+    "ts": "1436579572.001372",
+    "id": "10tr1297",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "finally couldn't get my local properties to point to my sdk",
+    "ts": "1436579655.001373",
+    "id": "10tr1298",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "alright so 2.5 runs on my machine",
+    "ts": "1436579663.001374",
+    "id": "10tr1299",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "try deleting your .gradle folder from your project",
+    "ts": "1436579672.001375",
+    "id": "10tr1300",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "running gradle should grab 2.5 again and do its setup",
+    "ts": "1436579681.001376",
+    "id": "10tr1301",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "'''Second, note also that Android Studio has not yet been updated to fully handle the experimental plugin. This means that for example the Project Structure Dialog, and various quick fixes which automatically update the build data, do not work correctly. You’ll need to edit your build.gradle files manually to configure your projects. As another example, the various templates which update the build files (such as New Module), have not yet been updated.'''",
+    "ts": "1436579692.001377",
+    "id": "10tr1302",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "yeah i noticed that",
+    "ts": "1436579709.001378",
+    "id": "10tr1303",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "you can't update your config from the menus, it's all blank",
+    "ts": "1436579717.001379",
+    "id": "10tr1304",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "lul @ using the menus",
+    "ts": "1436579732.001380",
+    "id": "10tr1305",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "/giphy its a trap",
+    "attachments": [
+      {
+        "fallback": "giphy: <http://giphy.com/gifs/boyfriend-krp-donghyun-LHB46CRlDnBNS>",
+        "image_url": "http://media3.giphy.com/media/LHB46CRlDnBNS/giphy.gif",
+        "image_width": 500,
+        "image_height": 281,
+        "image_bytes": 657636,
+        "title": "its a trap",
+        "id": 1,
+        "title_link": "http://giphy.com/gifs/boyfriend-krp-donghyun-LHB46CRlDnBNS"
+      }
+    ],
+    "ts": "1436579737.001381",
+    "id": "10tr1306",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "no",
+    "ts": "1436579740.001382",
+    "id": "10tr1307",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "nooo",
+    "ts": "1436579742.001383",
+    "id": "10tr1308",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "giphy rawr",
+    "ts": "1436579744.001384",
+    "id": "10tr1309",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "<@U0546QERR>: you've been through this I am assuming <http://tools.android.com/tech-docs/android-ndk-preview>",
+    "attachments": [
+      {
+        "title": "Android NDK Preview - Android Tools Project Site",
+        "title_link": "http://tools.android.com/tech-docs/android-ndk-preview",
+        "text": "Android tools project information site",
+        "fallback": "Android NDK Preview - Android Tools Project Site",
+        "image_url": "http://tools.android.com/_/rsrc/1436483192508/tech-docs/android-ndk-preview/ndk-install-link.png",
+        "from_url": "http://tools.android.com/tech-docs/android-ndk-preview",
+        "image_width": 459,
+        "image_height": 250,
+        "image_bytes": 76234,
+        "id": 1
+      }
+    ],
+    "ts": "1436579748.001385",
+    "id": "10tr1310",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Just covering bases. ",
+    "ts": "1436579754.001387",
+    "id": "10tr1311",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Cause wrapper not loading is a big failure",
+    "ts": "1436579768.001388",
+    "id": "10tr1312",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "yeah i downloaded them through that menu as recommended and it changed my local.properties to point to that location automatically",
+    "ts": "1436579792.001389",
+    "id": "10tr1313",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "trying to reset gradle folder now",
+    "ts": "1436579802.001390",
+    "id": "10tr1314",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "well 2.5 works fine on my box so <@U0542GLTE> may be on to something that you have the wrong paths",
+    "ts": "1436580032.001391",
+    "id": "10tr1315",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "does \n'java -version' work properly from the command line",
+    "ts": "1436580043.001392",
+    "id": "10tr1316",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "should print a few lines and first one will be 'java version \"1.8.0_31\"' or something similar",
+    "edited": {
+      "user": "U055GGAHS",
+      "ts": "1436580077.000000"
+    },
+    "ts": "1436580066.001393",
+    "id": "10tr1317",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "yeah java works from command line",
+    "ts": "1436580085.001395",
+    "id": "10tr1318",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "got my JRE version back",
+    "ts": "1436580097.001396",
+    "id": "10tr1319",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Vim or emacs your local.properties files and make sure your NDK location is correct",
+    "ts": "1436580127.001397",
+    "id": "10tr1320",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "he's on windows",
+    "ts": "1436580136.001398",
+    "id": "10tr1321",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Fuck \\",
+    "ts": "1436580148.001399",
+    "id": "10tr1322",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "notepad works too :wink:",
+    "ts": "1436580159.001400",
+    "id": "10tr1323",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Lol",
+    "ts": "1436580162.001401",
+    "id": "10tr1324",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "yeah the path is correct, i will try switching back to my external NDK path instead of the installed one",
+    "ts": "1436580199.001402",
+    "id": "10tr1325",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "when you run 'gradlew.bat check'",
+    "ts": "1436580203.001403",
+    "id": "10tr1326",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "can you give me everything it says",
+    "ts": "1436580208.001404",
+    "id": "10tr1327",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "not just the error",
+    "ts": "1436580210.001405",
+    "id": "10tr1328",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "resetting the gradle folder gives me the same error but it definitely cleaned it up a lot",
+    "ts": "1436580213.001406",
+    "id": "10tr1329",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "mmk",
+    "ts": "1436580220.001407",
+    "id": "10tr1330",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "and i wouldn't mess with the ndk just yet",
+    "ts": "1436580229.001408",
+    "id": "10tr1331",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "unless you are saying a lot of things happened then that error",
+    "ts": "1436580248.001409",
+    "id": "10tr1332",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "oh wait",
+    "ts": "1436580274.001410",
+    "id": "10tr1333",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i had the wrong gradlew.bat :x",
+    "ts": "1436580279.001411",
+    "id": "10tr1334",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "im pretty sure you are failing inside the wrapper script",
+    "ts": "1436580283.001412",
+    "id": "10tr1335",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "ah",
+    "ts": "1436580284.001413",
+    "id": "10tr1336",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": ":wink:",
+    "ts": "1436580285.001414",
+    "id": "10tr1337",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "That'll do it",
+    "ts": "1436580290.001415",
+    "id": "10tr1338",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i had one inside the gradle folder",
+    "ts": "1436580290.001416",
+    "id": "10tr1339",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "the one at project root is grabbed 2.5 now",
+    "ts": "1436580302.001417",
+    "id": "10tr1340",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "grabbing*",
+    "ts": "1436580307.001418",
+    "id": "10tr1341",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "cool",
+    "ts": "1436580312.001419",
+    "id": "10tr1342",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "that should be it then",
+    "ts": "1436580323.001420",
+    "id": "10tr1343",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "for reference if you open up gradlew.bat in a text editor you'll see on line 75 it calls java and passes it all the correct parameters for your system",
+    "ts": "1436580368.001421",
+    "id": "10tr1344",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "ah gotcha",
+    "ts": "1436580416.001422",
+    "id": "10tr1345",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Should have been the hint <https://androidchat.slack.com/archives/troubleshooting/p1436578976001328>",
+    "attachments": [
+      {
+        "color": "4D394B",
+        "from_url": "https://androidchat.slack.com/archives/troubleshooting/p1436578976001328",
+        "fallback": "[July 10th, 2015 6:42 PM] ian.shaun.thomas: are you sure, all my scripts use things like 'storeFile file(\"../keystore.jks\")'",
+        "author_subname": "ian.shaun.thomas",
+        "ts": 1436578976,
+        "text": "are you sure, all my scripts use things like 'storeFile file(\"../keystore.jks\")'",
+        "author_name": "Ian Thomas",
+        "author_link": "https://androidchat.slack.com/team/ian.shaun.thomas",
+        "author_icon": "https://s3-us-west-2.amazonaws.com/slack-files2/avatars/2015-06-04/5231744419_89a1eb3c0869d6ab7d32_48.jpg",
+        "mrkdwn_in": [
+          "text"
+        ],
+        "id": 1
+      }
+    ],
+    "ts": "1436580422.001423",
+    "id": "10tr1346",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Actually, nvm. Not really",
+    "ts": "1436580444.001425",
+    "id": "10tr1347",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i actually only had that changed from file() for like 5 minutes",
+    "ts": "1436580448.001426",
+    "id": "10tr1348",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "on that line you see 'org.gradle.wrapper.GradleWrapperMain' which is the source of the error and the name of application entry for gradlew which is just a java app",
+    "ts": "1436580449.001427",
+    "id": "10tr1349",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "it's complaining about com.android.library from one of my dependencies but that probably just changed to something else",
+    "ts": "1436580483.001428",
+    "id": "10tr1350",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "model.library",
+    "ts": "1436580499.001429",
+    "id": "10tr1351",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "com.android.model.library",
+    "ts": "1436580500.001430",
+    "id": "10tr1352",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "why google",
+    "ts": "1436580504.001431",
+    "id": "10tr1353",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "im telling you, its interns",
+    "ts": "1436580511.001432",
+    "id": "10tr1354",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "its the only reasonable explanation",
+    "ts": "1436580519.001433",
+    "id": "10tr1355",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "that and the project isn't actually open source just like android itself",
+    "ts": "1436580529.001434",
+    "id": "10tr1356",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "change a bunch of variable names to make themselves look productive",
+    "ts": "1436580557.001435",
+    "id": "10tr1357",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Basically",
+    "ts": "1436580579.001436",
+    "id": "10tr1358",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "yeah I can't wait to update all the gradle plugins I made that finally work exactly how I need them to",
+    "ts": "1436580587.001437",
+    "id": "10tr1359",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "CANT WAIT",
+    "ts": "1436580589.001438",
+    "id": "10tr1360",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "We'll be dead",
+    "ts": "1436580598.001439",
+    "id": "10tr1361",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i guess i have to reformat mopub's build.gradle too?",
+    "ts": "1436580599.001440",
+    "id": "10tr1362",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "since i added it from source",
+    "ts": "1436580607.001441",
+    "id": "10tr1363",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "huh?",
+    "ts": "1436580619.001442",
+    "id": "10tr1364",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Mayyyybbbeeee. ",
+    "ts": "1436580634.001443",
+    "id": "10tr1365",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "yeah i think so",
+    "ts": "1436580639.001444",
+    "id": "10tr1366",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "I haven't touched mopub in a minute",
+    "ts": "1436580648.001445",
+    "id": "10tr1367",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "But since fabric, all that shit has been a massive pain in the ass",
+    "ts": "1436580660.001446",
+    "id": "10tr1368",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i haven't looked into fabric",
+    "ts": "1436580674.001447",
+    "id": "10tr1369",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "thanks for the help guys, i think that's probably it after i finish formatting this",
+    "ts": "1436580893.001448",
+    "id": "10tr1370",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "fabric is pretty awesome",
+    "ts": "1436581665.001449",
+    "id": "10tr1371",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "except for their dumb ide integration",
+    "ts": "1436581672.001450",
+    "id": "10tr1372",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "it's complaining about `Error:No such property: android for class: com.android.build.gradle.managed.ProductFlavor` now &gt;_&gt;",
+    "ts": "1436582325.001451",
+    "id": "10tr1373",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i think it's a problem in the mopub build.gradle",
+    "ts": "1436582346.001452",
+    "id": "10tr1374",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "That's a definitely a gradle issue",
+    "ts": "1436586314.001453",
+    "id": "10tr1375",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Wait. Why are you adding mopub as source",
+    "ts": "1436586339.001454",
+    "id": "10tr1376",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Add it as gradle dependency via the fabric repository <@U0546QERR> ",
+    "ts": "1436586355.001455",
+    "id": "10tr1377",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

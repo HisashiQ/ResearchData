@@ -1,0 +1,105 @@
+[
+  {
+    "user": "U054C9PUK",
+    "text": "Hi guys, has anyone else come across a problem using `jniLibs` and RenderScript in the same project? As soon as I add a set of .so files to the project RenderScript’s binaries become unavailable.",
+    "ts": "1455549206.000002",
+    "id": "15tr3890",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054C9PUK",
+    "text": "I guess it’s similar to this SO question: <http://stackoverflow.com/questions/32903985/enabling-of-renderscript-makes-app-to-ignore-jnilibs>",
+    "attachments": [
+      {
+        "title": "Enabling of renderscript makes app to ignore jniLibs",
+        "title_link": "http://stackoverflow.com/questions/32903985/enabling-of-renderscript-makes-app-to-ignore-jnilibs",
+        "text": "I want to use some jni libraries. So I put binaries like this: project -app --jnilibs ---armeabi ----libqwerty.so and in my build.gradle (app module): sourceSets.main { jniLibs.srcDirs =",
+        "fallback": "Enabling of renderscript makes app to ignore jniLibs",
+        "thumb_url": "http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/questions/32903985/enabling-of-renderscript-makes-app-to-ignore-jnilibs",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "id": 1
+      }
+    ],
+    "ts": "1455549213.000003",
+    "id": "15tr3891",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054C9PUK",
+    "text": "But the answer doesn’t help",
+    "ts": "1455549230.000005",
+    "id": "15tr3892",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054C9PUK",
+    "text": "The library I’m including is `Bypass` if it makes any difference",
+    "ts": "1455549259.000006",
+    "id": "15tr3893",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054C9PUK",
+    "text": "It turns out that the Bypass library was including all possible architectures of compiled .so files, and RenderScript wasn’t always in the same folders. Removing the ones which didn’t have RenderScript support fixed it",
+    "ts": "1455554005.000007",
+    "id": "15tr3894",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

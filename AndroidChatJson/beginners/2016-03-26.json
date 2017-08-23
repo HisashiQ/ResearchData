@@ -1,0 +1,334 @@
+[
+  {
+    "user": "U0VKW5QJ0",
+    "subtype": "channel_join",
+    "text": "<@U0VKW5QJ0|klubkard> has joined the channel",
+    "ts": "1458975808.000347",
+    "id": "26be4011",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0VLP4T2M",
+    "subtype": "channel_join",
+    "text": "<@U0VLP4T2M|judy> has joined the channel",
+    "ts": "1458986619.000348",
+    "id": "26be4012",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "Question about parsing JSON response. How would the app handle parsing JSON value that is null? For instance, I have an model object called `Contact`, and have an `arraylist&lt;String&gt;` attribute called `phone_numbers`. If the server returns phone_numbers as null instead of `[]`. How would the app parse this?",
+    "ts": "1459007519.000349",
+    "id": "26be4013",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "<@U0LETFK18>: i've had to write gson deserializers that handle special cases like that",
+    "ts": "1459007816.000350",
+    "id": "26be4014",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "the API returning \"\" instead of null or an empty list",
+    "ts": "1459007829.000351",
+    "id": "26be4015",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "but for a List gson should just be able to handle null",
+    "ts": "1459007850.000352",
+    "id": "26be4016",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "<@U0546QERR>: I see. Because when I was parsing the value, I was getting NullExceptionPointer Collections == null",
+    "ts": "1459007891.000353",
+    "id": "26be4017",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "I ran some breakpoint and it always get caught when i saw the response of the array is null",
+    "ts": "1459007918.000354",
+    "id": "26be4018",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "yeah you would have to check for that",
+    "ts": "1459008036.000355",
+    "id": "26be4019",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "if it's a possibility for the API to return null",
+    "ts": "1459008047.000356",
+    "id": "26be4020",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "<@U0546QERR>: i see, right now I have a special try/catch block just for that attribute",
+    "ts": "1459008256.000357",
+    "id": "26be4021",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LETFK18",
+    "text": "About writing gson desrializers what do you mean by that? Because currently I am also using Gson to handle API responses",
+    "ts": "1459008287.000358",
+    "id": "26be4022",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "if you have a special case you need handled, Gson has a deserializer or typeadapter interface you can implement to handle it",
+    "ts": "1459008521.000359",
+    "id": "26be4023",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "but it's already handling your null case fine, the API is returning null so your variable should be null",
+    "ts": "1459008545.000360",
+    "id": "26be4024",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i'm not sure what you mean by try/catch block, you can just wrap your code in a conditional `if (collections != null)`",
+    "edited": {
+      "user": "U0546QERR",
+      "ts": "1459008627.000000"
+    },
+    "ts": "1459008593.000361",
+    "id": "26be4025",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "sorry i didn't mean to assume you're using gson, i was just mentioning it as a way i've handled special cases",
+    "ts": "1459009126.000363",
+    "id": "26be4026",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0VNJS9UZ",
+    "subtype": "channel_join",
+    "text": "<@U0VNJS9UZ|bazimov> has joined the channel",
+    "ts": "1459047483.000364",
+    "id": "26be4027",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0VNLLL9K",
+    "subtype": "channel_join",
+    "text": "<@U0VNLLL9K|sakthi> has joined the channel",
+    "ts": "1459057225.000365",
+    "id": "26be4028",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

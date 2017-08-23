@@ -1,0 +1,424 @@
+[
+  {
+    "user": "U0H67LJUA",
+    "text": "I have a recyclerview’s adapter set to 30 items, and it’s smooth, if I set this to 300 items, whenever I start the activity, the UI thread is blocked for several seconds, is this an indicator that the recyclerview is not doing any recycling?",
+    "ts": "1461583075.000018",
+    "id": "25tr4299",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Sounds more like your item instantiation takes a long time",
+    "ts": "1461583476.000019",
+    "id": "25tr4300",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "What data do you put in your adapter?",
+    "ts": "1461583484.000020",
+    "id": "25tr4301",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0H67LJUA",
+    "text": "a list&lt;Object&gt; Object with some strings and ints",
+    "ts": "1461583542.000021",
+    "id": "25tr4302",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0H67LJUA",
+    "text": "But it still happens even if I give it 300 rows of nothing (just draws the base row layout), passing it a list with 0 items.",
+    "ts": "1461583679.000022",
+    "id": "25tr4303",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "You could check in DDMS by doing a method trace and see what method takes such long time",
+    "ts": "1461583705.000023",
+    "id": "25tr4304",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0H67LJUA",
+    "text": "Seems like it tries to create all the rows of the recyclerview, because it is inside a scrollview and set to wrap_content. I thought this got supported in 23.2?",
+    "edited": {
+      "user": "U0H67LJUA",
+      "ts": "1461586590.000000"
+    },
+    "ts": "1461586583.000024",
+    "id": "25tr4305",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "phew, no idea bout that, sorry",
+    "ts": "1461586763.000026",
+    "id": "25tr4306",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "it shouldn’t be drawing all 30 in any case :confused:\nare some heavy calculations happening in onBind?",
+    "ts": "1461586844.000027",
+    "id": "25tr4307",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0H67LJUA",
+    "text": "Just reading text from an object, putting it into 4 textViews, and setting visibility for two small icons",
+    "edited": {
+      "user": "U0H67LJUA",
+      "ts": "1461587001.000000"
+    },
+    "ts": "1461586896.000028",
+    "id": "25tr4308",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "you put the recycler in a scrollview or a nestedscrollview?",
+    "ts": "1461591209.000031",
+    "id": "25tr4309",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I have some inside nestedscrollviews and I do not believe they have any issues",
+    "ts": "1461591238.000032",
+    "id": "25tr4310",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "additionally are you calling `setAutoMeasureEnabled(true)` on the layout manager? Not sure if it is required",
+    "ts": "1461591277.000033",
+    "id": "25tr4311",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Does anyone know why I'm getting the following error when building? Can't find anyone having a similar error with Realm. ```:app:transformClassesWithRealmTransformerForDebDebug FAILED\nError:Execution failed for task ':app:transformClassesWithRealmTransformerForDebDebug'.\n&gt; javassist.CannotCompileException: onBindViewHolder (Landroid/support/v7/widget/RecyclerView$ViewHolder;I)V in be.lunchbreakapp.lunchbreak.adapter.StoreAdapter: failed to resolve types```",
+    "ts": "1461593778.000034",
+    "id": "25tr4312",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "The StoreAdapter has no changes and no static warning/errors.",
+    "ts": "1461593827.000035",
+    "id": "25tr4313",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Cleaning does not work.",
+    "ts": "1461593984.000036",
+    "id": "25tr4314",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "does realm generate classes now?",
+    "ts": "1461594224.000037",
+    "id": "25tr4315",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "aka are you referencing the generated class in your adapter or the base type",
+    "ts": "1461594253.000038",
+    "id": "25tr4316",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "im assuming generated otherwise there is no way it would not exist",
+    "ts": "1461594263.000039",
+    "id": "25tr4317",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "or rather would fail to resolve",
+    "ts": "1461594305.000040",
+    "id": "25tr4318",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I think it changes classes for annotations and support for custom methods",
+    "ts": "1461594307.000041",
+    "id": "25tr4319",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0H67LJUA",
+    "text": "<@U055GGAHS>: yes and yes. I think I’ll have to drop the scrollview and go with a recyclerview with a big header.",
+    "ts": "1461594784.000042",
+    "id": "25tr4320",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0H67LJUA",
+    "text": "for the record, getLastVisibleItemPosition() returns 299. despite having to scroll for 8 seconds to see it.",
+    "ts": "1461594930.000043",
+    "id": "25tr4321",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

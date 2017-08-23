@@ -1,0 +1,818 @@
+[
+  {
+    "user": "U0DLPBRB5",
+    "text": "Hi, anyone know how to test void method with when() in Mockito?",
+    "ts": "1447338788.000002",
+    "id": "12te219",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "For example I just want to test void execute(Subscriber&lt;T&gt; subscriber); this function with a mock Subscriber",
+    "ts": "1447338817.000003",
+    "id": "12te220",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "Thanks",
+    "ts": "1447338818.000004",
+    "id": "12te221",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09NV6N8J",
+    "text": "sorry, do you want to capture the subscriber?",
+    "ts": "1447338863.000005",
+    "id": "12te222",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09NV6N8J",
+    "text": "(I don’t really know what “test void” means. :stuck_out_tongue:",
+    "ts": "1447338875.000006",
+    "id": "12te223",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "I think you could test verify(methodParent, times(1)).execute(mockSub);",
+    "edited": {
+      "user": "U0548MM6B",
+      "ts": "1447338905.000000"
+    },
+    "ts": "1447338889.000007",
+    "id": "12te224",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "<@U09NV6N8J>: oh yeah, I want to capture the subscriber",
+    "ts": "1447339077.000009",
+    "id": "12te225",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DLPBRB5",
+    "text": "could you help me :smile: thanks",
+    "ts": "1447339088.000010",
+    "id": "12te226",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09NV6N8J",
+    "text": "does this example help? <http://mockito.github.io/mockito/docs/current/org/mockito/Captor.html>",
+    "ts": "1447339380.000011",
+    "id": "12te227",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09NV6N8J",
+    "text": "you do the verify like <@U0548MM6B> wrote with an ArgumentCaptor",
+    "ts": "1447339418.000012",
+    "reactions": [
+      {
+        "name": "taylor",
+        "users": [
+          "U053PPGDC"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "12te228",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "<@U0548MM6B>: rarely says good stuff",
+    "edited": {
+      "user": "U051G3BC3",
+      "ts": "1447339655.000000"
+    },
+    "ts": "1447339653.000013",
+    "id": "12te229",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "just sayin",
+    "ts": "1447339661.000015",
+    "id": "12te230",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "yeah, nothing I say is good",
+    "ts": "1447339675.000016",
+    "id": "12te231",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "or even fine",
+    "ts": "1447339683.000017",
+    "id": "12te232",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "it’s _”Awesome”_ or _”Amazing”_",
+    "ts": "1447339699.000018",
+    "id": "12te233",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "sometimes even _”Astonishing!”_",
+    "ts": "1447339705.000019",
+    "id": "12te234",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "or TayTay-level",
+    "ts": "1447339707.000020",
+    "id": "12te235",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "or Kanye-level",
+    "ts": "1447339714.000021",
+    "id": "12te236",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "or even better, Quentin-level",
+    "ts": "1447339748.000022",
+    "id": "12te237",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": ":smile:",
+    "ts": "1447339777.000023",
+    "id": "12te238",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "it will be when I start streaming my uber rides :smile:",
+    "ts": "1447339796.000024",
+    "id": "12te239",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U053PPGDC|zmarkan> uploaded a file: <https://androidchat.slack.com/files/zmarkan/F0ECHAJA0/screen_shot_2015-11-12_at_15.51.02.png|I wonder if they’ll get the pun>",
+    "file": {
+      "id": "F0ECHAJA0",
+      "created": 1447339911,
+      "timestamp": 1447339911,
+      "name": "Screen Shot 2015-11-12 at 15.51.02.png",
+      "title": "I wonder if they’ll get the pun",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U053PPGDC",
+      "editable": false,
+      "size": 193340,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0ECHAJA0/screen_shot_2015-11-12_at_15.51.02.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0ECHAJA0/download/screen_shot_2015-11-12_at_15.51.02.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F0ECHAJA0-261d8f8c32/screen_shot_2015-11-12_at_15.51.02_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F0ECHAJA0-261d8f8c32/screen_shot_2015-11-12_at_15.51.02_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F0ECHAJA0-261d8f8c32/screen_shot_2015-11-12_at_15.51.02_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 360,
+      "thumb_360_h": 203,
+      "thumb_480": "https://files.slack.com/files-tmb/T04PLNDMP-F0ECHAJA0-261d8f8c32/screen_shot_2015-11-12_at_15.51.02_480.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_480_w": 480,
+      "thumb_480_h": 271,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F0ECHAJA0-261d8f8c32/screen_shot_2015-11-12_at_15.51.02_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720": "https://files.slack.com/files-tmb/T04PLNDMP-F0ECHAJA0-261d8f8c32/screen_shot_2015-11-12_at_15.51.02_720.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720_w": 720,
+      "thumb_720_h": 407,
+      "thumb_960": "https://files.slack.com/files-tmb/T04PLNDMP-F0ECHAJA0-261d8f8c32/screen_shot_2015-11-12_at_15.51.02_960.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_960_w": 960,
+      "thumb_960_h": 542,
+      "thumb_1024": "https://files.slack.com/files-tmb/T04PLNDMP-F0ECHAJA0-261d8f8c32/screen_shot_2015-11-12_at_15.51.02_1024.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_1024_w": 1024,
+      "thumb_1024_h": 579,
+      "image_exif_rotation": 1,
+      "original_w": 2120,
+      "original_h": 1198,
+      "permalink": "https://androidchat.slack.com/files/zmarkan/F0ECHAJA0/screen_shot_2015-11-12_at_15.51.02.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0ECHAJA0-e9076bf95e",
+      "channels": [
+        "C0D6DUW8L"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U053PPGDC",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U053PPGDC|zmarkan>",
+    "bot_id": null,
+    "ts": "1447339914.000025",
+    "id": "12te240",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "well, they changed their motto :stuck_out_tongue:",
+    "ts": "1447339948.000026",
+    "id": "12te241",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "they are still breaking things",
+    "ts": "1447339995.000027",
+    "id": "12te242",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "innit",
+    "ts": "1447339999.000028",
+    "id": "12te243",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "you could pin the slidedeck to the channel when you finish the talk",
+    "ts": "1447340011.000029",
+    "id": "12te244",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I shall",
+    "ts": "1447340017.000030",
+    "id": "12te245",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "not breaking, _hacking_ :joy:",
+    "ts": "1447340019.000031",
+    "id": "12te246",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "need to finish first",
+    "ts": "1447340020.000032",
+    "id": "12te247",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": ":smile:",
+    "ts": "1447340021.000033",
+    "id": "12te248",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "last minute huh? :smile:",
+    "ts": "1447340025.000034",
+    "id": "12te249",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "obvs",
+    "ts": "1447340029.000035",
+    "id": "12te250",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "had shit at work so wasn’t able to finish it at home",
+    "ts": "1447340038.000036",
+    "id": "12te251",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "got all the content, just missing the slides",
+    "ts": "1447340046.000037",
+    "id": "12te252",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "getting them done now",
+    "ts": "1447340049.000038",
+    "id": "12te253",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "\"move fast when things break” - me.",
+    "ts": "1447340073.000039",
+    "id": "12te254",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "Yolooooooo",
+    "ts": "1447340083.000040",
+    "id": "12te255",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "haha",
+    "ts": "1447340172.000041",
+    "id": "12te256",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": ":smile:",
+    "ts": "1447340173.000042",
+    "id": "12te257",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "<@U0DLPBRB5> still need help? ",
+    "ts": "1447342296.000043",
+    "id": "12te258",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DKDMQTB",
+    "subtype": "channel_join",
+    "text": "<@U0DKDMQTB|andrei> has joined the channel",
+    "ts": "1447363029.000044",
+    "id": "12te259",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

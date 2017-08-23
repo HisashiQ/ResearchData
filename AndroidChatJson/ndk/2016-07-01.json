@@ -1,0 +1,227 @@
+[
+  {
+    "user": "U0R5K272T",
+    "text": "Anybody familiar with compiling libpng as a dependency using CMake? I'm getting errors on a Travis build, yet locally everything is fine.",
+    "ts": "1467386203.000017",
+    "id": "01nd322",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U0R5K272T>: zlib/png ExternalProject cmake script I used awhile ago: <https://github.com/EddieRingle/erbium/blob/master/scripts/cmake/modules/ExternalPNG.cmake>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "EddieRingle/erbium",
+        "title_link": "https://github.com/EddieRingle/erbium/blob/master/scripts/cmake/modules/ExternalPNG.cmake",
+        "text": "Contribute to erbium development by creating an account on GitHub.",
+        "fallback": "GitHub: EddieRingle/erbium",
+        "thumb_url": "https://avatars0.githubusercontent.com/u/32543?v=3&s=400",
+        "from_url": "https://github.com/EddieRingle/erbium/blob/master/scripts/cmake/modules/ExternalPNG.cmake",
+        "thumb_width": 250,
+        "thumb_height": 250,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1467392147.000018",
+    "id": "01nd323",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U0R5K272T>: and the cmake toolchain I used for android: <https://github.com/EddieRingle/erbium/blob/master/scripts/cmake/toolchains/toolchain.android.cmake>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "EddieRingle/erbium",
+        "title_link": "https://github.com/EddieRingle/erbium/blob/master/scripts/cmake/toolchains/toolchain.android.cmake",
+        "text": "Contribute to erbium development by creating an account on GitHub.",
+        "fallback": "GitHub: EddieRingle/erbium",
+        "thumb_url": "https://avatars0.githubusercontent.com/u/32543?v=3&s=400",
+        "from_url": "https://github.com/EddieRingle/erbium/blob/master/scripts/cmake/toolchains/toolchain.android.cmake",
+        "thumb_width": 250,
+        "thumb_height": 250,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1467392205.000020",
+    "id": "01nd324",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R5K272T",
+    "text": "<@U053LEHJN>: Thanks. I used the new alpha toolchain from studio 2.2 (<https://github.com/OpenRCT2/OpenRCT2/pull/3519/files>)",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "Add Android project by marijnvdwerf · Pull Request #3519 · OpenRCT2/OpenRCT2 · GitHub",
+        "title_link": "https://github.com/OpenRCT2/OpenRCT2/pull/3519/files",
+        "text": "OpenRCT2 - An open source re-implementation of RollerCoaster Tycoon 2.",
+        "fallback": "GitHub: Add Android project by marijnvdwerf · Pull Request #3519 · OpenRCT2/OpenRCT2",
+        "thumb_url": "https://avatars2.githubusercontent.com/u/737603?v=3&s=400",
+        "from_url": "https://github.com/OpenRCT2/OpenRCT2/pull/3519/files",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "service_icon": "https://a.slack-edge.com/e8ef6/img/unfurl_icons/github.png",
+        "id": 1
+      }
+    ],
+    "ts": "1467392328.000022",
+    "id": "01nd325",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R5K272T",
+    "text": "But I didn't know Cmake is able to handle git repositories :open_mouth:",
+    "ts": "1467392342.000024",
+    "id": "01nd326",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "yeah, it can do a lot if you dig deep enough",
+    "ts": "1467392372.000025",
+    "id": "01nd327",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "I'll still always hate the syntax though",
+    "ts": "1467392380.000026",
+    "id": "01nd328",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R5K272T",
+    "text": "<@U053LEHJN>: So I'm porting a Windows/Linux/macOS project to Android. An issue is that the desktop build system uses the generated executables to produce some assets, which (to my knowledge) isn't possible while cross-compiling. Any ideas?",
+    "ts": "1467394329.000027",
+    "id": "01nd329",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U0R5K272T>: compile for the host system first so you have binaries available to generate things, then cross-compile?",
+    "ts": "1467396600.000028",
+    "id": "01nd330",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R5K272T",
+    "text": "<@U053LEHJN>: I was afraid you were going to say that :confused:",
+    "ts": "1467400936.000029",
+    "id": "01nd331",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

@@ -1,0 +1,845 @@
+[
+  {
+    "user": "U053PPGDC",
+    "text": "trying to think of the best way to test custom view components",
+    "ts": "1457350935.000068",
+    "id": "07te727",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "<@U053PPGDC>: you can create an activity just for testing and add your custom view there and test it with Espresso/etc",
+    "ts": "1457358991.000069",
+    "id": "07te728",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "hm, that’s where I’m going now yeah",
+    "ts": "1457359015.000070",
+    "id": "07te729",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "thanks for confirming :simple_smile:",
+    "ts": "1457359021.000071",
+    "id": "07te730",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "For those using travis-ci, does it take a while for your tests to run? For example, it takes ~12 minutes to get things installed (Android SDK, play services, support libraries, etc) before my tests start to run. Anyway to speed that up?",
+    "ts": "1457363616.000072",
+    "id": "07te731",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<@U05473HHT>: you can try caching them, but that probably won’t increase the speed for SDK, but for dependencies it might",
+    "ts": "1457363727.000073",
+    "id": "07te732",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "yup, cache is your friend and enemy as always",
+    "ts": "1457363775.000074",
+    "id": "07te733",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "do you really need to use travis or can you use something else like greenhouse or buddybuild?",
+    "ts": "1457363793.000075",
+    "id": "07te734",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "they don’t need to download SDK every time :simple_smile:",
+    "ts": "1457363825.000076",
+    "id": "07te735",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "I think (not sure for greenhouse)",
+    "edited": {
+      "user": "U0548MM6B",
+      "ts": "1457363847.000000"
+    },
+    "ts": "1457363831.000077",
+    "id": "07te736",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "I’ll experiment with greenhouseci/buddybuild but all our other android projects are running on travis.",
+    "ts": "1457363866.000079",
+    "id": "07te737",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "<@U091EBYSU>: I pretty much copied your travis.yml file from the quality_matters repo. :smile:",
+    "ts": "1457363894.000080",
+    "id": "07te738",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "( <@U091EBYSU> here’s a podcast episode idea: CI and CD on android, basically android devops :simple_smile: )",
+    "ts": "1457363925.000081",
+    "id": "07te739",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "<@U05473HHT>: lol :simple_smile: I found CircleCI faster and prefer it for personal projects",
+    "ts": "1457363940.000082",
+    "id": "07te740",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "<@U0548MM6B>: oh yes, CI is actually next on my list, but I also want to talk about indie android development",
+    "ts": "1457363979.000083",
+    "id": "07te741",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "depends on which guest will be available :simple_smile:",
+    "ts": "1457363993.000084",
+    "id": "07te742",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "oh cool, managed to find someone good for those? :smile:",
+    "ts": "1457364020.000085",
+    "id": "07te743",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "I think that’s going to be my project this week, do a comparison of different CI/CD services, travis, circleci, greenhouseci and buddybuild.",
+    "ts": "1457364184.000086",
+    "id": "07te744",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "I’m finding buddybuild satisfying",
+    "ts": "1457364311.000087",
+    "id": "07te745",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "<@U0548MM6B>: have some candidates :simple_smile:",
+    "ts": "1457364326.000088",
+    "id": "07te746",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "they’re accepting feedback and will add support for fetching static analysis reports",
+    "ts": "1457364331.000089",
+    "id": "07te747",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "they have good deployment tools",
+    "ts": "1457364348.000090",
+    "id": "07te748",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "<@U05473HHT>: please make a blog post about that!",
+    "ts": "1457364351.000091",
+    "id": "07te749",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "<@U091EBYSU>: will do! I want to start blogging about android again. Last time I did, I was just starting with android dev and didn’t really know what I was talking about.",
+    "ts": "1457364429.000092",
+    "id": "07te750",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "<@U05473HHT>: great! Just some properties you and community may find interesting to compare: pricing, average build time of same project (need to be tested at ~same time of the day), ability to configure it via file under vcs",
+    "ts": "1457364644.000093",
+    "id": "07te751",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "damn, that was my idea :sweat_smile:",
+    "ts": "1457364751.000094",
+    "id": "07te752",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "Does anyone use the Google Cloud Test Lab? I just got access to it under my personal account. So I’ll add that as a bonus to my list of services to compare.",
+    "ts": "1457364795.000095",
+    "reactions": [
+      {
+        "name": "partyparrot",
+        "users": [
+          "U04U5KS3Z",
+          "U091EBYSU"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "07te753",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "still on my todo",
+    "ts": "1457366049.000096",
+    "id": "07te754",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I used it once, but it seems to block access to everything not on port 80, so kinda pointless for the specific app i tested ",
+    "ts": "1457366491.000097",
+    "id": "07te755",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "But it took pictures of the cabinet the phones are in lol ",
+    "ts": "1457366516.000098",
+    "id": "07te756",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "(qr reader in the app was triggered) ",
+    "ts": "1457366529.000099",
+    "id": "07te757",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "haha epic",
+    "ts": "1457366539.000100",
+    "id": "07te758",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "maybe we can try and use play services to determine where the device farm is",
+    "ts": "1457366557.000101",
+    "id": "07te759",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "/gif you smart",
+    "ts": "1457366732.000102",
+    "id": "07te760",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "",
+    "bot_id": "B0GH4RVHU",
+    "attachments": [
+      {
+        "fallback": "<https://media.giphy.com/media/3i4xTtJQIJk0o/giphy.gif>",
+        "image_url": "https://media.giphy.com/media/3i4xTtJQIJk0o/giphy.gif",
+        "image_width": 500,
+        "image_height": 360,
+        "image_bytes": 1013869,
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1457366732.000103",
+    "id": "07te761",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "/gif like a ninja",
+    "ts": "1457366854.000104",
+    "id": "07te762",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "",
+    "bot_id": "B0GH4RVHU",
+    "attachments": [
+      {
+        "fallback": "<http://gifstumblr.com/images/jumping-like-a-ninja_655.gif>",
+        "image_url": "http://gifstumblr.com/images/jumping-like-a-ninja_655.gif",
+        "image_width": 209,
+        "image_height": 228,
+        "image_bytes": 188441,
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1457366854.000105",
+    "id": "07te763",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "/gif rockstar code",
+    "ts": "1457367111.000106",
+    "id": "07te764",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "",
+    "bot_id": "B0GH4RVHU",
+    "attachments": [
+      {
+        "fallback": "<http://www.gamescrack.org/wp-content/uploads/2013/12/gta-5-online-money-hack.gif>",
+        "image_url": "http://www.gamescrack.org/wp-content/uploads/2013/12/gta-5-online-money-hack.gif",
+        "image_width": 521,
+        "image_height": 482,
+        "image_bytes": 50586,
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1457367113.000107",
+    "id": "07te765",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "/gif java ninja",
+    "ts": "1457367130.000108",
+    "id": "07te766",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "",
+    "bot_id": "B0GH4RVHU",
+    "attachments": [
+      {
+        "fallback": "<http://i.imgur.com/fnRu3.gif>",
+        "image_url": "http://i.imgur.com/fnRu3.gif",
+        "image_width": 240,
+        "image_height": 320,
+        "image_bytes": 418266,
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1457367130.000109",
+    "id": "07te767",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "/gif code wizard",
+    "ts": "1457367159.000110",
+    "id": "07te768",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "",
+    "bot_id": "B0GH4RVHU",
+    "attachments": [
+      {
+        "fallback": "<http://sigmabit.eu/media/catalog/cwp/cwp2.gif>",
+        "image_url": "http://sigmabit.eu/media/catalog/cwp/cwp2.gif",
+        "image_width": 620,
+        "image_height": 511,
+        "image_bytes": 122692,
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1457367161.000111",
+    "id": "07te769",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

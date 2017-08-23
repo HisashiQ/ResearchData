@@ -1,0 +1,475 @@
+[
+  {
+    "user": "U07DEGHHT",
+    "text": "So i’m playing with Dagger 2.0 and it’s looking like you can’t really inject unless you have reference to some type of context. Am I missing something?",
+    "ts": "1442439241.000097",
+    "id": "16li1408",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "Are you creating an applicationmodule?",
+    "ts": "1442439420.000098",
+    "id": "16li1409",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<@U07DEGHHT>: I think you're missing something",
+    "ts": "1442439513.000099",
+    "id": "16li1410",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "does your inject method in component maybe have context in the args so you require it?",
+    "edited": {
+      "user": "U0548MM6B",
+      "ts": "1442439590.000000"
+    },
+    "ts": "1442439544.000100",
+    "id": "16li1411",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "you only need context if the contents of your modules have a dependency on context",
+    "ts": "1442439556.000101",
+    "id": "16li1412",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "this too",
+    "ts": "1442439567.000102",
+    "id": "16li1413",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07DEGHHT",
+    "text": "DemoApplication.from(this).getComponent().inject(this);",
+    "ts": "1442439578.000103",
+    "id": "16li1414",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07DEGHHT",
+    "text": "that part",
+    "ts": "1442439581.000104",
+    "id": "16li1415",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07DEGHHT",
+    "text": "is what i’m talking about",
+    "ts": "1442439584.000105",
+    "id": "16li1416",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07DEGHHT",
+    "text": "you need the Application to inject?",
+    "ts": "1442439598.000107",
+    "id": "16li1417",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "nope",
+    "ts": "1442439610.000108",
+    "id": "16li1418",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "in that particular use case yes",
+    "ts": "1442439618.000109",
+    "id": "16li1419",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "but not for dagger in general",
+    "ts": "1442439623.000110",
+    "id": "16li1420",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07DEGHHT",
+    "text": "So when I want to inject to a pojo what does that look like?",
+    "ts": "1442439655.000111",
+    "id": "16li1421",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "after you make a component, build and dg generates it",
+    "ts": "1442439682.000112",
+    "id": "16li1422",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "DaggerComponentNameComponent",
+    "ts": "1442439690.000113",
+    "id": "16li1423",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "So it's like DaggerComponentNameComponent.builder().myModule().build().inject(); for example",
+    "ts": "1442439744.000114",
+    "id": "16li1424",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "pojo probably becomes not a pojo anymore when you're injecting things",
+    "ts": "1442439795.000115",
+    "id": "16li1425",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07DEGHHT",
+    "text": "I think you know what I mean.",
+    "ts": "1442439813.000116",
+    "id": "16li1426",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07DEGHHT",
+    "text": "A non android class",
+    "ts": "1442439820.000117",
+    "id": "16li1427",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07DEGHHT",
+    "text": "<@U0548MM6B>: thanks that makes more sense.",
+    "ts": "1442439836.000118",
+    "id": "16li1428",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "yeah, so alot of examples use application as a sample to show how you can organise context-based dependencies",
+    "ts": "1442439900.000119",
+    "id": "16li1429",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "but it can work for regular java",
+    "ts": "1442439911.000120",
+    "id": "16li1430",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "just use the coffe maker example :troll:",
+    "ts": "1442439913.000121",
+    "reactions": [
+      {
+        "name": "trollface",
+        "users": [
+          "U04U5KS3Z"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "16li1431",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "nobody likes their coffee maker example :baby_chick:",
+    "ts": "1442441299.000122",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U0546QERR",
+          "U060Q7J2Y"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "16li1432",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

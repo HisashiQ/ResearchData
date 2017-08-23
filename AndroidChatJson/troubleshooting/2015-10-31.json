@@ -1,0 +1,116 @@
+[
+  {
+    "user": "U061HDV96",
+    "text": "Does anyone have experience with writing to NFC tags?",
+    "ts": "1446313301.000202",
+    "id": "31tr2730",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DJHUX18",
+    "subtype": "channel_join",
+    "text": "<@U0DJHUX18|deni> has joined the channel",
+    "ts": "1446314858.000203",
+    "id": "31tr2731",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DJCJ8K1",
+    "subtype": "channel_join",
+    "text": "<@U0DJCJ8K1|aryaxt> has joined the channel",
+    "ts": "1446316640.000204",
+    "id": "31tr2732",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DJCJ8K1",
+    "text": "Hey guys, doesn’t matter what I do this either complains that I’m performing network calls on UI theread, or it complains that I’m updating ui on the wrong thread. What’s the correct way of using rx on Android to run the task on background thread, and call the callback on main thread?\n```\n       subscription = repoService.fetchRepositories(\"aryaxt\")\n                .observeOn(Schedulers.newThread())\n                .subscribeOn(AndroidSchedulers.mainThread())\n                .subscribe(new Action1&lt;List&lt;Repository&gt;&gt;() {\n                    @Override\n                    public void call(List&lt;Repository&gt; repositories) {\n                        recyclerView.setAdapter(new RepositoriesAdapter(repositories));\n                    }\n                }, new Action1&lt;Throwable&gt;() {\n                    @Override\n                    public void call(Throwable throwable) {\n                    }\n                });\n```",
+    "ts": "1446321161.000211",
+    "id": "31tr2733",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "you observe on the android thread and subscribe on the background thread, porbably `.io` in your case",
+    "edited": {
+      "user": "U04TK850N",
+      "ts": "1446321283.000000"
+    },
+    "ts": "1446321273.000212",
+    "id": "31tr2734",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DJCJ8K1",
+    "text": "thanks",
+    "ts": "1446321628.000214",
+    "id": "31tr2735",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

@@ -1,0 +1,802 @@
+[
+  {
+    "user": "U05473HHT",
+    "text": "Anyone have experience with Android Wear? I’m running into a really weird build issue now, things we working correctly ~2 weeks ago and now noticed that when creating a build release, the Wear APK is packaged into res/raw but the final AndroidManifest.xml does NOT have the meta-data that points to the microapk location.",
+    "ts": "1438958220.000157",
+    "id": "07tr1675",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "interesting",
+    "ts": "1438958246.000158",
+    "id": "07tr1676",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I build for wear at least once a week",
+    "ts": "1438958255.000159",
+    "id": "07tr1677",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "have not had any issues",
+    "ts": "1438958260.000160",
+    "id": "07tr1678",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "I verify that the Wear APK is packaged into the app by using APKTool and decompiling my release build. The APK is in res/raw and the xml that has the meta data is also in res/xml.",
+    "ts": "1438958282.000161",
+    "id": "07tr1679",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "I rather not go the manual packaging route but it is looking more like I will need to. The main difference looking at the commits in this project is we now have additional gradle dependencies in the main app that also have their own AndroidManifest that needs to be merged in. My initial thought was that somehow the wear stuff was being overwritten.",
+    "ts": "1438958346.000162",
+    "id": "07tr1680",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "But when I do `./gradlew clean assembleRelease —info` I see that the microapk manifest is created and merged in last with a success status but that isn’t really true.",
+    "ts": "1438958384.000163",
+    "id": "07tr1681",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "i think you can add information to your important manifest to help android make merge decisions",
+    "ts": "1438958386.000164",
+    "id": "07tr1682",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "I’ve look at this <https://developer.android.com/tools/building/manifest-merge.html> several times already but during the build, I’m not seeing any merge conflicts.",
+    "attachments": [
+      {
+        "text": "With Android Studio and Gradle -based builds, each app can contain manifest files in multiple locations, such as the src/main/ folder for the productFlavor , libraries, Android ARchive (AAR) bundles of Android Library projects, and dependencies…",
+        "fallback": "With Android Studio and Gradle -based builds, each app can contain manifest files in multiple locations, such as the src/main/ folder for the productFlavor , libraries, Android ARchive (AAR) bundles of Android Library projects, and dependencies…",
+        "from_url": "https://developer.android.com/tools/building/manifest-merge.html",
+        "id": 1
+      }
+    ],
+    "ts": "1438958488.000165",
+    "id": "07tr1683",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "What I did notice is if I look at the logs/manifest-merger I noticed a lot of REJECTED lines compared to the working build 2 weeks ago. I haven’t fully understood how to read that manifest-merger file yet.",
+    "ts": "1438958530.000167",
+    "id": "07tr1684",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "did you update your build tools or anything?",
+    "ts": "1438958641.000168",
+    "id": "07tr1685",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "maybe try making a blank project with wear support and see if it builds correctly unless you are saying you can rollback and everything is working fine",
+    "ts": "1438958662.000169",
+    "id": "07tr1686",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "If I rollback, everything works fine but we were using build tools 21.1.2 but now moved to 22.0.1",
+    "ts": "1438958761.000170",
+    "id": "07tr1687",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "I’ll try a blank project to just to rule out all possibilities.",
+    "ts": "1438958794.000171",
+    "id": "07tr1688",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "im using 22.0.1 in mine without issue",
+    "ts": "1438960076.000172",
+    "id": "07tr1689",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "it is a fairly large project too, like 18 modules i think",
+    "ts": "1438960087.000173",
+    "id": "07tr1690",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "so manifest merging, for me at least, seems to be working properly",
+    "ts": "1438960099.000174",
+    "id": "07tr1691",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "That actually reminds me, last week we had an issue with manifest merging. One our our modules has an activity so we had an AndroidManifest in the module declaring the activity but after integrating it into the main app, it would crash since it wasn’t finding the activity.",
+    "ts": "1438960757.000175",
+    "id": "07tr1692",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "We ended up just putting the activity into the main app AndroidManifest but that makes me believe that there is a larger issue going on now.",
+    "ts": "1438960778.000176",
+    "id": "07tr1693",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "i use activity merging from modules frequently so I agree, sounds like something is wrong",
+    "ts": "1438960860.000177",
+    "id": "07tr1694",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "are all your modules on the same build tools version?",
+    "ts": "1438960876.000178",
+    "id": "07tr1695",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I make gradle.properties values for my dependencies and build data so I can update everything at once",
+    "edited": {
+      "user": "U055GGAHS",
+      "ts": "1438960904.000000"
+    },
+    "ts": "1438960894.000179",
+    "id": "07tr1696",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "really helps when you have a ton of modules so you dont have to update a million gradle files",
+    "ts": "1438960937.000181",
+    "id": "07tr1697",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Release builds provide a log of the manifest merging decisions in the out directory ",
+    "ts": "1438961160.000182",
+    "id": "07tr1698",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "No some are 22.0.1 and some are 21.1.2",
+    "ts": "1438961169.000183",
+    "id": "07tr1699",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "You can check there what the merger did ",
+    "ts": "1438961169.000184",
+    "id": "07tr1700",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "maybe that is related?",
+    "ts": "1438961183.000185",
+    "id": "07tr1701",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "I looked at the output/manfifest-merger report but not totally sure I understand how to interpret it. I’ve noticed a bunch of REJECTED lines in the file now compared to 2 weeks ago when things worked.",
+    "ts": "1438961210.000186",
+    "id": "07tr1702",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "I’m working on bumping all internal modules to the same build tools to see if that is the issue. Will take a while since we have a bunch.",
+    "ts": "1438961251.000187",
+    "id": "07tr1703",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "pro tip, set `buildToolsVersion BUILD_TOOLS_VERSION`",
+    "ts": "1438961311.000188",
+    "id": "07tr1704",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "then in gradle.properties in your root just do `BUILD_TOOLS_VERSION=22.0.1`",
+    "ts": "1438961348.000189",
+    "id": "07tr1705",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "android studio is not smart enough to understand it so you do have to live with it just shrugging it shoulders in the IDE but it makes life easier",
+    "ts": "1438961378.000190",
+    "id": "07tr1706",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I do the same thing with dependency versions, keep them all in a single file so one update fixes up all my modules",
+    "ts": "1438961394.000191",
+    "id": "07tr1707",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "So we use <https://github.com/layerhq/gradle-git-repo-plugin> so our modules are in separate repos, I’m not aware of a way to be able to have a properties file that applies to all of them.",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "layerhq/gradle-git-repo-plugin",
+        "title_link": "https://github.com/layerhq/gradle-git-repo-plugin",
+        "text": "gradle-git-repo-plugin - Use a private git repo as a repository",
+        "fallback": "GitHub: layerhq/gradle-git-repo-plugin",
+        "thumb_url": "https://avatars2.githubusercontent.com/u/5497685?v=3&s=400",
+        "from_url": "https://github.com/layerhq/gradle-git-repo-plugin",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1438961643.000192",
+    "id": "07tr1708",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "That is one of the drawbacks to this approach but the benefit is keeping things totally isolated and responsible for only itself. So I would have to go in an manually update the buildtools for each repo.",
+    "ts": "1438961700.000194",
+    "id": "07tr1709",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I wouldn’t know, never used that",
+    "ts": "1438962018.000195",
+    "id": "07tr1710",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "So the blank project works correctly, going to start adding some dependencies one by one to see if/when I run into issues.",
+    "ts": "1438967685.000196",
+    "id": "07tr1711",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "well at least that validates 100% it is something in the project that is incorrect",
+    "ts": "1438967883.000197",
+    "id": "07tr1712",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "Hmm, actually it seems like the wear app isn’t getting installed on my watches. But when I decompile with APKTool, everything looks right.",
+    "ts": "1438972977.000198",
+    "id": "07tr1713",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "I even go in the Android Wear app to resync apps but don’t see it in the watch storage.",
+    "ts": "1438972997.000199",
+    "id": "07tr1714",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "yeah they need to fix that",
+    "ts": "1438973017.000200",
+    "id": "07tr1715",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "rather they need to add debugging so you can have some earthly idea why it is not working",
+    "ts": "1438973036.000201",
+    "id": "07tr1716",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "I’m out of ideas on why this isn’t working.",
+    "ts": "1438975546.000202",
+    "id": "07tr1717",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

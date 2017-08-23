@@ -1,0 +1,2846 @@
+[
+  {
+    "user": "U0K1ALDQE",
+    "text": "Some1 know how I enable gradle daemon for all users on linux server?",
+    "ts": "1461228519.000716",
+    "id": "21de32683",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "normally it’ s placing in `echo org.gradle.daemon=true &gt; $HOME/.gradle/gradle.properties`",
+    "edited": {
+      "user": "U0K1ALDQE",
+      "ts": "1461228666.000000"
+    },
+    "ts": "1461228645.000717",
+    "id": "21de32684",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "placing it in `/etc/.bashrc` doens’t seem like a good idea",
+    "ts": "1461228686.000719",
+    "id": "21de32685",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "cause it would add a new line in gradle.properties everytime the user logs in via shell",
+    "ts": "1461228711.000720",
+    "id": "21de32686",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "to the file «USER_HOME»/.gradle/gradle.properties, where «USER_HOME» is your home directory. That’s typically one of the following, depending on your platform:\n\n/home/&lt;username&gt; (Linux)",
+    "ts": "1461228720.000721",
+    "id": "21de32687",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "you can add multiple username",
+    "ts": "1461228729.000722",
+    "id": "21de32688",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "No way to set it default true for all users?",
+    "ts": "1461228760.000723",
+    "id": "21de32689",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I’m thinking of setting my Jenkins up so every project could be a different user / environment",
+    "ts": "1461228818.000724",
+    "id": "21de32690",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "could do it with groups I suppose",
+    "ts": "1461228829.000725",
+    "id": "21de32691",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "not sure how gradle handles that tho",
+    "ts": "1461228867.000726",
+    "id": "21de32692",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "normally its set to single user only, why you have that requirements?",
+    "ts": "1461229014.000727",
+    "id": "21de32693",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "gradle recommends not using the daemon for CI",
+    "ts": "1461229017.000728",
+    "id": "21de32694",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "so nvm",
+    "ts": "1461229027.000729",
+    "id": "21de32695",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "<@U0XCFE6AH> in my CI setup I’d use a different user / environment per project",
+    "ts": "1461229050.000730",
+    "id": "21de32696",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "in order to keep everything totally separated",
+    "ts": "1461229061.000731",
+    "id": "21de32697",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "or you could have a script to set up each user",
+    "ts": "1461229064.000732",
+    "id": "21de32698",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "and paste your desired gradle.properties file",
+    "ts": "1461229086.000733",
+    "id": "21de32699",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "gradle documentation recommends not using it so ¯\\_(ツ)_/¯",
+    "edited": {
+      "user": "U0K1ALDQE",
+      "ts": "1461229106.000000"
+    },
+    "ts": "1461229094.000734",
+    "id": "21de32700",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": ":simple_smile:",
+    "ts": "1461229098.000735",
+    "id": "21de32701",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KU8TDV2",
+    "text": "hi guys, is there any viable solution for multimedia editing rather than ffmpeg on android?",
+    "ts": "1461229108.000737",
+    "id": "21de32702",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "lol @ typo",
+    "ts": "1461229109.000738",
+    "id": "21de32703",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KU8TDV2",
+    "text": "a have some video editing task",
+    "ts": "1461229127.000739",
+    "id": "21de32704",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Thanks <@U053PPGDC> &amp; <@U0XCFE6AH> do you guys use daemon on development machine?",
+    "ts": "1461229140.000740",
+    "id": "21de32705",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KU8TDV2",
+    "text": "i've tried ffmpeg but it seems to be too slow",
+    "ts": "1461229144.000741",
+    "id": "21de32706",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I use travis on ci but daemon on dev box yeah",
+    "ts": "1461229159.000742",
+    "id": "21de32707",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Okay, then I’m going to have similar same setup but with Jenkins",
+    "ts": "1461229200.000743",
+    "id": "21de32708",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": ":+1:",
+    "ts": "1461229205.000744",
+    "id": "21de32709",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KSPCLF",
+    "text": "Would one be able to have more than one click listener on same image?",
+    "ts": "1461231082.000745",
+    "id": "21de32710",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KSPCLF",
+    "text": "I'm working on an app where I've been asked to use a fully redesigned keyboard, and I got the graphics piece as one png...",
+    "ts": "1461231174.000746",
+    "id": "21de32711",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055JANKU",
+    "text": "I would just give up.",
+    "ts": "1461231630.000747",
+    "id": "21de32712",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "hahaha...",
+    "ts": "1461231665.000748",
+    "id": "21de32713",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "I have the source code ready but will not work with single image for sure...",
+    "ts": "1461231693.000749",
+    "id": "21de32714",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "one idea why dont you use that image as background and top of that have transparent views..",
+    "ts": "1461231776.000750",
+    "id": "21de32715",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "and have click events on those views..",
+    "ts": "1461231795.000751",
+    "id": "21de32716",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D0AFX1B",
+    "text": "Good morning everyone.",
+    "ts": "1461233290.000752",
+    "id": "21de32717",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D0AFX1B",
+    "text": "Is there a way to stop the FragmentPagerAdapter from creating/resuming the fragment next to the one I’m looking at?",
+    "ts": "1461233365.000753",
+    "id": "21de32718",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "setOffscreenPageLimit to 0",
+    "ts": "1461233512.000754",
+    "id": "21de32719",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D0AFX1B",
+    "text": "thanks",
+    "ts": "1461233520.000755",
+    "id": "21de32720",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D0AFX1B",
+    "text": "not working bluecup",
+    "ts": "1461233727.000759",
+    "id": "21de32721",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": ":open_mouth:",
+    "ts": "1461233737.000760",
+    "id": "21de32722",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D0AFX1B",
+    "text": "It’s still creating the one right next to the first one",
+    "ts": "1461233744.000761",
+    "id": "21de32723",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D0AFX1B",
+    "text": "having a log in onResume()",
+    "ts": "1461233756.000762",
+    "id": "21de32724",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D0AFX1B",
+    "text": ":confused:",
+    "ts": "1461233764.000763",
+    "id": "21de32725",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "hmm do you do it before setting the adapter?",
+    "ts": "1461233839.000764",
+    "id": "21de32726",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D0AFX1B",
+    "text": ":        mViewPager.setOffscreenPageLimit(0);\n        mViewPager.setAdapter(mAdapter);",
+    "ts": "1461233908.000765",
+    "id": "21de32727",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D0AFX1B",
+    "text": "tried it both ways though",
+    "ts": "1461233919.000766",
+    "id": "21de32728",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "<@U0D0AFX1B>:  if your tabs dont have swipt gesture I would recommended to add fragment dynamically to pager adapter when user click on the tab",
+    "ts": "1461233920.000767",
+    "id": "21de32729",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D0AFX1B",
+    "text": "And just a null check on the position so that i dont add multiple fragments of the same type?",
+    "ts": "1461234004.000768",
+    "id": "21de32730",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "possibly so have the loading fragment as default fragment for each tab, and when needed you can replace it with right fragment",
+    "ts": "1461234573.000769",
+    "id": "21de32731",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "well really speaking this is not that complex to do but dont know why I am suggesting this very messy and complex solution.",
+    "ts": "1461234617.000770",
+    "id": "21de32732",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "Tab and fragment are the easiet bit of code and you will find 1000 demo on that, not sure why you having all this issues.",
+    "ts": "1461234648.000771",
+    "id": "21de32733",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D0AFX1B",
+    "text": "Well I guess it’s because of the way I implemented the network calls i guess",
+    "ts": "1461234831.000772",
+    "id": "21de32734",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D0AFX1B",
+    "text": "I will figure this out somehow :smile:",
+    "ts": "1461234846.000773",
+    "id": "21de32735",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U12HRPY4A",
+    "subtype": "channel_join",
+    "text": "<@U12HRPY4A|lundblom> has joined the channel",
+    "ts": "1461237358.000774",
+    "id": "21de32736",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0H67LJUA",
+    "text": "Is this something that a FragmentStatePagerAdapter could potentially fix? It keeps the instances instead of the whole fragments, from what I understand.",
+    "ts": "1461238723.000775",
+    "id": "21de32737",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09UQHPQV",
+    "text": "NavigationView not able to add divider in each item but divider is able to see in two different group.",
+    "ts": "1461238991.000776",
+    "id": "21de32738",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09UQHPQV",
+    "text": "Can we add a separator between two menu ?",
+    "ts": "1461239019.000777",
+    "id": "21de32739",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "how do you guys get string resources in things like adapters other than passing in a `Context`? Is there a less verbose way? Kotlin maybe?",
+    "ts": "1461244658.000778",
+    "id": "21de32740",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "or dagger2",
+    "ts": "1461244665.000779",
+    "id": "21de32741",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "if you use a viewholder then you can get the context from the view you are going to apply the string to",
+    "ts": "1461245058.000780",
+    "id": "21de32742",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I usually get the context from the root view when creating the viewholder if I need a context",
+    "ts": "1461245112.000781",
+    "id": "21de32743",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I also usually make the viewholder have a bind method which reduces the amount of code in the adapter most notably with recyclers when you have multiple view types you can just pass off the models and let the holders figure it out (when im not using databinding which works kind of the same)",
+    "edited": {
+      "user": "U055GGAHS",
+      "ts": "1461245224.000000"
+    },
+    "ts": "1461245178.000782",
+    "id": "21de32744",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I have a data structure `Entity` which can be created by a user (through an Activity or whatever) and then persisted to the database and retrieved. This Entity has an id but the id is autoincremented by the database. I am considering two ways for the construction of this Entity.\n\n1. When the user presses \"save\" he creates a `ViewEntity` which is identical to `Entity` except that it's missing the `id` field, then that is persisted to the database and the `Entity` is returned.\n\n2. When the user presses \"save\" I compute the next id by accessing the database next autoincrement (through the `SQLITE_SEQUENCE` table)\n\nWhich would be preferable?",
+    "ts": "1461246231.000784",
+    "id": "21de32745",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I like the first way but the bad thing is the duplication of `ViewEntity` and `Entity`. I guess this can be avoided by having `Entity` subclass `ViewEntity`",
+    "ts": "1461246439.000785",
+    "id": "21de32746",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U12H6RXHR",
+    "subtype": "channel_join",
+    "text": "<@U12H6RXHR|panich> has joined the channel",
+    "ts": "1461247239.000786",
+    "id": "21de32747",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08PJGFBL",
+    "text": "<@U054A24ET>: Passing the context into the adapter is for me an architectural red flag - ie probably means you are doing something wrong, which I guess you already know, thus the question... Adapters are only responsible for binding a model to a view, that model should be something like SimpleListItem or SwipeableListItem or TwoLinedListItem but not User or Book or Fruit or Group.. savvy? If you need to get a string resource for some reason, you should be doing it outside the adapter (probably the fragment or presenter), then constructing or altering a SimpleListItem, then giving that to the adapter. You want to keep as much logic as you can out of the viewholder and adapter - they should be as generic (and therefore reusable) as possible",
+    "ts": "1461247493.000787",
+    "id": "21de32748",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0W3JFY57",
+    "text": "<@U08PJGFBL>: So would you pass into the view holder something such as a view model structure containing whatever strings etc should be displayed?",
+    "ts": "1461247732.000788",
+    "id": "21de32749",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055JANKU",
+    "text": "&gt; that model should be something like SimpleListItem or SwipeableListItem or TwoLinedListItem but not User or Book or Fruit or Group",
+    "ts": "1461247876.000789",
+    "id": "21de32750",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055JANKU",
+    "text": "This is useful if you have always the same generic layout.",
+    "edited": {
+      "user": "U055JANKU",
+      "ts": "1461248084.000000"
+    },
+    "ts": "1461247906.000790",
+    "id": "21de32751",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055JANKU",
+    "text": "`User`, `Book`, `Fruit` and `Group` are models too. It just depends on how you choose to do things if you want to use them directly or not.",
+    "edited": {
+      "user": "U055JANKU",
+      "ts": "1461248029.000000"
+    },
+    "ts": "1461247957.000791",
+    "id": "21de32752",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "&gt; I usually get the context from the root view when creating the viewholder if I need a context\n\nThat's what im refactoring for right now... before that i was passing contexts into adapters and doing mContext.getString(R.id.blablabla)",
+    "ts": "1461247992.000792",
+    "id": "21de32753",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "&gt; I also usually make the viewholder have a bind method which reduces the amount of code in the adapter most notably with recyclers when you have multiple view types you can just pass off the models and let the holders figure it out (when im not using databinding which works kind of the same)\n\n<@U055GGAHS>: I don't really get this though (novice dev here)... all my adapters are recyclerview adapters. is the bind method you're talking about the OnBindView method?",
+    "ts": "1461248110.000795",
+    "id": "21de32754",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055JANKU",
+    "text": "No.",
+    "ts": "1461248119.000796",
+    "id": "21de32755",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "i mean in the viewholder class you can just make an arbitrary bind method that accepts whatever model you need",
+    "ts": "1461248152.000797",
+    "id": "21de32756",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "lots of examples show the adapters setting the necessary values of the views held by the viewholder and that never made sense to me",
+    "ts": "1461248180.000798",
+    "id": "21de32757",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "the entire purpose of the viewholder is so the adapter doesn’t need to know anything about the actual view contents",
+    "ts": "1461248204.000799",
+    "id": "21de32758",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055JANKU",
+    "text": "and if you want multiple types of views in the list then the onBind gets so messy.",
+    "ts": "1461248231.000800",
+    "id": "21de32759",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "&gt; and if you want multiple types of views in the list then the onBind gets so messy.\n\nyes i'm facing that problem now. how do you guys deal with that?",
+    "ts": "1461248289.000801",
+    "id": "21de32760",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055JANKU",
+    "text": "do the actual binding things in the viewholder",
+    "ts": "1461248405.000802",
+    "id": "21de32761",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08PJGFBL",
+    "text": "<@U055JANKU>: correct, consider how many times you have written an Adapter&lt;Fruit&gt; to display a list of fruits. A Fruit class might have a ‘name’ and a ‘colour’ and a ‘healthRating’. But if you want to show a list of the fruit in one screen that shows the Name and Colour, but then elsewhere in your app have a screen that shows Name and HealthRating… you now have to create two adapters. Further, if you want to show a list of Books somewhere else and display the Title and the Author, you need to create another Adapter&lt;Book&gt;. Now, it makes things easier if you just create one single Adapter&lt;TwoLinedListItem&gt; where the TwoLinedListItem (bad name.. i know) has two properties (line1 and line2)",
+    "ts": "1461248972.000803",
+    "id": "21de32762",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055JANKU",
+    "text": "I understand that, but it really depends on what you have to do.",
+    "ts": "1461249030.000804",
+    "id": "21de32763",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08PJGFBL",
+    "text": "there;s always exceptions of course",
+    "ts": "1461249071.000805",
+    "id": "21de32764",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08PJGFBL",
+    "text": "but generally sending real models into an adapter is bad",
+    "ts": "1461249096.000806",
+    "id": "21de32765",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U12M7GG2Z",
+    "subtype": "channel_join",
+    "text": "<@U12M7GG2Z|saulsanchez> has joined the channel",
+    "ts": "1461260911.000807",
+    "id": "21de32766",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "hey guys, where do you usually dismiss your alertdialogs\nin onPause(), onStop() or in onDestroy() ?",
+    "ts": "1461264903.000810",
+    "id": "21de32767",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KK98UU",
+    "text": "why do you want to do that?",
+    "ts": "1461266391.000811",
+    "id": "21de32768",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "<@U08KK98UU>: because an activity can go away",
+    "ts": "1461267039.000812",
+    "id": "21de32769",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "it can throw an error when you are showing the dialog for a context that no longer exists",
+    "ts": "1461267099.000813",
+    "id": "21de32770",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i've never gotten an error leaving an alertdialog up",
+    "ts": "1461267130.000814",
+    "id": "21de32771",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KK98UU",
+    "text": "I thought AlertDialog automatically dismisses itself when the activity is destroyed? if you rotate an activity that is displaying an AlertDialog it disappears",
+    "ts": "1461267141.000815",
+    "id": "21de32772",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KK98UU",
+    "text": "DialogFragments will persist on rotation though",
+    "ts": "1461267153.000816",
+    "id": "21de32773",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "if you have some logic in a dialogfragment that calls back to your activity then i usually use `onAttach` to track that, otherwise the activity doesn't really need to explicitly dismiss it",
+    "ts": "1461267226.000817",
+    "id": "21de32774",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KK98UU",
+    "text": "yea if you’re using some sort of callback mechanism you should be updating the reference in onAttach/onDetach, otherwise you’re probably leaking memory",
+    "ts": "1461267293.000818",
+    "id": "21de32775",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "I add this ```if (!isFinishing()) {\n            dialog.show();\n        }```\ndidn’t help\nthen I added this \n```@Override\n    protected void onPause() {\n        super.onPause();\n\n        if (progressDialog != null) {\n            progressDialog.dismiss();\n        }\n```\ndidn’t help as well",
+    "ts": "1461267477.000819",
+    "id": "21de32776",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "still getting this error ```Fatal Exception: android.view.WindowManager$BadTokenException: Unable to add window -- token android.os.BinderProxy@33dc2336 is not valid; is your activity running?\n       at android.view.ViewRootImpl.setView(ViewRootImpl.java:769)\n       at android.view.WindowManagerGlobal.addView(WindowManagerGlobal.java:298)\n       at android.view.WindowManagerImpl.addView(WindowManagerImpl.java:91)\n       at android.app.Dialog.show(Dialog.java:325)```",
+    "ts": "1461267513.000820",
+    "id": "21de32777",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "where are you calling show on your dialog?",
+    "ts": "1461267635.000821",
+    "id": "21de32778",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "oh sorry",
+    "ts": "1461267649.000822",
+    "id": "21de32779",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "<@U0546QERR>: so you suggest to do this?\n```\n@Override\n    public void onDetachedFromWindow() {\n        super.onDetachedFromWindow();\n        if (progressDialog != null) {\n            progressDialog.dismiss();\n        }\n    }\n```",
+    "edited": {
+      "user": "U0JBR7LUV",
+      "ts": "1461267688.000000"
+    },
+    "ts": "1461267658.000823",
+    "id": "21de32780",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i guess i'm confused.. you're able to get the dialog to show, but then you get an error when your activity is paused?",
+    "ts": "1461267739.000825",
+    "id": "21de32781",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "I cannot reproduce this error",
+    "ts": "1461267764.000826",
+    "id": "21de32782",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "the stack comes from Dialog.show so i feel like you're calling show on your dialog somewhere weird",
+    "ts": "1461267767.000827",
+    "id": "21de32783",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "it happened in some of our users",
+    "ts": "1461267775.000828",
+    "id": "21de32784",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "ah",
+    "ts": "1461267780.000829",
+    "id": "21de32785",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "but I like your idea <https://androidchat.slack.com/archives/development/p1461267658000823>",
+    "attachments": [
+      {
+        "color": "4D394B",
+        "from_url": "https://androidchat.slack.com/archives/development/p1461267658000823",
+        "fallback": "[April 21st, 2016 12:40 PM] mykola: <@U0546QERR>: so you suggest to do this?\n```\n@Override\n    public void onDetachedFromWindow() {\n        super.onDetachedFromWindow();\n        if (progressDialog != null) {\n            progressDialog.dismiss();\n        }\n    }\n```",
+        "author_subname": "mykola",
+        "ts": "1461267658.000823",
+        "text": "<@U0546QERR>: so you suggest to do this?\n```\n@Override\n    public void onDetachedFromWindow() {\n        super.onDetachedFromWindow();\n        if (progressDialog != null) {\n            progressDialog.dismiss();\n        }\n    }\n```",
+        "author_link": "https://androidchat.slack.com/team/mykola",
+        "author_icon": "https://secure.gravatar.com/avatar/291376d08aeadfef78f04bb9e8ce5daf.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0024-48.png",
+        "mrkdwn_in": [
+          "text"
+        ],
+        "id": 1
+      }
+    ],
+    "ts": "1461267858.000830",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "21de32786",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "um not exactly, I don't think what I was talking about is applicable in your scenario. are you calling dialog.show on a stale activity reference?",
+    "ts": "1461268982.000832",
+    "id": "21de32787",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "what do you mean by stale reference ?",
+    "ts": "1461269164.000833",
+    "id": "21de32788",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "if you hold a reference to an activity and then that activity is destroyed, then try to use that to show the dialog, i'm sure the system will crash you",
+    "ts": "1461269908.000834",
+    "id": "21de32789",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "kinda hard to say without seeing more context around how you're showing the dialog",
+    "ts": "1461269934.000835",
+    "id": "21de32790",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "I understand your point, but in my case everything is simple, inside an activityI show this dialog, but the problem is that I have some API calls in my click listeners",
+    "ts": "1461270301.000836",
+    "id": "21de32791",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KK98UU",
+    "text": "do what we mentioned before with onAttach/onDetach",
+    "ts": "1461270373.000837",
+    "id": "21de32792",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "I haven’t tried",
+    "ts": "1461270393.000838",
+    "id": "21de32793",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "I need to be sure before pushing to prod, since I don’t know 100%\ncannot reproduce that error locally",
+    "ts": "1461270465.000839",
+    "id": "21de32794",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KK98UU",
+    "text": "usually I reproduce bugs like that by turning “Don’t keep activities” on in the developer options",
+    "ts": "1461270497.000840",
+    "id": "21de32795",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KK98UU",
+    "text": "same with setting the background process count to none",
+    "ts": "1461270507.000841",
+    "id": "21de32796",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "trying right now",
+    "ts": "1461270600.000842",
+    "id": "21de32797",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "this is the pattern to which i'm referring when i was talking about `onAttach` <https://github.com/damien5314/HoldTheNarwhal/blob/master/app/src/main/java/com/ddiehl/android/htn/view/dialogs/ConfirmSignOutDialog.java>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "damien5314/HoldTheNarwhal",
+        "title_link": "https://github.com/damien5314/HoldTheNarwhal/blob/master/app/src/main/java/com/ddiehl/android/htn/view/dialogs/ConfirmSignOutDialog.java",
+        "text": "HoldTheNarwhal - Android client for reddit",
+        "fallback": "GitHub: damien5314/HoldTheNarwhal",
+        "thumb_url": "https://avatars0.githubusercontent.com/u/1700953?v=3&s=400",
+        "from_url": "https://github.com/damien5314/HoldTheNarwhal/blob/master/app/src/main/java/com/ddiehl/android/htn/view/dialogs/ConfirmSignOutDialog.java",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1461270623.000843",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "21de32798",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "but unless you actually are calling back to your activity i don't think it's applicable",
+    "ts": "1461270639.000845",
+    "id": "21de32799",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "(i should add onDetach to clear the reference)",
+    "ts": "1461270659.000846",
+    "id": "21de32800",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "didn’t help don’t  keep activities to reproduce error",
+    "ts": "1461270688.000847",
+    "id": "21de32801",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "another thing guys, that can help, here the structure\n```create alertdialog\nalertdialog.setOnClickListener() {\n   show another dialog\n}\nalertdialog.show()\n```",
+    "edited": {
+      "user": "U0JBR7LUV",
+      "ts": "1461270868.000000"
+    },
+    "ts": "1461270848.000848",
+    "id": "21de32802",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KK98UU",
+    "text": "<@U0546QERR>: I think it’s good practice to clear the callback in `onDetach()` too",
+    "ts": "1461271081.000850",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0JBR7LUV"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "21de32803",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "```\n@Override\n    public void onMessageReceived(String from, Bundle data) {\n        String message = \"\";\n        if (data != null) {\n            message = data.getString(\"message\");\n        }\n        Log.d(TAG, \"From: \" + from);\n        Log.d(TAG, \"Message: \" + message);\n\n        if (from.startsWith(\"/topics/\")) {\n            // message received from some topic.\n        } else {\n            // normal downstream message.\n        }\n    }\n```\none more stupid question :simple_smile: who can throw null pointer in this piece of code?",
+    "edited": {
+      "user": "U0JBR7LUV",
+      "ts": "1461272421.000000"
+    },
+    "ts": "1461272378.000851",
+    "id": "21de32804",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "who?, do you mean how?",
+    "ts": "1461272429.000854",
+    "id": "21de32805",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "I mean I got this error from crashlytics",
+    "ts": "1461272449.000855",
+    "id": "21de32806",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "somewhere null pointer",
+    "ts": "1461272458.000856",
+    "id": "21de32807",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "there is no guarantee that from or data are not null",
+    "ts": "1461272481.000857",
+    "id": "21de32808",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "looking at the documentation reference it does not comment on either",
+    "edited": {
+      "user": "U055GGAHS",
+      "ts": "1461272527.000000"
+    },
+    "ts": "1461272501.000858",
+    "id": "21de32809",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "I am checking for data != null",
+    "ts": "1461272515.000859",
+    "id": "21de32810",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "only from, which is a SenderID of the sender",
+    "ts": "1461272530.000861",
+    "id": "21de32811",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B9AAKQF",
+    "text": "do you get a stack trace of which line is throwing it?",
+    "ts": "1461272559.000862",
+    "id": "21de32812",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "that doesn’t change my statement, either could be null regardless of if you are checking it. You are only checking data, from could be null.",
+    "ts": "1461272582.000863",
+    "id": "21de32813",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I dont know why it would be, but it could be",
+    "ts": "1461272591.000864",
+    "id": "21de32814",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "cannot reproduce again",
+    "ts": "1461272640.000865",
+    "id": "21de32815",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0JBR7LUV",
+    "text": "from some users",
+    "ts": "1461272647.000866",
+    "id": "21de32816",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U12NFT84T",
+    "subtype": "channel_join",
+    "text": "<@U12NFT84T|guruchaga> has joined the channel",
+    "ts": "1461279127.000867",
+    "id": "21de32817",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U12PXEK16",
+    "subtype": "channel_join",
+    "text": "<@U12PXEK16|falconim> has joined the channel",
+    "ts": "1461279631.000868",
+    "id": "21de32818",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KC373GX",
+    "text": "anyone doing their android development inside a ubuntu VM? I want to keep Windows 10 as host (games, etc).",
+    "ts": "1461281649.000869",
+    "id": "21de32819",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KC373GX",
+    "text": "I’m curious about how fast the build times would be, if the android emulator would perform, etc",
+    "ts": "1461281739.000870",
+    "id": "21de32820",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U12R4F3AM",
+    "subtype": "channel_join",
+    "text": "<@U12R4F3AM|luisgdelahozl> has joined the channel",
+    "ts": "1461292045.000871",
+    "id": "21de32821",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0SNJDQDC",
+    "text": "<https://twitter.com/akarnokd/status/723083911287332864> satisfying",
+    "attachments": [
+      {
+        "fallback": "<https://twitter.com/akarnokd|@akarnokd>: My first Android app :) count from 1 to 100.000 with Agera and RxJava! <https://github.com/akarnokd/AgeraTest2/blob/master/app/src/main/java/hu/akarnokd/ageratest2/MainActivity.java#L79> <https://pbs.twimg.com/media/Cgjo_DkWgAAyXrv.jpg>",
+        "ts": 1461231613,
+        "author_name": "David Karnok",
+        "author_link": "https://twitter.com/akarnokd/status/723083911287332864",
+        "author_icon": "https://pbs.twimg.com/profile_images/322935079/avatar32_normal.png",
+        "author_subname": "@akarnokd",
+        "text": "My first Android app :) count from 1 to 100.000 with Agera and RxJava! <https://github.com/akarnokd/AgeraTest2/blob/master/app/src/main/java/hu/akarnokd/ageratest2/MainActivity.java#L79> <https://pbs.twimg.com/media/Cgjo_DkWgAAyXrv.jpg>",
+        "service_name": "twitter",
+        "service_url": "https://twitter.com/",
+        "image_url": "https://pbs.twimg.com/media/Cgjo_DkWgAAyXrv.jpg",
+        "image_width": 536,
+        "image_height": 590,
+        "image_bytes": 36054,
+        "from_url": "https://twitter.com/akarnokd/status/723083911287332864",
+        "id": 1,
+        "footer": "Twitter",
+        "footer_icon": "https://a.slack-edge.com/6e067/img/services/twitter_pixel_snapped_32.png"
+      }
+    ],
+    "ts": "1461292756.000872",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "21de32822",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "interesting",
+    "ts": "1461292996.000874",
+    "id": "21de32823",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Z248CVB",
+    "text": "Hello, guys. I am trying to show images in a List with Glide but they don’t take the whole place for the image. After scrolling they even become smaller.",
+    "ts": "1461308261.000875",
+    "id": "21de32824",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Z248CVB",
+    "text": "Here is a screenshot",
+    "ts": "1461308272.000876",
+    "id": "21de32825",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0Z248CVB|vaklinzi> uploaded a file: <https://androidchat.slack.com/files/vaklinzi/F12RQMDTQ/screen_shot_2016-04-22_at_9.53.15_am.png|Screen Shot 2016-04-22 at 9.53.15 AM.png>",
+    "file": {
+      "id": "F12RQMDTQ",
+      "created": 1461308279,
+      "timestamp": 1461308279,
+      "name": "Screen Shot 2016-04-22 at 9.53.15 AM.png",
+      "title": "Screen Shot 2016-04-22 at 9.53.15 AM.png",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U0Z248CVB",
+      "editable": false,
+      "size": 379541,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F12RQMDTQ/screen_shot_2016-04-22_at_9.53.15_am.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F12RQMDTQ/download/screen_shot_2016-04-22_at_9.53.15_am.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F12RQMDTQ-d799b62960/screen_shot_2016-04-22_at_9.53.15_am_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F12RQMDTQ-d799b62960/screen_shot_2016-04-22_at_9.53.15_am_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F12RQMDTQ-d799b62960/screen_shot_2016-04-22_at_9.53.15_am_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 360,
+      "thumb_360_h": 186,
+      "thumb_480": "https://files.slack.com/files-tmb/T04PLNDMP-F12RQMDTQ-d799b62960/screen_shot_2016-04-22_at_9.53.15_am_480.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_480_w": 480,
+      "thumb_480_h": 248,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F12RQMDTQ-d799b62960/screen_shot_2016-04-22_at_9.53.15_am_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720": "https://files.slack.com/files-tmb/T04PLNDMP-F12RQMDTQ-d799b62960/screen_shot_2016-04-22_at_9.53.15_am_720.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720_w": 720,
+      "thumb_720_h": 372,
+      "thumb_960": "https://files.slack.com/files-tmb/T04PLNDMP-F12RQMDTQ-d799b62960/screen_shot_2016-04-22_at_9.53.15_am_960.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_960_w": 960,
+      "thumb_960_h": 495,
+      "thumb_1024": "https://files.slack.com/files-tmb/T04PLNDMP-F12RQMDTQ-d799b62960/screen_shot_2016-04-22_at_9.53.15_am_1024.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_1024_w": 1024,
+      "thumb_1024_h": 528,
+      "image_exif_rotation": 1,
+      "original_w": 1029,
+      "original_h": 531,
+      "permalink": "https://androidchat.slack.com/files/vaklinzi/F12RQMDTQ/screen_shot_2016-04-22_at_9.53.15_am.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F12RQMDTQ-9a43770975",
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U0Z248CVB",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0Z248CVB|vaklinzi>",
+    "bot_id": null,
+    "ts": "1461308285.000877",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "21de32826",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Z248CVB",
+    "text": "I would like the images to be displayed as they are on the right side (there are the same images but I do not know why there are zoomed)",
+    "edited": {
+      "user": "U0Z248CVB",
+      "ts": "1461308405.000000"
+    },
+    "ts": "1461308349.000878",
+    "id": "21de32827",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Z248CVB",
+    "text": "My code:\n```Glide.with(mContext)\n                    .load(advertisement.getImages().get(0))\n                    .centerCrop()\n                    .diskCacheStrategy(DiskCacheStrategy.ALL)\n                    .fitCenter()\n                    .into(customViewHolder.advertisementImage);\n\n\n&lt;ImageView\n            android:id=\"@+id/advertisement_image\"\n            android:layout_width=\"128dp\"\n            android:layout_height=\"wrap_content\"\n            android:layout_marginRight=\"10dp\"\n            android:visibility=\"visible\"\n            android:layout_alignBottom=\"@+id/row2\"\n            /&gt;\n```",
+    "ts": "1461308383.000879",
+    "id": "21de32828",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

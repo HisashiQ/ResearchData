@@ -1,0 +1,575 @@
+[
+  {
+    "user": "U0D8P42SC",
+    "text": "i think this asumes you're outside of your databasehelper class and getHelper() returns your databasehelper ...",
+    "ts": "1446624762.000465",
+    "id": "04be1154",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DQJQZ6D",
+    "text": "the guild said: In that method you can use your DAO to perform any tweaks to the schema:\n\n \t\n```Dao&lt;Account, Integer&gt; dao = getHelper().getAccountDao();\n// change the table to add a new column named \"age\" \ndao.executeRaw(\"ALTER TABLE `account` ADD COLUMN age INTEGER;\");\n```",
+    "edited": {
+      "user": "U0DQJQZ6D",
+      "ts": "1446625163.000000"
+    },
+    "ts": "1446625148.000466",
+    "id": "04be1155",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DQJQZ6D",
+    "text": "\"that method\" is `onUpgrade()` method on `DatabaseHelper` class",
+    "ts": "1446625225.000468",
+    "id": "04be1156",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DQJQZ6D",
+    "text": "so I think in this case, I'm inside the DatabaseHelper?",
+    "ts": "1446625311.000469",
+    "id": "04be1157",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8P42SC",
+    "text": "yes, you want to do your alter table statements in the onupgrade method of your class that extends OrmLiteSqliteOpenHelper",
+    "ts": "1446627851.000470",
+    "id": "04be1158",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DQJQZ6D",
+    "text": "yes, and this mean that we have `getHelper()` in `onUpgrade()`, but I didn't know how to call it",
+    "ts": "1446628001.000471",
+    "id": "04be1159",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8P42SC",
+    "text": "You sure have a DAO defined in your class to work with the table that you want to change, right?",
+    "ts": "1446628339.000472",
+    "id": "04be1160",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8P42SC",
+    "text": "something like  private Dao&lt;Note, String&gt; noteDao;",
+    "ts": "1446628352.000473",
+    "id": "04be1161",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8P42SC",
+    "text": "replace 'note' with whatever",
+    "ts": "1446628373.000474",
+    "id": "04be1162",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DQJQZ6D",
+    "text": "Yes, I had a DAO before, just confused of `getHelper()`",
+    "ts": "1446628451.000475",
+    "id": "04be1163",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8P42SC",
+    "text": "you dont need it",
+    "ts": "1446628467.000476",
+    "id": "04be1164",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8P42SC",
+    "text": "just use the dao to executeRawStatement and you're fine",
+    "ts": "1446628481.000477",
+    "id": "04be1165",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DQJQZ6D",
+    "text": "I initialized `noteDao = null`, so I think I should assign it for something, so why I need something like: `noteDao = getHelper().getNoteDao`, is it right?",
+    "ts": "1446628706.000478",
+    "id": "04be1166",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DQJQZ6D",
+    "text": "before I can execute raw statement: `noteDao.executeRaw(\"ALTER TABLE `account` ADD COLUMN age INTEGER;\");`",
+    "ts": "1446628774.000479",
+    "id": "04be1167",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8P42SC",
+    "text": "you usually do the initialization of the dao in the getDao method",
+    "ts": "1446630571.000480",
+    "id": "04be1168",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8P42SC",
+    "text": "like this :",
+    "ts": "1446630600.000481",
+    "id": "04be1169",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0D8P42SC|asco> uploaded a file: <https://androidchat.slack.com/files/asco/F0DQZ47CP/-.txt|Untitled>",
+    "file": {
+      "id": "F0DQZ47CP",
+      "created": 1446630612,
+      "timestamp": 1446630612,
+      "name": "-.txt",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "text",
+      "pretty_type": "Plain Text",
+      "user": "U0D8P42SC",
+      "editable": true,
+      "size": 270,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0DQZ47CP/-.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0DQZ47CP/download/-.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/asco/F0DQZ47CP/-.txt",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0DQZ47CP-2a0ed59bb6",
+      "edit_link": "https://androidchat.slack.com/files/asco/F0DQZ47CP/-.txt/edit",
+      "preview": "\r\n    private Dao<ImagesManager, Integer> getImagesDao() {\r\n        if (imagesDao == null) {\r\n            try {\r\n                imagesDao = getDao(ImagesManager.class);\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre></pre></div>\n<div><pre>    private Dao&lt;ImagesManager, Integer&gt; getImagesDao() {</pre></div>\n<div><pre>        if (imagesDao == null) {</pre></div>\n<div><pre>            try {</pre></div>\n<div><pre>                imagesDao = getDao(ImagesManager.class);</pre></div>\n<div><pre></pre></div>\n</div>\n</div>\n",
+      "lines": 11,
+      "lines_more": 6,
+      "preview_is_truncated": false,
+      "channels": [
+        "C055MSDCM"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U0D8P42SC",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0D8P42SC|asco>",
+    "bot_id": null,
+    "ts": "1446630612.000482",
+    "id": "04be1170",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8P42SC",
+    "text": "so yes, you need to initialize your dao, but you dont need 'getHelper'",
+    "ts": "1446630662.000483",
+    "id": "04be1171",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DQJQZ6D",
+    "text": "and then `imageDao = getImageDao()` is enough?",
+    "ts": "1446630872.000484",
+    "id": "04be1172",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DQJQZ6D",
+    "text": "ah, I see",
+    "ts": "1446631017.000485",
+    "id": "04be1173",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8P42SC",
+    "text": "yeah exactly",
+    "ts": "1446631523.000486",
+    "id": "04be1174",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DQJQZ6D",
+    "text": "still got error: `Unknown field 'description' from the Android sqlite cursor`",
+    "ts": "1446631707.000487",
+    "id": "04be1175",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8P42SC",
+    "text": "are you sure onUpgrade ran?",
+    "ts": "1446631944.000488",
+    "id": "04be1176",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DQJQZ6D",
+    "text": "I'm not sure, I put the log in this method, but nothing show there :disappointed:",
+    "ts": "1446632068.000489",
+    "id": "04be1177",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DQJQZ6D",
+    "text": "I uninstall the app, increase db version, reinstall, and it work correctly",
+    "ts": "1446635276.000490",
+    "id": "04be1178",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DQJQZ6D",
+    "text": "thank you so much",
+    "ts": "1446635281.000491",
+    "id": "04be1179",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8P42SC",
+    "text": "no problem :wink:",
+    "ts": "1446640492.000492",
+    "id": "04be1180",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DPV1QP5",
+    "subtype": "channel_leave",
+    "text": "<@U0DPV1QP5|rbsr> has left the channel",
+    "ts": "1446651786.000493",
+    "id": "04be1181",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DMFJC0H",
+    "subtype": "channel_join",
+    "text": "<@U0DMFJC0H|we-build-peter> has joined the channel",
+    "ts": "1446664382.000494",
+    "id": "04be1182",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

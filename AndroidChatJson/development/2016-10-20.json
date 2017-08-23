@@ -1,0 +1,4360 @@
+[
+  {
+    "user": "U04TK850N",
+    "text": "Why would gson create an array with size 7 for only 5 objects in the json?",
+    "ts": "1476951068.004025",
+    "id": "20de48546",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Can you post the json?",
+    "ts": "1476951147.004026",
+    "id": "20de48547",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "I’ve had it before where the json had empty objects in the array that I didn’t notice on first pass",
+    "ts": "1476951177.004027",
+    "id": "20de48548",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Yeah, there was a stray `,` after the last object in the array so gson allocated space for it already only to notice later there won’t be another object. Wonder if gson should be more robust there.",
+    "ts": "1476951831.004028",
+    "id": "20de48549",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2EHF260Z",
+    "text": "well, gson can’t really know if this was intended or not … json array can contain anything and _anything_ is _nothing_ as well and that could have some implications for someone … overall, trying to remove something without the user's consent is not very defensive and is a source of future bugs",
+    "edited": {
+      "user": "U2EHF260Z",
+      "ts": "1476953546.000000"
+    },
+    "ts": "1476953535.004029",
+    "id": "20de48550",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Yeah that’s what I had, annoying but as <@U2EHF260Z> said, can’t really expect gson to know if it’s intended or not",
+    "ts": "1476954311.004031",
+    "id": "20de48551",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RRH206T",
+    "text": "<@U2RRH206T|gamebusterz> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476955652.004032",
+    "id": "20de48552",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RRH206T",
+    "text": "Hi guys, I am facing a problem in an app I am making, I am using a `Toolbar`on top of my layout, and the `Toolbar` has a `TextView` inside it,  so that I can align the title in the center of the app.",
+    "edited": {
+      "user": "U2RRH206T",
+      "ts": "1476956655.000000"
+    },
+    "ts": "1476956240.004033",
+    "id": "20de48553",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RRH206T",
+    "text": "The theme that I am using for this Activity is `@style/Theme.AppCompat.Light.NoActionBar`",
+    "ts": "1476956284.004034",
+    "id": "20de48554",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RRH206T",
+    "text": "As I change that to `@style/Theme.AppCompat.NoActionBar` , I am able to see the back button (Up Action) on the toolbar",
+    "ts": "1476956330.004035",
+    "id": "20de48555",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RRH206T",
+    "text": "I mean the Back button is black and I am only able to see it when I either set the colour of the `Toolbar` to Dark or use the Dark theme",
+    "ts": "1476956398.004036",
+    "id": "20de48556",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RRH206T",
+    "text": "How can I change the colour of the BackButton ?",
+    "ts": "1476956547.004037",
+    "id": "20de48557",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Can you post that as a snippet please?",
+    "ts": "1476956589.004038",
+    "id": "20de48558",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RRH206T",
+    "text": "I tried creating a custom style in Values &gt; styles.xml and called it `ToolbarTheme` (please see the second attached snippet)",
+    "edited": {
+      "user": "U2RRH206T",
+      "ts": "1476956863.000000"
+    },
+    "ts": "1476956591.004039",
+    "id": "20de48559",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Instead of just pasting it into chat",
+    "ts": "1476956598.004040",
+    "id": "20de48560",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RRH206T",
+    "text": "I am sorry, yes sure I will.",
+    "ts": "1476956600.004041",
+    "id": "20de48561",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "You can edit your post",
+    "ts": "1476956607.004042",
+    "id": "20de48562",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U2RRH206T|gamebusterz> uploaded a file: <https://androidchat.slack.com/files/gamebusterz/F2RRCAF08/layout.xml|Layout>",
+    "file": {
+      "id": "F2RRCAF08",
+      "created": 1476956695,
+      "timestamp": 1476956695,
+      "name": "Layout.xml",
+      "title": "Layout",
+      "mimetype": "text/plain",
+      "filetype": "xml",
+      "pretty_type": "XML",
+      "user": "U2RRH206T",
+      "editable": true,
+      "size": 1208,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F2RRCAF08/layout.xml?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F2RRCAF08/download/layout.xml?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/gamebusterz/F2RRCAF08/layout.xml",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F2RRCAF08-82dcda1db3",
+      "edit_link": "https://androidchat.slack.com/files/gamebusterz/F2RRCAF08/layout.xml/edit",
+      "preview": "<LinearLayout\r\n    xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    android:layout_height=\"match_parent\"\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-tag cm-bracket\">&lt;</span><span class=\"cm-tag\">LinearLayout</span></pre></div>\n<div><pre>    <span class=\"cm-attribute\">xmlns:android</span>=<span class=\"cm-string\">&quot;http://schemas.android.com/apk/res/android&quot;</span></pre></div>\n<div><pre>    <span class=\"cm-attribute\">xmlns:tools</span>=<span class=\"cm-string\">&quot;http://schemas.android.com/tools&quot;</span></pre></div>\n<div><pre>    <span class=\"cm-attribute\">xmlns:app</span>=<span class=\"cm-string\">&quot;http://schemas.android.com/apk/res-auto&quot;</span></pre></div>\n<div><pre>    <span class=\"cm-attribute\">android:layout_height</span>=<span class=\"cm-string\">&quot;match_parent&quot;</span></pre></div>\n</div>\n</div>\n",
+      "lines": 28,
+      "lines_more": 23,
+      "preview_is_truncated": true,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U2RRH206T",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U2RRH206T|gamebusterz>",
+    "bot_id": null,
+    "ts": "1476956695.004044",
+    "id": "20de48563",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U2RRH206T|gamebusterz> uploaded a file: <https://androidchat.slack.com/files/gamebusterz/F2RPW1LF5/style_xml.xml|style.xml>",
+    "file": {
+      "id": "F2RPW1LF5",
+      "created": 1476956818,
+      "timestamp": 1476956818,
+      "name": "style_xml.xml",
+      "title": "style.xml",
+      "mimetype": "text/plain",
+      "filetype": "xml",
+      "pretty_type": "XML",
+      "user": "U2RRH206T",
+      "editable": true,
+      "size": 178,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F2RPW1LF5/style_xml.xml?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F2RPW1LF5/download/style_xml.xml?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/gamebusterz/F2RPW1LF5/style_xml.xml",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F2RPW1LF5-1763c679d5",
+      "edit_link": "https://androidchat.slack.com/files/gamebusterz/F2RPW1LF5/style_xml.xml/edit",
+      "preview": "<style name=\"ToolbarTheme\" parent=\"ThemeOverlay.AppCompat.Dark.ActionBar\">\r\n        <item name=\"android:homeAsUpIndicator\">@drawable/ic_chevron_left_white_24dp</item>\r\n</style>\r\n",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-tag cm-bracket\">&lt;</span><span class=\"cm-tag\">style</span> <span class=\"cm-attribute\">name</span>=<span class=\"cm-string\">&quot;ToolbarTheme&quot;</span> <span class=\"cm-attribute\">parent</span>=<span class=\"cm-string\">&quot;ThemeOverlay.AppCompat.Dark.ActionBar&quot;</span><span class=\"cm-tag cm-bracket\">&gt;</span></pre></div>\n<div><pre>        <span class=\"cm-tag cm-bracket\">&lt;</span><span class=\"cm-tag\">item</span> <span class=\"cm-attribute\">name</span>=<span class=\"cm-string\">&quot;android:homeAsUpIndicator&quot;</span><span class=\"cm-tag cm-bracket\">&gt;</span>@drawable/ic_chevron_left_white_24dp<span class=\"cm-tag cm-bracket\">&lt;/</span><span class=\"cm-tag\">item</span><span class=\"cm-tag cm-bracket\">&gt;</span></pre></div>\n<div><pre><span class=\"cm-tag cm-bracket\">&lt;/</span><span class=\"cm-tag\">style</span><span class=\"cm-tag cm-bracket\">&gt;</span></pre></div>\n</div>\n</div>\n",
+      "lines": 4,
+      "lines_more": 0,
+      "preview_is_truncated": false,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U2RRH206T",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U2RRH206T|gamebusterz>",
+    "bot_id": null,
+    "ts": "1476956818.004045",
+    "id": "20de48564",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RRH206T",
+    "text": "So overall, I just need a way to change the Theme of ONLY my `Toolbar` so that it automatically shows a Light colored Up button. Or,  a way to change the color of the Up button to white manually.",
+    "ts": "1476956992.004047",
+    "id": "20de48565",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RRH206T",
+    "text": "Thanks !! any help will be appreciated.",
+    "ts": "1476957005.004048",
+    "id": "20de48566",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<@U1HLABD1S> did you find a way to start it with a specific color in the end? it seems like a bug that the color passed through TaskDescription isn’t working :thinking_face:",
+    "ts": "1476957053.004049",
+    "id": "20de48567",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLABD1S",
+    "text": "<@U0548MM6B> It is working, but the color is applied _after_ I'm opening the task switcher.",
+    "ts": "1476957519.004050",
+    "id": "20de48568",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLABD1S",
+    "text": "I have no solution for that now. The only possible solution would be to hand over an argument to the activity service, so that it can already define the color before the activity is launched (similar to what is done with label and icon from the manifest file).",
+    "ts": "1476957576.004051",
+    "id": "20de48569",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLABD1S",
+    "text": "But that launch parameter does not exist (yet)",
+    "ts": "1476957588.004052",
+    "id": "20de48570",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLABD1S",
+    "text": "Maybe worth a feature request in the issue tracker",
+    "ts": "1476957597.004053",
+    "id": "20de48571",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "it’s a pretty rare usecase, not sure if they’ll even notice it :confused:",
+    "ts": "1476957620.004054",
+    "id": "20de48572",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLABD1S",
+    "text": "It's very rare, yes.",
+    "ts": "1476957625.004055",
+    "id": "20de48573",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLABD1S",
+    "text": "But I bashed around to try it, and was able to hit it :slightly_smiling_face:",
+    "ts": "1476957641.004056",
+    "id": "20de48574",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RRQV9EH",
+    "text": "<@U2RRQV9EH|arober1s> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476957719.004057",
+    "id": "20de48575",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U1HLABD1S|fmd> uploaded a file: <https://androidchat.slack.com/files/fmd/F2RRJJS3S/app-shortcuts.gif|Wohoo :tada:> and commented: Also, I have updated my device to 7.1 preview and implemented dynamic app shortcuts!",
+    "file": {
+      "id": "F2RRJJS3S",
+      "created": 1476957721,
+      "timestamp": 1476957721,
+      "name": "app-shortcuts.gif",
+      "title": "Wohoo :tada:",
+      "mimetype": "image/gif",
+      "filetype": "gif",
+      "pretty_type": "GIF",
+      "user": "U1HLABD1S",
+      "editable": false,
+      "size": 8637228,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F2RRJJS3S/app-shortcuts.gif?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F2RRJJS3S/download/app-shortcuts.gif?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F2RRJJS3S-3ab31cefb7/app-shortcuts_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F2RRJJS3S-3ab31cefb7/app-shortcuts_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F2RRJJS3S-3ab31cefb7/app-shortcuts_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 203,
+      "thumb_360_h": 360,
+      "thumb_480": "https://files.slack.com/files-tmb/T04PLNDMP-F2RRJJS3S-3ab31cefb7/app-shortcuts_480.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_480_w": 270,
+      "thumb_480_h": 480,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F2RRJJS3S-3ab31cefb7/app-shortcuts_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720": "https://files.slack.com/files-tmb/T04PLNDMP-F2RRJJS3S-3ab31cefb7/app-shortcuts_720.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720_w": 405,
+      "thumb_720_h": 720,
+      "thumb_360_gif": "https://files.slack.com/files-tmb/T04PLNDMP-F2RRJJS3S-3ab31cefb7/app-shortcuts_360.gif?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_480_gif": "https://files.slack.com/files-tmb/T04PLNDMP-F2RRJJS3S-3ab31cefb7/app-shortcuts_480.gif?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "image_exif_rotation": 1,
+      "original_w": 480,
+      "original_h": 853,
+      "deanimate_gif": "https://files.slack.com/files-tmb/T04PLNDMP-F2RRJJS3S-3ab31cefb7/app-shortcuts_deanimate_gif.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/fmd/F2RRJJS3S/app-shortcuts.gif",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F2RRJJS3S-c9d4786104",
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 1,
+      "initial_comment": {
+        "id": "Fc2RRW1VUP",
+        "created": 1476957721,
+        "timestamp": 1476957721,
+        "user": "U1HLABD1S",
+        "is_intro": true,
+        "comment": "Also, I have updated my device to 7.1 preview and implemented dynamic app shortcuts!",
+        "channel": ""
+      }
+    },
+    "user": "U1HLABD1S",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U1HLABD1S|fmd>",
+    "bot_id": null,
+    "ts": "1476957779.004058",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "20de48576",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RRH206T",
+    "text": "<@U1HLABD1S> That looks awesome",
+    "ts": "1476957849.004059",
+    "reactions": [
+      {
+        "name": "ok_hand",
+        "users": [
+          "U1HLABD1S"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "20de48577",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "oooooh cool af",
+    "ts": "1476957883.004060",
+    "id": "20de48578",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HLABD1S",
+    "text": "We'll show the 3 most recent PDF docs",
+    "edited": {
+      "user": "U1HLABD1S",
+      "ts": "1476957892.000000"
+    },
+    "ts": "1476957887.004061",
+    "id": "20de48579",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "Does anyone has experience in Twiiter SDK , I want to get list of all tweet Ids , I dont want to show a default UserTimeline",
+    "ts": "1476958876.004063",
+    "id": "20de48580",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "any help",
+    "ts": "1476958881.004064",
+    "id": "20de48581",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U0LFEJ1ST> I do. what are you trying to retrieve exactly?",
+    "ts": "1476959105.004065",
+    "id": "20de48582",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "<@U09T8SFG8> I just want plain simple list of tweet ids",
+    "ts": "1476959131.004066",
+    "id": "20de48583",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "as per the username which has signed in",
+    "ts": "1476959146.004067",
+    "id": "20de48584",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I am not getting you, list of tweets that the user has made?",
+    "ts": "1476959160.004068",
+    "id": "20de48585",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "yeah",
+    "ts": "1476959167.004069",
+    "id": "20de48586",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "but that's the timeline",
+    "ts": "1476959191.004070",
+    "id": "20de48587",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "as per their documentation “current” we can use this : ```UserTimeline userTimeline = new UserTimeline.Builder().screenName(\"fabric\").build(); ```",
+    "ts": "1476959243.004071",
+    "id": "20de48588",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "and pass this into ``` final TweetTimelineListAdapter adapter = new TweetTimelineListAdapter.Builder(this)\n            .setTimeline(userTimeline)\n            .build(); ```",
+    "ts": "1476959267.004072",
+    "id": "20de48589",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "so you want to customize the look of it",
+    "ts": "1476959289.004073",
+    "id": "20de48590",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "but I dont want to use there UI to show timeline, I want to make my custom recycler view to populate the tweet text",
+    "ts": "1476959301.004074",
+    "id": "20de48591",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RRH206T",
+    "text": "Guys, any help with my problem ? Please",
+    "ts": "1476959341.004075",
+    "id": "20de48592",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U0LFEJ1ST> you need to use the TwitterApiClient in that case with the user timeline request",
+    "ts": "1476959404.004076",
+    "id": "20de48593",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "you will get a (very) basic representation of tweets",
+    "ts": "1476959419.004077",
+    "id": "20de48594",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I suggest you wrap each tweet to your own data structure",
+    "ts": "1476959431.004078",
+    "id": "20de48595",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "then you can use that list with your own adapter",
+    "ts": "1476959442.004079",
+    "id": "20de48596",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "you will also probably need to implement pagination",
+    "ts": "1476959474.004080",
+    "id": "20de48597",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "pagination in twitter works with the ids, to request a new page you say the max id you want",
+    "ts": "1476959507.004081",
+    "id": "20de48598",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "<@U09T8SFG8> I just want 5 - 10 tweets",
+    "ts": "1476959578.004082",
+    "id": "20de48599",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "no need of pagination",
+    "ts": "1476959582.004083",
+    "id": "20de48600",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "then set the count to 10 in your request",
+    "ts": "1476959622.004084",
+    "id": "20de48601",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "this will give you the last 10 tweets",
+    "ts": "1476959633.004085",
+    "id": "20de48602",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "```        new TwitterApiClient().getStatusesService().userTimeline(null,gusername,5,null,null,null,null,null,null); ```",
+    "ts": "1476959693.004086",
+    "id": "20de48603",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "something like this ?",
+    "ts": "1476959697.004087",
+    "id": "20de48604",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "<@U09T8SFG8>  where is the callback ?",
+    "edited": {
+      "user": "U0LFEJ1ST",
+      "ts": "1476959732.000000"
+    },
+    "ts": "1476959715.004088",
+    "id": "20de48605",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "``` @GET(\"/1.1/statuses/user_timeline.json?\" +\n            \"tweet_mode=extended&amp;include_cards=true&amp;cards_platform=TwitterKit-13\")\n    Call&lt;List&lt;Tweet&gt;&gt; userTimeline(<@U1ST4SMTR>(\"user_id\") Long userId,\n                                   <@U1ST4SMTR>(\"screen_name\") String screenName,\n                                   <@U1ST4SMTR>(\"count\") Integer count,\n                                   <@U1ST4SMTR>(\"since_id\") Long sinceId,\n                                   <@U1ST4SMTR>(\"max_id\") Long maxId,\n                                   <@U1ST4SMTR>(\"trim_user\") Boolean trimUser,\n                                   <@U1ST4SMTR>(\"exclude_replies\") Boolean excludeReplies,\n                                   <@U1ST4SMTR>(\"contributor_details\") Boolean contributeDetails,\n                                   <@U1ST4SMTR>(\"include_rts\") Boolean includeRetweets); ```",
+    "ts": "1476959855.004090",
+    "id": "20de48606",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "usrtimeline does not take any callback now, this is what bugging me :face_with_head_bandage:",
+    "ts": "1476959883.004091",
+    "id": "20de48607",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "isn't the last parameter the callback?",
+    "ts": "1476959907.004092",
+    "id": "20de48608",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "no not in there update , iguess",
+    "ts": "1476959972.004093",
+    "id": "20de48609",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "<@U09T8SFG8> few months back I used than it used to be there",
+    "ts": "1476959988.004094",
+    "id": "20de48610",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "looks like it's just a retrofit call <https://square.github.io/retrofit/2.x/retrofit/retrofit2/Call.html>",
+    "ts": "1476960026.004095",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "20de48611",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "you can just `execute()` it",
+    "ts": "1476960041.004096",
+    "id": "20de48612",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "ok , Thanks <@U09T8SFG8>",
+    "ts": "1476960158.004097",
+    "id": "20de48613",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "<@U09T8SFG8> I was using retrofit 1.8 , the new Retrofit2 is completely different , and they do not handle background service , whats the alternate ? do we have to make our own async now ?",
+    "ts": "1476960656.004098",
+    "id": "20de48614",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "you can either migrate to Retrofit2 or use an older twitter sdk that uses retrofit 1.x",
+    "ts": "1476960692.004099",
+    "id": "20de48615",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<@U0LFEJ1ST> it handles background service in Retrofit2",
+    "ts": "1476960698.004100",
+    "id": "20de48616",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "use .enqueue(CallbackGoesHere)",
+    "edited": {
+      "user": "U0548MM6B",
+      "ts": "1476960725.000000"
+    },
+    "ts": "1476960704.004101",
+    "id": "20de48617",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "<@U0548MM6B>  ok , so I should use it with function.enque(Callback)",
+    "ts": "1476960741.004103",
+    "id": "20de48618",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "<@U0548MM6B>  aah, Got it , Thanks guys , I guess its time to migrate :partyparrot:",
+    "ts": "1476960804.004104",
+    "id": "20de48619",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "Anybody know if you can launch the camera using `MediaStore.ACTION_IMAGE_CAPTURE` Intent and specify which camera to use? (front vs back?)",
+    "ts": "1476962323.004105",
+    "id": "20de48620",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N8XTX0R",
+    "text": "Hi all,\nI want to show my logs only on debug mode how can I do that?\nDo I need to do this? \n       if (BuildConfig.DEBUG) {\n             Log.i(….)\n       }\nOr is there any other way?\nI have lots off Log in my project, now I need to hide. Do you know any other way?",
+    "ts": "1476963056.004106",
+    "id": "20de48621",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N8XTX0R",
+    "text": "What about if I will use \nLog.d(...)     \nd means debug. If I will use this, Will it show in realese mode?",
+    "ts": "1476963443.004107",
+    "id": "20de48622",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U2N8XTX0R> you should not keep Logs in production. Also please use snippets for code.",
+    "ts": "1476963448.004108",
+    "id": "20de48623",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U2N8XTX0R> you can use Timber and plant different logging trees per build flavour",
+    "ts": "1476963932.004109",
+    "id": "20de48624",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "so you don't need ifs all over your code",
+    "ts": "1476963958.004110",
+    "id": "20de48625",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "keep in mind that the string objects will still be allocated",
+    "ts": "1476963975.004111",
+    "id": "20de48626",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "yup <@U2N8XTX0R>  you should use proper level of Log .d will be shown for debug builds only but like <@U09T8SFG8> mention better to use some library and shows logs based on different flavours",
+    "edited": {
+      "user": "U0XCFE6AH",
+      "ts": "1476964052.000000"
+    },
+    "ts": "1476964028.004112",
+    "id": "20de48627",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "I have made my own L class",
+    "ts": "1476964078.004114",
+    "id": "20de48628",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RTGP431",
+    "text": "<@U2RTGP431|gert.dingenen> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476966198.004115",
+    "id": "20de48629",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1G221P2S",
+    "text": "Is there any way to save a bitmap to a jpg file without compressing it?",
+    "ts": "1476966654.004116",
+    "id": "20de48630",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "jpg, by definition, is a compression format",
+    "ts": "1476968167.004117",
+    "id": "20de48631",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1G221P2S",
+    "text": "<@U16GF1B0F> right, but is there no way for one to save a bitmap as it is into a jpg image?",
+    "ts": "1476968526.004118",
+    "id": "20de48632",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "proper `Bitmap` objects are decompressed",
+    "ts": "1476968548.004119",
+    "id": "20de48633",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0H67LJUA",
+    "text": "Ugh, just spent the last weeks learning react, and how horrible JS is, now I just got a go ahead to make a sizable react-native app :unamused:",
+    "ts": "1476968581.004120",
+    "id": "20de48634",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "creating a `Bitmap` from jpeg data decompresses the data, so going from `Bitmap` back to jpg requires compression",
+    "ts": "1476968607.004121",
+    "id": "20de48635",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Just do it native and don’t tell anyone  :stuck_out_tongue:",
+    "ts": "1476968612.004122",
+    "id": "20de48636",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "if `Bitmap`s were compressed already, then omg we’d have so many fewer OutOfMemoryExceptions",
+    "ts": "1476968646.004123",
+    "id": "20de48637",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "God I’m busy trying to get a Galaxy S3 mini to pass a bitmap back from camera to app",
+    "ts": "1476968669.004124",
+    "id": "20de48638",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U0H67LJUA> may god help you",
+    "ts": "1476968682.004125",
+    "id": "20de48639",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "<@U1LJG0Y03> by intent? or using Camera2?",
+    "ts": "1476968696.004126",
+    "id": "20de48640",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "No logs, camera just dies",
+    "ts": "1476968699.004127",
+    "id": "20de48641",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<@U1G221P2S> you want a png not a jpg",
+    "ts": "1476968699.004128",
+    "id": "20de48642",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "intent",
+    "ts": "1476968700.004129",
+    "id": "20de48643",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "100 quality jpg still loses image data",
+    "ts": "1476968720.004130",
+    "id": "20de48644",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "not much but it’s there",
+    "ts": "1476968727.004131",
+    "id": "20de48645",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "are you having trouble accessing the image in the result intent’s `.getData()` Uri?",
+    "ts": "1476968735.004132",
+    "id": "20de48646",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Nope",
+    "ts": "1476968759.004133",
+    "id": "20de48647",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "I’m passing in URI so it’s saving to device, which is fine",
+    "ts": "1476968784.004134",
+    "id": "20de48648",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Then I’m just pulling it from storage",
+    "ts": "1476968791.004135",
+    "id": "20de48649",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1G221P2S",
+    "text": "<@U055GGAHS> I think what I need is a book to read up about Bitmaps and image file formats amongst other things.",
+    "ts": "1476968795.004136",
+    "id": "20de48650",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Take photo on S3 mini and the camera just crashes (presumably when passing back data to onActivityResult)",
+    "ts": "1476968815.004137",
+    "id": "20de48651",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1G221P2S",
+    "text": "spent all day trying to figure this out, to no avail",
+    "ts": "1476968817.004138",
+    "id": "20de48652",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "you dont need a book.. jpg is lossy, png is lossless",
+    "ts": "1476968822.004139",
+    "id": "20de48653",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "But no error in logcat",
+    "ts": "1476968823.004140",
+    "id": "20de48654",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Sooo, no clue",
+    "ts": "1476968826.004141",
+    "id": "20de48655",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "#justsamsungthings",
+    "ts": "1476968834.004142",
+    "id": "20de48656",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Should I switch to Camera2?",
+    "ts": "1476968845.004143",
+    "id": "20de48657",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Would rather not, but probably will at some point anyways",
+    "ts": "1476968920.004144",
+    "id": "20de48658",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Use this: <https://github.com/google/cameraview>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "google/cameraview",
+        "title_link": "https://github.com/google/cameraview",
+        "text": "Contribute to cameraview development by creating an account on GitHub.",
+        "fallback": "GitHub: google/cameraview",
+        "thumb_url": "https://avatars2.githubusercontent.com/u/1342004?v=3&s=400",
+        "from_url": "https://github.com/google/cameraview",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1476968926.004145",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "20de48659",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "But know: \"This is a preview release. The API is subject to change.\"",
+    "ts": "1476968962.004149",
+    "id": "20de48660",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Hmm",
+    "ts": "1476968977.004150",
+    "id": "20de48661",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1G221P2S",
+    "text": "<@U055GGAHS> <@U16GF1B0F> Will try out working with PNG's then. Thanks for the direction.",
+    "ts": "1476968986.004151",
+    "id": "20de48662",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Still better than having to deal with Camera1 and Camera2 APIs",
+    "edited": {
+      "user": "U061HDV96",
+      "ts": "1476968995.000000"
+    },
+    "ts": "1476968987.004152",
+    "id": "20de48663",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Literally anything relating to images, bitmaps and cameras in android is hell",
+    "ts": "1476969009.004154",
+    "id": "20de48664",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "generally yep ^",
+    "ts": "1476969027.004155",
+    "id": "20de48665",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "/gif hell",
+    "ts": "1476969071.004156",
+    "id": "20de48666",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "",
+    "bot_id": "B0GH4RVHU",
+    "attachments": [
+      {
+        "fallback": "<https://66.media.tumblr.com/f32eaa68f9f8e8fd7e5bec83f585dbf6/tumblr_nz4ejcHEec1ukxvs9o1_400.gif>",
+        "image_url": "https://66.media.tumblr.com/f32eaa68f9f8e8fd7e5bec83f585dbf6/tumblr_nz4ejcHEec1ukxvs9o1_400.gif",
+        "image_width": 346,
+        "image_height": 236,
+        "image_bytes": 1204868,
+        "is_animated": true,
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1476969071.004157",
+    "id": "20de48667",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "<@U061HDV96> Use jitpack for that?",
+    "ts": "1476969427.004158",
+    "id": "20de48668",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "For what?",
+    "ts": "1476969439.004159",
+    "id": "20de48669",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "cameraview :stuck_out_tongue:",
+    "ts": "1476969474.004160",
+    "id": "20de48670",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "For being lazy on the import",
+    "ts": "1476969483.004161",
+    "id": "20de48671",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09UQHPQV",
+    "text": "I have made auto complete custom view for blank default search item show into a drop-down . But it's threshold value is min 0 and this is reason it's stuck at blank string .",
+    "ts": "1476969625.004162",
+    "id": "20de48672",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U09UQHPQV|quock> uploaded a file: <https://androidchat.slack.com/files/quock/F2RSDUQTV/-.java|Untitled> and commented: Simple hack for blank character search to all items.",
+    "file": {
+      "id": "F2RSDUQTV",
+      "created": 1476969714,
+      "timestamp": 1476969714,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U09UQHPQV",
+      "editable": true,
+      "size": 403,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F2RSDUQTV/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F2RSDUQTV/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/quock/F2RSDUQTV/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F2RSDUQTV-34224ae6f3",
+      "edit_link": "https://androidchat.slack.com/files/quock/F2RSDUQTV/-.java/edit",
+      "preview": "   public CustomAutoCompleteTextView(Context context, AttributeSet attrs) {\r\n        super(context, attrs);\r\n    }\r\n\r\n    @Override\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>   <span class=\"cm-keyword\">public</span> <span class=\"cm-variable\">CustomAutoCompleteTextView</span>(<span class=\"cm-variable\">Context</span> <span class=\"cm-variable\">context</span>, <span class=\"cm-variable\">AttributeSet</span> <span class=\"cm-variable\">attrs</span>) {</pre></div>\n<div><pre>        <span class=\"cm-keyword\">super</span>(<span class=\"cm-variable\">context</span>, <span class=\"cm-variable\">attrs</span>);</pre></div>\n<div><pre>    }</pre></div>\n<div><pre>&#8203;</pre></div>\n<div><pre>    <span class=\"cm-meta\">@Override</span></pre></div>\n</div>\n</div>\n",
+      "lines": 16,
+      "lines_more": 11,
+      "preview_is_truncated": false,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 1,
+      "initial_comment": {
+        "id": "Fc2RTXHVL6",
+        "created": 1476969714,
+        "timestamp": 1476969714,
+        "user": "U09UQHPQV",
+        "is_intro": true,
+        "comment": "Simple hack for blank character search to all items.",
+        "channel": ""
+      }
+    },
+    "user": "U09UQHPQV",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U09UQHPQV|quock>",
+    "bot_id": null,
+    "ts": "1476969715.004163",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "20de48673",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "<@U061HDV96> That library, any way to load async that you know of? Got it in a dialog fragment which displays after an onClick event but have to wait 3-4 seconds before it appears while camera initialises",
+    "ts": "1476970405.004164",
+    "id": "20de48674",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U1LJG0Y03> never used it",
+    "ts": "1476970486.004165",
+    "id": "20de48675",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0QD0R2LS",
+    "text": "<@U1LJG0Y03> Yes, I've tried cameraview with jitpack. Works good. Jitpack, not cameraview.",
+    "ts": "1476970609.004166",
+    "id": "20de48676",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Haha, fair enough",
+    "ts": "1476970611.004167",
+    "id": "20de48677",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Just wondering if there’s a way I can get the camera to load in the background or something",
+    "ts": "1476970647.004168",
+    "id": "20de48678",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0QD0R2LS",
+    "text": "it's a rabbit hole, you don't want camera in your app. If it's all about one shot use case, go for the system camera. One possible cause of your bitmap issue might be large bitmap. Don't try to load it into ImageView without scaling down: <https://developer.android.com/training/displaying-bitmaps/load-bitmap.html>",
+    "attachments": [
+      {
+        "title": "    Loading Large Bitmaps Efficiently | Android Developers  ",
+        "title_link": "https://developer.android.com/training/displaying-bitmaps/load-bitmap.html",
+        "text": "Images come in all shapes and sizes. In many cases they are larger than required for a typical application user interface (UI). For example, the system Gallery application displays photos taken using your Android devices&amp;#39;s camera which are typically…",
+        "fallback": "    Loading Large Bitmaps Efficiently | Android Developers  ",
+        "from_url": "https://developer.android.com/training/displaying-bitmaps/load-bitmap.html",
+        "service_icon": "https://developer.android.com/favicon.ico",
+        "service_name": "developer.android.com",
+        "id": 1
+      }
+    ],
+    "ts": "1476970985.004169",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "20de48679",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Data’s coming back as null so it’s not that",
+    "ts": "1476971082.004171",
+    "id": "20de48680",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Besides, the system camera app is crashing, not mine",
+    "ts": "1476971096.004172",
+    "id": "20de48681",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0QD0R2LS",
+    "text": "well.. if Uri is null after you take a picture.. That's out of your control, fuck S3 mini I guess.",
+    "ts": "1476971429.004173",
+    "id": "20de48682",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Yeh, gonna just handle in app",
+    "ts": "1476971440.004174",
+    "id": "20de48683",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "We wanted to do that anyways but didn’t prioritise it",
+    "ts": "1476971449.004175",
+    "id": "20de48684",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "Anyone has any good pointers/articles/guides on navigating the Android source code? I cloned and am building the Nougat x86 version and let's just say it's a bit massive",
+    "ts": "1476972438.004176",
+    "id": "20de48685",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<@U09T8SFG8> just do a \n&gt;git grep -l 'nougat' | xargs sed -i '' -e 's/nougat/nutella/g'",
+    "edited": {
+      "user": "U0548MM6B",
+      "ts": "1476972775.000000"
+    },
+    "ts": "1476972769.004177",
+    "id": "20de48686",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0QD0R2LS",
+    "text": "not really a guide, but on o side note, I use Android SDK Search chrome plugin",
+    "ts": "1476972778.004179",
+    "id": "20de48687",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "jk, <@U053LEHJN> might know",
+    "ts": "1476972794.004180",
+    "id": "20de48688",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0QD0R2LS|ghedeon> uploaded a file: <https://androidchat.slack.com/files/ghedeon/F2RT8RM6X/screenshot_from_2016-10-20_16-12-26.png|Screenshot from 2016-10-20 16-12-26.png>",
+    "file": {
+      "id": "F2RT8RM6X",
+      "created": 1476972807,
+      "timestamp": 1476972807,
+      "name": "Screenshot from 2016-10-20 16-12-26.png",
+      "title": "Screenshot from 2016-10-20 16-12-26.png",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U0QD0R2LS",
+      "editable": false,
+      "size": 29071,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F2RT8RM6X/screenshot_from_2016-10-20_16-12-26.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F2RT8RM6X/download/screenshot_from_2016-10-20_16-12-26.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F2RT8RM6X-fdce052ee6/screenshot_from_2016-10-20_16-12-26_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F2RT8RM6X-fdce052ee6/screenshot_from_2016-10-20_16-12-26_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F2RT8RM6X-fdce052ee6/screenshot_from_2016-10-20_16-12-26_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 360,
+      "thumb_360_h": 127,
+      "thumb_480": "https://files.slack.com/files-tmb/T04PLNDMP-F2RT8RM6X-fdce052ee6/screenshot_from_2016-10-20_16-12-26_480.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_480_w": 480,
+      "thumb_480_h": 169,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F2RT8RM6X-fdce052ee6/screenshot_from_2016-10-20_16-12-26_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720": "https://files.slack.com/files-tmb/T04PLNDMP-F2RT8RM6X-fdce052ee6/screenshot_from_2016-10-20_16-12-26_720.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720_w": 720,
+      "thumb_720_h": 254,
+      "image_exif_rotation": 1,
+      "original_w": 850,
+      "original_h": 300,
+      "permalink": "https://androidchat.slack.com/files/ghedeon/F2RT8RM6X/screenshot_from_2016-10-20_16-12-26.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F2RT8RM6X-afec2bfc91",
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U0QD0R2LS",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0QD0R2LS|ghedeon>",
+    "bot_id": null,
+    "ts": "1476972811.004181",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "20de48689",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0QD0R2LS",
+    "text": "so you have this nice View Source button",
+    "ts": "1476972831.004182",
+    "id": "20de48690",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U09T8SFG8> pretty sure Googlers use IntelliJ",
+    "ts": "1476972861.004183",
+    "id": "20de48691",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "obviously you can't open all of AOSP at once though",
+    "ts": "1476972872.004184",
+    "id": "20de48692",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "if I'm just looking at something quick I'll just browse <http://android.googlesource.com|android.googlesource.com>",
+    "ts": "1476972895.004185",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "20de48693",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "but also grepcode has decent navigation abilities",
+    "ts": "1476972906.004186",
+    "id": "20de48694",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2EHF260Z",
+    "text": "from what I have heard many times from googlers, I am pretty sure that they will have their own version called IntelliG or something :))",
+    "edited": {
+      "user": "U2EHF260Z",
+      "ts": "1476972921.000000"
+    },
+    "ts": "1476972916.004187",
+    "reactions": [
+      {
+        "name": "stuck_out_tongue_winking_eye",
+        "users": [
+          "U1HM4MPLJ"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "20de48695",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "they actually use a kind of a git wrapper called repo",
+    "ts": "1476974022.004189",
+    "id": "20de48696",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I am browsing the android x86 project btw so it is a bit different",
+    "ts": "1476974041.004190",
+    "id": "20de48697",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "more like everything in C and C++",
+    "ts": "1476974052.004191",
+    "id": "20de48698",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "<@U09T8SFG8> I always use grepcode",
+    "ts": "1476975865.004192",
+    "id": "20de48699",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I hate that repo tool",
+    "ts": "1476975893.004193",
+    "id": "20de48700",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2S0QJL6B",
+    "text": "<@U2S0QJL6B|beatbrot> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476976181.004194",
+    "id": "20de48701",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2S0QJL6B",
+    "text": "Hey guys :slightly_smiling_face: I have the following problem: I launch an activity from my mainactivity. On pressing back, I return at the mainactivity. Everything fine. But if I switched between apps before and return to my app, pressing back brings me to my launcher. Does anyone know how to fix that?",
+    "ts": "1476976242.004195",
+    "id": "20de48702",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "are you starting activity for result?",
+    "ts": "1476976492.004196",
+    "id": "20de48703",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "startActivityForResult()",
+    "ts": "1476976529.004197",
+    "id": "20de48704",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2S0QJL6B",
+    "text": "Uhm no, regular \"startActivity()\"",
+    "ts": "1476976756.004198",
+    "id": "20de48705",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2S0QJL6B",
+    "text": "Alright, tried startActivityForResult now..fixes the problem, but isnt this a bit hacky?",
+    "ts": "1476977283.004199",
+    "id": "20de48706",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2S2BQFEE",
+    "text": "<@U2S2BQFEE|mrajaiah> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476980796.004200",
+    "id": "20de48707",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2S2V08F9",
+    "text": "<@U2S2V08F9|yeison> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476983088.004201",
+    "id": "20de48708",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2S2V08F9",
+    "text": "Hola, alguién que hable español?",
+    "ts": "1476983201.004202",
+    "id": "20de48709",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2S0QJL6B",
+    "text": "<@U2S2V08F9> only english, I guess :stuck_out_tongue:",
+    "ts": "1476983222.004203",
+    "id": "20de48710",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2S2V08F9",
+    "text": ":sweat_smile:",
+    "ts": "1476983244.004204",
+    "id": "20de48711",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0QD0R2LS",
+    "text": "<@U2S2V08F9> плохо, когда никто тебя не понимает, да?",
+    "ts": "1476984311.004205",
+    "reactions": [
+      {
+        "name": "slightly_smiling_face",
+        "users": [
+          "U2M0WUZ7A",
+          "U284P7P47"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "20de48712",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R0SREBU",
+    "text": "I have a designer that wants me to make a view scrollable for small screen (mdpi) devices. I feel like the better approach would be to tweak the margins and such. Which one is closer to the design guidelines?",
+    "ts": "1476985687.004206",
+    "id": "20de48713",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2Q0CQJL9",
+    "text": "I am using this NumberPickerView, <https://github.com/Carbs0126/NumberPickerView/blob/master/README_English.md>  a library with more functionality for NumberPicker,\n\nNow I need to change the default typeface with a custom one, How can I do that?",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "Carbs0126/NumberPickerView",
+        "title_link": "https://github.com/Carbs0126/NumberPickerView/blob/master/README_English.md",
+        "text": "NumberPickerView - another NumberPicker with more flexible attributes on Android platform",
+        "fallback": "GitHub: Carbs0126/NumberPickerView",
+        "thumb_url": "https://avatars0.githubusercontent.com/u/14228871?v=3&s=400",
+        "from_url": "https://github.com/Carbs0126/NumberPickerView/blob/master/README_English.md",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1476987013.004207",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "20de48714",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "<https://sites.google.com/a/android.com/tools/recent/constraintlayoutbeta1isnowavailable|ConstraintLayout beta 1 is now available>\nWe just published ConstraintLayout beta 1 -- our first release candidate for the upcoming 1.0 stable <http://release.As|release.As> always, it's available in the SDK Manager (under the \"Support Repository\" section).Note: As for alpha 8 and 9, if you are using Android Studio 2.2 and it is your first installation of ConstraintLayout, you might have to restart studio (or invalidate caches) after installing beta 1 (the editor behavior may not be...",
+    "username": "Posts of Recent Changes",
+    "icons": {
+      "image_36": "https://a.slack-edge.com/66f9/img/services/rss_36.png",
+      "image_48": "https://a.slack-edge.com/66f9/img/services/rss_48.png",
+      "image_72": "https://a.slack-edge.com/205a/img/services/rss_72.png"
+    },
+    "bot_id": "B062SSUPJ",
+    "attachments": [
+      {
+        "title": "ConstraintLayout beta 1 is now available - Android Studio Project Site",
+        "title_link": "https://sites.google.com/a/android.com/tools/recent/constraintlayoutbeta1isnowavailable",
+        "text": "Android tools project information site",
+        "fallback": "ConstraintLayout beta 1 is now available - Android Studio Project Site",
+        "from_url": "https://sites.google.com/a/android.com/tools/recent/constraintlayoutbeta1isnowavailable",
+        "thumb_url": "https://sites.google.com/a/android.com/tools/_/rsrc/1460493325829/config/customLogo.gif?revision=1",
+        "thumb_width": 100,
+        "thumb_height": 100,
+        "service_icon": "https://ssl.gstatic.com/sites/p/41e825/system/app/images/apple-touch-icon.png",
+        "service_name": "sites.google.com",
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1476987072.004209",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U2S0QJL6B",
+          "U1AN1DG86"
+        ],
+        "count": 3
+      }
+    ],
+    "id": "20de48715",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2S50EVSN",
+    "text": "<@U2S50EVSN|jcarpenter> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476989942.004211",
+    "id": "20de48716",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2S3F5PM1",
+    "text": "<@U2S3F5PM1|shalvah> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476991533.004212",
+    "id": "20de48717",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "God I hate using camera",
+    "ts": "1476999223.004213",
+    "id": "20de48718",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Start calling recycle on all the bitmaps",
+    "ts": "1476999231.004214",
+    "id": "20de48719",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Memory usage goes up",
+    "ts": "1476999234.004215",
+    "id": "20de48720",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "/gif wat",
+    "ts": "1476999241.004216",
+    "id": "20de48721",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "",
+    "bot_id": "B0GH4RVHU",
+    "attachments": [
+      {
+        "fallback": "<http://i.imgur.com/EFXCBNJ.gif>",
+        "image_url": "http://i.imgur.com/EFXCBNJ.gif",
+        "image_width": 532,
+        "image_height": 529,
+        "image_bytes": 3892668,
+        "is_animated": true,
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1476999241.004217",
+    "id": "20de48722",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Seriously, this entire process is making me pull my hair out",
+    "ts": "1477000952.004218",
+    "id": "20de48723",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "You’d think after 8 years they’d have a solution that works",
+    "ts": "1477001576.004219",
+    "id": "20de48724",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0QD0R2LS",
+    "text": "<@U1LJG0Y03> totally feel your pain, bro. Feel free to star the related issue: <https://code.google.com/p/android/issues/detail?id=224575>",
+    "ts": "1477002792.004220",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "20de48725",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Honestly, I think it’s just shitty Samsung implementation",
+    "ts": "1477002838.004221",
+    "id": "20de48726",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0QD0R2LS",
+    "text": "and whenever you ask about wrapper/library on SO they take it down because it's against the rules.  ¯\\_(ツ)_/¯",
+    "ts": "1477002890.004222",
+    "id": "20de48727",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0QD0R2LS",
+    "text": "like this one: <http://stackoverflow.com/questions/13336157/wrapper-library-for-android-camera-api>",
+    "attachments": [
+      {
+        "title": "Wrapper Library for Android Camera API",
+        "title_link": "http://stackoverflow.com/questions/13336157/wrapper-library-for-android-camera-api",
+        "text": "Is there a wrapper library for the Android Camera API that covers all the pitfalls in the different API versions (f.e. checks the version if front camera, auto-focus or flash light is available and",
+        "fallback": "Wrapper Library for Android Camera API",
+        "thumb_url": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/questions/13336157/wrapper-library-for-android-camera-api",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "service_icon": "http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d",
+        "service_name": "stackoverflow.com",
+        "id": 1
+      }
+    ],
+    "ts": "1477002917.004223",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "20de48728",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Well it’s by google, so might be in grey area",
+    "ts": "1477002922.004225",
+    "id": "20de48729",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0QD0R2LS",
+    "text": "but yeah, system app crashing is on samsung",
+    "ts": "1477002954.004226",
+    "id": "20de48730",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Yep, constant OOM",
+    "ts": "1477002998.004227",
+    "id": "20de48731",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "I just want to get it to say, 8 pictures taken and loaded into the app and then I’ll just say fuck it, it’ll be unsupported API soon enough",
+    "ts": "1477003031.004228",
+    "id": "20de48732",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "You can look into some of the libraries by commonsguy related to camera.",
+    "ts": "1477003083.004229",
+    "id": "20de48733",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "<https://github.com/commonsguy>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "commonsguy (Mark Murphy)",
+        "title_link": "https://github.com/commonsguy",
+        "text": "commonsguy has 43 repositories available. Follow their code on GitHub.",
+        "fallback": "GitHub: commonsguy (Mark Murphy)",
+        "thumb_url": "https://avatars2.githubusercontent.com/u/103772?v=3&s=400",
+        "from_url": "https://github.com/commonsguy",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1477003103.004230",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "20de48734",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Looking at them now",
+    "ts": "1477003125.004232",
+    "id": "20de48735",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "I've used the cwac-camera in the past but still ran into issues, mostly samsung devices.",
+    "ts": "1477003147.004233",
+    "id": "20de48736",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "Working with cameras is such a pain on Android, so many different hardware configurations.",
+    "ts": "1477003164.004234",
+    "id": "20de48737",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Really didn’t want them in an Activity, but might have to just bite the bullet and do it",
+    "ts": "1477003210.004235",
+    "id": "20de48738",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Or more -&gt; wanted to handle the camera in app",
+    "ts": "1477003750.004236",
+    "id": "20de48739",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "This is also raising massive respect for things like Snapchat and Prisma though too",
+    "ts": "1477003925.004237",
+    "id": "20de48740",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N63QBV3",
+    "text": "How can i do for listen keyboard events when show and hidden  ?",
+    "ts": "1477004580.004238",
+    "id": "20de48741",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N63QBV3",
+    "text": "I want to scroll bottom in my recyclerview when the keyboard appear, how can i do this?",
+    "ts": "1477005629.004239",
+    "id": "20de48742",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U2N63QBV3> also please keep posts to 1 channel. :wink:",
+    "ts": "1477006617.004240",
+    "id": "20de48743",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I removed your post in <#C055MSDCM|beginners>",
+    "ts": "1477006623.004241",
+    "id": "20de48744",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2N63QBV3",
+    "text": "Ok i solve the problem",
+    "ts": "1477006649.004242",
+    "id": "20de48745",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2P7SQLCV",
+    "text": "Anyone aware of how to solve this problem? Really at a loss of where I'm going wrong: <http://stackoverflow.com/questions/40098714/loading-multiple-admob-videos> Thank you...",
+    "attachments": [
+      {
+        "title": "Loading multiple AdMob videos",
+        "title_link": "http://stackoverflow.com/questions/40098714/loading-multiple-admob-videos",
+        "text": "For demonstration purposes, the app has one activity that simply offers this: You click a button, view a rewarded video, and you are rewarded with whatever.The ProblemHow can I load the videos...",
+        "fallback": "Loading multiple AdMob videos",
+        "thumb_url": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/questions/40098714/loading-multiple-admob-videos",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "service_icon": "http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d",
+        "service_name": "stackoverflow.com",
+        "id": 1
+      }
+    ],
+    "ts": "1477008278.004243",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "20de48746",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2S92RY4A",
+    "text": "<@U2S92RY4A|gyang> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1477009912.004245",
+    "id": "20de48747",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2S7P5Q6P",
+    "text": "<@U2S7P5Q6P|chike> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1477014900.004246",
+    "id": "20de48748",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2S8WEQ4T",
+    "text": "<@U2S8WEQ4T|mohan> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1477027565.004247",
+    "id": "20de48749",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

@@ -1,0 +1,1640 @@
+[
+  {
+    "user": "U053PPGDC",
+    "text": "I’m building a library package for some espresso goodies - can I have a sample activity in the androidTest folder for it?",
+    "ts": "1471600663.000496",
+    "id": "19te2151",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U053PPGDC> I would have a separate module in the repo demonstrating the lib",
+    "ts": "1471601227.000497",
+    "id": "19te2152",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "a small sample app using the lib on it's tests",
+    "ts": "1471601255.000498",
+    "id": "19te2153",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "```when(mockResources.getString(eq(R.string.social_share_template_track), anyString()))\n                .thenReturn(\"Test 123\");```\n\n\nAny reason why this would instead always return null?",
+    "edited": {
+      "user": "U04TK850N",
+      "ts": "1471601411.000000"
+    },
+    "ts": "1471601294.000499",
+    "id": "19te2154",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "<@U09T8SFG8> yeah I have that at the moment",
+    "ts": "1471601324.000500",
+    "id": "19te2155",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "The IDs definitely match and anyInt() doesn’t change the fact that it’s null :confused:",
+    "ts": "1471601326.000501",
+    "id": "19te2156",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "(trying to mock a formatted string resource)",
+    "ts": "1471601341.000502",
+    "id": "19te2157",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "what does the eq do again?",
+    "ts": "1471601413.000505",
+    "id": "19te2158",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "matcher for equals",
+    "ts": "1471601422.000506",
+    "id": "19te2159",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "i think you don't need that",
+    "ts": "1471601431.000507",
+    "id": "19te2160",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I do",
+    "ts": "1471601435.000508",
+    "id": "19te2161",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "If you use one matcher, then all arguments must use a matcher",
+    "ts": "1471601446.000509",
+    "id": "19te2162",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "oh yes",
+    "ts": "1471601451.000510",
+    "id": "19te2163",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "so the problem is there with anyInt right?",
+    "ts": "1471601489.000511",
+    "id": "19te2164",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "```\n############ Logging method invocation #5 on mock/spy ########\nmockContext.getString(2131232336, \"1\");\n   invoked: -&gt; at my.app.Class.getSomeText(Class.java:65)\n   has returned: \"null\"\n```",
+    "ts": "1471601495.000512",
+    "id": "19te2165",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "oh hold on",
+    "ts": "1471601507.000513",
+    "id": "19te2166",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I see it",
+    "ts": "1471601511.000514",
+    "id": "19te2167",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "mockContext not mockResources?",
+    "ts": "1471601514.000515",
+    "id": "19te2168",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "damn",
+    "ts": "1471601515.000516",
+    "id": "19te2169",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "yeah",
+    "ts": "1471601516.000517",
+    "id": "19te2170",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I stare at this for 2h",
+    "ts": "1471601521.000518",
+    "id": "19te2171",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "now I see it",
+    "ts": "1471601523.000519",
+    "id": "19te2172",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "oops",
+    "ts": "1471601524.000520",
+    "id": "19te2173",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "<@U04TK850N>: :nutella: for consolation",
+    "ts": "1471601532.000521",
+    "id": "19te2174",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "<@U053PPGDC> :nutella: for spotting it too",
+    "ts": "1471601544.000522",
+    "id": "19te2175",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "there there <@U04TK850N> :nutella:",
+    "ts": "1471601546.000523",
+    "id": "19te2176",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "<@U09T8SFG8> :nutella: for helping :smile:",
+    "ts": "1471601556.000524",
+    "id": "19te2177",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "it works :tada:",
+    "ts": "1471601599.000525",
+    "id": "19te2178",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "basically I added a scrollableScrollTo action that works on anything that implements a ScrollableView interface",
+    "ts": "1471601889.000526",
+    "id": "19te2179",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "ScrollTo only works on the ScrollView and HorizontalScrollView at the moment.",
+    "ts": "1471601905.000527",
+    "id": "19te2180",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "fucking jitpack",
+    "ts": "1471602275.000528",
+    "id": "19te2181",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U23068KHA",
+    "text": "<@U23068KHA|vikeri> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1471608924.000529",
+    "id": "19te2182",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U23068KHA",
+    "text": "Hi! I want to test my React Native app. But since most of the logic is in javascript I will test that separately. Therefore  I would initially only want a test that makes sure that the app can be started and does not force close. How can I write a simple test for this? I'm imagining starting the emulator and just checking that everything works.",
+    "ts": "1471610450.000530",
+    "id": "19te2183",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I create a ViewAction for espresso that allows scrolling in nested scroll views - anyone wants to give it a spin? <https://github.com/zmarkan/Android-Espresso-ScrollableScroll>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "zmarkan/Android-Espresso-ScrollableScroll",
+        "title_link": "https://github.com/zmarkan/Android-Espresso-ScrollableScroll",
+        "text": "Android-Espresso-ScrollableScroll - Method to scroll in a NestedScrollView in Espresso tests",
+        "fallback": "GitHub: zmarkan/Android-Espresso-ScrollableScroll",
+        "thumb_url": "https://avatars3.githubusercontent.com/u/579014?v=3&s=400",
+        "from_url": "https://github.com/zmarkan/Android-Espresso-ScrollableScroll",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1471613468.000531",
+    "id": "19te2184",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "is this something that could be useful?",
+    "ts": "1471613542.000533",
+    "id": "19te2185",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I originally wanted to create a PR to espresso-contrib",
+    "ts": "1471613597.000534",
+    "id": "19te2186",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I still might but first lemme know if you guys would find it useful",
+    "ts": "1471613611.000535",
+    "id": "19te2187",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "\\cc <@U09T8SFG8> <@U0548MM6B> <@U053LEHJN>",
+    "ts": "1471613625.000536",
+    "id": "19te2188",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "this should be PR-ed there, gonna need that soon",
+    "ts": "1471613862.000537",
+    "id": "19te2189",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<@U053PPGDC> :taco: :nutella:",
+    "ts": "1471613891.000538",
+    "id": "19te2190",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I would use that",
+    "ts": "1471613979.000539",
+    "id": "19te2191",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "fuck PRs, make a SAAS startup around it and make billions :money_with_wings: :money_with_wings: :money_with_wings: :money_with_wings:",
+    "ts": "1471614007.000540",
+    "id": "19te2192",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "btw in the `isDisplayingAtLeast(90)` what is 90? A percentage of the visibility of the view?",
+    "ts": "1471614041.000541",
+    "id": "19te2193",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "percentage",
+    "ts": "1471614283.000542",
+    "id": "19te2194",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "basically I took the code from scrollTo",
+    "ts": "1471614289.000543",
+    "id": "19te2195",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "and made it inherit from a ScrollableView interface",
+    "ts": "1471614310.000544",
+    "id": "19te2196",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "actually - lemme try something, this could work on RecyclerView as well",
+    "ts": "1471614332.000545",
+    "id": "19te2197",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "but I’ve got another one coming for recyclerview",
+    "ts": "1471614338.000546",
+    "id": "19te2198",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U053PPGDC> I'll keep it bookmarked, neat!",
+    "ts": "1471615500.000547",
+    "id": "19te2199",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U053PPGDC> :taco: :nutella:",
+    "ts": "1471615507.000548",
+    "id": "19te2200",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "thanks man",
+    "ts": "1471615510.000549",
+    "id": "19te2201",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "actually - do you think they’d merge that in espresso-contrib?",
+    "ts": "1471615525.000550",
+    "id": "19te2202",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "more than happy to do a PR there - but was completely confused by their system",
+    "ts": "1471615584.000551",
+    "id": "19te2203",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "I'd say there's a good chance",
+    "ts": "1471615615.000552",
+    "id": "19te2204",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "they seem pretty willing",
+    "ts": "1471615618.000553",
+    "id": "19te2205",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "do you need to checkout the entire android system - or is this like a sub-lib",
+    "ts": "1471615636.000554",
+    "id": "19te2206",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "this is purrdy confusing: <https://source.android.com/source/submit-patches.html>",
+    "attachments": [
+      {
+        "title": "Submitting Patches | Android Open Source Project",
+        "title_link": "https://source.android.com/source/submit-patches.html",
+        "text": "This page describes the full process of submitting a patch to the AOSP, including reviewing and tracking changes with Gerrit . Before you follow the instructions on this page, you need to initialize your build environment , download the source , create…",
+        "fallback": "Submitting Patches | Android Open Source Project",
+        "from_url": "https://source.android.com/source/submit-patches.html",
+        "service_icon": "https://source.android.com/favicon.ico",
+        "service_name": "source.android.com",
+        "id": 1
+      }
+    ],
+    "ts": "1471615706.000555",
+    "id": "19te2207",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U053PPGDC> the Espresso site has instructions",
+    "ts": "1471615744.000557",
+    "id": "19te2208",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "you check out just the testing subset",
+    "ts": "1471615751.000558",
+    "id": "19te2209",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "oh - neat",
+    "ts": "1471615755.000559",
+    "id": "19te2210",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "otherwise you'd be downloading ~60GB+ or something, heh",
+    "ts": "1471615765.000560",
+    "id": "19te2211",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "<https://google.github.io/android-testing-support-library/contribute/index.html>",
+    "attachments": [
+      {
+        "title": "Contribute",
+        "title_link": "https://google.github.io/android-testing-support-library/contribute/index.html",
+        "text": "This is the official page for the Android Testing Support Library, a library provided by Google for testing Android apps.",
+        "fallback": "Contribute",
+        "from_url": "https://google.github.io/android-testing-support-library/contribute/index.html",
+        "service_icon": "https://google.github.io/android-testing-support-library/assets/favicon.png",
+        "service_name": "google.github.io",
+        "id": 1
+      }
+    ],
+    "ts": "1471615778.000561",
+    "id": "19te2212",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "yay",
+    "ts": "1471615779.000563",
+    "id": "19te2213",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "ok",
+    "ts": "1471615782.000564",
+    "id": "19te2214",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "that I can work with :smile:",
+    "ts": "1471615786.000565",
+    "id": "19te2215",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "<@U053LEHJN>: :taco: :nutella:",
+    "ts": "1471615831.000566",
+    "id": "19te2216",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "can I DM you if I have any more issues?",
+    "ts": "1471615846.000567",
+    "id": "19te2217",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "sure",
+    "ts": "1471616335.000568",
+    "id": "19te2218",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U053PPGDC>",
+    "ts": "1471616341.000569",
+    "id": "19te2219",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "awesome thanks :slightly_smiling_face:",
+    "ts": "1471616355.000570",
+    "id": "19te2220",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "now I’m working on a matcher for recycler view items - in theory scrolling should work here too.",
+    "ts": "1471616566.000571",
+    "id": "19te2221",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I implemented something similar before but it’s fugly so want to make it reusable (and the api nicer)",
+    "ts": "1471616598.000572",
+    "id": "19te2222",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U053PPGDC> I thought espresso-contrib already had some RecyclerView stuff?",
+    "ts": "1471616844.000573",
+    "id": "19te2223",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "or does it not have what you're working on?",
+    "ts": "1471616851.000574",
+    "id": "19te2224",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "actions",
+    "ts": "1471616851.000575",
+    "id": "19te2225",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "ooh they added something",
+    "ts": "1471616901.000576",
+    "id": "19te2226",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "nice",
+    "ts": "1471616902.000577",
+    "id": "19te2227",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": ":slightly_smiling_face:",
+    "ts": "1471616903.000578",
+    "id": "19te2228",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "ok I don’t need that :smile:",
+    "ts": "1471616908.000579",
+    "id": "19te2229",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "that one is fairly new",
+    "ts": "1471616928.000580",
+    "id": "19te2230",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "possible noob question, what's the easiest way to tell if your code is running in a unit test context or the regular application? we have some hacky code to set a flag in the application class, but i figure it's probably better to do with a BuildConfig field or something",
+    "ts": "1471642748.000581",
+    "id": "19te2231",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "we mostly use it to determine if we should send logs to logcat or System.out",
+    "ts": "1471642773.000582",
+    "id": "19te2232",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "you could try to instanciate a test class and see if that throws an exception",
+    "ts": "1471647252.000583",
+    "id": "19te2233",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "But that sounds hacky too :smile:",
+    "ts": "1471647259.000584",
+    "id": "19te2234",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Then again i don't think there is an \"official\" way",
+    "ts": "1471647298.000585",
+    "id": "19te2235",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "<@U0546QERR> simple - wrap logger &amp; inject it",
+    "ts": "1471670930.000586",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U0546QERR"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "19te2236",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "we have 3 in our case - CrashlyticsLogger, CatLogger &amp; SOLogger",
+    "ts": "1471670962.000587",
+    "id": "19te2237",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U21MN5Z0R",
+    "text": "<@U21MN5Z0R|mshukla> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1471671441.000588",
+    "id": "19te2238",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

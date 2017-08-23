@@ -1,0 +1,442 @@
+[
+  {
+    "user": "U11Q8S66T",
+    "subtype": "channel_join",
+    "text": "<@U11Q8S66T|shelajev> has joined the channel",
+    "ts": "1461051847.000110",
+    "id": "19be4391",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U04UBTWEE>: I have had the same problem. It is pretty much impossible to add a Java library as a dependency, in the end I solved it but I can't remember how, let me check my buildscripts",
+    "ts": "1461055776.000111",
+    "id": "19be4392",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UBTWEE",
+    "text": "<@U09T8SFG8>: so frustrating!! i had to create a java library using android studio then copy the files across - works. I DON’T KNOW WHY.",
+    "ts": "1461055903.000112",
+    "id": "19be4393",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "compile project(':android-maps-extensions')",
+    "ts": "1461055918.000113",
+    "id": "19be4394",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "this dont work?",
+    "ts": "1461055923.000114",
+    "id": "19be4395",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "where android-maps-extensions is the library project",
+    "ts": "1461055956.000115",
+    "id": "19be4396",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "My lib's .gradle is \n\n```\napply plugin: 'java'\n\nsourceCompatibility = 1.7\ntargetCompatibility = 1.7\n```",
+    "ts": "1461055979.000116",
+    "id": "19be4397",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "settings is the same as yours",
+    "ts": "1461056000.000117",
+    "id": "19be4398",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "and in the app's dependencies I have `compile project(':libs:api')`",
+    "ts": "1461056031.000118",
+    "id": "19be4399",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "the only difference is that I have the api under a _libs_ folder",
+    "ts": "1461056047.000119",
+    "id": "19be4400",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "well move it to root as separate project outside",
+    "ts": "1461056068.000120",
+    "id": "19be4401",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "and not in libs",
+    "ts": "1461056071.000121",
+    "id": "19be4402",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "it is the convention to have them under a libs folder",
+    "ts": "1461056101.000122",
+    "id": "19be4403",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "but anyway that setup definitely works",
+    "ts": "1461056117.000123",
+    "id": "19be4404",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UBTWEE",
+    "text": "perhaps my issue is something to do with swagger-codegen with retrofit2 and the project it generates...",
+    "ts": "1461056149.000124",
+    "id": "19be4405",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UBTWEE",
+    "text": "i dunno, its nuts",
+    "ts": "1461056153.000125",
+    "id": "19be4406",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "try cleaning and rebuilding",
+    "ts": "1461056162.000126",
+    "id": "19be4407",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11QLQDJ7",
+    "subtype": "channel_join",
+    "text": "<@U11QLQDJ7|eduvp> has joined the channel",
+    "ts": "1461067764.000127",
+    "id": "19be4408",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11SZ6CA1",
+    "subtype": "channel_join",
+    "text": "<@U11SZ6CA1|toarch> has joined the channel",
+    "ts": "1461074087.000128",
+    "id": "19be4409",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U120BAYMS",
+    "subtype": "channel_join",
+    "text": "<@U120BAYMS|seamus> has joined the channel",
+    "ts": "1461090595.000129",
+    "id": "19be4410",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1212J1FT",
+    "subtype": "channel_join",
+    "text": "<@U1212J1FT|alanecher> has joined the channel",
+    "ts": "1461092269.000130",
+    "id": "19be4411",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U123AKFGA",
+    "subtype": "channel_join",
+    "text": "<@U123AKFGA|tiagogouvea> has joined the channel",
+    "ts": "1461106396.000131",
+    "id": "19be4412",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1230MLQ6",
+    "subtype": "channel_join",
+    "text": "<@U1230MLQ6|eduardostuart> has joined the channel",
+    "ts": "1461109035.000132",
+    "id": "19be4413",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U124MRQJY",
+    "subtype": "channel_join",
+    "text": "<@U124MRQJY|techieshark> has joined the channel",
+    "ts": "1461133039.000133",
+    "id": "19be4414",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

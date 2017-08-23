@@ -1,0 +1,1030 @@
+[
+  {
+    "user": "U054AD9CZ",
+    "text": "I've got more of a Java related question than Android, but is it inefficient to declare variables inside a loop?",
+    "ts": "1443969572.000128",
+    "id": "04de11910",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054AD9CZ",
+    "text": "Like, would it be better to do \"String foo;\" outside the loop and then just reassign it during the loop, or is \"String foo = bar();\" inside the loop fine?",
+    "ts": "1443969618.000129",
+    "id": "04de11911",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "pretty sure the compiler is smart enough to handle both ways efficiently",
+    "ts": "1443969824.000130",
+    "id": "04de11912",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<@U054AD9CZ>: either you are declaring variables on the stack (primitives) which frankly don't matter in the grand scheme of things or you are creating objects on the heap and you want to minimize those whenever possible such as using pools or reusing one object (like a helper) in the loop to avoid instantiations. This obviously isn't possible everywhere but just general don't worry about creating primitives, always try to limit creating objects when sensible to do so.",
+    "ts": "1443971443.000131",
+    "id": "04de11913",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054AD9CZ",
+    "text": "Cool, thanks ",
+    "ts": "1443971811.000132",
+    "id": "04de11914",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "oh and for what <@U04TK850N> not quite, this is a really minor difference but almost all of the optimizations are differed to the JIT (or in new android is now ART)",
+    "ts": "1443971903.000133",
+    "id": "04de11915",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "afaik",
+    "ts": "1443971908.000134",
+    "id": "04de11916",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I remembered reading about this in a C# context and it does actually compile to the same there if you decompile it afterwards. thought Java was similar there (at least for primitives)",
+    "edited": {
+      "user": "U04TK850N",
+      "ts": "1443971972.000000"
+    },
+    "ts": "1443971968.000135",
+    "id": "04de11917",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "given the number of steps in the android app build process... im not certain how anything works anymore",
+    "ts": "1443972049.000137",
+    "id": "04de11918",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "basically you hit compile then magic then apk",
+    "ts": "1443972059.000138",
+    "id": "04de11919",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "its like the view class, its all open source and I still can't really tell you how it works, just general things :stuck_out_tongue:",
+    "ts": "1443972096.000139",
+    "id": "04de11920",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "have you ever built with the full gradle debug trace enabled? :smile:",
+    "ts": "1443972103.000140",
+    "id": "04de11921",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "tens of thousands of lines of magic :smile:",
+    "ts": "1443972110.000141",
+    "id": "04de11922",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "yes",
+    "ts": "1443972116.000142",
+    "id": "04de11923",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "--info is usually more helpful btw",
+    "ts": "1443972132.000143",
+    "id": "04de11924",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "--debug is generally just white noise and useless im not sure why they suggest it",
+    "ts": "1443972145.000144",
+    "id": "04de11925",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "yeah, figured that",
+    "ts": "1443972190.000145",
+    "id": "04de11926",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I remember back in the ANT days i didn't need --debug because failures had sensible messages",
+    "ts": "1443972230.000146",
+    "id": "04de11927",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "everytime i see 'try --stacktrace' I want to fucking punch someone",
+    "ts": "1443972240.000147",
+    "id": "04de11928",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "why the hell would that be off by default",
+    "ts": "1443972246.000148",
+    "id": "04de11929",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "yeah, why not \"see build/log/gradle.log for details\"",
+    "ts": "1443972270.000149",
+    "id": "04de11930",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "or whatever you want to call it",
+    "ts": "1443972276.000150",
+    "id": "04de11931",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "nah just print the stack trace unless i tell you to -qq or whatever it wants",
+    "ts": "1443972291.000151",
+    "id": "04de11932",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "if the build fails I clearly need to know why and the stacktrace is like 90% of the time what you need to understand why it failed",
+    "ts": "1443972310.000152",
+    "id": "04de11933",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I barely understand anything in terms of dev anymore, so I'm happy as long as my shit compiles ¯\\_(ツ)_/¯",
+    "ts": "1443972401.000153",
+    "id": "04de11934",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "468 warnings.",
+    "ts": "1443975038.000154",
+    "id": "04de11935",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Compiling successful.",
+    "ts": "1443975045.000155",
+    "id": "04de11936",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Ship it",
+    "ts": "1443975049.000156",
+    "id": "04de11937",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "468? we turned that display off with 2.5k or so",
+    "ts": "1443975075.000157",
+    "id": "04de11938",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I hope you're kidding",
+    "ts": "1443975086.000158",
+    "id": "04de11939",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "remind me tomorrow to do a lint run and I can tell you if it got better",
+    "ts": "1443975105.000159",
+    "id": "04de11940",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Oh a lint..",
+    "ts": "1443975110.000160",
+    "id": "04de11941",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I'm talking about compile warnings",
+    "ts": "1443975116.000161",
+    "id": "04de11942",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "i'm not even sure, last time I saw the count was on eclipse",
+    "ts": "1443975130.000162",
+    "id": "04de11943",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I have quite a bit of warnings too, but definitely not as much as you do",
+    "ts": "1443975134.000163",
+    "id": "04de11944",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "on gradle we get between 4 and 12. it just randomly varies",
+    "ts": "1443975153.000164",
+    "id": "04de11945",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I don't think a lint should tell me that I shouldn't use an argument in a method but use a constant",
+    "ts": "1443975173.000165",
+    "id": "04de11946",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I get 1-2",
+    "edited": {
+      "user": "U061HDV96",
+      "ts": "1443975214.000000"
+    },
+    "ts": "1443975187.000166",
+    "id": "04de11947",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "1 from annotation processing DBFlow which I hate",
+    "ts": "1443975196.000167",
+    "id": "04de11948",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "And a random could not find charTobytes or something",
+    "ts": "1443975206.000168",
+    "id": "04de11949",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "If I compile twice, I only get one.",
+    "ts": "1443975224.000170",
+    "id": "04de11950",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Shows how shitty DBFlow is",
+    "ts": "1443975229.000171",
+    "id": "04de11951",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": ":smile:",
+    "ts": "1443975235.000172",
+    "id": "04de11952",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I want to work on Android so bad now",
+    "ts": "1443975288.000173",
+    "id": "04de11953",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "But I'm at my parents' house",
+    "ts": "1443975293.000174",
+    "id": "04de11954",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "My battlestation is at my apartment",
+    "ts": "1443975304.000175",
+    "id": "04de11955",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I literally can't code on such a small screen (besides Sublime Text)",
+    "ts": "1443975325.000176",
+    "id": "04de11956",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I need a big screen for IntelliJ",
+    "ts": "1443975330.000177",
+    "id": "04de11957",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B93TK6J",
+    "text": "nice blog post",
+    "ts": "1443975340.000178",
+    "id": "04de11958",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I don't want to work on anything dev related right now... My motivation is sub zero :simple_smile:",
+    "ts": "1443975369.000179",
+    "id": "04de11959",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I do",
+    "ts": "1443975387.000180",
+    "id": "04de11960",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Can't wait for Multibeast 8.0.0 to be released",
+    "ts": "1443975400.000181",
+    "id": "04de11961",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "So I can develop on my Hackintosh",
+    "ts": "1443975405.000182",
+    "id": "04de11962",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "My battlestation is now completely automated btw",
+    "ts": "1443975416.000183",
+    "id": "04de11963",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "1 button click and everything is switched from my Macbook to Desktop",
+    "ts": "1443975427.000184",
+    "id": "04de11964",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "/giphy sub zero",
+    "attachments": [
+      {
+        "fallback": "giphy: <http://giphy.com/gifs/funny-lol-FSHrvaejIFbSE>",
+        "image_url": "http://media2.giphy.com/media/FSHrvaejIFbSE/giphy.gif",
+        "image_width": 300,
+        "image_height": 160,
+        "image_bytes": 596687,
+        "title": "sub zero",
+        "id": 1,
+        "title_link": "http://giphy.com/gifs/funny-lol-FSHrvaejIFbSE"
+      }
+    ],
+    "ts": "1443975500.000185",
+    "id": "04de11965",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

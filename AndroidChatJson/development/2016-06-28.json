@@ -1,0 +1,3067 @@
+[
+  {
+    "user": "U053PPGDC",
+    "text": "but I haven’t used it so I can’t tell you whether it works well with the drawer or not :slightly_smiling_face:",
+    "ts": "1467097207.001152",
+    "id": "28de38237",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "but in general: a fragment is a view with back stack built in. If you manage that back stack yourself you can replace fragments with views easy peasy.",
+    "ts": "1467097245.001153",
+    "id": "28de38238",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "What I dislike about those frameworks is that most of the time they solve a very specific problem/use case the creator had but are hard once you get to that edge case in your app where you either resort to some shitty workaround or spend hours and hours figuring out a proper solution/fork the framework",
+    "ts": "1467097323.001154",
+    "id": "28de38239",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UETGCJU",
+    "text": "thanks for the interest guys",
+    "ts": "1467097353.001155",
+    "id": "28de38240",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Pretty sure you can ask 10 people and get 30 opinions on this topic :wink:",
+    "ts": "1467097375.001156",
+    "id": "28de38241",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UETGCJU",
+    "text": "let me ask you this, regarding the inheritance implementation - wouldn't that be essentially code duplication?",
+    "ts": "1467097380.001157",
+    "id": "28de38242",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UETGCJU",
+    "text": "first. and second, wouldn't that be severely high coupling? what if tomorrow I'd want to use the same activity with a different navigation method",
+    "ts": "1467097406.001158",
+    "id": "28de38243",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "isn’t anything navigation related high coupling by definition?",
+    "ts": "1467097446.001159",
+    "id": "28de38244",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "unless you take the bus approach and you’re quickly at the other extreme",
+    "ts": "1467097478.001160",
+    "id": "28de38245",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UETGCJU",
+    "text": "true that. I'm being a nuisance with this one because my application is a bit more dynamic than usual... for instance, the same activity could be used either with a Tabs navigation or with a Drawer navigation",
+    "ts": "1467097483.001161",
+    "id": "28de38246",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UETGCJU",
+    "text": "hence the difficulty",
+    "ts": "1467097486.001162",
+    "id": "28de38247",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "inheritance tends to be ok… until you’ve got levels upon levels of it.",
+    "ts": "1467097522.001163",
+    "id": "28de38248",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Well our BaseHomeActivity holds nothing but the drawer and overrides setContentView so that it inflates the implementing Activity’s layout into its root container. Not pretty probably but it works. For Activitys without navigation we have another base class",
+    "ts": "1467097531.001164",
+    "id": "28de38249",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "yeah same here",
+    "ts": "1467097547.001165",
+    "id": "28de38250",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "we actually have something like a YourSpecificActivity -&gt; DrawerActivity / ModalActivity -&gt; BaseActivity",
+    "ts": "1467097585.001166",
+    "id": "28de38251",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "but it’s becoming unweildy",
+    "ts": "1467097591.001167",
+    "id": "28de38252",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "there’s always some duplication",
+    "ts": "1467097602.001168",
+    "id": "28de38253",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "But agree, we have some mad inheritance there too with some more specific Activitys like BaseSinglePaneActivity and BaseMultipaneActivity for single/multi fragment layouts respectively",
+    "ts": "1467097614.001169",
+    "id": "28de38254",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "even if you take pure delegation approach you’ll need to relay the events to delegates everywhere thus duplicating code :slightly_smiling_face:",
+    "ts": "1467097641.001170",
+    "id": "28de38255",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UETGCJU",
+    "text": "haha true",
+    "ts": "1467097662.001171",
+    "id": "28de38256",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "it’s all a rule of thumb",
+    "ts": "1467097674.001172",
+    "id": "28de38257",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UETGCJU",
+    "text": "sure seems odd that there's no best practice to it... thought it's just me",
+    "ts": "1467097677.001173",
+    "id": "28de38258",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "well no app is the same",
+    "ts": "1467097685.001174",
+    "id": "28de38259",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UETGCJU",
+    "text": "I mean, my partner does the same app in iOS. and they have the whole Controller approach which takes pretty good care ofit",
+    "ts": "1467097700.001175",
+    "id": "28de38260",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "once you get to specifics you’ll need to start going custom",
+    "ts": "1467097702.001176",
+    "id": "28de38261",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UETGCJU",
+    "text": "a similar implementation in Android would ignore the activity lifecycles though, I think...",
+    "ts": "1467097713.001177",
+    "id": "28de38262",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "yeah sometimes that’s just the best thing to do.",
+    "ts": "1467097747.001178",
+    "id": "28de38263",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "handle lifecycle changes manually, write a bunch of Helper/Manager classes that do that and use them everywhere",
+    "ts": "1467097790.001179",
+    "id": "28de38264",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "framework is there for you… until it becomes a burden :slightly_smiling_face:",
+    "ts": "1467097808.001180",
+    "id": "28de38265",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UETGCJU",
+    "text": "damn, that's my greatest fear :slightly_smiling_face:",
+    "ts": "1467097828.001181",
+    "id": "28de38266",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UETGCJU",
+    "text": "doing something that seems right, but then having to manage things manually therefore causing more problems 3 months from now",
+    "ts": "1467097848.001182",
+    "id": "28de38267",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "writing code that’s unreadable and un-understandable to anyone but you is a surefire way to not get fired 3 months in a row :joy: ¯\\_(ツ)_/¯",
+    "ts": "1467097910.001183",
+    "id": "28de38268",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UETGCJU",
+    "text": "anyhow many thanks for the healthy discussion <@U053PPGDC>, <@U04TK850N>... it's comforting to know that there's no one great solution, in a way :slightly_smiling_face:",
+    "ts": "1467097914.001184",
+    "id": "28de38269",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UETGCJU",
+    "text": "hahaha",
+    "ts": "1467097921.001185",
+    "id": "28de38270",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "no prob",
+    "ts": "1467097924.001186",
+    "id": "28de38271",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UETGCJU",
+    "text": "what if that's my own company? :smile:",
+    "ts": "1467097928.001187",
+    "id": "28de38272",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "steve jobs was fired from his own company :joy:",
+    "ts": "1467097944.001188",
+    "id": "28de38273",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Even better! :smile:",
+    "ts": "1467097944.001189",
+    "id": "28de38274",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "lol",
+    "ts": "1467097948.001190",
+    "id": "28de38275",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UETGCJU",
+    "text": "haha",
+    "ts": "1467097952.001191",
+    "id": "28de38276",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "giving the best of job security advices <@U053PPGDC>: :taco:",
+    "ts": "1467104641.001192",
+    "id": "28de38277",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": ":joy:",
+    "ts": "1467104768.001193",
+    "id": "28de38278",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U0UETGCJU>: I have a drawer activity and use fragments per screen. I haven't really come across lifecycle problems. I believe that as long as you code cleanly then you won't run into NPEs and such. By using Dagger 2 and MVP on the Presentation side I have never run into NPEs from fragments",
+    "ts": "1467104792.001194",
+    "id": "28de38279",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "basically my presenter never calls a view method from the fragment unless the fragment absolutely exists",
+    "ts": "1467104820.001195",
+    "id": "28de38280",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "^ I usually do this to",
+    "ts": "1467104833.001196",
+    "id": "28de38281",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Basically the Android equivalent of single page web apps",
+    "ts": "1467104848.001197",
+    "id": "28de38282",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "the kind of minor annoyance was deciding who should hold the management of the toolbar, but that depends a lot on the app",
+    "ts": "1467104854.001198",
+    "id": "28de38283",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "Always keep in mind this, start simple and then reiterate. Code is like a book, you write the draft and then you iterate over it again and again. Do not cloud your mind with every possible outcome at once",
+    "ts": "1467104926.001199",
+    "id": "28de38284",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Or be a college student and goof off until the last minute then do everything in 1 marathon session",
+    "ts": "1467104979.001200",
+    "reactions": [
+      {
+        "name": "trollface",
+        "users": [
+          "U08GFT5V5",
+          "U053PPGDC"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "28de38285",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UETGCJU",
+    "text": "<@U09T8SFG8>, I'm torn here. on the one hand I'd like to avoid the usual drawer implementation of code duplication (or smarter inheritance), but on the other, with the fragments implementation I deem myself not knowledgeable enough to foresee the problems that might be caused by the OS or some other unknowns down the road, and then having to change the architecture all over again due to bad philosophy...",
+    "edited": {
+      "user": "U0UETGCJU",
+      "ts": "1467105017.000000"
+    },
+    "ts": "1467104996.001201",
+    "id": "28de38286",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U0UETGCJU>: If you haven’t tried this before, 100% chance your first attempt will suck",
+    "ts": "1467105034.001203",
+    "id": "28de38287",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UETGCJU",
+    "text": ":smile:",
+    "ts": "1467105042.001204",
+    "id": "28de38288",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "but if you don’t try it out, 100% chance you will learn nothing",
+    "ts": "1467105057.001205",
+    "id": "28de38289",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "do your best, make mistakes",
+    "ts": "1467105068.001206",
+    "id": "28de38290",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "all part of gaining experience",
+    "ts": "1467105084.001207",
+    "id": "28de38291",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UETGCJU",
+    "text": "definitely. I'd usually dive right into it as well. however I'm on a tight schedule and need to consult the higher wisdom of the masses to avoid mistakes as much as possible, at least the huge pitfalls :slightly_smiling_face:",
+    "ts": "1467105139.001208",
+    "id": "28de38292",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "&gt;Do not cloud your mind with every possible outcome at once - :thumbsup::skin-tone-4:",
+    "ts": "1467105141.001209",
+    "id": "28de38293",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UETGCJU",
+    "text": "(and you've all been highly effective in that regard, hehe)",
+    "ts": "1467105176.001210",
+    "id": "28de38294",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "&gt; but if you don’t try it out, 100% chance you will learn nothing",
+    "ts": "1467105508.001211",
+    "id": "28de38295",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "as the great philosopher Gretzky once said, you miss 100% of the shots you don’t take.",
+    "ts": "1467105538.001212",
+    "id": "28de38296",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "<@U08GFT5V5> :taco:",
+    "ts": "1467105545.001213",
+    "id": "28de38297",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": ":partyparrot:",
+    "ts": "1467105590.001214",
+    "id": "28de38298",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "basically no decision is final",
+    "ts": "1467105599.001215",
+    "id": "28de38299",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "treat them as learning opportunities",
+    "ts": "1467105609.001216",
+    "id": "28de38300",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Pretty much how it goes",
+    "ts": "1467105619.001217",
+    "id": "28de38301",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "every fuckup can be reversed",
+    "ts": "1467105620.001218",
+    "id": "28de38302",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Thanks Git :smile:",
+    "ts": "1467105632.001219",
+    "id": "28de38303",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UETGCJU",
+    "text": "that's assuming proper source control",
+    "ts": "1467105637.001220",
+    "id": "28de38304",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UETGCJU",
+    "text": "lol",
+    "ts": "1467105638.001221",
+    "id": "28de38305",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "nope",
+    "ts": "1467105642.001222",
+    "id": "28de38306",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "you can rewrite features in different styles",
+    "ts": "1467105649.001223",
+    "id": "28de38307",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0UETGCJU",
+    "text": "but yeah, that's the approach one should definitely take",
+    "ts": "1467105656.001224",
+    "id": "28de38308",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "it’s not like you’re writing the same thing twice if you’re taking a different approach",
+    "ts": "1467105674.001225",
+    "id": "28de38309",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U0UETGCJU>: since you have not really used fragments in this setting before, definitely go the fragment way. Fragments are a must to know for every android developer and the other options you can have (eventbus, custom views etc.) will definitely be more complicated by the end of it because of your inexperience with fragments in this setting.",
+    "edited": {
+      "user": "U09T8SFG8",
+      "ts": "1467105964.000000"
+    },
+    "ts": "1467105950.001226",
+    "id": "28de38310",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HQS89D3",
+    "text": "I’m using Data Binding and I’m unable to use expressions in hint in EditText. So I’m unable to do something like `android:hint=\"@{isPickup ? @string/pick_up_location : @string/drop_location}”`, does anybody know why and how to fix this?",
+    "ts": "1467107409.001228",
+    "id": "28de38311",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HQS89D3",
+    "text": "But this same expression works for android:text, so I’ve assured the variables/values are proper",
+    "ts": "1467107456.001229",
+    "id": "28de38312",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Q4720P9",
+    "text": "Is the `requestCode` taken into consideration when comparing `PendingIntent` ?",
+    "edited": {
+      "user": "U0Q4720P9",
+      "ts": "1467110061.000000"
+    },
+    "ts": "1467110050.001230",
+    "id": "28de38313",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U053PPGDC|zmarkan> uploaded a file: <https://androidchat.slack.com/files/zmarkan/F1LUA5DED/clipped_viewpager_indicator.mov|would that kinda thing be useful to anyone?> and commented: I’m creating a masked viewpager indicator, spent quite some time faffing about with drawing, just wondering whether we should open source it or don’t bother with it.",
+    "file": {
+      "id": "F1LUA5DED",
+      "created": 1467112241,
+      "timestamp": 1467112241,
+      "name": "clipped viewpager indicator.mov",
+      "title": "would that kinda thing be useful to anyone?",
+      "mimetype": "video/quicktime",
+      "filetype": "mov",
+      "pretty_type": "QuickTime Movie",
+      "user": "U053PPGDC",
+      "editable": false,
+      "size": 4763230,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F1LUA5DED/clipped_viewpager_indicator.mov?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F1LUA5DED/download/clipped_viewpager_indicator.mov?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/zmarkan/F1LUA5DED/clipped_viewpager_indicator.mov",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F1LUA5DED-a9343463c3",
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 1,
+      "initial_comment": {
+        "id": "Fc1LU480RK",
+        "created": 1467112241,
+        "timestamp": 1467112241,
+        "user": "U053PPGDC",
+        "is_intro": true,
+        "comment": "I’m creating a masked viewpager indicator, spent quite some time faffing about with drawing, just wondering whether we should open source it or don’t bother with it.",
+        "channel": ""
+      }
+    },
+    "user": "U053PPGDC",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U053PPGDC|zmarkan>",
+    "bot_id": null,
+    "ts": "1467112242.001232",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "28de38314",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "but at least now I know what the fuck a clipping mask is",
+    "ts": "1467112277.001233",
+    "id": "28de38315",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": ":joy:",
+    "ts": "1467112279.001234",
+    "id": "28de38316",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "is it normal for an image heavy app to be using up to 100mb of memory?",
+    "ts": "1467112446.001235",
+    "id": "28de38317",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "depends how heavy, but yep",
+    "ts": "1467112762.001236",
+    "id": "28de38318",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<@U053PPGDC>: make an article?",
+    "ts": "1467112794.001237",
+    "id": "28de38319",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "could do",
+    "ts": "1467112806.001238",
+    "id": "28de38320",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "wanna get the grad to do it",
+    "ts": "1467112810.001239",
+    "id": "28de38321",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I just “helped” him",
+    "ts": "1467112817.001240",
+    "id": "28de38322",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "maybe I’ll just fork Jake and add my changes",
+    "ts": "1467112855.001241",
+    "id": "28de38323",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "does anyone still use viewpagers tho",
+    "ts": "1467112865.001242",
+    "id": "28de38324",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "i use viewpagers",
+    "ts": "1467113523.001243",
+    "id": "28de38325",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "tho not tab indicators",
+    "ts": "1467113529.001244",
+    "id": "28de38326",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Q4720P9",
+    "text": "When using the DrawerLayout is it possible to still go straight to an activity from notification pending intent? Because atm all I see is that the one activity handles all the fragment changes. And this is holding me up as I can’t create different pendingIntents for different activities. Any advice?",
+    "ts": "1467113601.001245",
+    "id": "28de38327",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LUDG8G4",
+    "subtype": "channel_join",
+    "text": "<@U1LUDG8G4|martynaskairys> has joined the channel",
+    "ts": "1467117457.001246",
+    "id": "28de38328",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LUDG8G4",
+    "text": "anyone familiar with wallpaper scrolling issue on android?",
+    "ts": "1467117605.001247",
+    "id": "28de38329",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "it’s not so much an issue as it is something that is left to each implementation of a launcher to properly implement or choose to support at all",
+    "ts": "1467117705.001248",
+    "id": "28de38330",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "aka launchers are sometimes bad and there isn’t anything you can do about it",
+    "ts": "1467117724.001249",
+    "id": "28de38331",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LUDG8G4",
+    "text": "well, I have developed an app that uses wallpaperManager, so I would like to avoid instructing users to use launchers as part of my solution that I provide",
+    "ts": "1467117961.001250",
+    "id": "28de38332",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LUDG8G4",
+    "text": "my goal is to have non scrolling wallpaper, but no luck with some of the devices (no idea why)",
+    "ts": "1467118017.001251",
+    "id": "28de38333",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "because again you are at the mercy of launchers to be implemented properly",
+    "ts": "1467118064.001252",
+    "id": "28de38334",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "well I dont see the docs for it so it may be the system implementation that controls it which would make sense from the IPC standpoint.",
+    "ts": "1467118537.001253",
+    "id": "28de38335",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "But regardless its the same conclusion. You are completely at the mercy of something out of your control to do what you want.",
+    "ts": "1467118583.001254",
+    "id": "28de38336",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LUDG8G4",
+    "text": "do you know if scrolling was disabled by default since KitKat? (when you provide exact screen pixels)?",
+    "ts": "1467118730.001255",
+    "id": "28de38337",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "works fine on my nexus devices",
+    "ts": "1467118786.001256",
+    "id": "28de38338",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LUDG8G4",
+    "text": "so probably it is not Android version problem, but rather what launcher is being used by the user",
+    "ts": "1467119120.001257",
+    "id": "28de38339",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "o/",
+    "ts": "1467123181.001258",
+    "id": "28de38340",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Can someone point me in the right direction for checking the filtered results array for an AutoCompleteTextView?",
+    "ts": "1467123201.001259",
+    "id": "28de38341",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "I want to be able to perform a check if the drop down list is empty",
+    "ts": "1467123226.001260",
+    "id": "28de38342",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Need to create a custom filter with an additional interface?",
+    "ts": "1467123311.001261",
+    "id": "28de38343",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1M0H2TT3",
+    "subtype": "channel_join",
+    "text": "<@U1M0H2TT3|5hirish> has joined the channel",
+    "ts": "1467123531.001262",
+    "id": "28de38344",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1M0LEXPS",
+    "subtype": "channel_join",
+    "text": "<@U1M0LEXPS|dljones79> has joined the channel",
+    "ts": "1467125538.001263",
+    "id": "28de38345",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1M0GGPRC",
+    "subtype": "channel_join",
+    "text": "<@U1M0GGPRC|justin_yang> has joined the channel",
+    "ts": "1467125551.001264",
+    "id": "28de38346",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1M0J6W3Y",
+    "subtype": "channel_join",
+    "text": "<@U1M0J6W3Y|eurycea> has joined the channel",
+    "ts": "1467125785.001265",
+    "id": "28de38347",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1M103XJ4",
+    "subtype": "channel_join",
+    "text": "<@U1M103XJ4|kalyndeveloper> has joined the channel",
+    "ts": "1467127426.001266",
+    "id": "28de38348",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1M1SBG4Q",
+    "subtype": "channel_join",
+    "text": "<@U1M1SBG4Q|cenelldharrell> has joined the channel",
+    "ts": "1467131137.001267",
+    "id": "28de38349",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0H9KV5RC",
+    "text": "hello guys, anybody have experience in handling app offline state? i mean i want to store my form data in local, if there is no internet connection, and then automatically send the data into my server when there is internet connection.\nneed some advice on the architecture",
+    "ts": "1467131566.001268",
+    "id": "28de38350",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "firebase an option?",
+    "ts": "1467131669.001269",
+    "id": "28de38351",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL9UB7B",
+    "text": "personally, i like square's tape library for storing pending network transactions",
+    "ts": "1467131896.001270",
+    "id": "28de38352",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HL9UB7B",
+    "text": "<@U0H9KV5RC>: ^",
+    "ts": "1467131907.001271",
+    "id": "28de38353",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1M2RV7RQ",
+    "subtype": "channel_join",
+    "text": "<@U1M2RV7RQ|thalissonestrela> has joined the channel",
+    "ts": "1467133971.001274",
+    "id": "28de38354",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "Does anyone successfully have Retrolambda set up with an android module + java modules with working tests on both types? I have unit tests in the java-only modules that run fine when executing gradle via the command line, but then IntelliJ isn't able to build my project at all (can't find the MethodType class during compilation). Presumably IntelliJ isn't using the same environment gradle is as configured by the retrolambda plugin. I can configure retrolambda to the point where IntelliJ build/run actions work again, but then the java module's tests fail to compile when running gradle via the command line.",
+    "ts": "1467134051.001275",
+    "id": "28de38355",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "have you tried using git submodules which nests your project modules",
+    "ts": "1467134886.001276",
+    "id": "28de38356",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "im not sure if it will affect your testing or not but our java modules are in submodules and we have had no testing issues granted we are not using retrolambda so I can’t vouch it to be worth your time",
+    "ts": "1467134950.001277",
+    "id": "28de38357",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1M2KRLVA",
+    "subtype": "channel_join",
+    "text": "<@U1M2KRLVA|sbeech> has joined the channel",
+    "ts": "1467136286.001278",
+    "id": "28de38358",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U055GGAHS>: multiple repos are a no-go, unfortunately",
+    "ts": "1467138908.001279",
+    "id": "28de38359",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "word, im not sure it would fix anything for you anyways",
+    "ts": "1467138922.001280",
+    "id": "28de38360",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "3 sequential API calls to get all the info in a screen <http://i.gabebw.com/disbelief.gif>",
+    "attachments": [
+      {
+        "fallback": "600x311px image",
+        "image_url": "http://i.gabebw.com/disbelief.gif",
+        "image_width": 600,
+        "image_height": 311,
+        "image_bytes": 9190101,
+        "is_animated": true,
+        "from_url": "http://i.gabebw.com/disbelief.gif",
+        "id": 1
+      }
+    ],
+    "edited": {
+      "user": "U0B8R3VV4",
+      "ts": "1467139417.000000"
+    },
+    "ts": "1467139401.001281",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "28de38361",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U091EBYSU>: I found this: <https://github.com/ReactiveX/RxJava/issues/3521>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "Stacktraces and subscribeOn/observeOn · Issue #3521 · ReactiveX/RxJava · GitHub",
+        "title_link": "https://github.com/ReactiveX/RxJava/issues/3521",
+        "text": "RxJava in not nice when it comes to stacktraces. The worst thing is observeOn that schedules execution on different threads. Every time we use observeOn we get our stacktrace from the process roo...",
+        "fallback": "GitHub: Stacktraces and subscribeOn/observeOn · Issue #3521 · ReactiveX/RxJava",
+        "thumb_url": "https://avatars1.githubusercontent.com/u/8560582?v=3&s=400",
+        "from_url": "https://github.com/ReactiveX/RxJava/issues/3521",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "service_icon": "https://a.slack-edge.com/e8ef6/img/unfurl_icons/github.png",
+        "id": 1
+      }
+    ],
+    "ts": "1467140779.001284",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "28de38362",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "do you know of any sure-fire way to uncover the actual cause now?",
+    "ts": "1467140794.001286",
+    "id": "28de38363",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "I have a helper method throwing an error for me but I don't know where the subscription happened at",
+    "ts": "1467140823.001287",
+    "id": "28de38364",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "should I just give that operator a try?",
+    "ts": "1467140889.001288",
+    "id": "28de38365",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "<@U053LEHJN>: hi man, for now please try konmik’s hook. In next release which will happen soon you’ll find built-in optional feature that’ll track subscription point and will insert that into stacktrace when error will occur",
+    "ts": "1467141017.001289",
+    "id": "28de38366",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "ah, nice",
+    "ts": "1467141027.001290",
+    "id": "28de38367",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U054A24ET>: the OnePlus 3 has 6GB of memory, 100MB is nothing",
+    "ts": "1467141274.001291",
+    "id": "28de38368",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "<@U061HDV96>: :joy: yea but since my app has started getting more downloads ive been getting bad reviews so... looked into the code and welp, i've been doing lots of things the wrong/sloppy way",
+    "ts": "1467141402.001292",
+    "id": "28de38369",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "the whole day has been refactoring and testing.. oh god the testing",
+    "ts": "1467141434.001293",
+    "id": "28de38370",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Better than designing for a whole day",
+    "ts": "1467141474.001294",
+    "id": "28de38371",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I hate designing",
+    "ts": "1467141475.001295",
+    "id": "28de38372",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R5K272T",
+    "text": ":fearful:",
+    "edited": {
+      "user": "U0R5K272T",
+      "ts": "1467151123.000000"
+    },
+    "ts": "1467151103.001296",
+    "id": "28de38373",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U0R5K272T>: part of me likes it, part of me hates it. I like the result, the process is just constantly brainstorming",
+    "ts": "1467157634.001298",
+    "id": "28de38374",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "anyone here good with regex? I’m trying to come up with a regex pattern that can search a string for instances of “&lt;%blah8 hello%&gt;” where the start of the match would be “&lt;%” and the end would be “%&gt;”, the matcher would give me “blah8 hello” — that’s just a sample text, it really could be just about any letter + number combo",
+    "ts": "1467162837.001299",
+    "id": "28de38375",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "So using the expression on this string \n```\nHello &lt;%FirstName%&gt;. Todays date is &lt;%Date%&gt; and the current time is &lt;%Time%&gt;. I see you are from &lt;%State%&gt;, that your phone number is &lt;%PhoneNumber%&gt; and that you like &lt;%Survey.Favorite Food%&gt;!\n```\n I’d be able to pull out “Date”, “Time”, “State”, “PhoneNumber”, and “Survey.Favorite Food\"",
+    "edited": {
+      "user": "U0DC95VCP",
+      "ts": "1467162903.000000"
+    },
+    "ts": "1467162882.001300",
+    "id": "28de38376",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "Maybe this? \n```\n(&lt;%[a-zA-Z_.0-9 ]+%&gt;)+\n```",
+    "ts": "1467163386.001302",
+    "id": "28de38377",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "Seems to work :confused:",
+    "ts": "1467163390.001303",
+    "id": "28de38378",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "Try this \n```\nList&lt;String&gt; allMatches = new ArrayList&lt;String&gt;();\n Matcher m = Pattern.compile(\"&lt;%(.*?)%&gt;\")\n     .matcher(yourStringHere);\n while (m.find()) {\n   allMatches.add(m.group());\n }\n```",
+    "ts": "1467163392.001304",
+    "id": "28de38379",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "ooooh thanks <@U0ESBF4AV>",
+    "ts": "1467163412.001305",
+    "id": "28de38380",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "'&lt;%(.*?)%&gt;' will match any characters",
+    "ts": "1467163427.001306",
+    "id": "28de38381",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "<@U0ESBF4AV>: perfection. Many thanks",
+    "ts": "1467163440.001307",
+    "id": "28de38382",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "except newline of course",
+    "ts": "1467163444.001308",
+    "id": "28de38383",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "You are welcome",
+    "ts": "1467163449.001309",
+    "id": "28de38384",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "FYI You can always check <http://www.regex101.com|www.regex101.com> if you want to test regex",
+    "ts": "1467163472.001310",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U0DC95VCP",
+          "U061HDV96"
+        ],
+        "count": 3
+      }
+    ],
+    "id": "28de38385",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "^ best regex tester",
+    "ts": "1467163602.001311",
+    "id": "28de38386",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U0DC95VCP>: why use &lt;% %&gt;? Not the easiest thing to write.",
+    "ts": "1467163643.001312",
+    "id": "28de38387",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "<@U061HDV96>: Not my choice…decided before my time",
+    "ts": "1467163691.001313",
+    "id": "28de38388",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DC95VCP",
+    "text": "and I agree :slightly_smiling_face:",
+    "ts": "1467163704.001314",
+    "id": "28de38389",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1M7879CZ",
+    "subtype": "channel_join",
+    "text": "<@U1M7879CZ|bionicgeek> has joined the channel",
+    "ts": "1467166615.001315",
+    "id": "28de38390",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11P75HMW",
+    "text": "Hi I am trying to run Android Wear Sample Project in Android Studio 2.1.2",
+    "ts": "1467180094.001316",
+    "id": "28de38391",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11P75HMW",
+    "text": "I am getting Error:Gradle version 2.10 is required. Current version is 2.8. If using the gradle wrapper, try editing the distributionUrl in /Users/geetha/androidwear/elisachat/Application/gradle/wrapper/gradle-wrapper.properties to gradle-2.10-all.zip\n&lt;a href=\"fixGradleVersionInWrapper\"&gt;Fix Gradle wrapper and re-import project&lt;/a&gt;&lt;br&gt;&lt;a href=\"openGradleSettings\"&gt;Gradle settings&lt;/a&gt;",
+    "ts": "1467180098.001317",
+    "id": "28de38392",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11P75HMW",
+    "text": "I am using default gradle wrapper (recommended one)",
+    "ts": "1467180114.001318",
+    "id": "28de38393",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11P75HMW",
+    "text": "Anyone has any idea why this is occurring",
+    "ts": "1467180124.001319",
+    "id": "28de38394",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "Just update it to 2.10",
+    "ts": "1467182875.001320",
+    "id": "28de38395",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "Nothing bad will happen :) ",
+    "ts": "1467182897.001321",
+    "id": "28de38396",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

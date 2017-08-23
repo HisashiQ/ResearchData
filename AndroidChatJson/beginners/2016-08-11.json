@@ -1,0 +1,581 @@
+[
+  {
+    "user": "U2017KNS0",
+    "text": "Hello overyone",
+    "ts": "1470898851.000518",
+    "id": "11be7020",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2017KNS0",
+    "text": "I'm currently in a research phase for an app. When it's finished, the app should roll out in 30 different locales. Therefore, a requirement is that content (images, audio, video, ...) has to change when changing the language. I'm looking for good ways to handle this.\nI have already discovered some things:\n- Sync adapter to sync content according to locale\n- Download a language pack, similar to how offline Google Maps work. Although for this approach I still don't know how and where this data is stored, because I can't seem to find the offline maps anywhere on my device.\n\nI would like to know if these are viable solutions, and if there are any other (viable) things which are worth looking into for this use case.",
+    "ts": "1470898853.000519",
+    "id": "11be7021",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U20BWJFV5",
+    "text": "<@U20BWJFV5|voktu> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1470903441.000520",
+    "id": "11be7022",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1U643L7Q",
+    "text": "<@U2017KNS0>: \n\n- I can suggest to do a gradual roll out rather than doing in 30 countries in one go. Learn from mistakes, fix and improve. \n- use a right translation tool to keep everything synced and organized. I can recommend transferwise for production use\n- checkout `screen grab` which is a 3rd party lib for testing via screenshots. It’s super useful with app in different languages and saves a lot of manual testing of each screen.\n- by language pack, you mean strings only or all images, audio, video? why not download and show on-the-fly?",
+    "ts": "1470903601.000521",
+    "id": "11be7023",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2017KNS0",
+    "text": "<@U1U643L7Q>: Thanks \n\nBy content I mean images, audio, video, but strings as well. We make a distinction between standard app strings that we can put in strings.xml and ship in every locale, and content strings that can change over time without publishing an app update. \nWe could show it on the fly but we want to minimalize network traffic and especially for audio and video, on the fly could be problematic for user experience when the user is connecting over edge",
+    "ts": "1470904288.000522",
+    "id": "11be7024",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1U643L7Q",
+    "text": "btw do you really think that user will keep switching between locales? For me, it’s highly improbable. You can offer two bundles at startup i.e in english and the native language of that locale. If he switches, he will be prompted to download but that should block the UI.",
+    "ts": "1470905171.000523",
+    "id": "11be7025",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2017KNS0",
+    "text": "I too think it's improbable, but it's in the requirements. As for the download, we would do it in a service which runs in foreground similar to Google maps when you're downloading an offline map",
+    "edited": {
+      "user": "U2017KNS0",
+      "ts": "1470905339.000000"
+    },
+    "ts": "1470905293.000524",
+    "id": "11be7026",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2017KNS0",
+    "text": "Also content could change over time so we need to update the content anyways",
+    "ts": "1470905465.000526",
+    "id": "11be7027",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U20B7F53M",
+    "text": "<@U20B7F53M|eagle-eye> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1470911469.000527",
+    "id": "11be7028",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U20DZ5P34",
+    "text": "<@U20DZ5P34|arteaga2k> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1470919032.000528",
+    "id": "11be7029",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U20DVGTRV",
+    "text": "<@U20DVGTRV|henriqueof> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1470919968.000529",
+    "id": "11be7030",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U20E7C88J",
+    "text": "<@U20E7C88J|eabait> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1470920676.000530",
+    "id": "11be7031",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1ZRXQCGY",
+    "text": "hey guys i'm trying to add this library to my project but i don't know where to copy the details",
+    "ts": "1470925111.000531",
+    "id": "11be7032",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1ZRXQCGY",
+    "text": "<https://android-arsenal.com/details/1/404#!package>",
+    "attachments": [
+      {
+        "service_name": "Android Arsenal",
+        "title": "Android-RSS-Reader-Library | Android-Arsenal.com",
+        "title_link": "https://android-arsenal.com/details/1/404#!package",
+        "text": "RSS | Android-RSS-Reader-Library by Mats Hofman (matshofman)",
+        "fallback": "Android Arsenal: Android-RSS-Reader-Library | Android-Arsenal.com",
+        "from_url": "https://android-arsenal.com/details/1/404#!package",
+        "service_icon": "https://android-arsenal.com/favicon.ico",
+        "id": 1
+      }
+    ],
+    "ts": "1470925113.000532",
+    "id": "11be7033",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U1ZRXQCGY>: what do you mean by copy the details? You want to import this library in your project?",
+    "ts": "1470926550.000534",
+    "id": "11be7034",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1ZRXQCGY",
+    "text": "yeah . whenever i want to use a library i don't know what i need to add where",
+    "ts": "1470926784.000535",
+    "id": "11be7035",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U1ZRXQCGY>: you need to use the gradle build system. check this out <http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Introduction>",
+    "attachments": [
+      {
+        "title": "Gradle Plugin User Guide - Android Studio Project Site",
+        "title_link": "http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Introduction",
+        "text": "Android tools project information site",
+        "fallback": "Gradle Plugin User Guide - Android Studio Project Site",
+        "from_url": "http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Introduction",
+        "service_icon": "http://www.gstatic.com/sites/p/f27af8/system/app/images/apple-touch-icon.png",
+        "service_name": "tools.android.com",
+        "id": 1
+      }
+    ],
+    "ts": "1470927346.000536",
+    "id": "11be7036",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "or maybe even better would be to go through the free Android udacity course",
+    "ts": "1470927367.000538",
+    "id": "11be7037",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1ZRXQCGY",
+    "text": "thanks",
+    "ts": "1470927609.000539",
+    "id": "11be7038",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U20FTEPEY",
+    "text": "<@U20FTEPEY|boerema> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1470931073.000540",
+    "id": "11be7039",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U20ERDH5Z",
+    "text": "<@U20ERDH5Z|googleplsfixble> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1470932274.000541",
+    "id": "11be7040",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U20G7DEFJ",
+    "text": "<@U20G7DEFJ|christopher.benhur> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1470932485.000542",
+    "id": "11be7041",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1ZJKCJBU",
+    "text": "Going to write a series of blog posts with app creation for beginners on topics like SQLite, Content Provider, Services, Loaders, Adapters and many more. With separate app describing separate concepts. \nWish me luck :blush: :blush: :blush: ",
+    "ts": "1470932988.000543",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U1HM4MPLJ",
+          "U0W3JFY57",
+          "U20DVGTRV",
+          "U1Z5X6Q1H",
+          "U054A24ET",
+          "U1ZS9811P",
+          "U1ZKGJDU6"
+        ],
+        "count": 7
+      }
+    ],
+    "id": "11be7042",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U20H13QCX",
+    "text": "<@U20H13QCX|scottm> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1470935167.000544",
+    "id": "11be7043",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U20GWTAK0",
+    "text": "<@U20GWTAK0|carolinaveiga> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1470935924.000545",
+    "id": "11be7044",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U20J3G8CQ",
+    "text": "<@U20J3G8CQ|azumamagus> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1470941476.000546",
+    "id": "11be7045",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U20L6KCT1",
+    "text": "<@U20L6KCT1|gumil> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1470951257.000547",
+    "id": "11be7046",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U20KX0RNX",
+    "text": "<@U20KX0RNX|dillon6> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1470962781.000548",
+    "id": "11be7047",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U20N611HU",
+    "text": "<@U20N611HU|vijaykedia> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1470973406.000549",
+    "id": "11be7048",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

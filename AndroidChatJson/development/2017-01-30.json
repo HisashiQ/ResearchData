@@ -1,0 +1,2337 @@
+[
+  {
+    "user": "U3U23MGQ0",
+    "text": "Hello Developers :slightly_smiling_face:  \n```private String id;\n    private String userId;\n    private String username;\n    private String full_name;\n    private String picture;\n    private String caption;\n    private String Type;\n    private String imageThumb;\n    private String imageStandard;\n    private String videoThumbnail;\n    private String videoStandard;\n    private Double Lat;\n    private Double Lng;\n    private String location;\n    private int Likes;\n    private int tComment;\n    private String createdAt;\n    private String mediaCreatedTime;\n    private boolean userHasLiked;\n    private transient JSONArray jsonArray;\n    private transient JSONObject jsonObject;```\n\nThis much of information contains my `Media` object and I am creating `ArrayList&lt;Media&gt;` Which is increasing size of list dynamically and goes to 10000 and more My Question is how to handle this scenario I have faced `OutOfMemoryError` any alternative efficient  way to `ArrayList`",
+    "edited": {
+      "user": "U3U23MGQ0",
+      "ts": "1485768870.000000"
+    },
+    "ts": "1485768806.004160",
+    "id": "30de63073",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XJ96KPG",
+    "text": "The best solution for viewpager with two ways loop ?",
+    "edited": {
+      "user": "U0XJ96KPG",
+      "ts": "1485769079.000000"
+    },
+    "ts": "1485769075.004162",
+    "id": "30de63074",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3Y6QC58U",
+    "text": "<@U3Y6QC58U|chpetersen> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1485769222.004164",
+    "id": "30de63075",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "<@U3U23MGQ0> use a database. Also, I can’t understand why you’re holding JSONArray and JSONObject.",
+    "ts": "1485769321.004165",
+    "id": "30de63076",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3U23MGQ0",
+    "text": "<@U2M0WUZ7A>  this list generated from API and API has pagination.I need to save all data from API into DB finally all data save in DB only",
+    "ts": "1485771608.004166",
+    "id": "30de63077",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3U23MGQ0",
+    "text": "I want to sure about all data MUST sync into DB or this sync descart if any failure  occurs",
+    "ts": "1485771729.004167",
+    "id": "30de63078",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "1. Check twice, check three times, check a gazillion times if you *really* need to save *all this data*. If yes…\n2. Use more compact format to save broadband. E. g. protobuf.\n3. Add your data to database in a transaction instead of holding it in memory. After last page inserted, set your transaction successful (commit it).",
+    "edited": {
+      "user": "U2M0WUZ7A",
+      "ts": "1485772107.000000"
+    },
+    "ts": "1485772094.004168",
+    "id": "30de63079",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3U23MGQ0",
+    "text": "yes I use transaction for saving data in to DB",
+    "ts": "1485772676.004170",
+    "id": "30de63080",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3U23MGQ0",
+    "text": "but problem is that",
+    "ts": "1485772684.004171",
+    "id": "30de63081",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3U23MGQ0",
+    "text": "Total data is 1000 and every pagination has 100 raw i must sure save 1000 raw into db using transaction or cancel all sync",
+    "ts": "1485772775.004172",
+    "id": "30de63082",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Then you need to save them in chunks and later verify the completeness",
+    "ts": "1485772803.004173",
+    "id": "30de63083",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Cause there is no way to make “too much data” more efficient apart from splitting it up",
+    "ts": "1485772822.004174",
+    "id": "30de63084",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "yep, also I’d ask “why” you have to do it. Looks like you’re making something like instagram and neither instagram keeps 1000 items cached at a time",
+    "edited": {
+      "user": "U0548MM6B",
+      "ts": "1485772883.000000"
+    },
+    "ts": "1485772877.004175",
+    "reactions": [
+      {
+        "name": "heavy_plus_sign",
+        "users": [
+          "U2M0WUZ7A"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "30de63085",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "discuss it with your PM since this is a product problem, not a software problem",
+    "ts": "1485772918.004177",
+    "id": "30de63086",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3U23MGQ0",
+    "text": "Yes its from Instagram API",
+    "ts": "1485773565.004178",
+    "id": "30de63087",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3U23MGQ0",
+    "text": "and all data must be sync with time to time",
+    "ts": "1485773587.004179",
+    "id": "30de63088",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "why?",
+    "edited": {
+      "user": "U2M0WUZ7A",
+      "ts": "1485773604.000000"
+    },
+    "ts": "1485773596.004180",
+    "id": "30de63089",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3U23MGQ0",
+    "text": "bcz i have to manipulate new  data with old data",
+    "ts": "1485773642.004182",
+    "id": "30de63090",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "why do you need 1000 items?",
+    "ts": "1485773658.004183",
+    "id": "30de63091",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3U23MGQ0",
+    "text": "i have uploaded 1000 media",
+    "ts": "1485773727.004184",
+    "id": "30de63092",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3U23MGQ0",
+    "text": "so all media data save to local DB",
+    "ts": "1485773739.004185",
+    "id": "30de63093",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3U23MGQ0",
+    "text": "and delta will show",
+    "ts": "1485773758.004186",
+    "id": "30de63094",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "why _1000_ tho?",
+    "ts": "1485773767.004187",
+    "id": "30de63095",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "is it your own app? or are you working for a client or your company?",
+    "ts": "1485773777.004188",
+    "id": "30de63096",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "Should invent another way to do this.",
+    "ts": "1485773778.004189",
+    "id": "30de63097",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3U23MGQ0",
+    "text": "its X number",
+    "ts": "1485773784.004190",
+    "id": "30de63098",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3U23MGQ0",
+    "text": "not fixed",
+    "ts": "1485773790.004191",
+    "id": "30de63099",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "`X = 20`",
+    "ts": "1485773802.004192",
+    "id": "30de63100",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3U23MGQ0",
+    "text": "yes",
+    "ts": "1485773808.004193",
+    "id": "30de63101",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "in that case, you’ll need instagram's whole infrastructure and more.",
+    "edited": {
+      "user": "U0548MM6B",
+      "ts": "1485773821.000000"
+    },
+    "ts": "1485773810.004194",
+    "id": "30de63102",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "so it’s your application you’re developing for yourself?",
+    "ts": "1485773846.004196",
+    "id": "30de63103",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0L2TDNSZ",
+    "text": "Hi, anyone interested in and works with *Machine Learning* ? \n*How long does it take to grasp things and be able to write app* that can understand if person is hit by car or not by looking at phone sensor data ?",
+    "ts": "1485775779.004197",
+    "id": "30de63104",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "<@U0ESBF4AV> Thanks :slightly_smiling_face:",
+    "ts": "1485776987.004198",
+    "id": "30de63105",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "<@U3E2EEX38> Share your lib!",
+    "ts": "1485777008.004199",
+    "id": "30de63106",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "<@U0ESBF4AV> In libs",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1485777176.000000"
+    },
+    "ts": "1485777169.004200",
+    "id": "30de63107",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3U23MGQ0",
+    "text": "<@U0548MM6B> no its clients app",
+    "ts": "1485777950.004202",
+    "id": "30de63108",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3U23MGQ0",
+    "text": "and my problem is large array list",
+    "ts": "1485777967.004203",
+    "id": "30de63109",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "you can chunk the data up if you’re saving it into the DB",
+    "ts": "1485778186.004204",
+    "id": "30de63110",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "but keeping it constantly in memory is not something you should do, especially if it can be over a few thousand items",
+    "ts": "1485778216.004205",
+    "id": "30de63111",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3U23MGQ0",
+    "text": "okay BTW many thanks :slightly_smiling_face:",
+    "ts": "1485778329.004206",
+    "id": "30de63112",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U200KUU56",
+    "text": "<@U0L2TDNSZ> you would need a lot of data",
+    "ts": "1485778715.004207",
+    "id": "30de63113",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U200KUU56",
+    "text": "Also I don't think that 'making the app' is the problem here",
+    "ts": "1485778733.004208",
+    "id": "30de63114",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U200KUU56",
+    "text": "You should go to /r/MachineLearning or /r/MLQuestions",
+    "ts": "1485778769.004209",
+    "id": "30de63115",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0N7D6F50",
+    "text": "",
+    "bot_id": "B0N7DNUT0",
+    "attachments": [
+      {
+        "fallback": "r/MachineLearning",
+        "title": "r/MachineLearning",
+        "id": 1,
+        "title_link": "https://www.reddit.com/r/MachineLearning/",
+        "color": "CCCCCC",
+        "fields": [
+          {
+            "title": "Subcribers",
+            "value": "87760",
+            "short": true
+          },
+          {
+            "title": "Title",
+            "value": "Machine Learning",
+            "short": true
+          }
+        ],
+        "mrkdwn_in": [
+          "title",
+          "text"
+        ]
+      }
+    ],
+    "ts": "1485778769.004210",
+    "id": "30de63116",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0L2TDNSZ",
+    "text": "<@U117VV1DE> yeah, my fear is i have no background with ML, so im curious how long does it take to be able writes sth from scratch myself, for thesis maybe",
+    "ts": "1485779538.004211",
+    "id": "30de63117",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3WU02P70",
+    "text": "i am more curious how you will get the data :stuck_out_tongue:",
+    "ts": "1485779566.004212",
+    "id": "30de63118",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0L2TDNSZ",
+    "text": "Not sure, by using Go Kart car and hit dummy model (like on shops)",
+    "ts": "1485779581.004213",
+    "id": "30de63119",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U200KUU56",
+    "text": "You should maybe start with a more reasonable project, to dive into ML",
+    "ts": "1485779932.004214",
+    "id": "30de63120",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Dude things like this take time",
+    "ts": "1485779978.004215",
+    "id": "30de63121",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "You are learning a new field",
+    "ts": "1485780000.004216",
+    "id": "30de63122",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0L2TDNSZ",
+    "text": "Project is not specific, i can start with hello world :slightly_smiling_face: But can i come to the point to do sth like above, say in 4 months?",
+    "ts": "1485780139.004217",
+    "id": "30de63123",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U200KUU56",
+    "text": "it depends on how much time you can spend into it I think",
+    "ts": "1485780208.004218",
+    "id": "30de63124",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0L2TDNSZ",
+    "text": "2-3 hours :stuck_out_tongue:",
+    "ts": "1485780239.004219",
+    "id": "30de63125",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U200KUU56",
+    "text": "Also, since this is the development channel, to make the app you could look into tensorflow for Android, but it would kill the battery quickly since you would need to run the trained model regularly (to detect a collision by a car)",
+    "thread_ts": "1485780274.004220",
+    "reply_count": 2,
+    "replies": [
+      {
+        "user": "U0L2TDNSZ",
+        "ts": "1485780453.004224"
+      },
+      {
+        "user": "U0L2TDNSZ",
+        "ts": "1485780483.004226"
+      }
+    ],
+    "ts": "1485780274.004220",
+    "id": "30de63126",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U200KUU56",
+    "text": "Or you could send aggregated data to a server in order to process it (it would be less painful for the phone)",
+    "ts": "1485780322.004221",
+    "id": "30de63127",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0L2TDNSZ",
+    "text": "<@U200KUU56> jemshit [2:47 PM] \nAndroid app part would be probably most easiest part, i am not trying to implement real world app, but academic paper. I am not sure if i can finish such ML task in 6 months of time with everything (learn ML, algorithm implementation, train data...)",
+    "edited": {
+      "user": "U0L2TDNSZ",
+      "ts": "1485780540.000000"
+    },
+    "thread_ts": "1485780274.004220",
+    "parent_user_id": "U200KUU56",
+    "ts": "1485780453.004224",
+    "id": "30de63128",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0L2TDNSZ",
+    "text": "with 0 background",
+    "thread_ts": "1485780274.004220",
+    "parent_user_id": "U200KUU56",
+    "ts": "1485780483.004226",
+    "id": "30de63129",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3EQJUNLW",
+    "text": "hello",
+    "ts": "1485784914.004229",
+    "id": "30de63130",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3EQJUNLW",
+    "text": "have a question",
+    "ts": "1485784920.004230",
+    "id": "30de63131",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3EQJUNLW",
+    "text": "in Android studio I can run unit test with code coverage",
+    "ts": "1485784941.004231",
+    "id": "30de63132",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3EQJUNLW",
+    "text": "How can I do the same with gradle command ?",
+    "edited": {
+      "user": "U3EQJUNLW",
+      "ts": "1485784956.000000"
+    },
+    "ts": "1485784951.004232",
+    "id": "30de63133",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3EQJUNLW",
+    "text": "like ./gradlew test ??someparam",
+    "ts": "1485784975.004234",
+    "id": "30de63134",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3YU1CUHL",
+    "text": "<@U3YU1CUHL|mario1217> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1485787668.004235",
+    "id": "30de63135",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2PKWR36Z",
+    "text": "Hello. I am getting an error called 'Fatal signal 11' when trying to setImageResource for a view within my recyclerView, with setting OnClick method in my ViewHolder.\nI am doing the same thing at other part of my app with similar recyclerView structure and setting the same image, which works. It works correctly on other phone I checked but not on my phone. Has anyone encountered this before?",
+    "ts": "1485790165.004236",
+    "id": "30de63136",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3G9EB9EU",
+    "text": "Hi i was trying to invoke a grid layout manager adapter from another adapter. But in the grid adapter only constructor and getsize method are executed rest are not called. And finally the layout is not getting inflated",
+    "ts": "1485790703.004237",
+    "reactions": [
+      {
+        "name": "question",
+        "users": [
+          "U2M0WUZ7A"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "30de63137",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3G9EB9EU",
+    "text": "<@U2M0WUZ7A> in layman terms can we call one adapter from another adapter",
+    "edited": {
+      "user": "U3G9EB9EU",
+      "ts": "1485792536.000000"
+    },
+    "ts": "1485792497.004238",
+    "id": "30de63138",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3EQFHSAK",
+    "text": "I want to generate release build for my application on CircleCI. Where can I store my key store file and key alias/passwords securely, so that CI server can access them while building the release apk?",
+    "ts": "1485792680.004241",
+    "id": "30de63139",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "<@U3G9EB9EU> you can pass a reference to current activity/fragment through the constructor of an adapter, and then find an arbitary object through fragment.",
+    "ts": "1485792955.004242",
+    "id": "30de63140",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3G9EB9EU",
+    "text": "<@U2M0WUZ7A>  actually i had passed the reference of the current fragment to the first adapter and then i need to call the grid layout adapter in my adapter",
+    "ts": "1485793143.004243",
+    "id": "30de63141",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3G9EB9EU",
+    "text": "right now i am calling the gridlayout adaper from the first adapter onbindviewholder but with that way only the constructor and getitem count of the gridlayout adapter are called",
+    "ts": "1485793308.004244",
+    "id": "30de63142",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3EQJUNLW",
+    "text": "3560 people in this channel and no answers",
+    "ts": "1485793729.004245",
+    "reactions": [
+      {
+        "name": "innocent",
+        "users": [
+          "U3G9EB9EU",
+          "U3EQFHSAK"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "30de63143",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3EQJUNLW",
+    "text": "lol",
+    "ts": "1485793732.004246",
+    "id": "30de63144",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Probably cause it's easy to Google ;) <https://medium.com/@rafael_toledo/setting-up-an-unified-coverage-report-in-android-with-jacoco-robolectric-and-espresso-ffe239aaf3fa#.or2ee5fmg>",
+    "attachments": [
+      {
+        "service_name": "Medium",
+        "title": "Setting up an unified coverage report in Android with Jacoco, Robolectric, and Espresso",
+        "title_link": "https://medium.com/@rafael_toledo/setting-up-an-unified-coverage-report-in-android-with-jacoco-robolectric-and-espresso-ffe239aaf3fa#.or2ee5fmg",
+        "text": "Hello! In this post we’ll see how you can generate a test coverage report on an Android project including both unit tests (usually written…",
+        "fallback": "Medium: Setting up an unified coverage report in Android with Jacoco, Robolectric, and Espresso",
+        "image_url": "https://cdn-images-1.medium.com/max/1200/1*Umzy2v1zjMYzZxoBFma8Ng.png",
+        "fields": [
+          {
+            "title": "Reading time",
+            "value": "4 min read",
+            "short": true
+          }
+        ],
+        "ts": 1453902983,
+        "from_url": "https://medium.com/@rafael_toledo/setting-up-an-unified-coverage-report-in-android-with-jacoco-robolectric-and-espresso-ffe239aaf3fa#.or2ee5fmg",
+        "image_width": 552,
+        "image_height": 250,
+        "image_bytes": 29770,
+        "service_icon": "https://cdn-images-1.medium.com/fit/c/152/152/1*W0nmth_X8nFKjn6BZ388UQ.png",
+        "id": 1
+      }
+    ],
+    "ts": "1485794197.004247",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "30de63145",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3XKNGRLH",
+    "text": "<@U3XKNGRLH|mailorderpotato> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1485794699.004249",
+    "id": "30de63146",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18E0PY49",
+    "text": "Still trying to grasp ORM best practices, is it bad storing arrays ?",
+    "ts": "1485795220.004250",
+    "id": "30de63147",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3EQJUNLW",
+    "text": "<@U04TK850N> why do I need a library for that if it’s included in android studio?",
+    "ts": "1485795322.004251",
+    "id": "30de63148",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "You don't need a library ",
+    "ts": "1485795339.004252",
+    "id": "30de63149",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U3EQJUNLW|ivanfenenko> uploaded a file: <https://androidchat.slack.com/files/ivanfenenko/F3Y8EKDRR/screen_shot_2017-01-30_at_17.55.31.png|Screen Shot 2017-01-30 at 17.55.31.png>",
+    "file": {
+      "id": "F3Y8EKDRR",
+      "created": 1485795347,
+      "timestamp": 1485795347,
+      "name": "Screen Shot 2017-01-30 at 17.55.31.png",
+      "title": "Screen Shot 2017-01-30 at 17.55.31.png",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U3EQJUNLW",
+      "editable": false,
+      "size": 28278,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F3Y8EKDRR/screen_shot_2017-01-30_at_17.55.31.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F3Y8EKDRR/download/screen_shot_2017-01-30_at_17.55.31.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F3Y8EKDRR-da78af3feb/screen_shot_2017-01-30_at_17.55.31_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F3Y8EKDRR-da78af3feb/screen_shot_2017-01-30_at_17.55.31_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F3Y8EKDRR-da78af3feb/screen_shot_2017-01-30_at_17.55.31_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 360,
+      "thumb_360_h": 44,
+      "thumb_480": "https://files.slack.com/files-tmb/T04PLNDMP-F3Y8EKDRR-da78af3feb/screen_shot_2017-01-30_at_17.55.31_480.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_480_w": 480,
+      "thumb_480_h": 59,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F3Y8EKDRR-da78af3feb/screen_shot_2017-01-30_at_17.55.31_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "image_exif_rotation": 1,
+      "original_w": 720,
+      "original_h": 88,
+      "permalink": "https://androidchat.slack.com/files/ivanfenenko/F3Y8EKDRR/screen_shot_2017-01-30_at_17.55.31.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F3Y8EKDRR-1be35bc7b1",
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U3EQJUNLW",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U3EQJUNLW|ivanfenenko>",
+    "bot_id": null,
+    "ts": "1485795348.004253",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "30de63150",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3EQJUNLW",
+    "text": "Will I see this in result?",
+    "ts": "1485795351.004254",
+    "id": "30de63151",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3EQJUNLW",
+    "text": "ok thank you",
+    "ts": "1485795363.004255",
+    "id": "30de63152",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Yes you get a HTML report ",
+    "ts": "1485795418.004256",
+    "id": "30de63153",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I have my setup at work so can't share right now ",
+    "ts": "1485795433.004257",
+    "id": "30de63154",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3XGFJCVC",
+    "text": "anyone tried aide the mobile studio",
+    "ts": "1485795468.004258",
+    "id": "30de63155",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3EQJUNLW",
+    "text": "ok cool",
+    "ts": "1485795476.004259",
+    "id": "30de63156",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3EQFHSAK",
+    "text": "can someone help?",
+    "attachments": [
+      {
+        "fallback": "[January 30th, 2017 9:41 PM] kevalpatel2106: I want to generate release build for my application on CircleCI. Where can I store my key store file and key alias/passwords securely, so that CI server can access them while building the release apk?",
+        "ts": "1485792680.004241",
+        "author_subname": "kevalpatel2106",
+        "channel_id": "C04NZAN54",
+        "channel_name": "development",
+        "is_msg_unfurl": true,
+        "text": "I want to generate release build for my application on CircleCI. Where can I store my key store file and key alias/passwords securely, so that CI server can access them while building the release apk?",
+        "author_name": "Keval Patel",
+        "author_link": "https://androidchat.slack.com/team/kevalpatel2106",
+        "author_icon": "https://avatars.slack-edge.com/2016-12-15/116572376545_06605bf45a805d7aec24_48.png",
+        "mrkdwn_in": [
+          "text"
+        ],
+        "color": "D0D0D0",
+        "from_url": "https://androidchat.slack.com/archives/development/p1485792680004241",
+        "is_share": true,
+        "footer": "Posted in #development"
+      }
+    ],
+    "ts": "1485797798.004260",
+    "id": "30de63157",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I used travis before and that could use encrypted values, not sure how Circle does it but it could be very similar: <https://docs.travis-ci.com/user/environment-variables/>",
+    "ts": "1485798276.004261",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U3EQFHSAK"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "30de63158",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I think <@U0548MM6B> uses CircleCI. ^",
+    "ts": "1485803011.004262",
+    "id": "30de63159",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "Haven't in a long time",
+    "ts": "1485803035.004263",
+    "id": "30de63160",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "Buddybuild now",
+    "ts": "1485803042.004264",
+    "id": "30de63161",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3X1VCVHD",
+    "text": "Guys i have one problém. I use standard Android media player to play audio mp3 from SD card. Is possible add to media player playlist (arraylist) ?...",
+    "ts": "1485805144.004265",
+    "id": "30de63162",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U3PQZMSF6|iancowley> uploaded a file: <https://androidchat.slack.com/files/iancowley/F3Z4G9763/-.java|Untitled> and commented: Is there a way to avoid calling a picasso load function twice if I want to load a remote image into and imageview and also save it to a file?\n\nOr do I have to do something like this",
+    "file": {
+      "id": "F3Z4G9763",
+      "created": 1485805707,
+      "timestamp": 1485805707,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U3PQZMSF6",
+      "editable": true,
+      "size": 129,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F3Z4G9763/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F3Z4G9763/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/iancowley/F3Z4G9763/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F3Z4G9763-25b6cb6301",
+      "edit_link": "https://androidchat.slack.com/files/iancowley/F3Z4G9763/-.java/edit",
+      "preview": "Picasso.with(context).load(item.getUrl()).into(imageView);\r\nPicasso.with(context).load(item.getUrl()).into(new SaveTarget(item));",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-variable\">Picasso</span>.<span class=\"cm-variable\">with</span>(<span class=\"cm-variable\">context</span>).<span class=\"cm-variable\">load</span>(<span class=\"cm-variable\">item</span>.<span class=\"cm-variable\">getUrl</span>()).<span class=\"cm-variable\">into</span>(<span class=\"cm-variable\">imageView</span>);</pre></div>\n<div><pre><span class=\"cm-variable\">Picasso</span>.<span class=\"cm-variable\">with</span>(<span class=\"cm-variable\">context</span>).<span class=\"cm-variable\">load</span>(<span class=\"cm-variable\">item</span>.<span class=\"cm-variable\">getUrl</span>()).<span class=\"cm-variable\">into</span>(<span class=\"cm-keyword\">new</span> <span class=\"cm-variable\">SaveTarget</span>(<span class=\"cm-variable\">item</span>));</pre></div>\n</div>\n</div>\n",
+      "lines": 2,
+      "lines_more": 0,
+      "preview_is_truncated": false,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 1,
+      "initial_comment": {
+        "id": "Fc3YFV07QU",
+        "created": 1485805707,
+        "timestamp": 1485805707,
+        "user": "U3PQZMSF6",
+        "is_intro": true,
+        "comment": "Is there a way to avoid calling a picasso load function twice if I want to load a remote image into and imageview and also save it to a file?\n\nOr do I have to do something like this",
+        "channel": ""
+      }
+    },
+    "user": "U3PQZMSF6",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U3PQZMSF6|iancowley>",
+    "bot_id": null,
+    "ts": "1485805707.004266",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "30de63163",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "`.get()`",
+    "ts": "1485806697.004267",
+    "id": "30de63164",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3PQZMSF6",
+    "text": "`.get()` just make the request sychronous",
+    "ts": "1485806854.004268",
+    "id": "30de63165",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3PQZMSF6",
+    "text": "I want to load the image into an imageview and be able to save that bitmap to a file",
+    "ts": "1485806868.004269",
+    "id": "30de63166",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "```\nnew Target {\n    set image to ImageView and save it\n}\n```",
+    "ts": "1485806946.004272",
+    "id": "30de63167",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3PQZMSF6",
+    "text": "If I do that, I will need to handle recycling",
+    "ts": "1485806970.004273",
+    "id": "30de63168",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3PQZMSF6",
+    "text": "should have made that point clear.",
+    "ts": "1485806982.004274",
+    "id": "30de63169",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U18E0PY49> which orm",
+    "ts": "1485807228.004275",
+    "id": "30de63170",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U2PKWR36Z> instead of `setImageResource`, use Glide to load it",
+    "ts": "1485807249.004276",
+    "id": "30de63171",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18E0PY49",
+    "text": "<@U39P7U6EP> StorIO",
+    "ts": "1485811259.004277",
+    "id": "30de63172",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3YJPHZ0U",
+    "text": "<@U3YJPHZ0U|nolnefm> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1485816368.004278",
+    "id": "30de63173",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3YHJNGUB",
+    "text": "<@U3YHJNGUB|amanjeetsingh150> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1485839267.004281",
+    "id": "30de63174",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09UQHPQV",
+    "text": "<@U0A1BE7KQ>  I forked repo.\n\n<https://gist.github.com/lawloretienne/6f7d7d92f72986f5ebd60f226d9044ee>",
+    "ts": "1485841954.004282",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U0A1BE7KQ",
+          "U3EQFHSAK"
+        ],
+        "count": 3
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "+1",
+        "users": [
+          "U0A1BE7KQ"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "30de63175",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3VDXB00G",
+    "text": "Hi all, anybody knows any library which will provide us a view like number picker in IOS ?",
+    "ts": "1485842111.004283",
+    "id": "30de63176",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RRH206T",
+    "text": "Hi everyone, my app is crashing on KitKat giving XML Inflate Exception `Caused by: android.content.res.Resources$NotFoundException: File res/drawable/ic_call_black_24dp.xml from drawable resource ID #0x7f0200a9` . \nI am extending AppCompatActivity for all my Activities, \nIn my `build.gradle (app)` , I have set `vectorDrawables.useSupportLibrary = true` , \nI even tried setting `android:src=image` to `app:srcCompat=image`  and `static { AppCompatDelegate.setCompatVectorFromResourcesEnabled(true); }` at the top of each Activity, but to no avail",
+    "ts": "1485845540.004284",
+    "id": "30de63177",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RRH206T",
+    "text": "So I can't figure out why using the inbuilt vector-drawable (the `ic_call_black_24dp.xml` in this case ) not automatically being converted into a png for use in Android version below 21",
+    "ts": "1485845790.004285",
+    "id": "30de63178",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "you probably have the drawable in `drawable-v21` instead of in `drawable`",
+    "ts": "1485846853.004286",
+    "id": "30de63179",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RRH206T",
+    "text": "<@U39P7U6EP> Thanks for replying. yes I have a few drawables in v-21, but when move them to drawables instead, I get a build error of duplicate resources",
+    "ts": "1485847169.004287",
+    "id": "30de63180",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RRH206T",
+    "text": "But why doesn't `static { AppCompatDelegate.setCompatVectorFromResourcesEnabled(true); }` work, I think it should handle all of that on its own, without me having to use `app:srcCompat` instead of  `android:src`",
+    "ts": "1485847428.004288",
+    "id": "30de63181",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2RRH206T",
+    "text": "Hi guys, strangely, this worked :\n1. Removing `static { AppCompatDelegate.setCompatVectorFromResourcesEnabled(true); }`\n2. Removing `vectorDrawables.useSupportLibrary = true` from *build.gradle*\n3. Not using `srcCompat`",
+    "ts": "1485849400.004289",
+    "id": "30de63182",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

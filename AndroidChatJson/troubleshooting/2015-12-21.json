@@ -1,0 +1,308 @@
+[
+  {
+    "user": "U054C9PUK",
+    "text": "ARGH! Does anyone else regularly have issues with AS not generating the R file for debug builds in library modules? The release R file is generated. I manage to get it to work after building, cleaning, building on the commandline, rebuilding in AS but a clean build takes ages so I’m trying to find a quicker way around this",
+    "ts": "1450696825.000351",
+    "id": "21tr3307",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "as 2+ or 1.5+",
+    "ts": "1450713452.000352",
+    "id": "21tr3308",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "1.5+ is working fine for me",
+    "ts": "1450713464.000353",
+    "id": "21tr3309",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "2+ working fine here",
+    "ts": "1450713569.000354",
+    "id": "21tr3310",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "you likely have a gradle issue in your debug build that only occurs on the 2nd build",
+    "ts": "1450713591.000355",
+    "id": "21tr3311",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "try running from the command line to determine why the resource creation is failing",
+    "ts": "1450713604.000356",
+    "id": "21tr3312",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "`./gradlew assembleDebug`",
+    "ts": "1450713615.000357",
+    "id": "21tr3313",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054C9PUK",
+    "text": "It’s happened with both for me. It works after cleaning, building, rebuilding a few times. It’s just a pain",
+    "ts": "1450713848.000358",
+    "id": "21tr3314",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054C9PUK",
+    "text": "Happens more frequently after adding new modules",
+    "ts": "1450713869.000359",
+    "id": "21tr3315",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054C9PUK",
+    "text": "I don’t think it’s that it’s failing. It looks like it’s building release instead so AS can’t resolve it unless I set that module to the release variant",
+    "ts": "1450713912.000360",
+    "id": "21tr3316",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "yeah unfortunately if you want to ‘enjoy’ android development you need a monstrous cpu otherwise full builds take a good bit",
+    "ts": "1450713913.000361",
+    "id": "21tr3317",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054C9PUK",
+    "text": "Plus my home machine only has 4GB RAM so that’s even more fun :stuck_out_tongue:",
+    "ts": "1450713935.000362",
+    "id": "21tr3318",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "do you have mismatched dependencies by chance?",
+    "ts": "1450713945.000363",
+    "id": "21tr3319",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "like one module has the incorrect version of an app compat or support lib or any of the other magic libs that dont behave properly",
+    "ts": "1450713969.000364",
+    "id": "21tr3320",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054C9PUK",
+    "text": "Don’t think so. Not any more anyway. Tidied all of that up",
+    "ts": "1450713972.000365",
+    "id": "21tr3321",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054C9PUK",
+    "text": "It’s working now, but no doubt I’ll be complaining again in a few weeks when it happens again",
+    "ts": "1450714088.000366",
+    "id": "21tr3322",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054C9PUK",
+    "text": "No useful reproduction steps either, so no bug report :simple_smile:",
+    "ts": "1450714111.000367",
+    "id": "21tr3323",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

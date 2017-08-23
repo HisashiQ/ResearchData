@@ -1,0 +1,362 @@
+[
+  {
+    "user": "U09T8SFG8",
+    "text": "Silly question, is robolectric supposed to be quite slow?",
+    "ts": "1464953774.000369",
+    "id": "03te1408",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "As in 2.5 seconds for a simple test",
+    "ts": "1464953781.000370",
+    "id": "03te1409",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "yeah",
+    "ts": "1464953906.000371",
+    "id": "03te1410",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "the thing is that it needs to do a lot of thing to start itself but then it’s pretty fast",
+    "ts": "1464953908.000372",
+    "id": "03te1411",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "So just for first run? I guess not having the gradle daemon enabled doesn't help",
+    "ts": "1464953954.000373",
+    "id": "03te1412",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "So if you run single test or small amount of them you will feel that it’s slow, but if you’ll run like ~1000 tests it won’t be so noticeable",
+    "ts": "1464953954.000374",
+    "id": "03te1413",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "I don’t think Gradle daemon keeps robolectric, robolectric is test runner, it’s not Gradle plugin or something",
+    "ts": "1464953992.000375",
+    "id": "03te1414",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "hmmm I see",
+    "ts": "1464954004.000376",
+    "id": "03te1415",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I just needed it for 2-3 classes",
+    "ts": "1464954018.000377",
+    "id": "03te1416",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "but now I'm reconsidering",
+    "ts": "1464954024.000378",
+    "id": "03te1417",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "yeah, I simply try to avoid Robolecric as much as possible",
+    "ts": "1464954055.000379",
+    "id": "03te1418",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I just want to test Object -&gt; ContentValues mappers and there is no other way really. At first I wrapped ContentValues in my own class but then I had to pretty must re-implement ContentValues for my tests",
+    "ts": "1464954094.000380",
+    "id": "03te1419",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "so it's either very ugly and brittle tests or 2 extra seconds for my unit tests",
+    "ts": "1464954126.000381",
+    "id": "03te1420",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "ideally I will move to a more sensible SQLite framework down the road",
+    "ts": "1464954142.000382",
+    "id": "03te1421",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0552GXEN",
+    "text": "So what the heck changed with the new AS Preview version that I can now run android classes in my unit tests now?",
+    "ts": "1464991407.000383",
+    "id": "03te1422",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0552GXEN",
+    "text": "Did I miss out on a massive update from the tools team at IO?",
+    "ts": "1464991417.000384",
+    "id": "03te1423",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0552GXEN",
+    "text": "Has anyone else noticed this?",
+    "ts": "1464991429.000385",
+    "id": "03te1424",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "it’s not about AS",
+    "ts": "1464993591.000386",
+    "id": "03te1425",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "since Android Gradle Plugin 1.0 or 1.1 they’ve added mocking/stubbing  Android SDK classes",
+    "ts": "1464993626.000387",
+    "id": "03te1426",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "You can notice “preparing mocked Android jar” (or something similar) when you run `gradle test`",
+    "ts": "1464993673.000388",
+    "id": "03te1427",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

@@ -1,0 +1,3276 @@
+[
+  {
+    "user": "U0K1ALDQE",
+    "text": "Any1 has a lot experience with Camera API ?? Or had witnessed random take picture failures? (Random as in 99.6% crash free on ~3k users in 1 day)",
+    "ts": "1461929525.002219",
+    "id": "29de34055",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "Camera API is all about random failures :simple_smile:",
+    "ts": "1461929584.002220",
+    "id": "29de34056",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "The API itself is a failure.",
+    "ts": "1461929594.002221",
+    "id": "29de34057",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "As the API works with a camera driver which is different from vendor to vendor you’re gonna face all the driver bugs in your app.",
+    "ts": "1461929694.002222",
+    "id": "29de34058",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "So the best you can do is to wrap every call to Camera API into `try` / `catch` block and report exceptions as non-fatals.",
+    "ts": "1461929754.002223",
+    "id": "29de34059",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Okay, that’s what I thought (and see in analytics)",
+    "ts": "1461929880.002224",
+    "id": "29de34060",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Do you know by any chance if there is a possibility that I could reach onPictureTaken() callback if there is a crash in takePicture?",
+    "ts": "1461929922.002225",
+    "id": "29de34061",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "I think it shouldn’t be possible but who knows. You have to have a timeout I think.",
+    "ts": "1461929974.002226",
+    "id": "29de34062",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "&gt;You have to have a timeout I think.\n?",
+    "ts": "1461930001.002227",
+    "id": "29de34063",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "And if you use autofocus it should work with a timeout either.",
+    "ts": "1461930001.002228",
+    "id": "29de34064",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I work with autofocus",
+    "ts": "1461930010.002229",
+    "id": "29de34065",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Kinda*",
+    "ts": "1461930032.002230",
+    "id": "29de34066",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "```\n            camera.autoFocus(new Camera.AutoFocusCallback() {\n                public void onAutoFocus(boolean success, Camera camera) {\n                    //If auto focus failed take photo anyway\n                    takePicture();\n                }\n            });\n```",
+    "ts": "1461930038.002231",
+    "id": "29de34067",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Picture quality is no requirement.",
+    "ts": "1461930062.002232",
+    "id": "29de34068",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "I mean when you call `takePicture` and `onPictureTaken` is not called in e.g. a few seconds you should consider it will never be called and stop the process of photo capturing.",
+    "ts": "1461930072.002233",
+    "id": "29de34069",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "Autofocus is broken on some devices and `onAutoFocus` may never be called :simple_smile:",
+    "ts": "1461930095.002234",
+    "id": "29de34070",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Oh like so. Hmm.",
+    "ts": "1461930101.002235",
+    "id": "29de34071",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "How do you mean autofocus is broken?",
+    "ts": "1461930112.002236",
+    "id": "29de34072",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I check if it’s supported, and if it’s not I just call takePicture",
+    "ts": "1461930126.002237",
+    "id": "29de34073",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "```\n    private void takePicture() {\n        shutterPlayer.start();\n        Timber.e(\"take picture\");\n        camera.takePicture(null, null, this);\n    }\n```",
+    "ts": "1461930146.002238",
+    "id": "29de34074",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "well i see sometimes event the google camera app crashes or freeze itself",
+    "ts": "1461930281.002239",
+    "id": "29de34075",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "Motorola devices have autofocus but it just doesn’t work sometimes :simple_smile:",
+    "ts": "1461930287.002240",
+    "id": "29de34076",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "so I dont think its something in your code..",
+    "ts": "1461930297.002241",
+    "id": "29de34077",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "Agree with <@U0XCFE6AH>",
+    "ts": "1461930335.002242",
+    "id": "29de34078",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Okay, that’s what I thought. Wrapping it in try/catch it is then",
+    "ts": "1461930373.002243",
+    "id": "29de34079",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Anyhow, what happens in the motorola case <@U0RGXBYUD>",
+    "ts": "1461930391.002244",
+    "id": "29de34080",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Will it just go straight to `onAutoFocus` with a failed flag?",
+    "ts": "1461930409.002245",
+    "id": "29de34081",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Cause that’s fine in my case.",
+    "ts": "1461930420.002246",
+    "id": "29de34082",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "You call `autofocus` and in some cases `onAutoFocus` will never be called.",
+    "ts": "1461930423.002247",
+    "id": "29de34083",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Hmm. Okay, so to the user it will seem like he didn’t click properly I guess",
+    "ts": "1461930451.002248",
+    "id": "29de34084",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "The camera stucks in infinite autofocusing.",
+    "ts": "1461930452.002249",
+    "id": "29de34085",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "`The camera stucks in infinite autofocusing.` damn that’s not cool",
+    "ts": "1461930465.002250",
+    "id": "29de34086",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "But no report of that happening atm with 3k users",
+    "ts": "1461930473.002251",
+    "id": "29de34087",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "No, for the user it will look like the capturing process is hung.",
+    "ts": "1461930487.002252",
+    "id": "29de34088",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "It’s a promotional thing it’s already offline but will go online again in a few weeks",
+    "ts": "1461930493.002253",
+    "id": "29de34089",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Okay, thanks for the tip <@U0RGXBYUD>. I will look into it!",
+    "ts": "1461930514.002254",
+    "id": "29de34090",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": ":+1:",
+    "ts": "1461930517.002255",
+    "id": "29de34091",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "You’re welcome :simple_smile:",
+    "ts": "1461930522.002256",
+    "id": "29de34092",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "<@U0RGXBYUD>: :taco:",
+    "ts": "1461930526.002257",
+    "id": "29de34093",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "There’s a project called open camera: <http://opencamera.sourceforge.net/>",
+    "ts": "1461930552.002258",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U0K1ALDQE"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "29de34094",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "Take a look at it. There’re a lot of workarounds for some bugs.",
+    "edited": {
+      "user": "U0RGXBYUD",
+      "ts": "1461930578.000000"
+    },
+    "ts": "1461930573.002259",
+    "id": "29de34095",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U10J3LB6D",
+    "text": "Hi anyone suggest the exact alternative to this library <https://github.com/dm77/ZBarScanner>, I tried it, but the problem is, it is not supporting latest gradle plugin version. And also I don’t want the user to rely on BarScanner to be installed in his/her device. Just need to scan the QR code and give the result. Any suggestion?",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "dm77/ZBarScanner",
+        "title_link": "https://github.com/dm77/ZBarScanner",
+        "text": "ZBarScanner - This is an Android library project that simplifies the usage of the ZBar SDK for scanning bar codes from within your Android application.",
+        "fallback": "GitHub: dm77/ZBarScanner",
+        "thumb_url": "https://avatars2.githubusercontent.com/u/129133?v=3&s=400",
+        "from_url": "https://github.com/dm77/ZBarScanner",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1461931677.002261",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "29de34096",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "for qrcodes we’re  bundling the zxing library",
+    "ts": "1461932055.002263",
+    "id": "29de34097",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "<https://github.com/dm77/barcodescanner>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "dm77/barcodescanner",
+        "title_link": "https://github.com/dm77/barcodescanner",
+        "text": "barcodescanner - Barcode Scanner Libraries for Android",
+        "fallback": "GitHub: dm77/barcodescanner",
+        "thumb_url": "https://avatars2.githubusercontent.com/u/129133?v=3&s=400",
+        "from_url": "https://github.com/dm77/barcodescanner",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1461932113.002264",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "29de34098",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "this one seems newer?",
+    "ts": "1461932120.002266",
+    "id": "29de34099",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U10J3LB6D",
+    "text": "yeah it seems newer, would you tell me what’s the difference between ZXing and ZBar in simple words?",
+    "ts": "1461932307.002267",
+    "id": "29de34100",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U10J3LB6D",
+    "text": "<@U053PPGDC>:",
+    "ts": "1461932316.002268",
+    "id": "29de34101",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "it seems zbar wraps the zxing library",
+    "ts": "1461932354.002269",
+    "id": "29de34102",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "on the first glance",
+    "ts": "1461932359.002270",
+    "id": "29de34103",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "nah sorry",
+    "ts": "1461932392.002271",
+    "id": "29de34104",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "could be different implementations",
+    "ts": "1461932407.002272",
+    "id": "29de34105",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U10J3LB6D",
+    "text": "I'll try both and will tell you difference, thanks <@U053PPGDC>",
+    "ts": "1461932466.002273",
+    "id": "29de34106",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U10J3LB6D",
+    "text": ":simple_smile:",
+    "ts": "1461932469.002274",
+    "id": "29de34107",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "also: <http://android-developers.blogspot.co.uk/2015/08/barcode-detection-in-google-play.html>",
+    "attachments": [
+      {
+        "title": "Barcode Detection in Google Play services | Android Developers Blog",
+        "title_link": "http://android-developers.blogspot.co.uk/2015/08/barcode-detection-in-google-play.html",
+        "fallback": "Barcode Detection in Google Play services | Android Developers Blog",
+        "image_url": "http://2.bp.blogspot.com/-GYLjUmMCkHo/Vc4WMOmZMWI/AAAAAAAAB8Q/lHM-JY9WNz4/w1200-h630-p-nu/image00.png",
+        "from_url": "http://android-developers.blogspot.co.uk/2015/08/barcode-detection-in-google-play.html",
+        "image_width": 477,
+        "image_height": 250,
+        "image_bytes": 160658,
+        "id": 1
+      }
+    ],
+    "ts": "1461932502.002275",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "+1",
+        "users": [
+          "U10J3LB6D"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "29de34108",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "but I haven’t tried this one",
+    "ts": "1461932518.002277",
+    "id": "29de34109",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "when are they ever going to fix the fucking popup dialogs in AS",
+    "ts": "1461932527.002278",
+    "id": "29de34110",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "they have only been broken forever",
+    "ts": "1461932536.002279",
+    "id": "29de34111",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "/gif priorities",
+    "ts": "1461932590.002280",
+    "id": "29de34112",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "",
+    "bot_id": "B0GH4RVHU",
+    "attachments": [
+      {
+        "fallback": "<https://talgroupinc.files.wordpress.com/2015/08/sade-priorities.gif>",
+        "image_url": "https://talgroupinc.files.wordpress.com/2015/08/sade-priorities.gif",
+        "image_width": 632,
+        "image_height": 323,
+        "image_bytes": 1772195,
+        "is_animated": true,
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1461932590.002281",
+    "id": "29de34113",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "think I know which ones you mean",
+    "ts": "1461932599.002282",
+    "id": "29de34114",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "is it when you’re using multiple desktops?",
+    "ts": "1461932610.002283",
+    "id": "29de34115",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "refactor, move, drag drop",
+    "ts": "1461932610.002284",
+    "id": "29de34116",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "oh those too",
+    "ts": "1461932617.002285",
+    "id": "29de34117",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "yeah any dialog that pops up you either cant use a mouse or my favorite you can’t use your keyboard",
+    "ts": "1461932636.002286",
+    "id": "29de34118",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "it just gets awkwardly locked out but sometimes it super breaks where neither works and you have to go to the dock and select focus on AS which someone puts the focus properly on the dialog as actual focus on the dialog is a no no",
+    "ts": "1461932686.002287",
+    "id": "29de34119",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KU8TDV2",
+    "text": "hi guys, i got a string \"/storage/emulated/0/Android/data/me.ltpquang.android/cache/upload_videos/VID_20160429_114124.mp4\"",
+    "ts": "1461932934.002288",
+    "id": "29de34120",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KU8TDV2",
+    "text": "how to i create a valid File from that string so that it can be played in mediaplayer",
+    "ts": "1461932971.002289",
+    "id": "29de34121",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Try `Uri.fromFile(new File(\"/your/path/here.mp4\"))`",
+    "ts": "1461933193.002290",
+    "id": "29de34122",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DFETSNS",
+    "text": "hi, did you try new File(string) ?",
+    "ts": "1461933193.002291",
+    "id": "29de34123",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Then feed the Uri to the media player",
+    "ts": "1461933209.002292",
+    "id": "29de34124",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "But then again, this directory is probably not indexed by the media scanner so that might not work",
+    "ts": "1461933249.002293",
+    "id": "29de34125",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KU8TDV2",
+    "text": "<@U04TK850N>: okay i'll try that out",
+    "ts": "1461933427.002294",
+    "id": "29de34126",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KU8TDV2",
+    "text": "<@U0DFETSNS> yep I've tried it already, but it doesn't work",
+    "ts": "1461933450.002295",
+    "id": "29de34127",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KU8TDV2",
+    "text": "in fact i've tried half of public constructors of File",
+    "ts": "1461933483.002296",
+    "id": "29de34128",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KU8TDV2",
+    "text": "but still no hope",
+    "ts": "1461933488.002297",
+    "id": "29de34129",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DFETSNS",
+    "text": "guys - could you tell me if there is a way to inflate layout from &lt;include tag?\nhere is some code that shows what I want to achive: <http://pastebin.com/WzG6mnEy>",
+    "attachments": [
+      {
+        "service_name": "Pastebin",
+        "title": "              ",
+        "title_link": "http://pastebin.com/WzG6mnEy",
+        "fallback": "Pastebin:               ",
+        "image_url": "http://pastebin.com/i/facebook.png",
+        "from_url": "http://pastebin.com/WzG6mnEy",
+        "image_width": 250,
+        "image_height": 250,
+        "image_bytes": 19206,
+        "id": 1
+      }
+    ],
+    "ts": "1461933543.002298",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "29de34130",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KU8TDV2",
+    "text": "my project is quite large, so building and deploying takes lots of time",
+    "ts": "1461933547.002300",
+    "id": "29de34131",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "<@U0DFETSNS>: You inflate the outer layout and then access the included ones by their IDs",
+    "ts": "1461933652.002301",
+    "id": "29de34132",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DFETSNS",
+    "text": "oh - so like: LayoutInflater.from( context ).inflate( includeView, ... ); ?",
+    "ts": "1461933705.002302",
+    "id": "29de34133",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "No, I mean… Why do you want to inflate the included view manually?",
+    "ts": "1461933725.002303",
+    "id": "29de34134",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "it will be inflated by the system when you inflate their parent layout",
+    "ts": "1461933742.002304",
+    "id": "29de34135",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DFETSNS",
+    "text": "I want to change text in includedView views",
+    "ts": "1461933786.002305",
+    "id": "29de34136",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DFETSNS",
+    "text": "and two includedViews has the same textView ids",
+    "ts": "1461933809.002306",
+    "id": "29de34137",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Then first find the view container with the respective id `item_2 `, and on that you can call findViewById again to find the textview",
+    "ts": "1461933850.002307",
+    "id": "29de34138",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DFETSNS",
+    "text": "thats smart. Ill try it :simple_smile: thanks",
+    "ts": "1461933890.002308",
+    "id": "29de34139",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DFETSNS",
+    "text": "<@U0KU8TDV2>: are you sure you have all needed permissions?",
+    "ts": "1461933970.002309",
+    "id": "29de34140",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KU8TDV2",
+    "text": "yes, for sure, i used to create File using dir and filename and everything is okay",
+    "ts": "1461934024.002310",
+    "id": "29de34141",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "this is what we have become <https://www.reddit.com/r/androiddev/comments/4gyf8v/looking_for_a_library_idea/>",
+    "attachments": [
+      {
+        "service_name": "reddit",
+        "title": "Looking for a library idea.. • /r/androiddev",
+        "title_link": "https://www.reddit.com/r/androiddev/comments/4gyf8v/looking_for_a_library_idea/",
+        "text": "Anything at all. Probably not another json parser though. Is there something in material design that isn't available in android yet? Something...",
+        "fallback": "reddit: Looking for a library idea.. • /r/androiddev",
+        "thumb_url": "https://www.redditstatic.com/icon.png",
+        "from_url": "https://www.reddit.com/r/androiddev/comments/4gyf8v/looking_for_a_library_idea/",
+        "thumb_width": 256,
+        "thumb_height": 256,
+        "id": 1
+      }
+    ],
+    "ts": "1461936128.002311",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "29de34142",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "Reminds me of these wise words <https://youtu.be/Jo-0ytcEXKg?t=1m2s>",
+    "attachments": [
+      {
+        "service_name": "YouTube",
+        "service_url": "https://www.youtube.com/",
+        "title": "Motivational speech Dj Khaled ANOTHER ONE you smart, you loyal, I appreciate you",
+        "title_link": "https://youtu.be/Jo-0ytcEXKg?t=1m2s",
+        "author_name": "SHOCKING VIDEOS",
+        "author_link": "https://www.youtube.com/channel/UC55moIwDOfm8xncK3Ud7GBg",
+        "thumb_url": "https://i.ytimg.com/vi/Jo-0ytcEXKg/hqdefault.jpg",
+        "thumb_width": 480,
+        "thumb_height": 360,
+        "fallback": "YouTube Video: Motivational speech Dj Khaled ANOTHER ONE you smart, you loyal, I appreciate you",
+        "video_html": "<iframe width=\"400\" height=\"225\" src=\"https://www.youtube.com/embed/Jo-0ytcEXKg?start=62&feature=oembed&start=62&autoplay=1&iv_load_policy=3\" frameborder=\"0\" allowfullscreen></iframe>",
+        "video_html_width": 400,
+        "video_html_height": 225,
+        "from_url": "https://youtu.be/Jo-0ytcEXKg?t=1m2s",
+        "id": 1
+      }
+    ],
+    "ts": "1461936235.002313",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "29de34143",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DFETSNS",
+    "text": "actually that editText with clear button is quite good idea :simple_smile:",
+    "ts": "1461936497.002315",
+    "id": "29de34144",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U09T8SFG8>: those wise words dang brought me to tears",
+    "ts": "1461936754.002316",
+    "id": "29de34145",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "&gt; I appreciate you…",
+    "ts": "1461936762.002317",
+    "id": "29de34146",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "damn… so much feels",
+    "ts": "1461936779.002318",
+    "id": "29de34147",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U14T4LUQZ",
+    "subtype": "channel_join",
+    "text": "<@U14T4LUQZ|kkiely> has joined the channel",
+    "ts": "1461937095.002319",
+    "id": "29de34148",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "&gt;actually that editText with clear button is quite good idea \nWe had that for years :smile:",
+    "ts": "1461937107.002320",
+    "id": "29de34149",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "<https://www.reddit.com/r/androiddev/comments/4gyf8v/looking_for_a_library_idea/d2m1c7d>",
+    "attachments": [
+      {
+        "service_name": "reddit",
+        "title": "Looking for a library idea.. • /r/androiddev",
+        "title_link": "https://www.reddit.com/r/androiddev/comments/4gyf8v/looking_for_a_library_idea/d2m1c7d",
+        "text": "I think something to pad a String on the left could be immensely useful. I always struggle implementing this...",
+        "fallback": "reddit: Looking for a library idea.. • /r/androiddev",
+        "thumb_url": "https://www.redditstatic.com/icon.png",
+        "from_url": "https://www.reddit.com/r/androiddev/comments/4gyf8v/looking_for_a_library_idea/d2m1c7d",
+        "thumb_width": 256,
+        "thumb_height": 256,
+        "id": 1
+      }
+    ],
+    "ts": "1461937201.002321",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U08GFT5V5",
+          "U09T8SFG8",
+          "U0K1ALDQE"
+        ],
+        "count": 4
+      },
+      {
+        "name": "joy",
+        "users": [
+          "U08GFT5V5"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "29de34150",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "could. not. resist.",
+    "ts": "1461937207.002323",
+    "id": "29de34151",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "ain’t even sorry",
+    "ts": "1461937210.002324",
+    "id": "29de34152",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U04TK850N>: :taco:",
+    "ts": "1461937232.002325",
+    "id": "29de34153",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "You deserve more upvotes but I have but 1 to give",
+    "ts": "1461937245.002326",
+    "id": "29de34154",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Here take more taco",
+    "ts": "1461937260.002327",
+    "id": "29de34155",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U04TK850N>: :taco:",
+    "ts": "1461937266.002328",
+    "id": "29de34156",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "woo",
+    "ts": "1461937270.002329",
+    "id": "29de34157",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U08GFT5V5>: you loyal, you precious",
+    "ts": "1461938516.002330",
+    "id": "29de34158",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "rx n00b here. Does Rx remove the need for event buses?",
+    "ts": "1461941869.002331",
+    "id": "29de34159",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "These are different things IMO",
+    "ts": "1461941922.002332",
+    "id": "29de34160",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "Ha, we have the same avatar :simple_smile:",
+    "ts": "1461941943.002333",
+    "id": "29de34161",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "haha yh",
+    "ts": "1461941972.002334",
+    "id": "29de34162",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "I’m still trying to find an article on Rx that explains the concepts in a simple way without overusing jargon",
+    "ts": "1461941996.002335",
+    "id": "29de34163",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "One of my friends gave me a great explanation of what Rx actually means.",
+    "ts": "1461942239.002336",
+    "id": "29de34164",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "I’m not sure I can easily reproduce it here.",
+    "ts": "1461942252.002337",
+    "id": "29de34165",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "The idea of Rx is extremely simple. It’s just a function that accepts a subscriber and call its methods.",
+    "edited": {
+      "user": "U0RGXBYUD",
+      "ts": "1461942316.000000"
+    },
+    "ts": "1461942314.002338",
+    "id": "29de34166",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "Everything else are functions that applied either to the argument of the original function or to the result of the function.",
+    "ts": "1461942349.002340",
+    "id": "29de34167",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "So you have an original function `f(subscriber)`. When you can `subscribe` on `Observable` you just call this function with a subscriber you passed to `subscribe`.",
+    "ts": "1461942477.002341",
+    "id": "29de34168",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "When you call some methods like `subscribeOn` or `doOnXxx` these conversion are applied to the argument of `f`. So in mathematical terminology you get something lik `f(subscribeOn(subscriber))`.",
+    "ts": "1461942585.002342",
+    "id": "29de34169",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "No, actually I’m wrong. `subscribeOn` is applied to the function itself. So it’s `subscribeOn(f(subscriber))`.",
+    "ts": "1461942666.002343",
+    "id": "29de34170",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "Finally you get a mathematical expression like `g_n(…g_2(g_1( f (h_1(h_2(…h_n(suscriber)))))))`",
+    "edited": {
+      "user": "U0RGXBYUD",
+      "ts": "1461942762.000000"
+    },
+    "ts": "1461942747.002344",
+    "id": "29de34171",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "Rx is very complicated but it’s just implementation details. The base idea is extremely trivial.",
+    "ts": "1461942802.002347",
+    "id": "29de34172",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "To elaborate a little I think I have to explain how some operators work. For example `subscribeOn` just executes it’s argument function on a given `Scheduler`.",
+    "ts": "1461942961.002348",
+    "id": "29de34173",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "So `subscribeOn(scheduler)` is equal to `scheduler.execute { f(subscriber) }`.",
+    "ts": "1461943003.002349",
+    "id": "29de34174",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "And operators that applied to the argument just override all subscriber methods and delegate them to an inner subscriber changing something.",
+    "ts": "1461943084.002350",
+    "id": "29de34175",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "~true, and describes why putting more than one `subscribeOn` not only doesn’t make sense but also consumes resources for not-needed work",
+    "ts": "1461943118.002351",
+    "id": "29de34176",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "For example `map` has `onNext` overridden and invokes its delegate’s `onNext` with a mapped argument.",
+    "ts": "1461943120.002352",
+    "id": "29de34177",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "Actually it makes sense in some rare cases.",
+    "ts": "1461943154.002353",
+    "id": "29de34178",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "If you want some other outer function to execute on a different thread.",
+    "ts": "1461943184.002354",
+    "id": "29de34179",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "Not sure but hope it became clearer how Rx works :simple_smile:",
+    "ts": "1461943337.002355",
+    "id": "29de34180",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "Slightly, i’m re-reading some parts to grok it",
+    "ts": "1461943514.002356",
+    "id": "29de34181",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "// you guys should really change your profile pics",
+    "ts": "1461943568.002357",
+    "id": "29de34182",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "So, maybe this is an oversimplification but the general idea is: You have something happening that can be observed. For instance, checking location coordinates. \n\nSome other bloke can subscribe to that “observable\" and  do something with the data it receives.",
+    "ts": "1461943666.002358",
+    "id": "29de34183",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "<@U091EBYSU>: we like the confusion :evil:",
+    "ts": "1461943803.002359",
+    "reactions": [
+      {
+        "name": "trollface",
+        "users": [
+          "U091EBYSU"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "29de34184",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "If my above statement is correct, then i see how it makes sense in terms of replacing async tasks. How will this work with a long running process in the background(i believe android calls this a service)?\n\nSo say i want my app to always emit location data regardless of what activity is attached or if the app itself is in focus",
+    "edited": {
+      "user": "U0F2AP42X",
+      "ts": "1461944083.000000"
+    },
+    "ts": "1461944061.002360",
+    "id": "29de34185",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "Rx != background stuff :simple_smile:",
+    "ts": "1461944117.002362",
+    "id": "29de34186",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "oops",
+    "ts": "1461944131.002363",
+    "id": "29de34187",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "Someone told me Rx can solve that example and that’s probably where i got super confused",
+    "ts": "1461944166.002364",
+    "id": "29de34188",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "like replace a Service with some Rx stuff",
+    "ts": "1461944185.002365",
+    "id": "29de34189",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "No, you definitely can not",
+    "ts": "1461944195.002366",
+    "id": "29de34190",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "Service is actually a mechanism for increasing app priority. It reduces chance the app will be killed by Android.",
+    "ts": "1461944233.002367",
+    "id": "29de34191",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "`Service` even works on the activity thread so it’s not background.",
+    "ts": "1461944273.002368",
+    "id": "29de34192",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "And there’re two different meanings of background. One is when something is executed not on the UI thread. And another one is when the application is not in foreground, that is it doesn’t have a visible activity.",
+    "ts": "1461944338.002369",
+    "id": "29de34193",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "The `Service` is for the second case.",
+    "ts": "1461944354.002370",
+    "id": "29de34194",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "Rx can but not necessarily does solve the first problem.",
+    "ts": "1461944393.002371",
+    "id": "29de34195",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "You can use Rx to do something just on the UI thread.",
+    "ts": "1461944413.002372",
+    "id": "29de34196",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "Rx describes data flow, i.e. transformations, filtering, threading, side-effects, etc.",
+    "edited": {
+      "user": "U0RGXBYUD",
+      "ts": "1461944519.000000"
+    },
+    "ts": "1461944439.002373",
+    "id": "29de34197",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "_Rx describes data flow, i.e. transformations, filtering, threading, side-effects, etc._ &lt;= this makes sense!",
+    "ts": "1461944556.002375",
+    "id": "29de34198",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "rx solves tons of problems, `subscribeOn` is just one utility operator",
+    "ts": "1461944663.002376",
+    "id": "29de34199",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "but yeah services are specialized",
+    "ts": "1461944671.002377",
+    "id": "29de34200",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "if you're just using a service to get off of the UI thread, you could certainly replace it with Rx",
+    "ts": "1461944707.002378",
+    "id": "29de34201",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "thanks guys, i fell more enlightened now :simple_smile:",
+    "ts": "1461945506.002379",
+    "id": "29de34202",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "<@U0F2AP42X>: You can try and read this blog: <http://akarnokd.blogspot.ru/>",
+    "ts": "1461945571.002380",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U0F2AP42X"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "29de34203",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "That’s from the developer of RxJava.",
+    "ts": "1461945582.002381",
+    "id": "29de34204",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U0RGXBYUD>: after 10 minutes: \"Damn this is long... and I'm not even a quarter of the way there...\"",
+    "ts": "1461947166.002382",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0F2AP42X"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "29de34205",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I'll take his word for it :simple_smile:",
+    "ts": "1461947179.002383",
+    "id": "29de34206",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U14U9H683",
+    "subtype": "channel_join",
+    "text": "<@U14U9H683|ergin> has joined the channel",
+    "ts": "1461952787.002384",
+    "id": "29de34207",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XNRE25S",
+    "text": "Does Glide support image overlatys? i.e. having a play button over the thumbnail glide loads",
+    "ts": "1461955639.002385",
+    "id": "29de34208",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "You can either add an overlay as a view or specify a transcoder when loading a thumbnail via Glide in order to create a complex drawable.",
+    "ts": "1461956488.002386",
+    "id": "29de34209",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U14V05UTV",
+    "subtype": "channel_join",
+    "text": "<@U14V05UTV|umanx> has joined the channel",
+    "ts": "1461957112.002387",
+    "id": "29de34210",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0R0SREBU",
+    "text": "does anyone know why my  \"test with coverage\" isn't there in AS as an option for Espresso tests? I have testCoverageEnabled=true and \"test with coverage\" is showing up for non-Espresso tests",
+    "ts": "1461958979.002388",
+    "id": "29de34211",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XNRE25S",
+    "text": "Has anyone experience an issue with rounded corners on cardviews? the area cutout of the corner has a non-transparent background",
+    "ts": "1461961620.002389",
+    "id": "29de34212",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U0R0SREBU>: I’ve never gotten that UI option to work with our Espresso tests",
+    "ts": "1461963472.002390",
+    "id": "29de34213",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U14Q91KLJ",
+    "text": "Anyone have experience using the Sinch instant messaging framework?",
+    "ts": "1461963965.002391",
+    "id": "29de34214",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U14Q91KLJ",
+    "text": "Or PubNub?",
+    "ts": "1461964210.002392",
+    "id": "29de34215",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KTPB91V",
+    "text": "<@U14Q91KLJ>: we use pubnub",
+    "ts": "1461969653.002393",
+    "id": "29de34216",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0F2AP42X",
+    "text": "started using pubnub some 4 months ago and it’s great, so far <@U14Q91KLJ>",
+    "edited": {
+      "user": "U0F2AP42X",
+      "ts": "1461976898.000000"
+    },
+    "ts": "1461976879.002394",
+    "id": "29de34217",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U14Q91KLJ",
+    "text": "Thanks for the responses, <@U0KTPB91V> <@U0F2AP42X>! I’ve been using Sinch for a toy instant messaging app, but getting frustrated with the framework.  I’m going to give PubNub a shot. <@U0KTPB91V>, any thoughts on how it’s working for you?",
+    "ts": "1461994898.002396",
+    "id": "29de34218",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

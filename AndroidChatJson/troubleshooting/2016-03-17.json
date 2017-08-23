@@ -1,0 +1,345 @@
+[
+  {
+    "user": "U0NQ6CY8G",
+    "text": "Hello guys, I need help with my chart. I am using MpAndroidChart library. After plotting, the graph shows nothing even when there is data present.\n\n```\nLineChart lineChart = (LineChart) view.findViewById(R.id.linechart);\n    records = myModel.fetchRecords();\n\n    ArrayList&lt;Entry&gt; y = new ArrayList&lt;&gt;();\n    ArrayList&lt;String&gt; x = new ArrayList&lt;&gt;();\n    for (myModel  modelData: records) {\n      y.add(new Entry((float) myModel.value, (int) (long) myModel.getId()));\n    }\n    LineDataSet dataSet = new LineDataSet(y, “The chart”);\n   \n    for (myModel modelData: record) {\n      x.add(myModel.day);\n    }\n\n    LineData data = new LineData(x, y);\n    lineChart.setData(data);\n    lineChart.invalidate()\n    lineChart.setDescription(\"Chart for the number of pushups done so far”);\n ```\nIt plots a graph but the graph is empty even when I already get the data as above.",
+    "edited": {
+      "user": "U0NQ6CY8G",
+      "ts": "1458206672.000000"
+    },
+    "ts": "1458204980.000050",
+    "id": "17tr4171",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "are you calling invalidate() method after that?",
+    "ts": "1458205479.000051",
+    "id": "17tr4172",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0NQ6CY8G",
+    "text": "After what please?",
+    "ts": "1458206098.000052",
+    "id": "17tr4173",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0NQ6CY8G",
+    "text": "<@U0830HE7P>:  After setting the description?",
+    "ts": "1458206126.000053",
+    "id": "17tr4174",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "AFAIK after you set new data, you must call invalidate() to make the chart actually draw it",
+    "ts": "1458206183.000054",
+    "id": "17tr4175",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "<https://github.com/PhilJay/MPAndroidChart/wiki/Getting-Started>",
+    "edited": {
+      "user": "U0830HE7P",
+      "ts": "1458206213.000000"
+    },
+    "ts": "1458206209.000055",
+    "id": "17tr4176",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "&gt; invalidate(): Calling this method on the chart will refresh (redraw) it. This is needed in order to make changes performed on the chart take effect.",
+    "ts": "1458206220.000058",
+    "id": "17tr4177",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0NQ6CY8G",
+    "text": "<@U0830HE7P>: I just tried it and it didn’t work. I’m actually drawing it for the first time, using data from my database.  I have modified my code above by how I used the invalidate method.",
+    "ts": "1458206489.000059",
+    "id": "17tr4178",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "as I understood from wiki, invalidate() is called on the chart itself. So call it in your code like that - lineChart.invalidate()",
+    "ts": "1458206580.000062",
+    "id": "17tr4179",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "not data.invalidate()",
+    "ts": "1458206593.000063",
+    "id": "17tr4180",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0NQ6CY8G",
+    "text": "<@U0830HE7P>: That was what I actually did, but wrote it wrongly above.",
+    "ts": "1458206727.000065",
+    "id": "17tr4181",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0NQ6CY8G",
+    "text": "Hi <@U0830HE7P>, I just tried it on a device with a higher API level, and it worked properly, but my testing device is API 16. I really want it to work.",
+    "ts": "1458208272.000066",
+    "id": "17tr4182",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "Min API for this lib is 8, so it should work properly on API 16. I never tried that lib, so there's not so much I can help with. Maybe someone else here could help you",
+    "ts": "1458208527.000067",
+    "id": "17tr4183",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0NQ6CY8G",
+    "text": "Thanks <@U0830HE7P>. It was fixed when I uninstalled and reinstalled the application.",
+    "ts": "1458226114.000068",
+    "id": "17tr4184",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0T8YV94N",
+    "text": "<@U0NQ6CY8G>: are you using android studio 2.0?",
+    "ts": "1458226280.000069",
+    "id": "17tr4185",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0NQ6CY8G",
+    "text": "<@U0T8YV94N>: Nope. I’m using android studio 1.5.1",
+    "ts": "1458226347.000070",
+    "id": "17tr4186",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0THDGL31",
+    "subtype": "channel_join",
+    "text": "<@U0THDGL31|danb> has joined the channel",
+    "ts": "1458252613.000073",
+    "id": "17tr4187",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0THDGL31",
+    "text": "Wondering if anyone has AS2.1p3 working with Instant Run on a project using retrolambda? I also asked on G+ <https://plus.google.com/+DanBachelderZumper/posts/9VNY5FVTDRE>",
+    "attachments": [
+      {
+        "title": "I updated to AS2.1p3 and gradle 2.1a3  and I'm getting this exception in…",
+        "title_link": "https://plus.google.com/+DanBachelderZumper/posts/9VNY5FVTDRE",
+        "text": "I updated to AS2.1p3 and gradle 2.1a3 and I'm getting this exception in transformClassesWithDexForDebug phase: AGPBI: {\"kind\":\"error\",\"text\":\"Error… - Dan Bachelder - Google+",
+        "fallback": "I updated to AS2.1p3 and gradle 2.1a3  and I'm getting this exception in…",
+        "from_url": "https://plus.google.com/+DanBachelderZumper/posts/9VNY5FVTDRE",
+        "id": 1
+      }
+    ],
+    "ts": "1458252856.000074",
+    "id": "17tr4188",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

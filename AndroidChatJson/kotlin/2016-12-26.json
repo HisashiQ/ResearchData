@@ -1,0 +1,627 @@
+[
+  {
+    "user": "U04TK850N",
+    "text": "Can someone tell me any use case for the `Nothing` type? :thinking_face:",
+    "ts": "1482788543.000385",
+    "id": "26ko3436",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "`Optional` can be a sealed class that has two sublcasses: `Some` and `None`. Users of `Optional` expect that they can assign `Optional.None` to a variable of `Optional&lt;T&gt;` type. But what type should `Optional.None` have in this case?",
+    "ts": "1482789200.000386",
+    "id": "26ko3437",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "If it’s `Optional&lt;T&gt;` then `Optional.None` cannot be an `object`.",
+    "ts": "1482789255.000387",
+    "id": "26ko3438",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "So it must have such type that it’s convertible to `Optional` with any type parameter. That’s why you have `Nothing`. You can convert `Nothing` to any type and so `Optional&lt;Nothing&gt;` is convertible to `Optional&lt;out T&gt;`.",
+    "ts": "1482789374.000388",
+    "id": "26ko3439",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "Another use case is using expressions that return `Nothing`, such as `return`, `throw`, `break` and `continue`.",
+    "ts": "1482789476.000389",
+    "id": "26ko3440",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "You can write something like this:\n```\nval value = argument.doSomething() ?: return false\n```",
+    "ts": "1482789524.000390",
+    "id": "26ko3441",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "You can do that because `return false` returns `Nothing`, which is convertible to any type so after type inference `value` will have a type of `argument.doSomething()`.",
+    "ts": "1482789601.000391",
+    "id": "26ko3442",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Woah I need to step up my game lol",
+    "ts": "1482789744.000392",
+    "id": "26ko3443",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "What is the point of `return false` there tho?",
+    "ts": "1482789765.000393",
+    "id": "26ko3444",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "like what does it do? What will `value` be?",
+    "ts": "1482789777.000394",
+    "id": "26ko3445",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "oh wait no, it will return from the function that has that expression?",
+    "ts": "1482789797.000395",
+    "id": "26ko3446",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "Let’s assume you have a method that accepts a nullable `String` but you want to handle only non-null ones:\n```\nfun processString(s: String?): String {\n  val trimmed = s?.trim() ?: return “”\n  return doSomethingWith(trimmed)\n}\n```",
+    "ts": "1482790178.000396",
+    "id": "26ko3447",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "In this case `trimmed` will be assigned with a value only if `s` is not `null`.",
+    "ts": "1482790207.000397",
+    "id": "26ko3448",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "That’s the idea of using `Nothing`. This type doesn’t have an instance.",
+    "ts": "1482790232.000398",
+    "id": "26ko3449",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "So if some expression returns `Nothing` that means it doesn’t actually return a value.",
+    "ts": "1482790254.000399",
+    "id": "26ko3450",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "neat, I get it. but isn't that just a shorthand to silence the compiler?",
+    "ts": "1482790320.000400",
+    "id": "26ko3451",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "I don’t think so. It’s a very important type in the type system.",
+    "ts": "1482790468.000401",
+    "id": "26ko3452",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "hm okay",
+    "ts": "1482790495.000402",
+    "id": "26ko3453",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Maybe I need to play around with it",
+    "ts": "1482790503.000403",
+    "id": "26ko3454",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "<@U0RGXBYUD> :taco: :nutella:",
+    "ts": "1482790512.000404",
+    "id": "26ko3455",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "thanks!",
+    "ts": "1482790518.000405",
+    "id": "26ko3456",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "For instance, in Java you cannot use `return` everywhere in you code because this expression doesn't have a type.",
+    "ts": "1482790661.000406",
+    "id": "26ko3457",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "<@U04TK850N> You’re welcome :slightly_smiling_face:",
+    "ts": "1482790777.000407",
+    "id": "26ko3458",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "Take a look at this code:\n<https://github.com/MichaelRocks/optional/blob/master/src/main/kotlin/io/michaelrocks/optional/Optional.kt#L49>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "MichaelRocks/optional",
+        "title_link": "https://github.com/MichaelRocks/optional/blob/master/src/main/kotlin/io/michaelrocks/optional/Optional.kt#L49",
+        "text": "optional - Optional for Kotlin",
+        "fallback": "GitHub: MichaelRocks/optional",
+        "thumb_url": "https://avatars1.githubusercontent.com/u/968161?v=3&s=400",
+        "from_url": "https://github.com/MichaelRocks/optional/blob/master/src/main/kotlin/io/michaelrocks/optional/Optional.kt#L49",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1482790829.000408",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "26ko3459",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0RGXBYUD",
+    "text": "That’s what I tried to explain and it’s a real usage of `Nothing`.",
+    "ts": "1482790869.000410",
+    "id": "26ko3460",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Hm okay, I'll try that when I'm not half asleep :smile:",
+    "ts": "1482790913.000411",
+    "id": "26ko3461",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U0RGXBYUD> interesting",
+    "ts": "1482796286.000412",
+    "id": "26ko3462",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "But I don't get your first explanation",
+    "ts": "1482796293.000413",
+    "id": "26ko3463",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "The first block of text you answered to <@U04TK850N>, can you give an example?",
+    "ts": "1482796316.000414",
+    "id": "26ko3464",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Check the github link, that's the example he was talking about",
+    "ts": "1482796898.000415",
+    "id": "26ko3465",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I don't get that one fully either yet, but at least understand (kinda) the other. It's not very well documented how expressions like this work internally",
+    "ts": "1482796952.000416",
+    "id": "26ko3466",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U04TK850N> I get the repo",
+    "ts": "1482798652.000417",
+    "id": "26ko3467",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I don't get what he's exactly saying in his first response",
+    "ts": "1482798670.000418",
+    "id": "26ko3468",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

@@ -1,0 +1,4108 @@
+[
+  {
+    "user": "U1T13H6S3",
+    "text": "hey I'm thinking to implement library project just for data access. I will implement all database and REST  in the library project, and depend it from my project. is it good idea?? please comment",
+    "edited": {
+      "user": "U1T13H6S3",
+      "ts": "1475997582.000000"
+    },
+    "ts": "1475997455.002588",
+    "id": "09de47292",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "You will be reinventing the wheel",
+    "ts": "1476001668.002592",
+    "id": "09de47293",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "there are many libs that do exactly what you want",
+    "ts": "1476001679.002593",
+    "id": "09de47294",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2E4S6W93",
+    "text": "Hey, I'm trying to save contact information on a server for later modification, which column should I use as identification? _ID, RAW_ID, LOOKUPKEY? Currently I use a contentProviderOperation.Builder with a where \"CONTACT_ID\" WHERE clause but I read that the _Id can and will change upon synchronization. Any ideas?",
+    "ts": "1476007783.002594",
+    "id": "09de47295",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "<@U2M559FRB|rozularen> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476008814.002595",
+    "id": "09de47296",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "hi",
+    "ts": "1476008849.002596",
+    "id": "09de47297",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "can someone help me? Retrofit throwing IlegalStateException: Expected BEGIN_OBJECT but was BEGIN_ARRAY",
+    "ts": "1476008893.002597",
+    "id": "09de47298",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2E4S6W93",
+    "text": "The response from the server is an object, but you initialized it as an array",
+    "ts": "1476008966.002598",
+    "id": "09de47299",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "my web service's response is:",
+    "ts": "1476008986.002599",
+    "id": "09de47300",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "[[1, \"halterofilia\", \"Profesor: XXXX YYYY. Clase de Halterofilia.\"], [2, \"crossfit\", \"Profesor:ZZZZ TTTT. Clase de CrossFit\"], [3, \"halterofilia\", \"Profesor:XXXX YYYY. Clase de halterofilia\"]]",
+    "ts": "1476008999.002600",
+    "id": "09de47301",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "because its a SQL query result jsonified",
+    "ts": "1476009017.002601",
+    "id": "09de47302",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "from flask import Flask, jsonify\nimport json\nimport mysql.connector\nimport collections\n\napp = Flask(__name__)\n\ncnx = mysql.connector.connect(user=\"root\", password=\"\", host=\"localhost\", database=\"gym\")\n\n\n@app.route('/gym/api/v1.0/clases', methods=['GET'])\ndef getClases():\n    sql = \"SELECT id, nombre, descripcion FROM clases\"\n\n    cursor = cnx.cursor()\n    cursor.execute(sql)\n    entradas = cursor.fetchall()\n\n    # Convertir la en un array de entradas\n\n    objects_list = []\n    for row in entradas:\n        objects_list.append(row)\n    j = json.dumps(objects_list)\n    return j\n\n@app.route('/')\ndef index():\n    return 'Hello, World!'\n\n\nif __name__ == '__main__':\n    app.run(debug=True)",
+    "ts": "1476009087.002602",
+    "id": "09de47303",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2E4S6W93",
+    "text": "I think you need curvy brackets somewhere",
+    "ts": "1476009474.002603",
+    "id": "09de47304",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "yea me too",
+    "ts": "1476009479.002604",
+    "id": "09de47305",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "but i dont know how to conver my 3 entries into 3 objects",
+    "ts": "1476009490.002605",
+    "id": "09de47306",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "i've tried json library and flasks' jsonify",
+    "ts": "1476009524.002606",
+    "id": "09de47307",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "both give me the same exc",
+    "ts": "1476009534.002607",
+    "id": "09de47308",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "<@U2E4S6W93>, you can use _ID, but it can't be a primary key in the whole database on back-end.",
+    "ts": "1476009653.002608",
+    "id": "09de47309",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "<@U2M559FRB> you must set up your serializer.",
+    "ts": "1476009681.002609",
+    "id": "09de47310",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "<@U2M0WUZ7A> mmm... its my first api and also my first retrofit app can you give some guidelines",
+    "ts": "1476009716.002610",
+    "id": "09de47311",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "?",
+    "ts": "1476009717.002611",
+    "id": "09de47312",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "I can help you only with Android, Spring, Java and Kotlin.",
+    "ts": "1476009771.002612",
+    "id": "09de47313",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "its android",
+    "ts": "1476009777.002613",
+    "id": "09de47314",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "Im making a request from a fragment inside an activity",
+    "ts": "1476009798.002614",
+    "id": "09de47315",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "The problem is on the back-end.",
+    "ts": "1476009802.002615",
+    "id": "09de47316",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2E4S6W93",
+    "text": "<@U2M0WUZ7A> if I save the _ID, won't it give me to wrong contact if the user decides to synchronize his contacts?",
+    "ts": "1476009810.002616",
+    "id": "09de47317",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "<@U2M559FRB> I think your Android app expects answer to start with `[{`",
+    "ts": "1476009866.002617",
+    "id": "09de47318",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "yeah Its what it should expect",
+    "ts": "1476009878.002618",
+    "id": "09de47319",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "but i dont know why my web service still giving array of arrays",
+    "ts": "1476009893.002619",
+    "id": "09de47320",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "<@U2E4S6W93> by all the rules, it shouldn't.",
+    "ts": "1476009945.002620",
+    "id": "09de47321",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2E4S6W93",
+    "text": "Ok, thanks a lot!",
+    "ts": "1476009976.002621",
+    "id": "09de47322",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "ok i changed it so now the api returns:",
+    "ts": "1476010037.002622",
+    "id": "09de47323",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "{\n  \"entradas\": [\n    [\n      1, \n      \"halterofilia\", \n      \"Profesor: XXXX YYYY. Clase de Halterofilia.\"\n    ], \n    [\n      2, \n      \"crossfit\", \n      \"Profesor:ZZZZ TTTT. Clase de CrossFit\"\n    ], \n    [\n      3, \n      \"halterofilia\", \n      \"Profesor:XXXX YYYY. Clase de halterofilia\"\n    ]\n  ]\n}",
+    "ts": "1476010044.002623",
+    "id": "09de47324",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "Logcat:",
+    "ts": "1476010057.002624",
+    "id": "09de47325",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "D/ApiService: Failure: Expected BEGIN_ARRAY but was BEGIN_OBJECT at line 1 column 2 path $",
+    "ts": "1476010057.002625",
+    "id": "09de47326",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "this isn’t standard JSON",
+    "ts": "1476010107.002626",
+    "id": "09de47327",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2E4S6W93",
+    "text": "As far as I know, it has to start with \"\"[ (for the array) and \"{\" are the objects",
+    "ts": "1476010113.002627",
+    "id": "09de47328",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "also [] signifies an array",
+    "ts": "1476010116.002628",
+    "id": "09de47329",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "Any example on how to serialize SQL Result to JSON?",
+    "ts": "1476010196.002629",
+    "id": "09de47330",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U2M0WUZ7A|miha-x64> uploaded a file: <https://androidchat.slack.com/files/miha-x64/F2M5DRYGZ/java_object_that_suits_response.java|Java object that suits response>",
+    "file": {
+      "id": "F2M5DRYGZ",
+      "created": 1476010206,
+      "timestamp": 1476010206,
+      "name": "Java_object_that_suits_response.java",
+      "title": "Java object that suits response",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U2M0WUZ7A",
+      "editable": true,
+      "size": 57,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F2M5DRYGZ/java_object_that_suits_response.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F2M5DRYGZ/download/java_object_that_suits_response.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/miha-x64/F2M5DRYGZ/java_object_that_suits_response.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F2M5DRYGZ-02226e843b",
+      "edit_link": "https://androidchat.slack.com/files/miha-x64/F2M5DRYGZ/java_object_that_suits_response.java/edit",
+      "preview": "class ServiceResponse {\r\n\tList<List<Object>> entradas;\r\n}",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-keyword\">class</span> <span class=\"cm-def\">ServiceResponse</span> {</pre></div>\n<div><pre>\t<span class=\"cm-variable\">List</span><span class=\"cm-operator\">&lt;</span><span class=\"cm-variable\">List</span><span class=\"cm-operator\">&lt;</span><span class=\"cm-variable-3\">Object</span><span class=\"cm-operator\">&gt;&gt;</span> <span class=\"cm-variable\">entradas</span>;</pre></div>\n<div><pre>}</pre></div>\n</div>\n</div>\n",
+      "lines": 3,
+      "lines_more": 0,
+      "preview_is_truncated": false,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U2M0WUZ7A",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U2M0WUZ7A|miha-x64>",
+    "bot_id": null,
+    "ts": "1476010207.002630",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "09de47331",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1T13H6S3",
+    "text": "I’m extremely fed up with OrmLite ForeignCollection field, can anybody help me regarding this :disappointed:",
+    "ts": "1476010269.002631",
+    "id": "09de47332",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "<@U2M559FRB> we don't exactly know which technologies dou you use at the back-end. Provide more information about programming language, framework, and JSON seralizer.\nAlso, try to learn what is JSON array and JSON object and how they can be represented in Java.",
+    "ts": "1476010367.002632",
+    "id": "09de47333",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "I know what a json file is and how it has to be structured to be valid",
+    "ts": "1476010394.002633",
+    "id": "09de47334",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "im using python and flask",
+    "ts": "1476010399.002634",
+    "id": "09de47335",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "just that, it's a single web service which returns some information from a database",
+    "ts": "1476010435.002635",
+    "id": "09de47336",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "im connecting to the api via retrofit 2",
+    "ts": "1476010462.002636",
+    "id": "09de47337",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "And you use Gson. We know. But the problem is in JSON format.",
+    "ts": "1476010495.002637",
+    "id": "09de47338",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "done!!! solved",
+    "ts": "1476010508.002638",
+    "id": "09de47339",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "it was the backend",
+    "ts": "1476010511.002639",
+    "id": "09de47340",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "you were correct it was the format",
+    "ts": "1476010533.002640",
+    "id": "09de47341",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "i dont know why I just copied some code for the serializing",
+    "ts": "1476010548.002641",
+    "id": "09de47342",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "and i was looking the problem in the app itsel",
+    "ts": "1476010555.002642",
+    "id": "09de47343",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "new function that returns json:",
+    "ts": "1476010584.002643",
+    "id": "09de47344",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "@app.route('/gym/api/v1.0/clases', methods=['GET'])\ndef getClases():\n    sql = \"SELECT id, nombre, descripcion FROM clases\"\n\n    cursor = cnx.cursor()\n    cursor.execute(sql)\n\n\n    return jsonify(entradas = cursor.fetchall())\n    # Convertir la en un array de entradas",
+    "ts": "1476010589.002644",
+    "id": "09de47345",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "thanks <@U2M0WUZ7A>",
+    "ts": "1476010614.002645",
+    "id": "09de47346",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M5RLXRP",
+    "text": "<@U2M5RLXRP|1use> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476014949.002646",
+    "id": "09de47347",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "in case you've heard about Java 9 and Jigsaw but have no idea what it is, this talk does a great job of explaining it <https://www.youtube.com/watch?v=PY0jZyBmOr4>",
+    "attachments": [
+      {
+        "service_name": "YouTube",
+        "service_url": "https://www.youtube.com/",
+        "title": "Devoxx Poland 2016 - Simon Ritter - Project Jigsaw in JDK 9: Modularity Comes To Java",
+        "title_link": "https://www.youtube.com/watch?v=PY0jZyBmOr4",
+        "author_name": "Devoxx Poland",
+        "author_link": "https://www.youtube.com/channel/UCAu3kLPVR1KScr5BReBJTvg",
+        "thumb_url": "https://i.ytimg.com/vi/PY0jZyBmOr4/hqdefault.jpg",
+        "thumb_width": 480,
+        "thumb_height": 360,
+        "fallback": "YouTube Video: Devoxx Poland 2016 - Simon Ritter - Project Jigsaw in JDK 9: Modularity Comes To Java",
+        "video_html": "<iframe width=\"400\" height=\"225\" src=\"https://www.youtube.com/embed/PY0jZyBmOr4?feature=oembed&autoplay=1&iv_load_policy=3\" frameborder=\"0\" allowfullscreen></iframe>",
+        "video_html_width": 400,
+        "video_html_height": 225,
+        "from_url": "https://www.youtube.com/watch?v=PY0jZyBmOr4",
+        "service_icon": "https://a.slack-edge.com/2089/img/unfurl_icons/youtube.png",
+        "id": 1
+      }
+    ],
+    "ts": "1476015104.002647",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "09de47348",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Jigsaw starts at 18:15 :stuck_out_tongue:",
+    "ts": "1476016331.002649",
+    "id": "09de47349",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I would suggest to watch it from the beginning, there is some interesting history and API changes there",
+    "edited": {
+      "user": "U09T8SFG8",
+      "ts": "1476016426.000000"
+    },
+    "ts": "1476016420.002650",
+    "id": "09de47350",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I have",
+    "ts": "1476016426.002652",
+    "id": "09de47351",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I'm just saying it for the other people",
+    "ts": "1476016431.002653",
+    "id": "09de47352",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": ":wink:",
+    "ts": "1476016435.002654",
+    "id": "09de47353",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Those dependencies look pretty cool",
+    "ts": "1476016728.002655",
+    "id": "09de47354",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Unfortunate that we'll never be able to use them on Android",
+    "ts": "1476016742.002656",
+    "id": "09de47355",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "We will, in about 2023",
+    "ts": "1476016771.002657",
+    "id": "09de47356",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "So Android U",
+    "ts": "1476016832.002658",
+    "id": "09de47357",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Just imagine using Golang on Android",
+    "ts": "1476017018.002659",
+    "id": "09de47358",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "you can already",
+    "ts": "1476017042.002660",
+    "id": "09de47359",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I mean with the Android framework",
+    "ts": "1476017058.002661",
+    "id": "09de47360",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "I know :smile:",
+    "ts": "1476017088.002662",
+    "id": "09de47361",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Bummer that they didn't go with public being the default accessibility",
+    "ts": "1476017100.002663",
+    "id": "09de47362",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Now that you can use modules",
+    "ts": "1476017104.002664",
+    "id": "09de47363",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "Don't give them ideas for more modifications. The release date has already been pushed 3 times lol",
+    "ts": "1476017158.002665",
+    "id": "09de47364",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U053LEHJN> another annoying thing about web apps",
+    "ts": "1476017334.002666",
+    "id": "09de47365",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "At least in Slack and some others",
+    "ts": "1476017345.002667",
+    "id": "09de47366",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Right click and you see stutter in videos, gifs or the video pauses completely",
+    "ts": "1476017361.002668",
+    "id": "09de47367",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "And they pause when you move channels in Slack :disappointed:",
+    "ts": "1476017382.002669",
+    "id": "09de47368",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "They don't pause, they stop completely and you have no idea where you were",
+    "ts": "1476017402.002670",
+    "id": "09de47369",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M5PPVRT",
+    "text": "<@U2M5PPVRT|lukas> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476017519.002671",
+    "id": "09de47370",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U09T8SFG8> that linking is handy for docker too",
+    "ts": "1476017673.002672",
+    "id": "09de47371",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I haven't used docker but yeah it seems handy for it",
+    "ts": "1476017696.002673",
+    "id": "09de47372",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Well those images will be significantly smaller in any case",
+    "ts": "1476018091.002674",
+    "id": "09de47373",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I really like the 3 different \"public\" modifiers",
+    "ts": "1476018236.002675",
+    "id": "09de47374",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "it makes a lot of sense especially for library development",
+    "ts": "1476018246.002676",
+    "id": "09de47375",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I don't see the use for having public and package modifiers now",
+    "ts": "1476018269.002677",
+    "id": "09de47376",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "I am afraid though that it will make some developers lazier because at least part of those problems can be solved with good package structure",
+    "edited": {
+      "user": "U09T8SFG8",
+      "ts": "1476018282.000000"
+    },
+    "ts": "1476018272.002678",
+    "id": "09de47377",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "you will still need package modifiers I believe",
+    "ts": "1476018315.002680",
+    "id": "09de47378",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "because if you don't use them then the alternative will be to have a lot of modules",
+    "ts": "1476018328.002681",
+    "id": "09de47379",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Oh ya right",
+    "ts": "1476018349.002682",
+    "id": "09de47380",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M6DQ2AH",
+    "text": "<@U2M6DQ2AH|datwheat> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476031277.002683",
+    "id": "09de47381",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "hey guys",
+    "ts": "1476040684.002684",
+    "id": "09de47382",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "im getting a NullPointerException when trying to pass a List to my adapter and then setting the adapter to my list view",
+    "ts": "1476040725.002685",
+    "id": "09de47383",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U2M559FRB> it means that you are passing `null` somewhere",
+    "ts": "1476040833.002686",
+    "id": "09de47384",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "i get it, im getting the List from a JSON response from a web service",
+    "ts": "1476040876.002687",
+    "id": "09de47385",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "the request returns 200 OK",
+    "ts": "1476040897.002688",
+    "id": "09de47386",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "It doesn’t change the fact that you are passing `null` somewhere",
+    "ts": "1476040917.002689",
+    "id": "09de47387",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "To fix your problem, don’t pass `null`",
+    "ts": "1476040939.002690",
+    "id": "09de47388",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U2M559FRB> if you don’t want ridiculous vague answers like that, don’t ask vague questions",
+    "ts": "1476041057.002691",
+    "id": "09de47389",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "If you actually want help, post code",
+    "edited": {
+      "user": "U08GFT5V5",
+      "ts": "1476041120.000000"
+    },
+    "ts": "1476041074.002692",
+    "id": "09de47390",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Without code, no one can help you",
+    "ts": "1476041084.002693",
+    "id": "09de47391",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "i was debugging im going to copy it now",
+    "ts": "1476041094.002694",
+    "id": "09de47392",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U2M559FRB|rozularen> uploaded a file: <https://androidchat.slack.com/files/rozularen/F2M75H695/-.txt|Untitled>",
+    "file": {
+      "id": "F2M75H695",
+      "created": 1476041138,
+      "timestamp": 1476041138,
+      "name": "-.txt",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "text",
+      "pretty_type": "Plain Text",
+      "user": "U2M559FRB",
+      "editable": true,
+      "size": 4167,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F2M75H695/-.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F2M75H695/download/-.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/rozularen/F2M75H695/-.txt",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F2M75H695-f350669d1c",
+      "edit_link": "https://androidchat.slack.com/files/rozularen/F2M75H695/-.txt/edit",
+      "preview": "package com.compania.gymapp.fragments;\r\n\r\nimport android.app.ProgressDialog;\r\nimport android.os.Bundle;\r\nimport android.support.v4.app.Fragment;\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>package com.compania.gymapp.fragments;</pre></div>\n<div><pre></pre></div>\n<div><pre>import android.app.ProgressDialog;</pre></div>\n<div><pre>import android.os.Bundle;</pre></div>\n<div><pre>import android.support.v4.app.Fragment;</pre></div>\n<div><pre></pre></div>\n</div>\n</div>\n",
+      "lines": 140,
+      "lines_more": 135,
+      "preview_is_truncated": true,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U2M559FRB",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U2M559FRB|rozularen>",
+    "bot_id": null,
+    "ts": "1476041138.002696",
+    "id": "09de47393",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "Line 98",
+    "ts": "1476041160.002697",
+    "id": "09de47394",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "What’s the stack trace?",
+    "ts": "1476041187.002698",
+    "id": "09de47395",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U2M559FRB|rozularen> uploaded a file: <https://androidchat.slack.com/files/rozularen/F2M76BV8R/-.txt|Untitled>",
+    "file": {
+      "id": "F2M76BV8R",
+      "created": 1476041229,
+      "timestamp": 1476041229,
+      "name": "-.txt",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "text",
+      "pretty_type": "Plain Text",
+      "user": "U2M559FRB",
+      "editable": true,
+      "size": 2656,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F2M76BV8R/-.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F2M76BV8R/download/-.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/rozularen/F2M76BV8R/-.txt",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F2M76BV8R-572f266b88",
+      "edit_link": "https://androidchat.slack.com/files/rozularen/F2M76BV8R/-.txt/edit",
+      "preview": "I/OpenGLRenderer: Initialized EGL, version 1.4\r\nD/OpenGLRenderer: Swap behavior 1\r\nD/NetworkSecurityConfig: No Network Security Config specified, using platform default\r\nD/OkHttp: --> GET http://10.0.2.2:5000/gym/api/v1.0/clases http/1.1\r\nD/OkHttp: --> END GET\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>I/OpenGLRenderer: Initialized EGL, version 1.4</pre></div>\n<div><pre>D/OpenGLRenderer: Swap behavior 1</pre></div>\n<div><pre>D/NetworkSecurityConfig: No Network Security Config specified, using platform default</pre></div>\n<div><pre>D/OkHttp: --&gt; GET http://10.0.2.2:5000/gym/api/v1.0/clases http/1.1</pre></div>\n<div><pre>D/OkHttp: --&gt; END GET</pre></div>\n<div><pre></pre></div>\n</div>\n</div>\n",
+      "lines": 52,
+      "lines_more": 47,
+      "preview_is_truncated": true,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U2M559FRB",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U2M559FRB|rozularen>",
+    "bot_id": null,
+    "ts": "1476041230.002699",
+    "id": "09de47396",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "initialize `clases` in onCreate",
+    "edited": {
+      "user": "U08GFT5V5",
+      "ts": "1476041461.000000"
+    },
+    "ts": "1476041345.002700",
+    "id": "09de47397",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "and populate it using `addAll` when you get the response. Add a null check to make sure body is actually there",
+    "edited": {
+      "user": "U08GFT5V5",
+      "ts": "1476041485.000000"
+    },
+    "ts": "1476041357.002701",
+    "id": "09de47398",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "Also, I'd like to know how to get rid of that \"entradas\" label before the array in the JSON",
+    "ts": "1476041372.002702",
+    "id": "09de47399",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "or it isn't important when parsing the JSON",
+    "ts": "1476041403.002703",
+    "id": "09de47400",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "?",
+    "ts": "1476041404.002704",
+    "id": "09de47401",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Depends on what you want to do with it",
+    "ts": "1476041502.002707",
+    "id": "09de47402",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "i dont know if i will use it but i think it can be the actual problem",
+    "ts": "1476041533.002708",
+    "id": "09de47403",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "also, already changed the code as you said and still got NPE.",
+    "ts": "1476041564.002709",
+    "id": "09de47404",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "E/AndroidRuntime: FATAL EXCEPTION: main\n                  Process: com.compania.gymapp, PID: 8440\n                  java.lang.NullPointerException: Attempt to invoke interface method 'java.lang.Object[] java.util.Collection.toArray()' on a null object reference\n                      at java.util.ArrayList.addAll(ArrayList.java:562)",
+    "ts": "1476041565.002710",
+    "id": "09de47405",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U2M559FRB|rozularen> uploaded a file: <https://androidchat.slack.com/files/rozularen/F2M6VS1RN/-.java|Untitled>",
+    "file": {
+      "id": "F2M6VS1RN",
+      "created": 1476041621,
+      "timestamp": 1476041621,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U2M559FRB",
+      "editable": true,
+      "size": 4242,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F2M6VS1RN/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F2M6VS1RN/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/rozularen/F2M6VS1RN/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F2M6VS1RN-d54e156540",
+      "edit_link": "https://androidchat.slack.com/files/rozularen/F2M6VS1RN/-.java/edit",
+      "preview": "package com.compania.gymapp.fragments;\r\n\r\nimport android.app.ProgressDialog;\r\nimport android.os.Bundle;\r\nimport android.support.v4.app.Fragment;\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-keyword\">package</span> <span class=\"cm-def\">com</span>.<span class=\"cm-variable\">compania</span>.<span class=\"cm-variable\">gymapp</span>.<span class=\"cm-variable\">fragments</span>;</pre></div>\n<div><pre>&#8203;</pre></div>\n<div><pre><span class=\"cm-keyword\">import</span> <span class=\"cm-variable\">android</span>.<span class=\"cm-variable\">app</span>.<span class=\"cm-variable\">ProgressDialog</span>;</pre></div>\n<div><pre><span class=\"cm-keyword\">import</span> <span class=\"cm-variable\">android</span>.<span class=\"cm-variable\">os</span>.<span class=\"cm-variable\">Bundle</span>;</pre></div>\n<div><pre><span class=\"cm-keyword\">import</span> <span class=\"cm-variable\">android</span>.<span class=\"cm-variable\">support</span>.<span class=\"cm-variable\">v4</span>.<span class=\"cm-variable\">app</span>.<span class=\"cm-variable\">Fragment</span>;</pre></div>\n</div>\n</div>\n",
+      "lines": 141,
+      "lines_more": 136,
+      "preview_is_truncated": true,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U2M559FRB",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U2M559FRB|rozularen>",
+    "bot_id": null,
+    "ts": "1476041621.002713",
+    "id": "09de47406",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<https://androidchat.slack.com/archives/development/p1476041345002700>",
+    "attachments": [
+      {
+        "from_url": "https://androidchat.slack.com/archives/development/p1476041345002700",
+        "fallback": "[October 9th, 2016 12:29 PM] nish: initialize `clases` in onCreate",
+        "ts": "1476041345.002700",
+        "author_subname": "nish",
+        "channel_id": "C04NZAN54",
+        "channel_name": "development",
+        "is_msg_unfurl": true,
+        "text": "initialize `clases` in onCreate",
+        "author_name": "Nish",
+        "author_link": "https://androidchat.slack.com/team/nish",
+        "author_icon": "https://secure.gravatar.com/avatar/d4cd2be2e5e59ccd5a46437a14ecf485.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0024-48.png",
+        "mrkdwn_in": [
+          "text"
+        ],
+        "id": 1,
+        "footer": "Posted in #development"
+      }
+    ],
+    "ts": "1476041694.002714",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "09de47407",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "inside the if block?",
+    "ts": "1476041725.002716",
+    "id": "09de47408",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "I'm gonna guess `response.body().results` is null",
+    "ts": "1476041801.002717",
+    "id": "09de47409",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "Changed clases initialization to onCreate method. Still got NPE Attempt to invoke interface method 'java.lang.Object[] java.util.Collection.toArray()' on a null object reference",
+    "ts": "1476041815.002718",
+    "id": "09de47410",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "yea me too",
+    "ts": "1476041817.002719",
+    "id": "09de47411",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "i was bout to say the same",
+    "ts": "1476041822.002720",
+    "id": "09de47412",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U2M559FRB|rozularen> uploaded a file: <https://androidchat.slack.com/files/rozularen/F2M772XST/-.java|Untitled>",
+    "file": {
+      "id": "F2M772XST",
+      "created": 1476041882,
+      "timestamp": 1476041882,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U2M559FRB",
+      "editable": true,
+      "size": 829,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F2M772XST/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F2M772XST/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/rozularen/F2M772XST/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F2M772XST-aad659f096",
+      "edit_link": "https://androidchat.slack.com/files/rozularen/F2M772XST/-.java/edit",
+      "preview": "Call<ClaseResults> call = ApiClient.get().getClases();\r\n\r\n        call.enqueue(new Callback<ClaseResults>() {\r\n            @Override\r\n            public void onResponse(Call<ClaseResults> call, Response<ClaseResults> response) {\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-variable\">Call</span><span class=\"cm-operator\">&lt;</span><span class=\"cm-variable\">ClaseResults</span><span class=\"cm-operator\">&gt;</span> <span class=\"cm-variable\">call</span> <span class=\"cm-operator\">=</span> <span class=\"cm-variable\">ApiClient</span>.<span class=\"cm-variable\">get</span>().<span class=\"cm-variable\">getClases</span>();</pre></div>\n<div><pre>&#8203;</pre></div>\n<div><pre>        <span class=\"cm-variable\">call</span>.<span class=\"cm-variable\">enqueue</span>(<span class=\"cm-keyword\">new</span> <span class=\"cm-variable\">Callback</span><span class=\"cm-operator\">&lt;</span><span class=\"cm-variable\">ClaseResults</span><span class=\"cm-operator\">&gt;</span>() {</pre></div>\n<div><pre>            <span class=\"cm-meta\">@Override</span></pre></div>\n<div><pre>            <span class=\"cm-keyword\">public</span> <span class=\"cm-variable-3\">void</span> <span class=\"cm-variable\">onResponse</span>(<span class=\"cm-variable\">Call</span><span class=\"cm-operator\">&lt;</span><span class=\"cm-variable\">ClaseResults</span><span class=\"cm-operator\">&gt;</span> <span class=\"cm-variable\">call</span>, <span class=\"cm-variable\">Response</span><span class=\"cm-operator\">&lt;</span><span class=\"cm-variable\">ClaseResults</span><span class=\"cm-operator\">&gt;</span> <span class=\"cm-variable\">response</span>) {</pre></div>\n</div>\n</div>\n",
+      "lines": 21,
+      "lines_more": 16,
+      "preview_is_truncated": false,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U2M559FRB",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U2M559FRB|rozularen>",
+    "bot_id": null,
+    "ts": "1476041882.002721",
+    "id": "09de47413",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "maybe I should deserialize the response.body().results",
+    "ts": "1476042004.002722",
+    "id": "09de47414",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "?",
+    "ts": "1476042005.002723",
+    "id": "09de47415",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "because it is a JSON",
+    "ts": "1476042010.002724",
+    "id": "09de47416",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M6XGTP0",
+    "text": "<@U2M6XGTP0|lemiler> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476042119.002725",
+    "id": "09de47417",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "What are you using to deserialize?",
+    "ts": "1476042189.002726",
+    "id": "09de47418",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U2M559FRB|rozularen> uploaded a file: <https://androidchat.slack.com/files/rozularen/F2M77P57H/-.java|Untitled>",
+    "file": {
+      "id": "F2M77P57H",
+      "created": 1476042205,
+      "timestamp": 1476042205,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U2M559FRB",
+      "editable": true,
+      "size": 1265,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F2M77P57H/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F2M77P57H/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/rozularen/F2M77P57H/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F2M77P57H-f07305cc85",
+      "edit_link": "https://androidchat.slack.com/files/rozularen/F2M77P57H/-.java/edit",
+      "preview": "package com.compania.gymapp.rest;\r\n\r\nimport okhttp3.OkHttpClient;\r\nimport okhttp3.logging.HttpLoggingInterceptor;\r\nimport retrofit2.GsonConverterFactory;\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-keyword\">package</span> <span class=\"cm-def\">com</span>.<span class=\"cm-variable\">compania</span>.<span class=\"cm-variable\">gymapp</span>.<span class=\"cm-variable\">rest</span>;</pre></div>\n<div><pre>&#8203;</pre></div>\n<div><pre><span class=\"cm-keyword\">import</span> <span class=\"cm-variable\">okhttp3</span>.<span class=\"cm-variable\">OkHttpClient</span>;</pre></div>\n<div><pre><span class=\"cm-keyword\">import</span> <span class=\"cm-variable\">okhttp3</span>.<span class=\"cm-variable\">logging</span>.<span class=\"cm-variable\">HttpLoggingInterceptor</span>;</pre></div>\n<div><pre><span class=\"cm-keyword\">import</span> <span class=\"cm-variable\">retrofit2</span>.<span class=\"cm-variable\">GsonConverterFactory</span>;</pre></div>\n</div>\n</div>\n",
+      "lines": 50,
+      "lines_more": 45,
+      "preview_is_truncated": true,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U2M559FRB",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U2M559FRB|rozularen>",
+    "bot_id": null,
+    "ts": "1476042205.002727",
+    "id": "09de47419",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "maybe is the JSON itself?",
+    "ts": "1476042563.002728",
+    "id": "09de47420",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "but all I've read about it says that if the JSON isn't valid it should call onFailure instead",
+    "ts": "1476042605.002729",
+    "id": "09de47421",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U2M559FRB|rozularen> uploaded a file: <https://androidchat.slack.com/files/rozularen/F2M6YNFJS/-.py|Untitled>",
+    "file": {
+      "id": "F2M6YNFJS",
+      "created": 1476042681,
+      "timestamp": 1476042681,
+      "name": "-.py",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "python",
+      "pretty_type": "Python",
+      "user": "U2M559FRB",
+      "editable": true,
+      "size": 324,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F2M6YNFJS/-.py?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F2M6YNFJS/download/-.py?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/rozularen/F2M6YNFJS/-.py",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F2M6YNFJS-fe31056b82",
+      "edit_link": "https://androidchat.slack.com/files/rozularen/F2M6YNFJS/-.py/edit",
+      "preview": "cnx = mysql.connector.connect(user=\"root\", password=\"\", host=\"localhost\", database=\"gym\")\r\n\r\n\r\n@app.route('/gym/api/v1.0/clases', methods=['GET'])\r\ndef getClases():\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-variable\">cnx</span> = <span class=\"cm-variable\">mysql</span>.<span class=\"cm-property\">connector</span>.<span class=\"cm-property\">connect</span>(<span class=\"cm-variable\">user</span>=<span class=\"cm-string\">&quot;root&quot;</span>, <span class=\"cm-variable\">password</span>=<span class=\"cm-string\">&quot;&quot;</span>, <span class=\"cm-variable\">host</span>=<span class=\"cm-string\">&quot;localhost&quot;</span>, <span class=\"cm-variable\">database</span>=<span class=\"cm-string\">&quot;gym&quot;</span>)</pre></div>\n<div><pre>&#8203;</pre></div>\n<div><pre>&#8203;</pre></div>\n<div><pre><span class=\"cm-meta\">@</span><span class=\"cm-meta\">app</span>.<span class=\"cm-property\">route</span>(<span class=\"cm-string\">'/gym/api/v1.0/clases'</span>, <span class=\"cm-variable\">methods</span>=[<span class=\"cm-string\">'GET'</span>])</pre></div>\n<div><pre><span class=\"cm-keyword\">def</span> <span class=\"cm-def\">getClases</span>():</pre></div>\n</div>\n</div>\n",
+      "lines": 10,
+      "lines_more": 5,
+      "preview_is_truncated": false,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U2M559FRB",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U2M559FRB|rozularen>",
+    "bot_id": null,
+    "ts": "1476042681.002730",
+    "id": "09de47422",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "this code is giving me this JSON",
+    "ts": "1476042695.002731",
+    "id": "09de47423",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "I think it is giving me NPE because that \"entradas:\" before the array",
+    "ts": "1476042739.002733",
+    "id": "09de47424",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "Show your `ClaseResults.java`",
+    "ts": "1476042756.002734",
+    "id": "09de47425",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "please wrap that in preformatted code blocks",
+    "ts": "1476042779.002735",
+    "id": "09de47426",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U2M559FRB|rozularen> uploaded a file: <https://androidchat.slack.com/files/rozularen/F2M748FSR/-.java|Untitled>",
+    "file": {
+      "id": "F2M748FSR",
+      "created": 1476042780,
+      "timestamp": 1476042780,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U2M559FRB",
+      "editable": true,
+      "size": 176,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F2M748FSR/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F2M748FSR/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/rozularen/F2M748FSR/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F2M748FSR-416d7ded82",
+      "edit_link": "https://androidchat.slack.com/files/rozularen/F2M748FSR/-.java/edit",
+      "preview": "package com.compania.gymapp.pojo;\r\n\r\nimport java.util.List;\r\n\r\n/**\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-keyword\">package</span> <span class=\"cm-def\">com</span>.<span class=\"cm-variable\">compania</span>.<span class=\"cm-variable\">gymapp</span>.<span class=\"cm-variable\">pojo</span>;</pre></div>\n<div><pre>&#8203;</pre></div>\n<div><pre><span class=\"cm-keyword\">import</span> <span class=\"cm-variable\">java</span>.<span class=\"cm-variable\">util</span>.<span class=\"cm-variable\">List</span>;</pre></div>\n<div><pre>&#8203;</pre></div>\n<div><pre><span class=\"cm-comment\">/**</span></pre></div>\n</div>\n</div>\n",
+      "lines": 12,
+      "lines_more": 7,
+      "preview_is_truncated": false,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U2M559FRB",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U2M559FRB|rozularen>",
+    "bot_id": null,
+    "ts": "1476042780.002736",
+    "id": "09de47427",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "<@U08GFT5V5> What?",
+    "ts": "1476042798.002737",
+    "id": "09de47428",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "look at the bottom right of the slack window for hints",
+    "ts": "1476042800.002738",
+    "id": "09de47429",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U2M559FRB|rozularen> uploaded a file: <https://androidchat.slack.com/files/rozularen/F2M79N9PB/-.js|Untitled>",
+    "file": {
+      "id": "F2M79N9PB",
+      "created": 1476042840,
+      "timestamp": 1476042840,
+      "name": "-.js",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "javascript",
+      "pretty_type": "JavaScript/JSON",
+      "user": "U2M559FRB",
+      "editable": true,
+      "size": 324,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F2M79N9PB/-.js?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F2M79N9PB/download/-.js?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/rozularen/F2M79N9PB/-.js",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F2M79N9PB-b13aa0120a",
+      "edit_link": "https://androidchat.slack.com/files/rozularen/F2M79N9PB/-.js/edit",
+      "preview": "{\r\n  \"entradas\": [\r\n    [\r\n      1, \r\n      \"halterofilia\", \r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>{</pre></div>\n<div><pre>  <span class=\"cm-string\">&quot;entradas&quot;</span>: [</pre></div>\n<div><pre>    [</pre></div>\n<div><pre>      <span class=\"cm-number\">1</span>, </pre></div>\n<div><pre>      <span class=\"cm-string\">&quot;halterofilia&quot;</span>, </pre></div>\n</div>\n</div>\n",
+      "lines": 19,
+      "lines_more": 14,
+      "preview_is_truncated": false,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U2M559FRB",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U2M559FRB|rozularen>",
+    "bot_id": null,
+    "ts": "1476042841.002741",
+    "id": "09de47430",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "And `Clase.java`",
+    "ts": "1476042851.002742",
+    "id": "09de47431",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U2M559FRB|rozularen> uploaded a file: <https://androidchat.slack.com/files/rozularen/F2M6Z4KFG/-.java|Untitled>",
+    "file": {
+      "id": "F2M6Z4KFG",
+      "created": 1476042867,
+      "timestamp": 1476042867,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U2M559FRB",
+      "editable": true,
+      "size": 2120,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F2M6Z4KFG/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F2M6Z4KFG/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/rozularen/F2M6Z4KFG/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F2M6Z4KFG-07f2f1e0cd",
+      "edit_link": "https://androidchat.slack.com/files/rozularen/F2M6Z4KFG/-.java/edit",
+      "preview": "package com.compania.gymapp.pojo;\r\n\r\n/**\r\n * Created by markc on 08/10/2016.\r\n */\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-keyword\">package</span> <span class=\"cm-def\">com</span>.<span class=\"cm-variable\">compania</span>.<span class=\"cm-variable\">gymapp</span>.<span class=\"cm-variable\">pojo</span>;</pre></div>\n<div><pre>&#8203;</pre></div>\n<div><pre><span class=\"cm-comment\">/**</span></pre></div>\n<div><pre> <span class=\"cm-comment\">* Created by markc on 08/10/2016.</span></pre></div>\n<div><pre> <span class=\"cm-comment\">*/</span></pre></div>\n</div>\n</div>\n",
+      "lines": 105,
+      "lines_more": 100,
+      "preview_is_truncated": true,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U2M559FRB",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U2M559FRB|rozularen>",
+    "bot_id": null,
+    "ts": "1476042867.002745",
+    "id": "09de47432",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "add this to ClassResult",
+    "ts": "1476042891.002746",
+    "id": "09de47433",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "```\n@SerializedName(\"entradas\")\n```",
+    "ts": "1476042897.002747",
+    "id": "09de47434",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "annotate the list with that",
+    "ts": "1476042905.002748",
+    "id": "09de47435",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "D/ApiService: Failure: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was BEGIN_ARRAY at line 3 column 6 path $.entradas[0]",
+    "ts": "1476042939.002749",
+    "id": "09de47436",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "Of course, because you want an object, but there are arrays in JSON.",
+    "ts": "1476042995.002752",
+    "id": "09de47437",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "I got that Exc. after updating the code with <@U08GFT5V5> annotation",
+    "ts": "1476043024.002753",
+    "id": "09de47438",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "Now fix the back-end.",
+    "edited": {
+      "user": "U2M0WUZ7A",
+      "ts": "1476043045.000000"
+    },
+    "ts": "1476043038.002754",
+    "id": "09de47439",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Yeah so I’ve pointed you in the right direction",
+    "ts": "1476043045.002756",
+    "id": "09de47440",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "it’s now trying to deserialize the json",
+    "ts": "1476043057.002757",
+    "id": "09de47441",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "now you just need to fix your pojo",
+    "edited": {
+      "user": "U08GFT5V5",
+      "ts": "1476043080.000000"
+    },
+    "ts": "1476043066.002758",
+    "id": "09de47442",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "so the real error is in the JSON format? aka my back-end?",
+    "ts": "1476043084.002760",
+    "id": "09de47443",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "YES IT IS.",
+    "edited": {
+      "user": "U2M0WUZ7A",
+      "ts": "1476043117.000000"
+    },
+    "ts": "1476043099.002761",
+    "id": "09de47444",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "what do i need to fix <@U08GFT5V5>",
+    "ts": "1476043101.002762",
+    "id": "09de47445",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "I agree that the JSON seems problematic… You have arrays where you really just want objects",
+    "edited": {
+      "user": "U08GFT5V5",
+      "ts": "1476043197.000000"
+    },
+    "ts": "1476043172.002764",
+    "id": "09de47446",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U2M559FRB|rozularen> uploaded a file: <https://androidchat.slack.com/files/rozularen/F2M6VELEQ/-.py|Untitled>",
+    "file": {
+      "id": "F2M6VELEQ",
+      "created": 1476043211,
+      "timestamp": 1476043211,
+      "name": "-.py",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "python",
+      "pretty_type": "Python",
+      "user": "U2M559FRB",
+      "editable": true,
+      "size": 542,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F2M6VELEQ/-.py?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F2M6VELEQ/download/-.py?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/rozularen/F2M6VELEQ/-.py",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F2M6VELEQ-b054f40fc8",
+      "edit_link": "https://androidchat.slack.com/files/rozularen/F2M6VELEQ/-.py/edit",
+      "preview": "from flask import Flask, jsonify\r\nimport json\r\nimport mysql.connector\r\n\r\napp = Flask(__name__)\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-keyword\">from</span> <span class=\"cm-variable\">flask</span> <span class=\"cm-keyword\">import</span> <span class=\"cm-variable\">Flask</span>, <span class=\"cm-variable\">jsonify</span></pre></div>\n<div><pre><span class=\"cm-keyword\">import</span> <span class=\"cm-variable\">json</span></pre></div>\n<div><pre><span class=\"cm-keyword\">import</span> <span class=\"cm-variable\">mysql</span>.<span class=\"cm-property\">connector</span></pre></div>\n<div><pre>&#8203;</pre></div>\n<div><pre><span class=\"cm-variable\">app</span> = <span class=\"cm-variable\">Flask</span>(<span class=\"cm-variable\">__name__</span>)</pre></div>\n</div>\n</div>\n",
+      "lines": 25,
+      "lines_more": 20,
+      "preview_is_truncated": false,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U2M559FRB",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U2M559FRB|rozularen>",
+    "bot_id": null,
+    "ts": "1476043212.002766",
+    "id": "09de47447",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "this is my backend",
+    "ts": "1476043215.002767",
+    "id": "09de47448",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Yeah this is as far as I go dude",
+    "ts": "1476043266.002768",
+    "id": "09de47449",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "I’ve got some other stuff to do right now",
+    "ts": "1476043283.002769",
+    "id": "09de47450",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "okay thanks a lot",
+    "ts": "1476043295.002770",
+    "id": "09de47451",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": ":+1:",
+    "ts": "1476043300.002771",
+    "id": "09de47452",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "```\n{\n \"entradas\": [\n   {\n     \"thing\": 1, \n     \"other_thing\": \"halterofilia\", \n     \"another_thing\": \"Profesor: XXXX YYYY. Clase de Halterofilia.\"\n   }\n ]\n}\n```",
+    "edited": {
+      "user": "U08GFT5V5",
+      "ts": "1476043429.000000"
+    },
+    "ts": "1476043329.002772",
+    "id": "09de47453",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "This is what you actually want to generate",
+    "ts": "1476043336.002773",
+    "id": "09de47454",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "fix your backend and make it spit this out",
+    "ts": "1476043348.002774",
+    "id": "09de47455",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "noooooo! objects consist of pairs \n\"key\":\"value\",...",
+    "edited": {
+      "user": "U2M0WUZ7A",
+      "ts": "1476043368.000000"
+    },
+    "ts": "1476043359.002775",
+    "id": "09de47456",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "yeah that",
+    "ts": "1476043367.002776",
+    "id": "09de47457",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Also",
+    "ts": "1476043387.002778",
+    "id": "09de47458",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Just use json.dumps() and not jsonify",
+    "ts": "1476043394.002779",
+    "id": "09de47459",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "<@U061HDV96> actually what i was thinking",
+    "ts": "1476043410.002780",
+    "id": "09de47460",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Unless you have some problems with serialisation",
+    "ts": "1476043421.002781",
+    "id": "09de47461",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I remember using jsonify a long time back when there were some compatibility problems, don't remember why",
+    "ts": "1476043439.002783",
+    "id": "09de47462",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Had to do something with python 3 perhaps",
+    "ts": "1476043450.002784",
+    "id": "09de47463",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "<@U061HDV96> if i use json.dumps(entradas) the output is:",
+    "ts": "1476043935.002785",
+    "id": "09de47464",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "<https://pythondev.slack.com/files/rozularen/F2M7BQXCH/-.js>",
+    "ts": "1476043947.002786",
+    "id": "09de47465",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "That's because of the serialisation. Jsonify probably convert the kwargs from the arguments to a dict and outputs that. Thenit doesn't know how to serialise the object you're giving it.",
+    "ts": "1476044005.002787",
+    "id": "09de47466",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "But it's fine using jsonify atm",
+    "ts": "1476044024.002788",
+    "id": "09de47467",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M559FRB",
+    "text": "D/ApiService: Failure: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was BEGIN_ARRAY at line 1 column 2 path $",
+    "ts": "1476044186.002789",
+    "id": "09de47468",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I just explained..",
+    "ts": "1476044214.002790",
+    "id": "09de47469",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "When using realm, do you guys create a realm instance and set it to `Realm.getDefaultInstance()` and then use it, or do you just call `Realm.getDefaultInstance()` when you need to?",
+    "ts": "1476049156.002791",
+    "id": "09de47470",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "We shoud close instance in the end. So, we must have a field.",
+    "ts": "1476049368.002792",
+    "id": "09de47471",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Ah yeah",
+    "ts": "1476049492.002793",
+    "id": "09de47472",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "And what if it’s being used somewhere without a lifecycle? Use `try/finally`?",
+    "ts": "1476049521.002794",
+    "id": "09de47473",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "Yes.",
+    "ts": "1476049842.002795",
+    "id": "09de47474",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Thanks,just performing code cleanup so wanted to get it right :stuck_out_tongue:",
+    "ts": "1476049995.002796",
+    "id": "09de47475",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "Oh yes, I want Realm to show big red message when finalize()d without closing :slightly_smiling_face:",
+    "ts": "1476050260.002797",
+    "id": "09de47476",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0QD0R2LS",
+    "text": "any way to preview res files without opening them? Like, you know, there is a code preview, Ctrl+Shift+I in a small dialog. One thing that works with strings is Ctrl+Q but that's all. It shows useless R constant for other types of res",
+    "edited": {
+      "user": "U0QD0R2LS",
+      "ts": "1476050648.000000"
+    },
+    "ts": "1476050633.002798",
+    "id": "09de47477",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0QD0R2LS",
+    "text": "to make it clear, it's right in the Editor, when you have something like `AnimationUtils.loadAnimation(this, R.anim.slide_out_left_right); ` and don't want to jump to animation file",
+    "ts": "1476050880.002800",
+    "id": "09de47478",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "There are two popular libraries for implementing a shimmer effect on a TextView : <https://github.com/RomainPiel/Shimmer-android> and <https://github.com/facebook/shimmer-android>\nhowever both libraries have not had any updates in a couple of years and are no longer being maintained. Also both libraries can trigger memory leaks in certain cases.\nIs there any modern way to pull off this effect?",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "RomainPiel/Shimmer-android",
+        "title_link": "https://github.com/RomainPiel/Shimmer-android",
+        "text": "Shimmer-android - An Android TextView with a shimmering effect",
+        "fallback": "GitHub: RomainPiel/Shimmer-android",
+        "thumb_url": "https://avatars1.githubusercontent.com/u/464320?v=3&s=400",
+        "from_url": "https://github.com/RomainPiel/Shimmer-android",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      },
+      {
+        "service_name": "GitHub",
+        "title": "facebook/shimmer-android",
+        "title_link": "https://github.com/facebook/shimmer-android",
+        "text": "shimmer-android - An easy, flexible way to add a shimmering effect to any view in an Android app.",
+        "fallback": "GitHub: facebook/shimmer-android",
+        "thumb_url": "https://avatars2.githubusercontent.com/u/69631?v=3&s=400",
+        "from_url": "https://github.com/facebook/shimmer-android",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 2
+      }
+    ],
+    "ts": "1476057793.002801",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "09de47479",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M9L66RM",
+    "text": "<@U2M9L66RM|jakeloo> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476078790.002803",
+    "id": "09de47480",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M9KBSE9",
+    "text": "<@U2M9KBSE9|gophil23> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1476080385.002804",
+    "id": "09de47481",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

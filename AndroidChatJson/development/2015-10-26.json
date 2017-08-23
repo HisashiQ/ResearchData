@@ -1,0 +1,2430 @@
+[
+  {
+    "user": "U0D2FJ3UN",
+    "text": "Hey guys! could you give me some examples of how to use JoinObservable from rxjava?",
+    "ts": "1445849065.002720",
+    "id": "26de14316",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D2FJ3UN",
+    "text": "examples of real code I mean",
+    "ts": "1445849079.002721",
+    "id": "26de14317",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D6ATS48",
+    "subtype": "channel_join",
+    "text": "<@U0D6ATS48|nhpatt> has joined the channel",
+    "ts": "1445853434.002722",
+    "id": "26de14318",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "we now have a <#C0D6DUW8L> channel",
+    "ts": "1445861361.002723",
+    "reactions": [
+      {
+        "name": "ok_hand",
+        "users": [
+          "U04U5KS3Z",
+          "U0830HE7P"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "26de14319",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": ":simple_smile:",
+    "ts": "1445861363.002724",
+    "id": "26de14320",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KKN48P",
+    "text": "Hi. I have a list (recyclerview) with a load more mechanism. the load more button is at the beginning of the list, to load older items. my problem is that the older items are inserted at the beginning of the list and so the recyclerview does not stay at the previous position. is there a solution to stay fixed at the current position and add the items at the beginning of the list?",
+    "ts": "1445875027.002725",
+    "id": "26de14321",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "pretty sure either the view or the layout manager has methods to give you the first visible item and methods to set the scroll position to a specific item",
+    "ts": "1445875239.002726",
+    "id": "26de14322",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "LayoutManager does have what you mentioned.",
+    "ts": "1445875259.002727",
+    "id": "26de14323",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U8BT6T",
+    "text": "If it makes sense for your app, you could also try LinearLayoutManager’s reverseLayout so that it stacks up from the bottom. I haven’t tried this myself.",
+    "ts": "1445875380.002728",
+    "id": "26de14324",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U8BT6T",
+    "text": "<https://developer.android.com/reference/android/support/v7/widget/LinearLayoutManager.html#LinearLayoutManager(android.content.Context>, int, boolean)",
+    "ts": "1445875381.002729",
+    "id": "26de14325",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08KKN48P",
+    "text": "thanks i will try the reverslayout. my problem with the scrollToPosition solution is, that there is a jump in the list and that should not happen. it should exactly stay at the current position and add the new items at the beginning of the list",
+    "ts": "1445877005.002730",
+    "id": "26de14326",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U8BT6T",
+    "text": "I would try the reverse layout +  notifyDataSetChanged",
+    "ts": "1445877093.002731",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U08KKN48P"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "26de14327",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U0A1BE7KQ>: will look at that later. I have plans to split my app into some libs.",
+    "ts": "1445877921.002732",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U0A1BE7KQ"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "26de14328",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "does anyone have some suggestions for improving the performance of the Android WebView?",
+    "ts": "1445880581.002733",
+    "id": "26de14329",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "im trying to load a URL from an SSH tunnel, and about 50/50 it is incredibly slow, as in 6-10 minutes to load",
+    "ts": "1445880606.002734",
+    "id": "26de14330",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "use a custom tab in the browser instead?",
+    "ts": "1445880819.002735",
+    "id": "26de14331",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "route it through OkHttp with the trick that was linked last week?",
+    "ts": "1445880845.002736",
+    "id": "26de14332",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "can’t do the first",
+    "ts": "1445881216.002737",
+    "id": "26de14333",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "can you link me to the second?",
+    "ts": "1445881226.002738",
+    "id": "26de14334",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "<http://artemzin.com/blog/use-okhttp-to-load-resources-for-webview/>",
+    "attachments": [
+      {
+        "service_name": "Android Hipster",
+        "title": "How to use OkHttp for loading resources in WebView",
+        "title_link": "http://artemzin.com/blog/use-okhttp-to-load-resources-for-webview/",
+        "text": "If you have a WebView in your Android app you may want to intercept its requests to handle them as you want, and for example load resources via OkHttp. NOTICE: this is mostly suitable only for cases when you use...",
+        "fallback": "Android Hipster: How to use OkHttp for loading resources in WebView",
+        "image_url": "http://artemzin.com/blog/content/images/2015/10/2015-10-15-21-30-26.jpg",
+        "ts": 1444934228,
+        "from_url": "http://artemzin.com/blog/use-okhttp-to-load-resources-for-webview/",
+        "image_width": 444,
+        "image_height": 250,
+        "image_bytes": 436997,
+        "id": 1
+      }
+    ],
+    "ts": "1445881322.002739",
+    "id": "26de14335",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "well that doesn’t work for me either",
+    "ts": "1445881370.002741",
+    "id": "26de14336",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "unfortunately",
+    "ts": "1445881376.002742",
+    "id": "26de14337",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "it is a complex js application inside a webview",
+    "ts": "1445881383.002743",
+    "id": "26de14338",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "one second, let me google shruggy and paste it here",
+    "ts": "1445881468.002744",
+    "id": "26de14339",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "¯\\_(ツ)_/¯",
+    "ts": "1445881481.002745",
+    "id": "26de14340",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "haha",
+    "ts": "1445881497.002746",
+    "id": "26de14341",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "surely there are some other ways to improve the native webview’s performance?",
+    "ts": "1445881513.002747",
+    "id": "26de14342",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "there’s some static analysis tool by facebook",
+    "ts": "1445881530.002748",
+    "id": "26de14343",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "then there’s using good simple non intrusive HTML5 so it doesn’t lag",
+    "ts": "1445881547.002749",
+    "id": "26de14344",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "a.k.a. webs are not apps",
+    "ts": "1445881556.002750",
+    "id": "26de14345",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "but that’s not your call, i know",
+    "ts": "1445881568.002751",
+    "id": "26de14346",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "<http://fbinfer.com/>",
+    "attachments": [
+      {
+        "service_name": "Infer",
+        "title": "Infer | A static analyzer for mobile apps",
+        "title_link": "http://fbinfer.com/",
+        "fallback": "Infer: Infer | A static analyzer for mobile apps",
+        "image_url": "http://fbinfer.com/static/og_image.png",
+        "from_url": "http://fbinfer.com/",
+        "image_width": 476,
+        "image_height": 250,
+        "image_bytes": 15615,
+        "id": 1
+      }
+    ],
+    "ts": "1445881584.002752",
+    "id": "26de14347",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "<@U0B8R3VV4>: you can just use `/shrug`",
+    "ts": "1445881737.002754",
+    "id": "26de14348",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "¯\\_(ツ)_/¯",
+    "ts": "1445881745.002755",
+    "id": "26de14349",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "noice",
+    "ts": "1445881750.002756",
+    "id": "26de14350",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "is also appends ¯\\_(ツ)_/¯",
+    "ts": "1445881757.002757",
+    "id": "26de14351",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "mmmkay ¯\\_(ツ)_/¯",
+    "ts": "1445881759.002758",
+    "id": "26de14352",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D7CAJF2",
+    "subtype": "channel_join",
+    "text": "<@U0D7CAJF2|creatorbe> has joined the channel",
+    "ts": "1445883077.002759",
+    "id": "26de14353",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "has anyone had issues with HockeyApp deleting app files when you push out a new version?",
+    "ts": "1445884186.002760",
+    "id": "26de14354",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "man what the actual shit",
+    "ts": "1445886567.002761",
+    "id": "26de14355",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "my AlarmManager is supposed to be setting an inexactRepeating alarm every half hour",
+    "ts": "1445886583.002762",
+    "id": "26de14356",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "and its getting called roughly every 30 -45 seconds",
+    "ts": "1445886592.002763",
+    "id": "26de14357",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "why would that be happening?",
+    "ts": "1445886642.002764",
+    "id": "26de14358",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "can inexactRepeating really happen that far from the suggested interval?",
+    "ts": "1445886913.002765",
+    "id": "26de14359",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05466Y29",
+    "text": "ms vs seconds?",
+    "ts": "1445887215.002766",
+    "id": "26de14360",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05466Y29",
+    "text": "though I guess theres the var `INTERVAL_HALF_HOUR` which you’re probably using",
+    "ts": "1445887363.002767",
+    "id": "26de14361",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "yeah",
+    "ts": "1445887387.002768",
+    "id": "26de14362",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "im using `AlarmManager.INTERVAL_HALF_HOUR`",
+    "ts": "1445887402.002769",
+    "id": "26de14363",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05466Y29",
+    "text": "¯\\_(ツ)_/¯",
+    "ts": "1445887433.002770",
+    "id": "26de14364",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "im starting to think that maybe its creating spurious alarms",
+    "ts": "1445887438.002771",
+    "id": "26de14365",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "so that there are multiple of the same pending intent schedule",
+    "ts": "1445887447.002772",
+    "id": "26de14366",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "but i can’t find a way to check the number of alarms set",
+    "ts": "1445887457.002773",
+    "id": "26de14367",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05466Y29",
+    "text": "Alarms should overwrite given the same pending intent",
+    "ts": "1445887464.002774",
+    "id": "26de14368",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "kind of what i thought",
+    "ts": "1445887473.002775",
+    "id": "26de14369",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05466Y29",
+    "text": "but maybe it’s scheduling them over and over",
+    "ts": "1445887532.002776",
+    "id": "26de14370",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "yeah",
+    "ts": "1445887537.002777",
+    "id": "26de14371",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05466Y29",
+    "text": "and kicking off the first alarm",
+    "ts": "1445887542.002778",
+    "id": "26de14372",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "My basic architecture looks about like this &gt;",
+    "ts": "1445887593.002779",
+    "id": "26de14373",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "MainActivity starts, checks if there is an existing pending broadcast of my custom type",
+    "ts": "1445887629.002780",
+    "id": "26de14374",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "removes that broadcast if it exists",
+    "ts": "1445887644.002781",
+    "id": "26de14375",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "Adds a new alarm for the appropriate interval",
+    "ts": "1445887659.002782",
+    "id": "26de14376",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "then BroadcastReceiver gets it, launches a services",
+    "ts": "1445887677.002783",
+    "id": "26de14377",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "does some background processing, then reschedules the alarm",
+    "ts": "1445887685.002784",
+    "id": "26de14378",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "this is the line that schedules the alarm:",
+    "ts": "1445887701.002785",
+    "id": "26de14379",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "`aManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), AlarmManager.INTERVAL_HALF_HOUR, receiverIntent);`",
+    "ts": "1445887705.002786",
+    "id": "26de14380",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05466Y29",
+    "text": "why does it reschedule the alarm?",
+    "ts": "1445887718.002787",
+    "id": "26de14381",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D7EPTDZ",
+    "subtype": "channel_join",
+    "text": "<@U0D7EPTDZ|miltonfilho> has joined the channel",
+    "ts": "1445887720.002788",
+    "id": "26de14382",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "I need it to run every half hour",
+    "ts": "1445887726.002789",
+    "id": "26de14383",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05466Y29",
+    "text": "but it’s inexact repeating",
+    "ts": "1445887742.002790",
+    "id": "26de14384",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "oh jesus",
+    "ts": "1445887757.002791",
+    "id": "26de14385",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05466Y29",
+    "text": "sounds like you are scheduling it, telling it to kick off the first one now, then scheduling again and telling it to start now",
+    "ts": "1445887766.002792",
+    "id": "26de14386",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "shhhhhhh",
+    "ts": "1445887770.002793",
+    "id": "26de14387",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05466Y29",
+    "text": "haha",
+    "ts": "1445887773.002794",
+    "id": "26de14388",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "oh my god",
+    "ts": "1445887824.002795",
+    "id": "26de14389",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "i don’t want to admit how long this has been plaguing me",
+    "ts": "1445887837.002796",
+    "id": "26de14390",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05466Y29",
+    "text": "happens to all of us",
+    "ts": "1445887860.002797",
+    "id": "26de14391",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D7FU083",
+    "subtype": "channel_join",
+    "text": "<@U0D7FU083|dgreenhalgh> has joined the channel",
+    "ts": "1445888696.002798",
+    "id": "26de14392",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D7KLUH4",
+    "subtype": "channel_join",
+    "text": "<@U0D7KLUH4|billjings> has joined the channel",
+    "ts": "1445889425.002801",
+    "id": "26de14393",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D7JS821",
+    "subtype": "channel_join",
+    "text": "<@U0D7JS821|bgardner> has joined the channel",
+    "ts": "1445889503.002802",
+    "id": "26de14394",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D7N2YBE",
+    "subtype": "channel_join",
+    "text": "<@U0D7N2YBE|ruma> has joined the channel",
+    "ts": "1445893718.002803",
+    "id": "26de14395",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D7T72CU",
+    "subtype": "channel_join",
+    "text": "<@U0D7T72CU|bruno> has joined the channel",
+    "ts": "1445897606.002804",
+    "id": "26de14396",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D7WCS5T",
+    "subtype": "channel_join",
+    "text": "<@U0D7WCS5T|arturgaleno> has joined the channel",
+    "ts": "1445898895.002805",
+    "id": "26de14397",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UBTWEE",
+    "text": "Hey guys. With dagger 2 and APT, do the generated source files get created as you type in Android Studio or do you have to always make the project ?",
+    "ts": "1445899203.002806",
+    "id": "26de14398",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8059NC",
+    "subtype": "channel_join",
+    "text": "<@U0D8059NC|anonynoobous> has joined the channel",
+    "ts": "1445901784.002807",
+    "id": "26de14399",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8059NC",
+    "text": "Hi, anyone here doing daily android dev with cli? maybe used eclim or another :simple_smile:",
+    "ts": "1445901984.002808",
+    "id": "26de14400",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "why would you do that to yourself?",
+    "ts": "1445902950.002809",
+    "id": "26de14401",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8059NC",
+    "text": "<@U0B8R3VV4>: because my hardware is low spec, maybe when i run development on cli it's more good",
+    "ts": "1445903590.002810",
+    "id": "26de14402",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "what do you compile it with?",
+    "ts": "1445903618.002811",
+    "id": "26de14403",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "is there any static analysis plugin?",
+    "ts": "1445903651.002812",
+    "id": "26de14404",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8059NC",
+    "text": "maybe you can browse about how eclim work,",
+    "ts": "1445903702.002813",
+    "id": "26de14405",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8059NC",
+    "text": "about analysis plugin, hmm... maybe just less,",
+    "ts": "1445903746.002814",
+    "id": "26de14406",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "why would you use eclim when there's a vim emulator for andrid studio?",
+    "ts": "1445903884.002815",
+    "id": "26de14407",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8059NC",
+    "text": "<@U0B8R3VV4>: because, i just wanna use cli environment, so when you use eclim you can forces coding on cli mode without gui",
+    "ts": "1445903988.002816",
+    "id": "26de14408",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "I'd say the problem is not the GUI but the compiler, but that's me",
+    "ts": "1445904095.002817",
+    "id": "26de14409",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "having the daemon running on the background is costly",
+    "ts": "1445904113.002818",
+    "id": "26de14410",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8059NC",
+    "text": "<@U0B8R3VV4>: hmm ok, i dont know about that... maybe, any suggest?",
+    "ts": "1445904197.002819",
+    "id": "26de14411",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "buy new hardware hahaha",
+    "ts": "1445904224.002820",
+    "id": "26de14412",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8059NC",
+    "text": "hahhah, absolutelly :satisfied:",
+    "ts": "1445904272.002821",
+    "id": "26de14413",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8059NC",
+    "text": "#btw_thank_your_advances great_respect maybe i will cozy here hahha",
+    "ts": "1445904331.002822",
+    "id": "26de14414",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "anyway if you make it work just tell us",
+    "ts": "1445904421.002823",
+    "id": "26de14415",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "sounds interesting at least",
+    "ts": "1445904426.002824",
+    "id": "26de14416",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8059NC",
+    "text": "sure, maybe in a freetime i will make slackbuilds to prepare work with that, because now i have leave from debian",
+    "ts": "1445904514.002825",
+    "id": "26de14417",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "u so gnu",
+    "ts": "1445904650.002826",
+    "id": "26de14418",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8059NC",
+    "text": "yeah, less money to buy hardware even less w*indows hahha, maybe when stay in gnu i can choose donations or contributions, it's ok for me...",
+    "ts": "1445904847.002827",
+    "id": "26de14419",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CMV11DK",
+    "subtype": "channel_join",
+    "text": "<@U0CMV11DK|rockerhieu> has joined the channel",
+    "ts": "1445912226.002828",
+    "id": "26de14420",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CMV11DK",
+    "text": "Is there a channel where we can discuss about CI?",
+    "ts": "1445912276.002829",
+    "id": "26de14421",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0D8059NC",
+    "text": "<@U0CMV11DK>: ci? do you mean Code Igniter? :sweat_smile:",
+    "ts": "1445917310.002830",
+    "id": "26de14422",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "yeah, you can talk about it here or on testing I’d say",
+    "ts": "1445918889.002831",
+    "id": "26de14423",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CMV11DK",
+    "text": "I'm using Shippable, it's cheap, but I find it quite slow. What do you guys use?",
+    "ts": "1445919081.002832",
+    "id": "26de14424",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CT7JDN3",
+    "text": "I think he is talking about Continuos Integration",
+    "ts": "1445919082.002833",
+    "id": "26de14425",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CT7JDN3",
+    "text": "I am planning to use Circle",
+    "ts": "1445919098.002834",
+    "id": "26de14426",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CT7JDN3",
+    "text": "Have used Travis before but it is kind of expensive",
+    "ts": "1445919117.002835",
+    "id": "26de14427",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CMV11DK",
+    "text": "Circle CI is great, I like it very much. Unfortunately my containers got killed quite often because of the 4GB RAM limit.",
+    "ts": "1445919153.002836",
+    "id": "26de14428",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CMV11DK",
+    "text": "That's why I moved to Shippable last year.",
+    "ts": "1445919169.002837",
+    "id": "26de14429",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CT7JDN3",
+    "text": "Can tell you about circle after a month",
+    "ts": "1445919169.002838",
+    "id": "26de14430",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CT7JDN3",
+    "text": "Oh",
+    "ts": "1445919171.002839",
+    "id": "26de14431",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "I was on <http://Ship.io|Ship.io>, will probs switch to Travis or Circle now",
+    "ts": "1445919173.002840",
+    "id": "26de14432",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "what’s wrong with circle?",
+    "ts": "1445919185.002841",
+    "id": "26de14433",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CMV11DK",
+    "text": "I had a chance to tried Circle CI again several months ago, it's better now.",
+    "ts": "1445919193.002842",
+    "id": "26de14434",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CT7JDN3",
+    "text": "Yes. There are upgrading this month as well",
+    "ts": "1445919210.002843",
+    "id": "26de14435",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CT7JDN3",
+    "text": "Saw some notification",
+    "ts": "1445919217.002844",
+    "id": "26de14436",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CMV11DK",
+    "text": "Any other alternatives?",
+    "ts": "1445919226.002845",
+    "id": "26de14437",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CT7JDN3",
+    "text": "Jenkins ?",
+    "ts": "1445919239.002846",
+    "id": "26de14438",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CT7JDN3",
+    "text": "But its not on cloud",
+    "ts": "1445919245.002847",
+    "id": "26de14439",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "self hosting jenkins ¯\\_(ツ)_/¯",
+    "ts": "1445919249.002848",
+    "id": "26de14440",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CMV11DK",
+    "text": "Jenkins on DO could be an option",
+    "ts": "1445919262.002849",
+    "id": "26de14441",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CT7JDN3",
+    "text": "DO ?",
+    "ts": "1445919275.002850",
+    "id": "26de14442",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CMV11DK",
+    "text": "Digital Ocean",
+    "ts": "1445919279.002851",
+    "id": "26de14443",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CT7JDN3",
+    "text": "Oh ok",
+    "ts": "1445919283.002852",
+    "id": "26de14444",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CMV11DK",
+    "text": "<http://greenhouseci.com|greenhouseci.com> anyone?",
+    "ts": "1445919285.002853",
+    "id": "26de14445",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CNL1BK2",
+    "subtype": "channel_join",
+    "text": "<@U0CNL1BK2|schott12521> has joined the channel",
+    "ts": "1445923444.002854",
+    "id": "26de14446",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

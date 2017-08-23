@@ -1,0 +1,1744 @@
+[
+  {
+    "user": "U061HDV96",
+    "text": "I got a reply in the Kotlin Slack saying it's a bug and it's resolved in 1.0.7 but god knows when that's gonna be released <https://youtrack.jetbrains.com/issue/KT-15524#tab=History>",
+    "attachments": [
+      {
+        "service_name": "YouTrack",
+        "title": "KT-15524: kapt3 - Error messages should display associated element information (if available)",
+        "title_link": "https://youtrack.jetbrains.com/issue/KT-15524#tab=History",
+        "text": "When printing error messages through the <https://docs.oracle.com/javase/7/docs/api/javax/annotation/processing/Messager.html> Messager class, you can pass in the associated element with the error (if…",
+        "fallback": "YouTrack: KT-15524: kapt3 - Error messages should display associated element information (if available)",
+        "from_url": "https://youtrack.jetbrains.com/issue/KT-15524#tab=History",
+        "service_icon": "https://youtrack.jetbrains.com/_classpath/images/favicon.ico",
+        "id": 1
+      }
+    ],
+    "ts": "1484393206.000097",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "14ko3617",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "<@U061HDV96> I remember this issue too",
+    "ts": "1484393264.000099",
+    "id": "14ko3618",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "You could try maybe revert to 1.0.5, see if you get a better diagnostic message",
+    "ts": "1484393287.000100",
+    "id": "14ko3619",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Let's give that a shot, maybe I'll at least know what file it is",
+    "ts": "1484393312.000101",
+    "id": "14ko3620",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "Or just hunt for all `lateinit`s",
+    "ts": "1484393345.000102",
+    "id": "14ko3621",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Well my builds were successful with those before",
+    "ts": "1484393374.000103",
+    "id": "14ko3622",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "It might be related, but I wouldn't know why",
+    "ts": "1484393381.000104",
+    "id": "14ko3623",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "private lateinit won't have a problem since the field still remains private. Maybe that's why? &lt;-",
+    "ts": "1484393428.000105",
+    "id": "14ko3624",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "There are no private variables anywhere besides some that are not annotated",
+    "edited": {
+      "user": "U061HDV96",
+      "ts": "1484393493.000000"
+    },
+    "ts": "1484393491.000106",
+    "id": "14ko3625",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Reverting to 1.0.5 also requires me to revert the kotlin IDE plugin",
+    "ts": "1484393532.000108",
+    "id": "14ko3626",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": ":confused:",
+    "ts": "1484393542.000109",
+    "id": "14ko3627",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "Ouch",
+    "ts": "1484393551.000110",
+    "id": "14ko3628",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "This line is unchanged from the previous commit and that commit succeeded the tests in CI: <https://i.imgur.com/meJyMRh.png>",
+    "attachments": [
+      {
+        "fallback": "351x47px image",
+        "image_url": "https://i.imgur.com/meJyMRh.png",
+        "image_width": 351,
+        "image_height": 47,
+        "image_bytes": 8853,
+        "from_url": "https://i.imgur.com/meJyMRh.png",
+        "id": 1
+      }
+    ],
+    "ts": "1484393948.000111",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "14ko3629",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "Well. If the processor really expects only one of field or setter to be public, then I wouldn't really expect this to pass.",
+    "ts": "1484394161.000113",
+    "id": "14ko3630",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "It's probably a different error triggering something else triggering the message. Have you been able to see the full stacktrace?",
+    "ts": "1484394221.000114",
+    "id": "14ko3631",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U061HDV96|andreasbackx> uploaded a file: <https://androidchat.slack.com/files/andreasbackx/F3RLE1NTF/pretty_useless_stacktrace.txt|Pretty useless stacktrace>",
+    "file": {
+      "id": "F3RLE1NTF",
+      "created": 1484394306,
+      "timestamp": 1484394306,
+      "name": "Pretty_useless_stacktrace.txt",
+      "title": "Pretty useless stacktrace",
+      "mimetype": "text/plain",
+      "filetype": "text",
+      "pretty_type": "Plain Text",
+      "user": "U061HDV96",
+      "editable": true,
+      "size": 3176,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F3RLE1NTF/pretty_useless_stacktrace.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F3RLE1NTF/download/pretty_useless_stacktrace.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/andreasbackx/F3RLE1NTF/pretty_useless_stacktrace.txt",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F3RLE1NTF-4a07809674",
+      "edit_link": "https://androidchat.slack.com/files/andreasbackx/F3RLE1NTF/pretty_useless_stacktrace.txt/edit",
+      "preview": "org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:kaptDebugKotlin'.\r\n\tat org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeActions(ExecuteActionsTaskExecuter.java:84)\r\n\tat org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:55)\r\n\tat org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter.execute(SkipUpToDateTaskExecuter.java:61)\r\n\tat org.gradle.api.internal.tasks.execution.ValidatingTaskExecuter.execute(ValidatingTaskExecuter.java:58)\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:kaptDebugKotlin'.</pre></div>\n<div><pre>    at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeActions(ExecuteActionsTaskExecuter.java:84)</pre></div>\n<div><pre>    at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:55)</pre></div>\n<div><pre>    at org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter.execute(SkipUpToDateTaskExecuter.java:61)</pre></div>\n<div><pre>    at org.gradle.api.internal.tasks.execution.ValidatingTaskExecuter.execute(ValidatingTaskExecuter.java:58)</pre></div>\n<div><pre></pre></div>\n</div>\n</div>\n",
+      "lines": 29,
+      "lines_more": 24,
+      "preview_is_truncated": true,
+      "channels": [
+        "C0BQU1TDF"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U061HDV96",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U061HDV96|andreasbackx>",
+    "bot_id": null,
+    "ts": "1484394307.000115",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "14ko3632",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "```Note: Creating DefaultRealmModule\nerror: @JsonField annotation can only be used on private fields if both getter and setter are present.\n\n[kapt] Annotation processing complete, errors: 1, warnings: 0\n\ne: /Users/Andreas/Development/Android/Lunchbreak/app/src/main/java/be/lunchbreakapp/lunchbreak/activity/base/PresentableActivity.kt: (1, 1): Some error(s) occurred while processing annotations. Please see the error messages above.\n\n:app:kaptDebugKotlin FAILED\n\nFAILURE: Build failed with an exception.\n\n* What went wrong:```",
+    "ts": "1484394372.000116",
+    "id": "14ko3633",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Before that is a list of data classes that it's processed: `Note: Processing class NameClass`.",
+    "ts": "1484394391.000117",
+    "id": "14ko3634",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "I really don't know. Since you said it actually built successfully before. Maybe look through the changes you've applied since the last build that might be related to it",
+    "ts": "1484394732.000118",
+    "id": "14ko3635",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "What I did do is change all strings to lateinit. Tried undoing that to no avail.",
+    "ts": "1484394758.000119",
+    "id": "14ko3636",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I basically changed all remaining java classes to Kotlin",
+    "ts": "1484394768.000120",
+    "id": "14ko3637",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Maybe I should've done them one by one",
+    "ts": "1484394779.000121",
+    "id": "14ko3638",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Ugh what a pain Kotlin is sometimes",
+    "ts": "1484394787.000122",
+    "id": "14ko3639",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "Tried this?",
+    "attachments": [
+      {
+        "fallback": "[January 13th, 2017 9:55 PM] michaelrocks: You can either make it non-`lateinit` or add `private set` to this property",
+        "ts": "1484340914.000091",
+        "author_subname": "michaelrocks",
+        "channel_id": "C0BQU1TDF",
+        "channel_name": "kotlin",
+        "is_msg_unfurl": true,
+        "text": "You can either make it non-`lateinit` or add `private set` to this property",
+        "author_link": "https://androidchat.slack.com/team/michaelrocks",
+        "author_icon": "https://secure.gravatar.com/avatar/c2ea72b8d001d81fb6ce3f356e45eb3a.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2F3654%2Fimg%2Favatars%2Fava_0021-48.png",
+        "mrkdwn_in": [
+          "text"
+        ],
+        "color": "D0D0D0",
+        "from_url": "https://androidchat.slack.com/archives/kotlin/p1484340914000091",
+        "is_share": true,
+        "footer": "Posted in #kotlin"
+      }
+    ],
+    "ts": "1484394792.000123",
+    "id": "14ko3640",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "No but I haven't changed a single lateinit line that wasn't a string",
+    "ts": "1484394849.000124",
+    "id": "14ko3641",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I guess I'll have to reset",
+    "ts": "1484394912.000125",
+    "id": "14ko3642",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "And do them one by one",
+    "ts": "1484394915.000126",
+    "id": "14ko3643",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Stupid kapt",
+    "ts": "1484394924.000127",
+    "id": "14ko3644",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "This is why I dislike working with Android compared to backend",
+    "ts": "1484394935.000128",
+    "id": "14ko3645",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I have to spend so much time on bugs without a single bit of information",
+    "ts": "1484394966.000129",
+    "id": "14ko3646",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "Is the `@JsonField` target only on fields, or can it also be applied on setters? Maybe `@set:JsonField` might help.",
+    "ts": "1484395080.000130",
+    "id": "14ko3647",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "It detects them afaik",
+    "ts": "1484395106.000131",
+    "id": "14ko3648",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Anyhow",
+    "ts": "1484395109.000132",
+    "id": "14ko3649",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Stashing everything",
+    "ts": "1484395112.000133",
+    "id": "14ko3650",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "Oh. Okay",
+    "ts": "1484395116.000134",
+    "id": "14ko3651",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Those lateinits process just fine",
+    "ts": "1484395118.000135",
+    "id": "14ko3652",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "`open var name = \"\"` to `open lateinit var name: String` works just fine.",
+    "ts": "1484395150.000136",
+    "id": "14ko3653",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "But fails on the `Menu` field. Perhaps the issue is within `Menu` class itself?",
+    "ts": "1484395289.000137",
+    "id": "14ko3654",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I never said it failed on the Menu field.",
+    "ts": "1484395511.000138",
+    "id": "14ko3655",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "It doesn't tell me anything about where it fails",
+    "ts": "1484395530.000139",
+    "id": "14ko3656",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Just converted the menu class to Kotlin",
+    "ts": "1484395538.000140",
+    "id": "14ko3657",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Still builds fine",
+    "ts": "1484395542.000141",
+    "id": "14ko3658",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "And I found the offending class",
+    "ts": "1484395593.000142",
+    "id": "14ko3659",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U061HDV96|andreasbackx> uploaded a file: <https://androidchat.slack.com/files/andreasbackx/F3QSN65ME/offending_class.kt|Offending class>",
+    "file": {
+      "id": "F3QSN65ME",
+      "created": 1484395616,
+      "timestamp": 1484395616,
+      "name": "Offending_class.kt",
+      "title": "Offending class",
+      "mimetype": "text/plain",
+      "filetype": "kotlin",
+      "pretty_type": "Kotlin",
+      "user": "U061HDV96",
+      "editable": true,
+      "size": 256,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F3QSN65ME/offending_class.kt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F3QSN65ME/download/offending_class.kt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/andreasbackx/F3QSN65ME/offending_class.kt",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F3QSN65ME-02b3c4f2ed",
+      "edit_link": "https://androidchat.slack.com/files/andreasbackx/F3QSN65ME/offending_class.kt/edit",
+      "preview": "@JsonObject\r\nopen class Hours {\r\n\r\n\t@JsonField(name = arrayOf(\"holidayperiods\"))\r\n\topen var holidayPeriods: List<HolidayPeriod> = emptyList()\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-variable\">@JsonObject</span></pre></div>\n<div><pre><span class=\"cm-keyword\">open</span> <span class=\"cm-keyword\">class</span> <span class=\"cm-def\">Hours</span> {</pre></div>\n<div><pre>&#8203;</pre></div>\n<div><pre>\t<span class=\"cm-variable\">@JsonField</span>(<span class=\"cm-variable\">name</span> <span class=\"cm-operator\">=</span> <span class=\"cm-variable\">arrayOf</span>(<span class=\"cm-string\">&quot;holidayperiods&quot;</span>))</pre></div>\n<div><pre>\t<span class=\"cm-keyword\">open</span> <span class=\"cm-keyword\">var</span> <span class=\"cm-def\">holidayPeriods</span>: <span class=\"cm-variable\">List</span><span class=\"cm-operator\">&lt;</span><span class=\"cm-variable\">HolidayPeriod</span><span class=\"cm-operator\">&gt;</span> <span class=\"cm-operator\">=</span> <span class=\"cm-variable\">emptyList</span>()</pre></div>\n</div>\n</div>\n",
+      "lines": 10,
+      "lines_more": 5,
+      "preview_is_truncated": false,
+      "channels": [
+        "C0BQU1TDF"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U061HDV96",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U061HDV96|andreasbackx>",
+    "bot_id": null,
+    "ts": "1484395616.000143",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "14ko3660",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "It's an intermediary data model without lateinits",
+    "ts": "1484395633.000144",
+    "id": "14ko3661",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "This looks pretty normal",
+    "ts": "1484395832.000145",
+    "id": "14ko3662",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "Sorry I can't help here :unamused:",
+    "ts": "1484395850.000146",
+    "id": "14ko3663",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Ugghh",
+    "ts": "1484395898.000147",
+    "id": "14ko3664",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "If only I got some damn info",
+    "ts": "1484395907.000148",
+    "id": "14ko3665",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Reverting that class makes the build succeed",
+    "ts": "1484396048.000149",
+    "id": "14ko3666",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I cannot really make an issue for that library",
+    "ts": "1484396067.000150",
+    "id": "14ko3667",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Because it can just be something on my side",
+    "ts": "1484396072.000151",
+    "id": "14ko3668",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "But god knows because I'm not even getting good logs",
+    "ts": "1484396086.000152",
+    "id": "14ko3669",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "You can try to decompile the Kotlin bytecode to Java, and compare with your original Java version",
+    "ts": "1484396116.000153",
+    "id": "14ko3670",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "How would I do that?",
+    "ts": "1484396144.000154",
+    "id": "14ko3671",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Something like jd-gui?",
+    "ts": "1484396175.000155",
+    "id": "14ko3672",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "Tools &gt; Kotlin &gt; Show Kotlin bytecode. You'll see a decompile button",
+    "ts": "1484396175.000156",
+    "id": "14ko3673",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Yes",
+    "ts": "1484396179.000157",
+    "id": "14ko3674",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "But won't that show me Kotlin decompiled?",
+    "ts": "1484396185.000158",
+    "id": "14ko3675",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "It'll show the bytecode of the Kotlin class, and you can use the decompile button to get the Java equivalent",
+    "ts": "1484396213.000159",
+    "id": "14ko3676",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "Compare that to your own Java class",
+    "ts": "1484396219.000160",
+    "id": "14ko3677",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Well this is useful: <https://i.imgur.com/dLI1dz3.png>",
+    "attachments": [
+      {
+        "fallback": "902x205px image",
+        "image_url": "https://i.imgur.com/dLI1dz3.png",
+        "image_width": 902,
+        "image_height": 205,
+        "image_bytes": 85737,
+        "from_url": "https://i.imgur.com/dLI1dz3.png",
+        "id": 1
+      }
+    ],
+    "ts": "1484396230.000161",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "14ko3678",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "This is why you don't use java for gui apps ¯\\_(ツ)_/¯",
+    "ts": "1484396262.000163",
+    "id": "14ko3679",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "Haha",
+    "ts": "1484396333.000164",
+    "id": "14ko3680",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "This is the decompiled version",
+    "edited": {
+      "user": "U061HDV96",
+      "ts": "1484396430.000000"
+    },
+    "ts": "1484396420.000165",
+    "id": "14ko3681",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U061HDV96|andreasbackx> uploaded a file: <https://androidchat.slack.com/files/andreasbackx/F3QTKTN49/-.java|Untitled>",
+    "file": {
+      "id": "F3QTKTN49",
+      "created": 1484396437,
+      "timestamp": 1484396437,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U061HDV96",
+      "editable": true,
+      "size": 632,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F3QTKTN49/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F3QTKTN49/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/andreasbackx/F3QTKTN49/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F3QTKTN49-2cad739f97",
+      "edit_link": "https://androidchat.slack.com/files/andreasbackx/F3QTKTN49/-.java/edit",
+      "preview": "@JsonObject\r\npublic class Hours {\r\n   @JsonField(\r\n      name = {\"holidayperiods\"}\r\n   )\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-meta\">@JsonObject</span></pre></div>\n<div><pre><span class=\"cm-keyword\">public</span> <span class=\"cm-keyword\">class</span> <span class=\"cm-def\">Hours</span> {</pre></div>\n<div><pre>   <span class=\"cm-meta\">@JsonField</span>(</pre></div>\n<div><pre>      <span class=\"cm-variable\">name</span> <span class=\"cm-operator\">=</span> {<span class=\"cm-string\">&quot;holidayperiods&quot;</span>}</pre></div>\n<div><pre>   )</pre></div>\n</div>\n</div>\n",
+      "lines": 32,
+      "lines_more": 27,
+      "preview_is_truncated": false,
+      "channels": [
+        "C0BQU1TDF"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U061HDV96",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U061HDV96|andreasbackx>",
+    "bot_id": null,
+    "ts": "1484396437.000167",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "14ko3682",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I assume only that class is the problem",
+    "ts": "1484396524.000168",
+    "id": "14ko3683",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Cause in the log is says `Note: Processing class OpeningPeriod`",
+    "ts": "1484396536.000169",
+    "id": "14ko3684",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "and `Note: Processing class HolidayPeriod`",
+    "ts": "1484396546.000170",
+    "id": "14ko3685",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "But not for `Hours`",
+    "edited": {
+      "user": "U061HDV96",
+      "ts": "1484396561.000000"
+    },
+    "ts": "1484396556.000171",
+    "id": "14ko3686",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I'll make an issue for the library I guess",
+    "ts": "1484396681.000173",
+    "id": "14ko3687",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "For one, the message isn't exactly explicit enough. That should be filed",
+    "ts": "1484396741.000174",
+    "id": "14ko3688",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Ohh wait a minute",
+    "ts": "1484396741.000175",
+    "id": "14ko3689",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "In the decompiled one",
+    "ts": "1484396747.000176",
+    "id": "14ko3690",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "It loses the generics",
+    "ts": "1484396751.000177",
+    "id": "14ko3691",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "List&lt;OpeningPeriod&gt; becomes List",
+    "ts": "1484396772.000178",
+    "id": "14ko3692",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1HM4MPLJ",
+    "text": "Yes. That isn't a problem. The generics gets lost anyway",
+    "ts": "1484396792.000179",
+    "id": "14ko3693",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Okay",
+    "ts": "1484396800.000180",
+    "id": "14ko3694",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<https://github.com/bluelinelabs/LoganSquare/issues/193>",
+    "ts": "1484397141.000181",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "+1",
+        "users": [
+          "U1HM4MPLJ"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "14ko3695",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

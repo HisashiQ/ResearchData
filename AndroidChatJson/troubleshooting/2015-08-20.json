@@ -1,0 +1,334 @@
+[
+  {
+    "user": "U08MQ0F8V",
+    "text": "I’m having an issue with some legacy code I want to change, can someone please help me kill it?",
+    "ts": "1440069102.000278",
+    "id": "20tr1788",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08MQ0F8V",
+    "text": "<http://stackoverflow.com/questions/32116652/is-this-a-valid-way-of-holding-a-static-reference-to-and-activity-context-why-s>",
+    "attachments": [
+      {
+        "title": "Is this a valid way of holding a static reference to and Activity/Context? Why shouldn't I do this?",
+        "title_link": "http://stackoverflow.com/questions/32116652/is-this-a-valid-way-of-holding-a-static-reference-to-and-activity-context-why-s",
+        "text": "I have an abstract BaseFragmentActivity class, which all of my Activities in my android application extend. In this class I maintain a static reference to the currently running activity as",
+        "fallback": "Is this a valid way of holding a static reference to and Activity/Context? Why shouldn't I do this?",
+        "thumb_url": "http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon@2.png?v=ea71a5211a91&a",
+        "from_url": "http://stackoverflow.com/questions/32116652/is-this-a-valid-way-of-holding-a-static-reference-to-and-activity-context-why-s",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "id": 1
+      }
+    ],
+    "ts": "1440069103.000279",
+    "id": "20tr1789",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<@U08MQ0F8V> why is that even being used?",
+    "ts": "1440069400.000281",
+    "id": "20tr1790",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08MQ0F8V",
+    "text": "<@U0548MM6B>: So the codebase which I have inherited is so tightly coupled it makes me sad. This is being used almost everywhere a reference to a Context is needed outside of a fragment/activity. Including util classes, dialog button listener callbacks, and even in fragments to find views inside a parent activity.",
+    "edited": {
+      "user": "U08MQ0F8V",
+      "ts": "1440069656.000000"
+    },
+    "ts": "1440069650.000282",
+    "id": "20tr1791",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "oh god, i inherited something similar",
+    "ts": "1440069757.000284",
+    "id": "20tr1792",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "best way is to refactor it right now, trust me. ask for a moment and refactor",
+    "ts": "1440069769.000285",
+    "id": "20tr1793",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "stuff like this not may, but will cause bugs and leaks",
+    "ts": "1440069785.000286",
+    "id": "20tr1794",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "extend your application and use it’s instance as a context where it’s needed",
+    "ts": "1440069805.000287",
+    "id": "20tr1795",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08MQ0F8V",
+    "text": "<@U0548MM6B>: I think it’s more of a symptom of bad architecture, and quick Enterprise Java style fixes that have no consideration for perf or the nuances of the platform. I desperately want to refactor it, and it’s a lot of work, and I need to justify it to our product owner above user features… :disappointed:",
+    "ts": "1440069901.000288",
+    "id": "20tr1796",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08MQ0F8V",
+    "text": "For new stuff I’ve built, I’ve branched away from this practice and am introducing some good practices here and there, but this old stuff haunts my sleep...",
+    "ts": "1440069963.000289",
+    "id": "20tr1797",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "tell him what I told these guys: after next feature release, we start to refactor. 2 weeks feature, 2 weeks refactor, and when we bring it up to a decent level, features are gonna be quick to add",
+    "ts": "1440069974.000290",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U04U5KS3Z"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "20tr1798",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "i know that feel man",
+    "ts": "1440069979.000291",
+    "id": "20tr1799",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "I’m sitting here suffocating in a sea of asyncTasks, contexes being casted into activities which get fragments and use methods to change a button state to invisible according to a static list that was modified in another part of the app somewhere",
+    "ts": "1440070065.000292",
+    "id": "20tr1800",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "i wish for bad architecture, cuz this has NO architecture",
+    "ts": "1440070089.000293",
+    "id": "20tr1801",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08MQ0F8V",
+    "text": "oh dear god...",
+    "ts": "1440070098.000294",
+    "id": "20tr1802",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08MQ0F8V",
+    "text": "sorry to hear that! Thanks for the help though!",
+    "ts": "1440070186.000295",
+    "id": "20tr1803",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053Q5XP2",
+    "text": "I blame google not only for the architecture of this, but also for the fact that no one tells you about the application class. All you hear for years is that static is bad so you don’t know how to do it the right way when it comes to android.",
+    "ts": "1440122352.000296",
+    "id": "20tr1804",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

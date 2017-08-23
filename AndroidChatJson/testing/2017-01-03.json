@@ -1,0 +1,57 @@
+[
+  {
+    "user": "U3LQZ3G3D",
+    "text": "<@U3LQZ3G3D|base> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1483472467.000069",
+    "id": "03te2829",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "So I have a RequestManager that accept OkHttpClient as a parameter to initialize my own API client, inside that RequestManager I have static methods that can call REST API based on services, I also have that services implemented in different classes, so the flow will be like this : \n\n1. SDK Instance Initialize (pass OkHttpClient) -&gt; RequestManager Initialize APIClient (with OkHttpClient)\n2. Call made to RequestManager static method -&gt;  Create new Service Instance matching the call (pass APIClient) -&gt; Service Instance will make REST API client with APIClient\n\nMy question is, in order to create test for Service classes, I will need an APIClient, so I will need an OkHttpClient too, what's the best way to create it? Should I just mock it with Mockito? Will it work with MockWebServer if I mock it with Mockito? Or do I need to change the Architecture?\n\nThanks!",
+    "ts": "1483497484.000070",
+    "id": "03te2830",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ESBF4AV",
+    "text": "Figured, this out I decided to create a TestUtil class to create default OkHttpClient for test",
+    "ts": "1483515064.000071",
+    "id": "03te2831",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

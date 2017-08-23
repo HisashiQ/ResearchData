@@ -1,0 +1,533 @@
+[
+  {
+    "subtype": "file_share",
+    "text": "<@U053TJ508|garrettbt> uploaded a file: <https://androidchat.slack.com/files/garrettbt/F076FLUSE/recycleview_onclick_not_working.txt|RecycleView onClick not working>",
+    "file": {
+      "id": "F076FLUSE",
+      "created": 1435966671,
+      "timestamp": 1435966671,
+      "name": "RecycleView_onClick_not_working.txt",
+      "title": "RecycleView onClick not working",
+      "mimetype": "text/plain",
+      "filetype": "text",
+      "pretty_type": "Plain Text",
+      "user": "U053TJ508",
+      "editable": true,
+      "size": 851,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F076FLUSE/recycleview_onclick_not_working.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F076FLUSE/download/recycleview_onclick_not_working.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/garrettbt/F076FLUSE/recycleview_onclick_not_working.txt",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F076FLUSE-936b0b75e9",
+      "edit_link": "https://androidchat.slack.com/files/garrettbt/F076FLUSE/recycleview_onclick_not_working.txt/edit",
+      "preview": "public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{\r\n        protected TextView title;\r\n        protected TextView rank;\r\n        protected ImageView image;\r\n        protected ImageButton share;\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{</pre></div>\n<div><pre>        protected TextView title;</pre></div>\n<div><pre>        protected TextView rank;</pre></div>\n<div><pre>        protected ImageView image;</pre></div>\n<div><pre>        protected ImageButton share;</pre></div>\n<div><pre></pre></div>\n</div>\n</div>\n",
+      "lines": 20,
+      "lines_more": 15,
+      "preview_is_truncated": false,
+      "channels": [
+        "C0565EVTD"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U053TJ508",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U053TJ508|garrettbt>",
+    "bot_id": null,
+    "ts": "1435966671.001209",
+    "id": "03tr1139",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "Any reason why only clicking the share image button registers a click and not the whole itemView?",
+    "ts": "1435966710.001210",
+    "id": "03tr1140",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054AD9CZ",
+    "text": "The first thing that comes to my mind is that two views can't share on OnClickListener, but I have no idea if that's true",
+    "ts": "1435968912.001211",
+    "id": "03tr1141",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054AD9CZ",
+    "text": "s/on/one",
+    "ts": "1435968921.001212",
+    "id": "03tr1142",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "<@U054AD9CZ>: i tried it with just the itemView.setOnClickListener. No luck",
+    "ts": "1435971286.001213",
+    "id": "03tr1143",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "<@U053TJ508>: you want to make the entire view clickable instead? what I did was to put a view with params match_parent for width and height as the last element in the layout file and set a clicklistener to it",
+    "ts": "1435973496.001214",
+    "id": "03tr1144",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "performance-wise, leaves a lot to be desired i imagine",
+    "ts": "1435973513.001215",
+    "id": "03tr1145",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "overdraw and all  that stuff, i dunno",
+    "ts": "1435973522.001216",
+    "id": "03tr1146",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "<@U054A24ET> yes I want to make the entire view clickable. I will try your method",
+    "ts": "1435973585.001217",
+    "id": "03tr1147",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U054A24ET|squeeish> uploaded a file: <https://androidchat.slack.com/files/squeeish/F076H9XFE/-.xml|Untitled>",
+    "file": {
+      "id": "F076H9XFE",
+      "created": 1435974452,
+      "timestamp": 1435974452,
+      "name": "-.xml",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "xml",
+      "pretty_type": "XML",
+      "user": "U054A24ET",
+      "editable": true,
+      "size": 178,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F076H9XFE/-.xml?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F076H9XFE/download/-.xml?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/squeeish/F076H9XFE/-.xml",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F076H9XFE-aa8da72a44",
+      "edit_link": "https://androidchat.slack.com/files/squeeish/F076H9XFE/-.xml/edit",
+      "preview": "<View\r\n\t  android:id=\"@+id/touchTarget\"\r\n\t  android:layout_width=\"match_parent\"\r\n\t  android:layout_height=\"match_parent\"\r\n\t  android:background=\"?selectableItemBackground\"\r\n\t  />",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-tag cm-bracket\">&lt;</span><span class=\"cm-tag\">View</span></pre></div>\n<div><pre>\t  <span class=\"cm-attribute\">android:id</span>=<span class=\"cm-string\">&quot;@+id/touchTarget&quot;</span></pre></div>\n<div><pre>\t  <span class=\"cm-attribute\">android:layout_width</span>=<span class=\"cm-string\">&quot;match_parent&quot;</span></pre></div>\n<div><pre>\t  <span class=\"cm-attribute\">android:layout_height</span>=<span class=\"cm-string\">&quot;match_parent&quot;</span></pre></div>\n<div><pre>\t  <span class=\"cm-attribute\">android:background</span>=<span class=\"cm-string\">&quot;?selectableItemBackground&quot;</span></pre></div>\n<div><pre>\t  <span class=\"cm-tag cm-bracket\">/&gt;</span></pre></div>\n</div>\n</div>\n",
+      "lines": 6,
+      "lines_more": 0,
+      "preview_is_truncated": null,
+      "channels": [
+        "C0565EVTD"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U054A24ET",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U054A24ET|squeeish>",
+    "bot_id": null,
+    "ts": "1435974452.001218",
+    "id": "03tr1148",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "<@U054A24ET>: How would you get the position of the item though? So if I click the 2nd item in the recycleview is there anyway to get the position?",
+    "ts": "1435974526.001219",
+    "id": "03tr1149",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "no idea about that… haha",
+    "ts": "1435974560.001220",
+    "id": "03tr1150",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "all i needed was to make the entire item clickable",
+    "ts": "1435974574.001221",
+    "id": "03tr1151",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "oh wait...",
+    "ts": "1435974595.001222",
+    "id": "03tr1152",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "i just got what you meant ( apologies, just woke up)",
+    "ts": "1435974602.001223",
+    "id": "03tr1153",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "<@U053TJ508>: I set my onclicklistener in the onbindviewholder method",
+    "ts": "1435974655.001224",
+    "id": "03tr1154",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "there, i just use the position argument from the onbindviewholder method",
+    "ts": "1435974691.001225",
+    "id": "03tr1155",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "ok",
+    "ts": "1435974699.001226",
+    "id": "03tr1156",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "ill try that",
+    "ts": "1435974701.001227",
+    "id": "03tr1157",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U053TJ508|garrettbt> uploaded a file: <https://androidchat.slack.com/files/garrettbt/F076H89BQ/-.txt|Untitled>",
+    "file": {
+      "id": "F076H89BQ",
+      "created": 1435974980,
+      "timestamp": 1435974980,
+      "name": "-.txt",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "text",
+      "pretty_type": "Plain Text",
+      "user": "U053TJ508",
+      "editable": true,
+      "size": 1103,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F076H89BQ/-.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F076H89BQ/download/-.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/garrettbt/F076H89BQ/-.txt",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F076H89BQ-12d35e3072",
+      "edit_link": "https://androidchat.slack.com/files/garrettbt/F076H89BQ/-.txt/edit",
+      "preview": "well I finally got it to work. I was using a card view and I think that influenced the problem. All i did was change my viewholder to this \r\n\r\n    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{\r\n        protected TextView title;\r\n        protected TextView rank;\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>well I finally got it to work. I was using a card view and I think that influenced the problem. All i did was change my viewholder to this </pre></div>\n<div><pre></pre></div>\n<div><pre>    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{</pre></div>\n<div><pre>        protected TextView title;</pre></div>\n<div><pre>        protected TextView rank;</pre></div>\n<div><pre></pre></div>\n</div>\n</div>\n",
+      "lines": 25,
+      "lines_more": 20,
+      "preview_is_truncated": true,
+      "channels": [
+        "C0565EVTD"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U053TJ508",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U053TJ508|garrettbt>",
+    "bot_id": null,
+    "ts": "1435974981.001228",
+    "id": "03tr1158",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U054A24ET",
+    "text": "nice",
+    "ts": "1435976528.001229",
+    "id": "03tr1159",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053TJ508",
+    "text": "<@U054A24ET> thanks anyway",
+    "ts": "1435976613.001230",
+    "id": "03tr1160",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

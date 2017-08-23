@@ -1,0 +1,521 @@
+[
+  {
+    "user": "U1FECKXA9",
+    "text": "Hi all I’ve seen in some case where AsyncTask takes in a URL like this : AsyncTask&lt;URL, Void, Book&gt; but in some cases in takes in a String like this: AsyncTask&lt;String, Void, List&lt;Earthquake&gt;&gt;  . My question is how do we distinguish which one to use and not to use?",
+    "ts": "1473594509.000518",
+    "id": "11de45428",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "use whatever makes sense for you - the generic arguments just specify what signature the task has and what signature the callbacks have.",
+    "ts": "1473596029.000519",
+    "id": "11de45429",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U21MN5Z0R",
+    "text": "Hi, we are thinking of adding new a feature to our android app. (the feature is more of a complete new product inside the current app). Currently the codebase is not in a very good state. (no architecture/testing)\n\nThinking of incorporating some changes. Can anyone suggest some libraries that can help me write clean code.",
+    "ts": "1473609474.000520",
+    "id": "11de45430",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U21MN5Z0R",
+    "text": "Rx and Clean architecture seems to be hot but does it make sense to use it when there is just one developer and timelines are crunched (also i haven’t used them in the past)",
+    "ts": "1473609536.000521",
+    "id": "11de45431",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U21MN5Z0R",
+    "text": "<@U053PPGDC> maybe you can help since you are a team lead so must be knowing about things from product level",
+    "ts": "1473609602.000522",
+    "id": "11de45432",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "hey - depending on your usecase. when we started on this app that we brought in from a 3rd party company we wrote some high level tests around it, then basically wedged the new feature in. only the new feature was well architected and unit tested. After it was released we started the full rebuild.",
+    "ts": "1473609717.000523",
+    "id": "11de45433",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U21MN5Z0R",
+    "text": "i am thinking on similar lines. we are having a hard time hiring people so can’t be sure when new engineers will be joining us",
+    "ts": "1473609787.000524",
+    "id": "11de45434",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U21MN5Z0R",
+    "text": "don’t want to create a unmanageable code base with too many libraries",
+    "ts": "1473609806.000525",
+    "id": "11de45435",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "if it’s unmanageable - rewrite it. I do believe that no code in a project should be more than 2 years old (in an ideal world)",
+    "ts": "1473609873.000526",
+    "id": "11de45436",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U21MN5Z0R",
+    "text": "PS - we are hiring. you can apply at <http://angel.co/squadrun>",
+    "attachments": [
+      {
+        "title": "Sign up - AngelList",
+        "title_link": "http://angel.co/squadrun",
+        "text": "Sign up to get a job at a startup, invest in one or raise money.",
+        "fallback": "Sign up - AngelList",
+        "from_url": "http://angel.co/squadrun",
+        "service_name": "angel.co",
+        "id": 1
+      }
+    ],
+    "ts": "1473609885.000527",
+    "id": "11de45437",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U21MN5Z0R",
+    "text": "thank you",
+    "ts": "1473609894.000529",
+    "id": "11de45438",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U21MN5Z0R",
+    "text": "also have you tried mosby?",
+    "ts": "1473609901.000530",
+    "id": "11de45439",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "post that in <#C0630GLFL|jobs> ^^",
+    "ts": "1473609915.000531",
+    "id": "11de45440",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I personally haven't",
+    "ts": "1473609925.000532",
+    "id": "11de45441",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U21MN5Z0R",
+    "text": "what do you use for mvp?",
+    "ts": "1473609968.000533",
+    "id": "11de45442",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "classes and interfaces? We have no particular framework",
+    "ts": "1473610025.000534",
+    "id": "11de45443",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": ":slightly_smiling_face:",
+    "ts": "1473610028.000535",
+    "id": "11de45444",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U21MN5Z0R",
+    "text": "ok",
+    "ts": "1473610289.000536",
+    "id": "11de45445",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U21MN5Z0R",
+    "text": "and Rx? do you use it",
+    "ts": "1473610300.000537",
+    "id": "11de45446",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U21MN5Z0R> The thinking behind clean architecture is more or less like a long term investment",
+    "ts": "1473610439.000538",
+    "id": "11de45447",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "12 months down the road, when my requirements change, will it be easy to add new features etc",
+    "ts": "1473610469.000539",
+    "id": "11de45448",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "RX might be tough to wrap your head around, but it lets you do more with less stress",
+    "ts": "1473610501.000540",
+    "id": "11de45449",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "once you figure it out anyway",
+    "edited": {
+      "user": "U08GFT5V5",
+      "ts": "1473610511.000000"
+    },
+    "ts": "1473610508.000541",
+    "id": "11de45450",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U21MN5Z0R",
+    "text": "great thank you",
+    "ts": "1473610524.000543",
+    "id": "11de45451",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U21MN5Z0R",
+    "text": "i think i might skip rx in this iteration",
+    "ts": "1473610532.000544",
+    "id": "11de45452",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "<@U21MN5Z0R> best to skip on adding more complexity (RxJava) to what can already be a complex task of rewriting your codebase to follow MVP architecture.",
+    "ts": "1473615203.000545",
+    "id": "11de45453",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05473HHT",
+    "text": "Once you have a clean architecture in place, it *should* be pretty straight forward to start using RxJava for networking and then adding it elsewhere.",
+    "ts": "1473615265.000546",
+    "id": "11de45454",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U21MN5Z0R",
+    "text": "<@U05473HHT> thank you. i was thinking on similar lines",
+    "ts": "1473660574.000547",
+    "id": "11de45455",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

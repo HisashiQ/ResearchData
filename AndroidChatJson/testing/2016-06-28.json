@@ -1,0 +1,185 @@
+[
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U0552GXEN>: that is not a really good way to use an eventbus so for the sake of the argument let's consider that eventbus wrapper legacy code. To test it now until you refactor it you have 2 choices:\n\n1. _Override the EventBus_: In the static wrapper make a method which which you can replace the single instance of the real event bus with a mocked one like so: \n\n```\npublic static void set(EventBus bus) {\n    INSTANCE = bus;\n}\n\npublic static void reset() {\n    INSTANCE = null;\n}\n```\n\nAt the `@Before` of every test set a mocked bus and in the '@After' reset it. *Do not forget to reset it* because that will affect the rest of the tests and create a very nasty bug. Even better you could create a JUnit `@Rule' for it.\n\n2. _Use Powermock_: You can use Powermock in order to set the eventbus every time. \n\nI suggest the first way but keep in mind that the code should be refactored ASAP in order to not have to use any of those 2 ways. The first way is more used for things that are used accross the system and not in every case.",
+    "ts": "1467105787.000091",
+    "id": "28te1519",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1M0H2TT3",
+    "subtype": "channel_join",
+    "text": "<@U1M0H2TT3|5hirish> has joined the channel",
+    "ts": "1467123796.000092",
+    "id": "28te1520",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0552GXEN",
+    "text": "<@U09T8SFG8>: yep this makes perfect sense, I had implemented the first way you mentioned because I preferred that as well. I had not considered the case where I needed to reset it back to the original object though, so I will add that. Thanks for the suggestion!",
+    "ts": "1467125013.000093",
+    "id": "28te1521",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0552GXEN",
+    "text": "For refactoring would you recommend simply removing the wrapper class? and perhaps injecting the event bus where needed so I could inject a mock?",
+    "ts": "1467125156.000094",
+    "id": "28te1522",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U0552GXEN>: hard to say without knowing the reason why they made a wrapper class to have a singleton. In any case convert the wrapper into a normal object where the static methods are instance method and remove the singleton aspect of it. Then take that object and pass it through the constructor wherever it is needed. When I need singletons I do it with dagger but I am not sure if you guys use that. ",
+    "ts": "1467125455.000095",
+    "id": "28te1523",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0552GXEN",
+    "text": "Yes <@U09T8SFG8> we use Dagger so thats what I was thinking about doing too",
+    "ts": "1467125500.000096",
+    "id": "28te1524",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0552GXEN",
+    "text": "Great, this is very helpful",
+    "ts": "1467125521.000097",
+    "id": "28te1525",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0552GXEN",
+    "text": "<@U09T8SFG8>: :taco:",
+    "ts": "1467125537.000098",
+    "id": "28te1526",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08SZ817D",
+    "subtype": "channel_join",
+    "text": "<@U08SZ817D|jackmalpo> has joined the channel",
+    "ts": "1467125923.000099",
+    "id": "28te1527",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1M2KRLVA",
+    "subtype": "channel_join",
+    "text": "<@U1M2KRLVA|sbeech> has joined the channel",
+    "ts": "1467136399.000100",
+    "id": "28te1528",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

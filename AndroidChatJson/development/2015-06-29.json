@@ -1,0 +1,1724 @@
+[
+  {
+    "user": "U063EMGDQ",
+    "text": "Hey everyone… I am about to start the model and services of a database, simple login with some lists and detail views… The protocol is JSON and I am about to build a DB to grab de the data from the services and put into the DB… Someone knows a good example of structure and pratices about this area, it is the first time and I need some guidelines, thank you",
+    "ts": "1435572275.002946",
+    "id": "29de3182",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Depends a bit on how much data, how many attributes and what you need to do with it",
+    "ts": "1435572721.002947",
+    "id": "29de3183",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "In the simplest form you can just save the JSON objects directly. If you need the structure for your views, then you need to save everything you need into a structured database",
+    "ts": "1435572759.002948",
+    "id": "29de3184",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "But is your question about database modeling or about ways to handle databses under Android?",
+    "ts": "1435572784.002949",
+    "id": "29de3185",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U063EMGDQ",
+    "text": "Hmmm both, my first approach is when the user perform a login in the app I will download all information and save into a data.json and to render every view I will consult the data.json… If I perform and update to the services I will download the all json again (2 Kb) of information",
+    "ts": "1435576061.002950",
+    "id": "29de3186",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U063EMGDQ",
+    "text": "This can be bigger but not too much...",
+    "ts": "1435576074.002951",
+    "id": "29de3187",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U063EMGDQ",
+    "text": "My concern is about security and performace, I do not know if I should grab the json parse all data and build a database and then update the database for every service request",
+    "ts": "1435576163.002952",
+    "id": "29de3188",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U063EMGDQ",
+    "text": "<@U04TK850N>: also I will use Ion to perform the requests",
+    "ts": "1435576204.002953",
+    "id": "29de3189",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Is it always just one json no matter what?",
+    "ts": "1435576265.002954",
+    "id": "29de3190",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Because then I’d say a database is a bit too much",
+    "ts": "1435576279.002955",
+    "id": "29de3191",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U063EMGDQ",
+    "text": "I have a method that can request all data from each user like /client/getAll and the service returns a structure like:\n- {clientInfo: ….}\n- {servicesInfo: ….}\n- {xptoInfo: ….}\nAnd I have views for each entry. Like ViewInfo is clientInfo etc etc",
+    "ts": "1435576437.002956",
+    "id": "29de3192",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U063EMGDQ",
+    "text": "But I have method to request each node of the structure",
+    "ts": "1435576458.002957",
+    "id": "29de3193",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U063EMGDQ",
+    "text": "So is a matter of my approach",
+    "ts": "1435576466.002958",
+    "id": "29de3194",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Hm, I’d always say use only as much data transfer as you really need. Of yourse if you want to update single nodes, a database would be the cleaner approach and probably easier to handle if your data gets bigger and maybe new attributes are added",
+    "ts": "1435576696.002959",
+    "id": "29de3195",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U063EMGDQ",
+    "text": "Ok, I will create a database and update the data in there and sync with the services… I want to escape for creating a DB because I have no experience doing that but I have to learn… Do you know any good starting point?",
+    "ts": "1435576932.002960",
+    "id": "29de3196",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I found this (and other tutorials on the site) a good starting point: <http://www.grokkingandroid.com/android-tutorial-writing-your-own-content-provider/>",
+    "attachments": [
+      {
+        "service_name": "Grokking Android",
+        "title": "Android Tutorial: Writing your own Content Provider",
+        "title_link": "http://www.grokkingandroid.com/android-tutorial-writing-your-own-content-provider/",
+        "text": "This is the last part of a three part tutorial on content providers. In this post I am going to show you how to write your own content provider. I covered the common concepts of content providers in my first post of this series. And in the second part I’ve covered how to use content [...]  Continue Reading  \"Android Tutorial: Writing your own Content Provider\"",
+        "fallback": "Grokking Android: Android Tutorial: Writing your own Content Provider",
+        "image_url": "http://www.grokkingandroid.com/wordpress/wp-content/uploads/2012/06/lentitems_screenshot-153x300.png",
+        "ts": 1339543874,
+        "from_url": "http://www.grokkingandroid.com/android-tutorial-writing-your-own-content-provider/",
+        "image_width": 128,
+        "image_height": 250,
+        "image_bytes": 23316,
+        "id": 1
+      }
+    ],
+    "ts": "1435577016.002961",
+    "id": "29de3197",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "That would give you the complete Database &lt;-&gt; ContentProvider &lt;-&gt; View interaction",
+    "ts": "1435577058.002963",
+    "id": "29de3198",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "But you are free to strip the ContentProvider out if you never need that abstraction layer",
+    "ts": "1435577085.002964",
+    "id": "29de3199",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "But I found it good to learn the concepts around it as you’ll have to use or write one eventually",
+    "ts": "1435577103.002965",
+    "id": "29de3200",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U063EMGDQ",
+    "text": "Ok I will take a look on this, thanks for your help",
+    "ts": "1435577355.002966",
+    "id": "29de3201",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U063EMGDQ",
+    "text": ":wink:",
+    "ts": "1435577357.002967",
+    "id": "29de3202",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "I came up with a script to pull screenshots from a device/emulator via adb and label them with a timestamp, if anyone is interested: <https://gist.github.com/damien5314/c97fc702b2d722f8ec58> <https://gist.github.com/damien5314/288337f2a1453c112be1>",
+    "ts": "1435600073.002968",
+    "id": "29de3203",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "nothing mindblowing but it’s saving me some time",
+    "ts": "1435600083.002969",
+    "id": "29de3204",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I've got a script to auto upload it to imgur",
+    "ts": "1435600127.002970",
+    "id": "29de3205",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Also got one to auto connect to Android via Wi-Fi",
+    "edited": {
+      "user": "U061HDV96",
+      "ts": "1435600151.000000"
+    },
+    "ts": "1435600148.002971",
+    "id": "29de3206",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Needs a static local IP on your phone though",
+    "ts": "1435600168.002973",
+    "id": "29de3207",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "oh that’s awesome",
+    "ts": "1435600180.002974",
+    "id": "29de3208",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "and yeah I have a script to call “adb connect 192.168.x.x” when i use adb over wifi",
+    "ts": "1435600220.002975",
+    "id": "29de3209",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "since i was annoyed at having to keep typing the IP haha",
+    "ts": "1435600236.002976",
+    "id": "29de3210",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Mine auto opens the port and stuff too",
+    "ts": "1435600237.002977",
+    "id": "29de3211",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "gist it? :wink: the imgur thing sounds cool",
+    "ts": "1435600279.002978",
+    "id": "29de3212",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "In powershell you can use `[int][double]::Parse((Get-Date -UFormat %s))` to get the unix time :smile:",
+    "ts": "1435600285.002979",
+    "id": "29de3213",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I think I gisted it a while back",
+    "ts": "1435600289.002980",
+    "id": "29de3214",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<https://gist.github.com/AndreasBackx/a910d11ad86be5e1154c>",
+    "ts": "1435600304.002981",
+    "id": "29de3215",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "thanks",
+    "ts": "1435600312.002982",
+    "id": "29de3216",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Check it again, I just updated it",
+    "ts": "1435600333.002983",
+    "id": "29de3217",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Well nothing changed actually hahah",
+    "ts": "1435600352.002984",
+    "id": "29de3218",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Well I wanted to be sure :stuck_out_tongue:",
+    "ts": "1435600359.002985",
+    "id": "29de3219",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "and yeah langerhans you can modify the timestamp part as desired, i’m new to shell/batch scripting so i just did enough to get it working",
+    "ts": "1435600361.002986",
+    "id": "29de3220",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": ":simple_smile:",
+    "ts": "1435600426.002987",
+    "id": "29de3221",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U0546QERR>: <https://gist.github.com/AndreasBackx/76a42e4f65699435acd3>",
+    "ts": "1435600464.002988",
+    "id": "29de3222",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "your API key is in there, I’m guessing that should be changed?",
+    "ts": "1435600579.002989",
+    "id": "29de3223",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "That's not my key",
+    "ts": "1435600584.002990",
+    "id": "29de3224",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I think it's some kind of key from an old Imgur API",
+    "ts": "1435600596.002991",
+    "id": "29de3225",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Not linked to me anyway",
+    "ts": "1435600603.002992",
+    "id": "29de3226",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "for public uploads or something? gotcha",
+    "ts": "1435600605.002993",
+    "id": "29de3227",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I think so",
+    "ts": "1435600609.002994",
+    "id": "29de3228",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Most of this is from scripts I found around",
+    "ts": "1435600635.002995",
+    "id": "29de3229",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Well small one liners I made a function out of",
+    "ts": "1435600650.002996",
+    "id": "29de3230",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I've also got a function to convert a video to good web formats",
+    "ts": "1435600674.002997",
+    "id": "29de3231",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "But that will require you to have zsh installed.",
+    "ts": "1435600683.002998",
+    "id": "29de3232",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "and ffmpeg",
+    "ts": "1435600689.002999",
+    "id": "29de3233",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "yeah I need to start a collection, I didn’t realize the power of command line scripts until recently :x",
+    "ts": "1435600768.003000",
+    "id": "29de3234",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Zsh takes a while to load though",
+    "ts": "1435600784.003001",
+    "id": "29de3235",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "It's a bit annoying",
+    "ts": "1435600786.003002",
+    "id": "29de3236",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "I haven’t done videos for my apps yet but maybe I should",
+    "ts": "1435600829.003003",
+    "id": "29de3237",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "The function takes a long time",
+    "ts": "1435600839.003004",
+    "id": "29de3238",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "1-2 hours",
+    "ts": "1435600843.003005",
+    "id": "29de3239",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "But I did that for a particular reason to check the differences in file size etc",
+    "ts": "1435600857.003006",
+    "id": "29de3240",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "60fps compared to 30fps is worth it",
+    "ts": "1435600869.003007",
+    "id": "29de3241",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "The difference in size is small",
+    "ts": "1435600886.003008",
+    "id": "29de3242",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "But it is perceived way better",
+    "ts": "1435600891.003009",
+    "id": "29de3243",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Then I can afford to use @2x for dimensions too",
+    "ts": "1435600927.003010",
+    "id": "29de3244",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Compared to how it will show on the website",
+    "ts": "1435600934.003011",
+    "id": "29de3245",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "For around 1.5MB",
+    "ts": "1435600940.003012",
+    "id": "29de3246",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "do you use it for app promo videos or something else?",
+    "ts": "1435600943.003013",
+    "id": "29de3247",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "like on google play",
+    "ts": "1435600951.003014",
+    "id": "29de3248",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Not atm, we haven't updated it yet",
+    "ts": "1435600952.003015",
+    "id": "29de3249",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "I think tonight's project should be to try out dependency injection, I keep hearing people call dagger their #1 library and I've never tried it",
+    "ts": "1435625151.003016",
+    "id": "29de3250",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "my project is already in MVP so hopefully it's pretty straightforward",
+    "ts": "1435625207.003017",
+    "id": "29de3251",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060X2M53",
+    "text": "dagger != dependency injection",
+    "ts": "1435625534.003018",
+    "id": "29de3252",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "then tonight's project is to try out dagger lol",
+    "ts": "1435625793.003019",
+    "id": "29de3253",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "it says dependency injection everywhere though &gt;_&gt;",
+    "ts": "1435625847.003020",
+    "id": "29de3254",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053Q5XP2",
+    "text": "<https://github.com/square/dagger>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "square/dagger",
+        "title_link": "https://github.com/square/dagger",
+        "text": "dagger - A fast dependency injector for Android and Java.",
+        "fallback": "GitHub: square/dagger",
+        "thumb_url": "https://avatars0.githubusercontent.com/u/82592?v=3&s=400",
+        "from_url": "https://github.com/square/dagger",
+        "thumb_width": 234,
+        "thumb_height": 234,
+        "id": 1
+      }
+    ],
+    "ts": "1435626465.003021",
+    "id": "29de3255",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053Q5XP2",
+    "text": "...",
+    "ts": "1435626469.003023",
+    "id": "29de3256",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<@U0546QERR>: I don’t use it and everything is fine",
+    "ts": "1435627588.003024",
+    "id": "29de3257",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "The only thing I see it do that really makes sense is the singleton helpers",
+    "ts": "1435627638.003025",
+    "id": "29de3258",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "past that I always want fine grain control over life cycle events and think all its really doing is trying to beat android into something its not",
+    "ts": "1435627664.003026",
+    "id": "29de3259",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "point in case, google needed to rewrite it to not suck",
+    "ts": "1435627687.003027",
+    "id": "29de3260",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I think dagger 2 is a significant improvement but still not necessary",
+    "ts": "1435627708.003028",
+    "id": "29de3261",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Some people argue that dagger isn't true dependency injection in the \"spirit\" of the library. However, plenty of ways to make it work both by definition and implementation",
+    "ts": "1435628053.003029",
+    "id": "29de3262",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "I think Dagger is another case of over-engineering",
+    "ts": "1435628165.003030",
+    "id": "29de3263",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053Q5XP2",
+    "text": "<@U055GGAHS>: I agree. I’m actually ok with Dagger and will probably use it in my next project, and I’ll definitley try out RxJava, but IMO MVP is even worse. Just breaking every little thing into three separate classes is not necessarily good design.  We all know that most and crashes that can’t be quickly fixed from a bug report are lifecycle errors and stuff like facebook integration.",
+    "ts": "1435628518.003031",
+    "id": "29de3264",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "<@U053Q5XP2> I only use MVP where I feel it's required, and for my app it made a lot of sense because I have 2 views that I'm using in different adapters and before MVP I had a bunch of code duplication, which bothered me",
+    "ts": "1435629183.003032",
+    "id": "29de3265",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "I can see how some people might consider it overkill though if they don't have that problem",
+    "ts": "1435629207.003033",
+    "id": "29de3266",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "I've been getting along fine without dagger, I've just heard such good things I thought I'd give it a shot. it sounds like it pushes you to follow some good design patterns",
+    "ts": "1435629320.003034",
+    "id": "29de3267",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UCB0RU",
+    "text": "Hi, all. Does anyone get the same problem <http://stackoverflow.com/questions/31128533/android-studio-cant-open-any-projects>??",
+    "attachments": [
+      {
+        "title": "Android Studio can't open any projects",
+        "title_link": "http://stackoverflow.com/questions/31128533/android-studio-cant-open-any-projects",
+        "text": "all. My Android Studio (v1.2.2) can't open or create any project on my mac suddenly, the IDE always show No Files are open and does not show any error message, but I'm sure that all my files exis...",
+        "fallback": "Android Studio can't open any projects",
+        "thumb_url": "http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon@2.png?v=ea71a5211a91&a",
+        "from_url": "http://stackoverflow.com/questions/31128533/android-studio-cant-open-any-projects",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "id": 1
+      }
+    ],
+    "ts": "1435631589.003035",
+    "id": "29de3268",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i think <@U061HDV96> was just having that problem in the hangouts channel, he reinstalled his IDE",
+    "ts": "1435632143.003037",
+    "id": "29de3269",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UCB0RU",
+    "text": "I’ve reinstalled my IDE, but the problem isn’t fixed at all.",
+    "ts": "1435632279.003038",
+    "id": "29de3270",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": ":confused:",
+    "ts": "1435633079.003039",
+    "id": "29de3271",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04UCB0RU",
+    "text": "I’ve fixed this problem. It's caused by Crashlytic (Fabric) plugins. Just removing this plugin and restart the Android Stuido.",
+    "ts": "1435634738.003040",
+    "id": "29de3272",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "crazy",
+    "ts": "1435636557.003041",
+    "id": "29de3273",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U070REDUJ",
+    "subtype": "channel_join",
+    "text": "<@U070REDUJ|awecodeman> has joined the channel",
+    "ts": "1435646492.003042",
+    "id": "29de3274",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

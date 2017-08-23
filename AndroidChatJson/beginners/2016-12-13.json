@@ -1,0 +1,1172 @@
+[
+  {
+    "user": "U3DAHQMQR",
+    "text": "<@U3DAHQMQR|raevilman> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481618926.000405",
+    "id": "13be10904",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37BP6E73",
+    "text": "I've seen people declaring variables like this: `EditText nameInput` and sometimes `private static EditText nameInput`, which is better approach/preferred if the variable is only used inside that Activity class? Is there much difference?",
+    "ts": "1481621875.000406",
+    "id": "13be10905",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "Yes. Don't use static for anythig related to Android Context",
+    "ts": "1481622027.000407",
+    "id": "13be10906",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "`EditText nameInput` is fine",
+    "ts": "1481622107.000408",
+    "id": "13be10907",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37BP6E73",
+    "text": "<@U0E72HWTX>  thank you for clearing that up :taco:",
+    "ts": "1481622158.000409",
+    "id": "13be10908",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "Read about leaking memory :slightly_smiling_face: <https://android-developers.blogspot.com/2009/01/avoiding-memory-leaks.html>",
+    "attachments": [
+      {
+        "title": "Avoiding memory leaks",
+        "title_link": "https://android-developers.blogspot.com/2009/01/avoiding-memory-leaks.html",
+        "text": "Android applications are, at least on the T-Mobile G1, limited to 16 MB of heap. It's both a lot of memory for a phone and yet very little f...",
+        "fallback": "Avoiding memory leaks",
+        "from_url": "https://android-developers.blogspot.com/2009/01/avoiding-memory-leaks.html",
+        "service_icon": "https://android-developers.blogspot.com/favicon.ico",
+        "service_name": "android-developers.blogspot.com",
+        "id": 1
+      }
+    ],
+    "ts": "1481622217.000410",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "13be10909",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37BP6E73",
+    "text": "<@U0E72HWTX> on the article you shared, what does this mean.. \"Try using the context-application instead of a context-activity\"? Is it that I should be using `getApplicationContext()` instead of `getBaseContext()` whenever possible inside of activity?",
+    "edited": {
+      "user": "U37BP6E73",
+      "ts": "1481622683.000000"
+    },
+    "ts": "1481622672.000412",
+    "id": "13be10910",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "The general rule is yes",
+    "ts": "1481622745.000414",
+    "id": "13be10911",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "use getApplicationContext when you can",
+    "ts": "1481622753.000415",
+    "id": "13be10912",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "but it's not always true :slightly_smiling_face:",
+    "ts": "1481622762.000416",
+    "id": "13be10913",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "<https://possiblemobile.com/2013/06/context/>",
+    "attachments": [
+      {
+        "service_name": "Possible Mobile",
+        "title": "Context, What Context? - by Dave Smith of Double Encore",
+        "title_link": "https://possiblemobile.com/2013/06/context/",
+        "text": "Context is a common object in the Android framework, but are you sure you're using it properly? There are different types of Context for different purposes.",
+        "fallback": "Possible Mobile: Context, What Context? - by Dave Smith of Double Encore",
+        "thumb_url": "https://possiblemobile.com/wp-content/uploads/2013/06/Context-Insight.png",
+        "ts": 1371750304,
+        "from_url": "https://possiblemobile.com/2013/06/context/",
+        "thumb_width": 1200,
+        "thumb_height": 620,
+        "service_icon": "https://possiblemobile.com/assets/img/favicon.ico",
+        "id": 1
+      }
+    ],
+    "ts": "1481622765.000417",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "13be10914",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E72HWTX",
+    "text": "another good one for you",
+    "ts": "1481622772.000419",
+    "id": "13be10915",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37BP6E73",
+    "text": "<@U0E72HWTX> wow this is good, I probably need more time to get the concept. Android development is very challenging :stuck_out_tongue: thanks for sharing.",
+    "ts": "1481622918.000420",
+    "id": "13be10916",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E4J6JDB",
+    "text": "<@U3E4J6JDB|shanshan> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481624289.000421",
+    "id": "13be10917",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U25CTHVN0",
+    "text": "Hey guys can anyone guide me what is best for push notifications PUSHER or PUBNUB for android application.?",
+    "ts": "1481624385.000422",
+    "id": "13be10918",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K27U3ML",
+    "text": "I preferred the pubnub api but neither are push notifications",
+    "ts": "1481626021.000423",
+    "id": "13be10919",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K27U3ML",
+    "text": "either will keep a websocket connection open which is a significantly higher battery drain that going with FCM (<https://firebase.google.com/docs/cloud-messaging/>)",
+    "attachments": [
+      {
+        "service_name": "Firebase",
+        "title": "Firebase Cloud Messaging  |  Firebase",
+        "title_link": "https://firebase.google.com/docs/cloud-messaging/",
+        "text": "Firebase Cloud Messaging (FCM) is a cross-platform messaging solution that lets you reliably deliver messages at no cost.",
+        "fallback": "Firebase: Firebase Cloud Messaging  |  Firebase",
+        "from_url": "https://firebase.google.com/docs/cloud-messaging/",
+        "service_icon": "https://firebase.google.com/_static/5b9f265699/images/firebase/touchicon-180.png",
+        "id": 1
+      }
+    ],
+    "ts": "1481626071.000424",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "13be10920",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ZJL26E8",
+    "text": "How about when creating a library? I have a library and I need to send context around my objects. My idea was to always initialize my library when Application onCreate is called and I have a class that has a static reference to the Application, I also have a static reference to the current activity, I added ActivityLifecycleCallbacks to the Application and whenever onActivityCreated is called I update the mActivity. Is this a good way?",
+    "ts": "1481629500.000426",
+    "id": "13be10921",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "Google want you to pass Context every time, not to store it statically :upside_down_face:",
+    "ts": "1481629650.000427",
+    "id": "13be10922",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ZJL26E8",
+    "text": "<https://gist.github.com/Jenovas/bb6b2dc52c0aec15329a11c2488ab56d>",
+    "ts": "1481629663.000428",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "13be10923",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ZJL26E8",
+    "text": "this is how the container looks like",
+    "ts": "1481629669.000429",
+    "id": "13be10924",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ZJL26E8",
+    "text": "so I’m supposed to pass everywhere the context “by hand”?",
+    "ts": "1481629715.000430",
+    "id": "13be10925",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ZJL26E8",
+    "text": "cause this is a library that does alot of background work",
+    "ts": "1481629728.000431",
+    "id": "13be10926",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ZJL26E8",
+    "text": "services",
+    "ts": "1481629731.000432",
+    "id": "13be10927",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ZJL26E8",
+    "text": "pushes",
+    "ts": "1481629735.000433",
+    "id": "13be10928",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ZJL26E8",
+    "text": "statistics etc",
+    "ts": "1481629745.000434",
+    "id": "13be10929",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ZJL26E8",
+    "text": "how about using Dagger 2 to hold the application / context?",
+    "ts": "1481629777.000435",
+    "id": "13be10930",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0ZJL26E8",
+    "text": "is that also a bad design / thing?",
+    "ts": "1481629787.000436",
+    "id": "13be10931",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E5YM3HS",
+    "text": "<@U3E5YM3HS|richard.lee> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481633734.000437",
+    "id": "13be10932",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3EQFHSAK",
+    "text": "<@U3EQFHSAK|kevalpatel2106> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481636812.000438",
+    "id": "13be10933",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3DDR669F",
+    "text": "<@U3DDR669F|krunal3kapadiya> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481636921.000439",
+    "id": "13be10934",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3DD5B86L",
+    "text": "<@U3DD5B86L|rosamc> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481638142.000440",
+    "id": "13be10935",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3EQJUNLW",
+    "text": "<@U3EQJUNLW|ivanfenenko> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481638890.000441",
+    "id": "13be10936",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E4R3FM0",
+    "text": "<@U3E4R3FM0|nhphung216> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481639121.000442",
+    "id": "13be10937",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E50PVMG",
+    "text": "<@U3E50PVMG|bad.s> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481640278.000443",
+    "id": "13be10938",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3EB28SFN",
+    "text": "<@U3EB28SFN|buster> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481653394.000444",
+    "id": "13be10939",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E7DTS2X",
+    "text": "<@U3E7DTS2X|donald_andrews> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481655572.000445",
+    "id": "13be10940",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E9TP95Y",
+    "text": "<@U3E9TP95Y|nishant> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481657120.000446",
+    "id": "13be10941",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3DLRJL9W",
+    "text": "<@U3DLRJL9W|oguseynov> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481665918.000447",
+    "id": "13be10942",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "Hi",
+    "ts": "1481682617.000448",
+    "id": "13be10943",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I need help in retrofit",
+    "ts": "1481682622.000449",
+    "id": "13be10944",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I am debugging the response object returned to me",
+    "ts": "1481682635.000450",
+    "id": "13be10945",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "It kept on saying error 400",
+    "ts": "1481682645.000451",
+    "id": "13be10946",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "Bad Request",
+    "ts": "1481682649.000452",
+    "id": "13be10947",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "I am digging like F^CK on the object tree",
+    "ts": "1481682660.000453",
+    "id": "13be10948",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "where do I get the message of the error?",
+    "ts": "1481682666.000454",
+    "id": "13be10949",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "How would I know the code of the request sent???",
+    "ts": "1481682679.000455",
+    "id": "13be10950",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "alright nvm",
+    "ts": "1481684620.000456",
+    "id": "13be10951",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37BP6E73",
+    "text": "<@U379MC1E0>  try using stetho tool <http://facebook.github.io/stetho/>",
+    "edited": {
+      "user": "U37BP6E73",
+      "ts": "1481698152.000000"
+    },
+    "ts": "1481698131.000457",
+    "id": "13be10952",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "stetho tool?",
+    "ts": "1481698145.000458",
+    "id": "13be10953",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "alright",
+    "ts": "1481698157.000460",
+    "id": "13be10954",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37BP6E73",
+    "text": "in that way, you can use chrome dev tools network tab in android devt and trace the request/response",
+    "ts": "1481698187.000461",
+    "id": "13be10955",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "Wow thanks arviio!",
+    "ts": "1481698642.000462",
+    "id": "13be10956",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "this is a nice tool for Android",
+    "ts": "1481698648.000463",
+    "id": "13be10957",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "!!!!",
+    "ts": "1481698654.000464",
+    "id": "13be10958",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U37BP6E73",
+    "text": "and also try leakcanary, for memory leaks :smile: it's also a nice tool",
+    "ts": "1481698750.000465",
+    "id": "13be10959",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U379MC1E0",
+    "text": "thanks",
+    "ts": "1481699360.000466",
+    "id": "13be10960",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3DRETDTJ",
+    "text": "<@U3DRETDTJ|reversebitstech> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1481701373.000467",
+    "id": "13be10961",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

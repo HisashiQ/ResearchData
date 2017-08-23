@@ -1,0 +1,898 @@
+[
+  {
+    "user": "U2M0WUZ7A",
+    "text": "A question about Realm and RecyclerView.\nI’ve written my own adapter that takes a snapshot of RealmResults on every change in the background, calculates diff and updates itself. But I’m afraid that snapshot can occupy lots of memory; on the other hand, there’s no way to to calculate diff without it.\nAny Ideas how it could be done better?",
+    "ts": "1484817723.002401",
+    "id": "19de61557",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3TM1J16Y",
+    "text": "<@U3TM1J16Y|palak> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1484823439.002402",
+    "id": "19de61558",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "<@U2M0WUZ7A> I liked your idea of diffing before updating the recycler view, is there more documentation on this ? or any library ?",
+    "ts": "1484824345.002403",
+    "id": "19de61559",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "DiffUtil from support library",
+    "ts": "1484824360.002404",
+    "id": "19de61560",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "RealmRecyclerView by Thorben Primke does that too, but I found the solution to be beyond what I understand ",
+    "ts": "1484825309.002405",
+    "id": "19de61561",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "The manual diffing is a complex procedure apparently. ",
+    "ts": "1484825323.002406",
+    "id": "19de61562",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "Is there a way to know RealmResults’ version in onChange? I need to carry some additional info about the transaction along with the change itself.",
+    "ts": "1484826135.002407",
+    "id": "19de61563",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFZ453R",
+    "text": "How to prevent the ActionBar menu collapsing on selection?",
+    "ts": "1484826393.002408",
+    "id": "19de61564",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18E0PY49",
+    "text": "How do I properly check in realm if one specific object is inside an array ?",
+    "ts": "1484830312.002409",
+    "id": "19de61565",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U18E0PY49|devmatt> uploaded a file: <https://androidchat.slack.com/files/devmatt/F3TNEBACC/-.java|Untitled>",
+    "file": {
+      "id": "F3TNEBACC",
+      "created": 1484830330,
+      "timestamp": 1484830330,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U18E0PY49",
+      "editable": true,
+      "size": 466,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F3TNEBACC/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F3TNEBACC/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/devmatt/F3TNEBACC/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F3TNEBACC-0c6ce550bc",
+      "edit_link": "https://androidchat.slack.com/files/devmatt/F3TNEBACC/-.java/edit",
+      "preview": "\r\n    public Boolean isUserAttending(Lecture lecture, String id) {\r\n\r\n        final Realm realm = realmProvider.get();\r\n\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>&#8203;</pre></div>\n<div><pre>    <span class=\"cm-keyword\">public</span> <span class=\"cm-variable-3\">Boolean</span> <span class=\"cm-def\">isUserAttending</span>(<span class=\"cm-variable\">Lecture</span> <span class=\"cm-variable\">lecture</span>, <span class=\"cm-variable-3\">String</span> <span class=\"cm-variable\">id</span>) {</pre></div>\n<div><pre>&#8203;</pre></div>\n<div><pre>        <span class=\"cm-keyword\">final</span> <span class=\"cm-variable\">Realm</span> <span class=\"cm-variable\">realm</span> <span class=\"cm-operator\">=</span> <span class=\"cm-variable\">realmProvider</span>.<span class=\"cm-variable\">get</span>();</pre></div>\n<div><pre>&#8203;</pre></div>\n</div>\n</div>\n",
+      "lines": 16,
+      "lines_more": 11,
+      "preview_is_truncated": false,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U18E0PY49",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U18E0PY49|devmatt>",
+    "bot_id": null,
+    "ts": "1484830330.002410",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "19de61566",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18E0PY49",
+    "text": "For some reason this doesn't give consistent results",
+    "ts": "1484830345.002411",
+    "id": "19de61567",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1LJG0Y03",
+    "text": "Can you not just do\n```\nRealmQuery&lt;Account&gt; query = realm.where(Account.class)\n                .equalTo(\"attendingLecturesIds.value\", id);\n```",
+    "ts": "1484831730.002412",
+    "id": "19de61568",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18E0PY49",
+    "text": "Yeah, didn't realize that realm can search through a list like that. A follow up question, is it bad practice to add/remove elements in RealmLists like this <https://gist.github.com/mattdevelops/7b523e8454e01dc5241dd9efa2eb97cb>, or is there a better \"realm\" way to do these kind of operations ?",
+    "ts": "1484832644.002413",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "19de61569",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U18E0PY49",
+    "text": "Cause I've noticed, that sometimes the .remove() doesn't remove an element",
+    "ts": "1484832758.002414",
+    "id": "19de61570",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3T1BBZ8Q",
+    "text": "<@U3T1BBZ8Q|sri> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1484838818.002415",
+    "id": "19de61571",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3TSXC49K",
+    "text": "<@U3TSXC49K|jamesreeves9> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1484845828.002416",
+    "id": "19de61572",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2QHEEGBX",
+    "text": "Hello hello, does anyone know a good token authentication library? :slightly_smiling_face:",
+    "ts": "1484848039.002417",
+    "id": "19de61573",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U39P7U6EP",
+    "text": "<@U18E0PY49> <https://hackernoon.com/realmlist-realmstring-is-an-anti-pattern-bfc10efb7ca5#.7pnd0xttm>",
+    "attachments": [
+      {
+        "service_name": "Hacker Noon",
+        "title": "RealmList is an anti-pattern!",
+        "title_link": "https://hackernoon.com/realmlist-realmstring-is-an-anti-pattern-bfc10efb7ca5#.7pnd0xttm",
+        "text": "I’ll be honest: I really dislike titles that say, “X is an anti-pattern”. Especially when the pitfalls of a specific approach aren’t…",
+        "fallback": "Hacker Noon: RealmList is an anti-pattern!",
+        "image_url": "https://cdn-images-1.medium.com/max/1200/1*-gSrCrcN1_LVMfV_w_wiIQ.png",
+        "fields": [
+          {
+            "title": "Reading time",
+            "value": "3 min read",
+            "short": true
+          }
+        ],
+        "ts": 1484527705,
+        "from_url": "https://hackernoon.com/realmlist-realmstring-is-an-anti-pattern-bfc10efb7ca5#.7pnd0xttm",
+        "image_width": 781,
+        "image_height": 250,
+        "image_bytes": 22353,
+        "service_icon": "https://cdn-images-1.medium.com/fit/c/152/152/1*76XiKOa05Yya6_CdYX8pVg.jpeg",
+        "id": 1
+      }
+    ],
+    "ts": "1484848243.002418",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U2M0WUZ7A"
+        ],
+        "count": 2
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "19de61574",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3UGK2K46",
+    "text": "<@U3UGK2K46|rylickliter> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1484851335.002420",
+    "id": "19de61575",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U2M0WUZ7A",
+    "text": "&gt; which typically calls adapter.notifyDataSetChanged()\n:hankey:",
+    "ts": "1484851562.002421",
+    "id": "19de61576",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<http://i.faketrumptweet.com/emc3iyv5q4_1nyrft6.png>",
+    "attachments": [
+      {
+        "fallback": "590x233px image",
+        "image_url": "http://i.faketrumptweet.com/emc3iyv5q4_1nyrft6.png",
+        "image_width": 590,
+        "image_height": 233,
+        "image_bytes": 67191,
+        "from_url": "http://i.faketrumptweet.com/emc3iyv5q4_1nyrft6.png",
+        "id": 1
+      }
+    ],
+    "ts": "1484851878.002422",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "19de61577",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3T6G24D7",
+    "text": "<@U3T6G24D7|itsdrea> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1484852817.002424",
+    "id": "19de61578",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0CMFP79T",
+    "text": "<@U0CMFP79T|liangmicha> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1484857192.002425",
+    "id": "19de61579",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1N5PJDTL",
+    "text": "Does anyone happen to know how to check if a task exists in gradle?",
+    "ts": "1484859042.002426",
+    "id": "19de61580",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1N5PJDTL",
+    "text": "Right now, I’m using `project.getTasks().getByName(theTaskNameToCheck)` and catching the exception, but that seems dumb and there’s probably a better way",
+    "ts": "1484859080.002427",
+    "id": "19de61581",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "you can alternately findByName",
+    "ts": "1484859372.002428",
+    "id": "19de61582",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "it’ll return a null instead of throwing",
+    "ts": "1484859378.002429",
+    "id": "19de61583",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "also worth mentioning you don’t need to call `getTasks()`\n\n`project.tasks.findByName(‘taskName’)`",
+    "ts": "1484859429.002430",
+    "id": "19de61584",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1N5PJDTL",
+    "text": "<@U055GGAHS> :taco: thanks!",
+    "ts": "1484859597.002431",
+    "id": "19de61585",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "np",
+    "ts": "1484859600.002432",
+    "id": "19de61586",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KC373GX",
+    "text": " Anyone know how to add a list view in an expandable list view? It seems like doing it the easy, obvious way doesn't work.",
+    "ts": "1484861011.002433",
+    "id": "19de61587",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3TSX753M",
+    "text": "<@U3TSX753M|samgeorgey> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1484861717.002434",
+    "id": "19de61588",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "Nvidia drivers on Linux have a stupid bug that makes your pc super slow after resume, think I found a fix though",
+    "edited": {
+      "user": "U3E2EEX38",
+      "ts": "1484869545.000000"
+    },
+    "ts": "1484869522.002435",
+    "id": "19de61589",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "AMD Ftw",
+    "ts": "1484871670.002438",
+    "id": "19de61590",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "aren’t amd worse when it comes to linux?",
+    "ts": "1484872022.002439",
+    "id": "19de61591",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "depends",
+    "ts": "1484872108.002440",
+    "id": "19de61592",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "both are bad",
+    "ts": "1484872120.002441",
+    "id": "19de61593",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "true that",
+    "ts": "1484872145.002442",
+    "id": "19de61594",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KC373GX",
+    "text": "still no sound through HDMI for my arch linux w/ RX 480 :[",
+    "ts": "1484872281.002443",
+    "id": "19de61595",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3U22BN58",
+    "text": "<@U3U22BN58|kai.puth> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1484874563.002444",
+    "id": "19de61596",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3U4YJJ21",
+    "text": "<@U3U4YJJ21|thanh_huynh> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1484876870.002445",
+    "id": "19de61597",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

@@ -1,0 +1,2000 @@
+[
+  {
+    "user": "U061HDV96",
+    "text": "Anyone using ButterKnife that gets the following error `Error:(23) Error: Expected resource of type color [ResourceType]` when using something like @BindColor(android.R.color.white) int white; or something else from android.R? The generated code is ```Resources res = finder.getContext(source).getResources();\ntarget.white = res.getColor(17170443);```",
+    "edited": {
+      "user": "U061HDV96",
+      "ts": "1442275935.000000"
+    },
+    "ts": "1442275920.000230",
+    "id": "14tr2230",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Is it that ButterKnife doesn't support android.R or could this be a bug?",
+    "ts": "1442275954.000232",
+    "id": "14tr2231",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I thought it might've had something to do with Proguard because I'm only getting this in release buildTypes, but I'm already using the proguard settings of ButterKnife.",
+    "ts": "1442276133.000233",
+    "id": "14tr2232",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "It hasn't got anything to do with android.R...",
+    "ts": "1442276301.000234",
+    "id": "14tr2233",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "<@U061HDV96>: set minify enabled false and run your release and see how it goes.",
+    "ts": "1442276305.000235",
+    "id": "14tr2234",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U0542GLTE>: that build is running as we speak",
+    "ts": "1442276334.000236",
+    "id": "14tr2235",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "It could most definitely be that",
+    "ts": "1442276360.000237",
+    "id": "14tr2236",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Cause it's quite probable that that part of the website is also a bit outdated",
+    "edited": {
+      "user": "U061HDV96",
+      "ts": "1442276381.000000"
+    },
+    "ts": "1442276380.000238",
+    "id": "14tr2237",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U0542GLTE>: nope. Doesn't change anything.",
+    "ts": "1442276439.000240",
+    "id": "14tr2238",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U0542GLTE>: nvm, had to clean the project.",
+    "ts": "1442276652.000241",
+    "id": "14tr2239",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Proguard is the problem",
+    "ts": "1442276660.000242",
+    "id": "14tr2240",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Kinda figured",
+    "ts": "1442276667.000243",
+    "id": "14tr2241",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Copy your proguard",
+    "ts": "1442276672.000244",
+    "id": "14tr2242",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "This is what I have for Butterknife: ```-keep class butterknife.** { *; }\n-dontwarn butterknife.internal.**\n-keep class **$$ViewBinder { *; }\n\n-keepclasseswithmembernames class * {\n    @butterknife.* &lt;fields&gt;;\n}\n\n-keepclasseswithmembernames class * {\n    @butterknife.* &lt;methods&gt;;\n}```",
+    "ts": "1442276704.000245",
+    "id": "14tr2243",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Wtf...?",
+    "ts": "1442276761.000246",
+    "id": "14tr2244",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Now it works?!",
+    "ts": "1442276766.000247",
+    "id": "14tr2245",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I tried cleaning the project like 10 times",
+    "ts": "1442276780.000248",
+    "id": "14tr2246",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Whatever",
+    "ts": "1442276786.000249",
+    "id": "14tr2247",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "lol",
+    "ts": "1442276790.000250",
+    "id": "14tr2248",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Did you change minify back?",
+    "ts": "1442276796.000251",
+    "id": "14tr2249",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Yes, back to true",
+    "ts": "1442276804.000252",
+    "id": "14tr2250",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "No wait",
+    "ts": "1442276882.000253",
+    "id": "14tr2251",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "What the fuck?",
+    "ts": "1442276886.000254",
+    "id": "14tr2252",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Now it doesn't",
+    "ts": "1442276888.000255",
+    "id": "14tr2253",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U0542GLTE>: guess that successful gradle build was just the sync that took ages",
+    "ts": "1442276924.000256",
+    "id": "14tr2254",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "So yes we're still at: \nAustin Musice [02:24] \nKinda figured\n\nAustin Musice [02:24]\nCopy your proguard",
+    "ts": "1442276938.000257",
+    "id": "14tr2255",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "lol. You having all sorts of problems",
+    "ts": "1442276952.000258",
+    "id": "14tr2256",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "And you sure it’s the android.R. color",
+    "ts": "1442276970.000259",
+    "id": "14tr2257",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "It's this line: ```target.white = res.getColor(17170443);```",
+    "ts": "1442277011.000260",
+    "id": "14tr2258",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "`Error:(23) Error: Expected resource of type color [ResourceType]`",
+    "edited": {
+      "user": "U061HDV96",
+      "ts": "1442277025.000000"
+    },
+    "ts": "1442277023.000261",
+    "id": "14tr2259",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "WTF color is that",
+    "ts": "1442277025.000263",
+    "id": "14tr2260",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "That is android.R.color.white",
+    "ts": "1442277035.000264",
+    "id": "14tr2261",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "That is generated by ButterKnife",
+    "ts": "1442277043.000265",
+    "id": "14tr2262",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Oh.",
+    "ts": "1442277046.000266",
+    "id": "14tr2263",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Okay. I was about to say..",
+    "ts": "1442277053.000267",
+    "id": "14tr2264",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Haha, if only I used numbers",
+    "ts": "1442277066.000268",
+    "id": "14tr2265",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "I wonder why it’s resolving like that",
+    "ts": "1442277077.000269",
+    "id": "14tr2266",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "That’s really odd",
+    "ts": "1442277081.000270",
+    "id": "14tr2267",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "This is the new Butterknife right?",
+    "ts": "1442277092.000271",
+    "id": "14tr2268",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "7.0.1",
+    "ts": "1442277104.000272",
+    "id": "14tr2269",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Hrrrmmmm.",
+    "ts": "1442277115.000273",
+    "id": "14tr2270",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Idk what you could exclude that you already haven't",
+    "ts": "1442277130.000274",
+    "id": "14tr2271",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I can't find anything regarding Proguard in the repo",
+    "ts": "1442277135.000275",
+    "id": "14tr2272",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Or issues",
+    "ts": "1442277137.000276",
+    "id": "14tr2273",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Besides what I have",
+    "ts": "1442277146.000277",
+    "id": "14tr2274",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "But looks-keep class **.R",
+    "ts": "1442277169.000278",
+    "id": "14tr2275",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "maybe?",
+    "ts": "1442277175.000279",
+    "id": "14tr2276",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I tried adding my own white",
+    "ts": "1442277189.000280",
+    "id": "14tr2277",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "It had the same result",
+    "ts": "1442277194.000281",
+    "id": "14tr2278",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Did you try -keep class **.R?",
+    "ts": "1442277209.000282",
+    "id": "14tr2279",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Will try",
+    "ts": "1442277214.000283",
+    "id": "14tr2280",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "This was on SO for FWIW ```-keepattributes InnerClasses\n\n-keep class **.R\n-keep class **.R$* {\n    &lt;fields&gt;;\n}```",
+    "ts": "1442277245.000284",
+    "id": "14tr2281",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U0542GLTE>: nope. It just gave me an extra 721 warnings",
+    "edited": {
+      "user": "U061HDV96",
+      "ts": "1442277694.000000"
+    },
+    "ts": "1442277688.000285",
+    "id": "14tr2282",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "lol. So that was the wrong answer",
+    "ts": "1442277736.000287",
+    "id": "14tr2283",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "maybe try to wild card the other end",
+    "ts": "1442277762.000288",
+    "id": "14tr2284",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "-keep class android.R.color.**?",
+    "ts": "1442277773.000289",
+    "id": "14tr2285",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Nope",
+    "ts": "1442277910.000290",
+    "id": "14tr2286",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "SO, Y u no giving me solutions?",
+    "ts": "1442277926.000291",
+    "id": "14tr2287",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I've tried every SO answer in the meantime",
+    "ts": "1442277944.000292",
+    "id": "14tr2288",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I'll look at it tomorrow again",
+    "ts": "1442277960.000293",
+    "id": "14tr2289",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I'm gonna go to bed now",
+    "ts": "1442277968.000294",
+    "id": "14tr2290",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Dude. Idk. That’s fucking weird. I hate proguard",
+    "ts": "1442277974.000295",
+    "id": "14tr2291",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "I’ll think about it though",
+    "ts": "1442277977.000296",
+    "id": "14tr2292",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Thanks, I can't seem to figure it out",
+    "ts": "1442277997.000297",
+    "id": "14tr2293",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Goodnight",
+    "ts": "1442278008.000298",
+    "id": "14tr2294",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A830S67",
+    "subtype": "channel_join",
+    "text": "<@U0A830S67|yoshimaa> has joined the channel",
+    "ts": "1442282324.000299",
+    "id": "14tr2295",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "+1 to proguard hate… can’t people just not hack stuff :unamused:",
+    "ts": "1442287986.000300",
+    "id": "14tr2296",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "though i guess dex limit is half of its existence too",
+    "ts": "1442288116.000301",
+    "id": "14tr2297",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "thats pretty much the only reason i use proguard",
+    "ts": "1442288443.000302",
+    "id": "14tr2298",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "to keep under the dex limit",
+    "ts": "1442288450.000303",
+    "id": "14tr2299",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "proguard is excellent at adding steps to figuring out how something works which can be important for security",
+    "ts": "1442288891.000304",
+    "id": "14tr2300",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "of course dont rely on it and yes treat it as a performance enhancer vs security",
+    "ts": "1442288914.000305",
+    "id": "14tr2301",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "a few apps I have looked at, like lets say pizza hut, have made it hilariously easy to figure out how everything worked including their API that they clearly did not intend for people to use",
+    "ts": "1442288959.000306",
+    "id": "14tr2302",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "since it had you know a user name and password",
+    "ts": "1442288968.000307",
+    "id": "14tr2303",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "proguard would have at least deterred me from really looking into their source and figuring out some of their API calls",
+    "ts": "1442289006.000308",
+    "id": "14tr2304",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<https://gist.github.com/ToxicBakery/4c75fc17e09e41e97d9f>",
+    "ts": "1442289020.000309",
+    "id": "14tr2305",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "i figured out more than what is posted there but for security reasons did not post it",
+    "ts": "1442289050.000310",
+    "id": "14tr2306",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "those api calls are harmless imo",
+    "ts": "1442289057.000311",
+    "id": "14tr2307",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "but in the case of pizza hut, isn’t that more of using proguard to hide a poor api implementation?",
+    "ts": "1442289167.000312",
+    "id": "14tr2308",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "no",
+    "ts": "1442289180.000313",
+    "id": "14tr2309",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I would say their API is actually reasonably well protected without spending significant time",
+    "ts": "1442289201.000314",
+    "id": "14tr2310",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "someone more clever/skilled than me may disagree but I believe the API they are using is used to drive multiple major services and not just theirs",
+    "ts": "1442289226.000315",
+    "id": "14tr2311",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "given such its reasonably hard to figure out various elements",
+    "ts": "1442289243.000316",
+    "id": "14tr2312",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "maybe poor is the wrong word, i guess more vulnerable aspects of the api",
+    "ts": "1442289268.000317",
+    "id": "14tr2313",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "not without MITM attacks which I was not able to get to work on first try so I assume their SSL is properly implemented",
+    "ts": "1442289278.000318",
+    "id": "14tr2314",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "again skill or someone clever may prove me wrong",
+    "ts": "1442289292.000319",
+    "id": "14tr2315",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "but that is all outside the scope.. the real point im making is that gist wouldn't exist if they had proguarded their app because I wouldn't have any bothered",
+    "ts": "1442289333.000320",
+    "id": "14tr2316",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "it would have raised the bar of determination",
+    "ts": "1442289344.000321",
+    "id": "14tr2317",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "i agree it adds a noticeable barrier to reverse engineering, but from reading around, it seems that not _that much more effort_ is required to get past it for those that are motivated",
+    "ts": "1442289476.000322",
+    "id": "14tr2318",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "i use it primarily  more for the size and dex reduction than the security side of it",
+    "ts": "1442289527.000323",
+    "id": "14tr2319",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "and generally my assumption is anything contained in the apk is open to being revealed so try not to store anything too sensitive",
+    "ts": "1442289589.000324",
+    "id": "14tr2320",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "actually 'everything' in the APK can be revealed",
+    "ts": "1442289613.000325",
+    "id": "14tr2321",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "its important to remember that any apk can be set to debug true and run with a debugger attached",
+    "ts": "1442289633.000326",
+    "id": "14tr2322",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "so if your security relies on someone not knowing a value in memory at some particular point in time.. guess what",
+    "ts": "1442289650.000327",
+    "id": "14tr2323",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "yep",
+    "ts": "1442289664.000328",
+    "id": "14tr2324",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "funny seeing the log cat of my device without filters",
+    "ts": "1442289691.000329",
+    "id": "14tr2325",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "yes a few people have suggested stripping via proguard of logcat",
+    "ts": "1442289719.000330",
+    "id": "14tr2326",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "that's a good idea tbh",
+    "ts": "1442289724.000331",
+    "id": "14tr2327",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "speaking of apk revealing",
+    "ts": "1442290041.000332",
+    "id": "14tr2328",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "<http://www.androidpolice.com/2015/09/14/google-camera-v3-0-sneak-peek-part-1-smart-burst-creations-and-animated-gifs-apk-teardown/>",
+    "attachments": [
+      {
+        "service_name": "Android Police",
+        "title": "Google Camera v3.0 Sneak Peek - Part 1: Smart Burst, Creations, and Animated GIFs [APK Teardown]",
+        "title_link": "http://www.androidpolice.com/2015/09/14/google-camera-v3-0-sneak-peek-part-1-smart-burst-creations-and-animated-gifs-apk-teardown/",
+        "text": "We're just two weeks away from the anticipated launch date for Android 6.0, up to two Nexus phones, and possibly many other surprises. As we all know, secr... by Cody Toombs in APK Teardown, Applications, News",
+        "fallback": "Android Police: Google Camera v3.0 Sneak Peek - Part 1: Smart Burst, Creations, and Animated GIFs [APK Teardown]",
+        "thumb_url": "http://www.androidpolice.com/wp-content/uploads/2015/09/nexus2cee_Camera.v3.0-a_thumb.png",
+        "ts": 1442247643,
+        "from_url": "http://www.androidpolice.com/2015/09/14/google-camera-v3-0-sneak-peek-part-1-smart-burst-creations-and-animated-gifs-apk-teardown/",
+        "thumb_width": 728,
+        "thumb_height": 300,
+        "id": 1
+      }
+    ],
+    "ts": "1442290043.000333",
+    "id": "14tr2329",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "heh i saw that in my feed.. didn't read it because I want to discover whats new for myself",
+    "ts": "1442290066.000335",
+    "id": "14tr2330",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "ive noticed that the last few major releases of various google services.. I knew everything beforehand and that gives me a kind of echo chamber for what elements work well vs what don't when it comes time to implement various features in my own work",
+    "ts": "1442290126.000336",
+    "id": "14tr2331",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "true, since we get all that info first as it develops, a lot of that exploratory excitement is lost",
+    "ts": "1442290325.000337",
+    "id": "14tr2332",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "indeed, ive really only noticed it recently like when inbox came out and the photos app changes",
+    "ts": "1442290376.000338",
+    "id": "14tr2333",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "i read what everyone else thought first and i think it ruined my ability to really create my own experience",
+    "edited": {
+      "user": "U055GGAHS",
+      "ts": "1442290539.000000"
+    },
+    "ts": "1442290398.000339",
+    "id": "14tr2334",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "and then you got to watch as those in your circles discover that stuff for themselves",
+    "ts": "1442290459.000340",
+    "id": "14tr2335",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "and you’re like “yeh, whatever\"",
+    "ts": "1442290475.000341",
+    "id": "14tr2336",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i was just thinking about how annoyed i am whenever i have to do anything security-related, and i'm reminded of how much i hated pvp in WoW haha",
+    "ts": "1442293166.000343",
+    "id": "14tr2337",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i can always learn to beat the computer but people will always be better",
+    "ts": "1442293179.000344",
+    "id": "14tr2338",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

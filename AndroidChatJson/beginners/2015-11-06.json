@@ -1,0 +1,910 @@
+[
+  {
+    "user": "U0DNDQHMK",
+    "subtype": "channel_join",
+    "text": "<@U0DNDQHMK|mr.bacon> has joined the channel",
+    "ts": "1446803738.000041",
+    "id": "06be1221",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E0Z6GCD",
+    "subtype": "channel_join",
+    "text": "<@U0E0Z6GCD|j7512> has joined the channel",
+    "ts": "1446819831.000042",
+    "id": "06be1222",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E2LH2Q7",
+    "subtype": "channel_join",
+    "text": "<@U0E2LH2Q7|suppiez> has joined the channel",
+    "ts": "1446875596.000043",
+    "id": "06be1223",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E2LH2Q7",
+    "text": "Hey guys",
+    "ts": "1446875603.000044",
+    "id": "06be1224",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E2LH2Q7",
+    "text": "I need help creating an app which accesses the native android camera app and saves it",
+    "ts": "1446875643.000045",
+    "id": "06be1225",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E2LH2Q7",
+    "text": "how can I go about doing this?",
+    "ts": "1446875727.000046",
+    "id": "06be1226",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "You want to save the camera app?",
+    "ts": "1446875946.000047",
+    "id": "06be1227",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E2LH2Q7",
+    "text": "no",
+    "ts": "1446876072.000048",
+    "id": "06be1228",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E2LH2Q7",
+    "text": "oops that was worded wrong",
+    "ts": "1446876077.000049",
+    "id": "06be1229",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E2LH2Q7",
+    "text": "when i take the picture, i want to save it",
+    "ts": "1446876094.000050",
+    "id": "06be1230",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E2LH2Q7",
+    "text": "in the phone",
+    "ts": "1446876195.000051",
+    "id": "06be1231",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<http://developer.android.com/training/camera/photobasics.html>",
+    "attachments": [
+      {
+        "text": "This lesson explains how to capture photos using an existing camera application. Suppose you are implementing a crowd-sourced weather service that makes a global weather map by blending together pictures of the sky taken by devices running your client…",
+        "fallback": "This lesson explains how to capture photos using an existing camera application. Suppose you are implementing a crowd-sourced weather service that makes a global weather map by blending together pictures of the sky taken by devices running your client…",
+        "from_url": "http://developer.android.com/training/camera/photobasics.html",
+        "id": 1
+      }
+    ],
+    "ts": "1446876413.000052",
+    "id": "06be1232",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E2LH2Q7",
+    "text": "\"static final int REQUEST_IMAGE_CAPTURE = 1;\n\nprivate void dispatchTakePictureIntent() {\n    Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);\n    if (takePictureIntent.resolveActivity(getPackageManager()) != null) {\n        startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);\n    }\n}\"",
+    "ts": "1446876627.000054",
+    "id": "06be1233",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E2LH2Q7",
+    "text": "where would i add this code to? ^^",
+    "ts": "1446876633.000055",
+    "id": "06be1234",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E2LH2Q7",
+    "text": "furthermore, are there no xml files that define camera layout?",
+    "ts": "1446876673.000056",
+    "id": "06be1235",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "It works like this",
+    "ts": "1446877176.000057",
+    "id": "06be1236",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E2LH2Q7",
+    "text": "oh really",
+    "ts": "1446877184.000058",
+    "id": "06be1237",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "You want to take a picture for your app",
+    "ts": "1446877185.000059",
+    "id": "06be1238",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E2LH2Q7",
+    "text": "thanks :smile:",
+    "ts": "1446877186.000060",
+    "id": "06be1239",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E2LH2Q7",
+    "text": "let me try it out and get back to you",
+    "ts": "1446877193.000061",
+    "id": "06be1240",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "So you ask android nicely if there is a camera app that can do that for you",
+    "ts": "1446877212.000062",
+    "id": "06be1241",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "The user selects the app they want to use, take the picture",
+    "ts": "1446877252.000063",
+    "id": "06be1242",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "the camera app then gives the picture to your app and you decide what to do with it",
+    "ts": "1446877268.000064",
+    "id": "06be1243",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E2LH2Q7",
+    "text": "okay",
+    "ts": "1446877338.000065",
+    "id": "06be1244",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E2LH2Q7",
+    "text": "so should i just put that method in my mainactivity and then run it in the oncreate method?",
+    "ts": "1446877351.000066",
+    "id": "06be1245",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E2LH2Q7",
+    "text": "okay yea nish it worked :simple_smile:",
+    "ts": "1446877763.000067",
+    "id": "06be1246",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E2LH2Q7",
+    "text": "i just wanted to know if there's an onclick method that i could override once  i press the check button after taking the pic",
+    "ts": "1446877946.000068",
+    "id": "06be1247",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "If i understand you correctly, you want to dispatch the intent when you click a button?",
+    "ts": "1446878044.000069",
+    "id": "06be1248",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E2LH2Q7",
+    "text": "wait hold on",
+    "ts": "1446878097.000070",
+    "id": "06be1249",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E2LH2Q7",
+    "text": "let me send a screenshot",
+    "ts": "1446878101.000071",
+    "id": "06be1250",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0E2LH2Q7|suppiez> uploaded a file: <https://androidchat.slack.com/files/suppiez/F0E2JE1UK/screenshot_2015-11-06-22-35-32_1_.png|Camera Test>",
+    "file": {
+      "id": "F0E2JE1UK",
+      "created": 1446878228,
+      "timestamp": 1446878228,
+      "name": "Screenshot_2015-11-06-22-35-32[1].png",
+      "title": "Camera Test",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U0E2LH2Q7",
+      "editable": false,
+      "size": 1939157,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0E2JE1UK/screenshot_2015-11-06-22-35-32_1_.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0E2JE1UK/download/screenshot_2015-11-06-22-35-32_1_.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F0E2JE1UK-225a0091d5/screenshot_2015-11-06-22-35-32_1__64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F0E2JE1UK-225a0091d5/screenshot_2015-11-06-22-35-32_1__80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F0E2JE1UK-225a0091d5/screenshot_2015-11-06-22-35-32_1__360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 203,
+      "thumb_360_h": 360,
+      "thumb_480": "https://files.slack.com/files-tmb/T04PLNDMP-F0E2JE1UK-225a0091d5/screenshot_2015-11-06-22-35-32_1__480.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_480_w": 270,
+      "thumb_480_h": 480,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F0E2JE1UK-225a0091d5/screenshot_2015-11-06-22-35-32_1__160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720": "https://files.slack.com/files-tmb/T04PLNDMP-F0E2JE1UK-225a0091d5/screenshot_2015-11-06-22-35-32_1__720.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720_w": 405,
+      "thumb_720_h": 720,
+      "thumb_960": "https://files.slack.com/files-tmb/T04PLNDMP-F0E2JE1UK-225a0091d5/screenshot_2015-11-06-22-35-32_1__960.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_960_w": 540,
+      "thumb_960_h": 960,
+      "thumb_1024": "https://files.slack.com/files-tmb/T04PLNDMP-F0E2JE1UK-225a0091d5/screenshot_2015-11-06-22-35-32_1__1024.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_1024_w": 576,
+      "thumb_1024_h": 1024,
+      "image_exif_rotation": 1,
+      "original_w": 1440,
+      "original_h": 2560,
+      "permalink": "https://androidchat.slack.com/files/suppiez/F0E2JE1UK/screenshot_2015-11-06-22-35-32_1_.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0E2JE1UK-4fe13fd94c",
+      "channels": [
+        "C055MSDCM"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U0E2LH2Q7",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0E2LH2Q7|suppiez>",
+    "bot_id": null,
+    "ts": "1446878233.000072",
+    "id": "06be1251",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E2LH2Q7",
+    "text": "you see that check button?",
+    "ts": "1446878241.000073",
+    "id": "06be1252",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E2LH2Q7",
+    "text": "is there any onclick method that i could override upon clicking that button?",
+    "ts": "1446878256.000074",
+    "id": "06be1253",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "not that i know of",
+    "ts": "1446878364.000075",
+    "id": "06be1254",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "because it’s not your app",
+    "ts": "1446878371.000076",
+    "id": "06be1255",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "What you can handle is the result of the action though",
+    "ts": "1446878391.000077",
+    "id": "06be1256",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "the image returned to your app",
+    "ts": "1446878398.000078",
+    "id": "06be1257",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U08GFT5V5|nish> uploaded a file: <https://androidchat.slack.com/files/nish/F0E2MA99C/-.java|Untitled>",
+    "file": {
+      "id": "F0E2MA99C",
+      "created": 1446878457,
+      "timestamp": 1446878457,
+      "name": "-.java",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "java",
+      "pretty_type": "Java",
+      "user": "U08GFT5V5",
+      "editable": true,
+      "size": 327,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0E2MA99C/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0E2MA99C/download/-.java?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/nish/F0E2MA99C/-.java",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0E2MA99C-ffac8786cd",
+      "edit_link": "https://androidchat.slack.com/files/nish/F0E2MA99C/-.java/edit",
+      "preview": "@Override\r\nprotected void onActivityResult(int requestCode, int resultCode, Intent data) {\r\n    if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {\r\n        Bundle extras = data.getExtras();\r\n        Bitmap imageBitmap = (Bitmap) extras.get(\"data\");\r\n        mImageView.setImageBitmap(imageBitmap);\r\n    }\r\n}",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-meta\">@Override</span></pre></div>\n<div><pre><span class=\"cm-keyword\">protected</span> <span class=\"cm-keyword\">void</span> <span class=\"cm-variable\">onActivityResult</span>(<span class=\"cm-keyword\">int</span> <span class=\"cm-variable\">requestCode</span>, <span class=\"cm-keyword\">int</span> <span class=\"cm-variable\">resultCode</span>, <span class=\"cm-variable\">Intent</span> <span class=\"cm-variable\">data</span>) {</pre></div>\n<div><pre>    <span class=\"cm-keyword\">if</span> (<span class=\"cm-variable\">requestCode</span> <span class=\"cm-operator\">==</span> <span class=\"cm-variable\">REQUEST_IMAGE_CAPTURE</span> <span class=\"cm-operator\">&amp;&amp;</span> <span class=\"cm-variable\">resultCode</span> <span class=\"cm-operator\">==</span> <span class=\"cm-variable\">RESULT_OK</span>) {</pre></div>\n<div><pre>        <span class=\"cm-variable\">Bundle</span> <span class=\"cm-variable\">extras</span> <span class=\"cm-operator\">=</span> <span class=\"cm-variable\">data</span>.<span class=\"cm-variable\">getExtras</span>();</pre></div>\n<div><pre>        <span class=\"cm-variable\">Bitmap</span> <span class=\"cm-variable\">imageBitmap</span> <span class=\"cm-operator\">=</span> (<span class=\"cm-variable\">Bitmap</span>) <span class=\"cm-variable\">extras</span>.<span class=\"cm-variable\">get</span>(<span class=\"cm-string\">&quot;data&quot;</span>);</pre></div>\n<div><pre>        <span class=\"cm-variable\">mImageView</span>.<span class=\"cm-variable\">setImageBitmap</span>(<span class=\"cm-variable\">imageBitmap</span>);</pre></div>\n<div><pre>    }</pre></div>\n<div><pre>}</pre></div>\n</div>\n</div>\n",
+      "lines": 8,
+      "lines_more": 0,
+      "preview_is_truncated": null,
+      "channels": [
+        "C055MSDCM"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U08GFT5V5",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U08GFT5V5|nish>",
+    "bot_id": null,
+    "ts": "1446878458.000079",
+    "id": "06be1258",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "That’s what that bit is for. When the intent fires, camera app is launched",
+    "ts": "1446878485.000080",
+    "id": "06be1259",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "when the user takes the picture and accepts it",
+    "ts": "1446878496.000081",
+    "id": "06be1260",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "that method is called",
+    "ts": "1446878500.000082",
+    "id": "06be1261",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E2LH2Q7",
+    "text": "ah",
+    "ts": "1446878947.000083",
+    "id": "06be1262",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E2LH2Q7",
+    "text": "exactly what i needed",
+    "ts": "1446878949.000084",
+    "id": "06be1263",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0E2LH2Q7",
+    "text": "thanks!",
+    "ts": "1446879041.000085",
+    "id": "06be1264",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

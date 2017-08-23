@@ -1,0 +1,2813 @@
+[
+  {
+    "user": "U1HQS89D3",
+    "text": "how do i serialize all the Observable classes from Data Binding using Moshi?",
+    "ts": "1470038337.001338",
+    "id": "01de41232",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TJ9D30B",
+    "text": "Hi there, according to you what is the lightest layout to use ? Thank you",
+    "ts": "1470040880.001339",
+    "id": "01de41233",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "probably FrameLayout",
+    "ts": "1470040896.001340",
+    "id": "01de41234",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TJ9D30B",
+    "text": "Yes I think the same since android sample use it as fragment container, but nothing really accurate in this choice",
+    "ts": "1470040950.001341",
+    "id": "01de41235",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1TJ9D30B",
+    "text": "Thank you anyway for your answer which confirm me Framelayout is the most natural choice",
+    "edited": {
+      "user": "U1TJ9D30B",
+      "ts": "1470041259.000000"
+    },
+    "ts": "1470040985.001342",
+    "id": "01de41236",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U1UJV29K6>: we're gonna remove certificate pinning for now. Maybe we will add it later but not with Let's Encrypt.",
+    "ts": "1470044038.001344",
+    "id": "01de41237",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Z248CVB",
+    "text": "Hello, guys. I have a custom info window for a google map’s pins. The problem is that when I click on a marker the info window is not centered. How I can center it? I tried with this code:\n```mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {\n            @Override\n            public View getInfoWindow(Marker marker) {\n\n                return null;\n            }\n\n            @Override\n            public View getInfoContents(Marker marker) {\n\n                configureInfoWindow(marker);\n\n                mapWrapperLayout.setMarkerWithInfoWindow(marker, infoWindow);\n\n                LatLng markerLocation = marker.getPosition();\n                Point mappoint = mMap.getProjection().toScreenLocation(new LatLng(markerLocation.latitude, markerLocation.longitude));\n                mappoint.set(mappoint.x, mappoint.y - 300);\n                mMap.animateCamera(CameraUpdateFactory.newLatLng(mMap.getProjection().fromScreenLocation(mappoint)));\n\n                return infoWindow;\n            }\n        });``` where configureInfoWindow(marker); is for setting my custom design for the pin",
+    "ts": "1470046197.001345",
+    "id": "01de41238",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U1T13H6S3|thehunter> uploaded a file: <https://androidchat.slack.com/files/thehunter/F1WUXRL72/-.txt|Untitled> and commented: I use above code.",
+    "file": {
+      "id": "F1WUXRL72",
+      "created": 1470046483,
+      "timestamp": 1470046483,
+      "name": "-.txt",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "text",
+      "pretty_type": "Plain Text",
+      "user": "U1T13H6S3",
+      "editable": true,
+      "size": 379,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F1WUXRL72/-.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F1WUXRL72/download/-.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/thehunter/F1WUXRL72/-.txt",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F1WUXRL72-8b93108511",
+      "edit_link": "https://androidchat.slack.com/files/thehunter/F1WUXRL72/-.txt/edit",
+      "preview": "@Override\r\npublic boolean onMarkerClick(final Marker marker) {\r\n\r\n CameraUpdate cu = CameraUpdateFactory.newLatLngZoom(new LatLng(latitude, longitude), zoom);\r\n mMap.animateCamera(cu, new GoogleMap.CancelableCallback() {\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>@Override</pre></div>\n<div><pre>public boolean onMarkerClick(final Marker marker) {</pre></div>\n<div><pre></pre></div>\n<div><pre> CameraUpdate cu = CameraUpdateFactory.newLatLngZoom(new LatLng(latitude, longitude), zoom);</pre></div>\n<div><pre> mMap.animateCamera(cu, new GoogleMap.CancelableCallback() {</pre></div>\n<div><pre></pre></div>\n</div>\n</div>\n",
+      "lines": 17,
+      "lines_more": 12,
+      "preview_is_truncated": false,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 1,
+      "initial_comment": {
+        "id": "Fc1WUWCW30",
+        "created": 1470046483,
+        "timestamp": 1470046483,
+        "user": "U1T13H6S3",
+        "is_intro": true,
+        "comment": "I use above code.",
+        "channel": ""
+      }
+    },
+    "user": "U1T13H6S3",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U1T13H6S3|thehunter>",
+    "bot_id": null,
+    "ts": "1470046483.001346",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "01de41239",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1T13H6S3",
+    "text": "<@U0Z248CVB>:",
+    "ts": "1470046510.001347",
+    "id": "01de41240",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Z248CVB",
+    "text": "<@U1T13H6S3>: I will try now",
+    "ts": "1470046780.001348",
+    "id": "01de41241",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Z248CVB",
+    "text": "<@U1T13H6S3>: This is the updated code:\n```mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {\n            @Override\n            public boolean onMarkerClick(final Marker marker) {\n\n                LatLng markerLocation = marker.getPosition();\n                Point mappoint = mMap.getProjection().toScreenLocation(new LatLng(markerLocation.latitude, markerLocation.longitude));\n                mappoint.set(mappoint.x, mappoint.y + 300);\n\n                CameraUpdate cu = CameraUpdateFactory.newLatLng(mMap.getProjection().fromScreenLocation(mappoint));\n\n                mMap.animateCamera(cu, new GoogleMap.CancelableCallback() {\n                    @Override\n                    public void onFinish() {\n                        if (marker != null)\n                            marker.showInfoWindow();\n                    }\n                    @Override\n                    public void onCancel() {\n                    }\n                });\n\n                return false;\n            }\n        });``` I use your code as a point where to call my code. But it’s the same",
+    "ts": "1470047888.001349",
+    "id": "01de41242",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Z248CVB",
+    "text": "because CameraUpdate cu = CameraUpdateFactory.newLatLngZoom(new LatLng(latitude, longitude), zoom); will center the marker, not the info window",
+    "ts": "1470048374.001350",
+    "id": "01de41243",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1T13H6S3",
+    "text": "can you share a screen shot of your info window",
+    "ts": "1470049645.001351",
+    "id": "01de41244",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1T13H6S3",
+    "text": "info window pointed to marker right? if your marker is in center the info window appears in the position where your marker located, right?",
+    "ts": "1470049806.001352",
+    "id": "01de41245",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0Z248CVB|vaklinzi> uploaded a file: <https://androidchat.slack.com/files/vaklinzi/F1WV96V38/screen_shot_2016-08-01_at_2.11.14_pm.png|Screen Shot 2016-08-01 at 2.11.14 PM.png>",
+    "file": {
+      "id": "F1WV96V38",
+      "created": 1470049923,
+      "timestamp": 1470049923,
+      "name": "Screen Shot 2016-08-01 at 2.11.14 PM.png",
+      "title": "Screen Shot 2016-08-01 at 2.11.14 PM.png",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U0Z248CVB",
+      "editable": false,
+      "size": 338139,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F1WV96V38/screen_shot_2016-08-01_at_2.11.14_pm.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F1WV96V38/download/screen_shot_2016-08-01_at_2.11.14_pm.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F1WV96V38-1030257e1e/screen_shot_2016-08-01_at_2.11.14_pm_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F1WV96V38-1030257e1e/screen_shot_2016-08-01_at_2.11.14_pm_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F1WV96V38-1030257e1e/screen_shot_2016-08-01_at_2.11.14_pm_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 255,
+      "thumb_360_h": 360,
+      "thumb_480": "https://files.slack.com/files-tmb/T04PLNDMP-F1WV96V38-1030257e1e/screen_shot_2016-08-01_at_2.11.14_pm_480.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_480_w": 340,
+      "thumb_480_h": 480,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F1WV96V38-1030257e1e/screen_shot_2016-08-01_at_2.11.14_pm_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720": "https://files.slack.com/files-tmb/T04PLNDMP-F1WV96V38-1030257e1e/screen_shot_2016-08-01_at_2.11.14_pm_720.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720_w": 510,
+      "thumb_720_h": 720,
+      "image_exif_rotation": 1,
+      "original_w": 548,
+      "original_h": 774,
+      "permalink": "https://androidchat.slack.com/files/vaklinzi/F1WV96V38/screen_shot_2016-08-01_at_2.11.14_pm.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F1WV96V38-aaac8497fb",
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U0Z248CVB",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0Z248CVB|vaklinzi>",
+    "bot_id": null,
+    "ts": "1470049925.001353",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "01de41246",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Z248CVB",
+    "text": "the title of the info window is not visible",
+    "ts": "1470049944.001354",
+    "id": "01de41247",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Z248CVB",
+    "text": "should be like this",
+    "ts": "1470050077.001355",
+    "id": "01de41248",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0Z248CVB|vaklinzi> uploaded a file: <https://androidchat.slack.com/files/vaklinzi/F1WVB6STA/screen_shot_2016-08-01_at_2.14.19_pm.png|Screen Shot 2016-08-01 at 2.14.19 PM.png>",
+    "file": {
+      "id": "F1WVB6STA",
+      "created": 1470050081,
+      "timestamp": 1470050081,
+      "name": "Screen Shot 2016-08-01 at 2.14.19 PM.png",
+      "title": "Screen Shot 2016-08-01 at 2.14.19 PM.png",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U0Z248CVB",
+      "editable": false,
+      "size": 281782,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F1WVB6STA/screen_shot_2016-08-01_at_2.14.19_pm.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F1WVB6STA/download/screen_shot_2016-08-01_at_2.14.19_pm.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F1WVB6STA-9e39679f5b/screen_shot_2016-08-01_at_2.14.19_pm_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F1WVB6STA-9e39679f5b/screen_shot_2016-08-01_at_2.14.19_pm_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F1WVB6STA-9e39679f5b/screen_shot_2016-08-01_at_2.14.19_pm_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 267,
+      "thumb_360_h": 360,
+      "thumb_480": "https://files.slack.com/files-tmb/T04PLNDMP-F1WVB6STA-9e39679f5b/screen_shot_2016-08-01_at_2.14.19_pm_480.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_480_w": 356,
+      "thumb_480_h": 480,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F1WVB6STA-9e39679f5b/screen_shot_2016-08-01_at_2.14.19_pm_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720": "https://files.slack.com/files-tmb/T04PLNDMP-F1WVB6STA-9e39679f5b/screen_shot_2016-08-01_at_2.14.19_pm_720.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720_w": 534,
+      "thumb_720_h": 720,
+      "image_exif_rotation": 1,
+      "original_w": 545,
+      "original_h": 735,
+      "permalink": "https://androidchat.slack.com/files/vaklinzi/F1WVB6STA/screen_shot_2016-08-01_at_2.14.19_pm.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F1WVB6STA-50349ca25d",
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U0Z248CVB",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0Z248CVB|vaklinzi>",
+    "bot_id": null,
+    "ts": "1470050084.001356",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "01de41249",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1F15685R",
+    "text": "Guys, help please.   I need to get ATTRIBUTE_ENG_TRANSLATE from itemPosition from data in  \"onItemClicked\"  or get it from dataObject. How can I do this?",
+    "ts": "1470050972.001357",
+    "id": "01de41250",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U1F15685R|xebeche> uploaded a file: <https://androidchat.slack.com/files/xebeche/F1X00MU64/-.txt|Untitled>",
+    "file": {
+      "id": "F1X00MU64",
+      "created": 1470051074,
+      "timestamp": 1470051074,
+      "name": "-.txt",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "text",
+      "pretty_type": "Plain Text",
+      "user": "U1F15685R",
+      "editable": true,
+      "size": 1147,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F1X00MU64/-.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F1X00MU64/download/-.txt?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/xebeche/F1X00MU64/-.txt",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F1X00MU64-8232eea112",
+      "edit_link": "https://androidchat.slack.com/files/xebeche/F1X00MU64/-.txt/edit",
+      "preview": " final ArrayList<Map<String, Object>> data = new ArrayList<Map<String, Object>>();\r\n\r\n      cursor.moveToFirst();\r\n      while(!cursor.isAfterLast()) {\r\n          m = new HashMap<String, Object>();\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre> final ArrayList&lt;Map&lt;String, Object&gt;&gt; data = new ArrayList&lt;Map&lt;String, Object&gt;&gt;();</pre></div>\n<div><pre></pre></div>\n<div><pre>      cursor.moveToFirst();</pre></div>\n<div><pre>      while(!cursor.isAfterLast()) {</pre></div>\n<div><pre>          m = new HashMap&lt;String, Object&gt;();</pre></div>\n<div><pre></pre></div>\n</div>\n</div>\n",
+      "lines": 29,
+      "lines_more": 24,
+      "preview_is_truncated": true,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U1F15685R",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U1F15685R|xebeche>",
+    "bot_id": null,
+    "ts": "1470051075.001360",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "01de41251",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U1F15685R>: wouldn't this work?\n```\npublic void onItemClicked(int itemPosition, Object dataObject) {\n    Object engData = data.get(i).get(ATTRIBUTE_ENG_TRANSLATE);\n}\n```",
+    "ts": "1470052284.001361",
+    "id": "01de41252",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Z248CVB",
+    "text": "someone for the info window position?",
+    "ts": "1470053028.001362",
+    "id": "01de41253",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1T13H6S3",
+    "text": "<@U0Z248CVB>: <http://stackoverflow.com/questions/23063902/set-width-of-custom-infowindow-in-google-maps-api-v2>, this link will help you",
+    "attachments": [
+      {
+        "title": "Set width of custom InfoWindow in Google Maps api v2",
+        "title_link": "http://stackoverflow.com/questions/23063902/set-width-of-custom-infowindow-in-google-maps-api-v2",
+        "text": "I created markers on the map. When I click on them, the custom info windows are always as wide as the screen.I tried setting layout_width=\"200dp\" but that didn't help. I also tried settingview.",
+        "fallback": "Set width of custom InfoWindow in Google Maps api v2",
+        "thumb_url": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/questions/23063902/set-width-of-custom-infowindow-in-google-maps-api-v2",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "service_icon": "http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d",
+        "service_name": "stackoverflow.com",
+        "id": 1
+      }
+    ],
+    "ts": "1470053218.001363",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "01de41254",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U0Z248CVB>: the window does seem to be centred on the screen but not on the view. I assume that offsetting the centring vertically by the size of the toolbar would fix the issue",
+    "ts": "1470053257.001365",
+    "id": "01de41255",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Z248CVB",
+    "text": "<@U09T8SFG8>: I am not sure I understand you clearly. Which view should I center minus the toolbar height?",
+    "ts": "1470053586.001366",
+    "id": "01de41256",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "<@U0Z248CVB>: sorry I was wrong because I misunderstood your question",
+    "ts": "1470053606.001367",
+    "id": "01de41257",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T8SFG8",
+    "text": "disregard what I said",
+    "ts": "1470053611.001368",
+    "id": "01de41258",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1F15685R",
+    "text": "Aki, Bro, you push me on right way!  I make it this way  String str = String.valueOf(data.get(itemPosition).get(ATTRIBUTE_ENG_TRANSLATE));  Very thank you!",
+    "ts": "1470053627.001369",
+    "id": "01de41259",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Z248CVB",
+    "text": "I think I should move the camera up, but maybe I am not doing it in the right place because nothing happens.",
+    "ts": "1470053651.001370",
+    "id": "01de41260",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Z248CVB",
+    "text": "<@U1T13H6S3>: The link you gave is for setting custom width. That’s not what I want. I want the info window (or actually the camera) to be moved by y so the whole info window is visible",
+    "edited": {
+      "user": "U0Z248CVB",
+      "ts": "1470053854.000000"
+    },
+    "ts": "1470053834.001371",
+    "id": "01de41261",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0Z248CVB",
+    "text": "I did it. The problem was “returning false;” should be true",
+    "ts": "1470054332.001373",
+    "id": "01de41262",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1UJV29K6",
+    "text": "<@U061HDV96>: same here, removed it even thought we have certificate that will not expire in 3 years",
+    "ts": "1470056832.001374",
+    "id": "01de41263",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Any reason I shouldn’t use TabLayout for bottom navigation?",
+    "edited": {
+      "user": "U0K1ALDQE",
+      "ts": "1470057148.000000"
+    },
+    "ts": "1470057140.001375",
+    "id": "01de41264",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U0K1ALDQE>: guidelines?",
+    "ts": "1470057397.001377",
+    "id": "01de41265",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Much easier to just disable swipe to change tab than write your own ViewPager system.",
+    "ts": "1470057421.001378",
+    "id": "01de41266",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "No?",
+    "ts": "1470057422.001379",
+    "id": "01de41267",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Perhaps, I haven't really looked at bottom navigation",
+    "ts": "1470057463.001380",
+    "id": "01de41268",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Hmm thanks :slightly_smiling_face:",
+    "ts": "1470057501.001381",
+    "id": "01de41269",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Well I didn't really offer any help :stuck_out_tongue:",
+    "ts": "1470057526.001382",
+    "id": "01de41270",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "most current solutions are hacky at best",
+    "ts": "1470057624.001383",
+    "id": "01de41271",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "we use AHBottomNavigation at work, and I use BottomBar for a side project",
+    "ts": "1470057671.001384",
+    "id": "01de41272",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Yeah, they al felt very hacky.",
+    "ts": "1470058098.001385",
+    "id": "01de41273",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I think I’m just going to give TabLayout a try. I don’t see a reason why that wouldn’t do the job.",
+    "ts": "1470058132.001386",
+    "id": "01de41274",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "TabLayout with a custom viewpager that is.",
+    "ts": "1470058142.001387",
+    "id": "01de41275",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1FECKXA9",
+    "text": "hi all, why does Andfroid Studio requires me to Clean ( Go to Build --&gt; Clean) a project everytime I import a new project?",
+    "ts": "1470061806.001388",
+    "id": "01de41276",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "probably the same reason I need to do the clean cache &amp; restart dance twice a day on average ¯\\_(ツ)_/¯",
+    "ts": "1470062109.001389",
+    "id": "01de41277",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U101P2VHR",
+    "text": "hi guys, I have a webview showing a pdf resource at fullscreen, I was able to do a zoom programmatic ally  but now I want to zoom a precise point within the pdf not the center",
+    "ts": "1470062494.001390",
+    "id": "01de41278",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U101P2VHR",
+    "text": "any help would be really appreciate",
+    "ts": "1470062512.001391",
+    "id": "01de41279",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U053PPGDC>: Only twice? burn the witch!",
+    "ts": "1470062568.001392",
+    "id": "01de41280",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": ":smile:",
+    "ts": "1470062576.001393",
+    "id": "01de41281",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1X1ZQGMT",
+    "text": "<@U1X1ZQGMT|kseniya> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1470062671.001394",
+    "id": "01de41282",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1FECKXA9",
+    "text": "hi <@U053PPGDC>  is there any way to set this atumatically?",
+    "ts": "1470062740.001395",
+    "id": "01de41283",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1X1V8CDC",
+    "text": "<@U1X1V8CDC|jaumitus> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1470063208.001396",
+    "id": "01de41284",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "not that I know",
+    "ts": "1470063776.001397",
+    "id": "01de41285",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1FECKXA9",
+    "text": "okthanks <@U053PPGDC>",
+    "ts": "1470064095.001398",
+    "id": "01de41286",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1X21PKNY",
+    "text": "<@U1X21PKNY|leeboyce> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1470064345.001399",
+    "id": "01de41287",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1X21PKNY",
+    "text": "Could anyone point me in the direction of an idiot proof guide for implementing the APK Expansion Downloader. I have build an app using Ionic Framework and so close to publishing it, but due to it's size I need to include the downloader, which I can't figure out. My experience with the Android SDK is quite minimal so any hand-holding would be very much appreciated.",
+    "ts": "1470064589.001400",
+    "id": "01de41288",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "can a style def contain app:namespace items? I’m having issues with that :confused:",
+    "ts": "1470066762.001401",
+    "id": "01de41289",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "You can drop the `app:` part of the item",
+    "ts": "1470066798.001402",
+    "id": "01de41290",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "`&lt;item name=“myStyleAttributeName”&gt;value&lt;/item&gt;`, instead of `&lt;item name=“app:myStyleAttributeName”&gt;…`",
+    "ts": "1470066840.001403",
+    "id": "01de41291",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "hm",
+    "ts": "1470066912.001404",
+    "id": "01de41292",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "<@U16GF1B0F>: :taco:",
+    "ts": "1470066920.001405",
+    "id": "01de41293",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "will try that",
+    "ts": "1470066923.001406",
+    "id": "01de41294",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "thanks",
+    "ts": "1470066924.001407",
+    "id": "01de41295",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "woo! my first taco :slightly_smiling_face:",
+    "ts": "1470066933.001408",
+    "id": "01de41296",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U16GF1B0F>: Welcome to the big leagues",
+    "ts": "1470068020.001409",
+    "id": "01de41297",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "You’re playing with the big boys now",
+    "ts": "1470068028.001410",
+    "id": "01de41298",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U16GF1B0F",
+    "text": "/gif i feels it",
+    "ts": "1470068047.001411",
+    "id": "01de41299",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "",
+    "bot_id": "B0GH4RVHU",
+    "attachments": [
+      {
+        "fallback": "<http://emotibot.net/pix/8486.gif>",
+        "image_url": "http://emotibot.net/pix/8486.gif",
+        "image_width": 500,
+        "image_height": 271,
+        "image_bytes": 475190,
+        "is_animated": true,
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1470068049.001412",
+    "id": "01de41300",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U0LQTK6G2>: leaderboard",
+    "ts": "1470068060.001413",
+    "id": "01de41301",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LQTK6G2",
+    "text": "*AndroidChat Leaderboard*\n",
+    "ts": "1470068060.001414",
+    "id": "01de41302",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LQTK6G2",
+    "text": "1). nish  *132*\n",
+    "ts": "1470068060.001415",
+    "id": "01de41303",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LQTK6G2",
+    "text": "2). langerhans  *109*\n",
+    "ts": "1470068060.001416",
+    "id": "01de41304",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LQTK6G2",
+    "text": "3). bluecup  *85*\n",
+    "ts": "1470068060.001417",
+    "id": "01de41305",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LQTK6G2",
+    "text": "4). zmarkan  *67*\n",
+    "ts": "1470068060.001418",
+    "id": "01de41306",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LQTK6G2",
+    "text": "5). aki  *49*\n",
+    "ts": "1470068060.001419",
+    "id": "01de41307",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LQTK6G2",
+    "text": "6). eddie.ringle  *45*\n",
+    "ts": "1470068060.001420",
+    "id": "01de41308",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LQTK6G2",
+    "text": "7). andreasbackx  *39*\n",
+    "ts": "1470068060.001421",
+    "id": "01de41309",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LQTK6G2",
+    "text": "8). kv87  *34*\n",
+    "ts": "1470068060.001422",
+    "id": "01de41310",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LQTK6G2",
+    "text": "9). ariana  *29*\n",
+    "ts": "1470068060.001423",
+    "id": "01de41311",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LQTK6G2",
+    "text": "10). linkbait  *18*\n",
+    "ts": "1470068060.001424",
+    "id": "01de41312",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LQTK6G2",
+    "text": "View full leaderboard: <https://www.heytaco.chat/leaderboard/T04PLNDMP>",
+    "ts": "1470068062.001425",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "01de41313",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04VA47NB",
+    "text": "whoo still on the leaderboard :smile:",
+    "ts": "1470068076.001426",
+    "id": "01de41314",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "fist bumps <@U04VA47NB|ariana>",
+    "subtype": "me_message",
+    "user": "U08GFT5V5",
+    "ts": "1470068096.001427",
+    "id": "01de41315",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04VA47NB",
+    "text": "<http://i.imgur.com/ugHOnGW.gif>",
+    "attachments": [
+      {
+        "fallback": "500x225px image",
+        "image_url": "http://i.imgur.com/ugHOnGW.gif",
+        "image_width": 500,
+        "image_height": 225,
+        "image_bytes": 981847,
+        "is_animated": true,
+        "from_url": "http://i.imgur.com/ugHOnGW.gif",
+        "id": 1
+      }
+    ],
+    "ts": "1470068166.001428",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "01de41316",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U04VA47NB>: :taco:",
+    "ts": "1470068236.001430",
+    "id": "01de41317",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04VA47NB",
+    "text": "yay!",
+    "ts": "1470069029.001431",
+    "id": "01de41318",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04VA47NB",
+    "text": "<@U053LEHJN>: :taco:",
+    "ts": "1470069040.001432",
+    "id": "01de41319",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Whoa whoa, allow me to join the party",
+    "ts": "1470069081.001433",
+    "id": "01de41320",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U04VA47NB>: :taco:",
+    "ts": "1470069086.001434",
+    "id": "01de41321",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U053LEHJN>: :taco:",
+    "ts": "1470069093.001435",
+    "id": "01de41322",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U04VA47NB>: don't fall for <@U08GFT5V5>'s tricks!",
+    "ts": "1470069108.001436",
+    "id": "01de41323",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": ":disappointed:",
+    "ts": "1470069130.001437",
+    "id": "01de41324",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04VA47NB",
+    "text": "lol I am immune",
+    "ts": "1470069169.001438",
+    "id": "01de41325",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "lol crap.. the bot is beating me",
+    "ts": "1470069526.001439",
+    "id": "01de41326",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I need to step my game up",
+    "ts": "1470069532.001440",
+    "id": "01de41327",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U055GGAHS>: :taco:",
+    "ts": "1470069900.001441",
+    "id": "01de41328",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "That should help",
+    "ts": "1470069911.001442",
+    "id": "01de41329",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "lol",
+    "ts": "1470069914.001443",
+    "id": "01de41330",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I see you are tacoing hard up at that #1 spot",
+    "ts": "1470069933.001444",
+    "id": "01de41331",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "/gif number one spot",
+    "ts": "1470069936.001445",
+    "id": "01de41332",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "",
+    "bot_id": "B0GH4RVHU",
+    "attachments": [
+      {
+        "fallback": "<http://i.makeagif.com/media/9-02-2015/_4g78C.gif>",
+        "image_url": "http://i.makeagif.com/media/9-02-2015/_4g78C.gif",
+        "image_width": 320,
+        "image_height": 180,
+        "image_bytes": 1522142,
+        "is_animated": true,
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1470069938.001446",
+    "id": "01de41333",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "LUDA!",
+    "ts": "1470069952.001447",
+    "id": "01de41334",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I’m coming for you <@U0N7D6F50>",
+    "ts": "1470069970.001448",
+    "id": "01de41335",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "How it feels in #1",
+    "ts": "1470069983.001449",
+    "id": "01de41336",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<https://gfycat.com/SilentWickedInexpectatumpleco>",
+    "attachments": [
+      {
+        "service_name": "Gfycat",
+        "title": "Create, Discover and Share GIFs on Gfycat",
+        "title_link": "https://gfycat.com/SilentWickedInexpectatumpleco",
+        "text": "Watch this GIF on Gfycat. Discover more combinedgifs GIFs, donald trump presidentGIFs on Gfycat.",
+        "fallback": "Gfycat: Create, Discover and Share GIFs on Gfycat",
+        "thumb_url": "https://thumbs.gfycat.com/SilentWickedInexpectatumpleco-size_restricted.gif",
+        "from_url": "https://gfycat.com/SilentWickedInexpectatumpleco",
+        "thumb_width": 305,
+        "thumb_height": 171,
+        "service_icon": "https://gfycat.com/favicon2.ico",
+        "id": 1
+      }
+    ],
+    "ts": "1470069984.001450",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U04U5KS3Z"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "01de41337",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "im dead",
+    "ts": "1470070005.001452",
+    "id": "01de41338",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1X3XJEKU",
+    "text": "<@U1X3XJEKU|kierangoodhacker> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1470070763.001453",
+    "id": "01de41339",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1X4RVAVA",
+    "text": "<@U1X4RVAVA|lloyd.dugmore> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1470078177.001456",
+    "id": "01de41340",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1KBFNA4R",
+    "text": "Does anyone know how to change the size of a search views query suggestion text",
+    "ts": "1470079851.001457",
+    "id": "01de41341",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1KBFNA4R",
+    "text": "I found this: <http://stackoverflow.com/questions/10535176/how-to-set-searchview-textsize> \nBut I feel like there is a should be a way to do this via XML",
+    "attachments": [
+      {
+        "title": "How to set SearchView TextSize?",
+        "title_link": "http://stackoverflow.com/questions/10535176/how-to-set-searchview-textsize",
+        "text": "I have a SearchView inside a LinearLayout and I'm trying to set a different TextSize for it (the SearchView) but when setting android:textSize=\"60sp\" for example, nothing happens.This is my code:...",
+        "fallback": "How to set SearchView TextSize?",
+        "thumb_url": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/questions/10535176/how-to-set-searchview-textsize",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "service_icon": "http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d",
+        "service_name": "stackoverflow.com",
+        "id": 1
+      }
+    ],
+    "ts": "1470079863.001458",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "01de41342",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0546QERR|damien5314> uploaded a file: <https://androidchat.slack.com/files/damien5314/F1X5T75H9/screenshot_20160801-161047.png|Screenshot_20160801-161047.png>",
+    "file": {
+      "id": "F1X5T75H9",
+      "created": 1470093608,
+      "timestamp": 1470093608,
+      "name": "Screenshot_20160801-161047.png",
+      "title": "Screenshot_20160801-161047.png",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U0546QERR",
+      "editable": false,
+      "size": 50438,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F1X5T75H9/screenshot_20160801-161047.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F1X5T75H9/download/screenshot_20160801-161047.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F1X5T75H9-ef4c07f3bb/screenshot_20160801-161047_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F1X5T75H9-ef4c07f3bb/screenshot_20160801-161047_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F1X5T75H9-ef4c07f3bb/screenshot_20160801-161047_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 360,
+      "thumb_360_h": 216,
+      "thumb_480": "https://files.slack.com/files-tmb/T04PLNDMP-F1X5T75H9-ef4c07f3bb/screenshot_20160801-161047_480.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_480_w": 480,
+      "thumb_480_h": 288,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F1X5T75H9-ef4c07f3bb/screenshot_20160801-161047_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720": "https://files.slack.com/files-tmb/T04PLNDMP-F1X5T75H9-ef4c07f3bb/screenshot_20160801-161047_720.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720_w": 720,
+      "thumb_720_h": 432,
+      "thumb_960": "https://files.slack.com/files-tmb/T04PLNDMP-F1X5T75H9-ef4c07f3bb/screenshot_20160801-161047_960.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_960_w": 960,
+      "thumb_960_h": 576,
+      "thumb_1024": "https://files.slack.com/files-tmb/T04PLNDMP-F1X5T75H9-ef4c07f3bb/screenshot_20160801-161047_1024.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_1024_w": 1024,
+      "thumb_1024_h": 614,
+      "image_exif_rotation": 1,
+      "original_w": 1280,
+      "original_h": 768,
+      "permalink": "https://androidchat.slack.com/files/damien5314/F1X5T75H9/screenshot_20160801-161047.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F1X5T75H9-59caeb6ce1",
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U0546QERR",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0546QERR|damien5314>",
+    "bot_id": null,
+    "ts": "1470093610.001460",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "01de41343",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "anyone know why my CAB text/icon colors are going dark (they're white normally) after rotating while the CAB is open, on pre-API 21?",
+    "edited": {
+      "user": "U0546QERR",
+      "ts": "1470093655.000000"
+    },
+    "ts": "1470093633.001461",
+    "id": "01de41344",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i have a strong suspicion it's an appcompat bug or something, but i haven't been able to prove it through searching so far",
+    "ts": "1470093679.001463",
+    "id": "01de41345",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U0546QERR|damien5314> uploaded a file: <https://androidchat.slack.com/files/damien5314/F1X776K7G/-.xml|Untitled>",
+    "file": {
+      "id": "F1X776K7G",
+      "created": 1470093894,
+      "timestamp": 1470093894,
+      "name": "-.xml",
+      "title": "Untitled",
+      "mimetype": "text/plain",
+      "filetype": "xml",
+      "pretty_type": "XML",
+      "user": "U0546QERR",
+      "editable": true,
+      "size": 1680,
+      "mode": "snippet",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F1X776K7G/-.xml?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F1X776K7G/download/-.xml?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "permalink": "https://androidchat.slack.com/files/damien5314/F1X776K7G/-.xml",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F1X776K7G-16f43eab9b",
+      "edit_link": "https://androidchat.slack.com/files/damien5314/F1X776K7G/-.xml/edit",
+      "preview": "<!-- Main theme -->\r\n<style name=\"QTheme\" parent=\"Theme.AppCompat.Light.NoActionBar\">\r\n    ...\r\n    <!-- ActionMode attributes -->\r\n    <item name=\"windowActionModeOverlay\">true</item>\r",
+      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre><span class=\"cm-comment\">&lt;!-- Main theme --&gt;</span></pre></div>\n<div><pre><span class=\"cm-tag cm-bracket\">&lt;</span><span class=\"cm-tag\">style</span> <span class=\"cm-attribute\">name</span>=<span class=\"cm-string\">&quot;QTheme&quot;</span> <span class=\"cm-attribute\">parent</span>=<span class=\"cm-string\">&quot;Theme.AppCompat.Light.NoActionBar&quot;</span><span class=\"cm-tag cm-bracket\">&gt;</span></pre></div>\n<div><pre>    ...</pre></div>\n<div><pre>    <span class=\"cm-comment\">&lt;!-- ActionMode attributes --&gt;</span></pre></div>\n<div><pre>    <span class=\"cm-tag cm-bracket\">&lt;</span><span class=\"cm-tag\">item</span> <span class=\"cm-attribute\">name</span>=<span class=\"cm-string\">&quot;windowActionModeOverlay&quot;</span><span class=\"cm-tag cm-bracket\">&gt;</span>true<span class=\"cm-tag cm-bracket\">&lt;/</span><span class=\"cm-tag\">item</span><span class=\"cm-tag cm-bracket\">&gt;</span></pre></div>\n</div>\n</div>\n",
+      "lines": 36,
+      "lines_more": 31,
+      "preview_is_truncated": null,
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U0546QERR",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U0546QERR|damien5314>",
+    "bot_id": null,
+    "ts": "1470093894.001464",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "01de41346",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "that should be the relevant styles if it helps",
+    "ts": "1470093904.001465",
+    "id": "01de41347",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1X7HQFL4",
+    "text": "<@U1X7HQFL4|matteasmith> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1470097511.001466",
+    "id": "01de41348",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "<https://sites.google.com/a/android.com/tools/recent/androidstudio22preview7available|Android Studio 2.2 Preview 7 Available>\nWe've just released Android Studio 2.2 Preview 7 the Canary channel.This build contains a large number of bug fixes as we work to reach Android Studio 2.2 Beta.Layout Editor improvements and bug fixesSupport for the latest version of Gradle (2.14.1) with Android StudioContinued Instant Run bug fixesNative / C++ improvements including: &lt;a href=\"<https://code.google.com/p/android/issues/detail?id=215555>\"...",
+    "username": "Posts of Recent Changes",
+    "icons": {
+      "image_36": "https://a.slack-edge.com/66f9/img/services/rss_36.png",
+      "image_48": "https://a.slack-edge.com/66f9/img/services/rss_48.png",
+      "image_72": "https://a.slack-edge.com/205a/img/services/rss_72.png"
+    },
+    "bot_id": "B062SSUPJ",
+    "attachments": [
+      {
+        "title": "Android Studio 2.2 Preview 7 Available - Android Studio Project Site",
+        "title_link": "https://sites.google.com/a/android.com/tools/recent/androidstudio22preview7available",
+        "text": "Android tools project information site",
+        "fallback": "Android Studio 2.2 Preview 7 Available - Android Studio Project Site",
+        "from_url": "https://sites.google.com/a/android.com/tools/recent/androidstudio22preview7available",
+        "thumb_url": "https://sites.google.com/a/android.com/tools/_/rsrc/1460493325829/config/customLogo.gif?revision=1",
+        "thumb_width": 100,
+        "thumb_height": 100,
+        "service_icon": "https://ssl.gstatic.com/sites/p/f8cfdc/system/app/images/apple-touch-icon.png",
+        "service_name": "sites.google.com",
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1470105373.001467",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "01de41349",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1X9CMSQH",
+    "text": "<@U1X9CMSQH|mahendravijay> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1470115599.001469",
+    "id": "01de41350",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U1X9CMGKX",
+    "text": "<@U1X9CMGKX|dmitry.panchev> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1470117751.001470",
+    "id": "01de41351",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U11P75HMW",
+    "text": "Can we get gps coordinates ie latitude and longitude in emulator ",
+    "ts": "1470118764.001471",
+    "id": "01de41352",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

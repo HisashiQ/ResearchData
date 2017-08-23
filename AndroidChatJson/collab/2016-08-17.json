@@ -1,0 +1,1265 @@
+[
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U04TK850N>: did you push tags?",
+    "ts": "1471454387.000416",
+    "id": "17co3378",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "nope, not yet",
+    "ts": "1471454398.000417",
+    "id": "17co3379",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Ah, I thought I missed the merge request",
+    "ts": "1471454412.000418",
+    "id": "17co3380",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "No big then",
+    "ts": "1471454421.000419",
+    "id": "17co3381",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "was playing with a little improvement, but didn't get done",
+    "ts": "1471454430.000420",
+    "id": "17co3382",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I know linkbait is suppoed to be platform agnostic, but maybe we can make it possible to provide \"platform extensions\" somehow",
+    "ts": "1471457408.000421",
+    "id": "17co3383",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Not sure how that’s going to work to be honest",
+    "ts": "1471457438.000422",
+    "id": "17co3384",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I have a déjà vu",
+    "edited": {
+      "user": "U04TK850N",
+      "ts": "1471457479.000000"
+    },
+    "ts": "1471457466.000423",
+    "id": "17co3385",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Weird",
+    "ts": "1471457478.000424",
+    "id": "17co3386",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Hm, yeah it's not easy. I would think there would be platform specific event types",
+    "ts": "1471457513.000426",
+    "id": "17co3387",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Currently the implementation for the platform specific code happens in core",
+    "ts": "1471457526.000427",
+    "id": "17co3388",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "But then the plugin would need to check for every event",
+    "ts": "1471457528.000428",
+    "id": "17co3389",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "trying to draw it out into the API might be a good idea",
+    "ts": "1471457543.000429",
+    "id": "17co3390",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Could we have plugins implement two message event handlers if there are e.g. two platforms? Then they would be forced to keep the event handling to a minimum and delegate the logic to a common class/methods",
+    "ts": "1471457609.000430",
+    "id": "17co3391",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "But that might be confusing :confused:",
+    "ts": "1471457626.000431",
+    "id": "17co3392",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "If it only would be javascript :troll:",
+    "ts": "1471457640.000432",
+    "id": "17co3393",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Yeah the issue wouldn’t be the handlers but more on the components",
+    "ts": "1471457709.000433",
+    "id": "17co3394",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "That’s why I kind of delegated functionality to Messenger classes",
+    "ts": "1471457726.000434",
+    "id": "17co3395",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Unless you plan on exposing certain platform specific features",
+    "edited": {
+      "user": "U08GFT5V5",
+      "ts": "1471457790.000000"
+    },
+    "ts": "1471457773.000435",
+    "id": "17co3396",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "then the event handler might be an issue",
+    "ts": "1471457793.000437",
+    "id": "17co3397",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "well there could still be a common interface, but then something like `getExtensionsFor(Platform.SLACK)?.addMessageButton()` for examplke on that interface. With Kotlin's null safety you could just return null if the platform is not currently Slack. This method would just need to exist on a few classes.",
+    "ts": "1471457880.000438",
+    "id": "17co3398",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "But that would only solve the \"outgoing\" calls",
+    "ts": "1471457924.000439",
+    "id": "17co3399",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "tranforming an event into an extended event would only work if the event had the data already or was of that certain type",
+    "ts": "1471457945.000440",
+    "id": "17co3400",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "What if we did it android style",
+    "ts": "1471458032.000441",
+    "id": "17co3401",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "`if (platform android) { code() }`",
+    "edited": {
+      "user": "U08GFT5V5",
+      "ts": "1471458069.000000"
+    },
+    "ts": "1471458062.000442",
+    "id": "17co3402",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "In the plugin?",
+    "ts": "1471458117.000444",
+    "id": "17co3403",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Then, would you need to cast there?",
+    "ts": "1471458130.000445",
+    "id": "17co3404",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "yeah, that way if it’s aware of the context",
+    "ts": "1471458141.000446",
+    "id": "17co3405",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "MessageEvent-&gt;SlackMessageEvent",
+    "ts": "1471458150.000447",
+    "id": "17co3406",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "we can expose non platform agnostic stuff",
+    "ts": "1471458151.000448",
+    "id": "17co3407",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "that would be the downside though",
+    "ts": "1471458161.000449",
+    "id": "17co3408",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "casting everywhere",
+    "ts": "1471458166.000450",
+    "id": "17co3409",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "What if a plugin could decide it wants to only receive Slack events anyway?",
+    "ts": "1471458186.000451",
+    "id": "17co3410",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "That could go in the manifest",
+    "ts": "1471458198.000452",
+    "id": "17co3411",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "or the command annotation",
+    "ts": "1471458206.000453",
+    "id": "17co3412",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "true",
+    "ts": "1471458210.000454",
+    "id": "17co3413",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Then it would only receive those",
+    "ts": "1471458219.000455",
+    "id": "17co3414",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Then you'd need to either stay platform agnostic or have separate handlers",
+    "ts": "1471458242.000456",
+    "id": "17co3415",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "(In case you wanted to support multiple platforms)",
+    "ts": "1471458258.000457",
+    "id": "17co3416",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "But I would think if you want to use special slack features, then you'd have a reason to require them",
+    "ts": "1471458276.000458",
+    "id": "17co3417",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "check this out",
+    "ts": "1471458374.000459",
+    "id": "17co3418",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "basically <@U0N7D6F50> but skype",
+    "ts": "1471458384.000460",
+    "id": "17co3419",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<https://github.com/toomasr/skype-bot>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "toomasr/skype-bot",
+        "title_link": "https://github.com/toomasr/skype-bot",
+        "text": "skype-bot - Skype Bot - In Kittens We Trust",
+        "fallback": "GitHub: toomasr/skype-bot",
+        "thumb_url": "https://avatars0.githubusercontent.com/u/196499?v=3&s=400",
+        "from_url": "https://github.com/toomasr/skype-bot",
+        "thumb_width": 251,
+        "thumb_height": 251,
+        "service_icon": "https://github.com/apple-touch-icon.png",
+        "id": 1
+      }
+    ],
+    "ts": "1471458384.000461",
+    "id": "17co3420",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "<https://gitlab.com/nishtahir/linkbait/merge_requests/21>",
+    "attachments": [
+      {
+        "service_name": "GitLab",
+        "title": "Add tags (!21) · Merge Requests · Nish Tahir / Linkbait",
+        "title_link": "https://gitlab.com/nishtahir/linkbait/merge_requests/21",
+        "text": "Help for the tag command: ``` Add a tag - @linkbait tag add Show a tag - @linkbait tag Delete a tag - @linkbait tag del List all tags -...",
+        "fallback": "GitLab: Add tags (!21) · Merge Requests · Nish Tahir / Linkbait",
+        "thumb_url": "https://gitlab.com/uploads/project/avatar/839074/linkbait_logo.jpg",
+        "fields": [
+          {
+            "title": "Author",
+            "value": "Max K.",
+            "short": true
+          }
+        ],
+        "from_url": "https://gitlab.com/nishtahir/linkbait/merge_requests/21",
+        "thumb_width": 512,
+        "thumb_height": 512,
+        "service_icon": "https://gitlab.com/assets/touch-icon-iphone-5a9cee0e8a51212e70b90c87c12f382c428870c0ff67d1eb034d884b78d2dae7.png",
+        "id": 1
+      }
+    ],
+    "ts": "1471458391.000463",
+    "id": "17co3421",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "lol",
+    "ts": "1471458421.000465",
+    "id": "17co3422",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Cool I’ll merge",
+    "ts": "1471458626.000466",
+    "id": "17co3423",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U04TK850N>: :nutella: :nutella:",
+    "ts": "1471458636.000467",
+    "id": "17co3424",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "I’ll also update master",
+    "ts": "1471458647.000468",
+    "id": "17co3425",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "woo",
+    "ts": "1471458664.000469",
+    "id": "17co3426",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U04TK850N>: Issue with the commit",
+    "ts": "1471458733.000470",
+    "id": "17co3427",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": ":open_mouth:",
+    "ts": "1471458740.000471",
+    "id": "17co3428",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Using `Injekt` in global singleton mode is not a great plan",
+    "ts": "1471458753.000472",
+    "id": "17co3429",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Since they are all on the same class loader",
+    "ts": "1471458762.000473",
+    "id": "17co3430",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "hm",
+    "ts": "1471458768.000474",
+    "id": "17co3431",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "it means 1 global connection source instance",
+    "ts": "1471458778.000475",
+    "id": "17co3432",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "oh wait, the connectionsource :confused:",
+    "ts": "1471458789.000476",
+    "id": "17co3433",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "yeah I'll fix",
+    "ts": "1471458792.000477",
+    "id": "17co3434",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I only thought about the service",
+    "ts": "1471458806.000478",
+    "id": "17co3435",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "my bad",
+    "ts": "1471458809.000479",
+    "id": "17co3436",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "It’s better to have a local Injekt registry",
+    "edited": {
+      "user": "U08GFT5V5",
+      "ts": "1471458832.000000"
+    },
+    "ts": "1471458820.000480",
+    "id": "17co3437",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Thanks for that",
+    "ts": "1471458840.000482",
+    "id": "17co3438",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "updated the commit",
+    "ts": "1471459010.000483",
+    "id": "17co3439",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "anyone know of a java skype bot api implementation?",
+    "edited": {
+      "user": "U08GFT5V5",
+      "ts": "1471461169.000000"
+    },
+    "ts": "1471461151.000484",
+    "id": "17co3440",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "I don’t want to have to do the whole thing myself",
+    "ts": "1471461160.000485",
+    "id": "17co3441",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "<@U08GFT5V5>: I think <@U0N7D6F50> needs to have a pluggable messaging service",
+    "ts": "1471465141.000487",
+    "id": "17co3442",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Haven't read the unread messages so excuse me if it was said before :stuck_out_tongue:",
+    "ts": "1471465186.000488",
+    "id": "17co3443",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I skimmed over the mention of the Skype bot",
+    "ts": "1471465200.000489",
+    "id": "17co3444",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

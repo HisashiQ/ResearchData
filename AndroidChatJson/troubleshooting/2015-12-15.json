@@ -1,0 +1,150 @@
+[
+  {
+    "user": "U0GKETVNY",
+    "text": "<@U061HDV96>: I use this method, but it not work. Maybe you have other ideas?",
+    "ts": "1450212234.000292",
+    "id": "15tr3252",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "Not really, immersion isn't that big of a deal for my app",
+    "ts": "1450212277.000293",
+    "id": "15tr3253",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U061HDV96",
+    "text": "I just use it for the intro guide",
+    "ts": "1450212283.000294",
+    "id": "15tr3254",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0GKETVNY",
+    "text": "Thanks for help",
+    "ts": "1450212474.000295",
+    "id": "15tr3255",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I do this\n\n```\n    /**\n     * Apply immersive mode flags to the given window with backwards compatibility to {@link\n     * android.os.Build.VERSION_CODES#ICE_CREAM_SANDWICH}.\n     *\n     * @param window the activity window\n     */\n    public static void apply(Window window) {\n        int newUiOptions = window.getDecorView().getSystemUiVisibility();\n        // Navigation bar hiding:  Backwards compatible to ICS.\n        if (Build.VERSION.SDK_INT &gt;= 14) {\n            newUiOptions |= View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;\n        }\n        // Status bar hiding: Backwards compatible to Jellybean\n        if (Build.VERSION.SDK_INT &gt;= 16) {\n            newUiOptions |= View.SYSTEM_UI_FLAG_FULLSCREEN;\n        }\n        if (Build.VERSION.SDK_INT &gt;= 18) {\n            newUiOptions |= View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;\n        }\n\n        newUiOptions |= View.SYSTEM_UI_FLAG_LAYOUT_STABLE\n                | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION\n                | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN;\n\n        window.getDecorView().setSystemUiVisibility(newUiOptions);\n    }\n```\n\nand in my activity onCreate\n```\n        getWindow().getDecorView()\n                .setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() {\n            @Override\n            public void onSystemUiVisibilityChange(int visibility) {\n                if ((visibility &amp; View.SYSTEM_UI_FLAG_FULLSCREEN) == 0) {\n                    Immersive.apply(getWindow());\n                }\n            }\n        });\n```",
+    "ts": "1450212503.000296",
+    "id": "15tr3256",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "you may need to call apply() in onResume as well based on what you are suggesting that it looses its settings in some cases",
+    "edited": {
+      "user": "U055GGAHS",
+      "ts": "1450212616.000000"
+    },
+    "ts": "1450212527.000297",
+    "id": "15tr3257",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0GKETVNY",
+    "text": "It does not work((",
+    "ts": "1450213921.000300",
+    "id": "15tr3258",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0GKETVNY",
+    "text": "this code work without dialog, but if open dialog, and after unlock device,  navigation bar was shown",
+    "ts": "1450214082.000301",
+    "id": "15tr3259",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

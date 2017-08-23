@@ -1,0 +1,4799 @@
+[
+  {
+    "user": "U0BA1GFSQ",
+    "subtype": "channel_join",
+    "text": "<@U0BA1GFSQ|vlonjatg> has joined the channel",
+    "ts": "1443165190.002078",
+    "id": "25de10486",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0BAB6E6L",
+    "subtype": "channel_join",
+    "text": "<@U0BAB6E6L|tnj> has joined the channel",
+    "ts": "1443174033.002079",
+    "id": "25de10487",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0BAA6PB8",
+    "subtype": "channel_join",
+    "text": "<@U0BAA6PB8|slymnblgnn> has joined the channel",
+    "ts": "1443174845.002080",
+    "id": "25de10488",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0BAE2Q7J",
+    "subtype": "channel_join",
+    "text": "<@U0BAE2Q7J|nikolai.oellegaard> has joined the channel",
+    "ts": "1443177867.002081",
+    "id": "25de10489",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "hey guys, does anyone know how to setup real android devices as slaves on Jenkins master? Since Jenkins requires a \"Launch Method\" for each slave I don't really know what it would be for a device attached through adb...",
+    "ts": "1443178770.002082",
+    "id": "25de10490",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "<@U053QFSSY>: maybe this helps? <http://www.hidroh.com/2015/04/14/concurrent-android-ui-automation-jenkins/>",
+    "attachments": [
+      {
+        "title": "Concurrent Android UI automation with Jenkins",
+        "title_link": "http://www.hidroh.com/2015/04/14/concurrent-android-ui-automation-jenkins/",
+        "text": "Using multiple Android devices to execute concurrent Calabash Android automation tests via Jenkins CI",
+        "fallback": "Concurrent Android UI automation with Jenkins",
+        "thumb_url": "https://hidroh.github.io/assets/img/parallel-cover.jpg",
+        "from_url": "http://www.hidroh.com/2015/04/14/concurrent-android-ui-automation-jenkins/",
+        "thumb_width": 640,
+        "thumb_height": 362,
+        "id": 1
+      }
+    ],
+    "ts": "1443179970.002083",
+    "id": "25de10491",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "yeah, I read it but it does not say anything about \"launch method\"",
+    "ts": "1443179994.002085",
+    "id": "25de10492",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "reading this though: <http://www.everybodytests.com/2013/11/enterprise-scale-live-device-test.html> seems like you need to have a separate slave to control device slaves",
+    "ts": "1443180047.002086",
+    "id": "25de10493",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "I wanted to do everything on jenkins master :]",
+    "ts": "1443180063.002087",
+    "id": "25de10494",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<@U053QFSSY>: correct, jenkins needs true slaves to talk to which are jenkins instances running remotely basically",
+    "ts": "1443183194.002088",
+    "id": "25de10495",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "its how we manage our testing currently.. I hate it",
+    "ts": "1443183210.002089",
+    "id": "25de10496",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "jenkins, while much more stable now, still dies randomly or adb shits itself or some other random thing I have to go deal with at least once a week.",
+    "ts": "1443183254.002090",
+    "id": "25de10497",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "right... just pulled out an old PC to serve as a dumb slave with connected Android devices :]",
+    "ts": "1443183346.002091",
+    "id": "25de10498",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "<@U055GGAHS>: so much infrastructure for something that should be relatively simple ...",
+    "ts": "1443183409.002092",
+    "id": "25de10499",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "yep",
+    "ts": "1443183435.002093",
+    "id": "25de10500",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "refer to my hating it comment =P",
+    "ts": "1443183448.002094",
+    "id": "25de10501",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "i dont know of anything that you can deploy onsite though that is as low setup overhead as jenkins",
+    "ts": "1443183470.002095",
+    "id": "25de10502",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "so far so good here, but I am sure I am going to start hating it once adb craps out :smile:",
+    "ts": "1443183590.002096",
+    "id": "25de10503",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "I spent a day trying to understand how to run this <http://openstf.io/>",
+    "ts": "1443183632.002097",
+    "id": "25de10504",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "i can say its neat but I wouldn’t try to depend on it in prod yet",
+    "ts": "1443183651.002098",
+    "id": "25de10505",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "I am not a fan of remote labs since my tests usually involve testing cameras and having access to hardware in case it craps out :laughing:",
+    "ts": "1443183760.002099",
+    "id": "25de10506",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "that's why I decided to build own mini lab ;]",
+    "ts": "1443183784.002100",
+    "id": "25de10507",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "right stf is onsite",
+    "ts": "1443183807.002101",
+    "id": "25de10508",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "its actually really cool but i could not get the docker version to work nor could I get ubuntu to play nice with a non root user launching while still being able to access adb and usb",
+    "ts": "1443183844.002102",
+    "id": "25de10509",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "maybe a more handy sys admin would have a better go",
+    "ts": "1443183865.002103",
+    "id": "25de10510",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "oh I see, I should check it out then ;]",
+    "ts": "1443183900.002104",
+    "id": "25de10511",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "glancing at their repo they have significantly more deployment information now",
+    "ts": "1443184055.002105",
+    "id": "25de10512",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "<https://developers.google.com/cloud-test-lab/>",
+    "attachments": [
+      {
+        "service_name": "Google Developers",
+        "title": "Cloud Test Lab  |  Google Developers",
+        "title_link": "https://developers.google.com/cloud-test-lab/",
+        "text": "Your instant device testing closet, with automated reports and scaling support.",
+        "fallback": "Google Developers: Cloud Test Lab  |  Google Developers",
+        "from_url": "https://developers.google.com/cloud-test-lab/",
+        "id": 1
+      }
+    ],
+    "ts": "1443184185.002106",
+    "id": "25de10513",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "coming later this summer...",
+    "ts": "1443184191.002108",
+    "id": "25de10514",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "yeah i think some people are already on the beta for it",
+    "ts": "1443184224.002109",
+    "reactions": [
+      {
+        "name": "wink",
+        "users": [
+          "U055JANKU"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "25de10515",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "but that wont help me, I can not upload apk’s to anything",
+    "ts": "1443184237.002110",
+    "id": "25de10516",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "onsite with our own hardware is the only option available to me unfortunately so all these hip cloud features help me none",
+    "ts": "1443184282.002111",
+    "id": "25de10517",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<@U053QFSSY>: are you trying to test taking photos/video with the device or test real cameras over OTG or bluetooth or something",
+    "ts": "1443184404.002112",
+    "id": "25de10518",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "<@U055GGAHS>:  raw device camera processing mostly",
+    "ts": "1443184453.002113",
+    "id": "25de10519",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "usually simple camera and openGL integration test because SAMSUNG",
+    "ts": "1443184488.002114",
+    "id": "25de10520",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "lol",
+    "ts": "1443184501.002115",
+    "id": "25de10521",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "or HTC lie about their openGL capabilities",
+    "ts": "1443184503.002116",
+    "id": "25de10522",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "shaders don't compile blah blah",
+    "ts": "1443184513.002117",
+    "id": "25de10523",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "right",
+    "ts": "1443184526.002118",
+    "id": "25de10524",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "ive never really understood the waiting till the last possible second to hope a shader works",
+    "ts": "1443184582.002119",
+    "id": "25de10525",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "like why can’t you compile the shader for each platform and then let the GPU select the appropriate shader or whatever, kinda like how resources work",
+    "ts": "1443184611.002120",
+    "id": "25de10526",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "or the APK on install could compile the shaders or something",
+    "ts": "1443184626.002121",
+    "id": "25de10527",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "yeah I am not a openGL/C++ guy so I wonder the same many times a day",
+    "ts": "1443184639.002122",
+    "id": "25de10528",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": ": shrug : gles is just such a hassle all the time",
+    "ts": "1443184656.002123",
+    "id": "25de10529",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "unfortunately that's the only platform portable way to do gpu processing",
+    "ts": "1443184700.002124",
+    "id": "25de10530",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "however it's never really portable :smile:",
+    "ts": "1443184726.002125",
+    "id": "25de10531",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "So I have svg images.",
+    "ts": "1443184927.002126",
+    "id": "25de10532",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "what should I do with it?",
+    "ts": "1443184932.002127",
+    "id": "25de10533",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "use them as svg? (how?) \nconvert them to pngs?",
+    "ts": "1443184947.002128",
+    "id": "25de10534",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "convert to vector drawables",
+    "ts": "1443184969.002129",
+    "id": "25de10535",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "use latest android gradle plugin that automagically converts them for you (it's great)",
+    "ts": "1443184972.002130",
+    "id": "25de10536",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "use gradle plugin 1.4",
+    "ts": "1443184974.002131",
+    "id": "25de10537",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "-beta2",
+    "ts": "1443184978.002132",
+    "id": "25de10538",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "yeah :smile:",
+    "ts": "1443184982.002133",
+    "id": "25de10539",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "they still didn’t fix the bug I reporteted",
+    "ts": "1443184993.002134",
+    "id": "25de10540",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "what's the bug?",
+    "ts": "1443185000.002135",
+    "id": "25de10541",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "I was using Victor before",
+    "ts": "1443185014.002136",
+    "id": "25de10542",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "the new plugin kinda does the same thing",
+    "ts": "1443185033.002137",
+    "id": "25de10543",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "<https://code.google.com/p/android/issues/detail?id=185982>",
+    "ts": "1443185043.002138",
+    "id": "25de10544",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "hopefully it will get fixed in a stable build",
+    "ts": "1443185109.002139",
+    "id": "25de10545",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "that sucks",
+    "ts": "1443185113.002140",
+    "id": "25de10546",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "I was about to use Victor",
+    "ts": "1443185132.002141",
+    "id": "25de10547",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "I would go android-gradle-plugin route now",
+    "ts": "1443185157.002142",
+    "id": "25de10548",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Victor can do SVG, that’s the advantage",
+    "ts": "1443185178.002143",
+    "id": "25de10549",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "oh yes, with the android plugin you just import them as vector drawables",
+    "ts": "1443185236.002144",
+    "id": "25de10550",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": "meaning you cannot stay synced with design versions of your svg easily",
+    "ts": "1443185264.002145",
+    "id": "25de10551",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "anyone got any tutorial/docs about that?",
+    "ts": "1443185318.002146",
+    "id": "25de10552",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "gradle plugin? There are only the relase notes so far afaik",
+    "ts": "1443185388.002147",
+    "id": "25de10553",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<@U04TK850N>: god perfect example issue where they change shit without saying anything about it. Hate that %)@#*$#)%*@ 5$)#$*",
+    "ts": "1443185451.002148",
+    "id": "25de10554",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "yup, and I even gave all the required info :smile:",
+    "ts": "1443185474.002149",
+    "id": "25de10555",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "‘totally open source'",
+    "ts": "1443185483.002150",
+    "id": "25de10556",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "they broke this consciously actually if you look at the release notes. it’s just fucking dumb to be unable to exclude shit from an included lib",
+    "ts": "1443185578.002151",
+    "id": "25de10557",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I just don’t want to keep forks of every single lib that ships with grabage I don’t need",
+    "ts": "1443185593.002152",
+    "id": "25de10558",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "right",
+    "ts": "1443185641.002153",
+    "id": "25de10559",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "i haven’t had that issue but we avoid native heavily here, prefer to take the time to try and write what we need in vanilla java when we can",
+    "ts": "1443185673.002154",
+    "id": "25de10560",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "so how the heck to I use my svgs?",
+    "ts": "1443185713.002155",
+    "id": "25de10561",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "yeah, there is a factor 10+ speed improvement in native there",
+    "ts": "1443185723.002156",
+    "id": "25de10562",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "scrpyt is designed to be slow :smile:",
+    "ts": "1443185730.002157",
+    "id": "25de10563",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "<@U051G3BC3>: convert them to vector drawables :smile:",
+    "edited": {
+      "user": "U04TK850N",
+      "ts": "1443185757.000000"
+    },
+    "ts": "1443185750.002158",
+    "id": "25de10564",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "that’s ok if I use this? <http://inloop.github.io/svg2android/>",
+    "attachments": [
+      {
+        "text": "Convert SVG to Android 5.0 Lollipop VectorDrawable",
+        "fallback": "Convert SVG to Android 5.0 Lollipop VectorDrawable",
+        "from_url": "http://inloop.github.io/svg2android/",
+        "id": 1
+      }
+    ],
+    "ts": "1443185773.002160",
+    "id": "25de10565",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<@U04TK850N>: with things like CV or any video/image stuff we obviously conceded to what exists =P",
+    "ts": "1443185788.002162",
+    "id": "25de10566",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "no one has time to rewrite all that",
+    "ts": "1443185793.002163",
+    "id": "25de10567",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "afaik AS 1.4 has something like that included",
+    "ts": "1443185793.002164",
+    "id": "25de10568",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "oh",
+    "ts": "1443185815.002165",
+    "id": "25de10569",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "true",
+    "ts": "1443185850.002166",
+    "id": "25de10570",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "<@U055GGAHS>: the lib comes with both java and native implementations of the algo. but android refuses installation when it can’t find the libs for the current arch. so since they ship „linux“, freebsd“ and „darwin“ it will always fail",
+    "ts": "1443185910.002167",
+    "id": "25de10571",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "right",
+    "ts": "1443185925.002168",
+    "id": "25de10572",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I can just add the right ones additionally but that bloats the app",
+    "ts": "1443185927.002169",
+    "id": "25de10573",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "also, it behaves differently with proguard on and off :confused:",
+    "ts": "1443185953.002170",
+    "id": "25de10574",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "FYI it’s 1.4.0-beta3 now",
+    "ts": "1443185967.002171",
+    "id": "25de10575",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "*huge* surprise :troll:",
+    "ts": "1443185968.002172",
+    "id": "25de10576",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": ":smile:",
+    "ts": "1443185978.002173",
+    "id": "25de10577",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "And I'm facing same problems with updating",
+    "ts": "1443186013.002174",
+    "id": "25de10578",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "it cannot delete some temp file",
+    "edited": {
+      "user": "U0830HE7P",
+      "ts": "1443186032.000000"
+    },
+    "ts": "1443186020.002175",
+    "id": "25de10579",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "&gt;Fix a regression in 1.4.0-beta1 where the build would fail claiming that a resource overlay had removed a resource needed by a library if an app or android library depended on multiple android libraries which depend on different versions of the same android library.",
+    "ts": "1443186038.002177",
+    "id": "25de10580",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "wat",
+    "ts": "1443186040.002178",
+    "id": "25de10581",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0830HE7P",
+    "text": "&gt;wat\nFix a regression in 1.4.0-beta1 where the build would fail claiming that a resource overlay had removed a resource needed by a library if an app or android library depended on multiple android libraries which depend on different versions of the same android library.",
+    "ts": "1443186063.002179",
+    "id": "25de10582",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "o.O",
+    "ts": "1443186093.002180",
+    "id": "25de10583",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "oh, that made it clear :simple_smile:",
+    "ts": "1443186093.002181",
+    "id": "25de10584",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "wow, that’s gonna take time.",
+    "ts": "1443186274.002182",
+    "id": "25de10585",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "I have 120 svg.",
+    "ts": "1443186278.002183",
+    "id": "25de10586",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "and the process to convert 1 is slow-ok.",
+    "ts": "1443186290.002184",
+    "id": "25de10587",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "but with 120 that’s craycray",
+    "ts": "1443186299.002185",
+    "id": "25de10588",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "its not multithreaded?",
+    "ts": "1443186300.002186",
+    "id": "25de10589",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "1 at a time",
+    "ts": "1443186306.002187",
+    "id": "25de10590",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U055GGAHS|ian.shaun.thomas> uploaded a file: <https://androidchat.slack.com/files/ian.shaun.thomas/F0BAJGT8E/compiling.png|compiling.png>",
+    "file": {
+      "id": "F0BAJGT8E",
+      "created": 1443186334,
+      "timestamp": 1443186334,
+      "name": "compiling.png",
+      "title": "compiling.png",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U055GGAHS",
+      "editable": false,
+      "size": 28315,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0BAJGT8E/compiling.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0BAJGT8E/download/compiling.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F0BAJGT8E-09ad058fb6/compiling_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F0BAJGT8E-09ad058fb6/compiling_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F0BAJGT8E-09ad058fb6/compiling_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 360,
+      "thumb_360_h": 314,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F0BAJGT8E-09ad058fb6/compiling_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "image_exif_rotation": 1,
+      "original_w": 413,
+      "original_h": 360,
+      "permalink": "https://androidchat.slack.com/files/ian.shaun.thomas/F0BAJGT8E/compiling.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0BAJGT8E-b7a26c14f2",
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U055GGAHS",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U055GGAHS|ian.shaun.thomas>",
+    "bot_id": null,
+    "ts": "1443186334.002188",
+    "id": "25de10591",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "So I got new icons from the artist and he didn’t give me them in a size that fits any DP and im way too lazy to go scale 12 icons so threw them all into drawable-nodpi and hit commit",
+    "edited": {
+      "user": "U055GGAHS",
+      "ts": "1443186456.000000"
+    },
+    "ts": "1443186442.002189",
+    "id": "25de10592",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053QFSSY",
+    "text": ":smile:",
+    "ts": "1443186472.002191",
+    "id": "25de10593",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U055GGAHS|ian.shaun.thomas> uploaded a file: <https://androidchat.slack.com/files/ian.shaun.thomas/F0BAP42BT/tumblr_inline_nmlm9cdqu61qbw2ey_500.gif|tumblr_inline_nmlm9cDqu61qbw2ey_500.gif>",
+    "file": {
+      "id": "F0BAP42BT",
+      "created": 1443186461,
+      "timestamp": 1443186461,
+      "name": "tumblr_inline_nmlm9cDqu61qbw2ey_500.gif",
+      "title": "tumblr_inline_nmlm9cDqu61qbw2ey_500.gif",
+      "mimetype": "image/gif",
+      "filetype": "gif",
+      "pretty_type": "GIF",
+      "user": "U055GGAHS",
+      "editable": false,
+      "size": 421715,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F0BAP42BT/tumblr_inline_nmlm9cdqu61qbw2ey_500.gif?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F0BAP42BT/download/tumblr_inline_nmlm9cdqu61qbw2ey_500.gif?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F0BAP42BT-e1c6dbc2ab/tumblr_inline_nmlm9cdqu61qbw2ey_500_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F0BAP42BT-e1c6dbc2ab/tumblr_inline_nmlm9cdqu61qbw2ey_500_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F0BAP42BT-e1c6dbc2ab/tumblr_inline_nmlm9cdqu61qbw2ey_500_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 360,
+      "thumb_360_h": 176,
+      "thumb_480": "https://files.slack.com/files-tmb/T04PLNDMP-F0BAP42BT-e1c6dbc2ab/tumblr_inline_nmlm9cdqu61qbw2ey_500_480.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_480_w": 480,
+      "thumb_480_h": 234,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F0BAP42BT-e1c6dbc2ab/tumblr_inline_nmlm9cdqu61qbw2ey_500_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_gif": "https://files.slack.com/files-tmb/T04PLNDMP-F0BAP42BT-e1c6dbc2ab/tumblr_inline_nmlm9cdqu61qbw2ey_500_360.gif?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_480_gif": "https://files.slack.com/files-tmb/T04PLNDMP-F0BAP42BT-e1c6dbc2ab/tumblr_inline_nmlm9cdqu61qbw2ey_500_480.gif?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "image_exif_rotation": 1,
+      "original_w": 500,
+      "original_h": 244,
+      "permalink": "https://androidchat.slack.com/files/ian.shaun.thomas/F0BAP42BT/tumblr_inline_nmlm9cdqu61qbw2ey_500.gif",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F0BAP42BT-ad62e74369",
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U055GGAHS",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U055GGAHS|ian.shaun.thomas>",
+    "bot_id": null,
+    "ts": "1443186480.002192",
+    "id": "25de10594",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "think I earned a coffee break",
+    "ts": "1443186494.002193",
+    "id": "25de10595",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "how much does it cost to hire an indian to convert the svgs for me",
+    "ts": "1443186964.002196",
+    "id": "25de10596",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "?",
+    "ts": "1443186965.002197",
+    "id": "25de10597",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "probably costs you $50 to find someone to pay $5",
+    "ts": "1443187057.002198",
+    "id": "25de10598",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "haha",
+    "ts": "1443187065.002199",
+    "id": "25de10599",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "whistles: <https://github.com/trello/victor>",
+    "subtype": "me_message",
+    "user": "U0543MFFP",
+    "ts": "1443187071.002200",
+    "id": "25de10600",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0BAK9FFX",
+    "subtype": "channel_join",
+    "text": "<@U0BAK9FFX|miguel> has joined the channel",
+    "ts": "1443187131.002201",
+    "id": "25de10601",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "<https://androidchat.slack.com/archives/development/p1443185132002141>",
+    "attachments": [
+      {
+        "color": "4D394B",
+        "from_url": "https://androidchat.slack.com/archives/development/p1443185132002141",
+        "fallback": "[September 25th, 2015 5:45 AM] quentin: I was about to use Victor",
+        "author_subname": "quentin",
+        "ts": 1443185132,
+        "text": "I was about to use Victor",
+        "author_name": "Quentin Dommerc",
+        "author_link": "https://androidchat.slack.com/team/quentin",
+        "author_icon": "https://secure.gravatar.com/avatar/94263b6a475488735e84a5ea0521c648.jpg?s=48&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F66f9%2Fimg%2Favatars%2Fava_0011-48.png",
+        "mrkdwn_in": [
+          "text"
+        ],
+        "id": 1
+      }
+    ],
+    "ts": "1443187333.002202",
+    "id": "25de10602",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0543MFFP",
+    "text": "I didn't scroll back far enough.",
+    "ts": "1443187499.002204",
+    "id": "25de10603",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": ":stuck_out_tongue: thanks anyway (please dont leave)",
+    "ts": "1443187517.002205",
+    "id": "25de10604",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": ":smile:",
+    "ts": "1443187518.002206",
+    "id": "25de10605",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0543MFFP",
+    "text": "Bye.",
+    "ts": "1443187522.002207",
+    "id": "25de10606",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0543MFFP",
+    "subtype": "channel_leave",
+    "text": "<@U0543MFFP|danlew42> has left the channel",
+    "ts": "1443187524.002208",
+    "id": "25de10607",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0543MFFP",
+    "subtype": "channel_join",
+    "text": "<@U0543MFFP|danlew42> has joined the channel",
+    "ts": "1443187530.002209",
+    "id": "25de10608",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "lol",
+    "ts": "1443187554.002210",
+    "id": "25de10609",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "/giphy burn",
+    "attachments": [
+      {
+        "fallback": "giphy: <http://giphy.com/gifs/mission-profiles-mosby-K6XkBryvr6vbW>",
+        "image_url": "http://media0.giphy.com/media/K6XkBryvr6vbW/giphy.gif",
+        "image_width": 320,
+        "image_height": 135,
+        "image_bytes": 482504,
+        "title": "burn",
+        "id": 1,
+        "title_link": "http://giphy.com/gifs/mission-profiles-mosby-K6XkBryvr6vbW"
+      }
+    ],
+    "ts": "1443187726.002211",
+    "id": "25de10610",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "&gt;So I got new icons from the artist and he didn’t give me them in a size that fits any DP and im way too lazy to go scale 12 icons so threw them all into drawable-nodpi and hit commit (edited)",
+    "ts": "1443187833.002212",
+    "id": "25de10611",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "10/10",
+    "ts": "1443187836.002213",
+    "id": "25de10612",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "+1",
+    "ts": "1443187914.002214",
+    "id": "25de10613",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "+2",
+    "ts": "1443187922.002215",
+    "id": "25de10614",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "13/10",
+    "ts": "1443187987.002216",
+    "id": "25de10615",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "100/10 would commit over ethernet again",
+    "ts": "1443188027.002217",
+    "id": "25de10616",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": ":troll:",
+    "ts": "1443188251.002218",
+    "id": "25de10617",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "i once had to commit over a mobile hotspot in rural istria while bbquing",
+    "ts": "1443188264.002219",
+    "id": "25de10618",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "i do my commits via courier pigeon and literally mail attached to snails",
+    "ts": "1443188373.002220",
+    "id": "25de10619",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "I commit over morse code telegraphs",
+    "ts": "1443188444.002221",
+    "id": "25de10620",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "that’s too cutting edge for me",
+    "ts": "1443188456.002222",
+    "id": "25de10621",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "im not one for commitment, just build it and quit it",
+    "ts": "1443188489.002223",
+    "id": "25de10622",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "you dog",
+    "ts": "1443188500.002224",
+    "id": "25de10623",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": ":trollface:",
+    "ts": "1443188506.002225",
+    "reactions": [
+      {
+        "name": "dog",
+        "users": [
+          "U04U5KS3Z",
+          "U055GGAHS"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "25de10624",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "/giphy badass",
+    "attachments": [
+      {
+        "fallback": "giphy: <http://giphy.com/gifs/cat-reaction-humour-sh2YOT9srRVMQ>",
+        "image_url": "http://media0.giphy.com/media/sh2YOT9srRVMQ/giphy.gif",
+        "image_width": 318,
+        "image_height": 281,
+        "image_bytes": 458112,
+        "title": "badass",
+        "id": 1,
+        "title_link": "http://giphy.com/gifs/cat-reaction-humour-sh2YOT9srRVMQ"
+      }
+    ],
+    "ts": "1443188512.002226",
+    "id": "25de10625",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "with the 1.4 plugin where do I put SVG files to do the PNG conversion or am I an idiot and it still doesn’t do that",
+    "ts": "1443190470.002227",
+    "id": "25de10626",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "everything im searching just talks about converting them to VectorDrawable which seems silly",
+    "ts": "1443190484.002228",
+    "id": "25de10627",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "android devices as slaves?",
+    "ts": "1443190501.002229",
+    "id": "25de10628",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "what does this mean",
+    "ts": "1443190503.002230",
+    "id": "25de10629",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "<@U060Q7J2Y>: jenkins has the concept of master/slave relationships allowing you to specify projects to be built on certain systems. A good example of this is imagine wanting to use jenkins to build an ios app but your jenkins instance is on linux. So you can either move jenkins to an osx box which is extremely unhelpful or alternately you can just make an osx box a slave to the jenkins master and specify it to do all the builds for a particular project.",
+    "ts": "1443190591.002231",
+    "id": "25de10630",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "right. but...android devices can be the slaves?",
+    "ts": "1443190636.002232",
+    "id": "25de10631",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "no",
+    "ts": "1443190643.002233",
+    "id": "25de10632",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "he misunderstood the master/slave relationship is all",
+    "ts": "1443190653.002234",
+    "id": "25de10633",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<@U055GGAHS>: you can’t yet go svg to png like that :disappointed:",
+    "ts": "1443190661.002235",
+    "id": "25de10634",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "i used victor",
+    "ts": "1443190665.002236",
+    "id": "25de10635",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "ok",
+    "ts": "1443190667.002237",
+    "id": "25de10636",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "reading up on it, victor seems fine",
+    "ts": "1443190800.002238",
+    "id": "25de10637",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "god.. i wish trello would have written the gradle docs",
+    "ts": "1443190814.002239",
+    "id": "25de10638",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "would have made that garbage make sense",
+    "ts": "1443190824.002240",
+    "id": "25de10639",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "yeah it’s pretty good, just that the drawable is red in xml like it don’t exist, but on build it’s all good",
+    "ts": "1443191396.002241",
+    "id": "25de10640",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "right",
+    "ts": "1443191416.002242",
+    "id": "25de10641",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "i can live with that",
+    "ts": "1443191422.002243",
+    "id": "25de10642",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "until the 1.4 comes out properly :simple_smile:",
+    "ts": "1443191453.002244",
+    "id": "25de10643",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "ya'll",
+    "ts": "1443193618.002245",
+    "id": "25de10644",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "<https://twitter.com/m_evans10/status/647426275758505984>",
+    "attachments": [
+      {
+        "fallback": "<https://twitter.com/m_evans10|@m_evans10>: Wear your love of enums with this sweet #enumsmatter t-shirt! <http://teespring.com/enumsmatter>",
+        "ts": 1443193427,
+        "author_name": "Mike Evans ☃",
+        "author_link": "https://twitter.com/m_evans10/status/647426275758505984",
+        "author_icon": "https://pbs.twimg.com/profile_images/580820553604403200/oGcBC9ey_normal.jpg",
+        "author_subname": "@m_evans10",
+        "text": "Wear your love of enums with this sweet #enumsmatter t-shirt! <http://teespring.com/enumsmatter>",
+        "service_name": "twitter",
+        "service_url": "https://twitter.com/",
+        "from_url": "https://twitter.com/m_evans10/status/647426275758505984",
+        "id": 1,
+        "footer": "Twitter",
+        "footer_icon": "https://a.slack-edge.com/6e067/img/services/twitter_pixel_snapped_32.png"
+      }
+    ],
+    "ts": "1443193620.002246",
+    "id": "25de10645",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "meh, too simplistic shirt",
+    "ts": "1443193670.002248",
+    "id": "25de10646",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "ohh",
+    "ts": "1443193672.002249",
+    "id": "25de10647",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "+ enums are bad for performance",
+    "ts": "1443193683.002250",
+    "id": "25de10648",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "/giphy popcorn",
+    "attachments": [
+      {
+        "fallback": "giphy: <http://giphy.com/gifs/popcorn-batman-the-joker-iaBiPW3vAOi0E>",
+        "image_url": "http://media2.giphy.com/media/iaBiPW3vAOi0E/giphy.gif",
+        "image_width": 360,
+        "image_height": 288,
+        "image_bytes": 739905,
+        "title": "popcorn",
+        "id": 1,
+        "title_link": "http://giphy.com/gifs/popcorn-batman-the-joker-iaBiPW3vAOi0E"
+      }
+    ],
+    "ts": "1443193685.002251",
+    "id": "25de10649",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<@U060Q7J2Y>: add (fuck the dex count) below :smile:",
+    "ts": "1443193699.002252",
+    "id": "25de10650",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "lol",
+    "ts": "1443193710.002253",
+    "id": "25de10651",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "SFW description!",
+    "ts": "1443193717.002254",
+    "id": "25de10652",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "Developers With Attitude :joy:",
+    "ts": "1443193728.002255",
+    "id": "25de10653",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "ooo american apparel",
+    "ts": "1443193894.002256",
+    "id": "25de10654",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "their stuff is usually pretty comfy",
+    "ts": "1443193901.002257",
+    "id": "25de10655",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "but yeah too simple imo",
+    "ts": "1443193914.002258",
+    "id": "25de10656",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "that's okay - you don't have to have one :stuck_out_tongue:",
+    "ts": "1443194088.002259",
+    "id": "25de10657",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "we need shirts for this slack chat :smile:",
+    "ts": "1443194210.002260",
+    "id": "25de10658",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "this started as a shirt for my other slack chat... :O",
+    "ts": "1443194252.002261",
+    "id": "25de10659",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "“This slack is better\"",
+    "ts": "1443194298.002262",
+    "id": "25de10660",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "\"My Slack &gt; Your Slack\"",
+    "edited": {
+      "user": "U051G3BC3",
+      "ts": "1443194314.000000"
+    },
+    "ts": "1443194311.002263",
+    "id": "25de10661",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "^",
+    "ts": "1443194319.002265",
+    "id": "25de10662",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "so make a shirt thats not \"too simple\"",
+    "ts": "1443194329.002266",
+    "id": "25de10663",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": ":smile:",
+    "ts": "1443194333.002267",
+    "id": "25de10664",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "I just wanted to wear this to BABBQ so colt mcanlis would see it",
+    "ts": "1443194340.002268",
+    "id": "25de10665",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "“My Slack &gt; Your Slack” and in the back “This T-shirt isn’t too simple\"",
+    "ts": "1443194356.002269",
+    "id": "25de10666",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "I went on AndroidChat and all I got was this shirt.\nAnd a tiramisu recipe.",
+    "ts": "1443194365.002270",
+    "id": "25de10667",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "#Enumsmatter\n#### dex count",
+    "ts": "1443195415.002271",
+    "id": "25de10668",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "sfw :wink:",
+    "ts": "1443195419.002272",
+    "id": "25de10669",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "lol",
+    "ts": "1443195442.002273",
+    "id": "25de10670",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "<http://stackoverflow.com/questions/32612743/retrofit-2-0-cancel-a-call-object>",
+    "attachments": [
+      {
+        "title": "Retrofit 2.0 cancel a Call object",
+        "title_link": "http://stackoverflow.com/questions/32612743/retrofit-2-0-cancel-a-call-object",
+        "text": "Has anyone played around with Retrofit 2.0, specifically the Call.cancel() method? When is the best time to trigger that? I have tried calling it in onStop() of a Fragment but have run into some ...",
+        "fallback": "Retrofit 2.0 cancel a Call object",
+        "thumb_url": "http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a",
+        "from_url": "http://stackoverflow.com/questions/32612743/retrofit-2-0-cancel-a-call-object",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "id": 1
+      }
+    ],
+    "ts": "1443196561.002274",
+    "id": "25de10671",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<@U0A1BE7KQ>: don’t use Cancel yet, it’s bugged and will crash your app unless you run it in an async task",
+    "ts": "1443196701.002276",
+    "id": "25de10672",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "is that going to be fixed at some point?",
+    "ts": "1443196724.002277",
+    "id": "25de10673",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "seems like its been an issue for awhile",
+    "ts": "1443196743.002278",
+    "id": "25de10674",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "<https://github.com/square/okhttp/issues/1592>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "Call.cancel shouldn&#39;t offend strict mode · Issue #1592 · square/okhttp · GitHub",
+        "title_link": "https://github.com/square/okhttp/issues/1592",
+        "text": "We should document that it doesn't block, and get our friends at AOSP to fix strict mode to not issue a false positive warning.",
+        "fallback": "GitHub: Call.cancel shouldn't offend strict mode · Issue #1592 · square/okhttp",
+        "thumb_url": "https://avatars3.githubusercontent.com/u/133019?v=3&s=400",
+        "from_url": "https://github.com/square/okhttp/issues/1592",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1443196764.002279",
+    "id": "25de10675",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "it should be",
+    "ts": "1443196789.002281",
+    "id": "25de10676",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "toss it in a background thread if you really want to use it",
+    "ts": "1443196792.002282",
+    "id": "25de10677",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "added to 2.0 milestone",
+    "ts": "1443196794.002283",
+    "id": "25de10678",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "<https://github.com/square/retrofit/issues/1069>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "Implicit Call cancels for SPDY/3 &amp; HTTP/2 connections can perform network I/O. · Issue #1069 · square/retrofit · GitHub",
+        "title_link": "https://github.com/square/retrofit/issues/1069",
+        "text": "java.lang.IllegalStateException: Fatal Exception thrown on Scheduler.Worker thread. at rx.internal.schedulers.ScheduledAction.run(ScheduledAction.java:62) at android.os.Hand...",
+        "fallback": "GitHub: Implicit Call cancels for SPDY/3 &amp; HTTP/2 connections can perform network I/O. · Issue #1069 · square/retrofit",
+        "thumb_url": "https://avatars2.githubusercontent.com/u/66577?v=3&s=400",
+        "from_url": "https://github.com/square/retrofit/issues/1069",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1443196794.002284",
+    "id": "25de10679",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "so I assume they will fix it in okHttp and thus in RF2.0",
+    "edited": {
+      "user": "U0548MM6B",
+      "ts": "1443196825.000000"
+    },
+    "ts": "1443196821.002286",
+    "id": "25de10680",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T0F8BW",
+    "text": "15 more reservations and this shirt will come back:\n<https://teespring.com/android-perf-patterns-coffee>",
+    "attachments": [
+      {
+        "service_name": "Teespring",
+        "title": "Android Performance Patterns (COFFEE)",
+        "title_link": "https://teespring.com/android-perf-patterns-coffee",
+        "text": "Let those around you at your lean-startup / tiger-team / agile workgroup know that the performance of their application is directly correlated to how much coffee they feed you.",
+        "fallback": "Teespring: Android Performance Patterns (COFFEE)",
+        "image_url": "http://vangogh.teespring.com/og_pic/1779218/1749791/front.jpg?v=2015-01-14-15-23&background-image=wood&effects=inner-glow",
+        "image_width": 478,
+        "image_height": 250,
+        "from_url": "https://teespring.com/android-perf-patterns-coffee",
+        "image_bytes": 760746,
+        "id": 1
+      }
+    ],
+    "ts": "1443196948.002288",
+    "id": "25de10681",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "i guess i can go with the AsyncTask solution for now",
+    "ts": "1443196978.002290",
+    "id": "25de10682",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "<@U09T0F8BW>: mine is better",
+    "ts": "1443196997.002291",
+    "id": "25de10683",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T0F8BW",
+    "text": "<@U060Q7J2Y>: it’s too simple in my opinion. I really don’t like just plain text on shirts.",
+    "ts": "1443197095.002292",
+    "id": "25de10684",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "its supposed to be simple",
+    "ts": "1443197110.002293",
+    "id": "25de10685",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "it rivals this one",
+    "ts": "1443197129.002294",
+    "id": "25de10686",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "<https://teespring.com/perfmatters-basic>",
+    "edited": {
+      "user": "U060Q7J2Y",
+      "ts": "1443201700.000000"
+    },
+    "ts": "1443197129.002295",
+    "id": "25de10687",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "#SimpleTextMatters",
+    "ts": "1443197193.002297",
+    "id": "25de10688",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "yep",
+    "ts": "1443197207.002298",
+    "id": "25de10689",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U09T0F8BW",
+    "text": "Random thought, but Espresso is doing amazing things for Android instrumentation testing. I am absolutely in love with ATSL.",
+    "ts": "1443201283.002299",
+    "id": "25de10690",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "<@U091EBYSU>: no comments on the promotion link?",
+    "ts": "1443202308.002301",
+    "id": "25de10691",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "Ah, sorry, didn’t see your messages",
+    "ts": "1443206286.002302",
+    "id": "25de10692",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "mr “self promotion”",
+    "ts": "1443206303.002303",
+    "reactions": [
+      {
+        "name": "trollface",
+        "users": [
+          "U091EBYSU",
+          "U08GFT5V5",
+          "U04TK850N",
+          "U0B8MAHHQ"
+        ],
+        "count": 4
+      }
+    ],
+    "id": "25de10693",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "I’ll think about Slack bot to notify me about your self promotions so I could write “mr \\”self promotion\\”\"",
+    "ts": "1443206364.002304",
+    "id": "25de10694",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "<@U060Q7J2Y>: I would buy 1000 of those t-shirts, but money...",
+    "ts": "1443206396.002305",
+    "id": "25de10695",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "hahaha <@U091EBYSU> I thought you'd get a kick out of it",
+    "ts": "1443206424.002306",
+    "id": "25de10696",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "sorry <@U08GFT5V5>",
+    "ts": "1443206429.002307",
+    "id": "25de10697",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "Lol. Take my advice, have money. It’s awesome",
+    "ts": "1443206474.002308",
+    "id": "25de10698",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "highly recommended",
+    "ts": "1443206592.002309",
+    "id": "25de10699",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "$/10",
+    "ts": "1443206633.002310",
+    "id": "25de10700",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "don't",
+    "ts": "1443208386.002311",
+    "id": "25de10701",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U051G3BC3",
+    "text": "you might end up as fucked up as Trump is.",
+    "ts": "1443208399.002312",
+    "id": "25de10702",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Why? Possibly being president sounds neat",
+    "ts": "1443208601.002313",
+    "id": "25de10703",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "i dont quite have that much yet",
+    "ts": "1443208602.002314",
+    "id": "25de10704",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "you could also be John McAffee tho :smile:",
+    "ts": "1443208627.002315",
+    "id": "25de10705",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "that'd be better.",
+    "ts": "1443208716.002316",
+    "id": "25de10706",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "without the suspicion of murder",
+    "ts": "1443208725.002317",
+    "id": "25de10707",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "\"'Three comma club or no club at all\"'",
+    "ts": "1443208765.002318",
+    "id": "25de10708",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "<http://31.media.tumblr.com/fb1074d69e2c82f7671c39bfa49f38c5/tumblr_no1lzcGMFW1trb5guo1_400.gif>",
+    "attachments": [
+      {
+        "fallback": "400x225px image",
+        "image_url": "http://31.media.tumblr.com/fb1074d69e2c82f7671c39bfa49f38c5/tumblr_no1lzcGMFW1trb5guo1_400.gif",
+        "image_width": 400,
+        "image_height": 225,
+        "image_bytes": 418947,
+        "from_url": "http://31.media.tumblr.com/fb1074d69e2c82f7671c39bfa49f38c5/tumblr_no1lzcGMFW1trb5guo1_400.gif",
+        "id": 1
+      }
+    ],
+    "ts": "1443208823.002319",
+    "id": "25de10709",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "<https://sites.google.com/a/android.com/tools/recent/androidstudio14rc3available|Android Studio 1.4 RC 3 Available>\nWe've just released Android Studio 1.4 RC 3 to the canary channel. We've also promoted 1.4 RC 2 to the beta channel, since that build has been in testing for a few days now and there are no big problems.RC 3 contains just a couple of bug fixes. Please let us know if you encounter any remaining critical issues!InstallationIf you are already using a 1.4 Preview/Beta build, you can use the builtin Update mechanism to upgrade directly to 1.4 RC 3.If you are using 1.3.1, you can also update via a...",
+    "username": "Posts of Recent Changes",
+    "icons": {
+      "image_48": "https://slack.global.ssl.fastly.net/66f9/img/services/rss_48.png"
+    },
+    "bot_id": "B062SSUPJ",
+    "subtype": "bot_message",
+    "ts": "1443208867.002321",
+    "id": "25de10710",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8MAHHQ",
+    "text": "whoah",
+    "ts": "1443208896.002322",
+    "id": "25de10711",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "<https://plus.google.com/+EtienneLawlor/posts/122caFTBpqz>",
+    "attachments": [
+      {
+        "title": "How can you get the Global SearchBox to search inside your app?  I have made…",
+        "title_link": "https://plus.google.com/+EtienneLawlor/posts/122caFTBpqz",
+        "text": "How can you get the Global SearchBox to search inside your app? I have made some modifications to the searchable.xml config file, but I'm not sure what… - Etienne Lawlor - Google+",
+        "fallback": "How can you get the Global SearchBox to search inside your app?  I have made…",
+        "image_url": "http://lh3.googleusercontent.com/-j_Tb3SEvXS4/VgWiJzZC_vI/AAAAAAAAWs4/i5J1OGmRKqU/w506-h900/15%2B-%2B1",
+        "from_url": "https://plus.google.com/+EtienneLawlor/posts/122caFTBpqz",
+        "image_width": 141,
+        "image_height": 250,
+        "image_bytes": 101589,
+        "id": 1
+      }
+    ],
+    "ts": "1443209919.002323",
+    "id": "25de10712",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "<@U0A1BE7KQ>: <https://developers.google.com/app-indexing/>",
+    "attachments": [
+      {
+        "service_name": "Google Developers",
+        "title": "App Indexing  |  Google Developers",
+        "title_link": "https://developers.google.com/app-indexing/",
+        "text": "Get your app found in Google Search.",
+        "fallback": "Google Developers: App Indexing  |  Google Developers",
+        "from_url": "https://developers.google.com/app-indexing/",
+        "id": 1
+      }
+    ],
+    "ts": "1443210050.002325",
+    "id": "25de10713",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "we just implemented that. is neat",
+    "ts": "1443210124.002327",
+    "id": "25de10714",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "android build workflow, gradle not depicted",
+    "ts": "1443214124.002335",
+    "id": "25de10715",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "this si awesome",
+    "ts": "1443214135.002336",
+    "id": "25de10716",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "where’d you find it?",
+    "ts": "1443214140.002337",
+    "id": "25de10717",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "<https://twitter.com/cyrilmottier/status/647360417224884224>",
+    "attachments": [
+      {
+        "fallback": "<https://twitter.com/cyrilmottier|@cyrilmottier>: Here's a nice print-and-stick-to-the-wall diagram to clear things up a bit regarding the Android build workflow. <https://pbs.twimg.com/media/CPvi3mnWcAAge1u.png>",
+        "ts": 1443177725,
+        "author_name": "Cyril Mottier",
+        "author_link": "https://twitter.com/cyrilmottier/status/647360417224884224",
+        "author_icon": "https://pbs.twimg.com/profile_images/425559011409158144/yrccrk4F_normal.jpeg",
+        "author_subname": "@cyrilmottier",
+        "text": "Here's a nice print-and-stick-to-the-wall diagram to clear things up a bit regarding the Android build workflow. <https://pbs.twimg.com/media/CPvi3mnWcAAge1u.png>",
+        "service_name": "twitter",
+        "service_url": "https://twitter.com/",
+        "image_url": "https://pbs.twimg.com/media/CPvi3mnWcAAge1u.png",
+        "image_width": 600,
+        "image_height": 654,
+        "image_bytes": 181641,
+        "from_url": "https://twitter.com/cyrilmottier/status/647360417224884224",
+        "id": 1,
+        "footer": "Twitter",
+        "footer_icon": "https://a.slack-edge.com/6e067/img/services/twitter_pixel_snapped_32.png"
+      }
+    ],
+    "ts": "1443214151.002338",
+    "id": "25de10718",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "maybe worth an imgur rehost",
+    "ts": "1443214180.002340",
+    "id": "25de10719",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0B8R3VV4",
+    "text": "<http://imgur.com/kbYFbIA>",
+    "edited": {
+      "user": "U0B8R3VV4",
+      "ts": "1443214234.000000"
+    },
+    "ts": "1443214205.002341",
+    "id": "25de10720",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "<@U04TK850N> according to Ian Lake he just said \n“This would be the Search Action: <http://developer.android.com/guide/components/intents-common.html#Search>\"",
+    "attachments": [
+      {
+        "text": "An intent allows you to start an activity in another app by describing a simple action you'd like to perform (such as \"view a map\" or \"take a picture\") in an Intent object. This type of intent is called an implicit intent because…",
+        "fallback": "An intent allows you to start an activity in another app by describing a simple action you'd like to perform (such as \"view a map\" or \"take a picture\") in an Intent object. This type of intent is called an implicit intent because…",
+        "from_url": "http://developer.android.com/guide/components/intents-common.html#Search",
+        "id": 1
+      }
+    ],
+    "ts": "1443219169.002345",
+    "id": "25de10721",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "but i tried that and its not working",
+    "ts": "1443219176.002347",
+    "id": "25de10722",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "<https://github.com/lawloretienne/Loop/blob/master/app/src/main/AndroidManifest.xml#L66>",
+    "attachments": [
+      {
+        "service_name": "GitHub",
+        "title": "lawloretienne/Loop",
+        "title_link": "https://github.com/lawloretienne/Loop/blob/master/app/src/main/AndroidManifest.xml#L66",
+        "text": "Loop - Watch the world’s best videos from the Vimeo community",
+        "fallback": "GitHub: lawloretienne/Loop",
+        "thumb_url": "https://avatars2.githubusercontent.com/u/311187?v=3&s=400",
+        "from_url": "https://github.com/lawloretienne/Loop/blob/master/app/src/main/AndroidManifest.xml#L66",
+        "thumb_width": 400,
+        "thumb_height": 400,
+        "id": 1
+      }
+    ],
+    "ts": "1443219185.002348",
+    "id": "25de10723",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "<@U0A1BE7KQ>: you have to implement the App Indexing API I linked above. Google won't search your app. They search your webpage",
+    "ts": "1443220406.002350",
+    "id": "25de10724",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "we provide specifically google optimized pages for the links into the app",
+    "ts": "1443220433.002351",
+    "id": "25de10725",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "i thought the App Indexing API was something entirely different",
+    "ts": "1443236056.002352",
+    "id": "25de10726",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A1BE7KQ",
+    "text": "why would this documentation make no mention of the App Indexing API?\n <http://developer.android.com/guide/components/intents-common.html#Search>",
+    "attachments": [
+      {
+        "text": "An intent allows you to start an activity in another app by describing a simple action you'd like to perform (such as \"view a map\" or \"take a picture\") in an Intent object. This type of intent is called an implicit intent because…",
+        "fallback": "An intent allows you to start an activity in another app by describing a simple action you'd like to perform (such as \"view a map\" or \"take a picture\") in an Intent object. This type of intent is called an implicit intent because…",
+        "from_url": "http://developer.android.com/guide/components/intents-common.html#Search",
+        "id": 1
+      }
+    ],
+    "edited": {
+      "user": "U0A1BE7KQ",
+      "ts": "1443236092.000000"
+    },
+    "ts": "1443236085.002353",
+    "id": "25de10727",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0BBW096C",
+    "subtype": "channel_join",
+    "text": "<@U0BBW096C|angus> has joined the channel",
+    "ts": "1443237393.002356",
+    "id": "25de10728",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

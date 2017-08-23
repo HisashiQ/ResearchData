@@ -1,0 +1,279 @@
+[
+  {
+    "user": "U08H4QLLU",
+    "subtype": "channel_join",
+    "text": "<@U08H4QLLU|natee> has joined the channel",
+    "ts": "1459855099.000274",
+    "id": "05te1041",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "anyone know how to use resources from src/test/resources in tests? i've figured out how to load them when including files in src/main/resources, but for some reason i get null from `ClassLoader::getResourceAsStream` for files in test/resources",
+    "edited": {
+      "user": "U0546QERR",
+      "ts": "1459889802.000000"
+    },
+    "ts": "1459889713.000275",
+    "id": "05te1042",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "`sourceSets.test.resources.srcDir(\"src/test/resources\")` doesn't fix it",
+    "ts": "1459889758.000276",
+    "id": "05te1043",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "`sourceSets.main.resources.srcDir(\"src/test/resources\")` is actually working. vaguely recalling going down this path when i was trying to figure this out like 2 weeks ago. but i don't want the files to be included with the library source so this seems wrong",
+    "ts": "1459890658.000278",
+    "id": "05te1044",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I ended up using assets file the other day",
+    "ts": "1459890944.000279",
+    "id": "05te1045",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "depending on what you need",
+    "ts": "1459891001.000280",
+    "id": "05te1046",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "I was able to open files in assets with new File(path) and opening it w/ FileReader(file)",
+    "ts": "1459891042.000281",
+    "id": "05te1047",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "these are java tests, i don't think assets are a thing outside of android modules",
+    "edited": {
+      "user": "U0546QERR",
+      "ts": "1459891199.000000"
+    },
+    "ts": "1459891192.000282",
+    "id": "05te1048",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "hmm yeah as i expected, adding the directory to `sourceSets.main` causes the files to be present when i build the module into my android app. only need them to be available for tests :disappointed: will keep looking for info",
+    "ts": "1459891478.000284",
+    "id": "05te1049",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "this snippet did the trick, seems like a gradle hack but i really can't figure out why adding the folder to test.resources does not work :confused:\n```\ntask copyTestResources(type: Copy) {\n  from \"${projectDir}/src/test/resources\"\n  into \"${buildDir}/classes/test\"\n}\nprocessTestResources.dependsOn copyTestResources\n```",
+    "ts": "1459895136.000285",
+    "id": "05te1050",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "works for me.",
+    "ts": "1459899934.000286",
+    "id": "05te1051",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "but I’m not using kotlin for this, if that matters",
+    "ts": "1459899941.000287",
+    "id": "05te1052",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i didn't even think kotlin might be causing it, could be",
+    "ts": "1459900029.000288",
+    "id": "05te1053",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "<https://code.google.com/p/android/issues/detail?id=64887>\nit's an old android studio bug that google's decided to sweep under the rug",
+    "ts": "1459912920.000289",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "05te1054",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

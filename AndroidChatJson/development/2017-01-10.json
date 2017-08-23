@@ -1,0 +1,1125 @@
+[
+  {
+    "user": "U0LFEJ1ST",
+    "text": "I have 2 model classes like this \n\n```\nMODEL1\n \n@Serializable(”name”)\nprivate String name;\n@Serializable(”id”)\nprivate String UserId;\n@Serializable(”category”)\nprivate String categoryName;\n@Serializable(”isSeen”)\nprivate boolean isSeen;\n ```\n\n```\nMODEL 2\n\nString name;\nString user_id;\nData data;\n\nprivate class Data{\n\nString category;\nboolean isSeen;\n\n}\n\n ```\n\nNow my question is , the MODEL 1 is retrofit callback model , and MODEL 2 is RealmObject model, I want to convert them into each other a lot of time inside the app, from MODEL1 to MODEL2 and MODEL2 to MODEL1 , WHAT IS THE BEST APPROACH ?",
+    "ts": "1484042738.000295",
+    "id": "10de59660",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "why do you wanna use both?",
+    "ts": "1484043659.000296",
+    "id": "10de59661",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "IMO you should just convert it on data fetch",
+    "ts": "1484043673.000297",
+    "id": "10de59662",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "<@U0548MM6B> Thanks, But The json from server which I am getting is a complex JSON structure and I need one model to map it and another to save it in local storage, what to do in that case ?",
+    "ts": "1484044755.000298",
+    "id": "10de59663",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "You map it directly in your data layer into the realm model or you make a converter or a type adapter that maps JSON into Model 2",
+    "ts": "1484044901.000299",
+    "id": "10de59664",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LFEJ1ST",
+    "text": "yeah I was also thinking to implement adapter for conversion <@U0548MM6B>",
+    "ts": "1484048365.000300",
+    "id": "10de59665",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DTEGLJF",
+    "text": "I blogged a thing, would love some feedback:\n\n<https://www.novoda.com/blog/the-only-way-to-implement-model-view-presenter>",
+    "attachments": [
+      {
+        "service_name": "The Labs | Novoda",
+        "title": "The only way to implement Model View Presenter",
+        "title_link": "https://www.novoda.com/blog/the-only-way-to-implement-model-view-presenter",
+        "text": "Everyone on the internet is talking about MVP and everyone likes to share 'the best way', little do they know the best way is written in this blog.",
+        "fallback": "The Labs | Novoda: The only way to implement Model View Presenter",
+        "image_url": "https://www.novoda.com/blog/content/images/2017/01/hero.png",
+        "image_width": 351,
+        "image_height": 250,
+        "fields": [
+          {
+            "title": "Written by",
+            "value": "Paul Blundell (Software Craftsman)",
+            "short": true
+          },
+          {
+            "title": "Filed under",
+            "value": "android, architecture, communication, mvp, model view presenter",
+            "short": true
+          }
+        ],
+        "ts": 1484037420,
+        "from_url": "https://www.novoda.com/blog/the-only-way-to-implement-model-view-presenter",
+        "image_bytes": 294855,
+        "service_icon": "https://www.novoda.com/blog/assets/favicon.ico",
+        "id": 1
+      }
+    ],
+    "ts": "1484053450.000301",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U1HM4MPLJ"
+        ],
+        "count": 2
+      }
+    ],
+    "id": "10de59666",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": ":thumbsup: :thumbsup: :thumbsup:",
+    "ts": "1484054177.000303",
+    "id": "10de59667",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "&gt; Ever come back to your computer Monday morning, looked at the code you wrote Friday afternoon and thought … what the hell was i thinking? That\n\nword.",
+    "ts": "1484054199.000304",
+    "id": "10de59668",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0XCFE6AH",
+    "text": "\"There is no single right way to implement Model View Presenter\"- This conclude my time of reading...",
+    "ts": "1484054214.000305",
+    "id": "10de59669",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DTEGLJF",
+    "text": "haha, the right way is to all agree on ANY way!",
+    "ts": "1484054738.000308",
+    "id": "10de59670",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DTEGLJF",
+    "text": "so many arguments about the _right_ way",
+    "ts": "1484054742.000309",
+    "id": "10de59671",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DTEGLJF",
+    "text": "<@U0XCFE6AH> this guy agrees with you <https://www.reddit.com/r/androiddev/comments/5n4uv8/the_only_way_to_implement_model_view_presenter/>",
+    "attachments": [
+      {
+        "service_name": "reddit",
+        "title": "The only way to implement Model View Presenter - Novoda • /r/androiddev",
+        "title_link": "https://www.reddit.com/r/androiddev/comments/5n4uv8/the_only_way_to_implement_model_view_presenter/",
+        "text": "2 points and 1 comments so far on reddit",
+        "fallback": "reddit: The only way to implement Model View Presenter - Novoda • /r/androiddev",
+        "thumb_url": "https://www.redditstatic.com/icon.png",
+        "from_url": "https://www.reddit.com/r/androiddev/comments/5n4uv8/the_only_way_to_implement_model_view_presenter/",
+        "thumb_width": 256,
+        "thumb_height": 256,
+        "service_icon": "https://www.reddit.com/favicon.ico",
+        "id": 1
+      }
+    ],
+    "ts": "1484054764.000310",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U0XCFE6AH",
+          "U053PPGDC",
+          "U3EQFHSAK",
+          "U08GFT5V5"
+        ],
+        "count": 5
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "10de59672",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3PDY343D",
+    "text": "<@U3PDY343D|vishalaksh> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1484056139.000312",
+    "id": "10de59673",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U08GFT5V5",
+    "text": "I don't know why people are still arguing about architecture",
+    "ts": "1484056587.000313",
+    "id": "10de59674",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "ikr, we could spend all that precious time and effort arguing over text editors and OSs instead :stuck_out_tongue:",
+    "ts": "1484056729.000314",
+    "id": "10de59675",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "some people will be haters",
+    "ts": "1484056742.000315",
+    "id": "10de59676",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "but I think the article exposes a bigger point - that is, the main problems we tend to face are not engineering related",
+    "ts": "1484056784.000316",
+    "id": "10de59677",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "that’s pointless too, we all know vim + mac OS is the masterrace.",
+    "ts": "1484056795.000317",
+    "id": "10de59678",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053PPGDC",
+    "text": "instead they are related to how we communicate",
+    "ts": "1484056798.000318",
+    "id": "10de59679",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "word. both written and verbal communication.",
+    "ts": "1484056819.000319",
+    "id": "10de59680",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3PEFHRMH",
+    "text": "<@U3PEFHRMH|melegy> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1484058411.000320",
+    "id": "10de59681",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "subtype": "file_share",
+    "text": "<@U3EQJUNLW|ivanfenenko> uploaded a file: <https://androidchat.slack.com/files/ivanfenenko/F3NR3612L/screen_shot_2017-01-10_at_15.26.19.png|Screen Shot 2017-01-10 at 15.26.19.png>",
+    "file": {
+      "id": "F3NR3612L",
+      "created": 1484058415,
+      "timestamp": 1484058415,
+      "name": "Screen Shot 2017-01-10 at 15.26.19.png",
+      "title": "Screen Shot 2017-01-10 at 15.26.19.png",
+      "mimetype": "image/png",
+      "filetype": "png",
+      "pretty_type": "PNG",
+      "user": "U3EQJUNLW",
+      "editable": false,
+      "size": 643114,
+      "mode": "hosted",
+      "is_external": false,
+      "external_type": "",
+      "is_public": true,
+      "public_url_shared": false,
+      "display_as_bot": false,
+      "username": "",
+      "url_private": "https://files.slack.com/files-pri/T04PLNDMP-F3NR3612L/screen_shot_2017-01-10_at_15.26.19.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "url_private_download": "https://files.slack.com/files-pri/T04PLNDMP-F3NR3612L/download/screen_shot_2017-01-10_at_15.26.19.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_64": "https://files.slack.com/files-tmb/T04PLNDMP-F3NR3612L-472d4ff0d0/screen_shot_2017-01-10_at_15.26.19_64.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_80": "https://files.slack.com/files-tmb/T04PLNDMP-F3NR3612L-472d4ff0d0/screen_shot_2017-01-10_at_15.26.19_80.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360": "https://files.slack.com/files-tmb/T04PLNDMP-F3NR3612L-472d4ff0d0/screen_shot_2017-01-10_at_15.26.19_360.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_360_w": 360,
+      "thumb_360_h": 128,
+      "thumb_480": "https://files.slack.com/files-tmb/T04PLNDMP-F3NR3612L-472d4ff0d0/screen_shot_2017-01-10_at_15.26.19_480.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_480_w": 480,
+      "thumb_480_h": 171,
+      "thumb_160": "https://files.slack.com/files-tmb/T04PLNDMP-F3NR3612L-472d4ff0d0/screen_shot_2017-01-10_at_15.26.19_160.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720": "https://files.slack.com/files-tmb/T04PLNDMP-F3NR3612L-472d4ff0d0/screen_shot_2017-01-10_at_15.26.19_720.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_720_w": 720,
+      "thumb_720_h": 256,
+      "thumb_960": "https://files.slack.com/files-tmb/T04PLNDMP-F3NR3612L-472d4ff0d0/screen_shot_2017-01-10_at_15.26.19_960.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_960_w": 960,
+      "thumb_960_h": 341,
+      "thumb_1024": "https://files.slack.com/files-tmb/T04PLNDMP-F3NR3612L-472d4ff0d0/screen_shot_2017-01-10_at_15.26.19_1024.png?t=xoxe-4802761737-135492341906-135492342354-a21523d532",
+      "thumb_1024_w": 1024,
+      "thumb_1024_h": 364,
+      "image_exif_rotation": 1,
+      "original_w": 1440,
+      "original_h": 512,
+      "permalink": "https://androidchat.slack.com/files/ivanfenenko/F3NR3612L/screen_shot_2017-01-10_at_15.26.19.png",
+      "permalink_public": "https://slack-files.com/T04PLNDMP-F3NR3612L-a92d386b19",
+      "channels": [
+        "C04NZAN54"
+      ],
+      "groups": [
+
+      ],
+      "ims": [
+
+      ],
+      "comments_count": 0
+    },
+    "user": "U3EQJUNLW",
+    "upload": true,
+    "display_as_bot": false,
+    "username": "<@U3EQJUNLW|ivanfenenko>",
+    "bot_id": null,
+    "ts": "1484058423.000321",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "10de59682",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3EQJUNLW",
+    "text": "Question: any idea how to make this kind of badge?",
+    "ts": "1484058433.000322",
+    "id": "10de59683",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3EQJUNLW",
+    "text": "(orange one on pic)",
+    "ts": "1484058444.000323",
+    "id": "10de59684",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "I’d say make a FrameLayout and have that badge as drawable in an ImageView on top of the image",
+    "ts": "1484058832.000324",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0DTEGLJF"
+        ],
+        "count": 1
+      },
+      {
+        "name": "thinking_face",
+        "users": [
+          "U3EQJUNLW"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "10de59685",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3EQJUNLW",
+    "text": "That is an easy way",
+    "ts": "1484059283.000325",
+    "id": "10de59686",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3EQJUNLW",
+    "text": "But there should be the right one",
+    "edited": {
+      "user": "U3EQJUNLW",
+      "ts": "1484059312.000000"
+    },
+    "ts": "1484059302.000326",
+    "id": "10de59687",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DTEGLJF",
+    "text": "yes",
+    "ts": "1484059312.000327",
+    "id": "10de59688",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0DTEGLJF",
+    "text": "<@U053PPGDC> exactly, any communication at all is a start! Teams (and developers) seem to sometimes just have heads down coding , not noticing what is going on around them",
+    "ts": "1484059329.000329",
+    "id": "10de59689",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3697FDAN",
+    "text": "hey guys",
+    "ts": "1484066609.000330",
+    "id": "10de59690",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "<@U0LFEJ1ST> why do you need an adapter, or two models classes, just deserialise the json data using (GSON in this case) and then insert into realm. Its very simple.",
+    "ts": "1484066610.000331",
+    "id": "10de59691",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3697FDAN",
+    "text": "If you have any thoughts about this or if you can answer I would appreciate: <http://stackoverflow.com/questions/41572630/consumerproguardfiles-vs-proguardfiles>",
+    "attachments": [
+      {
+        "title": "ConsumerProguardFiles vs ProguardFiles",
+        "title_link": "http://stackoverflow.com/questions/41572630/consumerproguardfiles-vs-proguardfiles",
+        "text": "I was trying to build an application which contained a library module La with proguard and I noticed that the library was not being obfuscated. Was trying to understand why. At this moment in time ...",
+        "fallback": "ConsumerProguardFiles vs ProguardFiles",
+        "thumb_url": "https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded",
+        "from_url": "http://stackoverflow.com/questions/41572630/consumerproguardfiles-vs-proguardfiles",
+        "thumb_width": 316,
+        "thumb_height": 316,
+        "service_icon": "https://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d",
+        "service_name": "stackoverflow.com",
+        "id": 1
+      }
+    ],
+    "edited": {
+      "user": "U3697FDAN",
+      "ts": "1484066629.000000"
+    },
+    "ts": "1484066621.000332",
+    "reactions": [
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      },
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "10de59692",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3PQZMSF6",
+    "text": "<@U3PQZMSF6|iancowley> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1484080239.000335",
+    "id": "10de59693",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3PQZMSF6",
+    "text": "Hello everyone! How's everyone's day? I've got a question I wanted to put out there. When using MVP as an architecture, how would you go about showing dialogs/loading messages to the user?",
+    "ts": "1484080431.000336",
+    "id": "10de59694",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3PQZMSF6",
+    "text": "Specifically, how would you go about accessing string resources for the loading messages or errors that show in the dialogs?",
+    "ts": "1484080544.000337",
+    "id": "10de59695",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KC373GX",
+    "text": "do not pass in the activity/context to the presenter",
+    "ts": "1484083512.000338",
+    "id": "10de59696",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KC373GX",
+    "text": "have the presenter call a method in the activity, something like \n\n```\n— in presenter —\n\nvoid showDialog() {\n    view.showDialog();\n}\n\n— in activity —\nvoid showDialog() {\n    doStuff(this);\n}\n```",
+    "edited": {
+      "user": "U0KC373GX",
+      "ts": "1484083667.000000"
+    },
+    "ts": "1484083535.000339",
+    "id": "10de59697",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3E2EEX38",
+    "text": "call the dialog on the view, from the presenter",
+    "ts": "1484083537.000340",
+    "id": "10de59698",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KC373GX",
+    "text": "it kinda becomes like: activity calls presenter to do something -&gt; presenter goes back to activity to do string resources stuff",
+    "ts": "1484083754.000346",
+    "id": "10de59699",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "<https://sites.google.com/a/android.com/tools/recent/androidstudio23beta2isnowavailable|Android Studio 2.3 Beta 2 is now available>\nWe have just released Android Studio 2.3 Beta 2 to the Canary, Dev, and Beta Channels. New or Noteworthy ChangesMoved to <https://docs.gradle.org/3.3/release-notes|Gradle 3.3> Stable from 3.3 RC1 in Android Studio 2.3 Beta 1 If you do native development, please also update LLDB to 2.3.3614996Fixed IssuesPerformance Improvements in Project Sync and general Gradle...",
+    "username": "Posts of Recent Changes",
+    "icons": {
+      "image_36": "https://a.slack-edge.com/66f9/img/services/rss_36.png",
+      "image_48": "https://a.slack-edge.com/66f9/img/services/rss_48.png",
+      "image_72": "https://a.slack-edge.com/205a/img/services/rss_72.png"
+    },
+    "bot_id": "B062SSUPJ",
+    "attachments": [
+      {
+        "title": "Android Studio 2.3 Beta 2 is now available - Android Studio Project Site",
+        "title_link": "https://sites.google.com/a/android.com/tools/recent/androidstudio23beta2isnowavailable",
+        "text": "Android tools project information site",
+        "fallback": "Android Studio 2.3 Beta 2 is now available - Android Studio Project Site",
+        "from_url": "https://sites.google.com/a/android.com/tools/recent/androidstudio23beta2isnowavailable",
+        "thumb_url": "https://sites.google.com/a/android.com/tools/_/rsrc/1460493325829/config/customLogo.gif?revision=1",
+        "thumb_width": 100,
+        "thumb_height": 100,
+        "service_icon": "https://ssl.gstatic.com/sites/p/6f0e91/system/app/images/apple-touch-icon.png",
+        "service_name": "sites.google.com",
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1484085976.000347",
+    "reactions": [
+      {
+        "name": "upvote",
+        "users": [
+          "U0N7D6F50",
+          "U3EQFHSAK"
+        ],
+        "count": 2
+      },
+      {
+        "name": "downvote",
+        "users": [
+          "U0N7D6F50"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "10de59700",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U3QHM2L2K",
+    "text": "<@U3QHM2L2K|alejofila> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1484101099.000349",
+    "id": "10de59701",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HA5ABNW",
+    "text": "Hello..",
+    "ts": "1484115590.000350",
+    "id": "10de59702",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HA5ABNW",
+    "text": "Could someone suggest me how to fix this issue ,where i am getting the error as”primary error: 5 certificate: Issued to:***”  only on few mobile device webviews but not all..",
+    "ts": "1484115676.000351",
+    "id": "10de59703",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HA5ABNW",
+    "text": "i tried to override the Recieved ssl error and made it to proceed() further",
+    "ts": "1484115706.000352",
+    "id": "10de59704",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HA5ABNW",
+    "text": "but google play rejected the app.",
+    "ts": "1484115713.000353",
+    "id": "10de59705",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HA5ABNW",
+    "text": "anyone ??",
+    "ts": "1484116282.000354",
+    "id": "10de59706",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0HA5ABNW",
+    "text": "i was using https where the ssl certificate is also valid..",
+    "ts": "1484116323.000355",
+    "id": "10de59707",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

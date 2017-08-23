@@ -1,0 +1,58 @@
+[
+  {
+    "user": "U2JDUV205",
+    "text": "<@U2JDUV205|mahtuag> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1475487959.000124",
+    "id": "03te2391",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0SNJDQDC",
+    "text": "<@U0SNJDQDC|aimanb> has joined the channel",
+    "subtype": "channel_join",
+    "ts": "1475545509.000125",
+    "id": "03te2392",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0LH6B4AW",
+    "text": "Hi, I am currently working on view tests using Espresso  and there is something I can’t solve.\n\nBasically I want to Mock injected object of which MainActivity depends. In the actual app, it is provided by ActivityComponent which is a subcomponent of ApplicationComponent. \n\nI know how to override modules in Application Component, but I want to override module( in scope of Activity) and use it on Espresso test to inject mocked object.\n\nAny advice would be appreciated. Thanks in advance!\n\n```MainActivity.java\n    @Inject\n    DependetObject  dependentobject;\n\n    @Override\n    protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_main);\n\n        DaggerApplication.get(this)\n                .getAppComponent()\n                .plus(new MainActivityModule(this))\n                .inject(this);\n}\n```\n\n```MainActivityModule.java &lt;- ★want to extend this class with mock object and use in the Espresso test \n@Module\npublic class MainActivityModule {\n    @Provides\n    @ActivityScope\n    MainView provideMainView(DependentObjectImpl impl) {\n           return impl;\n    }\n}\n```\n\n```\n@ActivityScope\n@Subcomponent(\n        modules = {MainActivityModule.class}\n)\npublic interface MainActivityComponent { &lt;- Subcomponent of AppComponent\n    void inject(MainActivity activity);\n}\n```",
+    "ts": "1475550804.000126",
+    "id": "03te2393",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

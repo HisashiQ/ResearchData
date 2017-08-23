@@ -1,0 +1,1756 @@
+[
+  {
+    "user": "U091EBYSU",
+    "text": "<@U09T0F8BW>: absolutely not important, it’s just a matter of taste :simple_smile:",
+    "ts": "1442575654.001247",
+    "id": "18de9713",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "is anyone here using bazel currently for their builds?",
+    "ts": "1442590074.001248",
+    "id": "18de9714",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "nope - not me I guess I should say",
+    "edited": {
+      "user": "U060Q7J2Y",
+      "ts": "1442590327.000000"
+    },
+    "ts": "1442590314.001249",
+    "id": "18de9715",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "We use too much Gradle stuff (plugins, scripts, etc) to migrate to Bazel or Buck :disappointed:",
+    "ts": "1442590355.001251",
+    "id": "18de9716",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "same",
+    "ts": "1442590734.001252",
+    "id": "18de9717",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "I guess I’ll just fuck with it over the weekend",
+    "ts": "1442590759.001253",
+    "id": "18de9718",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "we have a project that has some huge binaries and every time we hit run it takes 3-6 minutes to build and launch",
+    "ts": "1442590785.001254",
+    "id": "18de9719",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "thinking that switching to bazel could save us all a lot of time",
+    "ts": "1442590796.001255",
+    "id": "18de9720",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07M5RRLZ",
+    "text": "I guess a gradle plugin generating bazel/buck stuff would be awesome. I don't know if it's doable",
+    "ts": "1442591187.001256",
+    "id": "18de9721",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "<@U0A0S0WG0>: \n&gt;we have a project that has some huge binaries and every time we hit run it takes 3-6 minutes to build and launch\n\nLooks like you broke incremental build via some Gradle manipulations (tasks, `buildConfigField`, etc).",
+    "ts": "1442591282.001257",
+    "id": "18de9722",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "Or second hit of the Run button without changes in the project work fast?",
+    "ts": "1442591316.001258",
+    "id": "18de9723",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "yeah <@U0A0S0WG0> didn’t you read the sentences of documentation for how to use gradle properly?",
+    "ts": "1442591344.001259",
+    "id": "18de9724",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "try bazel, let me know if i can nuke this gradle garbage from orbit in my projects",
+    "ts": "1442591379.001260",
+    "id": "18de9725",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "I haven’t messed with our gradle scripts, they were in place before I started",
+    "ts": "1442592517.001261",
+    "id": "18de9726",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "i for one can’t wait for the next google android gradle plugin so I can change my runProguard -&gt; minifyEnabled -&gt; enableMinification or w/e the hell the new one is in the dumb module junk",
+    "ts": "1442592626.001262",
+    "reactions": [
+      {
+        "name": "trollface",
+        "users": [
+          "U04U5KS3Z",
+          "U04TK850N",
+          "U06EANT71"
+        ],
+        "count": 3
+      }
+    ],
+    "id": "18de9727",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "abraProguardabra",
+    "ts": "1442592652.001263",
+    "id": "18de9728",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "<@U0A0S0WG0>: just try to do `gradle build` twice and see what tasks executed at the second run",
+    "ts": "1442592656.001264",
+    "id": "18de9729",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "if task does not output `UP-TO-DATE` (or smtng similar), it means that incremental build broken on this task or the task before it",
+    "ts": "1442592698.001265",
+    "id": "18de9730",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "yeah like something touches something it shouldn’t in the build folder which breaks the outputs check for the build task",
+    "ts": "1442592749.001266",
+    "id": "18de9731",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Google doesn't give a shit about my gradle issue I posted :/",
+    "ts": "1442592820.001267",
+    "id": "18de9732",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Must be an edge case ",
+    "ts": "1442592831.001268",
+    "id": "18de9733",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "change your email to @square and it will work",
+    "ts": "1442592872.001269",
+    "id": "18de9734",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "brb, registering <http://sqvare.com|sqvare.com>",
+    "ts": "1442592901.001270",
+    "id": "18de9735",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "We got invited to Mountain View yesterday lol ",
+    "ts": "1442592913.001271",
+    "id": "18de9736",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "hmm, seems like gradle hangs on two things, `processDebugResources` and `packageDebug`",
+    "ts": "1442592921.001272",
+    "id": "18de9737",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "<http://skquare.com|skquare.com>",
+    "ts": "1442592925.001273",
+    "id": "18de9738",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "and `assembleDebug` as well",
+    "ts": "1442592948.001274",
+    "id": "18de9739",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U04U5KS3Z>: isn't camouflaged enough",
+    "ts": "1442592969.001275",
+    "id": "18de9740",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04U5KS3Z",
+    "text": "▢ \t.com",
+    "ts": "1442593004.001276",
+    "id": "18de9741",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U04U5KS3Z>: maybe <http://squareOhGooglePleaseNoticeMe.com|squareOhGooglePleaseNoticeMe.com>",
+    "ts": "1442593005.001277",
+    "reactions": [
+      {
+        "name": "pray",
+        "users": [
+          "U04U5KS3Z",
+          "U0548MM6B",
+          "U0542GLTE",
+          "U06EANT71"
+        ],
+        "count": 4
+      }
+    ],
+    "id": "18de9742",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "^ BWAHAHAHAHA",
+    "ts": "1442593018.001278",
+    "id": "18de9743",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "why did i almost click that",
+    "ts": "1442593024.001279",
+    "id": "18de9744",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "lmao",
+    "ts": "1442593026.001280",
+    "id": "18de9745",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "oh my god legit spit up beer",
+    "ts": "1442593028.001281",
+    "id": "18de9746",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Okay, so now I really want to buy that domain ",
+    "ts": "1442593089.001282",
+    "id": "18de9747",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Or maybe <http://googlefixyourshit.wtf|googlefixyourshit.wtf> ",
+    "ts": "1442593117.001283",
+    "id": "18de9748",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "that's TM'd",
+    "ts": "1442593120.001284",
+    "id": "18de9749",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "gotta pay me a royalty if you want it",
+    "ts": "1442593126.001285",
+    "id": "18de9750",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Oh, someone please set that up",
+    "ts": "1442593136.001286",
+    "id": "18de9751",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "everyone in this slack file all of their issues under it",
+    "ts": "1442593143.001287",
+    "id": "18de9752",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "That is not how trademarks work ",
+    "ts": "1442593143.001288",
+    "id": "18de9753",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "<@U04TK850N>: shhhh",
+    "ts": "1442593154.001289",
+    "id": "18de9754",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "Okay I'll do it later or on the weekend ",
+    "ts": "1442593158.001290",
+    "id": "18de9755",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "pls pls I want <mailto:ian@googlefixyourshit.wtf|ian@googlefixyourshit.wtf>",
+    "ts": "1442593227.001291",
+    "id": "18de9756",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "calling dibs",
+    "ts": "1442593235.001292",
+    "id": "18de9757",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U053LEHJN",
+    "text": "register both and have one CNAME to the other",
+    "ts": "1442593269.001293",
+    "id": "18de9758",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "hold on, need to check",
+    "ts": "1442593285.001294",
+    "id": "18de9759",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "22€/year lol",
+    "ts": "1442593344.001295",
+    "id": "18de9760",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "ouch",
+    "ts": "1442593365.001296",
+    "id": "18de9761",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "that exceeds my budget for jokes",
+    "edited": {
+      "user": "U055GGAHS",
+      "ts": "1442593382.000000"
+    },
+    "ts": "1442593376.001297",
+    "id": "18de9762",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07DEGHHT",
+    "text": "I spent 60 on <http://sucksexfull.io|sucksexfull.io> to troll my old company",
+    "ts": "1442593397.001299",
+    "id": "18de9763",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "<@U0A0S0WG0>: \n\n&gt;and `assembleDebug` as well\n\nDo you use `buildConfigField` in your `build.gradle`?",
+    "ts": "1442593398.001300",
+    "id": "18de9764",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "Or maybe `retrolabmda` with default methods?",
+    "ts": "1442593413.001301",
+    "id": "18de9765",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04TK850N",
+    "text": "there is googlefixyourshit.studio too :smile:",
+    "ts": "1442593465.001302",
+    "id": "18de9766",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U055GGAHS",
+    "text": "^ clever",
+    "ts": "1442593616.001303",
+    "id": "18de9767",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "I'm gonna just shamelessly promote myself some more",
+    "ts": "1442593755.001304",
+    "id": "18de9768",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "<http://michaelevans.org/blog/2015/09/15/testing-intents-with-espresso-intents/>",
+    "attachments": [
+      {
+        "text": "Testing Intents with Espresso Intents",
+        "fallback": "Testing Intents with Espresso Intents",
+        "from_url": "http://michaelevans.org/blog/2015/09/15/testing-intents-with-espresso-intents/",
+        "id": 1
+      }
+    ],
+    "ts": "1442593756.001305",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U0548MM6B"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "18de9769",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "go read",
+    "ts": "1442593758.001307",
+    "id": "18de9770",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "lol. I’m a fan of self promotion",
+    "ts": "1442593793.001308",
+    "id": "18de9771",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "<@U091EBYSU>:  no `buildConfigField` or `retrolambda`",
+    "ts": "1442593793.001309",
+    "id": "18de9772",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Pretty much the only person who isn’t is the bart guy on /r/androiddec",
+    "ts": "1442593807.001310",
+    "id": "18de9773",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "haha glad someone understands <@U0542GLTE>",
+    "ts": "1442593941.001311",
+    "id": "18de9774",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "bart guy?",
+    "ts": "1442593944.001312",
+    "id": "18de9775",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "Yeah, he was the guy that everytime <@U0910C6SE> posted anything related to his blog or something would pretty much do the same thing that tidderknow did with his subreddit whenever people posted their apps",
+    "ts": "1442593991.001313",
+    "id": "18de9776",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "oh",
+    "ts": "1442593997.001314",
+    "id": "18de9777",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "link me next time",
+    "ts": "1442594000.001315",
+    "id": "18de9778",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": ":stuck_out_tongue:",
+    "ts": "1442594002.001316",
+    "id": "18de9779",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "lol. I will",
+    "ts": "1442594004.001317",
+    "id": "18de9780",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "i posted my blog post to reddit",
+    "ts": "1442594007.001318",
+    "id": "18de9781",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "doesn't always do well",
+    "ts": "1442594011.001320",
+    "id": "18de9782",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "shhhh its a secret!",
+    "ts": "1442594016.001321",
+    "id": "18de9783",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0542GLTE",
+    "text": "ninja",
+    "ts": "1442594033.001323",
+    "id": "18de9784",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "<@U0A0S0WG0>: \n\n&gt;no `buildConfigField` or `retrolambda`\n\nMaybe some Gradle Plugins?",
+    "ts": "1442594182.001327",
+    "id": "18de9785",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "only plugins we have are `android` and `fabric`",
+    "ts": "1442594222.001328",
+    "id": "18de9786",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "hm, probably it’s `fabric`, try to google something like “Fabric Gradle incremental build” or maybe somebody will give you more info in this chat. We don’t use Fabric, so I can not tell you anything about it :disappointed:",
+    "ts": "1442594288.001329",
+    "id": "18de9787",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "<https://sites.google.com/a/android.com/tools/recent/androidstudio14rc1available|Android Studio 1.4 RC 1 Available>\nWe've just released Android Studio 1.4 RC 1 to the canary channel.We've also promoted 1.4 Beta 4 to the beta channel, since that build has been in testing for a few days now and there are no big problem. (However, if you're on Linux and using a high density display you may want to jump directly to RC 1 where there are important fixes for that configuration.)RC 1 contains bug fixes in a number areas:Fixes for high-density displays on Linux (we'll have more information on how to configure high...",
+    "username": "Posts of Recent Changes",
+    "icons": {
+      "image_48": "https://slack.global.ssl.fastly.net/66f9/img/services/rss_48.png"
+    },
+    "bot_id": "B062SSUPJ",
+    "attachments": [
+      {
+        "title": "Android Studio 1.4 RC 1 Available - Android Tools Project Site",
+        "title_link": "https://sites.google.com/a/android.com/tools/recent/androidstudio14rc1available",
+        "text": "Android tools project information site",
+        "fallback": "Android Studio 1.4 RC 1 Available - Android Tools Project Site",
+        "image_url": "https://sites.google.com/a/android.com/tools/_/rsrc/1442594158399/recent/androidstudio14rc1available/14rc1.png",
+        "from_url": "https://sites.google.com/a/android.com/tools/recent/androidstudio14rc1available",
+        "image_width": 540,
+        "image_height": 250,
+        "image_bytes": 48170,
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1442594469.001330",
+    "id": "18de9788",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "okie doke",
+    "ts": "1442594563.001332",
+    "id": "18de9789",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "thanks <@U091EBYSU>",
+    "ts": "1442594568.001333",
+    "id": "18de9790",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "<@U0A0S0WG0>: np, good build — fast build",
+    "ts": "1442594587.001334",
+    "id": "18de9791",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "haha",
+    "ts": "1442594593.001335",
+    "id": "18de9792",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "good lord almighty, just found a file that some sub contractors put into our app with 100 enums in it. kill me.",
+    "ts": "1442596671.001336",
+    "id": "18de9793",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0548MM6B",
+    "text": "Ouch",
+    "ts": "1442596720.001337",
+    "id": "18de9794",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "Just send address of this contractor to @duhroach, he will eliminate him :troll:",
+    "ts": "1442596793.001338",
+    "id": "18de9795",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0A0S0WG0",
+    "text": "haha",
+    "ts": "1442597147.001339",
+    "id": "18de9796",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "I guess, last words he will hear: “And always remember, perf matters.\"",
+    "edited": {
+      "user": "U091EBYSU",
+      "ts": "1442597193.000000"
+    },
+    "ts": "1442597177.001340",
+    "id": "18de9797",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "#enumsmatter",
+    "ts": "1442597295.001342",
+    "id": "18de9798",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U091EBYSU",
+    "text": "Haha, just understood that it perfectly fits to this tweet:\n\n<https://twitter.com/JakeWharton/status/634578153537712132>",
+    "attachments": [
+      {
+        "fallback": "<https://twitter.com/JakeWharton|@JakeWharton>: Guns don't kill people. Enums kill people.",
+        "ts": 1440130196,
+        "author_name": "Jake Wharton",
+        "author_link": "https://twitter.com/JakeWharton/status/634578153537712132",
+        "author_icon": "https://pbs.twimg.com/profile_images/378800000666093975/cbe970ce9a19d2c6bec0d06c6004ccf0_normal.png",
+        "author_subname": "@JakeWharton",
+        "text": "Guns don't kill people. Enums kill people.",
+        "service_name": "twitter",
+        "service_url": "https://twitter.com/",
+        "from_url": "https://twitter.com/JakeWharton/status/634578153537712132",
+        "id": 1,
+        "footer": "Twitter",
+        "footer_icon": "https://a.slack-edge.com/6e067/img/services/twitter_pixel_snapped_32.png"
+      }
+    ],
+    "ts": "1442597377.001343",
+    "id": "18de9799",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U06EANT71",
+    "text": "I love Enums :&lt;",
+    "ts": "1442597477.001345",
+    "id": "18de9800",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0546QERR",
+    "text": "i like enums, i hate that they’re bad for you",
+    "ts": "1442598253.001346",
+    "reactions": [
+      {
+        "name": "+1",
+        "users": [
+          "U06EANT71"
+        ],
+        "count": 1
+      }
+    ],
+    "id": "18de9801",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U07DEGHHT",
+    "text": "#EnumLivesMatter",
+    "ts": "1442599449.001347",
+    "id": "18de9802",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "text": "<https://sites.google.com/a/android.com/tools/recent/androidstudio14rc1available|Android Studio 1.4 RC 1 Available>\nWe've just released Android Studio 1.4 RC 1 to the canary channel.We've also promoted 1.4 Beta 4 to the beta channel, since that build has been in testing for a few days now and there are no big problem. (However, if you're on Linux and using a high density display you may want to jump directly to RC 1 where there are important fixes for that configuration.)RC 1 contains bug fixes in a number areas:Fixes for high-density displays on Linux (and in general, we have more information on how to...",
+    "username": "Posts of Recent Changes",
+    "icons": {
+      "image_48": "https://slack.global.ssl.fastly.net/66f9/img/services/rss_48.png"
+    },
+    "bot_id": "B062SSUPJ",
+    "attachments": [
+      {
+        "title": "Android Studio 1.4 RC 1 Available - Android Tools Project Site",
+        "title_link": "https://sites.google.com/a/android.com/tools/recent/androidstudio14rc1available",
+        "text": "Android tools project information site",
+        "fallback": "Android Studio 1.4 RC 1 Available - Android Tools Project Site",
+        "image_url": "https://sites.google.com/a/android.com/tools/_/rsrc/1442594158399/recent/androidstudio14rc1available/14rc1.png",
+        "from_url": "https://sites.google.com/a/android.com/tools/recent/androidstudio14rc1available",
+        "image_width": 540,
+        "image_height": 250,
+        "image_bytes": 48170,
+        "id": 1
+      }
+    ],
+    "subtype": "bot_message",
+    "ts": "1442599870.001348",
+    "id": "18de9803",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]

@@ -1,0 +1,342 @@
+[
+  {
+    "user": "U0K1ALDQE",
+    "text": "Can I declare a manifest file that is only used for instrumentation testing?",
+    "ts": "1453983174.000058",
+    "id": "28be2286",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I have a FragmentContainerActivity, and the sole purpose is of testing a fragment.",
+    "ts": "1453983198.000059",
+    "id": "28be2287",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I currently placed that activity in androidTest/…./support/FragmentContainerActivity",
+    "ts": "1453983229.000060",
+    "id": "28be2288",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "but since I didn’t / can’t declare it in the app manifest, it doesn’t work.",
+    "ts": "1453983243.000061",
+    "id": "28be2289",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "Any solutions?",
+    "ts": "1453983245.000062",
+    "id": "28be2290",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05165DUG",
+    "text": "your main Manifest file is under src/main so you can create test manifest file under src/androidTest",
+    "ts": "1453985982.000063",
+    "id": "28be2291",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "<@U05165DUG>: hmm. doesn’t work :smile:",
+    "ts": "1453989698.000064",
+    "id": "28be2292",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "I can make a Manifest file sure. But my Application class etc gets well … !? :thinking_face:",
+    "ts": "1453989727.000065",
+    "id": "28be2293",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05165DUG",
+    "text": "gets merged by manifest merger ?",
+    "ts": "1453996504.000066",
+    "id": "28be2294",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05165DUG",
+    "text": "at least I assumed that it will, never tried to have DummyActivity to test fragments in isolation",
+    "ts": "1453996536.000067",
+    "id": "28be2295",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "you can have a manifest in `src/androidTest`",
+    "ts": "1453996844.000068",
+    "id": "28be2296",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0K1ALDQE",
+    "text": "<@U05165DUG>:  gets merged by manifest merger ? So I would just only declare the activity, that’s it? And I found testing a fragment in isolation to be the best.",
+    "ts": "1454002687.000069",
+    "id": "28be2297",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KC373GX",
+    "text": "Wow <@U05165DUG> way to win the username game",
+    "ts": "1454010424.000070",
+    "id": "28be2298",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U04VA47NB",
+    "text": "lol I was confused for a second",
+    "ts": "1454010464.000071",
+    "id": "28be2299",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U05165DUG",
+    "text": "<@U0K1ALDQE>:  there is tools website which is outside of main android dev site . <http://tools.android.com/tech-docs/new-build-system> . It's  quite useful. \n\nDoes it work when you declare Activity in test manifest and keep it's source in test folder?",
+    "attachments": [
+      {
+        "title": "New Build System - Android Tools Project Site",
+        "title_link": "http://tools.android.com/tech-docs/new-build-system",
+        "text": "Android tools project information site",
+        "fallback": "New Build System - Android Tools Project Site",
+        "from_url": "http://tools.android.com/tech-docs/new-build-system",
+        "id": 1
+      }
+    ],
+    "edited": {
+      "user": "U05165DUG",
+      "ts": "1454012153.000000"
+    },
+    "ts": "1454012123.000072",
+    "id": "28be2300",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U060Q7J2Y",
+    "text": "lolcat works too",
+    "ts": "1454014932.000075",
+    "id": "28be2301",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KMHD43H",
+    "subtype": "channel_join",
+    "text": "<@U0KMHD43H|daholman> has joined the channel",
+    "ts": "1454015007.000076",
+    "id": "28be2302",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  },
+  {
+    "user": "U0KN0DCPQ",
+    "subtype": "channel_join",
+    "text": "<@U0KN0DCPQ|rcbop> has joined the channel",
+    "ts": "1454026953.000077",
+    "id": "28be2303",
+    "thread": [
+      {
+        "position": "null",
+        "number": 0
+      }
+    ],
+    "label": [
+      {
+        "type": "null",
+        "position": "null"
+      }
+    ]
+  }
+]
